@@ -1,0 +1,73 @@
+# Abh Sign
+
+EN ESPAÑOL
+Abh sign is an integration of Ahora Business Hub that allows **flexygo** to send pdf documents to sign and save them in document management.
+
+## How to hire ABH Sign services?
+
+AHB Sign is not included in the Flexygo license, therefore it is a service that must be contracted separately.
+
+To hire the service you can do it in any of the following ways:
+
+*   **By E-Mail:** Sending an E-Mail to [abh@ahora.es](mailto:abh@ahora.es) with the subject "Hire ABH Sign" and, into the message, your contact details such as your name, the name of the company and a contact phone number. A sales agent will contact you to carry out the process.
+
+## Enable Abh Sign
+
+Add Abh Sign to this project
+
+## Configure Abh Sign
+
+![](./img/Help/AbhSign/AbhSignSettings.png "Image 1. Abh Sign configuration")
+
+Image 1. Abh Sign configuration
+
+**Object Name:** Object we want to enable Abh Sign.
+
+**Type:** Signature mode that we want to enable.
+
+*   **Remote:** Send an email with the document to sign.
+*   **In-person:** Send the document to be signed to a [compatible device](https://www.validatedid.com/es/dispositivos) to perform the signature. It is necessary to download the following application to view pending documents, available on [Android](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Android?language=es), [iOS](https://help.vidsigner.net/s/article/Manual-de-Usuario-de-la-Firma-BIO-para-iOS?language=es) and [Windows](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Windows?language=es).
+
+**Client Id:** Ahora Business Hub client id.
+
+For more information consult on https://help.flexygo.com/
+
+**Client Secret:** Ahora Business Hub client secret.
+
+For more information consult on https://help.flexygo.com/
+
+**Tenant Id:** Ahora Business Hub tenant id.
+
+For more information consult on https://help.flexygo.com/
+
+## Configure Reports
+
+Once configured, a module is enabled to configure the reports that we want to be able to send.
+
+![](./img/Help/AbhSign/AbhSignReports.png "Image 2. Abh Sign reports configuration")
+
+Image 2. Abh Sign reports configuration
+
+**Type:** Enable configuration by report or document management.
+
+**Report:** Report that we want to enable, the reports associated with the configured object appear.
+
+**Document Category:** Category (Id) that we want to enable, the documents associated with the configured object that have that category appear (If the category is empty, the configuration applies to all).
+
+**After Process:** Process that we want to execute once we recover the signed document. (You can add the DocGuid parameter to receive the inserted document or any property of the object)
+
+To choose where we want to sign in the document, there is an assistant that is enabled with a button on the toolbar in which we can upload an example document and draw where we want to sign.
+
+![](./img/Help/AbhSign/SelectSign.png "Image 3. Signing assistant")
+
+Image 3. Signing assistant
+
+## Processes
+
+In the configured object, a process called "Send signed report" or "Send signed document" is enabled, in which you select a report or document from those configured and an email is sent for a person to sign it.
+
+A cron job is enabled in the system that every 30 minutes checks if any of the documents sent has been signed and, if so, collects it and inserts it into document management. Execute after process if configured.
+
+![](./img/Help/AbhSign/AbhSignOperation.png "Image 4. Abh Sign operation")
+
+Image 4. Abh Sign operation
