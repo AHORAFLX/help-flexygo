@@ -20,8 +20,7 @@
   --flx-border: 1px solid var(--flx-color-border);
   
   /* Main Sidebar*/
-  --flx-main-sidebar-width: 15dvw;
-  --flx-main-sidebar-margin-left: 55px;
+  --flx-main-sidebar-width: 19dvw;
   --flx-main-sidebar-padding: 20px;
 
   /* Main content */
@@ -62,9 +61,9 @@
 header.md-header {
   box-shadow: none;
   position: fixed;
-  width: 20dvw;
-  left: 80dvw;
-  border-radius: 0 0 0 var(--flx-border-radius);
+  
+  width: calc(100dvw - var(--flx-main-sidebar-width));
+  left: var(--flx-main-sidebar-width);
 
   /* Logo that just appears on middle and small size */
   a.md-logo {
@@ -79,17 +78,36 @@ header.md-header {
     justify-content: flex-end;
     margin: 0;
     max-width: 100%;
-    margin-right: 9px;
+    margin-right: 20px;
   }
 
   /* Search input */
-  .md-search__inner {
-    width: 90%;
+  .md-search {
+    position: absolute;
+    left: calc(50dvw - var(--flx-main-sidebar-width));
+    transform: translatex(-50%);
 
-    .md-search__form {
-      background: transparent;
-      border-bottom: 1px solid var(--flx-color-section);
-      border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
+    .md-search__overlay {
+      width: 300dvw !important; /* Width is set in an hiper specific selector on mkdocs skin */
+      left: -100dvw;
+    }
+
+    .md-search__inner {
+      width: 125%;
+
+      .md-search__form {
+        border-bottom: 1px solid #292929;
+        border-radius: 40px !important;
+
+        &:has(.focus-visible) {
+          border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
+
+          .md-search__input {
+            background-color: var(--md-default-bg-color);
+            border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
+          }
+        }
+      }
     }
   }
 
@@ -115,16 +133,16 @@ header.md-header {
   top: 0 !important; /* Top on the material theme is set on the style */
   padding: 0;
   width: fit-content;
-  max-width: 20dvw;
-  min-width: 20dvw;
+  max-width: var(--flx-main-sidebar-width);
+  min-width: var(--flx-main-sidebar-width);
   
   /* Logo and docs text */
   .flx-sidebarheader {
     display: flex;
     align-items: center;
 
+    width: var(--flx-main-sidebar-width);
     background-color: var(--flx-color);
-    border-radius: 0 0 var(--flx-border-radius) 0;
 
     /* Centering and spacing logo and docs text */
     a {
@@ -135,17 +153,14 @@ header.md-header {
   /* Nav section */
   /* Module style */
   .md-sidebar__scrollwrap {
-    height: calc(100dvh - 85px) !important; /* Height in the material theme is set on the style */
+    height: calc(100dvh - 53px) !important; /* Height in the material theme is set on the style | 53px = Header height*/
     width: var(--flx-main-sidebar-width);
+    margin: 0;
 
     background: var(--flx-color-section);
     padding: var(--flx-main-sidebar-padding);
-    border-radius:  var(--flx-border-radius);
-    margin-top: 20px;
     border: var(--flx-border);
     box-shadow: var(--flx-module-boxshadow);
-
-    margin-left: var(--flx-main-sidebar-margin-left);
   }
 
   /* Making nav nodes have an small margin left */
@@ -185,18 +200,6 @@ main {
         max-width: calc(60dvw - 80px);
         min-width: calc(60dvw - 80px);
         margin-top: 73px;
-        
-        /* Blue connecting header bar */
-        &:before {
-          content: '';
-          background: #30b7af;
-          width: 100dvw;
-          height: 53px;
-          display: block;
-          position: absolute;
-          top: 0;
-          left: calc(20dvw - var(--flx-border-radius));
-        }
       }
       
       /* Secondary Sidebar */
@@ -225,14 +228,6 @@ main {
         }
       }
     }
-  }
-
-  /* Go Top Button */
-  .md-top {
-    background-color: var(--flx-color-background);
-    border: var(--flx-border);
-
-    top: 10px !important;
   }
 }
 
@@ -287,6 +282,28 @@ a.md-logo {
       display: flex;
       align-items: center;
     }
+    
+    .md-search {
+      left: calc(50dvw);
+
+      .md-search__inner {
+        width: 125%;
+
+        .md-search__form {
+          border-bottom: 1px solid var(--flx-color-section);
+          border-radius: 40px !important;
+
+          &:has(.focus-visible) {
+            border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
+
+            .md-search__input {
+              background-color: var(--md-default-bg-color);
+              border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
+            }
+          }
+        }
+      }
+    }
   }
 
   /* Main Sidebar */
@@ -316,16 +333,29 @@ a.md-logo {
         max-width: 20dvw;
       }
     }
-
-    /* Go Top Button */
-    .md-top {
-      top: 64px !important;
-    }
   } 
 }
 
 /* Small Screen Size */
 @media screen and (max-width: 59.9844em) {
+  /* Search input with everything cutom removed so it just fills all available space */
+  header.md-header {
+    .md-search {
+      position: unset;
+      transform: unset;
+
+      .md-search__inner {
+        .md-search__form {
+          border-radius: 0 !important;
+
+          .md-search__input {
+            color: var(--md-default-fg-color);
+          }
+        }
+      }
+    }
+  }
+
   /* Main content and Secondary sidebar */
   main .md-main__inner .flx-maincontainer {
     > .md-content {
