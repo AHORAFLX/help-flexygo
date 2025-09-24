@@ -1,4 +1,4 @@
-# Targets
+# Targetas
 
 Choose the projection screen.
 

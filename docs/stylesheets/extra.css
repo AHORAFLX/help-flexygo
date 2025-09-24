@@ -242,6 +242,10 @@ main {
   }
 }
 
+.md-content img {
+  border-radius: var(--flx-border-radius);
+}
+
 /* Logo that just appears on middle and small size */
 a.md-logo {
   display: flex;
