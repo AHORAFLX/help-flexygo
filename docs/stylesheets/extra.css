@@ -10,10 +10,12 @@
   --md-primary-fg-color: var(--flx-color); /* Higlights */
   --md-accent-fg-color: var(--flx-color); /* Higlights */
   --md-typeset-a-color: var(--flx-color); /* Text */
+  --md-default-fg-color: var(--md-default-fg-color--light); /* Text */
   --md-default-fg-color--light: #555e68; /* Titles */
   --md-default-fg-color--light--rgb: 85, 94, 104;  /* Code Block Copy Button */
   --md-code-bg-color: var(--flx-color-background); /* Code blocks */
   --md-code-fg-color: black; /* Code blocks */
+  --md-default-bg-color: var(--flx-color-background); /* Input background */
   
   /* Borders */
   --flx-border-radius: 16px;
@@ -49,7 +51,6 @@
   --md-typeset-color: white; /* Text */
   --md-default-fg-color--light: #a8a8a8; /* Titles */
   --md-default-fg-color--light--rgb: 168, 168, 168;  /* Code Block Copy Button */
-  --md-code-bg-color: var(--flx-color-background); /* Code blocks */
   --md-code-fg-color: white; /* Code blocks */
 
   /* Images */
@@ -126,6 +127,11 @@ header.md-header {
       border-bottom-color: var(--flx-color-background);
     }
   }
+}
+
+/* Header with search bar focused */
+[data-md-toggle="search"]:checked ~ header.md-header .md-search__inner .md-search__form {
+  border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
 }
 
 /* Main Sidebar */
@@ -231,6 +237,11 @@ main {
   }
 }
 
+/* Backdrop */
+.md-overlay {
+  backdrop-filter: blur(3px);
+}
+
 /* Tables */
 .md-typeset table:not([class]) {
   background-color: var(--flx-color-section);
@@ -267,6 +278,11 @@ a.md-logo {
 
 .md-clipboard {
   color: rgba(var(--md-default-fg-color--light--rgb), 0.5);
+}
+
+/* Copied to clipboard dialog */
+.md-dialog {
+  border-radius: var(--flx-border-radius);
 }
 
 /* This fixes table of content titles higlighting the title above the one clicked intead of the clicked */
@@ -311,8 +327,19 @@ a.md-logo {
   }
 
   /* Main Sidebar */
-  .flx-sidebar .flx-sidebarheader {
-    display: none;
+  .flx-sidebar {
+    .flx-sidebarheader {
+      display: none;
+    }
+
+    .md-sidebar__scrollwrap {
+      box-shadow: none;
+    }
+  }
+
+  /* Sidebar opened */
+  [data-md-toggle=drawer]:checked~.md-container .md-sidebar {
+    --flx-main-sidebar-width: 80dvw;
   }
 
   /* Main content and Secondary sidebar */
@@ -366,5 +393,12 @@ a.md-logo {
       min-width: calc(100dvw - 80px);
       max-width: calc(100dvw - 80px);
     }
+  }
+}
+
+/* Not big screens */
+@media screen and (min-width: 60em) {
+  .flx-sidebar .md-sidebar__scrollwrap {
+    height: calc(100dvh - 48px) !important;
   }
 }
