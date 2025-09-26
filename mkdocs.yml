@@ -10,7 +10,7 @@ theme:
         name: Switch to dark mode
     - scheme: darkmode
       toggle:
-        icon: material/weather-sunny
+        icon: octicons/sun-16
         name: Switch to light mode
   language: en
   features:
