@@ -7,9 +7,7 @@ For using any of them we will use flexygo.ai.function_name
 
 ### startVoiceRecognition()
 
-```ts
- startVoiceRecognition(setting_id, defaults) => void
-```
+> **startVoiceRecognition**(`setting_id`, `defaults`): `void`
 
 It opens a modal which will listen anything you say and after you end talking, or you press the mic button, it will open the desired assistant with you already
 having sent the message you said so the AI directly responds to it, reading out loud its response.
@@ -84,15 +82,3 @@ Any text that is sent will be read out loud by the app unless if the assistant i
 `Promise`\<`void`\> \| `Promise`\<`boolean`\>
 
 A promise that ends when one of the actions ends
-
-#### Default
-
-```ts
-1.0
-```
-
-#### Default
-
-```ts
-1.0
-```

@@ -1,12 +1,14 @@
 # Camera
 
+Camera functions that allow you to take pictures, access gallery images and scan codes using the device camera.
+
 ## Functions
 
 ### scanCode()
 
 > **scanCode**(`options`): `Promise`\<`unknown`\>
 
-Scan codes using device camera.
+Scan codes(different types of barcodes and QRs) using device camera
 
 #### Parameters
 
@@ -18,7 +20,7 @@ Scan codes using device camera.
 
 `Promise`\<`unknown`\>
 
-- if share = false returns promise with pdf base64 object.
+- returns a promise that resolves with an object containing the scanned code format, text, and a cancelled boolean
 
 #### Method
 
@@ -30,15 +32,21 @@ scanCode
 
 > **checkCameraPermission**(): `Promise`\<`unknown`\>
 
+Check for camera permissions before doing anything with it
+
 #### Returns
 
 `Promise`\<`unknown`\>
+
+- returns a promise that resolves with a boolean indicating if the camera permission is granted
 
 ***
 
 ### stopScan()
 
 > **stopScan**(): `void`
+
+Stops the scanning process
 
 #### Returns
 
@@ -50,21 +58,7 @@ scanCode
 
 > **toggleScannerTorch**(): `void`
 
-#### Returns
-
-`void`
-
-***
-
-### onFail()
-
-> **onFail**(`message`): `void`
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `message` | `any` |
+Toggles the device torch (flashlight) on or off
 
 #### Returns
 
@@ -74,49 +68,47 @@ scanCode
 
 ### getPicture()
 
-> **getPicture**(`myWidth`, `myHeight`, `myQuality`, `typeCrop?`, `alternativeCam?`): `Promise`\<`unknown`\>
+> **getPicture**(`width`, `height`, `quality`, `typeCrop?`, `alternativeCam?`): `Promise`\<`unknown`\>
+
+Take a picture using the device camera app or an alternative camera implementation for older devices
 
 #### Parameters
 
-| Parameter | Type | Default value |
-| ------ | ------ | ------ |
-| `myWidth` | `number` | `1000` |
-| `myHeight` | `number` | `1000` |
-| `myQuality` | `number` | `50` |
-| `typeCrop?` | `any` | `undefined` |
-| `alternativeCam?` | `boolean` | `false` |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `width` | `number` | `1000` | The width of the picture in pixels (default is 1000) |
+| `height` | `number` | `1000` | The height of the picture in pixels (default is 1000) |
+| `quality` | `number` | `50` | The quality of the picture so lowering this value will make images smaller but with a bigger compression (0-100) (default is 50) |
+| `typeCrop?` | `any` | `undefined` | The type of cropping to apply to the picture (this is an outdated parameter and has no effect) |
+| `alternativeCam?` | `boolean` | `false` | If true, an alternative camera implementation will be used, it's not advised to be used unless your userbase is having problems with older phones (default is false) |
 
 #### Returns
 
 `Promise`\<`unknown`\>
 
-***
-
-### stopCamera()
-
-> **stopCamera**(): `void`
-
-#### Returns
-
-`void`
+- returns a promise that resolves with the base64 string of the picture
 
 ***
 
 ### getGalleryPicture()
 
-> **getGalleryPicture**(`myWidth`, `myHeight`, `myQuality`): `Promise`\<`any`[]\>
+> **getGalleryPicture**(`width`, `height`, `quality`): `Promise`\<`any`[]\>
+
+Asks the user for pictures from the device gallery
 
 #### Parameters
 
-| Parameter | Type | Default value |
-| ------ | ------ | ------ |
-| `myWidth` | `number` | `1000` |
-| `myHeight` | `number` | `1000` |
-| `myQuality` | `number` | `50` |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `width` | `number` | `1000` | The width of the picture in pixels (default is 1000) |
+| `height` | `number` | `1000` | The height of the picture in pixels (default is 1000) |
+| `quality` | `number` | `50` | The quality of the picture so lowering this value will make images smaller but with a bigger compression (0-100) (default is 50) |
 
 #### Returns
 
 `Promise`\<`any`[]\>
+
+- returns a promise that resolves with an array of base64 strings of the selected pictures
 
 ***
 
@@ -124,22 +116,16 @@ scanCode
 
 > **savePicture**(`image`): `Promise`\<`any`\>
 
+Saves a base64 image string to the local database flxImages table (it's use is not adivesed, you should use flx-imagegallery configuration in practically every case)
+
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `image` | `any` |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `image` | [`ImageObject`](types.md#imageobject) | The image object containing the image data with this properties: {"ImageId", "ObjectName", "ObjectId", "ObjectGUID", "Name", "Descrip", "ImageClassId", "MainImage", "OrderNumber", "CreationDate", "URL", "B64","_isInserted"} |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-***
-
-### getDefaultImage()
-
-> **getDefaultImage**(): `string`
-
-#### Returns
-
-`string`
+- returns a promise that resolves when the image is saved

@@ -1,25 +1,31 @@
 # Parser
 
+This section contains a collection of functionalities for parsing and compiling templates.
+
 ## Functions
 
 ### recursiveCompile()
 
 > **recursiveCompile**(`json`, `template`, `conf`, `contextFunctions?`, `lastTemplate?`, `AddTimeZone?`): `Promise`\<`string`\>
 
+Recursively compiles a template string by replacing markers with corresponding values from a JSON object and context vars.
+
 #### Parameters
 
-| Parameter | Type | Default value |
-| ------ | ------ | ------ |
-| `json` | `any` | `undefined` |
-| `template` | `string` | `undefined` |
-| `conf` | [`ConfToken`](types.md#conftoken) | `undefined` |
-| `contextFunctions?` | `any` | `undefined` |
-| `lastTemplate?` | `string` | `undefined` |
-| `AddTimeZone?` | `boolean` | `false` |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `json` | `any` | `undefined` | The JSON object containing values to replace in the template. |
+| `template` | `string` | `undefined` | The template string containing markers to be replaced. |
+| `conf` | [`ConfToken`](types.md#conftoken) | `undefined` | The configuration object containing user and resource information. |
+| `contextFunctions?` | `any` | `undefined` | An optional object containing functions that can be called within the template. |
+| `lastTemplate?` | `string` | `undefined` | The last processed template string to prevent infinite recursion. |
+| `AddTimeZone?` | `boolean` | `false` | Whether to add timezone information when formatting dates. |
 
 #### Returns
 
 `Promise`\<`string`\>
+
+- A promise that resolves to the compiled template string.
 
 ***
 
@@ -27,120 +33,67 @@
 
 > **compile**(`json`, `template`, `files`, `contextFunctions?`, `AddTimeZone?`): `Promise`\<`string`\>
 
+Compiles a template string by replacing markers with corresponding values from a JSON object and context vars.
+
 #### Parameters
 
-| Parameter | Type | Default value |
-| ------ | ------ | ------ |
-| `json` | `any` | `undefined` |
-| `template` | `string` | `undefined` |
-| `files` | [`fileResource`](types.md#fileresource)[] | `undefined` |
-| `contextFunctions?` | `any` | `undefined` |
-| `AddTimeZone?` | `boolean` | `false` |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `json` | `any` | `undefined` | The JSON object containing values to replace in the template. |
+| `template` | `string` | `undefined` | The template string containing markers to be replaced. |
+| `files` | [`fileResource`](types.md#fileresource)[] | `undefined` | An array of file resources that can be used in the template. |
+| `contextFunctions?` | `any` | `undefined` | An optional object containing functions that can be called within the template. |
+| `AddTimeZone?` | `boolean` | `false` | Whether to add timezone information when formatting dates. |
 
 #### Returns
 
 `Promise`\<`string`\>
 
+- A promise that resolves to the compiled template string.
+
 ***
 
 ### findTemplate()
 
-> **findTemplate**(`obj`, `typeId`, `pageName`): [`PageConfig`](types.md#pageconfig)
+> **findTemplate**(`object`, `typeId`, `pageName`): [`PageConfig`](types.md#pageconfig)
+
+Given an object, the template type and the pagename it returns the proper template.
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `obj` | [`ObjectConfig`](types.md#objectconfig-1) |
-| `typeId` | `string` |
-| `pageName` | `string` |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `object` | [`ObjectConfig`](types.md#objectconfig-1) | The object configuration containing available pages. |
+| `typeId` | `string` | The type of template to search for (e.g., 'edit', 'list'). |
+| `pageName` | `string` | The specific page name to search for. If provided, it takes precedence over typeId. |
 
 #### Returns
 
 [`PageConfig`](types.md#pageconfig)
 
-***
-
-### getValue()
-
-> **getValue**(`val`, `prop?`): `any`
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `val` | `any` |
-| `prop?` | `any` |
-
-#### Returns
-
-`any`
+- The matching page configuration or null if not found.
 
 ***
 
 ### replaceAll()
 
-> **replaceAll**(`str`, `find`, `replace`): `any`
+> **replaceAll**(`text`, `text_to_find`, `replace_text`): `any`
+
+Replaces all occurrences of a substring within a string with a new substring.
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `str` | `any` |
-| `find` | `any` |
-| `replace` | `any` |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `text` | `any` | The original string. |
+| `text_to_find` | `any` | The substring to find within the original string. |
+| `replace_text` | `any` | The substring to replace the found substring with. |
 
 #### Returns
 
 `any`
 
-***
-
-### formatDate()
-
-> **formatDate**(`value`): `any`
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `value` | `any` |
-
-#### Returns
-
-`any`
-
-***
-
-### formatNumber()
-
-> **formatNumber**(`value`): `any`
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `value` | `any` |
-
-#### Returns
-
-`any`
-
-***
-
-### formatDecimal()
-
-> **formatDecimal**(`value`): `any`
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `value` | `any` |
-
-#### Returns
-
-`any`
+- The modified string with all occurrences replaced.
 
 ***
 
@@ -176,7 +129,7 @@ Returns an escaped SQL string
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `str` | `string` | String |
+| `str` | `string` | String to be scaped |
 
 #### Returns
 
@@ -192,15 +145,19 @@ escapeSqlString
 
 > **splitParams**(`pStr`): `any`[]
 
+Splits a parameter string into an array of parameters, considering nested arrays.
+
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `pStr` | `any` |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `pStr` | `any` | The parameter string to split. |
 
 #### Returns
 
 `any`[]
+
+- An array of individual parameters.
 
 ***
 

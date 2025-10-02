@@ -1,12 +1,15 @@
 # Exports
 
+This section is a collection of export functions that can be used in various parts of the application.
+It contains functionalities for sending emails and generating PDFs.
+
 ## Functions
 
 ### sendMail()
 
 > **sendMail**(`to`, `subject`, `body`, `ishtml?`, `cc?`, `bcc?`, `attachments?`): `Promise`\<`void`\>
 
-Sends email using defailt mail system.
+Sends email using the default mail system.
 
 #### Parameters
 
@@ -34,7 +37,7 @@ sendMail
 
 > **createPDF**(`html`, `filename`, `documentsize?`, `landscape?`, `share?`): `any`
 
-Generate pdf from html string
+Generate pdf from an html string
 
 #### Parameters
 
