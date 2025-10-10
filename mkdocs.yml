@@ -31,6 +31,8 @@ extra:
     provider: mike
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/custom-components.css
+  - stylesheets/404-error.css
 extra_javascript:
   - javascripts/extra.js
 markdown_extensions:
