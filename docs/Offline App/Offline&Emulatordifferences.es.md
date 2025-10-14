@@ -8,7 +8,7 @@ When getting SQL data from js functions its a common mistake to try using direct
 
 flexygo.sql.getRow is normally the preferable method, unless you need to use most of the sql results, in which case it would be better to use the flexygo.sql.getRows.
 
-![Object View](./img/Help/offline/EmulatorPhoneSQL.png "Emulator/Phone SQL differences")
+![Object View](/assets/images/offline/EmulatorPhoneSQL.png "Emulator/Phone SQL differences")
 
 Emulator/Phone SQL differences
 

@@ -6,13 +6,13 @@ Configure return data process to synchronize device and data model.
 
 1.  Add it to **flexygo** stored procedure repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures**.
     
-    ![Create Stored](./img/Help/Offline/CreateStored.png "Image 1. Create Stored")
+    ![Create Stored](/assets/images/Offline/CreateStored.png "Image 1. Create Stored")
     
     Image 1. Create Stored
     
 2.  Edit the App Offline and assign the process:
     
-    ![App Offline](./img/Help/Offline/AppOfflineSave.png "Image 2. App Offline")
+    ![App Offline](/assets/images/Offline/AppOfflineSave.png "Image 2. App Offline")
     
     Image 2. App Offline
     

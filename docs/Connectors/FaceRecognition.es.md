@@ -10,33 +10,33 @@ You have to take into account that face recognition requires a 64 bits server.
 
 1.  Open recognition settings and configure new object relation.
     
-    ![Face Recognition settings](./img/Help/Recognition/Recognition_1.png "Image 1. Face Recognition settings")
+    ![Face Recognition settings](/assets/images/Recognition/Recognition_1.png "Image 1. Face Recognition settings")
     
     Image 1. Face Recognition settings
     
 2.  After that, you are able to see a new related collection to your desired object with an image manager.
     
-    ![Face Recognition settings](./img/Help/Recognition/Recognition_2.png "Image 2. Face Recognition settings")
+    ![Face Recognition settings](/assets/images/Recognition/Recognition_2.png "Image 2. Face Recognition settings")
     
     Image 2. Face Recognition settings
     
 3.  Upload one or more pictures with clear face related to each object.
     
-    ![Face Recognition example](./img/Help/Recognition/Recognition_3.png "Image 2. Face Recognition example")
+    ![Face Recognition example](/assets/images/Recognition/Recognition_3.png "Image 2. Face Recognition example")
     
     Image 3. Face Recognition example
     
 4.  Then you can test it using Find Faces sample process or code your own function:
     
-    ![Face Recognition example](./img/Help/Recognition/Recognition_6.png "Image 4. Face Recognition example")
+    ![Face Recognition example](/assets/images/Recognition/Recognition_6.png "Image 4. Face Recognition example")
     
     Image 4. Face Recognition example
     
-    ![Face Recognition example](./img/Help/Recognition/Recognition_4.png "Image 5. Face Recognition example")
+    ![Face Recognition example](/assets/images/Recognition/Recognition_4.png "Image 5. Face Recognition example")
     
     Image 5. Face Recognition example
     
-    ![Face Recognition example](./img/Help/Recognition/Recognition_5.png "Image 6. Face Recognition example")
+    ![Face Recognition example](/assets/images/Recognition/Recognition_5.png "Image 6. Face Recognition example")
     
     Image 6. Face Recognition example
     

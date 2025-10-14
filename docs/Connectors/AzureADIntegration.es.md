@@ -23,7 +23,7 @@ Make sure you have neccesary permitions to create and manage applications.
 
 For the correct functionality of Azure AD Integration additional configuration is required: redirect URL, logout URL. Also you can decide if you want to restrict use of your application to accounts in your organizational directory only (single tenant) or accounts in any organizational directorty (multitenant). [More info](https://docs.microsoft.com/en-us/azure/active-directory/develop/single-and-multi-tenant-apps)
 
-![Redirect URL, logout URL](./img/Help/AzureAdIntegration/URL.png "Image 1. Redirect URL, logout URL")
+![Redirect URL, logout URL](/assets/images/AzureAdIntegration/URL.png "Image 1. Redirect URL, logout URL")
 
 Image 1. Redirect URL, logout URL
 
@@ -31,7 +31,7 @@ Image 1. Redirect URL, logout URL
 
 In the case you want to restrict user's access to your **flexygo** application, you can switch the **assignment required** option to **yes**: then users must first be assigned this application before being able to access it. To assign users, enter to Enterprise applications -> choose your **flexygo** app -> Users and groups
 
-![Users](./img/Help/AzureAdIntegration/Users.png "Image 2. Users")
+![Users](/assets/images/AzureAdIntegration/Users.png "Image 2. Users")
 
 Image 2. Users
 
@@ -58,10 +58,10 @@ Once the user pass through registration, it activates Register Process called "N
 
 #### Tenant Id, Client Id
 
-![](./img/help/AzureAdIntegration/ClientTenant.png)
+![](/assets/images/AzureAdIntegration/ClientTenant.png)
 
 ×
 
 #### Client Secret Id
 
-![](./img/help/AzureAdIntegration/ClientSecret.png)
+![](/assets/images/AzureAdIntegration/ClientSecret.png)

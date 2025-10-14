@@ -1,4 +1,4 @@
-# Wacom SDK Integration ![Wacom](./img/help/Wacom/Wacom_Logo_WhiteType.svg)
+# Wacom SDK Integration ![Wacom](/assets/images/Wacom/Wacom_Logo_WhiteType.svg)
 
 **flexygo** has successfully incorporated the capability to sign with STU tablets in a seamless and user-friendly manner. This guide provides detailed, step-by-step instructions on how to install and set up the required SDK and services to enable signature capture using Wacom Signature Controls. Furthermore, it explores the various customizable values that can be configured to adapt the signature capture experience according to your specific needs.
 
@@ -13,7 +13,7 @@
 
 1.  Define a property with **Wacom Signature** type:
     
-    ![Adding a property of Wacom Signature Type](./img/Help/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
+    ![Adding a property of Wacom Signature Type](/assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
     
     Image 1. Using a Wacom Signature property
     
@@ -25,14 +25,14 @@
     *   **titleText**: You can specify a text to be shown here...
     *   **titleProperty**: You can specify a PropertyName into this property to his value here...
     
-    ![Title demostration](./img/Help/Wacom/title_demostration.png "Image 2. Title demostration")
+    ![Title demostration](/assets/images/Wacom/title_demostration.png "Image 2. Title demostration")
     
     Image 2. Title demostration
     
     *   **nameText**: You can specify a text to be shown here...
     *   **nameProperty**: You can specify a PropertyName into this property to his value here...
     
-    ![Name demostration](./img/Help/Wacom/name_demostration.png "Image 3. Name demostration")
+    ![Name demostration](/assets/images/Wacom/name_demostration.png "Image 3. Name demostration")
     
     Image 3. Name demostration
     
@@ -41,6 +41,6 @@
         *   **inkColor**: You can define the ink color of the signature
         *   **backgroundColor**: You can define the background of the image genarated with the signature
         
-        ![Style demostration](./img/Help/Wacom/style_demostration.png "Image 4. Style demostration")
+        ![Style demostration](/assets/images/Wacom/style_demostration.png "Image 4. Style demostration")
         
         Image 4. Style demostration

@@ -4,7 +4,7 @@ Test Automation are an important value when evaluating and verifying the correct
 
 You can find more information about testing with **flexygo** here [Test Unitario](https://nuget.flexygo.com/develop/readme.html#TestUnitario)
 
-![Dll Test management](./img/help/Custom_DLL/testing2.png "Image 1. Dll Test management")
+![Dll Test management](/assets/images/Custom_DLL/testing2.png "Image 1. Dll Test management")
 
 Image 1. Dll Test management
 
@@ -22,7 +22,7 @@ In the example we see a test that runs through all the application nodes definit
 
 If there are test in a dll that we do not want **flexygo** to run, we can tag them with a testCategory attribute and inform **flexygo** of which test should not be used by using the exclude attributes. In te following sample if we don't want to execute this test we should set **flexygo** exlude attributes = ExcludeClient
 
-![Exclude dll Tests ](./img/help/Custom_DLL/testing1.png "Image 2. Exclude dll Tests ")
+![Exclude dll Tests ](/assets/images/Custom_DLL/testing1.png "Image 2. Exclude dll Tests ")
 
 Image 2. Exclude dll Tests
 

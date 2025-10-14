@@ -22,11 +22,11 @@ Click on the **New App** option, then we will fill in and save the associated in
 *   The process, with only 1 automatic param **@JSONVALUE**, contains all the device tables:
     
 
-![Face Recognition settings](./img/Help/offline/create1.png "Image 1. Create Offline App")
+![Face Recognition settings](/assets/images/offline/create1.png "Image 1. Create Offline App")
 
 Image 1. Create Offline App
 
-![Face Recognition settings](./img/Help/offline/AppOfflineSave.png "Image 2. Create Offline App")
+![Face Recognition settings](/assets/images/offline/AppOfflineSave.png "Image 2. Create Offline App")
 
 Image 2. Create Offline App
 

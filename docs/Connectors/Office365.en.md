@@ -2,7 +2,7 @@
 
 # Office 365 Integration
 
-![Office 365](./img/help/Office365/Office365Logo.png)
+![Office 365](/assets/images/Office365/Office365Logo.png)
 
 In order to make calls to Microsoft Graph, which is a RESTfull web API, that enables you to access Microsoft Cloud service resources, it is required to register your app and get authentication tokens for a user or service. If you want to develop an office integration from **flexygo** platform you have two options:
 
@@ -14,25 +14,25 @@ In addition to registering the application in Azure make sure to enable access p
 
   
 
-![](./img/help/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
+![](/assets/images/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
 
 Image 1. Office 365 API Permissions
 
   
 
-![](./img/help/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
+![](/assets/images/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
 
 Image 2. Office 365 API Agregate Permissions
 
   
 
-![](./img/help/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
+![](/assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
 
 Image 3. Office 365 API Calendars Permissions
 
   
 
-![](./img/help/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
+![](/assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
 
 Image 4. Office 365 API Contacts Permissions
 

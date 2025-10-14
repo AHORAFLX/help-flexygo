@@ -3,7 +3,7 @@
 *   Publish your own news and inform users of what is happening in the environment.
 *   Tell your users about the news that you have incorporated into each version of the application.
 
-![Publish article](./img/help/News/Entire-news-1.jpg "Image 1. Reference and Subreference configuration")
+![Publish article](/assets/images/News/Entire-news-1.jpg "Image 1. Reference and Subreference configuration")
 
 News and version notes
 

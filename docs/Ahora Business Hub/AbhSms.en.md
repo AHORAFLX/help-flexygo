@@ -8,9 +8,7 @@ Add Abh Sms to this project
 
 ## Configure Abh Sms
 
-![](./img/Help/AbhSms/AbhSmsSettings.png "Image 1. Abh Sms configuration")
-
-Image 1. Abh Sms configuration
+![Abh Sms configuration](/assets/images/AbhSms/AbhSmsSettings.png "Abh Sms configuration")
 
 **Integration:** Name of the integration that we are going to configure, in this case Ahora Business Hub - SMS.
 

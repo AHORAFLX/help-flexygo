@@ -2,6 +2,37 @@
 
 Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to use interface, you can build anything with little to no knowdlege about HTML, CSS, JS or C#. But if you ever want to develop more complex applications you'll have access to all of them so you can create the exact idea you had in mind.
 
+<ul class="flx-home-cards">
+    <li class="flx-home-card">
+        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
+            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <p><b>Offline App</b></p>
+            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        </a>
+    </li>
+    <li class="flx-home-card">
+        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
+            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <p><b>Offline App</b></p>
+            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        </a>
+    </li>
+    <li class="flx-home-card">
+        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
+            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <p><b>Offline App</b></p>
+            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        </a>
+    </li>
+    <li class="flx-home-card">
+        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
+            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <p><b>Offline App</b></p>
+            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        </a>
+    </li>
+</ul>
+
 ## Flexygo's technologies
 Flexygo is engineered on the .NET core framework, providing a modern, cross-platform, and high-performance foundation. Its native compatibility with both SQL Server and Oracle databases offers significant architectural flexibility.
 

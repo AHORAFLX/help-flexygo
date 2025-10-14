@@ -2,13 +2,13 @@
 
 See how to use the Scheduller and Calendar web component. With Scheduller and Calendar it's possible to use the same configuration and obtain different visualizations.
 
-![](./img/Help/Scheduller/Calendar_2.jpg "Image 1. Calendar")
+![](/assets/images/Scheduller/Calendar_2.jpg "Image 1. Calendar")
 
 Image 1. Calendar
 
 ## Scheduler and Calendar configuration
 
-![](./img/Help/Scheduller/Scheduller_conf.png "Image 2. Calendar Configuration")
+![](/assets/images/Scheduller/Scheduller_conf.png "Image 2. Calendar Configuration")
 
 Image 2. Calendar Configuration
 
@@ -33,7 +33,7 @@ Image 2. Calendar Configuration
 
 ## How to associate objects to already created calendar
 
-![](./img/Help/Scheduller/Scheduller_conf_objt.PNG "Image 2. Scheduller Configuration Object")
+![](/assets/images/Scheduller/Scheduller_conf_objt.PNG "Image 2. Scheduller Configuration Object")
 
 Image 2. Scheduller Configuration Object
 
@@ -68,7 +68,7 @@ Example : initialDate='20240110' The format of the indicated date must be **YYYY
 
   
 
-![](./img/Help/Scheduller/Scheduller_ModParam.PNG "Image 3. Scheduller Configuration Object")
+![](/assets/images/Scheduller/Scheduller_ModParam.PNG "Image 3. Scheduller Configuration Object")
 
 Image 3. Scheduller Configuration Module Param
 
@@ -76,4 +76,4 @@ Image 3. Scheduller Configuration Module Param
 
 #### Example SQL Query \[ View from action object \]
 
-![](./img/Help/Scheduller/ViewObjt_Action.PNG)
+![](/assets/images/Scheduller/ViewObjt_Action.PNG)

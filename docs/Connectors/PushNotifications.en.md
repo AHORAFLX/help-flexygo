@@ -10,7 +10,7 @@ It is mandatory for using push notifications in your web browser to have a domai
 
 2\. Once you have obtained your key, fill out your Push API Key settings.
 
-![](./img/Help/Push/Push_1.png "Image 1. API Key settings")
+![](/assets/images/Push/Push_1.png "Image 1. API Key settings")
 
 Image 1. API Key settings
 
@@ -21,7 +21,7 @@ Image 1. API Key settings
 *   **pushmobile** for push notifications only on mobile devices with a **flexygo** app installed.
 *   **pushweb** for push notifications only in web browser running **flexygo** (it's mandatory https domain certificate).
 
-![](./img/Help/Push/Push_2.png "Image 2. API Key setting")
+![](/assets/images/Push/Push_2.png "Image 2. API Key setting")
 
 Image 2. API Key setting
 

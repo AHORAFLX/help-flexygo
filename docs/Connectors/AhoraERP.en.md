@@ -1,6 +1,6 @@
 # Ahora ERP Integration
 
-![Ahora ERP](./img/help/AhoraERP/ahora.svg)
+![Ahora ERP](/assets/images/AhoraERP/ahora.svg)
 
 **flexygo** facilitates integration with Ahora ERP. To enable this, it puts at a simple click of a button a series of processes that facilitate the development of solutions on the Ahora ERP DB.
 
@@ -8,7 +8,7 @@
 
 1.  Configure the **Reference** and **Subreference** fields for user registration (you can find it in Admin Work Area > Security > Users), so they have drop-downs of the **employee** table and the **delegation** table respectively
     
-    ![Reference and Subreference configuration](./img/Help/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
+    ![Reference and Subreference configuration](/assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
     
     Image 1. Reference and Subreference configuration
     

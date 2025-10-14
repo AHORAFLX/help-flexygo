@@ -2,7 +2,7 @@
 
 # SendinBlue Integration
 
-![SendinBlue](./img/help/SendinBlue/SendinBlue_Logo.png)
+![SendinBlue](/assets/images/SendinBlue/SendinBlue_Logo.png)
 
 SendinBlue is a marketing automation platform that helps you share email and advertising campaigns with customers and other stakeholders.
 

@@ -250,7 +250,7 @@ List header can now be set as sticky on modules.
 
 To do so you just have to add class "sticky-header" to module as portayed in the image.
 
-![Sticky toolbar](./img/Help/Typography/StickyHeader.png "Sticky toolbar")
+![Sticky toolbar](/assets/images/Typography/StickyHeader.png "Sticky toolbar")
 
 Sticky header
 
@@ -260,7 +260,7 @@ Toolbar can now be set as sticky on modules.
 
 To do so you just have to add class "sticky-toolbar" to module as portayed in the image.
 
-![Sticky toolbar](./img/Help/Typography/StickyToolbar.png "Sticky toolbar")
+![Sticky toolbar](/assets/images/Typography/StickyToolbar.png "Sticky toolbar")
 
 Sticky toolbar
 
@@ -324,73 +324,73 @@ More info
 
 #### Right and left position
 
-![](./img/help/Typography/rightLeft_float.jpg)
+![](/assets/images/Typography/rightLeft_float.jpg)
 
 ×
 
 #### Clear and clear both
 
-![](./img/help/Typography/clearBoth.jpg)
+![](/assets/images/Typography/clearBoth.jpg)
 
 ×
 
 #### Docs Section
 
-![](./img/help/Typography/docSection.jpg)
+![](/assets/images/Typography/docSection.jpg)
 
 ×
 
 #### Padding and Margin
 
-![](./img/help/Typography/padding.jpg)
+![](/assets/images/Typography/padding.jpg)
 
 ×
 
 #### Last Module Margin
 
-![](./img/help/Typography/LastModuleMargin.jpg)
+![](/assets/images/Typography/LastModuleMargin.jpg)
 
 ×
 
 #### Inline, block, inline-block
 
-![](./img/help/Typography/inlineBlock.jpg)
+![](/assets/images/Typography/inlineBlock.jpg)
 
 ×
 
 #### Hidden
 
-![](./img/help/Typography/hidden.jpg)
+![](/assets/images/Typography/hidden.jpg)
 
 ×
 
 #### No List
 
-![](./img/help/Typography/nolist.jpg)
+![](/assets/images/Typography/nolist.jpg)
 
 ×
 
 #### Clickable
 
-![](./img/help/Typography/cursorPointer.jpg)
+![](/assets/images/Typography/cursorPointer.jpg)
 
 ×
 
 #### Round Borders
 
-![](./img/help/Typography/cleanRounded.png)
+![](/assets/images/Typography/cleanRounded.png)
 
 ×
 
 #### Fullscreen
 
-![](./img/help/Typography/fullScreen.jpg)
+![](/assets/images/Typography/fullScreen.jpg)
 
 ×
 
 #### Show Empty Column
 
-![](./img/help/Typography/ShowEmptyColumn.png)
+![](/assets/images/Typography/ShowEmptyColumn.png)
 
 ×
 
@@ -400,4 +400,4 @@ More info
 
 #### Grid- Column Separator
 
-![](./img/help/Typography/ColumnSeparator.png)
+![](/assets/images/Typography/ColumnSeparator.png)

@@ -20,7 +20,7 @@ Imports allow us to transfer information from files to the system, for example f
 *   Enabled: When the import fails the imported file is deleted.
 *   Unable: When the import fails the imported file is stored in ~/custom/imports/{{ImportId}}.
 
-![Import settings](./img/Help/Imports/setting.png "Image 1. Create Import Setting")
+![Import settings](/assets/images/Imports/setting.png "Image 1. Create Import Setting")
 
 Image 1. Create Import Setting
 
@@ -32,7 +32,7 @@ The first row must be the names of the columns, they cannot be empty, they canno
 
 More than one sheet can be added as in the example, the name of the sheets follows the same criteria as the columns.
 
-![Excel example](./img/Help/Imports/excel.png "Image 2. Excel example")
+![Excel example](/assets/images/Imports/excel.png "Image 2. Excel example")
 
 Image 2. Excel example
 
@@ -40,7 +40,7 @@ Image 2. Excel example
 
 1.  Add it to **flexygo** process repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures or Server Dll**.
     
-    ![Create Process](./img/Help/Imports/process.png "Image 3. Create Process")
+    ![Create Process](/assets/images/Imports/process.png "Image 3. Create Process")
     
     Image 3. Create Process
     
@@ -57,7 +57,7 @@ To execute the import it is found in the upper menu Tools->Import.
 
 In the process window a button appears to download the template of the file that has been previously placed in the creation of the setting.
 
-![Process window](./img/Help/Imports/process_window.png "Image 4. Process window")
+![Process window](/assets/images/Imports/process_window.png "Image 4. Process window")
 
 Image 4. Process window
 

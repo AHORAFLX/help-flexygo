@@ -6,7 +6,7 @@ Configuring Friendly URLs in **flexygo** is as easy as accessing the object conf
 
 Objects with no Friendly URL switch active will not get redirected when using one of this URLs.
 
-![Friendly URLs configuration](./img/Help/Information/FriendlyURLs.png "Image 1. Reference and Subreference configuration")
+![Friendly URLs configuration](/assets/images/Information/FriendlyURLs.png "Image 1. Reference and Subreference configuration")
 
 Image 1. Friendly URLs configuration
 

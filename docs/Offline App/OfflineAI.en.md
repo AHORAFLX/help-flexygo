@@ -18,7 +18,7 @@ With this function you will be able of navigating to any configured Flexygo AI a
 
 **\-First Message (optional):** If you want to start the chat with an already sent message by the user you just need to specify that message here.
 
-![Go AI](./img/Help/offline/GoAi.png "Image 1. Go AI")
+![Go AI](/assets/images/offline/GoAi.png "Image 1. Go AI")
 
 Image 1. Go AI
 
@@ -32,7 +32,7 @@ The voice recognition will stop after a moment of silence, and it will automatic
 
 **\-Setting Id:** Here you just need to specify Assitant Id of the one you want to navigate to.
 
-![Voice Recognition](./img/Help/offline/VoiceRecognition.png "Image 2. Voice Recognition")
+![Voice Recognition](/assets/images/offline/VoiceRecognition.png "Image 2. Voice Recognition")
 
 Image 2. Voice Recognition
 

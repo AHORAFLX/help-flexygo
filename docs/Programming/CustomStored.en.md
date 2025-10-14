@@ -11,14 +11,14 @@ Whatch video about creating stored procedure in **flexygo** environment:
 1.  Code stored procedure in database. _Example._
 2.  Add it to **flexygo** stored procedure repository at Admin Work Area > Logic and Rules > DB Stored Procedures.
     
-    ![Stored Procedure Repository](./img/Help/Custom_DLL/ObjectStored.png "Image 1. Stored Procedure Repository")
+    ![Stored Procedure Repository](/assets/images/Custom_DLL/ObjectStored.png "Image 1. Stored Procedure Repository")
     
     Image 1. Stored Procedure Repository
     
 3.  If stored has parameters insert it automatically using **Generate parameters** menu.
 4.  Add relation to object in Admin Work Area > Object management > Logic.
     
-    ![Stored and Object Relation](./img/Help/Custom_DLL/RelatedObjectStored.png "Image 2. Stored and Object Relation")
+    ![Stored and Object Relation](/assets/images/Custom_DLL/RelatedObjectStored.png "Image 2. Stored and Object Relation")
     
     Image 2. Stored and Object Relation
     
@@ -29,21 +29,21 @@ Whatch video about creating stored procedure in **flexygo** environment:
 
 1.  Set **Unique Identifier Field** in object configuration to allow collection process.
     
-    ![Set Unique Identifier Field](./img/Help/Custom_DLL/UniqueIdentifier.png "Image 3. Set Unique Identifier Field")
+    ![Set Unique Identifier Field](/assets/images/Custom_DLL/UniqueIdentifier.png "Image 3. Set Unique Identifier Field")
     
     Image 3. Set Unique Identifier Field
     
 2.  Code stored procedure in database. Append a param with name **@sysCollectionSentence** and type **nvarchar(max)** to recive an SQL with selected items. _Example._
 3.  Add it to **flexygo** stored procedure repository at Admin Work Area > Logic and Rules > DB Stored Procedures.
     
-    ![Stored Procedure Repository](./img/Help/Custom_DLL/CollectionStored.png "Image 4. Stored Procedure Repository")
+    ![Stored Procedure Repository](/assets/images/Custom_DLL/CollectionStored.png "Image 4. Stored Procedure Repository")
     
     Image 4. Stored Procedure Repository
     
 4.  If stored has parameters insert it automatically using **Generate parameters** menu.
 5.  Add relation to collection in Admin Work Area > Object management > Logic. If process only can be executed with selected items, please set switch to true, otherwise process will be executed with all items filtered in current screen.
     
-    ![Stored and Collection Relation](./img/Help/Custom_DLL/RelatedCollectionStored.png "Image 5. Stored and Collection Relation")
+    ![Stored and Collection Relation](/assets/images/Custom_DLL/RelatedCollectionStored.png "Image 5. Stored and Collection Relation")
     
     Image 5. Stored and Collection Relation
     

@@ -1,6 +1,6 @@
 # RedSys Integration
 
-![](./img/help/RedSys/RedSysLogo.png)
+![](/assets/images/RedSys/RedSysLogo.png)
 
 Redsys is a secure virtual payment platform that you can apply to e-commerce to offer your customers/clients credit and debit card payments from different banks. **flexygo** has the ability to make payments through this platform.
 
@@ -12,18 +12,18 @@ In the following steps we'll explain how to realize integration with RedSys plat
 2.  Configure RedSys settings
 3.  Configure a process that will run when the payment is made. It can be a Stored or DLL process.
     
-    ![](./img/Help/RedSys/RedSys_2.png "Image 1. RedSys configuration")
+    ![](/assets/images/RedSys/RedSys_2.png "Image 1. RedSys configuration")
     
     Image 1. RedSys configuration
     
-    ![](./img/Help/RedSys/RedSys_3.png "Image 2. RedSys configuration")
+    ![](/assets/images/RedSys/RedSys_3.png "Image 2. RedSys configuration")
     
     Image 2. RedSys configuration
     
     The process can receive as parameter the fields of the parsed object or response param. To receive the response, you must include a parameter in your process with the name of **ResponseCode**.
 4.  After that, open the Redsys configuration and configure a new object relationship.
     
-    ![](./img/Help/RedSys/RedSys_1.png "Image 3. RedSys configuration")
+    ![](/assets/images/RedSys/RedSys_1.png "Image 3. RedSys configuration")
     
     Image 3. RedSys configuration
     
@@ -38,7 +38,7 @@ In the following steps we'll explain how to realize integration with RedSys plat
 
 You can either use the standard payment process and link it to an object.
 
-![](./img/Help/RedSys/RedSys_6.png "Image 4. RedSys configuration")
+![](/assets/images/RedSys/RedSys_6.png "Image 4. RedSys configuration")
 
 Image 4. RedSys configuration
 

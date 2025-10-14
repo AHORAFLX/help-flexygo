@@ -4,7 +4,7 @@ MailChimp MailChimp Demo Processes
 
 # MailChimp Demo Processes
 
-![MailChimp](./img/help/MailChimp/MailChimpLogoBlack.png)
+![MailChimp](/assets/images/MailChimp/MailChimpLogoBlack.png)
 
 Some examples of how to perform certain actions in your custom processes are the following :
 

@@ -10,7 +10,7 @@ The most common module types (flx-list, flx-edit, flx-view, flx-moduletab and fl
 
 Adding a custom skeleton is as easy as navigating to the skeletons page through the admin work, and through the list adding a new one.
 
-![Menu](./img/Help/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
+![Menu](/assets/images/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
 
 Image 1. Database Menu Navigation
 

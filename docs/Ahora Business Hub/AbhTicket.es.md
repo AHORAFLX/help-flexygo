@@ -8,7 +8,7 @@ Add Abh Ticket to this project
 
 ## Configure Abh Ticket
 
-![](./img/Help/AbhTicket/AbhTicketSettings.png "Image 1. Abh Ticket configuration")
+![Abh Ticket configuration](/assets/images/AbhTicket/AbhTicketSettings.png "Abh Ticket configuration")
 
 Image 1. Abh Ticket configuration
 

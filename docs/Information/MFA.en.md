@@ -18,7 +18,7 @@ Furthermore, at flexygo we understand that not all users require the same level 
 
 First of all we have 2 new settings:
 
-![](./img/Help/MFA/mfa_settings.png "Image 1. MFA Settings")
+![](/assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
 
 Image 1. MFA Settings
 
@@ -29,11 +29,11 @@ Image 1. MFA Settings
 
 After configuring these parameters as we see fit, we can define at user or role level to whom to activate MFA.
 
-![](./img/Help/MFA/mfa_user.png "Image 2. MFA in user")
+![](/assets/images/MFA/mfa_user.png "Image 2. MFA in user")
 
 Image 2. MFA in user
 
-![](./img/Help/MFA/mfa_role.png "Image 3. MFA in role")
+![](/assets/images/MFA/mfa_role.png "Image 3. MFA in role")
 
 Image 3. MFA in role
 
@@ -41,6 +41,6 @@ Image 3. MFA in role
 
 Finally, if we try to log in with the user that has the MFA active, we will see the following screen to enter our security code
 
-![](./img/Help/MFA/mfa_screen.png "Image 4. MFA Screen")
+![](/assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")
 
 Image 4. MFA Screen

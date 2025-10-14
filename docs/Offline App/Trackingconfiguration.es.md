@@ -10,7 +10,7 @@ Before even starting is important to configure devices to allow the app to track
 
 A new tracking button has been added to app creation menu, which will send you to tracking configuration menu, where you'll be able to configure and visualize every tracking setting:
 
-![](./img/Help/offline/TrackingButton.png "Image 1. Set tracking")
+![](/assets/images/offline/TrackingButton.png "Image 1. Set tracking")
 
 Image 1. Tracking configuration button
 
@@ -22,7 +22,7 @@ Tracking schedule: Shows every stablished tracking schedule, and it allows to cr
 
 User tracking information: Shows every user and its tracking configuration information(radius and inaccuracy) divided between users with active tracking and the ones that don't. On the right of every user there'll be an icon which shows if there's a calendar schedule assigned to him (blue icon) or if not (red icon), if clicked you'll navigate to that schedule view, or if it's of a not scheduled one to a new schedule creation for that user. Lastly if you click on the green map icon (only appears on correctly configured users) you'll see that user route
 
-![](./img/Help/offline/TrackingCnfMenu.png "Image 2. Set tracking")
+![](/assets/images/offline/TrackingCnfMenu.png "Image 2. Set tracking")
 
 Image 2. Tracking configuration menu
 
@@ -42,7 +42,7 @@ As smaller the radius parameter is, the more data the database will get, so it's
 
 Maxim Inaccuracy is used to only send to server those coordenates which the app knows that the distance between obtained coordenates and the true user position is smaller than this value. This value is important to avoid getting bad information, because of that is recommended the value not to be lower than 45.
 
-![](./img/Help/offline/SetTracking.png "Image 3. Set tracking")
+![](/assets/images/offline/SetTracking.png "Image 3. Set tracking")
 
 Image 3. Set tracking
 
@@ -50,11 +50,11 @@ When this parameters are configured and saved the app will be able to track ever
 
 Once you have all of this configured functionalitie will be completely operational.
 
-![](./img/Help/offline/SelectTrackingSchedules.png "Image 5. Set schedules")
+![](/assets/images/offline/SelectTrackingSchedules.png "Image 5. Set schedules")
 
 Image 4. Set schedules
 
-![](./img/Help/offline/SetHolidaysView.png "Image 5. Set holidays")
+![](/assets/images/offline/SetHolidaysView.png "Image 5. Set holidays")
 
 Image 5. Set holidays
 
@@ -64,10 +64,10 @@ On default flexygo has a Cronjob called ClearLocations that will be deleting eve
 
 This Job can also be edited to be triggered in a diferent timespan and you can modify its Days process param to delete logs older than that value.
 
-![](./img/Help/offline/SelectTrackingProcess.png "Image 6. Select clear locations process")
+![](/assets/images/offline/SelectTrackingProcess.png "Image 6. Select clear locations process")
 
 Image 6. Select clear locations process
 
-![](./img/Help/offline/ConfigureClearLocations.png "Image 7. Configure clear locations process")
+![](/assets/images/offline/ConfigureClearLocations.png "Image 7. Configure clear locations process")
 
 Image 7. Configure clear locations process

@@ -1,6 +1,6 @@
 # Cl@ve Authentication
 
-![Cl@ve](./img/help/clave/clave-icon.svg)
+![Cl@ve](/assets/images/clave/clave-icon.svg)
 
 We are pleased to share an exciting update to our **flexygo** web application: the introduction of Cl@ve as an authentication method. This addition aims to streamline user access, bolster security, and significantly enhance the overall user experience
 
@@ -8,7 +8,7 @@ We are pleased to share an exciting update to our **flexygo** web application: t
 
 Cl@ve stands for "Identificación Electrónica para las Administraciones Públicas" (Electronic Identification for Public Administrations) and serves as a single gateway for citizens to authenticate themselves across various governmental platforms. It supports multiple authentication methods, including Cl@ve PIN, Cl@ve Permanente, electronic certificates, and DNIe (Electronic National Identity Document).
 
-![Cl@ve Authentication](./img/Help/clave/clave_preview.png "Image 1. Cl@ve Authentication")
+![Cl@ve Authentication](/assets/images/clave/clave_preview.png "Image 1. Cl@ve Authentication")
 
 Image 1. Cl@ve Authentication
 

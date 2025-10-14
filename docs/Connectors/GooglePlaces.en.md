@@ -1,6 +1,6 @@
 # Google Places
 
-![Google Places](./img/help/Google/GooglePlaces.png)
+![Google Places](/assets/images/Google/GooglePlaces.png)
 
 Google Places integration provides a convenient UI for connecting to and querying Google Maps Platform APIs. It can be used to provide autocomplete functionality for text-based geographic searches by returning places such as businesses, addresses and points of interest. To make it possible you need to realize some steps.
 
@@ -9,13 +9,13 @@ Google Places integration provides a convenient UI for connecting to and queryin
 1.  Once you've obtained Google API Key by following some steps in flexygo help, you can start configurating Google Places.
 2.  With this connector you can transform a simple textbox into a autocomplete address dropdown and get sliced each part on distinct fields.
     
-    ![](.\img\Help\GoogleAPIKey\autocomplete_preview.png "Image 1. Autocomplete Preview")
+    ![Autocomplete Preview](/assets/images/GoogleAPIKey/autocomplete_preview.png "Autocomplete Preview")
     
     Image 1. Autocomplete Preview
     
 3.  To add this function, you need to invoke the following function from **AfterLoadJS** module event.
     
-    ![](.\img\Help\GoogleAPIKey\jsafterload.png "Image 2. AfterLoadJS")
+    ![AfterLoadJS](/assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
     
     Image 2. AfterLoadJS
     
