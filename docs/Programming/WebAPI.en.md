@@ -5,6 +5,7 @@
 This API follows [OpenAPI Initiative](https://www.openapis.org/) and SDKs can be generated with [Swagger Codegen](https://swagger.io/) using your current [Schema Definition.](./webapi)
 
 It is **highly** recommended to use **HTTPS**.
+{: .flx-warning-card }
 
 ## OAuth Authentication
 
@@ -14,31 +15,89 @@ The Access Token is a credential that can be used by an application to access an
 
 You can request an access token using two ways:
 
-##### Sending implicit user credentials
+#### Sending implicit user credentials
 
-| Request |
-| --- |
-| ```<br>let username='myuser';  let pass='mypass';  $.ajax({   type: 'POST',   url: './token',   data: {grant_type: 'password', username: username, password: pass},   success: function (response) {alert('Success!')},   error: function (error) { alert('Fail!')}  });<br>``` |
-| Response |
-| ```<br>HTTP/1.1 200 OK  Content-Type: application/json  {   "access_token":"ALLgqj...rAxRvWAkjsQ",   "token_type":"bearer",     "expires_in":29,     "refresh_token":"68b....fc97a1"  }<br>``` |
+#### Request:
+```js
+let username='myuser';
+let pass='mypass';
+$.ajax({
+	type: 'POST',
+	url: './token',
+	data: {grant_type: 'password', username: username, password: pass},
+	success: function (response) {alert('Success!')},
+	error: function (error) { alert('Fail!')}
+});
+```
+
+#### Response
+```js
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+	"access_token":"ALLgqj...rAxRvWAkjsQ",
+	"token_type":"bearer",
+  	"expires_in":29,
+  	"refresh_token":"68b....fc97a1"
+}
+```
 
 ##### Sending base 64 credentials token in authorization header
 
-| Request |
-| --- |
-| ```<br>let username='myuser';  let pass='mypass';    let b64Token = flexygo.history.Base64.encode(username+':'+pass);  $.ajax({   type: 'POST',   url: './token',   data: {grant_type: 'password'},   success: function (response) {alert('Success!')},   error: function (error) { alert('Fail!')},   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Basic '+b64Token); }  );<br>``` |
-| Response |
-| ```<br>HTTP/1.1 200 OK  Content-Type: application/json  {     "access_token":"ALLgqj...rAxRvWAkjsQ",     "token_type":"bearer",     "expires_in":29,   "refresh_token":"68b....fc97a1"  }<br>``` |
+#### Request
+```js
+let username='myuser';
+let pass='mypass';  
+let b64Token = flexygo.history.Base64.encode(username+':'+pass);
+$.ajax({
+	type: 'POST',
+	url: './token',
+	data: {grant_type: 'password'},
+	success: function (response) {alert('Success!')},
+	error: function (error) { alert('Fail!')},
+	beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Basic '+b64Token); }
+);
+```
+#### Response
+```js
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+  	"access_token":"ALLgqj...rAxRvWAkjsQ",
+  	"token_type":"bearer",
+  	"expires_in":29,
+	"refresh_token":"68b....fc97a1"
+}
+```
 
 ### Refresh token
 
 A Refresh Token is a special kind of token that contains the information required to obtain a new Access Token. We can use it to get new Access Token to avoid expiration without sending user credentials again.
 
-| Request |
-| --- |
-| ```<br>let refreshToken='68b....fcasd7a1'  let accessToken='xxaasddfgqj...rAasadjsQ';  $.ajax({   type: 'POST',   url: './token',   data: {grant_type: 'refresh_token',refresh_token: refreshToken},   success: function (response) {alert('Success!')},   error: function (error) { alert('Fail!')},   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }  );<br>``` |
-| Response |
-| ```<br>HTTP/1.1 200 OK  Content-Type: application/json  {   "access_token":"Aadfasdfgqj...rAasdfjsQ",     "token_type":"bearer",     "expires_in":29,     "refresh_token":"68b....fc97a1"  }<br>``` |
+#### Request
+```js
+let refreshToken='68b....fcasd7a1'
+let accessToken='xxaasddfgqj...rAasadjsQ';
+$.ajax({
+	type: 'POST',
+	url: './token',
+	data: {grant_type: 'refresh_token',refresh_token: refreshToken},
+	success: function (response) {alert('Success!')},
+	error: function (error) { alert('Fail!')},
+	beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+);
+```
+#### Response
+```js
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+	"access_token":"Aadfasdfgqj...rAasdfjsQ",
+  	"token_type":"bearer",
+  	"expires_in":29,
+  	"refresh_token":"68b....fc97a1"
+}
+```
 
 ## Web API Methods
 

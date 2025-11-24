@@ -4,12 +4,16 @@ In this article we will explain how to configurate and use the funnel module. Th
 
 ![](/assets/images/Funnel/Funnel_1.png "Image 1. Funnel")
 
-Image 1. Funnel
-
 #### Module Options
 
-1.  Add your SQL sentence: SELECT Label AS label, Value AS value, Background AS background FROM table
-2.  Set optional JSON options. _Example:_ {"inverted":true,"animate":1}
+1.  Add your SQL sentence: 
+```sql
+SELECT Label AS label, Value AS value, Background AS background FROM table
+```
+2.  Set optional JSON options. _Example:_ 
+```json
+{"inverted":true,"animate":1}
+```
 
 ### JSON Options
 

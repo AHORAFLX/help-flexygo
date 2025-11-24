@@ -1,5 +1,3 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
-
 # **flexygo** Offline App description
 
 **flexygo** low code allows you to design applications for mobile devices, so that users can work even when they are offline.

@@ -22,8 +22,6 @@ Imports allow us to transfer information from files to the system, for example f
 
 ![Import settings](/assets/images/Imports/setting.png "Image 1. Create Import Setting")
 
-Image 1. Create Import Setting
-
 ## Excel
 
 The format that Excel-type files must follow is as shown in the following image.
@@ -34,15 +32,11 @@ More than one sheet can be added as in the example, the name of the sheets follo
 
 ![Excel example](/assets/images/Imports/excel.png "Image 2. Excel example")
 
-Image 2. Excel example
-
 ## Process example
 
 1.  Add it to **flexygo** process repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures or Server Dll**.
     
-    ![Create Process](/assets/images/Imports/process.png "Image 3. Create Process")
-    
-    Image 3. Create Process
+![Create Process](/assets/images/Imports/process.png "Image 3. Create Process")
     
 2.  Stored example
     
@@ -59,15 +53,9 @@ In the process window a button appears to download the template of the file that
 
 ![Process window](/assets/images/Imports/process_window.png "Image 4. Process window")
 
-Image 4. Process window
-
-×
-
 #### Stored example
 
   CREATE PROCEDURE \[dbo\].\[pImportacion\]  @JSONVALUE nvarchar(max)  as  BEGIN    BEGIN TRY      select Campo1,Campo2,Campo3,Campo4,Campo5  into importacion   from openjson(@JsonValue,'$.Hoja1')     with (    \[Campo1\] NVARCHAR(max) '$.Campo1',    \[Campo2\] NVARCHAR(max) '$.Campo2',    \[Campo3\] NVARCHAR(max) '$.Campo3',    \[Campo4\] NVARCHAR(max) '$.Campo4',    \[Campo5\] NVARCHAR(max) '$.Campo5'     )              select ...   from openjson(@JsonValue,'$.Hoja2')     with (    ...     )     return 1    END TRY  BEGIN CATCH          IF @@TRANCOUNT >0 BEGIN              ROLLBACK TRAN        END          DECLARE @CatchError NVARCHAR(MAX)          SET @CatchError=dbo.funPrintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())          RAISERROR(@CatchError,12,1)          RETURN 0    END CATCH    END          
-
-×
 
 #### Dll example
 

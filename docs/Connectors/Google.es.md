@@ -1,5 +1,3 @@
-.vbsample span { font-family: 'Courier New'; font-size: 10pt; color: #000000; } .vbsample .sc0 { } .vbsample .sc1 { color: #008000; } .vbsample .sc3 { color: #0000FF; } .vbsample .sc4 { color: #808080; } .vbsample .sc6 { font-weight: bold; } .vbsample .sc7 { }
-
 # Google Integration
 
 ![Google](/assets/images/GoogleAPIKey/GoogleLogo.png)

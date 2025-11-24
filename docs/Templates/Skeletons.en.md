@@ -12,14 +12,22 @@ Adding a custom skeleton is as easy as navigating to the skeletons page through 
 
 ![Menu](/assets/images/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
 
-Image 1. Database Menu Navigation
-
 Skeleton may divide in three parts (skeletonHeader, skeletonBody, skeletonFooter) this is do to the necesity of showing or not certain elements depending if it's the module first load or if it's a refresh. For flexygo to know which part it is, it will be needed to encapsulate skeleton with divs containing the classes (skeletonHeader, skeletonBody, skeletonFooter), as in the following example.
 
 _Example:_
 
-```
-<div class="skeletonHeader">      <div> My Skeleton Header </div>  </div>        <div class="skeletonBody">      <div> My Skeleton Body </div>  </div>        <div class="skeletonFooter">      <div> My Skeleton Footer </div>  </div>
+```html
+<div class="skeletonHeader">
+    <div> My Skeleton Header </div>
+</div>
+    
+<div class="skeletonBody">
+    <div> My Skeleton Body </div>
+</div>
+    
+<div class="skeletonFooter">
+    <div> My Skeleton Footer </div>
+</div>
 ```
 
 Once stablished the skeleton html you could add an image to the skeleton so when searching through the skeletons list is easier to find, but is not compulsory.
@@ -31,7 +39,9 @@ Flexygo skeletons use an animation to show the user that the app is still runnin
 _Example:_
 
 ```
-<div class="skeletonElementContainer">      <div class="skeletonElement"></div>  </div>
+<div class="skeletonElementContainer">
+    <div class="skeletonElement"></div>
+</div>
 ```
 
 _Result:_

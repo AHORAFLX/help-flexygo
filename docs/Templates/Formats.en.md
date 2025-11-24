@@ -4,13 +4,13 @@ To call a property from the object, collection or view, you need to use curly br
 
 _Example:_
 
-```
+```html
 <span> {{UserName}} </span>
 ```
 
 To use the format, we need three parameters. The first we will indicate the property that you want to use, the second we will indicate the type of data and the last parameter that we need is the value that we are going give to format.
 
-```
+```html
 <span> {{ Property | format : values }} </span>
 ```
 
@@ -18,7 +18,9 @@ To use the format, we need three parameters. The first we will indicate the prop
 
 To add a style, we will first indicate your property, followed by the data type and finally need two parameters to complete the type Boolean (true value, false value).
 
+```json
 {{ Property | bool: value true, value false }}
+```
 
 In the next example, we can see as the property **CanView** applied to the class of the label we can give a style or another. If the value that contains corresponds to true will apply the class text-muted, on the contrary if the value of the property is false, will apply the class txt-danger.
 
@@ -26,7 +28,7 @@ Also we can observe in the proper example, the same functioning for the title of
 
 _Example:_
 
-```
+```html
 <i class = "flx-icon icon-eye {{CanView|bool:text-muted,txt-danger}}" title = "{{CanView|bool:Visible,Not Visible}}"></i>
 ```
 
@@ -34,7 +36,7 @@ It may be the case that one of the two values is empty, it will take the value b
 
 _Example:_
 
-```
+```html
 <i class = "flx-icon icon-eye {{CanView|bool:,txt-danger}}" </i>
 ```
 
@@ -52,7 +54,7 @@ _Example:_
 
 To format the type of data **decimal**, use the same syntax as in previous examples, to difference of the parameters of value. In this case, we need only one, this value will indicate the number of decimal places that you want to display.
 
-```
+```html
 <span> {{ Property | format : value }} </span>
 ```
 
@@ -60,7 +62,7 @@ The code that we see in the example, formats the value returned by the property 
 
 _Example:_
 
-```
+```html
 <span> {{Number|decimal:3}} </span>
 ```
 
@@ -68,7 +70,7 @@ _Example:_
 
 We got with the format type **url**, parse the paths to the images, icons or addresses with relative paths. Thus, we will not lose the display of the element and avoid taking into account the route at the time of parsing manually. Only it is needed the call to the property and the word **url**.
 
-```
+```html
 <span> {{ Property | url }} </span>
 ```
 
@@ -76,7 +78,7 @@ Bellow, there is an example of call to an image of the property "Avatar" having 
 
 _Example:_
 
-```
+```html
 <img class = "img-responsive img-circle" src = "{{Avatar| url}}" alt = "profile">
 ```
 
@@ -86,19 +88,19 @@ _Example:_
 
 ###### Lowercase
 
-```
+```html
 <span> {{ Address|string: lower }} </span>
 ```
 
 ###### Uppercase
 
-```
+```html
 <span> {{ Address|string: upper }} </span>
 ```
 
 ###### Capitalized / Title case
 
-```
+```html
 <span> {{ Address|string: capitalized }} </span>
 ```
 
@@ -106,7 +108,7 @@ _Example:_
 
 Finally, offers us to tell you that number of characters we want to show by adding back three points. We have to take into account that the spaces are counts.
 
-```
+```html
 <span> {{ Address|string: 20 }} </span>
 ```
 
@@ -116,7 +118,7 @@ If we look at the example, we have set the property **Address** to show us the f
 
 **IsNull** type format sets new value when returned value is empty or null. If the value is not null, it will display the original value.
 
-```
+```json
 <span> {{ Address|isnull: No address }} </span>
 ```
 
@@ -124,7 +126,7 @@ It also accepts an optional parameter if we need to change original value.
 
 _Example:_
 
-```
+```json
 <span> {{ Address|isnull: No address, Address found }} </span>
 ```
 
@@ -132,13 +134,13 @@ _Example:_
 
 This type of format, allows us to insert a list of values, must meet one of them with the associated property. But when the property doesn't meet any of the values, the value from Else will be applied directly.
 
-```
+```json
 {{ Property | switch: [value1:result1, value2:result2, value3:result3, else:result4] }}
 ```
 
 _Example:_
 
-```
+```html
 <span> {{State|switch:[1:'Receive',2:'Accept',3:'Complete',null:'Outstanding',else:'Closed']}}" ></span>
 ```
 
@@ -146,16 +148,30 @@ _Example:_
 
 Type format **date** maintains the same syntax we've used so far, it also offers three possibilities of configuration.
 
-```
+```json
 {{UpgradeDate|date:LL}}
 ```
 
 ```js
-moment().format(MMMM Do YYYY, h:mm:ss a);  moment().format(dddd);     moment().format(MMM Do YY);    moment().format(YYYY [escaped] YYYY);   moment().format();   
+moment().format(MMMM Do YYYY, h:mm:ss a);// October 17th 2025, 10:08:03 am
+moment().format(dddd);			// Friday
+moment().format(MMM Do YY);		// Oct 17th 25
+moment().format(YYYY [escaped] YYYY);	// 2025 escaped 2025
+moment().format();			// 2025-10-17T10:08:03+02:00
 ```
 
 ```js
-  moment().format(W);moment.locale();       moment().format(LT);       moment().format(LTS);      moment().format(L);        moment().format(l);        moment().format(LL);       moment().format(ll);       moment().format(LLL);      moment().format(lll);      moment().format(LLLL);     moment().format(llll);   
+moment().format(W);  			// 2025-10-17T10:08:03+02:00
+moment().format(LT);  			// 10:08 AM
+moment().format(LTS); 			// 10:08:03 AM
+moment().format(L);   			// 10/17/2025
+moment().format(l);   			// 10/17/2025
+moment().format(LL);  			// October 17, 2025
+moment().format(ll);  			// Oct 17, 2025
+moment().format(LLL); 			// October 17, 2025 10:08 AM
+moment().format(lll); 			// Oct 17, 2025 10:08 AM
+moment().format(LLLL);			// Friday, October 17, 2025 10:08 AM
+moment().format(llll);			// Fri, Oct 17, 2025 10:08 AM
 ```
 
 *   Afrikaans
@@ -269,13 +285,13 @@ moment().format(MMMM Do YYYY, h:mm:ss a);  moment().format(dddd);     moment().f
 
 ##### From now
 
-```
+```json
 {{DateValue|fromnow}}
 ```
 
 _Example:_
 
-```
+```json
 {{DateValue|fromnow:LLL}}
 ```
 
@@ -285,13 +301,13 @@ If our property contained the first day of the year 2016.
 
 ##### From the moment in which it made until now
 
-```
+```json
 {{DateValue|tonow}}
 ```
 
 _Example:_
 
-```
+```json
 {{DateValue|tonow:LLL}}
 ```
 
@@ -303,13 +319,13 @@ If our property contained the first day of the year 2016.
 
 We can translate template text using the following syntax:
 
-```
+```json
 {{translate|Any text to translate}}
 ```
 
 _Example:_
 
-```
+```html
 <i class = "flx-icon icon-object" title= "{{translate|More info}}"></i>
 ```
 
@@ -321,7 +337,7 @@ Format strings can be nested inside each other:
 
 _Example:_
 
-```
+```json
 {{State|switch:[1:'{{Receive|bool:{{Cad|string:lower}},No}}',2:'Accept',3:'Complete',null:'Outstanding',else:'Closed']}}
 ```
 
@@ -332,49 +348,64 @@ would produce the following output: "this is my result"
 
 Escape HTML string:
 
-```
+```html
 <span> {{ Property | html }} </span>
 ```
 
 With JS:
 
-```
-/**  * Returns an escaped HTML string  * @method escapeHtmlString  * @param {string} str - String  */  flexygo.utils.parser.escapeHtmlString(str);
+```js
+/**
+* Returns an escaped HTML string
+* @method escapeHtmlString
+* @param {string} str - String
+*/
+flexygo.utils.parser.escapeHtmlString(str);
 ```
 
 ## JS
 
 Escape JS string:
 
-```
+```html
 <span> {{ Property | js }} </span>
 ```
 
-With HTML:
+With JS:
 
-```
-/**  * Returns an escaped JS string  * @method escapeJsString  * @param {string} str - String  */  flexygo.utils.parser.escapeJsString(str);
+```js
+/**
+* Returns an escaped JS string
+* @method escapeJsString
+* @param {string} str - String
+*/
+flexygo.utils.parser.escapeJsString(str);
 ```
 
 ## SQL
 
 Escape SQL string:
 
-```
+```html
 <span> {{ Property | sql }} </span>
 ```
 
-With SQL:
+With JS:
 
-```
-/**  * Returns an escaped SQL string  * @method escapeSqlString  * @param {string} str - String  */  flexygo.utils.parser.escapeSqlString(str);
+```js
+/**
+* Returns an escaped SQL string
+* @method escapeSqlString
+* @param {string} str - String
+*/
+flexygo.utils.parser.escapeSqlString(str);
 ```
 
 ## QR
 
 Generate a b64 string with QR image, if there's no size, default value is 400:
 
-```
+```html
 <img src = "{{ Property | qr:size }}" />
 ```
 
@@ -393,18 +424,19 @@ When we have a form, we can indicate that number of characters we want to enter 
 
 **flexygo** has a system to return files in an encrypted link, for this, the field of the view that returns the address of the document must have an alias that begins with one of the following formats:
 
-|     |     |     |     |     |
-| --- | --- | --- | --- | --- |
 | **flxpathimage** | **flxpathdocument** | **flxpath\|ObjectName\|PropertyName** | **flxpath** | **flxpathzoom** |
+| --- | --- | --- | --- | --- |
 | **flexygo** image management | **flexygo** document management | the property configuration of that object is read | management of images or ERP documents, as long as the document path is complete | thumbnail image management, can include thumbnail size separated by \_, if you do not specify a default size it will be 75x75 _\[width\]x\[height\]_ |
 
 View:
 
+```sql
 SELECT Foto as flxpathzoomEmployee\_120x120 FROM Employees
+```
 
 Template:
 
-```
+```html
 <img src = "{{flxpathzoomEmployee|url}}"/>
 ```
 
@@ -414,8 +446,6 @@ This tags allows you to render a toolbar in a list or a wiew module, using the o
 
 Template:
 
-```
+```json
 {{toolbar|systb-edit}}
 ```
-
-jQuery(document).ready(function(){ var initMomentLan; initHelp(); }); function initHelp(){ initMomentLan=moment.locale(); helpMoment(); jQuery('\[data-locale\]').click(function(){ moment.locale(jQuery(this).attr('data-locale')); helpMoment(); moment.locale(initMomentLan); }); } function helpMoment(){ jQuery('#momentHelp .text-muted').empty(); jQuery('#momentHelp .line-moment').each(function(){ var line = jQuery(this); line.find('.text-muted').html('// '+moment().format(line.find('.string').html())); }); } jQuery(document).on('helpLoaded',function(helpId,helpContainer){ initHelp(); }); //# sourceURL=formatHelp.js

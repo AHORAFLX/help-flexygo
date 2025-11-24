@@ -1,3 +1,8 @@
+let navigation_dialog;
+addEventListener("DOMContentLoaded", (event) => { 
+    navigation_dialog = document.getElementById('navigation-dialog');
+})
+
 const DEFAULT_LANGUAGE = 'en';
 const LANGUAGES = ['en', 'es'];
 
@@ -60,4 +65,75 @@ function splitBase(base_path) {
             return [base_path, '/'];
     }
     return ['', location.pathname];
+}
+
+let current_navigation_json;
+function navigateToFlexy(json, ctrlKey_pressed) {
+    current_navigation_url = json;
+
+    if (!this.isAFlexy()) {
+        if (ctrlKey_pressed) {
+            _nav(document.getElementById('navigation-dialog-flexy-url').value);
+        } else {
+            navigation_dialog.showModal();
+        }
+
+        return;
+    }
+
+    _nav();
+}
+
+function isAFlexy() {
+    const current_url = new URL(window.location.href);
+    if (current_url.pathname.startsWith('/docs/')) {
+        return true;
+    }
+
+    return false;
+}
+
+function _nav(url) {
+    if (!url) {
+        url = '/Index#' +btoa(JSON.stringify(current_navigation_url));
+    } else {
+        if (!url.endsWith('/')) {
+            url += '/';
+        }
+
+        url += 'Index#' +btoa(JSON.stringify(current_navigation_url));
+    }
+    
+    window.open(url, '_blank');
+    navigation_dialog.close();
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        const copy_notification = document.createElement('div');
+        copy_notification.className = 'copy-notification';
+        copy_notification.innerText = 'Copied';
+        copy_notification.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: ${colors[type] || colors.success};
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            z-index: 10000;
+            font-family: system-ui, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100px);
+            opacity: 0;
+        `;
+
+        document.body.appendChild(copy_notification);
+        setTimeout(() => {
+            document.body.removeChild(copy_notification);
+        }, 3000);
+    }); 
 }

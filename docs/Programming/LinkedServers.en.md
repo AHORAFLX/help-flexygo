@@ -6,11 +6,29 @@
 
 For example, this query:
 
-SELECT EmployeeId, \[Name\], Surname, isnull(DocsQ,0) as DocsQuantity FROM employees LEFT JOIN ( SELECT ObjectName, ObjectId, Count(\*) as DocsQ FROM MyServer.flexygo\_ic.dbo.documents\_objects D GROUP BY objectname, objectid ) Docs ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```sql
+SELECT EmployeeId, [Name], Surname, isnull(DocsQ,0) as DocsQuantity
+FROM employees
+LEFT JOIN (
+      SELECT ObjectName, ObjectId, Count(*) as DocsQ 
+      FROM MyServer.flexygo_ic.dbo.documents_objects D 
+      GROUP BY objectname, objectid
+      ) Docs
+ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```
 
-can be replaced by this other using connection string prefix { ~ConfConnectionString~ }. (without blank spaces):
+can be replaced by this other using connection string prefix **{ ~ConfConnectionString~ }**. (without blank spaces):
 
-SELECT EmployeeId, \[Name\], Surname, isnull(DocsQ,0) as DocsQuantity FROM employees LEFT JOIN( SELECT ObjectName, ObjectId, Count(\*) as DocsQ FROM { ~ConfConnectionString~ }.dbo.documents\_objects D GROUP BY objectname, objectid ) Docs ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```sql
+SELECT EmployeeId, [Name], Surname, isnull(DocsQ,0) as DocsQuantity
+FROM employees
+LEFT JOIN(
+      SELECT ObjectName, ObjectId, Count(*) as DocsQ 
+      FROM   { ~ConfConnectionString~ }.dbo.documents_objects D 
+      GROUP BY objectname, objectid
+      ) Docs
+ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```
 
 ## Linked server
 

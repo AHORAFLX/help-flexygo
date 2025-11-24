@@ -4,17 +4,13 @@ Chatter module allows participants to have a synchronous discussion in real time
 
 ![](/assets/images/Chatter/chatter-example.png "Image 1. Chatter")
 
-Image 1. Chatter
-
 ## Settings
 
 To enable this module, follow the next steps:
 
 ![Chatter Configuration](/assets/images/Chatter/ChatterConf1.png "Image 2. Chatter Configuration")
 
-Image 2. Chatter Configuration
-
-|     |     |
+| Property  | Description |
 | --- | --- |
 | Id  | Identify the module |
 | Type | Module type, in this case **Chatter** |
@@ -29,19 +25,13 @@ After setting up the previous configuration, you'll see the following box. Click
 
 ![Chatter Configuration](/assets/images/Chatter/ChatterConf2.png "Image 3. Chatter Configuration")
 
-Image 3. Chatter Configuration
-
 Put the name of the object you want to relate chatter module.
 
 ![Chatter Configuration](/assets/images/Chatter/ChatterConf3.png "Image 4. Chatter Configuration")
 
-Image 4. Chatter Configuration
-
 If you want to define a specific field of your object for the subject **(email notifications)** you can define here:
 
 ![Subject Definition](/assets/images/Chatter/subject_definition.png "Image 5. Subject Definition")
-
-Image 5. Subject Definition
 
 ## Mentions Configuration
 
@@ -49,14 +39,12 @@ Now we will select the object and the view that contain the information for ment
 
 ![Mentions Configuration](/assets/images/Chatter/mention_config.png "Image 6. Mentions Configuration")
 
-Image 6. Mentions Configuration
-
 The correct data structure in the mention view is:
 
 | Alias | Description | Required |
 | --- | --- | --- |
-| id  | user id | ✔   |
-| name | name to display | ✔   |
+| id  | user id | ✓   |
+| name | name to display | ✓   |
 | avatar | image to show | ✘   |
 | email | email address for email notifications | ✘   |
 
@@ -66,16 +54,10 @@ After configure the mentions, you can decide what kind of notification will rece
 
 ![Alerts Configuration](/assets/images/Chatter/mention_notifications.png "Image 7. Alerts Configuration")
 
-Image 7. Alerts Configuration
-
 If You want to use the following option in email notifications:
 
 ![Email notification](/assets/images/Chatter/email_notification.png "Image 8. Email notification")
 
-Image 8. Email notification
-
 You need to configure the following setting:
 
 ![Link configuration](/assets/images/Chatter/link_configuration.png "Image 8. Link configuration")
-
-Image 9. Link configuration

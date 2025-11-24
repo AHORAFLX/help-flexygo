@@ -1,10 +1,6 @@
-MailChimp MailChimp Demo Processes
+# MailChimp Demo Processes { .flx-title-with-image }
 
-.vbsample span { font-family: "Courier New"; font-size: 10pt; color: #000000; } .vbsample .sc0 { } .vbsample .sc1 { color: #008000; } .vbsample .sc3 { color: #0000ff; } .vbsample .sc4 { color: #808080; } .vbsample .sc6 { font-weight: bold; } .vbsample .sc7 { }
-
-# MailChimp Demo Processes
-
-![MailChimp](/assets/images/MailChimp/MailChimpLogoBlack.png)
+![MailChimp](/assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
 
 Some examples of how to perform certain actions in your custom processes are the following :
 

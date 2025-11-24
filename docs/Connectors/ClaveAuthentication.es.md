@@ -1,6 +1,6 @@
-# Cl@ve Authentication
+# Cl@ve Authentication { .flx-title-with-image }
 
-![Cl@ve](/assets/images/clave/clave-icon.svg)
+![Cl@ve](/assets/images/clave/clave-icon.svg){ .flx-image-of-title }
 
 We are pleased to share an exciting update to our **flexygo** web application: the introduction of Cl@ve as an authentication method. This addition aims to streamline user access, bolster security, and significantly enhance the overall user experience
 
@@ -26,7 +26,7 @@ You can enable the registration of new users in your **flexygo** application usi
 
 Once the user pass through registration, it activates Register Process called "NewUserFromClave" which create a new user, applying values of profile, role, language by default. These parameters can be modified by Admin.
 
-|     |     |
+| Parametro | Descripción |
 | --- | --- |
 | aadRegistrationEnabled | Allow registration in your app using cl@ve. Values: true/false |
 | aadRegistrationDefaultProfile | ProfileName of new user by default |

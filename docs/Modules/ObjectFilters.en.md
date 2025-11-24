@@ -10,11 +10,7 @@ Here is an example of creating search filter in property mode.
 
 ![](/assets/images/Filters/newFilter_1.jpg "Image 1. New search (1/2)")
 
-Image 1. New search (1/2)
-
 ![](/assets/images/Filters/newFilter_2.jpg "Image 2. New search (2/2)")
-
-Image 2. New search (2/2)
 
 ## Search modification
 
@@ -32,19 +28,13 @@ Edit name from selected search
 
 ![](/assets/images/Filters/editFilter.jpg "Image 3. Filters management")
 
-Image 3. Filters management
-
 ## Property filters
 
 In the following screenshots, you can see the number of récords returned by the search. First of all, you can see (Image 4) uses the surname as search property and it returns a number of results. Secondly, in the following screenshot (Image 5), we include the “last name“ and “Name”, this entails a change in the number of results returned. Finally, say that, search filters can be performed with multiple properties simultaneously.
 
 ![](/assets/images/Filters/editFilter.jpg "Image 4. Property search results")
 
-Image 4. Property search results
-
 ![](/assets/images/Filters/propertyFilters_2.jpg "Image 5. Search results for two properties at the same time")
-
-Image 5. Search results for two properties at the same time
 
 ## Text filters
 
@@ -52,10 +42,10 @@ Image 5. Search results for two properties at the same time
 
 ![](/assets/images/Filters/textFilters.jpg "Image 6. How to display text filters")
 
-Image 6. How to display text filters
-
 ![](/assets/images/Filters/textFilters_2.jpg "Image 7. Search results type text")
 
-Image 7. Search results type text
-
 For additional information watch the following video.
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/Ddc1FJ4_iFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

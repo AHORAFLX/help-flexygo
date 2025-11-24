@@ -3,6 +3,7 @@
 Azure is a cloud computing service operated by Microsoft for application management via Microsoft-managed data centers. **flexygo** provides the integration with Azure Active Directory. This way all users could have the access to your **flexygo** application entering via personal Microsoft Azure account.
 
 Obtain an SSL certificate from a certificate authority for a successful **flexygo** integration with Azure AD.
+{: .flx-warning-card }
 
 ## Keys
 
@@ -13,6 +14,7 @@ You need to have certain keys such as **Tenant Id**, **Client Id** and **Client 
 3.  Finally, generate new Client Secret Id: left navigation panel -> Certificates and Secrets -> Add new Client Secret.
 
 Make sure you have neccesary permitions to create and manage applications.
+{: .flx-warning-card }
 
 |     |     |
 | --- | --- |
@@ -39,7 +41,9 @@ Image 2. Users
 
 Once you have obtained all required keys and established redirect and logout URLs, you can run the following process:
 
-Generate Azure AD Integration
+<flx-navbutton class="button" type="execprocess" processname="pNet_AzureIntegration" showprogress="false">
+    Generate Azure AD Integration
+</flx-navbutton>
 
 ## Settings
 

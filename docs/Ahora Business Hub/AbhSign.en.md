@@ -12,7 +12,9 @@ To hire the service you can do it in any of the following ways:
 
 ## Enable Abh Sign
 
-Add Abh Sign to this project 🦦
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbhSigns_Objects_Config" excludehist="false">
+    Add Abh Sign to your project 🦦
+</flx-navbutton>
 
 ## Configure Abh Sign
 
@@ -28,15 +30,18 @@ Add Abh Sign to this project 🦦
 
 **Client Id:** Ahora Business Hub client id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Client Secret:** Ahora Business Hub client secret.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Tenant Id:** Ahora Business Hub tenant id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 ## Configure Reports
 
@@ -63,5 +68,3 @@ In the configured object, a process called "Send signed report" or "Send signed 
 A cron job is enabled in the system that every 30 minutes checks if any of the documents sent has been signed and, if so, collects it and inserts it into document management. Execute after process if configured.
 
 ![Abh Sign operation](/assets/images/AbhSign/AbhSignOperation.png "Abh Sign operation")
-
-Image 4. Abh Sign operation

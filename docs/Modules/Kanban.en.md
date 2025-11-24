@@ -2,11 +2,9 @@
 
 Kanban is a project management method that helps teams to better visualize their workload and workflow. **Flexygo**s kanban module allows us to define a board using any type of objects.
 
-A kanbas example is present in flexygo, click here to navigate to it, and here it is its configuration.
+A kanbas example is present in flexygo, <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Board" objectwhere="([Kanban_Boards].[BoardName] = 'Flexygo_Task_List')" showprogress="false">click here</flx-navbutton> to navigate to it, and here it is its <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Setting" objectwhere="KanbanSettingsName='sysFlexygo_Kanban'" showprogress="false">configuration</flx-navbutton>.
 
-![](.\img\Help\ModulesConf\kanban2.png "Image 1. Kanban")
-
-Image 1. Kanban
+![](/assets/images/ModulesConf/kanban2.png "Image 1. Kanban")
 
 ## Settings
 
@@ -16,9 +14,7 @@ Kanban settings are divided in five groups:
 
 Used to define the kanban board most basic settings.
 
-![](.\img\Help\ModulesConf\kanbanSettings1.png "Image 1. Kanban Settings")
-
-Image 2. Board Settings
+![](/assets/images/ModulesConf/kanbanSettings1.png "Image 1. Kanban Settings")
 
 *   **Settings Name:**The name you want to use to identify this kanban settings
 *   **Board Object Name:**The main kanban object, which will be usefull to parse some values on the next properties as it can be seen in the image bellow
@@ -29,9 +25,7 @@ Image 2. Board Settings
 
 Here it can be set the view columns that will be used as the column configuration
 
-![](.\img\Help\ModulesConf\kanbanSettings2.png "Image 2. Kanban Settings")
-
-Image 3. Column Settings
+![](/assets/images/ModulesConf/kanbanSettings2.png "Image 2. Kanban Settings")
 
 *   **Column View Name:** This must be the view used to paint column information and it will need to contain at least the first 2 of this column properties
 *   **Column Description Field:** This will be the description that will appear on the top of the column
@@ -43,9 +37,7 @@ Image 3. Column Settings
 
 Here it can be set the object and view columns that will be used as the card configuration
 
-![](.\img\Help\ModulesConf\kanbanSettings3.png "Image 3. Kanban Settings")
-
-Image 4. Card Settings
+![](/assets/images/ModulesConf/kanbanSettings3.png "Image 3. Kanban Settings")
 
 *   **Card Object Name:** The object that will be used as cards
 *   **Card View Name:** This must be the view used to paint card information and it will need to contain at least the first 3 of this card properties
@@ -58,9 +50,7 @@ Image 4. Card Settings
 
 Used to set the settings of the archive its area that appears when moving a card
 
-![](.\img\Help\ModulesConf\kanbanSettings4.png "Image 4. Kanban Settings")
-
-Image 5. Archive Settings
+![](/assets/images/ModulesConf/kanbanSettings4.png "Image 4. Kanban Settings")
 
 *   **Archived State Id:** Determines which will be the id set to the column id previously mentioned in the card settings
 *   **Archived Text:** A little text that will appear on the archive area
@@ -71,9 +61,7 @@ Image 5. Archive Settings
 
 Used to define what happens when the different events are fired.
 
-![](.\img\Help\ModulesConf\kanbanSettings5.png "Image 5. Kanban Settings")
-
-Image 6. Event Settings
+![](/assets/images/ModulesConf/kanbanSettings5.png "Image 5. Kanban Settings")
 
 *   **On card click:** Process to run when card is clicked
 *   **On Change Column:** Process to run when card gets changed of column
@@ -83,9 +71,7 @@ Image 6. Event Settings
 
 Just proceed to drag module to your page from the module manager and fill out the following form.
 
-![](.\img\Help\ModulesConf\kanbanConf.png "Image 6. Kanban Settings")
-
-Image 7. Kanban Page Settings
+![](/assets/images/ModulesConf/kanbanConf.png "Image 6. Kanban Settings")
 
 *   **Id:** Identify the module
 *   **Type:** Module type, in this case Kanban

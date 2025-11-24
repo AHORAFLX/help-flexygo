@@ -4,7 +4,9 @@ Abh sms is an integration of Ahora Business Hub that allows **flexygo** to send 
 
 ## Enable Abh Sms
 
-Add Abh Sms to this project
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbh_Integrations_Settings" defaults="{'IntegrationId':'abh_sms'}" excludehist="false">
+    Add Abh Sms to your project
+</flx-navbutton>
 
 ## Configure Abh Sms
 
@@ -14,15 +16,18 @@ Add Abh Sms to this project
 
 **Client Id:** Ahora Business Hub client id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Client Secret:** Ahora Business Hub client secret.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Tenant Id:** Ahora Business Hub tenant id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 ## Use cases
 

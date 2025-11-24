@@ -1,6 +1,6 @@
-# Cl@ve Authentication
+# Cl@ve Authentication { .flx-title-with-image }
 
-![Cl@ve](/assets/images/clave/clave-icon.svg)
+![Cl@ve](/assets/images/clave/clave-icon.svg){ .flx-image-of-title }
 
 We are pleased to share an exciting update to our **flexygo** web application: the introduction of Cl@ve as an authentication method. This addition aims to streamline user access, bolster security, and significantly enhance the overall user experience
 
@@ -18,15 +18,17 @@ To begin using this new authentication method, the first step is to register as 
 
 Following the successful registration as an SP with Cl@ve and the definition of the electronic certificate to validate SAML requests (information available in the provided documentation), we can proceed with the activation of Cl@ve authentication:
 
-Generate Cl@ve Integration
+<flx-navbutton class="button" type="execprocess" processname="pNet_EnableClaveAuth" showprogress="false">
+    Generate Cl@ve Integration
+</flx-navbutton>
 
 ## Settings
 
-You can enable the registration of new users in your **flexygo** application using their Cl@ve account. Set the following configurations in Admin Area -> Environment -> Settings -> Security or by clicking here
+You can enable the registration of new users in your **flexygo** application using their Cl@ve account. Set the following configurations in Admin Area -> Environment -> Settings -> Security or by clicking <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">here</flx-navbutton>
 
 Once the user pass through registration, it activates Register Process called "NewUserFromClave" which create a new user, applying values of profile, role, language by default. These parameters can be modified by Admin.
 
-|     |     |
+| Parameter | Description |
 | --- | --- |
 | aadRegistrationEnabled | Allow registration in your app using cl@ve. Values: true/false |
 | aadRegistrationDefaultProfile | ProfileName of new user by default |

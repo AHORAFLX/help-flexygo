@@ -4,13 +4,9 @@ See how to use the Scheduller and Calendar web component. With Scheduller and Ca
 
 ![](/assets/images/Scheduller/Calendar_2.jpg "Image 1. Calendar")
 
-Image 1. Calendar
-
 ## Scheduler and Calendar configuration
 
 ![](/assets/images/Scheduller/Scheduller_conf.png "Image 2. Calendar Configuration")
-
-Image 2. Calendar Configuration
 
 | DESCRIPTION | WHAT DO THE PARAMETERS MEAN? |
 | --- | --- |
@@ -34,8 +30,6 @@ Image 2. Calendar Configuration
 ## How to associate objects to already created calendar
 
 ![](/assets/images/Scheduller/Scheduller_conf_objt.PNG "Image 2. Scheduller Configuration Object")
-
-Image 2. Scheduller Configuration Object
 
 | DESCRIPTION | WHAT DO THE PARAMETERS MEAN? |
 | --- | --- |
@@ -62,18 +56,9 @@ Whatch the following video for additional information
 In the monthly calendar you can choose the month/day to display by using the parameters of the associated module.  
 This parameter can use the page defaults.
 
-  
-
 Example : initialDate='20240110' The format of the indicated date must be **YYYYMMDD**
-
-  
+{: .flx-warning-card }
 
 ![](/assets/images/Scheduller/Scheduller_ModParam.PNG "Image 3. Scheduller Configuration Object")
-
-Image 3. Scheduller Configuration Module Param
-
-×
-
-#### Example SQL Query \[ View from action object \]
 
 ![](/assets/images/Scheduller/ViewObjt_Action.PNG)

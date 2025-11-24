@@ -1,14 +1,13 @@
-.vbsample span { font-family: "Courier New"; font-size: 10pt; color: #000000; } .vbsample .sc0 { } .vbsample .sc1 { color: #008000; } .vbsample .sc3 { color: #0000ff; } .vbsample .sc4 { color: #808080; } .vbsample .sc6 { font-weight: bold; } .vbsample .sc7 { }
+# SendinBlue Integration { .flx-title-with-image }
 
-# SendinBlue Integration
-
-![SendinBlue](/assets/images/SendinBlue/SendinBlue_Logo.png)
+![SendinBlue](/assets/images/SendinBlue/SendinBlue_Logo.png){ .flx-image-of-title }
 
 SendinBlue is a marketing automation platform that helps you share email and advertising campaigns with customers and other stakeholders.
 
-SendinBlue integration area can be accessed from here .
+SendinBlue integration area can be accessed from <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-sendinblue')" showprogress="false">here</flx-navbutton>.
 
 API Key is required in order to connect with SendinBlue API, so the first step is to inform it. If further info is needed you can get more help about API Keys visiting SendinBlue [documentation](https://help.sendinblue.com/hc/es/articles/209467485--Qu%C3%A9-es-una-clave-API-y-d%C3%B3nde-puedo-conseguir-la-m%C3%ADa-).
+{: .flx-warning-card }
 
 After having included the parameters you will be able to use the functions that flexygo provides for the creation of campaigns, transactional emails, contacts and lists.
 
@@ -31,6 +30,7 @@ Format json [here](http://jsonviewer.stack.hu/).
 You can send transactional emails using the functions provided by flexygo, for example :
 
 Transactional emails are used for all non-promotional emails: send them when a user has created an account, when they have made an order, when request a new password...
+{: .flx-warning-card }
 
 Create Transactional email
 

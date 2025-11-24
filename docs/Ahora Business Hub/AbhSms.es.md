@@ -14,15 +14,15 @@ Add Abh Sms to this project
 
 **Client Id:** Ahora Business Hub client id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
 
 **Client Secret:** Ahora Business Hub client secret.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
 
 **Tenant Id:** Ahora Business Hub tenant id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
 
 ## Use cases
 

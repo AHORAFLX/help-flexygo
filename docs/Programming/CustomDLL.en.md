@@ -32,10 +32,8 @@ In some cases it's necessary to program functionalities which **flexygo** doesn'
     
     ![](img/Help/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
     
-    Image 1. Custom DLL configuration example
-    
 
-# Custom C#
+# Custom C\#
 
 Embedded C# processes serve the same purpose as custom DLL processes.
 
@@ -43,18 +41,17 @@ References to libraries and the code of the process are directly inserted into t
 
 ![Custom C# Process in flexygo](/assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
 
-Image 2. Custom C# Process in flexygo
-
 When you save your C# process in flexygo, it is compiled to check for any errors.
 
 To start debugging a C# process:
 
 1.  You need to activate the debug mode in the Admin Area by navigating to Environment -> Settings -> Debug Processes.
-2.  To set a breakpoint at a specific location in your C# code, you can insert System.Diagnostics.Debugger.Break();
+2.  To set a breakpoint at a specific location in your C# code, you can insert 
+```vbnet
+System.Diagnostics.Debugger.Break();
+```
 
 This will open the generated C# code in Visual Studio, enabling you to debug the process.
-
-×
 
 #### Insert object function
 

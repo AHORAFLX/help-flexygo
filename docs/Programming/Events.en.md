@@ -16,4 +16,11 @@ The **flexygo** event class has these properties:
 
 To subscribe for a entity update event:
 
-flexygo.events.on(this,"entity","updated",function(e) { var entity = e.sender; if (entity.objectName == 'sysObject') { alert('Congratulations!. You succesfully updated a system object.'); } });
+```js
+flexygo.events.on(this,"entity","updated",function(e) {
+	let entity = e.sender;
+    if (entity.objectName == 'sysObject') {
+		alert('Congratulations!. You succesfully updated a system object.');
+	}
+});
+```

@@ -1,8 +1,6 @@
-.helpCenter { width: 100%!important; display: flex; justify-content: center; } .helpPassbook span { font-family: 'Courier New'; font-size: 10pt; color: #000000; } .sc0 { } .sc1 { color: #008000!important; } .sc3 { color: #0000FF!important; } .sc4 { color: #808080!important; } .sc6 { font-weight: bold!important; } .sc7 { }
+# Passbook integration { .flx-title-with-image }
 
-# Passbook integration
-
-![Passbook](/assets/images/Passbook/WalletIcon.png)
+![Passbook](/assets/images/Passbook/WalletIcon.png){ .flx-image-of-title }
 
 Passbook is the format used by cards and coupons to be integrated into the Apple Wallet. **flexygo** now allows us to generate a passbook easily.
 
@@ -14,31 +12,21 @@ To obtain the first certificate we only have to go to [https://www.apple.com/cer
 
 We install the certificate and select the store "intermediate certification authorities".
 
-![](.\img\Help\Passbook\passbook1.png "Image 1. Certificate store")
-
-Image 1. Certificate store
+![](/assets/images/Passbook/passbook1.png "Image 1. Certificate store")
 
 ### Create Pass Type ID from the Apple Developer Portal
 
 Go to [https://developer.apple.com/](https://developer.apple.com/) and sign in with a development account. Once inside we enter Account and we will see the following web, we access the menu on the left Certificates, IDs & Profiles.
 
-![](.\img\Help\Passbook\passbook2.png "Image 2. Developer panel")
+![](/assets/images/imagesPassbook/passbook2.png "Image 2. Developer panel")
 
-![](.\img\Help\Passbook\passbook3.png "Image 2. Developer panel")
-
-Image 2. Developer panel
-
-  
+![](/assets/images/Passbook/passbook3.png "Image 2. Developer panel")
 
 We add a new Identifier and choose the type Pass Type IDs, fill in the information. It is advisable that the identifier maintains the structure pass.com.x
 
-![](.\img\Help\Passbook\passbook4.png "Image 3. Pass Type IDs")
+![](/assets/images/Passbook/passbook4.png "Image 3. Pass Type IDs")
 
-![](.\img\Help\Passbook\passbook5.png "Image 3. Pass Type IDs")
-
-Image 3. Pass Type IDs
-
-  
+![](/assets/images/Passbook/passbook5.png "Image 3. Pass Type IDs")
 
 ### Create a certificate request (CSR) using OpenSSL
 
@@ -56,23 +44,15 @@ When all the information is filled in, two files will have been generated in the
 
 We return to the developer portal and this time from the certificates menu and click + to create a new Pass Type Id Certficate.
 
-![](.\img\Help\Passbook\passbook6.png "Image 4. Passbook certificate")
-
-Image 4. Passbook certificate
+![](/assets/images/Passbook/passbook6.png "Image 4. Passbook certificate")
 
 Next, we have to fill in the name of our certificate and we have to choose the identifier that we have previously created, which will appear as an option in that drop-down. If we look at the value of the dropdown, it will match the value of TeamID.IdentifierPassTypeID
 
-![](.\img\Help\Passbook\passbook7.png "Image 5. Passbook certificate")
-
-Image 5. Passbook certificate
-
-  
+![](/assets/images/Passbook/passbook7.png "Image 5. Passbook certificate")
 
 In the next step it asks us to choose the certificate request file that we have generated in the previous step, we upload it and continue. Then a summary window will appear with the certificate that we have just generated with its expiration date, its name, the type of certificate, etc...
 
-![](.\img\Help\Passbook\passbook8.png "Image 6. Certificate request")
-
-Image 6. Certificate request
+![](/assets/images/Passbook/passbook8.png "Image 6. Certificate request")
 
 ### Use OpenSSL to convert the pass.cer certificate from a binary-encoded type to a PEM-formatted plain text file and then to PFX
 
@@ -90,29 +70,21 @@ We go to the console where we have the certificates listed Certificates (Local C
 
 In the next step it will ask us for the password of the private key, we mark it as exportable and include all the extended properties. We add it to the Personal store.
 
-![](.\img\Help\Passbook\passbook9.png "Image 7. Import PFX certificate")
+![](/assets/images/Passbook/passbook9.png "Image 7. Import PFX certificate")
 
-![](.\img\Help\Passbook\passbook10.png "Image 7. Import PFX certificate")
-
-Image 7. Import PFX certificate
+![](/assets/images/Passbook/passbook10.png "Image 7. Import PFX certificate")
 
 With this we would have installed the necessary certificates to be able to generate Passbook through Flexygo, it is important that both the passbook.pfx file and the AppleWWDRCAG4.cer that we downloaded from Apple have to be in a folder accessible by the application since they must be accessed.
 
 It is also important that from the console once we have imported our certificate in the personal store, right click all the tasks, manage private keys and add to IIS\_IUSRS and give it permissions.
 
-![](.\img\Help\Passbook\passbook11.png "Image 8. Certificate management")
-
-Image 8. Certificate management
-
-  
+![](/assets/images/Passbook/passbook11.png "Image 8. Certificate management")
 
 It is also necessary to have the impersonate configured since the generation of the passbook makes use of it.
 
 In the event that, although having given permissions to IIS\_USRS and using a user for impersonation with elevated permissions, it continues to give a permissions error when it is generated. In this case, it would be necessary to modify the identity of the application group that is being used to LocalSystem
 
-![](.\img\Help\Passbook\passbook12.png "Image 8. IIS configuration")
-
-Image 9. IIS configuration
+![](/assets/images/Passbook/passbook12.png "Image 8. IIS configuration")
 
 ### Flexygo Settings
 
@@ -137,12 +109,6 @@ Once we have this we can proceed to configure the settings in Flexygo
 
 ### Design example and layout
 
-![](.\img\Help\Passbook\passbook14.png "Image 10. Layout example")
+![](/assets/images/Passbook/passbook14.png "Image 10. Layout example")
 
-Image 10. Layout example
-
-  
-
-![](.\img\Help\Passbook\passbook13.png "Image 11. Passbook example")
-
-Image 11. Passbook example
+![](/assets/images/Passbook/passbook13.png "Image 11. Passbook example")

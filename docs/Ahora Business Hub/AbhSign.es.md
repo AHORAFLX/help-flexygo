@@ -28,15 +28,18 @@ Add Abh Sign to this project
 
 **Client Id:** Ahora Business Hub client id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Client Secret:** Ahora Business Hub client secret.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Tenant Id:** Ahora Business Hub tenant id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 ## Configure Reports
 

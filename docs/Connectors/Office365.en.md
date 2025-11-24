@@ -1,8 +1,6 @@
-.vbsample span { font-family: 'Courier New'; font-size: 10pt; color: #000000; } .vbsample .sc0 { } .vbsample .sc1 { color: #008000; } .vbsample .sc3 { color: #0000FF; } .vbsample .sc4 { color: #808080; } .vbsample .sc6 { font-weight: bold; } .vbsample .sc7 { }
+# Office 365 Integration { .flx-title-with-image }
 
-# Office 365 Integration
-
-![Office 365](/assets/images/Office365/Office365Logo.png)
+![Office 365](/assets/images/Office365/Office365Logo.png){ .flx-image-of-title }
 
 In order to make calls to Microsoft Graph, which is a RESTfull web API, that enables you to access Microsoft Cloud service resources, it is required to register your app and get authentication tokens for a user or service. If you want to develop an office integration from **flexygo** platform you have two options:
 
@@ -12,30 +10,13 @@ Register your app using the [Azure portal](https://docs.microsoft.com/en-us/grap
 Other example [link](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).  
 In addition to registering the application in Azure make sure to enable access permissions to Contacts and Calendars.
 
-  
-
 ![](/assets/images/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
-
-Image 1. Office 365 API Permissions
-
-  
 
 ![](/assets/images/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
 
-Image 2. Office 365 API Agregate Permissions
-
-  
-
 ![](/assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
 
-Image 3. Office 365 API Calendars Permissions
-
-  
-
 ![](/assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
-
-Image 4. Office 365 API Contacts Permissions
-
   
 
 ##### 
@@ -54,8 +35,8 @@ Take profit of the already registered **flexygo** app and its configuration. Use
 
 In the following example you can get a contact collection from the default contacts folder of the signed-in user.
 
-1.  Firstly, get and store the required token process Get Office Token
-2.  Then get your contacts with Get Office Contacts
+1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken"defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Get Office Token</flx-navbutton> 
+2.  Then get your contacts with <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts"showprogress="false">Get Office Contacts</flx-navbutton>
 
 **Response:**     
 
@@ -65,8 +46,8 @@ Insert, Update And Delete contact
 
 In the example below we will retrieve a list of calendar events from the signed-in user.
 
-1.  Firstly, get and store the required token process Get Office Token
-2.  Then get your events with Get Office Calendar
+1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'calendar'}" showprogress="false">Get Office Token</flx-navbutton>
+2.  Then get your events with <flx-navbutton class="link" type="execprocess" processname="GetOfficeCalendar" showprogress="false">Get Office Calendar</flx-navbutton>
 
 **Response:**     
 

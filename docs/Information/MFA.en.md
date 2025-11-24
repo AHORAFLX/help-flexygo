@@ -1,4 +1,4 @@
-# **flexygo** MFA
+#  Flexygo MFA
 
 New in flexygo! Implementation of Multi-Factor Authentication (MFA) system
 
@@ -8,7 +8,8 @@ What is MFA and why is it important? MFA adds an additional layer of security by
 
 With flexygo MFA, **administrators** have the freedom to choose between two verification methods: **email and SMS**. This allows them to select the option that best suits their organization's needs and resources.
 
-Remember that to use **MFA by SMS** you must have Abh SMS integration.
+Remember that to use **MFA by SMS** you must have [Abh SMS integration](/Ahora%20Business%20Hub/AbhSms).
+{: .flx-warning-card }
 
 ### Granular control
 
@@ -20,27 +21,15 @@ First of all we have 2 new settings:
 
 ![](/assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
 
-Image 1. MFA Settings
-
 *   **MFA\_cookie\_duration**: In this section you can define the number of days that the "Trust this device?
 *   **MFA\_Type**: In this section the administrator can define which type of MFA will be used.
-
-  
 
 After configuring these parameters as we see fit, we can define at user or role level to whom to activate MFA.
 
 ![](/assets/images/MFA/mfa_user.png "Image 2. MFA in user")
 
-Image 2. MFA in user
-
 ![](/assets/images/MFA/mfa_role.png "Image 3. MFA in role")
-
-Image 3. MFA in role
-
   
-
 Finally, if we try to log in with the user that has the MFA active, we will see the following screen to enter our security code
 
 ![](/assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")
-
-Image 4. MFA Screen

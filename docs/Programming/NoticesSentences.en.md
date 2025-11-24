@@ -10,6 +10,7 @@ Notices sentences is a utility to manage automatic alerts, either through on-scr
 It's the way system can send push notices or show alerts on the screen. This is shown with a list on an icon that lights up when the user has unread messages. To generate a notice, it is sufficient to add a record in the "Notices" table, and if we need the notification to be displayed by a group of users, we must add them as records in the "Notices\_Users" table.
 
 For make it works, the cron called **UpdateNoticeBadge** must be active.
+{: .flx-warning-card }
 
 ## Sentences
 
@@ -20,18 +21,32 @@ In the first instance we will define a notice sentence indicating a description,
 Use Notice Sentence to select wich fields will be placed in the Notices Table.
 
 Remember that the notice table works in a similar way as a navigation node
+{: .flx-warning-card }
 
-SELECT 'New pending actions' as **Title**, 'You have new pending action' as **Message**, cast(getdate() as smallDatetime) as **ReminderTime**, cast(Dateadd(WEEK,1,getdate()) as smalldatetime) as **ExpiryTime**, 'app' as **MethodName**, 0 as **AllUsers**, 'object' as **TypeId**, 'action' as **ObjectName**, 'Actionstate=0' as **ObjectWhere**, 'list' as **PageTypeId**, EmployeeId as **CurrentReference** FROM ...
+```sql
+SELECT 'New pending actions' as <b>Title</b>,
+'You have new pending action' as <b>Message</b>,
+cast(getdate() as smallDatetime) as <b>ReminderTime</b>, 
+cast(Dateadd(WEEK,1,getdate()) as smalldatetime) as <b>ExpiryTime</b>, 
+'app' as <b>MethodName</b>, 
+0 as <b>AllUsers</b>, 
+'object' as <b>TypeId</b>, 
+'action' as <b>ObjectName</b>, 
+'Actionstate=0' as <b>ObjectWhere</b>, 
+'list' as <b>PageTypeId</b>, 
+EmployeeId as <b>CurrentReference</b>
+FROM ...
+```
 
 | Property | Description | Required |
 | --- | --- | --- |
-| **Title** | Notification Title |     |
-| **Notification Message** | Use HTML Markup |     |
-| **Method Name** | **App** Notification, **Push** notification, **PushMobile** for mobile device notification only or **Pushweb** for web browser notification only |     |
-| **Reminder Time** | Since when should it appear |     |
-| **Expiry Date** | The notification should disappear |     |
-| **All Users** | If set to false remeber to fill out notification user Sentence |     |
-| **TypeId** | One of the valid Node Types: Object Link (object), Page Link (page), Process (process), Text (text), etc. |     |
+| **Title** | Notification Title | ✓ |
+| **Notification Message** | Use HTML Markup | ✓ |
+| **Method Name** | **App** Notification, **Push** notification, **PushMobile** for mobile device notification only or **Pushweb** for web browser notification only | ✓ |
+| **Reminder Time** | Since when should it appear | ✓ |
+| **Expiry Date** | The notification should disappear | ✓ |
+| **All Users** | If set to false remeber to fill out notification user Sentence | ✓ |
+| **TypeId** | One of the valid Node Types: Object Link (object), Page Link (page), Process (process), Text (text), etc. | ✓ |
 | **CurrentReference** | Value corresponding to the "Reference" field of Flexygo user. It can contain multiple values separated by ";". With this you avoid having to put a user statement. |     |
 | **UserId** | Value corresponding to the "Id" field of the Flexygo user. It can contain multiple values separated by ";". With this you avoid having to put a user statement. If you use the CurrentReference field, you do not need to specify it. |     |
 | **AfterClickEvent** | Fire your own function after click |     |
@@ -50,7 +65,31 @@ SELECT 'New pending actions' as **Title**, 'You have new pending action' as **Me
 
 _Example:_ "Upcoming offers that expire"
 
-SELECT 'Offers theh expired this week ' + CAST(DATEPART (week, getdate()) AS varchar) AS \[Title\], 'You have ' + CASE WHEN count(1)=1 THEN 'an offer that expires in the next 7 days' ELSE CAST (count(1) AS varchar) + ' offers that expires in the next 7 days' END AS \[Message\], CAST(getdate() AS smallDatetime) AS ReminderTime, CAST(Dateadd(dd,1,getdate()) AS smalldatetime) AS ExpiryTime, 0 AS AllUsers, EmployeeId AS currentReference, 'app' AS MethodName, 'object' AS TypeId, 'current' AS TargetId, 'list' AS PageTypeId, 'offers' AS ObjectName, 'Offers.sellbydate BETWEEN ( ''' + convert(varchar(10),GETDATE(),112) + ''' ) AND DATEADD (WEEK, 1, ''' + convert(varchar(10),GETDATE(),112) + ''') AND (Offers.State = 0) AND (Offers.EmployeeId={{currentReference}})' as ObjectWhere FROM ( SELECT Offers.IdOferta, Offers.EmployeeId as EmployeeId FROM Offers WHERE Offers.SellByDate BETWEEN CAST(GETDATE() as date) AND dateadd(DAY,7, CAST(GETDATE() as date)) AND (Offers.State = 0) AND Offers.SellByDate is not null ) AS Assigned GROUP BY EmployeeId
+```sql
+SELECT 'Offers theh expired this week ' + CAST(DATEPART (week, getdate())  AS varchar) AS [Title],
+'You have ' +  
+CASE WHEN count(1)=1 THEN 'an offer that expires in the next 7 days'  
+ELSE CAST (count(1) AS varchar) + ' offers that expires in the next 7 days' END AS [Message], 
+CAST(getdate() AS smallDatetime) AS ReminderTime, 
+CAST(Dateadd(dd,1,getdate()) AS smalldatetime) AS ExpiryTime, 
+0 AS AllUsers, 
+EmployeeId AS currentReference, 
+'app' AS MethodName, 
+'object' AS TypeId, 
+'current' AS TargetId, 
+'list' AS PageTypeId, 
+'offers' AS ObjectName, 
+'Offers.sellbydate BETWEEN ( ''' + convert(varchar(10),GETDATE(),112) + ''' ) 
+      AND DATEADD (WEEK, 1, ''' + convert(varchar(10),GETDATE(),112) + ''') 
+      AND (Offers.State = 0)  AND (Offers.EmployeeId={{currentReference}})' as ObjectWhere
+FROM (
+	SELECT Offers.IdOferta, Offers.EmployeeId as EmployeeId
+	FROM Offers
+	WHERE Offers.SellByDate BETWEEN CAST(GETDATE() as date) AND dateadd(DAY,7, CAST(GETDATE() as date))
+	AND (Offers.State = 0) AND Offers.SellByDate is not null
+	) AS Assigned
+GROUP BY EmployeeId
+```
 
 #### User Notice Sentence
 
@@ -59,18 +98,34 @@ If you have not used the reference to the user in the main notification statemen
 Use "User Notice Sentence" to select wich UserId should receive the notification.  
 Remeber UserId should be obtained from Configuration Database.
 
+```sql
 SELECT UserId FROM ... WHERE ...
+```
 
 Sometimes user is not defined in our data model, then we can use the reference to user.
 
+```sql
 SELECT EmployeeId AS CurrentReference FROM ... WHERE ...
+```
 
 | Property | Description | Required |
 | --- | --- | --- |
-| **CurrentReference** | AspNetUsers Reference |     |
-| **UserId** | AspNetUsers UserID |     |
+| **CurrentReference** | AspNetUsers Reference | ✓ |
+| **UserId** | AspNetUsers UserID | ✓ |
 
-_Example:_ "Upcoming offers that expire" SELECT distinct 1 as UserId, EmployeeId as CurrentReference FROM ( SELECT Offers.IdOferta, Offers.EmployeeId AS EmployeeId FROM Offers WHERE Offers.SellByDate BETWEEN cast(GETDATE() as date) AND dateadd(DAY,7, cast(GETDATE() as date)) AND (Offers.State =0) AND Offers.SellByDate is not null ) AS Assigned GROUP BY EmployeeId
+_Example:_ "Upcoming offers that expire"
+
+```sql
+SELECT distinct 1 as UserId, 
+EmployeeId as CurrentReference
+FROM ( 
+	SELECT Offers.IdOferta, Offers.EmployeeId AS EmployeeId
+          FROM Offers
+          WHERE Offers.SellByDate BETWEEN cast(GETDATE() as date) AND dateadd(DAY,7, cast(GETDATE() as date))
+          AND (Offers.State =0) AND Offers.SellByDate is not null
+    ) AS Assigned
+GROUP BY EmployeeId
+```
 
 #### Update Sentence
 
@@ -78,20 +133,31 @@ Use an update to sentence if needed after filling out the mails or notices table
 In the event that the notification is not addressed to all users, but to a specific group, we must indicate to which users.  
 Either by identifying them using the system user identifier (UserId) or the reference to it in the data model (Reference).
 
+```sql
 UPDATE Mytable\_Log SET NotifiedError = 1 WHERE HASError = 1 AND NotifiedError = 0
+```
 
 #### Mail Sentence
 
 Use Mail Sentence to select which fields will be placed in the Mails\_Outbox Table.
 
-SELECT 'dmi@flx.com' AS FromEmail, 'David' AS FromName, 'New pending actions' AS Subject, 'You have new pending action' AS Body, CAST(GETDATE() AS smallDatetime) AS SendDate, 'johnpaul@beatdomain.com' AS \[To\], '3E0A3AA1-0B56-4091-9736-200964B2D1F4|C49953C3-2BE8-4591-9601-99BDF77B1028' AS attachments FROM ...
+```sql
+SELECT 'dmi@flx.com' AS FromEmail, 
+'David' AS FromName,
+'New pending actions' AS Subject,
+'You have new pending action' AS Body, 
+CAST(GETDATE() AS smallDatetime) AS SendDate,
+'johnpaul@beatdomain.com' AS [To],
+'3E0A3AA1-0B56-4091-9736-200964B2D1F4|C49953C3-2BE8-4591-9601-99BDF77B1028' AS attachments
+FROM ...
+```
 
 | Property | Description | Required |
 | --- | --- | --- |
-| **FromEmail** | Sender email |     |
-| **To** | To email |     |
-| **Subject** | Mail Subject |     |
-| **Body** | Mail Body |     |
+| **FromEmail** | Sender email | ✓ |
+| **To** | To email | ✓ |
+| **Subject** | Mail Subject | ✓ |
+| **Body** | Mail Body | ✓ |
 | **FromName** | Sender Name |     |
 | **CC** | Carbon (mail) Copy |     |
 | **CCO or BCC** | Blind Carbon (mail) Copy |     |
@@ -106,12 +172,18 @@ SELECT 'dmi@flx.com' AS FromEmail, 'David' AS FromName, 'New pending actions' AS
 
 Use Sms Sentence to select which fields will be placed in the Sms\_Outbox Table.
 
-SELECT '684352406' as Phone ,'You have new pending action' as Text , cast(getdate() as smallDatetime) as SendDate FROM ....
+```sql
+SELECT
+'684352406' as Phone
+,'You have new pending action' as Text
+, cast(getdate() as smallDatetime) as SendDate
+FROM ....
+```
 
 | Property | Description | Required |
 | --- | --- | --- |
-| **Phone** | Sender phone |     |
-| **Text** | Sms text |     |
+| **Phone** | Sender phone | ✓ |
+| **Text** | Sms text | ✓ |
 | **UserId** | Sender UserId |     |
 | **SendDate** | Date used by cron to send mail |     |
 | **ObjectName** | Link click to an object |     |
@@ -122,6 +194,10 @@ SELECT '684352406' as Phone ,'You have new pending action' as Text , cast(getdat
 Finally, we must create a new cron job and indicate a name, a workgroup (default "Defaultgroup"), one short description, enabled... Next we select the shot schedule. In process options we must put the BuildMailandNotifications process and run as the admin user. In the name of the process we will put SysNoticeSentences and in object Where we will put the filter of the sentence that we just created (SentenceId = 'myalert')
 
 Whatch the video about creation of cron job:
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/VIIhQnkH-QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
 
 ## About the standard processes
 

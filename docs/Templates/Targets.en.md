@@ -6,7 +6,7 @@ Choose the projection screen.
 
 Open on the current page.
 
-```
+```js
 flexygo.nav.openHelpId('syshelp-typography','current',false,$(this))
 ```
 
@@ -18,7 +18,7 @@ Block all functions to concentrate focus on the modal window.
 *   modal**{width}**x**{height}**
   
 
-```
+```js
 flexygo.nav.openHelpId('syshelp-typography','modal800x600',false,$(this))
 ```
 
@@ -29,7 +29,7 @@ Open in a popup window.
 *   popup**{width}**x**{height}**
   
 
-```
+```js
 flexygo.nav.openHelpId('syshelp-typography','popup800x600',false,$(this))
 ```
 
@@ -44,7 +44,7 @@ Open in a slide window.
 *   slide**{side}**x**{screen percentage}**% : slide**right**x**60**%
   
 
-```
+```js
 flexygo.nav.openHelpId('syshelp-typography','sliderightx60%',false,$(this))
 ```
 
@@ -55,6 +55,6 @@ Open in a menu window.
 *   menu**{width}**x**{height}**
   
 
-```
+```js
 flexygo.nav.openHelpId('syshelp-typography','menu600x400',false,$(this))
 ```

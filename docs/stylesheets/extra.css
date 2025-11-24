@@ -7,6 +7,8 @@
   --flx-color-border: #cfd4d9;
   --flx-table-border-color: var(--flx-color-border);
   --flx-sidebar-title-color: #141414;
+  --flx-color-text: white; /* Text color to use for  background with flx-color*/
+  --flx-color-accent: #228781;
 
   /* Material Theme Color Personalization */
   --md-primary-fg-color: var(--flx-color); /* Higlights */
@@ -64,6 +66,9 @@
   --flx-main-background: url(/assets/images/backgrounds/dark-background.svg);
 }
 
+html:has(dialog[open]) {
+  overflow: hidden;
+}
 
 /* Header */
 header.md-header {
@@ -252,16 +257,23 @@ main {
   }
 }
 
-/* Titles */
 .md-typeset {
+  /* Titles */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: var(--md-default-fg-color--bold);
   }
 
+  /* Titles */
   h1 {
     font-weight: 600;
     margin-bottom: 20px;
+  }
+
+  /* Centered Images */
+  p:has(> img) {
+    display: flex;
+    justify-content: center;
   }
 }
 

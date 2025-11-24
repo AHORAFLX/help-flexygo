@@ -11,6 +11,7 @@ The scripts run automatically when the **flexygo** service restarts, for example
 The scripts must be idempotent. That is, they must be prepared to be able to execute more than once with the same result.
 
 Keywords such as GO are not allowed
+{: .flx-warning-card }
 
 ### Connection string
 
@@ -29,12 +30,60 @@ After the update, **flexygo** does not overwrite the status of existing scripts.
 
 To create a new table:
 
-IF NOT EXISTS (Select 1 from sys.tables where name = 'MyNewTable') BEGIN CREATE TABLE \[dbo\].\[MyNewTable\]( \[RegId\] \[smallint\] NOT NULL, \[Descrip\] \[nvarchar\](50) NOT NULL, \[CssClass\] \[nvarchar\](255) NULL, \[IconCssClass\] \[nvarchar\](255) NULL, \[Visible\] \[bit\] NOT NULL DEFAULT (1), \[Inserted\] \[smalldatetime\] NULL, \[Modify\] \[smalldatetime\] NOT NULL, CONSTRAINT \[PK\_MyNewTable\] PRIMARY KEY CLUSTERED (\[RegId\] ASC) ) ON \[PRIMARY\] END;
+```vbnet
+IF NOT EXISTS (Select 1 from sys.tables where name = 'MyNewTable') 
+BEGIN
+CREATE TABLE [dbo].[MyNewTable](
+	[RegId] [smallint] NOT NULL, 
+	[Descrip] [nvarchar](50) NOT NULL, 
+	[CssClass] [nvarchar](255) NULL,
+	[IconCssClass] [nvarchar](255) NULL,
+	[Visible] [bit] NOT NULL DEFAULT (1),
+	[Inserted] [smalldatetime] NULL,
+	[Modify] [smalldatetime] NOT NULL,
+	CONSTRAINT [PK_MyNewTable] PRIMARY KEY CLUSTERED
+	([RegId] ASC)
+) ON [PRIMARY]
+END;
+```
 
 To create new columns:
-
-IF NOT EXISTS(SELECT \* FROM sys.columns WHERE name = 'CreatedById' AND OBJECT\_ID=OBJECT\_ID('MyNewTable')) BEGIN ALTER TABLE MyNewTable ADD CreatedById float DEFAULT (0) NULL END IF NOT EXISTS(SELECT \* FROM sys.columns WHERE name = 'ModifiedById' AND OBJECT\_ID=OBJECT\_ID('MyNewTable')) BEGIN ALTER TABLE MyNewTable ADD ModifiedById int NULL END
+```vbnet
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE name = 'CreatedById' AND OBJECT_ID=OBJECT_ID('MyNewTable'))	
+BEGIN
+	ALTER TABLE MyNewTable ADD CreatedById float DEFAULT (0) NULL
+END
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE name = 'ModifiedById' AND OBJECT_ID=OBJECT_ID('MyNewTable'))	
+BEGIN
+	ALTER TABLE MyNewTable ADD ModifiedById int NULL
+END
+```
 
 To create a trigger using executesql:
+```vbnet
+DECLARE @SQL nvarchar (MAX)='' 
+IF Exists (Select 1 from sys.triggers where name = 'mytrig') 
+BEGIN
+	DROP TRIGGER mytrig
+END
 
-DECLARE @SQL nvarchar (MAX)='' IF Exists (Select 1 from sys.triggers where name = 'mytrig') BEGIN DROP TRIGGER mytrig END SET @SQL = ' -- ============================================= -- Author: Daniel E. Lutz -- Create date: 01/11/2019 -- Description: trigger example -- ============================================= CREATE TRIGGER \[dbo\].\[mytrig\] ON \[dbo\].\[mytable\] FOR Insert AS BEGIN SET NOCOUNT ON; IF EXISTS(SELECT 1 FROM inserted) BEGIN --do something print ''hello'' END END ' EXEC sp\_executesql @SQL
+SET @SQL = '
+	-- =============================================
+	-- Author:		Daniel E. Lutz
+	-- Create date: 01/11/2019
+	-- Description:	trigger example
+	-- =============================================
+	CREATE TRIGGER [dbo].[mytrig] 
+	ON  [dbo].[mytable]
+	FOR Insert AS 
+	BEGIN
+		SET NOCOUNT ON;
+		IF EXISTS(SELECT 1 FROM inserted) 
+		BEGIN
+        	--do something
+        	print ''hello''
+        END
+    END
+'
+EXEC sp_executesql @SQL
+```

@@ -1,4 +1,6 @@
-# **flexygo** Security
+# Security { .flx-title-with-image }
+
+![flexygo](/assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
 **flexygo** includes 3 different security levels:
 
@@ -16,27 +18,7 @@ User John belongs to the sales role. In sales role we establish that each sales 
 **flexygo** includes five default roles, two main roles: **Admin** and **All Users**. The Admin Role gives full attributions to any member of the group. The All Users is a container for the rest of groups that enables us to assign permissions directly to all the child groups. Inside the All Users we will find the second level with the **Registered** and **Not registered** roles. Registered role will contain any new roles we create, including the default users role. Security always applies upwards that is if a lower group has security the higher group security is overwritten. The same applies if we set the security on a user level and not on a role level. The **user security will always overwrite his role security**.  
 To begin with the examples and more extensive explanations, we will set off dividing in to two parent groups (All Users and Admin).
 
-All Users
-
-Registered
-
-Users
-
-Employees
-
-Customers
-
-Partner\_Customer
-
-Partner
-
-Leads
-
-- - -
-
-No Registered
-
-Admin
+![](/assets/images/Security/Circles-graph.png)
 
 #### Example
 
@@ -67,14 +49,14 @@ If we want to use unregistered access, we must make sure that our web.config con
 
 | To what can we apply security? | On Roles group | On User |
 | --- | --- | --- |
-| Tables |     |     |
-| Modules |     |     |
-| Navigation Nodes |     |     |
-| Objets |     |     |
-| Processes |     |     |
-| Reports |     |     |
-| Pages |     |     |
-| Pages modules |     |     |
+| Tables | ✓ |  ✓  |
+| Modules | ✓ | ✓ |
+| Navigation Nodes | ✓ | ✓ |
+| Objets | ✓ | ✓ |
+| Processes | ✓ | ✓ |
+| Reports | ✓ | ✓ |
+| Pages | ✓ | ✓ |
+| Pages modules | ✓ | ✓ |
 
 ## LDAP Authentication
 
@@ -97,3 +79,7 @@ When you are using login form **flexygo** allows you to define the password stre
 *   **PasswordRequireUppercase**: set to true if you allways demand upper case character
 
 Check out the following video about **flexygo** security:
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/XEgrAegs0mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

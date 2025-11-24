@@ -1,8 +1,6 @@
-.vbsample span { font-family: 'Courier New'; font-size: 10pt; color: #000000; } .vbsample .sc0 { } .vbsample .sc1 { color: #008000; } .vbsample .sc3 { color: #0000FF; } .vbsample .sc4 { color: #808080; } .vbsample .sc6 { font-weight: bold; } .vbsample .sc7 { }
+# Google Integration { .flx-title-with-image }
 
-# Google Integration
-
-![Google](/assets/images/GoogleAPIKey/GoogleLogo.png)
+![Google](/assets/images/GoogleAPIKey/GoogleLogo.png){ .flx-image-of-title }
 
 In order to make calls to Google API, which is a RESTfull API, that enables you to access Google Cloud service resources, it is required to register your app and get authentication tokens for a user or service.
 
@@ -12,8 +10,8 @@ Create and configure the project in [Google console](https://console.cloud.googl
 
 In the following example you can get a contact collection from the default contacts folder of the signed-in user.
 
-1.  Firstly, get and store the required token process get Google token
-2.  Then get your contacts with get Google contacts
+1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetGoogleToken" defaults="{'service':'contacts'}" showprogress="false">get Google token</flx-navbutton>
+2.  Then get your contacts with <flx-navbutton class="link" type="execprocess" processname="GetGoogleContacts" showprogress="false">get Google contacts</flx-navbutton>
 
 **Response:**       
 
@@ -23,14 +21,12 @@ Insert, Update And Delete contact
 
 In the example below we will retrieve a list of calendar events from the signed-in user.
 
-1.  Firstly, get and store the required token process get Google token
-2.  Then get your events with get Google calendar
+1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetGoogleToken" defaults="{'service':'calendar'}" showprogress="false">get Google token</flx-navbutton>
+2.  Then get your events with <flx-navbutton class="link" type="execprocess" processname="GetGoogleCalendar" showprogress="false">get Google calendar</flx-navbutton>
 
 **Response:**       
 
 Insert, Update And Delete event
-
-×
 
 #### Google Contacts
 

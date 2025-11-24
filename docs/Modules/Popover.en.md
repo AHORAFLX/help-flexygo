@@ -19,12 +19,21 @@ The flx-popover web component has two working modes and four additional attribut
 
 ##### Examples
 
-Tooltip mode Popover mode
-
-Tooltip mode Popover mode
-
 ## Coding samples
-
-Tooltip mode Popover mode
+```html
+<button class="btn bg-info">
+    <flx-tooltip mode="tooltip" objectname="sysObject" objectwhere="objectName='sysObject'" templateid="flx-sysobjectview"></flx-tooltip>
+	<i class="flx-icon icon-choose-hand tex-white"></i>Tooltip mode
+</button>
+```
+```html
+<span class="btn txt-info">
+    <flx-tooltip mode="popover" objectname="sysObject" objectwhere="objectName='sysObject'" templateid="flx-sysobjectview"></flx-tooltip>
+    <i class="flx-icon icon-choose-hand tex-white"></i>Popover mode
+</span>
+```
 
 Watch the following video on our YouTube channel for additional information
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/lKKMce5PsrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

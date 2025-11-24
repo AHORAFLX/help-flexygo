@@ -5,8 +5,6 @@
 
 ![Publish article](/assets/images/News/Entire-news-1.jpg "Image 1. Reference and Subreference configuration")
 
-News and version notes
-
 ## You must choose a type of news.
 
 The Product updates type news allows you to inform users of the version news that you have developed in flexygo. Although, you can also publish news regarding a specific improvement.

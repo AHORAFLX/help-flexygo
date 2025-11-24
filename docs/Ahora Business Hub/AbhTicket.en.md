@@ -4,7 +4,9 @@ Abh ticket is an integration of Ahora Business Hub that allows **flexygo** to co
 
 ## Enable Abh Ticket
 
-Add Abh Ticket to this project
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbh_Integrations_Settings" defaults="{'IntegrationId':'abh_ticket'}" excludehist="false">
+    Add Abh Ticket to your project
+</flx-navbutton>
 
 ## Configure Abh Ticket
 
@@ -16,15 +18,18 @@ Image 1. Abh Ticket configuration
 
 **Client Id:** Ahora Business Hub client id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Client Secret:** Ahora Business Hub client secret.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 **Tenant Id:** Ahora Business Hub tenant id.
 
-For more information consult on https://help.flexygo.com/
+For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+{: .flx-warning-card }
 
 ## Functions dll
 

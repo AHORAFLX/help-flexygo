@@ -1,6 +1,6 @@
-# Power BI Integration
+# Power BI Integration { .flx-title-with-image }
 
-![](/assets/images/PowerBI/PowerBiLogo.png)
+![](/assets/images/PowerBI/PowerBiLogo.png){ .flx-image-of-title }
 
 Power BI is a Microsoft data analysis service aimed at providing interactive visualizations and business intelligence (BI) capabilities with an interface simple enough for end users to create their own reports themselves and panels. **flexygo** enables you to use Microsot Power BI to embed reports.
 
@@ -19,7 +19,7 @@ All Power BI settings must be established before we can use Microsoft Power BI. 
 *   **PowerBIUsername**: Username
 *   **PowerBIWorkspaceId**: Workspace Id
 
-To generate Power BI setting click on Generate Power BI settings
+To generate Power BI setting click on <flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton>
 
 ## Incorporating Power BI report
 
@@ -33,19 +33,25 @@ To achieve this we must add a new Role to our BI document, imagine that we are g
 
 ![Power BI](/assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
 
-Image 1. Power BI
-
 Now we must be able to pass the role and the username from our application, so that it automatically filters the field, for this we use the two fields that are in the report registration in flexygo:
 
-*   Filter sentence: SELECT {{currentReference}} AS filter
-*   Role Sentence: SELECT 'Provider' AS Role
+*   Filter sentence: 
+```sql
+SELECT {{currentReference}} AS filter
+```
+*   Role Sentence:
+```sql
+SELECT 'Provider' AS Role
+```
 
 To make it working, the report cannot be published directly, so you need the PowerBI Embedded, which is an Azure resource that is within the Azure Marketplace (Image 2).
+{: .flx-warning-card }
 
 ![Azure Marketplace](/assets/images/PowerBI/powerbi2.png "Image 2. Azure Marketplace")
 
-Image 2. Azure Marketplace
-
 ## Power BI web component
 
-Now you are ready to add a HTML module to your page and include the Power BI web component _<flx-powerbi reportname="your report name"><flx-powerbi>_
+Now you are ready to add a HTML module to your page and include the Power BI web component _
+```html
+<flx-powerbi reportname="your report name"><flx-powerbi>_
+```

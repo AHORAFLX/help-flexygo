@@ -8,13 +8,20 @@ Just add a flx-html web component on your page and you will inmediatly get its c
 
 To add a SQLFeed module or a RSS module to your HTML just add the flx-html web component and indicate your SQLFeed or RSS modulename.
 
+```html
+<flx-html modulename="sysmod-sqlfeed-grid"></flx-html>
+```
+
 ## SQL Feed Module
 
 Convert any SQL Sentence in a standard XML file and transform the result with what ever XSL transformation file you want. If you don't want to deal with complex XSL language, just use the pre-built in SQLFeed.xsl file which allows you to display any SQL sentence as a view form or as a grid, just by setting the mode in the module parameter options.
 
 ### Grid mode
 
-1.  Add your SQL sentence to the module. SELECT Top 3 \* FROM objects
+1.  Add your SQL sentence to the module. 
+```sql
+SELECT Top 3 \* FROM objects
+```
 2.  Indicate Transform XSL file path or used built in **SQLFeed.xsl** file.
 3.  Set module parameter to **mode = "grid"** to obtain a grid layout.
 4.  Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.
@@ -23,7 +30,10 @@ Convert any SQL Sentence in a standard XML file and transform the result with wh
 
 ### View mode
 
-1.  Add your SQL sentence to the module: SELECT Top 1 \* FROM objects
+1.  Add your SQL sentence to the module: 
+```sql
+SELECT Top 1 \* FROM objects
+```
 2.  Indicate Transform XSL file path or used built in **Rss.xsl** file.
 3.  Set moule parameter to **blank** to obtain a view layout.
 4.  Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.
@@ -36,13 +46,13 @@ Convert any external RSS provider in to your own formated news feed with what ev
 
 1.  Select the external RSS Url address:
     
-    ```
+    ```js
     RSS address: https://www.yahoo.com/news/rss 
     ```
     
 2.  Select you transformation XSL File.
     
-    ```
+    ```js
     XSL file Path: ~/xsl/Rss.xsl
     ```
     
