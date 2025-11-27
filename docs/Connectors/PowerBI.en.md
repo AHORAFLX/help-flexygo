@@ -25,7 +25,7 @@ To generate Power BI setting click on <flx-navbutton class="link" type="execproc
 
 Access to the Reports section and incorporate your Power BI report introducing th ReportId in the report path field.
 
-## Filtering Power BI from **flexygo** pages
+## Filtering Power BI from flexygo pages
 
 Microsoft only allows you to pass filters with embedded BI.
 
@@ -51,7 +51,7 @@ To make it working, the report cannot be published directly, so you need the Pow
 
 ## Power BI web component
 
-Now you are ready to add a HTML module to your page and include the Power BI web component _
+Now you are ready to add a HTML module to your page and include the Power BI web component 
 ```html
-<flx-powerbi reportname="your report name"><flx-powerbi>_
+<flx-powerbi reportname="your report name"><flx-powerbi>
 ```

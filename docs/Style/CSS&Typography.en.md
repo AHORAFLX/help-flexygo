@@ -1,6 +1,6 @@
 # Typography and Styles
 
-### Headers and leads
+## Headers and leads
 
 | Label | Font | Examples |
 | --- | --- | --- |
@@ -11,7 +11,7 @@
 | <h5> | 'Helvetica Neue' 17px Light' | ##### <h5> h5. flexygo Heading </h5> |
 | <h6> | 'Helvetica Neue' 15px Bold' | ###### <h6> h6. flexygo Heading </h6> |
 
-### Text and BG color options
+## Text and BG color options
 
 | Text | Background | Buttons |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 | .txt-tools | .bg-tools | .btn .btn-tools |
 | .txt-info | .bg-info | .btn .btn-info |
 
-### Alignment and text sizes
+## Alignment and text sizes
 
 | Left, right and center alignment |     |
 | --- |
@@ -41,13 +41,13 @@
 | The <abbr> tag defines an abbreviation or an acronym.  <br>_Example:_  <br>I do HTML<br><br>```<br><p> I do  <abbr title = "Hypertext Markup Language"> HTML </p><br>``` |
 | Secondary text of the heading <small>  <br>_Example:_<br><br>##### h5. flexygo Heading Secondary text<br><br>```<br><h5> h5. flexygo Heading <small> Secondary text </small></h5><br>``` |
 
-### Description List
+## Description List
 
 | Align terms and descriptions horizontally by using our grid system’s predefined classes |
 | --- |
 | ```<br><dl>  <dt>...</dt>  <dd>...</dd> </dl><br>```<br><br>Description lists<br><br>A description list is perfect for defining terms.<br><br>Euismod<br><br>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<br><br>Donec id elit non mi porta gravida at eget metus.<br><br>Malesuada porta<br><br>Etiam porta sem malesuada magna mollis euismod.<br><br>Felis euismod semper eget lacinia<br><br>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<br><br>Nulla sed leo.<br><br>Nulla sed leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos<br><br>Description lists<br><br>A description list is perfect for defining terms.<br><br>Euismod<br><br>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<br><br>Donec id elit non mi porta gravida at eget metus.<br><br>Malesuada porta<br><br>Etiam porta sem malesuada magna mollis euismod.<br><br>Felis euismod semper eget lacinia<br><br>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<br><br>Nulla sed leo.<br><br>Nulla sed leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos<br><br>```<br><dl class="dl-horizontal">   <dt>...</dt>   <dd>...</dd> </dl><br>``` |
 
-### All List
+## All List
 
 | Unordered List |
 | --- |

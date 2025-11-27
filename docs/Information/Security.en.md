@@ -20,17 +20,11 @@ To begin with the examples and more extensive explanations, we will set off divi
 
 ![](/assets/images/Security/Circles-graph.png)
 
-#### Example
-
-Imaging the case of having security for the Customers role, they can list the invoices but cannot see the actual invoice. We can set that the Customers role can View Invoice listings but cannot view the invoice.
-
-To guarantee that they cannot see anything else we could remove the Can view security for all the objects in the registered group.
-
-#### Admin
+### Admin
 
 Admin role can access all functions of any existing object, edit, view run processes or create a new one. It has access to all of the framework settings, reason why it is completely excluded from the All Users group.
 
-#### Guest Access
+### Guest Access
 
 In the case of wanting to allow unregistered access to our solution without the need to register and maybe let them be able to view and navigate through a few standard menus and features, we will use the Not Registered role. We must make sure that we have a guest user that belongs to the Not Registered role. We must establish a default Page Id for the guest security and make sure to set at least a view security to the things we want him to see that is:
 
@@ -57,6 +51,12 @@ If we want to use unregistered access, we must make sure that our web.config con
 | Reports | ✓ | ✓ |
 | Pages | ✓ | ✓ |
 | Pages modules | ✓ | ✓ |
+
+### Example
+
+Imaging the case of having security for the Customers role, they can list the invoices but cannot see the actual invoice. We can set that the Customers role can View Invoice listings but cannot view the invoice.
+
+To guarantee that they cannot see anything else we could remove the Can view security for all the objects in the registered group.
 
 ## LDAP Authentication
 

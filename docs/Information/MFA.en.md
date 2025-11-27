@@ -4,14 +4,14 @@ New in flexygo! Implementation of Multi-Factor Authentication (MFA) system
 
 What is MFA and why is it important? MFA adds an additional layer of security by requiring users to verify their identity using two or more different methods before accessing their accounts. This measure significantly reduces the risk of unauthorized access, thus protecting your data and the integrity of your information.
 
-### Verification options
+## Verification options
 
 With flexygo MFA, **administrators** have the freedom to choose between two verification methods: **email and SMS**. This allows them to select the option that best suits their organization's needs and resources.
 
 Remember that to use **MFA by SMS** you must have [Abh SMS integration](/Ahora%20Business%20Hub/AbhSms).
 {: .flx-warning-card }
 
-### Granular control
+## Granular control
 
 Furthermore, at flexygo we understand that not all users require the same level of security. Therefore, we have incorporated the ability to define which **roles or users** will have two-step verification enabled. This allows for accurate and efficient management of application security.
 

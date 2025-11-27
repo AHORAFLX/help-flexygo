@@ -37,4 +37,6 @@ Once the settings are configured, it is possible to use the notices sentences to
 
 From here it is possible to view the sms outbox to have a control of the errors and sent.
 
-Sms Outbox
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysOutboxsSms">
+    Sms Outbox
+</flx-navbutton>

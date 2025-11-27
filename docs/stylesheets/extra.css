@@ -430,6 +430,11 @@ a.md-logo {
   /* Main content and Secondary sidebar */
   main .md-main__inner .flx-maincontainer {
     > .md-content {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+      
       min-width: calc(100dvw - 80px);
       max-width: calc(100dvw - 80px);
     }

@@ -10,7 +10,7 @@ A kanbas example is present in flexygo, <flx-navbutton class="link" type="openPa
 
 Kanban settings are divided in five groups:
 
-#### Board Settings
+### Board Settings
 
 Used to define the kanban board most basic settings.
 
@@ -21,7 +21,7 @@ Used to define the kanban board most basic settings.
 *   **Board Title Template:**The title that will be shown on the top of the kanban
 *   **Board Description Template:**A brief description that will appear below the title
 
-#### Column Settings
+### Column Settings
 
 Here it can be set the view columns that will be used as the column configuration
 
@@ -33,7 +33,7 @@ Here it can be set the view columns that will be used as the column configuratio
 *   **CSS Class Field:** The css class will be applied on the column in the .kanban-col div
 *   **Icon Class:** This will be the icon that will appear next to the description
 
-#### Card Settings
+### Card Settings
 
 Here it can be set the object and view columns that will be used as the card configuration
 
@@ -46,7 +46,7 @@ Here it can be set the object and view columns that will be used as the card con
 *   **Card Description Field:** The description will be the content of the card if no content template is assigned
 *   **Card Content Template:** This is the HTML template field where if specified te card content will follow, description field can be parsed
 
-#### Archive Settings
+### Archive Settings
 
 Used to set the settings of the archive its area that appears when moving a card
 
@@ -57,7 +57,7 @@ Used to set the settings of the archive its area that appears when moving a card
 *   **Archieved Icon:** The icon which will be seen in the archive area
 *   **Archieved CSS Class:** CSS class that will be aplied to the archieve area
 
-#### Event Settings
+### Event Settings
 
 Used to define what happens when the different events are fired.
 
@@ -84,3 +84,6 @@ Just proceed to drag module to your page from the module manager and fill out th
 *   **Kanban Settings Name:** The kanban options configured before.
 
 You can also watch the video about how to configurate kanban module:
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/AidJrIHQHZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

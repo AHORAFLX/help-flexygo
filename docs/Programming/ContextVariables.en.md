@@ -39,7 +39,7 @@ Now our new {{EmployeeId}} token can be used as a standard variable anywhere in 
 
 There are some special tokens to access object forms or menus that can be used in templates or emails
 
-#### Templates
+### Templates
 
 *   **{{objectmenu}}**: Used to display an object process menu button
 *   **{{viewbutton}}**: Used to display an object view button
@@ -47,7 +47,7 @@ There are some special tokens to access object forms or menus that can be used i
 *   **{{newbutton}}**: Used to display an object new button
 *   **{{deletebutton}}**: Used to display an object delete button
 
-#### Mails o external links
+### Mails o external links
 
 *   **{{externalObjectView}}**: Complete path to object view form
 *   **{{externalObjectEdit}}**: Complete path to object view form

@@ -4,12 +4,12 @@
 
 Both Microsoft and Google are deprecating Basic Auth and migrating to OAuth. In each of the two we have to carry out some additional configurations and prerequisites.
 
-### Microsoft
+## Microsoft
 
 Register your app using the [Azure portal](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).  
 Other example [link](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).
 
-#### Office 365 configuration
+### Office 365 configuration
 
 Make sure IMAP/POP3/SMTP is enabled for your organization and mailbox.
 
@@ -37,7 +37,7 @@ Check IMAP, Pop and Authenticated SMTP to turn on the protocols for this account
 
 Have in mind it takes 20-30 minutes for the changes to take effect.
 
-#### Azure configuration
+### Azure configuration
 
 In your Active Directory, make sure Enable Security defaults is set to No.
 
@@ -70,7 +70,7 @@ Create an app secret and remember its value.
 
 To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app client id, tenant id and genereted secret.
 
-### Google
+## Google
 
 First you must login on [https://console.cloud.google.com/](https://console.cloud.google.com/) and select an existing project or create a new one.
 
@@ -119,25 +119,17 @@ To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" obj
 
 To avoid problems when automatically taking the url of the application when authorizing the webmail, we have created <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-system')" showprogress="false">a new setting</flx-navbutton> so that the value of the URL can be assigned manually by the user.
 
-  
-
 ## Webmail module
 
 This module allows you to add a web mail to your **flexygo** projects.
 
 ![](/assets/images/ModulesConf/mail.png "Image 20. Web Mail")
 
-Image 20. Web Mail
-
-  
-
 ## Add Webmail icon to your toolbar
 
 Icon already exists, but it's disabled by default. You can enable it as Admin on the top toolbar
 
 ![](/assets/images/ModulesConf/Mail2.png "Image 21. Webmail icon")
-
-Image 21. Webmail icon
 
 or by clicking on the following link: <flx-navbutton class="link" type="execprocess" processname="EnableMailSettings" targetid="popup" excludehist="false" showprogress="false">Enable Mail Options</flx-navbutton>. After clicking on the link, exit and re-login to the system.
 
@@ -147,13 +139,9 @@ To enable Webmail, you need to establish mail server settings. Use the mail sett
 
 ![](/assets/images/ModulesConf/Mail6.png "Image 22. Webmail settings")
 
-Image 22. Webmail settings
-
 Set configuration of your mail account. Bellow you'll see the detailed explication.
 
 ![](/assets/images/ModulesConf/Mail3.png "Image 23. Webmail settings")
-
-Image 23. Webmail settings
 
 *   **SMTP Host:** SMTP host
 *   **PopImap Host:** IMAP host
@@ -172,13 +160,9 @@ You can save mails locally and link them to objects exactly the same as with doc
 
 ![](/assets/images/ModulesConf/Mail5.png "Image 24. Webmail settings")
 
-Image 24. Webmail settings
-
 Click on mail settings and fill out the form.
 
 ![](/assets/images/ModulesConf/Mail4.png "Image 25. Web Mail")
-
-Image 25. Web Mail
 
 *   **Object Name:** Object to link e-mails to
 *   **Object Primary Key:** Object primery key or object Id

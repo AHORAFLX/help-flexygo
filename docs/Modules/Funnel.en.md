@@ -4,7 +4,7 @@ In this article we will explain how to configurate and use the funnel module. Th
 
 ![](/assets/images/Funnel/Funnel_1.png "Image 1. Funnel")
 
-#### Module Options
+## Module Options
 
 1.  Add your SQL sentence: 
 ```sql
@@ -15,7 +15,7 @@ SELECT Label AS label, Value AS value, Background AS background FROM table
 {"inverted":true,"animate":1}
 ```
 
-### JSON Options
+## JSON Options
 
 | OPTION | DESCRIPTION | TYPE | DEFAULT |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ SELECT Label AS label, Value AS value, Background AS background FROM table
 | tooltipEnabled | Whether tooltips should be enabled on hover. | bool | false |
 | tooltipFormat | Either function(label, value) or a format string. See below. | mixed | '{l}\\n{f}' |
 
-### Label/Tooltip Format
+## Label/Tooltip Format
 
 | KEY | DESCRIPTION |
 | --- | --- |

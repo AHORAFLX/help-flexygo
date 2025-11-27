@@ -98,19 +98,19 @@ Mixed chart
 
 ## Chart settings
 
-#### Animations
+### Animations
 
 Now we can define a style of animation for each chart setting and its duration. If duration is set to 0, animations are disabled. [More information about animations](https://easings.net/)
 
 ![](/assets/images/Charts/Animations.png "Image 1. Animations Chart Configuration")
 
-#### Mixed chart configuration
+### Mixed chart configuration
 
 When configuring a new mixed chart, you have to define n sql statements separated by **;**. Then we must define what type of graph is going to be each dataset and the name that we are going to give it.
 
 ![](/assets/images/Charts/Mixed.png "Image 2. Mixed Chart Configuration")
 
-#### Line chart style
+### Line chart style
 
 New style options to line chart.
 

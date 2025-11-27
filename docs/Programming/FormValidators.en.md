@@ -2,19 +2,13 @@
 
 When designing or configuring a data insertion or modification screen, it will be necessary to validate the data entered by the user before allowing him to save the information. The validators will prevent saving the information, if it is incorrect or does not meet the requirements we establish.
 
-## Types of validation
-
 There are several types and levels of validation:
 
-*   **Based on data model specification**
-*   **Based on control type**
-*   **Based on control properties**
-
-### Based on data model specification
+## Based on data model specification
 
 The information entered in each field must be of the type and range supported by the database design.
 
-### Based on control type
+## Based on control type
 
 The type of control chosen when designing the editing screen can carry its own validations preventing the user from entering incorrect values, a numeric field will prevent the user from entering other characters that are not numerical, a date type field will only allow correct dates, a mail type field will validate that the text corresponds to a valid email account, a text type field will only support the maximum number of characters set in the database definition.  
 _Examples:_
@@ -27,9 +21,9 @@ In the case of a text field limited to 4 characters, it will prevent the user fr
 
 ![Example](/assets/images/FormValidators/Character-limit.png "Image 2. Example of validation")
 
-### Based on control properties
+## Based on control properties
 
-###### Required Field
+### Required Field
 
 This validation can be specified both at a database level when designing our tables and fields or at a form design level.
 
@@ -38,7 +32,7 @@ This validation can be specified both at a database level when designing our tab
 *   **Is Required**: With this option it will be mandatory for the user to fill in the field.
 *   **Is Required Message**: We can customize the validation message that will appear on the form when the user tries to save and has not filled in the required information.
 
-###### Minimum and maximum values
+### Minimum and maximum values
 
 This validation can be used for numeric fields.
 
@@ -49,7 +43,7 @@ This validation can be used for numeric fields.
 *   **Min Value**: In numerical fields we can set a maximum value.
 *   **Min Value Message**: Personalized message that will indicate the user that the value exceeds maximum allowed.
 
-###### Regular expression
+### Regular expression
 
 We can establish a validation of the content of the field through a regular expressions.
 

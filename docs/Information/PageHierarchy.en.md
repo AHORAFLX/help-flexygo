@@ -26,34 +26,34 @@ There are several pre built module containers that can be used with your modules
 
 Default, Clean and No Header can be combined with the **roundBorders** CSS Class to obtain a rounded effect. This class can be added in the module Class field on the module configuration form.
 
-#### Default
+### Default
 
 ![](/assets/images/PageHierarchy/Default.png)
 
-#### Default with roundBorders CSS Class
+### Default with roundBorders CSS Class
 
 ![](/assets/images/PageHierarchy/Default-round.png)
 
-#### Clean
+### Clean
 
 ![](/assets/images/PageHierarchy/Clean.png)
 
-#### Clean with roundBorders CSS Class
+### Clean with roundBorders CSS Class
 
 ![](/assets/images/PageHierarchy/Clean-round.png)
 
-#### No Header
+### No Header
 
 ![](/assets/images/PageHierarchy/No-header.png)
 
-#### No Header with roundBorders CSS Class
+### No Header with roundBorders CSS Class
 
 ![](/assets/images/PageHierarchy/No-header-round.png)
 
-#### Empty
+### Empty
 
 ![](/assets/images/PageHierarchy/Empty.png)
 
-#### None
+### None
 
 ![](/assets/images/PageHierarchy/None.png)

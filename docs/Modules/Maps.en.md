@@ -21,7 +21,7 @@ Or you can add directly the flx-map web component.
 
 Google Map
 
-##### Module Options
+## Module Options
 
 1.  Add your SQL sentence to the module in order to create markers: 
 ```sql
@@ -32,11 +32,11 @@ SELECT '60' AS lat, '20' AS lng, 'Noruega' AS address, 'Titulo' AS title, 'Conte
 {"Cluster":"true","Color":"retro","Width":"100%","Height":"400"}
 ```
 
-### Marker Cluster Example
+## Marker Cluster Example
 
 Marker Cluster
 
-### Routes
+## Routes
 
 With flx-map you can also create routes like this one.
 
@@ -50,7 +50,7 @@ If you want to add information on click to one of the points of the route you ne
 </flx-map>
 ```
 
-### Customize route style
+### Customizing route styles
 
 Routes can be customized using this propperties:
 
@@ -78,7 +78,7 @@ Routes can be customized using this propperties:
 </flx-map>
 ```
 
-### Add multiple routes in one map
+### Multiple routes in one map
 
 With the parameter **group** you will be able to divide markers in different routes, as it can be seen in this example.
 ```html
@@ -97,7 +97,7 @@ With the parameter **group** you will be able to divide markers in different rou
 </flx-map>
 ```
 
-### Add polygons in google maps
+## Polygons in google maps
 
 With the parameter **coords** you will be able to add markers with polygons instead a point, if coords, lat and lng parameter is defined, coords has priority.You can see it working in this example.
 ```html
@@ -109,7 +109,7 @@ With the parameter **coords** you will be able to add markers with polygons inst
 </flx-map>
 ```
 
-### Add circles in google maps
+## Circles in google maps
 
 With the parameter **radius** and **radiuscolor** you will be able to add markers with circles and a marker on the center.You can see it working in this example.
 ```html
@@ -119,7 +119,7 @@ With the parameter **radius** and **radiuscolor** you will be able to add marker
 </flx-map>
 ```
 
-### Custom Skins
+## Custom Skins
 
 Map on default will use light or dark skin depending on users mode. But with the color property you can set a theme that will stay the same for everyone.
 

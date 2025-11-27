@@ -7,6 +7,7 @@ Google APIs are application programming interfaces (APIs) developed by Google wh
 ## Settings
 
 1.  First of all, you need to get an Google API Key from the [Google Cloud Platform Console](https://cloud.google.com/maps-platform/?__utma=102347093.1853780485.1507273544.1537783760.1537783760.1&__utmb=102347093.0.10.1537783760&__utmc=102347093&__utmx=-&__utmz=102347093.1537783760.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)&__utmv=-&__utmk=159133242&_ga=2.257580814.44378035.1537782173-1853780485.1507273544#get-started "Google Cloud Platform Console")
+
 2.  Pick product(s) below. You can choose some of them.
     
     ![Google Cloud Platform Console](/assets/images/GoogleAPIKey/Api_1.png "Google Cloud Platform Console")

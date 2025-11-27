@@ -53,16 +53,14 @@ In the process window a button appears to download the template of the file that
 
 ![Process window](/assets/images/Imports/process_window.png "Image 4. Process window")
 
-#### Stored example
+### Stored example
 
   CREATE PROCEDURE \[dbo\].\[pImportacion\]  @JSONVALUE nvarchar(max)  as  BEGIN    BEGIN TRY      select Campo1,Campo2,Campo3,Campo4,Campo5  into importacion   from openjson(@JsonValue,'$.Hoja1')     with (    \[Campo1\] NVARCHAR(max) '$.Campo1',    \[Campo2\] NVARCHAR(max) '$.Campo2',    \[Campo3\] NVARCHAR(max) '$.Campo3',    \[Campo4\] NVARCHAR(max) '$.Campo4',    \[Campo5\] NVARCHAR(max) '$.Campo5'     )              select ...   from openjson(@JsonValue,'$.Hoja2')     with (    ...     )     return 1    END TRY  BEGIN CATCH          IF @@TRANCOUNT >0 BEGIN              ROLLBACK TRAN        END          DECLARE @CatchError NVARCHAR(MAX)          SET @CatchError=dbo.funPrintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())          RAISERROR(@CatchError,12,1)          RETURN 0    END CATCH    END          
 
-#### Dll example
+### Dll example
 
       Imports System.Web.Script.Serialization            Public Shared Function Importacion(Entity As EntityObject, JSONVALUE As String, Ret As ProcessHelper) As Boolean          Try              Dim Table As Object = New JavaScriptSerializer().Deserialize(Of Object)(JSONVALUE)                For Each Row As Object In Table("Hoja1")                  Dim ImportacionObj As New EntityObject("Importacion", Ret.ConfToken)                  ImportacionObj("Campo1") = Row("Campo1")                  ImportacionObj("Campo2") = Row("Campo2")                  ImportacionObj("Campo3") = Row("Campo3")                  ImportacionObj("Campo4") = Row("Campo4")                  ImportacionObj("Campo5") = Row("Campo5")                    ImportacionObj.InsertProcess(ImportacionObj.TableName, Settings.ObjectSettings.eUpdateType.Standard, "")                Next                            For Each Row As Object In Table("Hoja2")                  ...              Next                Ret.Success = True              Return Ret.Success            Catch ex As Exception              Ret.Success = False              Ret.LastException = ex              Return False          End Try      End Function          
 
-×
-
-#### Json example
+### Json example
 
   {      "Hoja1": \[          {              "Campo1": "1",              "Campo2": "Texto 1",              "Campo3": "Texto 2",              "Campo4": "Texto 3",              "Campo5": "Texto 4"          },          {              "Campo1": "2",              "Campo2": "24/02/2022",              "Campo3": "25/02/2022",              "Campo4": "26/02/2022",              "Campo5": "27/02/2022"          },          {              "Campo1": "3",              "Campo2": "10.3",              "Campo3": "10.3",              "Campo4": "10.3",              "Campo5": "10.3"          },          {              "Campo1": "4",              "Campo2": "25/02/2022",              "Campo3": "Texto 2",              "Campo4": "10.3",              "Campo5": "Texto"          }      \],      "Hoja2": \[          {              "Campo1": "1",              "Campo2": "Texto 1",              "Campo3": "Texto 2",              "Campo4": "Texto 3",              "Campo5": "Texto 4"          },          {              "Campo1": "2",              "Campo2": "24/02/2022",              "Campo3": "25/02/2022",              "Campo4": "26/02/2022",              "Campo5": "27/02/2022"          },          {              "Campo1": "3",              "Campo2": "10.3",              "Campo3": "10.3",              "Campo4": "10.3",              "Campo5": "10.3"          },          {              "Campo1": "4",              "Campo2": "25/02/2022",              "Campo3": "Texto 2",              "Campo4": "10.3",              "Campo5": "Texto"          }      \]  }

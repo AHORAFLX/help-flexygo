@@ -7,43 +7,43 @@ Timeline module allows us to create planners based on any object in a simple and
 
 All properties are documented.
 
-##### Basic example
+## Basic example
 
-**Configuration**
+### Configuration
 
 ![](/assets/images/Timeline/Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
 
-**Result**
+### Result
 
 ![](/assets/images/Timeline/Timeline_Basic_Result.png "Image 2. Timeline basic result")
 
-##### Basic with groups example
+## Basic with groups example
 
-**Configuration**
+### Configuration
 
 ![](/assets/images/Timeline/Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
 
-**Result**
+### Result
 
 ![](/assets/images/Timeline/Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
 
-##### Advanced example
+## Advanced example
 
-**Configuration**
+### Configuration
 
 ![](/assets/images/Timeline/Timeline_Advanced_Configuracion.png "Image 5. Advanced")
 
-**Result**
+### Result
 
 ![](/assets/images/Timeline/Timeline_Advanced_Result.png "Image 6. Advanced result")
 
-##### Advanced With Groups Example
+## Advanced With Groups Example
 
-**Configuration**
+### Configuration
 
 ![](/assets/images/Timeline/Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
 
-**Result**
+### Result
 
 ![](/assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
 

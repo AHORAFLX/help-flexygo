@@ -15,7 +15,7 @@ You can find more information about testing with **flexygo** here [Test Unitario
 
 In the example we see a test that runs through all the application nodes definition and checks that they load correctly. The node has a feature that if it should fail during the load it changes its title to **Node Error** so its malfunction is very easy to detect.
 
-#### Test coding Example
+### Test coding Example
 
 ```vbnet
 ''' <summary>
@@ -59,7 +59,7 @@ Public Sub TestNodes()
 End Sub
 ```
 
-## Exclude tests from **flexygo**
+## Exclude tests from flexygo
 
 If there are test in a dll that we do not want **flexygo** to run, we can tag them with a testCategory attribute and inform **flexygo** of which test should not be used by using the exclude attributes. In te following sample if we don't want to execute this test we should set **flexygo** exlude attributes = ExcludeClient
 

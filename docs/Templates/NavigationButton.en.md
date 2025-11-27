@@ -2,7 +2,7 @@
 
 Navigation button, developed such as web component, used to avoid pasting JavaScript in to your HTML markup and keeping the markup clean.
 
-#### Go Home
+## Go Home
 
 To go home use:
 
@@ -17,7 +17,7 @@ Instead of onclick event with:
 flexygo.nav.goHome();
 ```
 
-#### Open Page
+## Open Page
 
 <flx-navbutton class="button" type="openpage" pagetypeid="edit" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')">Edit sample here</flx-navbutton>
 <flx-navbutton class="button" type="openpage" pagetypeid="view" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')">View sample here</flx-navbutton>
@@ -90,7 +90,7 @@ Instead of onclick event with:
 flexygo.nav.openPage('list','sysHelpItems','','null','popup',false,$(this),null,null,'{"sys-systemHelp":"Help\_Offline\_App"}');
 ```
 
-#### OpenPageName
+## OpenPageName
 
 <flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysHelp" presets="{'sys-systemHelp':'Help_Offline_App'}">Click here to Open Page by Name</flx-navbutton>
 
@@ -121,7 +121,7 @@ Instead of onclick event with:
 flexygo.nav.openPageName('syspage-generic-admon','sysobject','objectname=\\'sysactionlog\\'',null,'popup',false,$(this));
 ```
 
-#### ExecProcess
+## ExecProcess
 
 <flx-navbutton class="button" type="execprocess" processname="PrintPage">Click to execute PrintPage procees</flx-navbutton>
 
@@ -139,7 +139,7 @@ Instead of onclick event with:
 flexygo.nav.execProcess('PrintPage','','',null,null,'popup',false,$(this),false);
 ```
 
-#### ViewReport
+## ViewReport
 
 <flx-navbutton class="button" type="viewReport" reportname="test_object_html_print" objectname="sysUsers">Click to view report</flx-navbutton>
 
@@ -157,7 +157,7 @@ Instead of onclick event with:
 flexygo.nav.viewReport('reportname','','yourobject','yourwhere',null,null,'popup',false,$(this));
 ```
 
-#### OpenHelpId
+## OpenHelpId
 
 [Click to open help](./){ .button }
 
@@ -175,7 +175,7 @@ Instead of onclick event with:
 flexygo.nav.openHelpId('syshelp-navbutton','popup',false,$(this));
 ```
 
-#### OpenProcessParams and OpenProcessParamsPage
+## OpenProcessParams and OpenProcessParamsPage
 
 To open default process parameter page use:
 
@@ -205,7 +205,7 @@ Instead of onclick event with:
 flexygo.nav.openProcessParams('yourpagename','testprocess', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
 ```
 
-#### OpenReportParams and OpenReportsParamsPage
+## OpenReportParams
 
 To open default reports parameter page use:
 
@@ -220,6 +220,8 @@ Instead of onclick event with:
 ```js
 flexygo.nav.openReportsParams('testreport', '', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
 ```
+
+## OpenReportsParamsPage
 
 To open report specific parameter page use:
 

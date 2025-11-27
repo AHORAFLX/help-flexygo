@@ -12,7 +12,7 @@ Objects with no Friendly URL switch active will not get redirected when using on
 
 ## URL Structure
 
-#### List
+### List
 
 | Structure | Example |
 | --- | --- |
@@ -21,21 +21,21 @@ Objects with no Friendly URL switch active will not get redirected when using on
 | /list/:object?field1=value1&field2=value2 | /list/locations?userid=1&accuracy<20 |
 | /list/:object/page/:pageName?field1=value1&field2=value2 | /list/locations/page/my\_list?userid=1&accuracy<20 |
 
-#### View
+### View
 
 | Structure | Example |
 | --- | --- |
 | /view/:object/:primarykey | /view/location/1 |
 | /view/:object/:primarykey/page/:pageName | /view/location/1/page/my\_view |
 
-#### Edit
+### Edit
 
 | Structure | Example |
 | --- | --- |
 | /edit/:object/:primarykey | /edit/location/1 |
 | /edit/:object/:primarykey/page/:pageName | /edit/location/1/page/my\_edit |
 
-#### Insert
+### Insert
 
 | Structure | Example |
 | --- | --- |

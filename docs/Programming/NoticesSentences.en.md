@@ -16,7 +16,7 @@ For make it works, the cron called **UpdateNoticeBadge** must be active.
 
 In the first instance we will define a notice sentence indicating a description, a cron job and the connection string (database where sql queries will be made)
 
-#### Notice Sentences
+### Notice Sentences
 
 Use Notice Sentence to select wich fields will be placed in the Notices Table.
 
@@ -91,7 +91,7 @@ FROM (
 GROUP BY EmployeeId
 ```
 
-#### User Notice Sentence
+### User Notice Sentence
 
 If you have not used the reference to the user in the main notification statement, you can set which users will receive the notification using an SQL query, in which you can specify the user identifier (UserId) or the reference (CurrentReference).
 
@@ -127,7 +127,7 @@ FROM (
 GROUP BY EmployeeId
 ```
 
-#### Update Sentence
+### Update Sentence
 
 Use an update to sentence if needed after filling out the mails or notices tables.  
 In the event that the notification is not addressed to all users, but to a specific group, we must indicate to which users.  
@@ -137,7 +137,7 @@ Either by identifying them using the system user identifier (UserId) or the refe
 UPDATE Mytable\_Log SET NotifiedError = 1 WHERE HASError = 1 AND NotifiedError = 0
 ```
 
-#### Mail Sentence
+### Mail Sentence
 
 Use Mail Sentence to select which fields will be placed in the Mails\_Outbox Table.
 
@@ -168,8 +168,9 @@ FROM ...
 | **ObjectWhere** | Link click to an object |     |
 | **Attachments** | List od document Guid from document manager separated with pipes \| |     |
 
-#### Sms Sentence (To be able to use it, it is necessary to enable the integration, for more information see the help of abh sms.)
+### Sms Sentence
 
+You need to know that to be able to use it, it is necessary to enable the integration, for more information see the help of [abh sms](/Ahora%20Business%20Hub/AbhSms).
 Use Sms Sentence to select which fields will be placed in the Sms\_Outbox Table.
 
 ```sql
@@ -189,7 +190,7 @@ FROM ....
 | **ObjectName** | Link click to an object |     |
 | **ObjectWhere** | Link click to an object |     |
 
-#### Cron Jobs
+### Cron Jobs
 
 Finally, we must create a new cron job and indicate a name, a workgroup (default "Defaultgroup"), one short description, enabled... Next we select the shot schedule. In process options we must put the BuildMailandNotifications process and run as the admin user. In the name of the process we will put SysNoticeSentences and in object Where we will put the filter of the sentence that we just created (SentenceId = 'myalert')
 

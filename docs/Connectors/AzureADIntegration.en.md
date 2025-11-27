@@ -27,15 +27,11 @@ For the correct functionality of Azure AD Integration additional configuration i
 
 ![Redirect URL, logout URL](/assets/images/AzureAdIntegration/URL.png "Image 1. Redirect URL, logout URL")
 
-Image 1. Redirect URL, logout URL
-
 ## Users assignment
 
 In the case you want to restrict user's access to your **flexygo** application, you can switch the **assignment required** option to **yes**: then users must first be assigned this application before being able to access it. To assign users, enter to Enterprise applications -> choose your **flexygo** app -> Users and groups
 
 ![Users](/assets/images/AzureAdIntegration/Users.png "Image 2. Users")
-
-Image 2. Users
 
 ## Run process
 
@@ -58,13 +54,9 @@ Once the user pass through registration, it activates Register Process called "N
 | aadRegistrationDefaultRole | Role Id of new user by default |
 | aadDefaultCultureId | Default language for new users |
 
-×
-
 #### Tenant Id, Client Id
 
 ![](/assets/images/AzureAdIntegration/ClientTenant.png)
-
-×
 
 #### Client Secret Id
 

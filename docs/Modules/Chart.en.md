@@ -31,7 +31,7 @@ You can add your easy line by adding directly the flx-easyline web component.
 
 Use any of the three pre defined sizes: small, medium or large. You can also leave size empty, the component will be adapted due to autosize.
 
-#### Module Options
+### Options
 
 1.  Add your SQL sentence to the module
 2.  Indicate Your Basic EasyLine params
@@ -77,7 +77,7 @@ This component is mainly used for the Timeline, but you can also add your Timeli
   
 Custom template  
 
-#### Module Options
+### Options
 
 *   Indicate your Timeline Progres Bar params
 
@@ -114,7 +114,7 @@ or by adding directly the flx-easypie web component.
 
 Use any of the three pre defined sizes: small, medium or large.
 
-#### Module Options
+### Options
 
 1.  Add your SQL sentence to the module
 2.  Indicate your basic EasyPie params
@@ -166,7 +166,7 @@ or by Adding directly the flx-easyinfo web component.
 
 Use any of the three pre defined sizes: small, medium or large.
 
-#### Module Options
+### Options
 
 1.  Add your SQL sentence to the module
 2.  Indicate Your Basic EasyInfo params
@@ -223,13 +223,13 @@ or by adding directly the flx-sparkline web component.
 
 Use any of the three pre defined sizes: small, medium or large for any of the sparkline types (bar, line, discrete, pie, bullet or box).
 
-#### Small
+### Small
 
-#### Medium
+### Medium
 
-#### Large
+### Large
 
-#### Module Options
+### Options
 
 1.  Add your SQL sentence to the module
 2.  Indicate your basic sparkline params

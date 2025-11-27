@@ -12,8 +12,6 @@ Abh ticket is an integration of Ahora Business Hub that allows **flexygo** to co
 
 ![Abh Ticket configuration](/assets/images/AbhTicket/AbhTicketSettings.png "Abh Ticket configuration")
 
-Image 1. Abh Ticket configuration
-
 **Integration:** Name of the integration that we are going to configure, in this case Ahora Business Hub - Ticket.
 
 **Client Id:** Ahora Business Hub client id.
@@ -33,17 +31,24 @@ For more information consult on [https://help.flexygo.com/](https://help.flexygo
 
 ## Functions dll
 
-##### Consult expenses
+### Consult expenses
+```cs
+FLEXYGO.Ticket.AbhGetExpenses(EntityObject Entity, ref ProcessHelper Ret, int? Status = null, DateTime? DateMin = null, DateTime? DateMax = null)
+```
 
-Optional parameters:
+#### Parameters
 
-*   Status: Expense status (0 - Pending. 1 - Confirmed.)
-*   DateMin: Minimum expense date.
-*   DateMax: Maximum expense date.
+| Name | Type | Description |
+| --- | --- | --- |
+| Entity | EntityObject | The entity of the object |
+| Ret | ProcessHelper | The return of the process data |
+| Status? | int | Expense status (0 - Pending. 1 - Confirmed.) |
+| DateMin? | DateTime | Minimum expense date. | 
+| DateMax? | DateTime | Maximum expense date. |
 
-Return JSON string - View definition
+#### Returns
 
-FLEXYGO.Ticket.AbhGetExpenses
+JSON string
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -72,31 +77,45 @@ FLEXYGO.Ticket.AbhGetExpenses
 | distance | Decimal | Kilometres. Only for type 2 expenses. |
 | unit\_price | Decimal | Euros per kilometer. Only for type 2 expenses. |
 
-##### Consult especific expense
+### Consult especific expense
 
-Parameter:
+```cs
+FLEXYGO.Ticket.AbhGetExpense(EntityObject Entity, string ExpenseId, ref ProcessHelper Ret)
+```
 
-*   ExpenseId: Expense identificator.
+#### Parameters
 
-Return JSON string
+| Name | Type | Description |
+| --- | --- | --- |
+| ExpenseId | string | Expense identificator |
 
-FLEXYGO.Ticket.AbhGetExpense
+#### Returns
 
-##### Consult image of the expense
+JSON string
 
-Parameter:
+### Consult image of the expense
 
-*   RemoteUri: Remote image uri of the expense.
+```cs
+FLEXYGO.Ticket.AbhGetExpenseImage(EntityObject Entity, string RemoteUri, ref ProcessHelper Ret)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| RemoteUri | string | Remote image uri of the expense |
 
 Return base64 string
 
-FLEXYGO.Ticket.AbhGetExpenseImage
+### Consult users
 
-##### Consult users
+```cs
+FLEXYGO.Ticket.AbhGetUsers(EntityObject Entity, ref ProcessHelper Ret)
+```
 
-Return JSON string - View definition
+#### Returns
 
-FLEXYGO.Ticket.AbhGetUsers
+JSON string
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -111,37 +130,57 @@ FLEXYGO.Ticket.AbhGetUsers
 | departments | List | List of groups to which the user belongs. |
 | cost\_centers | List | List of cost centers associated with the user. |
 
-##### Consult my user
+### Consult my user
 
-Return JSON string
+```cs
+FLEXYGO.Ticket.AbhGetMyUser(EntityObject Entity, ref ProcessHelper Ret)
+```
 
-FLEXYGO.Ticket.AbhGetMyUser
+#### Returns
 
-##### Consult especific user
+JSON string
 
-Parameter:
+### Consult especific user
 
-*   UserId: User identificator.
+```cs
+FLEXYGO.Ticket.AbhGetUser(EntityObject Entity, string UserId, ref ProcessHelper Ret)
+```
 
-Return JSON string
+#### Parameters
 
-FLEXYGO.Ticket.AbhGetUser
+| Name | Type | Description |
+| --- | --- | --- |
+| UserId | string | User identificator. |
 
-##### Consult companies from a especific user
+#### Returns
 
-Parameter:
+JSON string
 
-*   UserId: User identificator.
+### Consult companies from a especific user
 
-Return JSON string
+```cs
+FLEXYGO.Ticket.AbhGetUserCompanies(EntityObject Entity, string UserId, ref ProcessHelper Ret)
+```
 
-FLEXYGO.Ticket.AbhGetUserCompanies
+#### Parameters
 
-##### Consult categories
+| Name | Type | Description |
+| --- | --- | --- |
+| UserId | string | User identificator. |
 
-Return JSON string - View definition
+#### Returns
 
-FLEXYGO.Ticket.AbhGetCategories
+JSON string
+
+### Consult categories
+
+```cs
+FLEXYGO.Ticket.AbhGetCategories(EntityObject Entity, ref ProcessHelper Ret)
+```
+
+#### Returns
+
+JSON string
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -152,17 +191,25 @@ FLEXYGO.Ticket.AbhGetCategories
 | iva | Decimal | Tax rate that applies to the expenses of the category. Supports two decimal places. If it is null, the category supports multiple types. |
 | business\_category\_id | Number(11) | Business type (to allow searches by location). Could be:<br><br>*   1: Restaurants<br>*   2: Parking |
 
-##### Consult payment methods
+### Consult payment methods
 
-Return JSON string
+```cs
+FLEXYGO.Ticket.AbhGetPaymentMethods(EntityObject Entity, ref ProcessHelper Ret)
+```
 
-FLEXYGO.Ticket.AbhGetPaymentMethods
+#### Returns
 
-##### Consult cost centers
+JSON string
 
-Return JSON string - View definition
+### Consult cost centers
 
-FLEXYGO.Ticket.AbhGetCostCenters
+```cs
+FLEXYGO.Ticket.AbhGetCostCenters(EntityObject Entity, ref ProcessHelper Ret)
+```
+
+#### Returns
+
+JSON string
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -173,18 +220,24 @@ FLEXYGO.Ticket.AbhGetCostCenters
 | active | Boolean | Indicates whether the cost center is active or not. I don't know They may allocate expenses to inactive centers. |
 | global | Boolean | Indicates whether the cost center is global or not. If the overall Any user in the company can allocate expenses in it. If it is not global, it must be assigned to users so that they can allocate expenses to it. |
 
-##### Consult expense sheets
+### Consult expense sheets
 
-Optional parameters:
+```cs
+FLEXYGO.Ticket.AbhGetReports(EntityObject Entity, ref ProcessHelper Ret, DateTime? DateMin = null, DateTime? DateMax = null, int? Status = null, DateTime? UpdatedAfter = null)
+```
 
-*   DateMin: Minimum expense sheet date.
-*   DateMax: Maximum expense sheet date.
-*   Status: Expense sheet status (0 - Open. 1 - Pending review. 2 - In Review. 3 - Rejected. 4 - Processed. 5 - Approved.)
-*   UpdatedAfter: Updated after expense sheet date.
+#### Parameters
 
-Return JSON string - View definition
+| Name | Type | Description |
+| --- | --- | --- |
+| DateMin? | DateTime | Minimum expense sheet date. |
+| DateMax? | DateTime | Maximum expense sheet date. |
+| Status? | int | Expense sheet status (0 - Open. 1 - Pending review. 2 - In Review. 3 - Rejected. 4 - Processed. 5 - Approved.) |
+| UpdatedAfter? | DateTime | Updated after expense sheet date. |
 
-FLEXYGO.Ticket.AbhGetReports
+#### Returns
+
+JSON string
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -197,121 +250,186 @@ FLEXYGO.Ticket.AbhGetReports
 | status\_log | List | List of comments added to the sheet during the state changes, by the various users involved in its validation. |
 | custom\_fields | object | Object that contains the fields customized by company, if they exist. Format {“field1”: value, “field2: value, ...}. |
 
-##### Consult expenses from an expense sheet
+### Consult expenses from an expense sheet
 
-Parameter:
+```cs
+FLEXYGO.Ticket.AbhGetReportExpenses(EntityObject Entity, string ReportId, ref ProcessHelper Ret)
+```
 
-*   ReportId: Expense sheet identificator.
+#### Parameters
 
-Return JSON string
+| Name | Type | Description |
+| --- | --- | --- |
+| ReportId | string | Expense sheet identificator. |
 
-FLEXYGO.Ticket.AbhGetReportExpenses
+#### Returns
 
-##### Consult expense sheet status
+JSON string
 
-Return JSON string
+### Consult expense sheet status
 
-FLEXYGO.Ticket.AbhGetReportStatus
+```cs
+FLEXYGO.Ticket.AbhGetReportStatus(EntityObject Entity, ref ProcessHelper Ret)
+```
 
-##### Consult departments
+#### Returns
 
-Return JSON string
+JSON string
 
-FLEXYGO.Ticket.AbhGetDepartments
+### Consult departments
 
-##### Consult client list
+```cs
+FLEXYGO.Ticket.AbhGetDepartments(EntityObject Entity, ref ProcessHelper Ret)
+```
 
-Return JSON string
+#### Returns
 
-FLEXYGO.Ticket.AbhGetClients
+JSON string
 
-##### Consult a client
+### Consult client list
 
-Parameters:
+```cs
+FLEXYGO.Ticket.AbhGetClients(EntityObject Entity, ref ProcessHelper Ret)
+```
 
-*   CompanyId: Company identificator.
-*   ClientId: Client identificator.
+#### Returns
 
-Return JSON string
+JSON string
 
-FLEXYGO.Ticket.AbhGetClient
+### Consult a client
 
-##### Create client
+```cs
+FLEXYGO.Ticket.AbhGetClient(EntityObject Entity, string CompanyId, string ClientId, ref ProcessHelper Ret)
+```
 
-Parameters:
+#### Parameters
 
-*   Label: Label displayed to the user.
-*   Value: Value to be saved.
-*   CompanyId: Company identificator.
+| Name | Type | Description |
+| --- | --- | --- |
+| CompanyId | string | Company identificator. |
+| ClientId | string | Client identificator. |
 
-Return JSON string
+#### Returns
 
-FLEXYGO.Ticket.AbhCreateClient
+JSON string
 
-##### Update client
+### Create client
 
-Parameters:
+```cs
+FLEXYGO.Ticket.AbhCreateClient(EntityObject Entity, string Label, string Value, string CompanyId, ref ProcessHelper Ret)
+```
 
-*   ActualCompanyId: Actual company identificator.
-*   ClientId: Client identificator.
-*   Label: Label displayed to the user.
-*   Value: Value to be saved.
-*   CompanyId: Company identificator.
+#### Parameters
 
-Return JSON string
+| Name | Type | Description |
+| --- | --- | --- |
+| Label | string | Label displayed to the user. |
+| Value | string | ue to be saved. |
+| CompanyId | string | Company identificator. |
 
-FLEXYGO.Ticket.AbhUpdateClient
+#### Returns
 
-##### Active a client
+JSON string
 
-Parameters:
+### Update client
 
-*   CompanyId: Company identificator.
-*   ClientId: Client identificator.
+```cs
+FLEXYGO.Ticket.AbhUpdateClient(EntityObject Entity, string ActualCompanyId, string ClientId,string Label, string Value, string CompanyId, ref ProcessHelper Ret)
+```
 
-Return JSON string
+#### Parameters
 
-FLEXYGO.Ticket.AbhActiveClient
+| Name | Type | Description |
+| --- | --- | --- |
+| ActualCompanyId | string | Actual company identificator. |
+| ClientId | string | Client identificator. |
+| Label | string | Label displayed to the user. |
+| Value | string | Value to be saved. |
+| CompanyId | string | Company identificator. |
 
-##### Disable a client
+#### Returns
 
-Parameters:
+JSON string
 
-*   CompanyId: Company identificator.
-*   ClientId: Client identificator.
+### Active a client
 
-Return JSON string
+```cs
+FLEXYGO.Ticket.AbhActiveClient(EntityObject Entity, string CompanyId, string ClientId, ref ProcessHelper Ret)
+```
 
-FLEXYGO.Ticket.AbhDisableClient
+#### Parameters
 
-##### Delete client
+| Name | Type | Description |
+| --- | --- | --- |
+| CompanyId | string | Company identificator. |
+| ClientId | string | Client identificator. |
 
-Parameters:
+#### Returns
 
-*   CompanyId: Company identificator.
-*   ClientId: Client identificator.
+JSON string
+
+### Disable a client
+
+```cs
+FLEXYGO.Ticket.AbhDisableClient(EntityObject Entity, string CompanyId, string ClientId, ref ProcessHelper Ret)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| CompanyId | string | Company identificator. |
+| ClientId | string | Client identificator. |
+
+#### Returns
+
+JSON string
+
+
+### Delete client
+
+```cs
+FLEXYGO.Ticket.AbhDeleteClient(EntityObject Entity, string CompanyId, string ClientId, ref ProcessHelper Ret)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| CompanyId | string | Company identificator. |
+| ClientId | string | Client identificator. |
 
 Return boolean string
 
-FLEXYGO.Ticket.AbhDeleteClient
+### Consult cards
 
-##### Consult cards
+```cs
+FLEXYGO.Ticket.AbhGetCards(EntityObject Entity, string CompanyId, ref ProcessHelper Ret)
+```
 
-Parameters:
+#### Parameters
 
-*   CompanyId: Company identificator.
+| Name | Type | Description |
+| --- | --- | --- |
+| CompanyId | string | Company identificator. |
 
-Return JSON string
+#### Returns
 
-FLEXYGO.Ticket.AbhGetCards
+JSON string
 
-##### Consult especific card
+### Consult especific card
 
-Parameter:
+```cs
+FLEXYGO.Ticket.AbhGetCard(EntityObject Entity, string CompanyId, string CardId, ref ProcessHelper Ret)
+```
 
-*   CompanyId: Company identificator.
-*   CardId: Card identificator.
+#### Parameters
 
-Return JSON string
+| Name | Type | Description |
+| --- | --- | --- |
+| CompanyId | string | Company identificator. |
+| CardId | string | Card identificator. |
 
-FLEXYGO.Ticket.AbhGetCard
+#### Returns
+
+JSON string

@@ -14,7 +14,7 @@
 
 1.  Define a property with **Wacom Signature** type:
     
-![Adding a property of Wacom Signature Type](/assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
+    ![Adding a property of Wacom Signature Type](/assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
     
 2.  Set Options: You can customize some features of the **Wacom Signature control** in the **Options** field located at the end of the property configuration form  
     

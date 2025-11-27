@@ -4,7 +4,9 @@
 
 In order to make calls to Microsoft Graph, which is a RESTfull web API, that enables you to access Microsoft Cloud service resources, it is required to register your app and get authentication tokens for a user or service. If you want to develop an office integration from **flexygo** platform you have two options:
 
-##### Option 1
+## Developing integration
+
+### Recommended Option
 
 Register your app using the [Azure portal](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).  
 Other example [link](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).  
@@ -17,19 +19,13 @@ In addition to registering the application in Azure make sure to enable access p
 ![](/assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
 
 ![](/assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
-  
-
-##### 
 
 Inform the base URL of your app + /Webhooks/OfficeToken.aspx as your redirect URl's. Fill office setting fields with your app client id, tenant id and genereted secret.
 
-##### ~Option 2~ (Deprecated by Microsoft)
+### Deprecated Option
 
-~
-
-Take profit of the already registered **flexygo** app and its configuration. Use flexygo app in Azure
-
-~
+(This option was deprecated by Microsoft).
+Take profit of the already registered **flexygo** app and its configuration. Use flexygo app in Azure.
 
 ## Retrieve contacts example
 
@@ -42,7 +38,7 @@ In the following example you can get a contact collection from the default conta
 
 Insert, Update And Delete contact
 
-## Retrieve calendar events example
+### Retrieve calendar events example
 
 In the example below we will retrieve a list of calendar events from the signed-in user.
 
@@ -53,13 +49,9 @@ In the example below we will retrieve a list of calendar events from the signed-
 
 Insert, Update And Delete event
 
-×
-
 #### Office 365 Contacts
 
        Imports FLEXYGO.Objects Imports FLEXYGO.Processing.ProcessManager Imports RestSharp Imports Newtonsoft.Json  Imports FLEXYGO.Utilities.General Imports FLEXYGO.OfficeResourceTypes  Namespace Samples     Class Samples365           ''' <summary> ''' Sample Create, update and delete contact in office 365 ''' </summary> ''' <param name="Entity">The entity.</param> ''' <param name="Ret">The ret.</param> ''' <returns><c>true</c> if ok, <c>false</c> otherwise.</returns> Public Shared Function SampleContactsOffice365(Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean               Try                 Dim contactsOffice \= New List(Of Contact)                 Dim infoJson As Newtonsoft.Json.Linq.JArray                   '1) Creamos el objeto contact con los datos necesarios Dim contactOffice As Contact \= New Contact With {                                         .id \= Nothing, 'Nothing para nuevo, valor del office id para actualizar el contacto. .givenName \= "Contacto prueba",                                         .businessAddress \= New PhysicalAddress With {.city \= "Alboraya", .countryOrRegion \= "España", .postalCode \= "46120", .state \= "Valencia", .street \= "Ceramistes,19"},                                         .jobTitle \= "Programador",                                         .businessPhones \= New List(Of String) From {"96123123", "622622622"},                                         .homePhones \= New List(Of String) From {"96154789654"},                                         .emailAddresses \= New List(Of EmailAddress) From {New EmailAddress With {.address \= "prueba@prueba.com", .name \= "Contacto prueba"}}                                     }                  '2) Lo añadmos a la lista de contactar, máximo 4 por envio contactsOffice.Add(contactOffice)                 Dim response As IRestResponse \= Nothing                  '3) Envio de contactos a office 365 del usuario, antes debe haber sido identificado en azure mediante el proceso: FLEXYGO.Office.GetConsent(Entity, Ret, "contacts") If FLEXYGO.Office.SendOfficeContacts(contactsOffice, Ret, response, Ret.ConfToken.UserSecurity.UserId) Then                     '4) Recogemos la respuesta infoJson \= JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(response.Content)("responses")                     For Each info In infoJson                         If info("status").ToString \= "201" OrElse info("status").ToString \= "200" Then                              '5)Codigo del contacto en office para poder borrarlo. Guardarlo en la ficha del contacto para actualizar o borrar. Dim officeId \= info("body")("id").ToString                              contactOffice.id \= officeId                             contactOffice.givenName \= "Contacto actualizado"                             response \= Nothing                             Ret.Data \= New BaseCollection                             '6) Actualizamos el contacto. If Not FLEXYGO.Office.SendOfficeContacts(contactsOffice, Ret, response, Ret.ConfToken.UserSecurity.UserId) Then                                 Throw Ret.LastException                             End If                              '7) Cargamos el contacto en la lista de contactos a borrar Dim contactsOfficeDelete \= New List(Of Contact)                             Dim contactOfficeDelete \= New Contact With {.id \= officeId}                             contactsOfficeDelete.Add(contactOfficeDelete)                              '8) Borrado de contactos a office 365 del usuario. response \= Nothing                             Ret.Data \= New BaseCollection                             If Not FLEXYGO.Office.DeleteOfficeContacts(contactsOfficeDelete, Ret, response, Ret.ConfToken.UserSecurity.UserId) Then                                 Throw Ret.LastException                             End If                           End If                     Next                 Else                     Throw Ret.LastException                 End If                  Ret.Success \= True                 Return True              Catch ex As Exception                 Ret.Success \= False                 Ret.LastException \= ex                 Return False             End Try         End Function      End Class  End Namespace       
-
-×
 
 #### Office 365 Events
 

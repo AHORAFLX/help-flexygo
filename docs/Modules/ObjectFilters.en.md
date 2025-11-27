@@ -16,16 +16,6 @@ Here is an example of creating search filter in property mode.
 
 It is also possible to modify the search name, add or delete properties. Therefore, clicking on the filters icon and after on "settings", we will access the corresponding filter management window. It is important to indicate in the first drop-down the search that you want to edit. From this screen user may carry out the generation of new searches, the modification of names, add properties and delete properties.
 
-**Icon**
-
-**Action**
-
-New search
-
-Delete property as search field
-
-Edit name from selected search
-
 ![](/assets/images/Filters/editFilter.jpg "Image 3. Filters management")
 
 ## Property filters
