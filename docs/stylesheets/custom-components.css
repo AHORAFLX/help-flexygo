@@ -124,6 +124,7 @@
 
 /* Buttons */
 .button, .md-typeset a.button {
+    display: inline-block;
     cursor: pointer;
     background-color: var(--flx-color);
     color: var(--flx-color-text);

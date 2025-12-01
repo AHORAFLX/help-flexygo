@@ -41,6 +41,10 @@
   --flx-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
 }
 
+[data-md-color-scheme=darkmode] img[src$="#gh-light-mode-only"], [data-md-color-scheme=darkmode] img[src$="#only-light"] {
+    display: none;
+}
+
 /* Dark Mode Colors */
 [data-md-color-scheme="darkmode"] {
   /* Custom Colors */
@@ -314,6 +318,14 @@ a.md-logo {
 /* Code Blocks */
 .md-typeset code {
   border-radius: var(--flx-border-radius);
+}
+
+.highlight:has(code) {
+  border-radius: var(--flx-border-radius);
+
+  .filename {
+    border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
+  }
 }
 
 .md-clipboard {

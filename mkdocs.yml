@@ -47,9 +47,11 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      auto_title: true
+      pygments_style: monokai
+  - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
   - attr_list
 plugins:
   - search
@@ -63,3 +65,12 @@ plugins:
         - locale: es
           name: Español
           build: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false

@@ -38,7 +38,7 @@ Flexygo skeletons use an animation to show the user that the app is still runnin
 
 _Example:_
 
-```
+```html
 <div class="skeletonElementContainer">
     <div class="skeletonElement"></div>
 </div>
