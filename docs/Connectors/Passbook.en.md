@@ -104,14 +104,73 @@ Once we have this we can proceed to configure the settings in Flexygo
 
 ## Example of use from DLL
 
-*   DLL example
-
-### DLL function example
-
-     Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean          Try              Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))              Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))              Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))              Dim aBackField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))              Dim aBackgroundColor As String \= "#000000"              Dim aForegroundColor As String \= "#FFFFFF"              Dim aLabelColor As String \= "#FFFFFF"              Dim aIcon As Byte() \= File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\\img\\icons\\icon-256x256.png"))              Dim aLogo As Byte() \= File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\\img\\icons\\icon-256x256.png"))              Dim aDescription As String \= "Passbook flexygo"              Dim aOrganizationName As String \= "Flexygo"              Dim aLogoText As String \= "Logo text"              Dim aThumbnail As Byte() \= File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\\img\\Avatars\\avatar\_blank.png"))              Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")                'vCard info for qr barcode  Dim FirstName As String \= "Aitor"              Dim LastName As String \= "Torres"              Dim CompanyName As String \= "Flexygo"              Dim JobTitle As String \= "Programador"              Dim StreetAddress As String \= "Carrer dels Ceramistes 19"              Dim Zip As String \= "46900"              Dim City As String \= "Valencia"              Dim CountryName As String \= "España"              Dim Phone As String \= "123456"              Dim Mobile As String \= "987654"              Dim Fax As String \= ""              Dim Email As String \= "aitor@ahora.es"              Dim HomePage As String \= "www.flexygo.com"              Dim loUid As String \= System.Guid.NewGuid().ToString()              Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)                Dim aBarcode As String \= vCard.VCardBody()                Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)              'We can write on disk, download it, send by mail, etc...  File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\\Custom\\passbook\\prueba.pkpass"), passbook.generatePassbook())              Dim path As String \= HttpContext.Current.Server.MapPath("~\\Custom\\passbook\\prueba.pkpass")              Dim dw As New Utilities.Download With {                      .Path \= path,                      .DeleteAfterDownload \= True                  }                                Ret.JSCode \= String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))              Ret.Success \= True              Ret.SuccessMessage \= "Passbook generated"              Return Ret.Success            Catch ex As Exception              Ret.Success \= False              Ret.LastException \= ex              Return Ret.Success          End Try      End Function          
+<fh-codemodal class="button" modal_id="codemodal_dll_example" modal_title="DLL function example">DLL example</fh-codemodal>
 
 ## Design example and layout
 
 ![](/assets/images/Passbook/passbook14.png "Image 10. Layout example")
 
 ![](/assets/images/Passbook/passbook13.png "Image 11. Passbook example")
+
+```vbnet { #codemodal_dll_example }
+Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
+        Try
+            Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))
+            Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))
+            Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))
+            Dim aBackField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))
+            Dim aBackgroundColor As String = "#000000"
+            Dim aForegroundColor As String = "#FFFFFF"
+            Dim aLabelColor As String = "#FFFFFF"
+            Dim aIcon As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
+            Dim aLogo As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
+            Dim aDescription As String = "Passbook flexygo"
+            Dim aOrganizationName As String = "Flexygo"
+            Dim aLogoText As String = "Logo text"
+            Dim aThumbnail As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\Avatars\avatar_blank.png"))
+            Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")
+
+            'vCard info for qr barcode
+            Dim FirstName As String = "Aitor"
+            Dim LastName As String = "Torres"
+            Dim CompanyName As String = "Flexygo"
+            Dim JobTitle As String = "Programador"
+            Dim StreetAddress As String = "Carrer dels Ceramistes 19"
+            Dim Zip As String = "46900"
+            Dim City As String = "Valencia"
+            Dim CountryName As String = "España"
+            Dim Phone As String = "123456"
+            Dim Mobile As String = "987654"
+            Dim Fax As String = ""
+            Dim Email As String = "aitor@ahora.es"
+            Dim HomePage As String = "www.flexygo.com"
+            Dim loUid As String = System.Guid.NewGuid().ToString()
+            Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)
+
+            Dim aBarcode As String = vCard.VCardBody()
+
+            Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)
+            'We can write on disk, download it, send by mail, etc...
+            File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass"), passbook.generatePassbook())
+            Dim path As String = HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass")
+            Dim dw As New Utilities.Download With {
+                    .Path = path,
+                    .DeleteAfterDownload = True
+                }
+                
+            Ret.JSCode = String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))
+            Ret.Success = True
+            Ret.SuccessMessage = "Passbook generated"
+            Return Ret.Success
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return Ret.Success
+        End Try
+    End Function
+```

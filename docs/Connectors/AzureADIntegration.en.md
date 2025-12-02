@@ -16,10 +16,13 @@ You need to have certain keys such as **Tenant Id**, **Client Id** and **Client 
 Make sure you have neccesary permitions to create and manage applications.
 {: .flx-warning-card }
 
-|     |     |
-| --- | --- |
-| Tenant Id, Client Id |     |
-| Client Secret Id |     |
+### Tenant Id, Client Id
+
+![](/assets/images/AzureAdIntegration/ClientTenant.png)
+
+### Client Secret Id
+
+![](/assets/images/AzureAdIntegration/ClientSecret.png)
 
 ## Platform configurations
 
@@ -53,11 +56,3 @@ Once the user pass through registration, it activates Register Process called "N
 | aadRegistrationDefaultProfile | ProfileName of new user by default |
 | aadRegistrationDefaultRole | Role Id of new user by default |
 | aadDefaultCultureId | Default language for new users |
-
-#### Tenant Id, Client Id
-
-![](/assets/images/AzureAdIntegration/ClientTenant.png)
-
-#### Client Secret Id
-
-![](/assets/images/AzureAdIntegration/ClientSecret.png)

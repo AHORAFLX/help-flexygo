@@ -33,9 +33,11 @@ extra_css:
   - stylesheets/extra.css
   - stylesheets/custom-components.css
   - stylesheets/404-error.css
+  - stylesheets/components/fh-codemodal.css
 extra_javascript:
   - javascripts/extra.js
   - javascripts/components/flx-navbutton.js
+  - javascripts/components/fh-codemodal.js
 markdown_extensions:
   - toc:
       permalink: true
@@ -74,3 +76,5 @@ plugins:
       height: auto
       zoomable: true
       draggable: false
+      skip_classes:
+        - not-zoomable

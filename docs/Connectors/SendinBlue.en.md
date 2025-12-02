@@ -15,9 +15,7 @@ After having included the parameters you will be able to use the functions that 
 
 You can create campaigns using the functions provided by flexygo, for example :
 
-Create Campaign email
-
-  
+<fh-codemodal class="button" modal_id="codemodal_create_campaign_email" modal_title="Create Campaign email">Create Campaign email</fh-codemodal>
 
 In the following example you can get all information of campaign emails. Get all
 
@@ -32,12 +30,243 @@ You can send transactional emails using the functions provided by flexygo, for e
 Transactional emails are used for all non-promotional emails: send them when a user has created an account, when they have made an order, when request a new password...
 {: .flx-warning-card }
 
-Create Transactional email
+<fh-codemodal class="button" modal_id="codemodal_create_transaction_email" modal_title="Create Transactional email">Create Transactional email</fh-codemodal>
 
 ### Create Campaign email
+```vbnet { #codemodal_create_campaign_email }
+Imports FLEXYGO.SendinBlue
+Imports FLEXYGO.SendinBlueResourcesTypes
+Imports FLEXYGO.Objects
+Imports FLEXYGO.Processing.ProcessManager
+Imports FLEXYGO.Exceptions
+Imports FLEXYGO.Utilities.General.Util
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports RestSharp
 
-                       Imports FLEXYGO.SendinBlue  Imports FLEXYGO.SendinBlueResourcesTypes  Imports FLEXYGO.Objects  Imports FLEXYGO.Processing.ProcessManager  Imports FLEXYGO.Exceptions  Imports FLEXYGO.Utilities.General.Util  Imports Newtonsoft.Json  Imports Newtonsoft.Json.Linq  Imports RestSharp    Public Class SampleSendinBlue      Public Shared Function SampleCampaign(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean          Dim apikey As String \= Nothing          Dim errorMsg As String \= Nothing          Dim response As IRestResponse \= Nothing            Dim responseJson            'Dim options = New JObject From {  '    {"templateStatus", "true"}  '}  'Se puede obtener todos los templates mediante GetTemplates(Ret, response, options)  Dim templateId \= 1            'Obtenemos el emisor  Dim senderId \= GetSender(Ret)            Try              If CheckApiKey(apikey, errorMsg) Then                  'Para el ejemplo creamos una lista con el contacto de prueba  '1) Creamos una lista nueva  If CreateList(Ret, response, "List" + Date.Now.ToString("yyyy-MM-dd HH:mm:ss"), "1") Then                      If Convert.ToInt32(response.StatusCode) \= 201 Then                          responseJson \= JsonConvert.DeserializeObject(response.Content)                          '2) Guardamos el id de la lista creada  Dim listId \= responseJson("id")                            If Not IsBlank(listId) Then                                Dim sbContact As New SBContact With {                                  .email \= "micontacto@flexygo.com",                                  .attributes \= New JObject From {                                      {"NOMBRE", "Contacto"},                                      {"APELLIDOS", "Flexygo"}                                  },                                  .listIds \= New List(Of Integer) From {                                      listId                                  },                                  .updateEnabled \= True                              }                                '3) Creamos el contacto enlazado a la lista  If CreateOrUpdateContact(Ret, response, sbContact) Then                                  If Convert.ToInt32(response.StatusCode) \= 201 OrElse Convert.ToInt32(response.StatusCode) \= 204 Then                                        Dim campaignSender \= New SBSender With {                                          .id \= senderId                                      }                                      Dim campaignEmail As New SBEmailCampaign With {                                                  .name \= "Campaña Flexygo",                                                  .subject \= "Asunto Prueba",                                                  .sender \= campaignSender,                                                  .templateId \= templateId,                                                  .recipients \= New SBRecipients With {                                                      .listIds \= New List(Of Integer) From {                                                          listId                                                      }                                                  }                                              }                                      '4) Creamos la campaña enlazada con la lista creada anteriormente  If CreateEmailCampaign(Ret, response, campaignEmail) Then                                          If Convert.ToInt32(response.StatusCode) \= 201 Then                                              responseJson \= JsonConvert.DeserializeObject(response.Content)                                              Dim campaignId \= responseJson("id")                                              '5) Enviamos la campaña  EmailCampaignSendNow(Ret, response, campaignId)                                          End If                                      Else                                          Ret.Success \= False                                          Return False                                      End If                                    End If                              End If                            End If                        End If                  End If              Else                  Ret.Success \= False                  Ret.LastException \= New LocalizedException(errorMsg)                  Return False              End If                Ret.Success \= True              Return True            Catch ex As Exception              Ret.Success \= False              Ret.LastException \= ex              Return False          End Try      End Function        Public Shared Function GetSender(Ret As ProcessHelper) As Integer            Dim response As IRestResponse \= Nothing          Dim senderId As Integer \= Nothing            Try              GetSenders(Ret, response)                If Convert.ToInt32(response.StatusCode) \= 200 Then                  Dim responseJson \= JsonConvert.DeserializeObject(response.Content)                  For Each sender In responseJson("senders")                      senderId \= sender("id")                      Exit For                  Next              End If                Return senderId            Catch ex As Exception              Ret.Success \= False              Ret.LastException \= ex              Return False          End Try      End Function    End Class                        
+Public Class SampleSendinBlue
+    Public Shared Function SampleCampaign(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
+        Dim apikey As String = Nothing
+        Dim errorMsg As String = Nothing
+        Dim response As IRestResponse = Nothing
+
+        Dim responseJson
+
+        'Dim options = New JObject From {
+        '    {"templateStatus", "true"}
+        '}
+        'Se puede obtener todos los templates mediante GetTemplates(Ret, response, options)
+        Dim templateId = 1
+
+        'Obtenemos el emisor
+        Dim senderId = GetSender(Ret)
+
+        Try
+            If CheckApiKey(apikey, errorMsg) Then
+                'Para el ejemplo creamos una lista con el contacto de prueba
+                
+                '1) Creamos una lista nueva
+                If CreateList(Ret, response, "List" + Date.Now.ToString("yyyy-MM-dd HH:mm:ss"), "1") Then
+                    If Convert.ToInt32(response.StatusCode) = 201 Then
+                        responseJson = JsonConvert.DeserializeObject(response.Content)
+                        '2) Guardamos el id de la lista creada
+                        Dim listId = responseJson("id")
+
+                        If Not IsBlank(listId) Then
+
+                            Dim sbContact As New SBContact With {
+                                .email = "micontacto@flexygo.com",
+                                .attributes = New JObject From {
+                                    {"NOMBRE", "Contacto"},
+                                    {"APELLIDOS", "Flexygo"}
+                                },
+                                .listIds = New List(Of Integer) From {
+                                    listId
+                                },
+                                .updateEnabled = True
+                            }
+
+                            '3) Creamos el contacto enlazado a la lista
+                            If CreateOrUpdateContact(Ret, response, sbContact) Then
+                                If Convert.ToInt32(response.StatusCode) = 201 OrElse Convert.ToInt32(response.StatusCode) = 204 Then
+
+                                    Dim campaignSender = New SBSender With {
+                                        .id = senderId
+                                    }
+                                    Dim campaignEmail As New SBEmailCampaign With {
+                                                .name = "Campaña Flexygo",
+                                                .subject = "Asunto Prueba",
+                                                .sender = campaignSender,
+                                                .templateId = templateId,
+                                                .recipients = New SBRecipients With {
+                                                    .listIds = New List(Of Integer) From {
+                                                        listId
+                                                    }
+                                                }
+                                            }
+                                    '4) Creamos la campaña enlazada con la lista creada anteriormente
+                                    If CreateEmailCampaign(Ret, response, campaignEmail) Then
+                                        If Convert.ToInt32(response.StatusCode) = 201 Then
+                                            responseJson = JsonConvert.DeserializeObject(response.Content)
+                                            Dim campaignId = responseJson("id")
+                                            '5) Enviamos la campaña
+                                            EmailCampaignSendNow(Ret, response, campaignId)
+                                        End If
+                                    Else
+                                        Ret.Success = False
+                                        Return False
+                                    End If
+
+                                End If
+                            End If
+
+                        End If
+
+                    End If
+                End If
+            Else
+                Ret.Success = False
+                Ret.LastException = New LocalizedException(errorMsg)
+                Return False
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function
+
+    Public Shared Function GetSender(Ret As ProcessHelper) As Integer
+
+        Dim response As IRestResponse = Nothing
+        Dim senderId As Integer = Nothing
+
+        Try
+            GetSenders(Ret, response)
+
+            If Convert.ToInt32(response.StatusCode) = 200 Then
+                Dim responseJson = JsonConvert.DeserializeObject(response.Content)
+                For Each sender In responseJson("senders")
+                    senderId = sender("id")
+                    Exit For
+                Next
+            End If
+
+            Return senderId
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function
+
+End Class
+```
 
 ### Create Campaign email
+```vbnet { #codemodal_create_transaction_email }
+Imports FLEXYGO.SendinBlue
+Imports FLEXYGO.SendinBlueResourcesTypes
+Imports FLEXYGO.Objects
+Imports FLEXYGO.Processing.ProcessManager
+Imports FLEXYGO.Exceptions
+Imports FLEXYGO.Utilities.General.Util
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports RestSharp
 
-                           Imports FLEXYGO.SendinBlue  Imports FLEXYGO.SendinBlueResourcesTypes  Imports FLEXYGO.Objects  Imports FLEXYGO.Processing.ProcessManager  Imports FLEXYGO.Exceptions  Imports FLEXYGO.Utilities.General.Util  Imports Newtonsoft.Json  Imports Newtonsoft.Json.Linq  Imports RestSharp    Public Class SampleSendinBlue      Public Shared Function SampleTransactionalEmail(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean          Dim apikey As String \= Nothing          Dim errorMsg As String \= Nothing          Dim response As IRestResponse \= Nothing            'Obtenemos el emisor  Dim senderId \= GetSender(Ret)            Try              If CheckApiKey(apikey, errorMsg) Then                  '1) Preparamos los receptores del email  Dim receipts \= New List(Of SBEmailInfo) From {                      New SBEmailInfo With {                          .email \= "micontacto@flexygo.com",                          .name \= "Flexygo Pruebas"                      }                  }                  '2) Preparamos el emisor del mail  Dim transactionalSender \= New SBSender With {                      .id \= senderId                  }                    ' Para el ejemplo lo realizaremos con contenido HTML y parametros  Dim transEmail As New SBTransactionalEmail With {                      .sender \= transactionalSender,                      .to \= receipts,                      .subject \= "Mi {{params.subject}}",                      .htmlContent \= "<html><body><h1>Mi primer email transaccional {{params.parameter}}</h1></body></html>",                      .params \= New JObject From {                          {"parameter", "Flexygo parametro"},                          {"subject", "Asunto de Flexygo"}                      }                  }                    '3) Enviamos el email transaccional  If SendTransactionalEmail(Ret, response, transEmail) Then                  '4) Comprobamos que el email se ha enviado correctamente  If Convert.ToInt32(response.StatusCode) <> 201 Then                          Ret.Success \= False                          Ret.LastException \= New LocalizedException(response.Content)                          Return False                      End If                  Else                      Ret.Success \= False                      Return False                  End If              Else                  Ret.Success \= False                  Ret.LastException \= New LocalizedException(errorMsg)                  Return False              End If                Ret.Success \= True              Return True            Catch ex As Exception              Ret.Success \= False              Ret.LastException \= ex              Return False          End Try      End Function        Public Shared Function GetSender(Ret As ProcessHelper) As Integer            Dim response As IRestResponse \= Nothing          Dim senderId As Integer \= Nothing            Try              GetSenders(Ret, response)                If Convert.ToInt32(response.StatusCode) \= 200 Then                  Dim responseJson \= JsonConvert.DeserializeObject(response.Content)                  For Each sender In responseJson("senders")                      senderId \= sender("id")                      Exit For                  Next              End If                Return senderId            Catch ex As Exception              Ret.Success \= False              Ret.LastException \= ex              Return False          End Try      End Function    End Class
+Public Class SampleSendinBlue
+    Public Shared Function SampleTransactionalEmail(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
+        Dim apikey As String = Nothing
+        Dim errorMsg As String = Nothing
+        Dim response As IRestResponse = Nothing
+
+        'Obtenemos el emisor
+        Dim senderId = GetSender(Ret)
+
+        Try
+            If CheckApiKey(apikey, errorMsg) Then
+                '1) Preparamos los receptores del email
+                Dim receipts = New List(Of SBEmailInfo) From {
+                    New SBEmailInfo With {
+                        .email = "micontacto@flexygo.com",
+                        .name = "Flexygo Pruebas"
+                    }
+                }
+                '2) Preparamos el emisor del mail
+                Dim transactionalSender = New SBSender With {
+                    .id = senderId
+                }
+
+                ' Para el ejemplo lo realizaremos con contenido HTML y parametros
+                Dim transEmail As New SBTransactionalEmail With {
+                    .sender = transactionalSender,
+                    .to = receipts,
+                    .subject = "Mi {{params.subject}}",
+                    .htmlContent = "<html><body><h1>Mi primer email transaccional {{params.parameter}}</h1></body></html>",
+                    .params = New JObject From {
+                        {"parameter", "Flexygo parametro"},
+                        {"subject", "Asunto de Flexygo"}
+                    }
+                }
+
+                '3) Enviamos el email transaccional
+                If SendTransactionalEmail(Ret, response, transEmail) Then
+                '4) Comprobamos que el email se ha enviado correctamente
+                    If Convert.ToInt32(response.StatusCode) <> 201 Then
+                        Ret.Success = False
+                        Ret.LastException = New LocalizedException(response.Content)
+                        Return False
+                    End If
+                Else
+                    Ret.Success = False
+                    Return False
+                End If
+            Else
+                Ret.Success = False
+                Ret.LastException = New LocalizedException(errorMsg)
+                Return False
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function
+
+    Public Shared Function GetSender(Ret As ProcessHelper) As Integer
+
+        Dim response As IRestResponse = Nothing
+        Dim senderId As Integer = Nothing
+
+        Try
+            GetSenders(Ret, response)
+
+            If Convert.ToInt32(response.StatusCode) = 200 Then
+                Dim responseJson = JsonConvert.DeserializeObject(response.Content)
+                For Each sender In responseJson("senders")
+                    senderId = sender("id")
+                    Exit For
+                Next
+            End If
+
+            Return senderId
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function
+
+End Class
+```

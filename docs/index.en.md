@@ -5,28 +5,28 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
 <ul class="flx-home-cards">
     <li class="flx-home-card">
         <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
             <p><b>Offline App</b></p>
             <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
         </a>
     </li>
     <li class="flx-home-card">
         <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
             <p><b>Offline App</b></p>
             <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
         </a>
     </li>
     <li class="flx-home-card">
         <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
             <p><b>Offline App</b></p>
             <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
         </a>
     </li>
     <li class="flx-home-card">
         <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img src="./assets/images/icons/phone.svg"></img></span>
+            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
             <p><b>Offline App</b></p>
             <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
         </a>

@@ -8,20 +8,397 @@ Some examples of how to perform certain actions in your custom processes are the
 
 You can create contact, upload it to Mailchimp and remove it from list using the functions provided by flexygo, for example :
 
-Create/Upload/Remove
-
-  
+<fh-codemodal class="button" modal_id="codemodal_create_contact" modal_title="Create Contact and Upload">Create/Upload/Remove</fh-codemodal>
 
 ## Campaign
 
 You can create campaign, upload it to Mailchimp, launch it and remove it using the functions provided by flexygo, for example :
 
-Create/Upload/Launch/Remove
+<fh-codemodal class="button" modal_id="codemodal_create_campaign" modal_title="Create Campaign email">Create/Upload/Launch/Remove</fh-codemodal>
 
-#### Create Contact and Upload
+```vbnet { #codemodal_create_contact }
+Imports FLEXYGO.Data
+Imports FLEXYGO.Exceptions
+Imports FLEXYGO.Objects
+Imports FLEXYGO.Processing.ProcessManager
+Imports FLEXYGO.Utilities.General.Util
+Imports FLEXYGO.Localization
+Imports System.Text
+Imports FLEXYGO.Web
+Imports FLEXYGO.Objects.Settings
+Imports FLEXYGO.Utilities.General
+Imports FLEXYGO.Utilities.SQL.SQLUtilities
+Imports System.Text.RegularExpressions
+Imports MailChimp.Net
+Imports MailChimp.Net.Models
+Imports MailChimp.Net.Core
 
-                       Imports FLEXYGO.Data Imports FLEXYGO.Exceptions Imports FLEXYGO.Objects Imports FLEXYGO.Processing.ProcessManager Imports FLEXYGO.Utilities.General.Util Imports FLEXYGO.Localization Imports System.Text Imports FLEXYGO.Web Imports FLEXYGO.Objects.Settings Imports FLEXYGO.Utilities.General Imports FLEXYGO.Utilities.SQL.SQLUtilities Imports System.Text.RegularExpressions Imports MailChimp.Net Imports MailChimp.Net.Models Imports MailChimp.Net.Core  Public Class MailChimpCustomProcess      Public Shared Function GetMailChimpApiKey(dm As DataManager) As String         Dim ApiKey As String \= dm.GetValue("select Value from MailChimp\_Settings where SettingName='apikey'")         Return ApiKey     End Function      Private Shared Function NewMailChimpContact(Entity As EntityObject, ListID As String, apiKey As String, ByRef listaErrores As StringBuilder) As MailChimp.Net.Models.Member         Try             Dim st As Integer             Select Case Entity("Status")                 Case "Unsubscribed" : st \= 2                 Case "Cleaned" : st \= 3                 Case "Transactional" : st \= 5                 Case "Pending" : st \= 4                 Case Else : st \= 1             End Select              Dim mailChimp \= New MailChimpManager(apiKey)             Dim member \= New Member() With {.EmailAddress \= Entity("EmailAddress"), .StatusIfNew \= st, .Language \= Entity("Language"), .Status \= st}             member.MergeFields.Add("FNAME", Entity("Fname"))             If Not IsBlank(Entity("Lname")) Then member.MergeFields.Add("LNAME", Entity("Lname"))             If Not IsBlank(Entity("Addr1")) AndAlso Not IsBlank(Entity("City")) AndAlso Not IsBlank(Entity("State")) AndAlso Not IsBlank(Entity("Zip")) Then                 Dim address As New Dictionary(Of String, Object)                 If Not IsBlank(Entity("Addr1")) Then address.Add("addr1", Entity("Addr1"))                 If Not IsBlank(Entity("Addr2")) Then address.Add("addr2", Entity("Addr2"))                 If Not IsBlank(Entity("City")) Then address.Add("city", Entity("City"))                 If Not IsBlank(Entity("State")) Then address.Add("state", Entity("State"))                 If Not IsBlank(Entity("Zip")) Then address.Add("zip", Entity("Zip"))                 If Not IsBlank(Entity("Country")) Then address.Add("country", Entity("Country"))                 member.MergeFields.Add("ADDRESS", address)             End If              Dim transmitResult \= mailChimp.Members.AddOrUpdateAsync(ListID, member).Result             Return transmitResult          Catch ex As Exception             listaErrores.AppendLine(ex.ToString)             Return Nothing         End Try      End Function      Public Shared Function PerContact\_Create(Entity As EntityObject, ListId As String, Ret As ProcessHelper) As Boolean          Dim ApiKey As String \= ""         Dim listaErrores As New StringBuilder()         Dim errorMsg \= ""         Dim dm As DataManager \= Nothing         Dim cdm As DataManager \= Nothing          Try             cdm \= New DataManager("ConfConnectionString")             dm \= New DataManager("DataConnectionString")              ApiKey \= GetMailChimpApiKey(cdm)             If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then                 Throw New ArgumentException(errorMsg)             End If              Dim member \= NewMailChimpContact(Entity, ListId, ApiKey, listaErrores)              'Si NewSubscriber devuelve un member actualizamos el estado If member IsNot Nothing Then                 Entity("IsUpload") \= 1                 Entity("Status") \= member.Status                 If Entity.IsNew Then                     If Not Entity.Insert() Then                         Ret.Success \= False                         Ret.LastException \= Entity.LastException                         Return False                     End If                 Else                     If Not Entity.Update() Then                         Ret.Success \= False                         Ret.LastException \= Entity.LastException                         Return False                     End If                 End If             End If              Ret.Success \= True             Return True          Catch ex As Exception             Ret.LastException \= ex             Return False         Finally             If dm IsNot Nothing Then                 dm.Close()             End If              If cdm IsNot Nothing Then                 cdm.Close()             End If         End Try     End Function      Public Shared Function PerContact\_Delete(Entity As EntityObject, ListID As String, ByRef Ret As ProcessHelper) As Boolean          Dim ApiKey As String \= ""         Dim listaErrores As New StringBuilder()         Dim errorMsg \= ""         Dim dm As DataManager \= Nothing         Dim cdm As DataManager \= Nothing          Try             cdm \= New DataManager("ConfConnectionString")             dm \= New DataManager("DataConnectionString")              ApiKey \= GetMailChimpApiKey(cdm)             If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then                 Throw New ArgumentException(errorMsg)             End If              Dim mailChimp \= New MailChimpManager(ApiKey)             mailChimp.Members.DeleteAsync(ListID, Entity("EmailAddress")).Wait()              If Not Entity.Delete() Then                 Ret.Success \= False                 Ret.LastException \= Entity.LastException                 Return False             End If              Ret.Success \= True             Return True          Catch ex As Exception             Ret.Success \= False             Ret.LastException \= ex             Return False         Finally             If dm IsNot Nothing Then                 dm.Close()             End If              If cdm IsNot Nothing Then                 cdm.Close()             End If         End Try     End Function  End Class                          
+Public Class MailChimpCustomProcess
 
-#### Create Campaign email
+    Public Shared Function GetMailChimpApiKey(dm As DataManager) As String
+        Dim ApiKey As String = dm.GetValue("select Value from MailChimp_Settings where SettingName='apikey'")
+        Return ApiKey
+    End Function
 
-                          Imports FLEXYGO.Data Imports FLEXYGO.Exceptions Imports FLEXYGO.Objects Imports FLEXYGO.Processing.ProcessManager Imports FLEXYGO.Utilities.General.Util Imports FLEXYGO.Localization Imports System.Text Imports FLEXYGO.Web Imports FLEXYGO.Objects.Settings Imports FLEXYGO.Utilities.General Imports FLEXYGO.Utilities.SQL.SQLUtilities Imports System.Text.RegularExpressions Imports MailChimp.Net Imports MailChimp.Net.Models Imports MailChimp.Net.Core Imports DocumentFormat.OpenXml.Bibliography  Public Class MailChimpCustomProcessCampaign      Public Shared Function PerCampaign\_Create(Entity As EntityObject, SegmentOptions As Object, Ret As ProcessHelper) As Boolean          Dim ApiKey As String \= ""         Dim listaErrores As New StringBuilder()         Dim errorMsg \= ""         Dim dm As DataManager \= Nothing         Dim cdm As DataManager \= Nothing          Try             cdm \= New DataManager("ConfConnectionString")             dm \= New DataManager("DataConnectionString")              ApiKey \= MailChimpCustomProcess.GetMailChimpApiKey(cdm)             If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then                 Throw New ArgumentException(errorMsg)             End If              Dim mailChimp \= New MailChimpManager(ApiKey)              'Creamos el objeto campaña. Dim camp \= New Campaign() With {                 .Type \= Entity("Type"),                 .Settings \= New Setting() With {.Title \= Entity("Title")},                 .Recipients \= New Recipient() With {.ListId \= Entity("ListId")}             }              If Not Entity.IsNew Then camp.Id \= Entity("Id")              'Añadimos los parámetros que pueden ser nulos. If Not IsBlank(Entity("SubjectLine")) Then camp.Settings.SubjectLine \= Entity("SubjectLine")             If Not IsBlank(Entity("PreviewText")) Then camp.Settings.PreviewText \= Entity("PreviewText")             If Not IsBlank(Entity("FromName")) Then camp.Settings.FromName \= Entity("FromName")             If Not IsBlank(Entity("ReplyTo")) Then camp.Settings.ReplyTo \= Entity("ReplyTo")             If Not IsBlank(Entity("FolderId")) Then camp.Settings.FolderId \= Entity("FolderId")             If Not IsBlank(Entity("TemplateId")) Then camp.Settings.TemplateId \= Entity("TemplateId")              If Not IsBlank(SegmentOptions) Then                 camp.Recipients.SegmentOptions \= SegmentOptions                 Entity("Segmented") \= 1             End If              Dim transmitResult \= mailChimp.Campaigns.AddOrUpdateAsync(camp).Result              'Guardamos la campaña en nuestra base de datos Entity("Id") \= transmitResult.Id             Entity("WebId") \= transmitResult.WebId             Entity("CreateTime") \= DateTime.Now             Entity("Status") \= IIf(IsBlank(transmitResult.Status), DBNull.Value, transmitResult.Status)             Entity("SendTime") \= IIf(IsBlank(transmitResult.SendTime), DBNull.Value, transmitResult.SendTime)             Entity("Synchronized") \= 1              If Entity.IsNew Then                 If Not Entity.InsertProcess(Entity.TableName, Settings.ObjectSettings.eUpdateType.Standard, Nothing) Then                     Ret.Success \= False                     Ret.LastException \= Entity.LastException                     Return False                 End If             ElseIf Not Entity.UpdateProcess(Settings.ObjectSettings.eUpdateType.Standard, Nothing) Then                 Ret.Success \= False                 Ret.LastException \= Entity.LastException                 Return False             End If              Ret.Success \= True             Return True          Catch ex As Exception             Ret.LastException \= ex             Return False         Finally             If dm IsNot Nothing Then                 dm.Close()             End If              If cdm IsNot Nothing Then                 cdm.Close()             End If         End Try     End Function      Public Shared Function PerCampaignLaunchAction(Entity As EntityObject, ByRef Ret As ProcessHelper, Action As String, Optional Email As Object \= Nothing, Optional Type As Object \= Nothing) As Boolean         Dim ApiKey As String \= ""         Dim listaErrores As New StringBuilder()         Dim errorMsg \= ""         Dim dm As DataManager \= Nothing         Dim cdm As DataManager \= Nothing          Try             cdm
+    Private Shared Function NewMailChimpContact(Entity As EntityObject, ListID As String, apiKey As String, ByRef listaErrores As StringBuilder) As MailChimp.Net.Models.Member
+        Try
+            Dim st As Integer
+            Select Case Entity("Status")
+                Case "Unsubscribed" : st = 2
+                Case "Cleaned" : st = 3
+                Case "Transactional" : st = 5
+                Case "Pending" : st = 4
+                Case Else : st = 1
+            End Select
+
+            Dim mailChimp = New MailChimpManager(apiKey)
+            Dim member = New Member() With {.EmailAddress = Entity("EmailAddress"), .StatusIfNew = st, .Language = Entity("Language"), .Status = st}
+            member.MergeFields.Add("FNAME", Entity("Fname"))
+            If Not IsBlank(Entity("Lname")) Then member.MergeFields.Add("LNAME", Entity("Lname"))
+            If Not IsBlank(Entity("Addr1")) AndAlso Not IsBlank(Entity("City")) AndAlso Not IsBlank(Entity("State")) AndAlso Not IsBlank(Entity("Zip")) Then
+                Dim address As New Dictionary(Of String, Object)
+                If Not IsBlank(Entity("Addr1")) Then address.Add("addr1", Entity("Addr1"))
+                If Not IsBlank(Entity("Addr2")) Then address.Add("addr2", Entity("Addr2"))
+                If Not IsBlank(Entity("City")) Then address.Add("city", Entity("City"))
+                If Not IsBlank(Entity("State")) Then address.Add("state", Entity("State"))
+                If Not IsBlank(Entity("Zip")) Then address.Add("zip", Entity("Zip"))
+                If Not IsBlank(Entity("Country")) Then address.Add("country", Entity("Country"))
+                member.MergeFields.Add("ADDRESS", address)
+            End If
+
+            Dim transmitResult = mailChimp.Members.AddOrUpdateAsync(ListID, member).Result
+            Return transmitResult
+
+        Catch ex As Exception
+            listaErrores.AppendLine(ex.ToString)
+            Return Nothing
+        End Try
+
+    End Function
+
+    Public Shared Function PerContact_Create(Entity As EntityObject, ListId As String, Ret As ProcessHelper) As Boolean
+
+        Dim ApiKey As String = ""
+        Dim listaErrores As New StringBuilder()
+        Dim errorMsg = ""
+        Dim dm As DataManager = Nothing
+        Dim cdm As DataManager = Nothing
+
+        Try
+            cdm = New DataManager("ConfConnectionString")
+            dm = New DataManager("DataConnectionString")
+
+            ApiKey = GetMailChimpApiKey(cdm)
+            If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then
+                Throw New ArgumentException(errorMsg)
+            End If
+
+            Dim member = NewMailChimpContact(Entity, ListId, ApiKey, listaErrores)
+
+            'Si NewSubscriber devuelve un member actualizamos el estado
+            If member IsNot Nothing Then
+                Entity("IsUpload") = 1
+                Entity("Status") = member.Status
+                If Entity.IsNew Then
+                    If Not Entity.Insert() Then
+                        Ret.Success = False
+                        Ret.LastException = Entity.LastException
+                        Return False
+                    End If
+                Else
+                    If Not Entity.Update() Then
+                        Ret.Success = False
+                        Ret.LastException = Entity.LastException
+                        Return False
+                    End If
+                End If
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.LastException = ex
+            Return False
+        Finally
+            If dm IsNot Nothing Then
+                dm.Close()
+            End If
+
+            If cdm IsNot Nothing Then
+                cdm.Close()
+            End If
+        End Try
+    End Function
+
+    Public Shared Function PerContact_Delete(Entity As EntityObject, ListID As String, ByRef Ret As ProcessHelper) As Boolean
+
+        Dim ApiKey As String = ""
+        Dim listaErrores As New StringBuilder()
+        Dim errorMsg = ""
+        Dim dm As DataManager = Nothing
+        Dim cdm As DataManager = Nothing
+
+        Try
+            cdm = New DataManager("ConfConnectionString")
+            dm = New DataManager("DataConnectionString")
+
+            ApiKey = GetMailChimpApiKey(cdm)
+            If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then
+                Throw New ArgumentException(errorMsg)
+            End If
+
+            Dim mailChimp = New MailChimpManager(ApiKey)
+            mailChimp.Members.DeleteAsync(ListID, Entity("EmailAddress")).Wait()
+
+            If Not Entity.Delete() Then
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        Finally
+            If dm IsNot Nothing Then
+                dm.Close()
+            End If
+
+            If cdm IsNot Nothing Then
+                cdm.Close()
+            End If
+        End Try
+    End Function
+
+End Class
+```
+
+```vbnet { #codemodal_create_campaign }
+Imports FLEXYGO.Data
+Imports FLEXYGO.Exceptions
+Imports FLEXYGO.Objects
+Imports FLEXYGO.Processing.ProcessManager
+Imports FLEXYGO.Utilities.General.Util
+Imports FLEXYGO.Localization
+Imports System.Text
+Imports FLEXYGO.Web
+Imports FLEXYGO.Objects.Settings
+Imports FLEXYGO.Utilities.General
+Imports FLEXYGO.Utilities.SQL.SQLUtilities
+Imports System.Text.RegularExpressions
+Imports MailChimp.Net
+Imports MailChimp.Net.Models
+Imports MailChimp.Net.Core
+Imports DocumentFormat.OpenXml.Bibliography
+
+Public Class MailChimpCustomProcessCampaign
+
+    Public Shared Function PerCampaign_Create(Entity As EntityObject, SegmentOptions As Object, Ret As ProcessHelper) As Boolean
+
+        Dim ApiKey As String = ""
+        Dim listaErrores As New StringBuilder()
+        Dim errorMsg = ""
+        Dim dm As DataManager = Nothing
+        Dim cdm As DataManager = Nothing
+
+        Try
+            cdm = New DataManager("ConfConnectionString")
+            dm = New DataManager("DataConnectionString")
+
+            ApiKey = MailChimpCustomProcess.GetMailChimpApiKey(cdm)
+            If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then
+                Throw New ArgumentException(errorMsg)
+            End If
+
+            Dim mailChimp = New MailChimpManager(ApiKey)
+
+            'Creamos el objeto campaña.
+            Dim camp = New Campaign() With {
+                .Type = Entity("Type"),
+                .Settings = New Setting() With {.Title = Entity("Title")},
+                .Recipients = New Recipient() With {.ListId = Entity("ListId")}
+            }
+
+            If Not Entity.IsNew Then camp.Id = Entity("Id")
+
+            'Añadimos los parámetros que pueden ser nulos.
+            If Not IsBlank(Entity("SubjectLine")) Then camp.Settings.SubjectLine = Entity("SubjectLine")
+            If Not IsBlank(Entity("PreviewText")) Then camp.Settings.PreviewText = Entity("PreviewText")
+            If Not IsBlank(Entity("FromName")) Then camp.Settings.FromName = Entity("FromName")
+            If Not IsBlank(Entity("ReplyTo")) Then camp.Settings.ReplyTo = Entity("ReplyTo")
+            If Not IsBlank(Entity("FolderId")) Then camp.Settings.FolderId = Entity("FolderId")
+            If Not IsBlank(Entity("TemplateId")) Then camp.Settings.TemplateId = Entity("TemplateId")
+
+            If Not IsBlank(SegmentOptions) Then
+                camp.Recipients.SegmentOptions = SegmentOptions
+                Entity("Segmented") = 1
+            End If
+
+            Dim transmitResult = mailChimp.Campaigns.AddOrUpdateAsync(camp).Result
+
+            'Guardamos la campaña en nuestra base de datos
+            Entity("Id") = transmitResult.Id
+            Entity("WebId") = transmitResult.WebId
+            Entity("CreateTime") = DateTime.Now
+            Entity("Status") = IIf(IsBlank(transmitResult.Status), DBNull.Value, transmitResult.Status)
+            Entity("SendTime") = IIf(IsBlank(transmitResult.SendTime), DBNull.Value, transmitResult.SendTime)
+            Entity("Synchronized") = 1
+
+            If Entity.IsNew Then
+                If Not Entity.InsertProcess(Entity.TableName, Settings.ObjectSettings.eUpdateType.Standard, Nothing) Then
+                    Ret.Success = False
+                    Ret.LastException = Entity.LastException
+                    Return False
+                End If
+            ElseIf Not Entity.UpdateProcess(Settings.ObjectSettings.eUpdateType.Standard, Nothing) Then
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.LastException = ex
+            Return False
+        Finally
+            If dm IsNot Nothing Then
+                dm.Close()
+            End If
+
+            If cdm IsNot Nothing Then
+                cdm.Close()
+            End If
+        End Try
+    End Function
+
+    Public Shared Function PerCampaignLaunchAction(Entity As EntityObject, ByRef Ret As ProcessHelper, Action As String, Optional Email As Object = Nothing, Optional Type As Object = Nothing) As Boolean
+        Dim ApiKey As String = ""
+        Dim listaErrores As New StringBuilder()
+        Dim errorMsg = ""
+        Dim dm As DataManager = Nothing
+        Dim cdm As DataManager = Nothing
+
+        Try
+            cdm = New DataManager("ConfConnectionString")
+            dm = New DataManager("DataConnectionString")
+
+            ApiKey = MailChimpCustomProcess.GetMailChimpApiKey(cdm)
+            If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then
+                Throw New ArgumentException(errorMsg)
+            End If
+
+            Dim mailChimp = New MailChimpManager(ApiKey)
+
+            Dim campaign = mailChimp.Campaigns.GetAsync(Entity("Id")).Result
+
+            If IsBlank(campaign) Then
+                Ret.Success = False
+                Ret.LastException = New Exception("This campaign does not exist in MailChimp")
+                Return False
+            End If
+
+            Select Case Action
+                Case 1
+                    'Enviar campaña
+                    mailChimp.Campaigns.SendAsync(campaign.Id).Wait()
+                    Return True
+                Case 2
+                    'Cancelar envío de campaña
+                    mailChimp.Campaigns.CancelAsync(campaign.Id).Wait()
+                    Return True
+                Case 3
+                    'Replicar campaña
+                    mailChimp.Campaigns.ReplicateCampaignAsync(campaign.Id).Wait()
+                    Return True
+                Case 4
+                    'Programar campaña
+                    mailChimp.Campaigns.ScheduleAsync(campaign.Id).Wait()
+                    Return True
+                Case 5
+                    'Desprogramar campaña
+                    mailChimp.Campaigns.UnscheduleAsync(campaign.Id).Wait()
+                    Return True
+                Case 6
+                    'Testear campaña
+                    Dim campTest = New CampaignTestRequest With {.Emails = {Email}, .EmailType = Type}
+                    mailChimp.Campaigns.TestAsync(campaign.Id, campTest).Wait()
+                    Return True
+                Case Else
+                    Ret.Success = False
+                    Ret.WarningMessage = "Action selected does not exist"
+                    Return False
+            End Select
+
+            'Actualizamos el estado de la campaña
+            Entity("Status") = campaign.Status
+            If Not Entity.UpdateProcess(Settings.ObjectSettings.eUpdateType.Standard, Nothing) Then
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+
+    End Function
+
+    Public Shared Function PerCampaign_Delete(Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
+
+        Dim ApiKey As String = ""
+        Dim listaErrores As New StringBuilder()
+        Dim errorMsg = ""
+        Dim dm As DataManager = Nothing
+        Dim cdm As DataManager = Nothing
+
+        Try
+            cdm = New DataManager("ConfConnectionString")
+            dm = New DataManager("DataConnectionString")
+
+            ApiKey = MailChimpCustomProcess.GetMailChimpApiKey(cdm)
+            If Not FLEXYGO.FlxMailChimp.TestMailChimpApi(ApiKey, errorMsg) Then
+                Throw New ArgumentException(errorMsg)
+            End If
+
+            Dim mailChimp = New MailChimpManager(ApiKey)
+
+            mailChimp.Campaigns.DeleteAsync(Entity("Id")).Wait()
+
+            If Not Entity.Delete() Then
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+            Ret.Success = True
+            Return True
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        Finally
+            If dm IsNot Nothing Then
+                dm.Close()
+            End If
+
+            If cdm IsNot Nothing Then
+                cdm.Close()
+            End If
+        End Try
+    End Function
+
+End Class
+```

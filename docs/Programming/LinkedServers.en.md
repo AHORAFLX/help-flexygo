@@ -32,4 +32,4 @@ ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
 
 ## Linked server
 
-If databases are hosted in different SQL instances you can set linked server name related to one SQL server for allowing **flexygo** include database server prefix. Add linked server
+If databases are hosted in different SQL instances you can set linked server name related to one SQL server for allowing **flexygo** include database server prefix. <flx-navbutton class="link" type="openEditTable" tablename="DBConnectionStrings_LinkedServers" objectname="sysAbhSigns_Objects_Config" tabledescrip="Linked Servers">Add linked server</flx-navbutton>

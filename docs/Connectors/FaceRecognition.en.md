@@ -21,7 +21,7 @@ You have to take into account that face recognition requires a 64 bits server.
     
     ![Face Recognition example](/assets/images/Recognition/Recognition_3.png "Image 2. Face Recognition example")
 
-4.  Then you can test it using Find Faces sample process or code your own function:
+4.  Then you can test it using Find Faces sample process or code your <fh-codemodal class="link" modal_id="codemodal_own_code" modal_title="Insert object function">own function</fh-codemodal>:
     
     ![Face Recognition example](/assets/images/Recognition/Recognition_6.png "Image 4. Face Recognition example")
 
@@ -29,6 +29,77 @@ You have to take into account that face recognition requires a 64 bits server.
 
     ![Face Recognition example](/assets/images/Recognition/Recognition_5.png "Image 6. Face Recognition example")
 
-#### Insert object function
+```js { #codemodal_own_code }
+function showFaces(file, objectname, tolerance, e): {
 
-  function showFaces(file, objectname, tolerance, e): {        let p = new flexygo.Process('FindFaces');      let params = \[\];      params.push({          Key: 'File',          Value: file      });      params.push({          Key: 'ObjectName',          Value: objectname      });      params.push({          Key: 'Tolerance',          Value: tolerance      });      p.run(params, (r) => {          let histObj = new flexygo.nav.FlexygoHistory();          histObj.targetid = 'popup';          let modal = flexygo.targets.createContainer(histObj, true, e);          modal.empty();          modal.closest('.ui-dialog').find('.ui-dialog-title').html(r.Data.Faces.length + ' faces found.');              let canvas = $('<canvas></canvas>')\[0\];            let context = canvas.getContext('2d');            var img = new Image;          img.onload = function() {              canvas.width = img.width;              canvas.height = img.height;              context.drawImage(img, 0, 0);                let colorIndex = 0;              r.Data.Faces.forEach(function(face) {                    if (colorIndex >= flexygo.utils.colors.length) {                      colorIndex = 0                  }                    context.strokeStyle = flexygo.utils.hexToRgbA(flexygo.utils.colors\[colorIndex\], '1');                  context.lineWidth = 3;                  context.strokeRect(face.Left, face.Top, face.Right - face.Left, face.Bottom - face.Top)                  context.fillStyle = flexygo.utils.hexToRgbA(flexygo.utils.colors\[colorIndex\], '0.6');                  context.fillRect(face.Left, face.Top, face.Right - face.Left, face.Bottom - face.Top);                    let faceItm = $('<div style="float:left;margin-right:10px;"/>');                  faceItm.css('border', 'solid 2px ' + flexygo.utils.hexToRgbA(flexygo.utils.colors\[colorIndex\], '1'));                  faceItm.css('background-color', flexygo.utils.hexToRgbA(flexygo.utils.colors\[colorIndex\], '0.6'));                  faceItm.data(face);                  if (face.MostPosibleObject) {                      faceItm.html(face.MostPosibleObject.ObjectName + ' ' + face.MostPosibleObject.ObjectId + '<br/> Dist: ' + face.MostPosibleObject.Distance)                  } else {                      faceItm.html('Unknown');                  }                  modal.append(faceItm);                    colorIndex += 1                });                let imgH = $('<img style="width:100%;margin-top:10px"/>');              imgH.attr('src', canvas.toDataURL())              modal.append(imgH);            };          img.src = flexygo.utils.resolveUrl(file);        });    }
+    let p = new flexygo.Process('FindFaces');
+    let params = [];
+    params.push({
+        Key: 'File',
+        Value: file
+    });
+    params.push({
+        Key: 'ObjectName',
+        Value: objectname
+    });
+    params.push({
+        Key: 'Tolerance',
+        Value: tolerance
+    });
+    p.run(params, (r) => {
+        let histObj = new flexygo.nav.FlexygoHistory();
+        histObj.targetid = 'popup';
+        let modal = flexygo.targets.createContainer(histObj, true, e);
+        modal.empty();
+        modal.closest('.ui-dialog').find('.ui-dialog-title').html(r.Data.Faces.length + ' faces found.');
+
+
+        let canvas = $('<canvas></canvas>')[0];
+
+        let context = canvas.getContext('2d');
+
+        var img = new Image;
+        img.onload = function() {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            context.drawImage(img, 0, 0);
+
+            let colorIndex = 0;
+            r.Data.Faces.forEach(function(face) {
+
+                if (colorIndex >= flexygo.utils.colors.length) {
+                    colorIndex = 0
+                }
+
+                context.strokeStyle = flexygo.utils.hexToRgbA(flexygo.utils.colors[colorIndex], '1');
+                context.lineWidth = 3;
+                context.strokeRect(face.Left, face.Top, face.Right - face.Left, face.Bottom - face.Top)
+                context.fillStyle = flexygo.utils.hexToRgbA(flexygo.utils.colors[colorIndex], '0.6');
+                context.fillRect(face.Left, face.Top, face.Right - face.Left, face.Bottom - face.Top);
+
+                let faceItm = $('<div style="float:left;margin-right:10px;"/>');
+                faceItm.css('border', 'solid 2px ' + flexygo.utils.hexToRgbA(flexygo.utils.colors[colorIndex], '1'));
+                faceItm.css('background-color', flexygo.utils.hexToRgbA(flexygo.utils.colors[colorIndex], '0.6'));
+                faceItm.data(face);
+                if (face.MostPosibleObject) {
+                    faceItm.html(face.MostPosibleObject.ObjectName + ' ' + face.MostPosibleObject.ObjectId + '<br/> Dist: ' + face.MostPosibleObject.Distance)
+                } else {
+                    faceItm.html('Unknown');
+                }
+                modal.append(faceItm);
+
+                colorIndex += 1
+
+            });
+
+            let imgH = $('<img style="width:100%;margin-top:10px"/>');
+            imgH.attr('src', canvas.toDataURL())
+            modal.append(imgH);
+
+        };
+        img.src = flexygo.utils.resolveUrl(file);
+
+    });
+
+}
+```

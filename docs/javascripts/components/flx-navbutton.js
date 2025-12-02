@@ -24,6 +24,8 @@ class FlxNavButton extends HTMLElement {
         navigateFun: navigate_fun,
         objectname: this.getAttribute('objectname'),
         objectwhere: this.getAttribute('objectwhere'),
+        tablename: this.getAttribute('tablename'),
+        tabledescrip: this.getAttribute('tabledescrip'),
         defaults: this.getAttribute('defaults'),
         pagetypeid: this.getAttribute('pagetypeid'),
         filtersValues:null,
