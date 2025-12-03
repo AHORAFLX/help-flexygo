@@ -4,6 +4,10 @@ Context variables are the variables which can have different values in different
 
 Whatch the following video about context variables.
 
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/0MMp44TEmg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
 ## Default Tokens
 
 All tokens must be referenced with curly brackets **{{** / **}}**. **flexygo** includes the following variables by default:

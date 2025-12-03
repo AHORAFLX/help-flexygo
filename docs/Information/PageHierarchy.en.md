@@ -4,6 +4,10 @@
 
 ## Layouts
 
+![Layouts](/assets/images/Information/Layouts.png "Layouts")
+
+Click <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="SysLayouts">here</flx-navbutton> to go to layouts list.
+
 Watch the following video on our YouTube channel about Layouts.
 
 <div class="video-wrapper">
@@ -13,6 +17,21 @@ Watch the following video on our YouTube channel about Layouts.
 ## Modules
 
 Each module is a web component that can have different types of containers. The module also can have other web components inside. Module's properties allow us to select the toolbar we want or different page types when required. We can see what a page would look like in the following example:
+
+<div id="module-table-node1">Page
+    <div id="module-table-node2">Layout
+        <div id="module-table-node3">
+            <div id="module-table-node6">Container</div>
+            <div id="module-table-node7">Module
+                <div id="module-table-node8">Toolbar
+                    <div id="module-table-node9">Pager</div>
+                </div>
+            </div>
+        </div>
+        <div id="module-table-node5"></div>
+        <div id="module-table-node4"></div>
+    </div>
+</div>
 
 ## Module Containers
 

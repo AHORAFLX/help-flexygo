@@ -188,3 +188,65 @@ dialog {
     padding: 10px 12px 10px 18px;
     border-radius: 16px 0 0 16px;
 }
+
+/* Module Example Table */
+#module-table-node1 {
+    background-color: #ffffff;
+    height: 550px;
+    padding: 0px;
+}
+
+#module-table-node2 {
+    background-color: #A0A0A0;
+    height: 510px;
+    padding: 10px;
+}
+
+#module-table-node3 {
+    background-color: #A0A0A0;
+    height: 216px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: dashed 1px #FFF;
+}
+
+#module-table-node4 {
+    float: left;
+    width: 49%;
+    background-color: #A0A0A0;
+    height: 244px;
+    border: dashed 1px #FFF;
+}
+
+#module-table-node5 {
+    float: right;
+    width: 49%;
+    background-color: #A0A0A0;
+    height: 244px;
+    border: dashed 1px #FFF;
+}
+
+#module-table-node6 {
+    background-color: #000000;
+    color: #fff;
+    height: 32px;
+}
+
+#module-table-node7 {
+    background-color: #FFFFFF;
+    height: 166px;
+    border: solid 1px #000;
+}
+
+#module-table-node8 {
+    background-color: #E0E0E0;
+    height: 40px;
+    padding: 4px;
+}
+
+#module-table-node9 {
+    background-color: #d0dada;
+    height: 32px;
+    width: 180px;
+    float: right;
+}

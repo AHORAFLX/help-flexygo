@@ -175,7 +175,7 @@ Instead of onclick event with:
 flexygo.nav.openHelpId('syshelp-navbutton','popup',false,$(this));
 ```
 
-## OpenProcessParams and OpenProcessParamsPage
+## OpenProcessParams
 
 To open default process parameter page use:
 
@@ -190,6 +190,8 @@ Instead of onclick event with:
 ```js
 flexygo.nav.openProcessParams('testprocess', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
 ```
+
+## OpenProcessParamsPage
 
 To open process specific parameter page use:
 
