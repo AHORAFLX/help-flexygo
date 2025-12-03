@@ -114,7 +114,7 @@ function copyToClipboard(copy_element) {
     navigator.clipboard.writeText(text).then(() => {
         const copy_notification = document.createElement('div');
         copy_notification.className = 'small-message';
-        copy_notification.innerText = 'Copied to clipboard!';
+        copy_notification.innerText = translations[getLanguage()]['copied'];
 
         //We append it and animate its entrance
         document.body.appendChild(copy_notification);
@@ -131,4 +131,20 @@ function copyToClipboard(copy_element) {
             }, 300);
         }, 2000);
     }); 
+}
+
+function getLanguage() {
+    if (window.location.href.includes('/es/'))
+        return 'es';
+
+    return 'en';
+}
+
+const translations = {
+    'en': {
+        'copied': 'Copied to clipboard!',  
+    },
+    'es': {
+        'copied': '¡Copiado en el portapapeles!',
+    }
 }
