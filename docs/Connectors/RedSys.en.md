@@ -35,7 +35,7 @@ You can either use the standard payment process and link it to an object.
 
 ![](/assets/images/RedSys/RedSys_6.png "Image 4. RedSys configuration")
 
-Also you can generate a new DLL process and call the standard payment process (<span class="link" onclick="copyToClipboard()">FLEXYGO.PaymentsProcess.PayRequest</span>). The process receives the object as a parameter and optionally a quantity field. If the quantity field is not specified, the price will be obtained from the field informed in the relationship of the object with RedSys.
+Also you can generate a new DLL process and call the standard payment process (<span class="link" onclick="copyToClipboard(this)">FLEXYGO.PaymentsProcess.PayRequest</span>). The process receives the object as a parameter and optionally a quantity field. If the quantity field is not specified, the price will be obtained from the field informed in the relationship of the object with RedSys.
 
 ## Log
 

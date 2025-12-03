@@ -25,7 +25,8 @@ Inform the base URL of your app + /Webhooks/OfficeToken.aspx as your redirect UR
 ### Deprecated Option
 
 (This option was deprecated by Microsoft).
-Take profit of the already registered **flexygo** app and its configuration. Use flexygo app in Azure.
+
+~~Take profit of the already registered flexygo app and its configuration. Use flexygo app in Azure.~~
 
 ## Retrieve contacts example
 

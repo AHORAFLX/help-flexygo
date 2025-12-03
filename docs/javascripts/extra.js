@@ -108,32 +108,27 @@ function _nav(url) {
     navigation_dialog.close();
 }
 
-function copyToClipboard(text) {
+function copyToClipboard(copy_element) {
+    const text = copy_element.innerText || copy_element.textContent;
+
     navigator.clipboard.writeText(text).then(() => {
         const copy_notification = document.createElement('div');
-        copy_notification.className = 'copy-notification';
-        copy_notification.innerText = 'Copied';
-        copy_notification.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: ${colors[type] || colors.success};
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            z-index: 10000;
-            font-family: system-ui, sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateX(100px);
-            opacity: 0;
-        `;
+        copy_notification.className = 'small-message';
+        copy_notification.innerText = 'Copied to clipboard!';
 
+        //We append it and animate its entrance
         document.body.appendChild(copy_notification);
+        copy_notification.style.display = 'block';
+        copy_notification.style.right = `-${copy_notification.clientWidth}px`;
+        copy_notification.style.transition = "right .3s cubic-bezier(0, 0, 0.18, 0.92)"; //The transition is set after properly adjustin right position so it doesn't animate from 100% to its -width
+        copy_notification.style.right = "0";
+
         setTimeout(() => {
-            document.body.removeChild(copy_notification);
-        }, 3000);
+            copy_notification.style.right = `-${copy_notification.clientWidth}px`;
+
+            setTimeout(() => {
+                document.body.removeChild(copy_notification);
+            }, 300);
+        }, 2000);
     }); 
 }
