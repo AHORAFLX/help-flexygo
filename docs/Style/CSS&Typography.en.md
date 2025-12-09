@@ -256,29 +256,29 @@ For quoting blocks of content from another source within your document. Wrap **<
 
 | Class | Description | Image |
 | --- | --- | --- |
-| **.right** | Move the item to the right |     |
-| **.left** | Move the item to the right position. |
-| **.clear-both**, **.clear** | The box on which it is applied lowers until its upper edge is below the lower edge of any element floating left or right. |     |
-| **.docs-section** | Apply a lower margin on the 60px element. |     |
-| **.nopadding** | Removes margins from the element to the outside and from the element to the inside. |     |
-| **.padding-0**  <br> **.padding-xs**  <br> **.padding-s**  <br> **.padding-m**  <br> **.padding-l**  <br> **.padding-left-0/xs/s/m/l**  <br> **.padding-right-0/xs/s/m/l**  <br>.**padding-top-0/xs/s/m/l**  <br>**.padding-bottom-0/xs/s/m/l** | The "padding-x" classes apply a space on all four sides of the element. Padding-0 apply 0px and Padding-l apply 15px.<br><br>The "padding-left-x" classes apply a space and size by the side indicated. Padding-left-0 apply 0 pixel to left space and Padding-top-l apply 15 pixel to top space. |
-| **.margin-0**  <br> **.margin-xs**  <br> **.margin-s**  <br> **.margin-m**  <br> **.margin-l**  <br> **.margin-left-0/xs/s/m/l**  <br> **.margin-right-0/xs/s/m/l**  <br>.**margin-top-0/xs/s/m/l**  <br> **.margin-bottom-0/xs/s/m/l** | The "margin-x" classes apply a space on all four sides of the element. margin-0 apply 0px and margin-l apply 15px.<br><br>The "margin-left-x" classes apply a space and size by the side indicated. margin-left-0 apply 0 pixel to left space and margin-top-l apply 15 pixel to top space. |
-| **.last-module-margin** | Add a margin of 100 pixels below the module to which this class is applied. |     |
-| **.inline** | Causes an element to generate one or more inline boxes. |     |
-| **.block** | Transforms an element into a block element, so they always start on a new line and always occupy all available space on the line, even if its contents do not occupy the entire site. |
-| **.inline-block** | It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property. However, the inline-block value of the display property makes this even easier.<br><br>Inline-block elements are like inline elements but they can have a width and a height. |
-| **.hidden**  <br> **.hidden-s**  <br> **.hidden-m**  <br> **.hidden-l** | Is commonly used to hide and show elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "hidden-s" class will hide the element when the screen size is less than 728 pixels. With the other two classes it's the same depending on the screen size (m or l). |     |
+| **.right** | Move the item to the right | <fh-modal class="link" modal_id="fhmodal_right_left" modal_title="Right and left position">Example</fh-modal> |
+| **.left** | Move the item to the right position. | <fh-modal class="link" modal_id="fhmodal_right_left" modal_title="Right and left position">Example</fh-modal> |
+| **.clear-both**, **.clear** | The box on which it is applied lowers until its upper edge is below the lower edge of any element floating left or right. | <fh-modal class="link" modal_id="fhmodal_clear" modal_title="Clear and clear both">Example</fh-modal> |
+| **.docs-section** | Apply a lower margin on the 60px element. | <fh-modal class="link" modal_id="fhmodal_docs" modal_title="Docs section">Example</fh-modal>
+| **.nopadding** | Removes margins from the element to the outside and from the element to the inside. | <fh-modal class="link" modal_id="fhmodal_padding_margin" modal_title="Paddings and margins">Example</fh-modal> |
+| **.padding-0**  <br> **.padding-xs**  <br> **.padding-s**  <br> **.padding-m**  <br> **.padding-l**  <br> **.padding-left-0/xs/s/m/l**  <br> **.padding-right-0/xs/s/m/l**  <br>.**padding-top-0/xs/s/m/l**  <br>**.padding-bottom-0/xs/s/m/l** | The "padding-x" classes apply a space on all four sides of the element. Padding-0 apply 0px and Padding-l apply 15px.<br><br>The "padding-left-x" classes apply a space and size by the side indicated. Padding-left-0 apply 0 pixel to left space and Padding-top-l apply 15 pixel to top space. |  <fh-modal class="link" modal_id="fhmodal_padding_margin" modal_title="Paddings and margins">Example</fh-modal> |
+| **.margin-0**  <br> **.margin-xs**  <br> **.margin-s**  <br> **.margin-m**  <br> **.margin-l**  <br> **.margin-left-0/xs/s/m/l**  <br> **.margin-right-0/xs/s/m/l**  <br>.**margin-top-0/xs/s/m/l**  <br> **.margin-bottom-0/xs/s/m/l** | The "margin-x" classes apply a space on all four sides of the element. margin-0 apply 0px and margin-l apply 15px.<br><br>The "margin-left-x" classes apply a space and size by the side indicated. margin-left-0 apply 0 pixel to left space and margin-top-l apply 15 pixel to top space. |  <fh-modal class="link" modal_id="fhmodal_padding_margin" modal_title="Paddings and margins">Example</fh-modal> |
+| **.last-module-margin** | Add a margin of 100 pixels below the module to which this class is applied. | <fh-modal class="link" modal_id="fhmodal_last_margin" modal_title="Last module margin">Example</fh-modal> |
+| **.inline** | Causes an element to generate one or more inline boxes. | <fh-modal class="link" modal_id="fhmodal_inline_block" modal_title="Inline, block, inline-block">Example</fh-modal> |
+| **.block** | Transforms an element into a block element, so they always start on a new line and always occupy all available space on the line, even if its contents do not occupy the entire site. | <fh-modal class="link" modal_id="fhmodal_inline_block" modal_title="Inline, block, inline-block">Example</fh-modal> |
+| **.inline-block** | It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property. However, the inline-block value of the display property makes this even easier.<br><br>Inline-block elements are like inline elements but they can have a width and a height. | <fh-modal class="link" modal_id="fhmodal_inline_block" modal_title="Inline, block, inline-block">Example</fh-modal> |
+| **.hidden**  <br> **.hidden-s**  <br> **.hidden-m**  <br> **.hidden-l** | Is commonly used to hide and show elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "hidden-s" class will hide the element when the screen size is less than 728 pixels. With the other two classes it's the same depending on the screen size (m or l). | <fh-modal class="link" modal_id="fhmodal_hidden" modal_title="Hidden">Example</fh-modal> |
 | **.show**  <br> **.show-s**  <br> **.show-m**  <br> **.show-l** | Is commonly used to show and hide elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "show-s" class will hide the element when the screen size is 728 pixels or more. With the other two classes it's the same depending on the screen size (m or l). | \-  |
 | **.hidden-only-s**  <br> **.hidden-only-m**  <br> **.hidden-only-l**  <br> **.hidden-only-xl**  <br> **.show-only-s**  <br> **.show-only-m**  <br> **.show-only-l**  <br>.**show-only-xl** | This classes are usefull if you just want to hide/or show something for specific sizes.<br><br>The "hide-only-s" will hide the element only if the screen size is in the s range (from 0 to the determined database s size). With the rest it will be the same, for example "hide-only-m" will hide element in screens larger than s size but smaller than m size. | \-  |
-| **.nolist** | Doesn't display any bookmarks in an ordered or unordered list. |     |
-| **.clickable** | When the pointer is positioned above the element, it adds a cursor icon. |     |
-| **.roundBorders** | When established on modules their borders will be rounded. |     |
-| **.fullscreen** | The element occupies 100% of the space of the window. |     |
-| **.show-empty-column** | Add it to an element with bootstrap .col class to get an empty column and avoid the movement of the other columns. |     |
+| **.nolist** | Doesn't display any bookmarks in an ordered or unordered list. | <fh-modal class="link" modal_id="fhmodal_no_list" modal_title="No list">Example</fh-modal> |
+| **.clickable** | When the pointer is positioned above the element, it adds a cursor icon. | <fh-modal class="link" modal_id="fhmodal_clickable" modal_title="Clickable">Example</fh-modal> |
+| **.roundBorders** | When established on modules their borders will be rounded. | <fh-modal class="link" modal_id="fhmodal_round" modal_title="Round borders">Example</fh-modal> |
+| **.fullscreen** | The element occupies 100% of the space of the window. | <fh-modal class="link" modal_id="fhmodal_fullscreen" modal_title="Fullscreen">Example</fh-modal> |
+| **.show-empty-column** | Add it to an element with bootstrap .col class to get an empty column and avoid the movement of the other columns. | <fh-modal class="link" modal_id="fhmodal_show_empty" modal_title="Show Empty Column">Example</fh-modal> |
 | **.hover-underline** | The element underlines when pointer it's hover. | \-  |
 | **.hover-bold** | The element set bold style when pointer it's hover. | \-  |
 | **.hover-outstanding**  <br>.hover-primary  <br>.hover-success  <br>.hover-info  <br>.hover-warning  <br>.hover-danger  <br>.hover-notify  <br>.hover-tools | The element set color style when pointer it's hover. | \-  |
-| **.grid-column-separator** | Show column separator in edit grid control. |     |
+| **.grid-column-separator** | Show column separator in edit grid control. | <fh-modal class="link" modal_id="fhmodal_column_separator" modal_title="Grid Column Separator">Example</fh-modal> |
 
 ## Contextual colors
 
@@ -492,90 +492,41 @@ Flexygo has a predefined set of classes for defining flip cards backgrounds and 
 </div>
 ```
 
-*   Your items
-
-```
-<div class = "card card-notify">   <div class = "flip-card" onclick = "jQuery(this).toggleClass('flip-card-reverse');">     <div class = "flip-card-flipper">            <div class = "flip-card-front">         <div class = "admin">           <h3>Notify</h3>           <span class = "main-icon"><i class = "flx-icon flx-icon icon-chat-offline icon-5x"></i></span>         </div>         <div class = "more-info"><i class = "flx-icon icon-arrow-head-2 "></i>More Info</div>       </div>        <div class = "flip-card-back">         <div class = "admin reverse">           <div class = "child-nodes admin-back">             <ul><li><span>Your Items </span></li></ul>           </div>           <div class = "back">             <i class = "flx-icon icon-arrow-head-2 icon-rotate-180">Your Items </i>           </div>         </div>       </div>            </div>   </div> </div>
-```
-
-×
-
-#### Right and left position
-
 ![](/assets/images/Typography/rightLeft_float.jpg)
-
-×
-
-#### Clear and clear both
+{ #fhmodal_right_left }
 
 ![](/assets/images/Typography/clearBoth.jpg)
-
-×
-
-#### Docs Section
+{ #fhmodal_clear }
 
 ![](/assets/images/Typography/docSection.jpg)
-
-×
-
-#### Padding and Margin
+{ #fhmodal_docs }
 
 ![](/assets/images/Typography/padding.jpg)
-
-×
-
-#### Last Module Margin
+{ #fhmodal_padding_margin }
 
 ![](/assets/images/Typography/LastModuleMargin.jpg)
-
-×
-
-#### Inline, block, inline-block
+{ #fhmodal_last_margin }
 
 ![](/assets/images/Typography/inlineBlock.jpg)
-
-×
-
-#### Hidden
+{ #fhmodal_inline_block }
 
 ![](/assets/images/Typography/hidden.jpg)
-
-×
-
-#### No List
+{ #fhmodal_hidden }
 
 ![](/assets/images/Typography/nolist.jpg)
-
-×
-
-#### Clickable
+{ #fhmodal_no_list }
 
 ![](/assets/images/Typography/cursorPointer.jpg)
-
-×
-
-#### Round Borders
+{ #fhmodal_clickable }
 
 ![](/assets/images/Typography/cleanRounded.png)
-
-×
-
-#### Fullscreen
+{ #fhmodal_round }
 
 ![](/assets/images/Typography/fullScreen.jpg)
-
-×
-
-#### Show Empty Column
+{ #fhmodal_fullscreen }
 
 ![](/assets/images/Typography/ShowEmptyColumn.png)
-
-×
-
-#### Own classes applicable to HTML elements
-
-×
-
-#### Grid- Column Separator
+{ #fhmodal_show_empty }
 
 ![](/assets/images/Typography/ColumnSeparator.png)
+{ #fhmodal_column_separator }

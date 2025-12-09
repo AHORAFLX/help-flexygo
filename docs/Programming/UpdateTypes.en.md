@@ -30,39 +30,39 @@ For the samples we have created an object called systmpTes based on two tables c
 
 ## Dll Process
 
-<fh-codemodal class="button" modal_id="codemodal_insert_dll" modal_title="Insert object function">Insert object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_update_dll" modal_title="Update object function">Update object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_delete_dll" modal_title="Delete object function">Delete object</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_insert_dll" modal_title="Insert object function">Insert object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_dll" modal_title="Update object function">Update object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_dll" modal_title="Delete object function">Delete object</fh-modal>
 
 ## Stored procedure XML (Easy)
 
-<fh-codemodal class="button" modal_id="codemodal_insert_stored" modal_title="Insert object with easy stored procedure">Insert object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_update_stored" modal_title="Update object with easy stored procedure">Update object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_delete_stored" modal_title="Delete object with easy stored procedure">Delete object</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_insert_stored" modal_title="Insert object with easy stored procedure">Insert object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored" modal_title="Update object with easy stored procedure">Update object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored" modal_title="Delete object with easy stored procedure">Delete object</fh-modal>
 
 ## Stored procedure XML (Advanced)
 
 Use optimized Stored procedures for updating only fields that have changed
 
-<fh-codemodal class="button" modal_id="codemodal_insert_stored_advanced" modal_title="Insert object with advanced stored procedure">Insert object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_update_stored_advanced" modal_title="Update object with advanced stored procedure">Update object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_delete_stored_advanced" modal_title="Delete object with advanced stored procedure">Delete object</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_insert_stored_advanced" modal_title="Insert object with advanced stored procedure">Insert object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored_advanced" modal_title="Update object with advanced stored procedure">Update object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored_advanced" modal_title="Delete object with advanced stored procedure">Delete object</fh-modal>
 
 ## Stored procedure JSON
 
-<fh-codemodal class="button" modal_id="codemodal_insert_json" modal_title="Insert object with stored procedure JSON">Insert object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_update_json" modal_title="Update object with stored procedure JSON">Update object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_delete_json" modal_title="Delete object with stored procedure JSON">Delete object</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_insert_json" modal_title="Insert object with stored procedure JSON">Insert object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_json" modal_title="Update object with stored procedure JSON">Update object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_json" modal_title="Delete object with stored procedure JSON">Delete object</fh-modal>
 
 ## Ahora Freeware stored procedure
 
 Use only with Ahora Freeware ERP data model
 
-<fh-codemodal class="button" modal_id="codemodal_insert_stored_ahora" modal_title="Insert object with Ahora Freeware stored procedure">Insert object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_update_stored_ahora" modal_title="Update object with Ahora Freeware stored procedure">Update object</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_delete_stored_ahora" modal_title="Delete object with Ahora Freeware stored procedure">Delete object</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_insert_stored_ahora" modal_title="Insert object with Ahora Freeware stored procedure">Insert object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored_ahora" modal_title="Update object with Ahora Freeware stored procedure">Update object</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored_ahora" modal_title="Delete object with Ahora Freeware stored procedure">Delete object</fh-modal>
 
-```vbnet { #codemodal_insert_dll }
+```vbnet { #fhmodal_insert_dll }
 Imports FLEXYGO.Configuration.Tokens
 Imports FLEXYGO.Data
 Imports FLEXYGO.Exceptions
@@ -112,7 +112,7 @@ Public Class SampleDataProcesses
 End Class
 ```
 
-```vbnet { #codemodal_update_dll }
+```vbnet { #fhmodal_update_dll }
 Public Shared Function UpdateObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean
         Try
 
@@ -150,7 +150,7 @@ Public Shared Function UpdateObj(Entity As EntityObject, Ret As ProcessHelper) A
     End Function
 ```
 
-```vbnet { #codemodal_delete_dll }
+```vbnet { #fhmodal_delete_dll }
 Public Shared Function DeleteObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean
         Try
 
@@ -181,7 +181,7 @@ Public Shared Function DeleteObj(Entity As EntityObject, Ret As ProcessHelper) A
     End Function
 ```
 
-```sql { #codemodal_insert_stored }
+```sql { #fhmodal_insert_stored }
 CREATE PROCEDURE [dbo].[P_TestInsert_Stored]  
 
 	@Values as XML OUTPUT,
@@ -291,7 +291,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #codemodal_update_stored }
+```sql { #fhmodal_update_stored }
 CREATE PROCEDURE [dbo].[P_TestUpdate_Stored]  
 	@Values as XML OUTPUT,
 	@ContextVars as XML,
@@ -400,7 +400,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #codemodal_delete_stored }
+```sql { #fhmodal_delete_stored }
 CREATE PROCEDURE [dbo].[P_TestDelete_Stored]  
 
 	@Values as XML OUTPUT,
@@ -503,7 +503,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #codemodal_insert_stored_advanced }
+```sql { #fhmodal_insert_stored_advanced }
 CREATE PROCEDURE [dbo].[P_TestInsert_Stored_advanced]  
 
 	@Values as XML OUTPUT,
@@ -625,7 +625,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #codemodal_update_stored_advanced }
+```sql { #fhmodal_update_stored_advanced }
 ALTER PROCEDURE [dbo].[P_TestUpdate_Stored_Advanced]  
 	@Values as XML OUTPUT,
 	@ContextVars as XML,
@@ -790,7 +790,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #codemodal_delete_stored_advanced }
+```sql { #fhmodal_delete_stored_advanced }
 CREATE PROCEDURE [dbo].[P_TestDelete_Stored_Advanced]  
 
 	@Values as XML OUTPUT,
@@ -904,7 +904,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #codemodal_insert_stored_ahora }
+```sql { #fhmodal_insert_stored_ahora }
 CREATE PROCEDURE [dbo].[P_TestInsert_Stored]  
 	@Values as nvarchar(max) OUTPUT,
 	@RetValues as nvarchar(max) OUTPUT 	 
@@ -1088,7 +1088,7 @@ END CATCH
 GO
 ```
 
-```sql { #codemodal_update_stored_ahora }
+```sql { #fhmodal_update_stored_ahora }
 CREATE PROCEDURE [dbo].[P_TestUpdate_Stored]  
 	@Values as nvarchar(max) OUTPUT,
 	@OldValues as nvarchar(max),
@@ -1279,7 +1279,7 @@ END CATCH
 GO
 ```
 
-```sql { #codemodal_delete_stored_ahora }
+```sql { #fhmodal_delete_stored_ahora }
 CREATE PROCEDURE [dbo].[P_TestDelete_Stored]  
 	@Values as nvarchar(max) OUTPUT,
 	@RetValues as nvarchar(max) OUTPUT 	 
@@ -1442,7 +1442,7 @@ END CATCH
 GO
 ```
 
-```sql { #codemodal_insert_json }
+```sql { #fhmodal_insert_json }
 ALTER PROCEDURE [dbo].[P_Test_I]
 	@TestId int OUTPUT,
 	@Descrip nvarchar(2000) OUTPUT,
@@ -1480,7 +1480,7 @@ BEGIN
 END
 ```
 
-```sql { #codemodal_update_json }
+```sql { #fhmodal_update_json }
 CREATE PROCEDURE [dbo].[P_Test_U]
 	@TestId_A	int,
 	@Usuario nvarchar(50) OUTPUT,
@@ -1529,7 +1529,7 @@ END
 END
 ```
 
-```sql { #codemodal_delete_json }
+```sql { #fhmodal_delete_json }
 CREATE PROCEDURE [dbo].[P_Test_D]
 	@TestId int OUTPUT,
 	@Usuario nvarchar(50) OUTPUT,

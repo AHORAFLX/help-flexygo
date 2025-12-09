@@ -38,9 +38,9 @@ More than one sheet can be added as in the example, the name of the sheets follo
     
 ![Create Process](/assets/images/Imports/process.png "Image 3. Create Process")
     
-<fh-codemodal class="button" modal_id="codemodal_stored" modal_title="Stored example">Stored example</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_dll" modal_title="Dll example">Dll example</fh-codemodal>
-<fh-codemodal class="button" modal_id="codemodal_json" modal_title="Json example">Json value example</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_stored" modal_title="Stored example">Stored example</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll example">Dll example</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_json" modal_title="Json example">Json value example</fh-modal>
 
 ## Execute import
 
@@ -50,7 +50,7 @@ In the process window a button appears to download the template of the file that
 
 ![Process window](/assets/images/Imports/process_window.png "Image 4. Process window")
 
-```sql { #codemodal_stored }
+```sql { #fhmodal_stored }
 CREATE PROCEDURE [dbo].[pImportacion]
 @JSONVALUE nvarchar(max)
 as
@@ -96,7 +96,7 @@ END CATCH
 END
 ```
 
-```vbnet { #codemodal_dll }
+```vbnet { #fhmodal_dll }
 Imports System.Web.Script.Serialization
     
     Public Shared Function Importacion(Entity As EntityObject, JSONVALUE As String, Ret As ProcessHelper) As Boolean
@@ -130,7 +130,7 @@ Imports System.Web.Script.Serialization
     End Function
 ```
 
-```json { #codemodal_json }
+```json { #fhmodal_json }
 {
     "Hoja1": [
         {

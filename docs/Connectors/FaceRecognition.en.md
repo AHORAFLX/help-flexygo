@@ -21,7 +21,7 @@ You have to take into account that face recognition requires a 64 bits server.
     
     ![Face Recognition example](/assets/images/Recognition/Recognition_3.png "Image 2. Face Recognition example")
 
-4.  Then you can test it using Find Faces sample process or code your <fh-codemodal class="link" modal_id="codemodal_own_code" modal_title="Insert object function">own function</fh-codemodal>:
+4.  Then you can test it using Find Faces sample process or code your <fh-modal class="link" modal_id="fhmodal_own_code" modal_title="Insert object function">own function</fh-modal>:
     
     ![Face Recognition example](/assets/images/Recognition/Recognition_6.png "Image 4. Face Recognition example")
 
@@ -29,7 +29,7 @@ You have to take into account that face recognition requires a 64 bits server.
 
     ![Face Recognition example](/assets/images/Recognition/Recognition_5.png "Image 6. Face Recognition example")
 
-```js { #codemodal_own_code }
+```js { #fhmodal_own_code }
 function showFaces(file, objectname, tolerance, e): {
 
     let p = new flexygo.Process('FindFaces');

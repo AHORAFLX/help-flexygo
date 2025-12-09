@@ -39,7 +39,7 @@ In the following example you can get a contact collection from the default conta
 Response:
 ``` 
 
-<fh-codemodal class="button" modal_id="codemodal_office_contacts" modal_title="Office 365 Contacts">Insert, Update And Delete contact</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_office_contacts" modal_title="Office 365 Contacts">Insert, Update And Delete contact</fh-modal>
 
 ### Retrieve calendar events example
 
@@ -52,9 +52,9 @@ In the example below we will retrieve a list of calendar events from the signed-
 Response:
 ```
 
-<fh-codemodal class="button" modal_id="codemodal_office_events" modal_title="Office 365 Events">Insert, Update And Delete event</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_office_events" modal_title="Office 365 Events">Insert, Update And Delete event</fh-modal>
 
-```vbnet { #codemodal_office_contacts }
+```vbnet { #fhmodal_office_contacts }
 Imports FLEXYGO.Objects
 Imports FLEXYGO.Processing.ProcessManager
 Imports RestSharp
@@ -149,7 +149,7 @@ Namespace Samples
 End Namespace
 ```
 
-```vbnet { #codemodal_office_events }
+```vbnet { #fhmodal_office_events }
 Imports FLEXYGO.Objects
 Imports FLEXYGO.Processing.ProcessManager
 Imports RestSharp

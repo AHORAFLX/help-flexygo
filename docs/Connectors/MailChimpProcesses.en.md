@@ -8,15 +8,15 @@ Some examples of how to perform certain actions in your custom processes are the
 
 You can create contact, upload it to Mailchimp and remove it from list using the functions provided by flexygo, for example :
 
-<fh-codemodal class="button" modal_id="codemodal_create_contact" modal_title="Create Contact and Upload">Create/Upload/Remove</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_create_contact" modal_title="Create Contact and Upload">Create/Upload/Remove</fh-modal>
 
 ## Campaign
 
 You can create campaign, upload it to Mailchimp, launch it and remove it using the functions provided by flexygo, for example :
 
-<fh-codemodal class="button" modal_id="codemodal_create_campaign" modal_title="Create Campaign email">Create/Upload/Launch/Remove</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_create_campaign" modal_title="Create Campaign email">Create/Upload/Launch/Remove</fh-modal>
 
-```vbnet { #codemodal_create_contact }
+```vbnet { #fhmodal_create_contact }
 Imports FLEXYGO.Data
 Imports FLEXYGO.Exceptions
 Imports FLEXYGO.Objects
@@ -178,7 +178,7 @@ Public Class MailChimpCustomProcess
 End Class
 ```
 
-```vbnet { #codemodal_create_campaign }
+```vbnet { #fhmodal_create_campaign }
 Imports FLEXYGO.Data
 Imports FLEXYGO.Exceptions
 Imports FLEXYGO.Objects

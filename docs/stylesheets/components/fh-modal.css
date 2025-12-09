@@ -2,7 +2,7 @@
     display: none;
 }
 
-.fh-codemodal-content {
+.fh-modal-content {
     display: block;
     z-index: 10000;
     max-width: 90vw;
@@ -20,7 +20,7 @@
     }
 }
 
-.fh-codemodal-backdrop {
+.fh-modal-backdrop {
     position: fixed;
     top: 0;
     left: 0;

@@ -1,11 +1,11 @@
-class FHCodeModal extends HTMLElement {
+class FHModal extends HTMLElement {
   constructor() {
     super();
   }
 
   connectedCallback() {
     this.addEventListener("click", () => {
-      if (document.getElementsByClassName('fh-codemodal-content').length > 0) {
+      if (document.getElementsByClassName('fh-modal-content').length > 0) {
         return;
       }
 
@@ -26,10 +26,10 @@ class FHCodeModal extends HTMLElement {
     
     //We create the backdrop, the title and the content container
     const backdrop = document.createElement("div");
-    backdrop.classList.add("fh-codemodal-backdrop");
+    backdrop.classList.add("fh-modal-backdrop");
 
     const content_element = document.createElement("div");
-    content_element.classList.add("fh-codemodal-content");
+    content_element.classList.add("fh-modal-content");
 
     const title_element = document.createElement("h2");
     title_element.textContent = this.getAttribute('modal_title');
@@ -50,7 +50,7 @@ class FHCodeModal extends HTMLElement {
 
     // Close function
     function closeModal() {
-      element.classList.remove("fh-codemodal-content");
+      element.classList.remove("fh-modal-content");
 
       backdrop.remove();
       if (original_next_sibling) {
@@ -66,4 +66,4 @@ class FHCodeModal extends HTMLElement {
 
 }
 
-customElements.define("fh-codemodal", FHCodeModal);
+customElements.define("fh-modal", FHModal);

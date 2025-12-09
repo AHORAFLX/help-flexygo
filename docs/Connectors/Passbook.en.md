@@ -104,7 +104,7 @@ Once we have this we can proceed to configure the settings in Flexygo
 
 ## Example of use from DLL
 
-<fh-codemodal class="button" modal_id="codemodal_dll_example" modal_title="DLL function example">DLL example</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">DLL example</fh-modal>
 
 ## Design example and layout
 
@@ -112,7 +112,7 @@ Once we have this we can proceed to configure the settings in Flexygo
 
 ![](/assets/images/Passbook/passbook13.png "Image 11. Passbook example")
 
-```vbnet { #codemodal_dll_example }
+```vbnet { #fhmodal_dll_example }
 Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
         Try
             Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))

@@ -13,17 +13,17 @@ In some cases it's necessary to program functionalities which **flexygo** doesn'
 
 4.  See SampleCode.vb code:
 
-     <fh-codemodal class="button" modal_id="codemodal_insert" modal_title="Insert object function">Insert, Update And Delete object function</fh-codemodal>
+     <fh-modal class="button" modal_id="fhmodal_insert" modal_title="Insert object function">Insert, Update And Delete object function</fh-modal>
 
-     <fh-codemodal class="button" modal_id="codemodal_process" modal_title="Process with parameters">Object Process with parameters</fh-codemodal>
+     <fh-modal class="button" modal_id="fhmodal_process" modal_title="Process with parameters">Object Process with parameters</fh-modal>
 
-     <fh-codemodal class="button" modal_id="codemodal_process_no_params" modal_title="Process without parameters">Object Process without parameters</fh-codemodal>
+     <fh-modal class="button" modal_id="fhmodal_process_no_params" modal_title="Process without parameters">Object Process without parameters</fh-modal>
 
-     <fh-codemodal class="button" modal_id="codemodal_collection" modal_title="Collection Process with parameters">Collection Process with parameters *</fh-codemodal>
+     <fh-modal class="button" modal_id="fhmodal_collection" modal_title="Collection Process with parameters">Collection Process with parameters *</fh-modal>
 
-     <fh-codemodal class="button" modal_id="codemodal_collection_no_params" modal_title="Collection Process without parameters">Collection Process without parameters *</fh-codemodal>
+     <fh-modal class="button" modal_id="fhmodal_collection_no_params" modal_title="Collection Process without parameters">Collection Process without parameters *</fh-modal>
 
-     <fh-codemodal class="button" modal_id="codemodal_load" modal_title="Load Object/Process/Report or Change Property">Load Object or Change Property</fh-codemodal>
+     <fh-modal class="button" modal_id="fhmodal_load" modal_title="Load Object/Process/Report or Change Property">Load Object or Change Property</fh-modal>
 
      Don't forget to configure Unique Identifier in object configuration
      {: .flx-warning-card }
@@ -55,7 +55,7 @@ System.Diagnostics.Debugger.Break();
 This will open the generated C# code in Visual Studio, enabling you to debug the process.
 
 
-```vbnet { #codemodal_process }
+```vbnet { #fhmodal_process }
 ''' <summary>
     ''' Sample object process executed from object with params
     ''' </summary>
@@ -81,7 +81,7 @@ Public Shared Function SampleUserProcessWithParams(ByVal Entity As EntityObject,
         End Try
     End Function
 ```
-```vbnet { #codemodal_insert }
+```vbnet { #fhmodal_insert }
 Imports FLEXYGO.Configuration.Tokens
 Imports FLEXYGO.Data
 Imports FLEXYGO.Exceptions
@@ -195,7 +195,7 @@ End Class
         End Try
     End Function
 ```
-```vbnet { #codemodal_collection }
+```vbnet { #fhmodal_collection }
 Imports FLEXYGO.Configuration.Tokens
 Imports FLEXYGO.Data
 Imports FLEXYGO.Exceptions
@@ -236,7 +236,7 @@ Public Class SampleUserProcesses
     End Function
   End Class
 ```
-```vbnet { #codemodal_collection_no_params }
+```vbnet { #fhmodal_collection_no_params }
 ''' <summary>
     ''' Sample collection process executed from collection with params
     ''' </summary>
@@ -265,7 +265,7 @@ Public Class SampleUserProcesses
         End Try
     End Function
 ```
-```vbnet { #codemodal_load }
+```vbnet { #fhmodal_load }
 ''' <summary>
     ''' Sample load object/change property custom process.
     ''' </summary>
@@ -320,7 +320,7 @@ Public Class SampleUserProcesses
         End Try
     End Function
 ```
-```vbnet { #codemodal_process_no_params }
+```vbnet { #fhmodal_process_no_params }
 ''' <summary>
     ''' Sample object process executed from object with params
     ''' </summary>

@@ -17,7 +17,7 @@ In the following example you can get a contact collection from the default conta
 Response:
 ```
 
-<fh-codemodal class="button" modal_id="codemodal_google_contacts" modal_title="Google Contacts">Insert, Update And Delete contact<fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_google_contacts" modal_title="Google Contacts">Insert, Update And Delete contact<fh-modal>
 
 ## Retrieve calendar events example
 
@@ -30,9 +30,9 @@ In the example below we will retrieve a list of calendar events from the signed-
 Response:
 ```
 
-<fh-codemodal class="button" modal_id="codemodal_google_events" modal_title="Google Events">Insert, Update And Delete event<fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_google_events" modal_title="Google Events">Insert, Update And Delete event<fh-modal>
 
-```vbnet { #codemodal_google_contacts }
+```vbnet { #fhmodal_google_contacts }
 Imports FLEXYGO.GoogleResourceTypes
 Imports FLEXYGO.Objects
 Imports FLEXYGO.Processing.ProcessManager
@@ -202,7 +202,7 @@ Public Class SampleGoogle
 End Class
 ```
 
-```vbnet { #codemodal_google_events }
+```vbnet { #fhmodal_google_events }
 Imports FLEXYGO.GoogleResourceTypes
 Imports FLEXYGO.Objects
 Imports FLEXYGO.Processing.ProcessManager

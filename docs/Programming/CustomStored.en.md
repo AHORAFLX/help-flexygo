@@ -8,7 +8,7 @@ Whatch video about creating stored procedure in **flexygo** environment:
 
 ### Add stored procedure process into object menu
 
-1.  Code stored procedure in database. <fh-codemodal class="link" modal_id="codemodal_object" modal_title="Object Stored Procedure">Example</fh-codemodal>
+1.  Code stored procedure in database. <fh-modal class="link" modal_id="fhmodal_object" modal_title="Object Stored Procedure">Example</fh-modal>
 
 2.  Add it to **flexygo** stored procedure repository at Admin Work Area > Logic and Rules > DB Stored Procedures.
     
@@ -29,7 +29,7 @@ Whatch video about creating stored procedure in **flexygo** environment:
     
     ![Set Unique Identifier Field](/assets/images/Custom_DLL/UniqueIdentifier.png "Image 3. Set Unique Identifier Field")
     
-2.  Code stored procedure in database. Append a param with name **@sysCollectionSentence** and type **nvarchar(max)** to recive an SQL with selected items. <fh-codemodal class="link" modal_id="codemodal_collection" modal_title="Collection Stored Procedure">Example</fh-codemodal>
+2.  Code stored procedure in database. Append a param with name **@sysCollectionSentence** and type **nvarchar(max)** to recive an SQL with selected items. <fh-modal class="link" modal_id="fhmodal_collection" modal_title="Collection Stored Procedure">Example</fh-modal>
 
 3.  Add it to **flexygo** stored procedure repository at Admin Work Area > Logic and Rules > DB Stored Procedures.
     
@@ -45,12 +45,12 @@ Whatch video about creating stored procedure in **flexygo** environment:
 
 To every object or property a Custom Stored can be assigned to get executed when this one is created or changed, for that the Stored will receive an XML with every propertie value, here you have an example on how to use it:
 
-<fh-codemodal class="button" modal_id="codemodal_property_change" modal_title="Stored Procedure on object load or property changed">Example</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_property_change" modal_title="Stored Procedure on object load or property changed">Example</fh-modal>
 
-```sql { #codemodal_ }
+```sql { #fhmodal_ }
 ```
 
-```sql { #codemodal_object }
+```sql { #fhmodal_object }
 CREATE PROCEDURE [dbo].[pPers_LockClient]
 
         @IdClient int,
@@ -87,7 +87,7 @@ CREATE PROCEDURE [dbo].[pPers_LockClient]
         END CATCH
 ```
 
-```sql { #codemodal_collection }
+```sql { #fhmodal_collection }
 CREATE PROCEDURE [dbo].[pPers_LockClientBatch]
           @IdState int,
           @BlockReason varchar(250),
@@ -124,7 +124,7 @@ CREATE PROCEDURE [dbo].[pPers_LockClientBatch]
           END CATCH
 ```
 
-```sql { #codemodal_property_change }
+```sql { #fhmodal_property_change }
 --#NAME
 --		SampleLoadProcess
 --#CREATION

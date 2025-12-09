@@ -15,7 +15,7 @@ After having included the parameters you will be able to use the functions that 
 
 You can create campaigns using the functions provided by flexygo, for example :
 
-<fh-codemodal class="button" modal_id="codemodal_create_campaign_email" modal_title="Create Campaign email">Create Campaign email</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_create_campaign_email" modal_title="Create Campaign email">Create Campaign email</fh-modal>
 
 In the following example you can get all information of campaign emails. Get all
 
@@ -30,10 +30,10 @@ You can send transactional emails using the functions provided by flexygo, for e
 Transactional emails are used for all non-promotional emails: send them when a user has created an account, when they have made an order, when request a new password...
 {: .flx-warning-card }
 
-<fh-codemodal class="button" modal_id="codemodal_create_transaction_email" modal_title="Create Transactional email">Create Transactional email</fh-codemodal>
+<fh-modal class="button" modal_id="fhmodal_create_transaction_email" modal_title="Create Transactional email">Create Transactional email</fh-modal>
 
 ### Create Campaign email
-```vbnet { #codemodal_create_campaign_email }
+```vbnet { #fhmodal_create_campaign_email }
 Imports FLEXYGO.SendinBlue
 Imports FLEXYGO.SendinBlueResourcesTypes
 Imports FLEXYGO.Objects
@@ -169,7 +169,7 @@ End Class
 ```
 
 ### Create Campaign email
-```vbnet { #codemodal_create_transaction_email }
+```vbnet { #fhmodal_create_transaction_email }
 Imports FLEXYGO.SendinBlue
 Imports FLEXYGO.SendinBlueResourcesTypes
 Imports FLEXYGO.Objects
