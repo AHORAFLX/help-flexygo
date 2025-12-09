@@ -470,3 +470,32 @@ a.md-logo {
 .hidden {
   display: none;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.inline-flex-center {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collapse {
+  transition: height 0.3s ease-out, opacity 0.3s ease-out;
+  overflow: hidden;
+}
+
+.collapsed {
+  height: 0px;
+  opacity: 0;
+}
+
+[data-toggle="collapse"] {
+  transition: height 0.3s ease-out ;
+}
+
+i[data-toggle="collapse"] {
+  border-color: var(--outstanding-color);
+  border-radius: 2px; 
+}

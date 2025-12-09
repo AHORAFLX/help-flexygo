@@ -30,13 +30,17 @@ If chart type is line, there are additional attributes to modify style:
 *   **borderdash**: true|false
 *   **linefill**: true|false
 
-Line Border Dashed Chart
+### Line Border Dashed Chart
 
-Line Fill Chart
+![Line Border Dashed Chart](/assets/images/Charts/LineBorder.png "Line Border Dashed Chart"){ .unfiltered-graph }
 
-There is also a filtering option you can use just by clicking the following buttons:
+### Line Fill Chart
 
-Filter system tables Unfilter system tables  
+![Line Fill Chart](/assets/images/Charts/LineFill.png "Line Fill Chart"){ .unfiltered-graph }
+
+There is also a filtering option you can use just by clicking the following button:
+
+<span class="button" onclick="toggleGraphsFilter(this)">Filter charts</span>
   
 
 To make this filtering, we are toggling the chart labels with:
@@ -48,53 +52,69 @@ $('flx-chart').each(function(){jQuery(this)\[0\].toggleLabel('USER_TABLE',false)
 
 There are several types of charts you can use.
 
-Line Chart
-
-Bubble Chart
+### Line Chart
 
 ```html
 <flx-chart name="sample1" modulename="sysmod-chart-default" type="line" width="200" height="200"></flx-chart>
 ```
 
+![Line Chart](/assets/images/Charts/Line.png "Line Chart")
+
+### Bubble Chart
+
 ```html
 <flx-chart name="sample2" modulename="sysmod-chart-default" type="bubble" width="200" height="200"></flx-chart>
 ```
 
-Doughnut Chart
+![Bubble Chart](/assets/images/Charts/Bubble.png "Bubble Chart")
 
-Radar chart
+### Doughnut Chart
 
 ```html
 <flx-chart name="sample3" modulename="sysmod-chart-default" type="doughnut" width="200" height="200"></flx-chart>
 ```
 
+![Doughnut Chart](/assets/images/Charts/Doughnut.png "Doughnut Chart")
+
+### Radar chart
+
 ```html
 <flx-chart name="sample4" modulename="sysmod-chart-default" type="radar" width="200" height="200"></flx-chart>
 ```
 
-PolarArea chart
+![Radar Chart](/assets/images/Charts/Radar.png "Radar Chart")
 
-Bar chart
+### PolarArea chart
 
 ```html
 <flx-chart name="sample5" modulename="sysmod-chart-default" type="polarArea" width="200" height="200"></flx-chart>
 ```
 
+![Polar area Chart](/assets/images/Charts/PolarArea.png "Polar area Chart")
+
+### Bar chart
+
 ```html
 <flx-chart name="sample6" modulename="sysmod-chart-default" type="bar" width="200" height="200"></flx-chart>
 ```
 
-Pie chart
+![Bar Chart](/assets/images/Charts/Bar.png "Bar Chart")
 
-Mixed chart
+### Pie chart
 
 ```html
 <flx-chart name="sample7" modulename="sysmod-chart-default" type="pie" width="200" height="200"></flx-chart>
 ```
 
+![Pie Chart](/assets/images/Charts/Pie.png "Pie Chart")
+
+### Mixed chart
+
 ```html
 <flx-chart name="sample8" modulename="sysmod-chart-default-mixed" type="mixed" width="200" height="200"></flx-chart>
 ```
+
+![Mixed Chart](/assets/images/Charts/MixedChart.png "Mixed Chart")
 
 ## Chart settings
 

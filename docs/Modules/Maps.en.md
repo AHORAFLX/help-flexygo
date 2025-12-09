@@ -19,7 +19,7 @@ Or you can add directly the flx-map web component.
 </flx-map> 
 ```
 
-Google Map
+![Standard map](/assets/images/Maps/Main.png "Standard map")
 
 ## Module Options
 
@@ -34,7 +34,7 @@ SELECT '60' AS lat, '20' AS lng, 'Noruega' AS address, 'Titulo' AS title, 'Conte
 
 ## Marker Cluster Example
 
-Marker Cluster
+![Marker cluster map](/assets/images/Maps/Cluster.png "Marker cluster map")
 
 ## Routes
 
@@ -49,6 +49,8 @@ If you want to add information on click to one of the points of the route you ne
     <marker lat="39.503330" lng="-0.344072" id="4" title="Ahora Freeware"></marker>
 </flx-map>
 ```
+
+![Routes map](/assets/images/Maps/Routes.png "Routes map")
 
 ### Customizing route styles
 
@@ -69,6 +71,9 @@ Routes can be customized using this propperties:
     <marker lat="39.503330" lng="-0.344072" id="4" title="Ahora Freeware"></marker>
 </flx-map>
 ```
+
+![Routes styled red arrows map](/assets/images/Maps/RouteStyledRed.png "Routes styled red arrows map")
+
 ```html
 <flx-map cluster="false" width="auto" height="400" route="true" arrow="true" dotted="false" linecolor="rgb(114,137,218)" linewidht="5">
     <marker lat="39.501294" lng="-0.343337" id="1" title="Ahora Freeware">Content</marker>
@@ -77,6 +82,8 @@ Routes can be customized using this propperties:
     <marker lat="39.503330" lng="-0.344072" id="4" title="Ahora Freeware"></marker>
 </flx-map>
 ```
+
+![Routes styled blue arrows map](/assets/images/Maps/RouteStyledBlue.png "Routes styled blue arrows map")
 
 ### Multiple routes in one map
 
@@ -97,6 +104,8 @@ With the parameter **group** you will be able to divide markers in different rou
 </flx-map>
 ```
 
+![Multiple routes map](/assets/images/Maps/MultipleRoutes.png "Multiple routes map")
+
 ## Polygons in google maps
 
 With the parameter **coords** you will be able to add markers with polygons instead a point, if coords, lat and lng parameter is defined, coords has priority.You can see it working in this example.
@@ -109,6 +118,8 @@ With the parameter **coords** you will be able to add markers with polygons inst
 </flx-map>
 ```
 
+![Polygons map](/assets/images/Maps/Polygons.png "Polygons map")
+
 ## Circles in google maps
 
 With the parameter **radius** and **radiuscolor** you will be able to add markers with circles and a marker on the center.You can see it working in this example.
@@ -119,33 +130,29 @@ With the parameter **radius** and **radiuscolor** you will be able to add marker
 </flx-map>
 ```
 
+![Circles map](/assets/images/Maps/Circles.png "Circles map")
+
 ## Custom Skins
 
 Map on default will use light or dark skin depending on users mode. But with the color property you can set a theme that will stay the same for everyone.
 
-Light
+### Light
+![Light map](/assets/images/Maps/Light.png "Light map")
 
-Content
+### Dark
+![Dark map](/assets/images/Maps/Dark.png "Dark map")
 
-Dark
+### Retro
+![Retro map](/assets/images/Maps/Retro.png "Retro map")
 
-Content
+### Silver
+![Silver map](/assets/images/Maps/Silver.png "Silver map")
 
-Retro
+### Night
+![Night map](/assets/images/Maps/Night.png "Night map")
 
-Content
-
-Silver
-
-Content
-
-Night
-
-Content
-
-Aubergine
-
-Content
+### Aubergine
+![Aubergine map](/assets/images/Maps/Aubergine.png "Aubergine map")
 
 Watch the following videos on our YouTube channel related to Maps Module.
 <div class="video-wrapper">

@@ -108,9 +108,7 @@ function _nav(url) {
     navigation_dialog.close();
 }
 
-function copyToClipboard(copy_element) {
-    const text = copy_element.innerText || copy_element.textContent;
-
+function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         const copy_notification = document.createElement('div');
         copy_notification.className = 'small-message';
@@ -140,11 +138,47 @@ function getLanguage() {
     return 'en';
 }
 
+function toggleGraphsFilter(button) {
+    const graphs = document.querySelectorAll('.filtered-graph, .unfiltered-graph');
+
+    if (graphs[0].classList.contains('filtered-graph')) {
+        graphs.forEach(graph => {
+            graph.src = graph.src.replace('_filtered.png', '.png');
+
+            graph.classList.remove('filtered-graph');
+            graph.classList.add('unfiltered-graph');
+
+            button.innerText = translations[getLanguage()]['filter_charts'];
+        });
+
+        return;
+    }
+
+    graphs.forEach(graph => {
+        graph.src = graph.src.replace('.png', '_filtered.png');
+
+        graph.classList.remove('unfiltered-graph');
+        graph.classList.add('filtered-graph');
+
+        button.innerText = translations[getLanguage()]['unfilter_charts'];
+    });
+}
+
+function toggleCollapsable(element) {
+    const collapsable_element = document.querySelector(element.dataset.target);
+    collapsable_element.classList.toggle('collapsed');
+    element.classList.toggle('icon-rotate-90');
+}
+
 const translations = {
     'en': {
         'copied': 'Copied to clipboard!',  
+        'filter_charts': 'Filter charts',
+        'unfilter_charts': 'Unfilter charts',
     },
     'es': {
         'copied': '¡Copiado en el portapapeles!',
+        'filter_charts': 'Filtrar gráficos',
+        'unfilter_charts': 'Quitar filtro de los gráficos',
     }
 }

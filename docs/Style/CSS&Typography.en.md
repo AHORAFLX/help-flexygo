@@ -4,243 +4,449 @@
 
 | Label | Font | Examples |
 | --- | --- | --- |
-| <h1> | 'Helvetica Neue' 26px Light' | # <h1> h1. flexygo Heading </h1> |
-| <h2> | 'Helvetica Neue' 22px Light' | ## <h2> h2. flexygo Heading </h2> |
-| <h3> | 'Helvetica Neue' 20px Light' | ### <h3> h3. flexygo Heading </h3> |
-| <h4> | 'Helvetica Neue' 18px Light' | #### <h4> h4. flexygo Heading </h4> |
-| <h5> | 'Helvetica Neue' 17px Light' | ##### <h5> h5. flexygo Heading </h5> |
-| <h6> | 'Helvetica Neue' 15px Bold' | ###### <h6> h6. flexygo Heading </h6> |
+|  &lt;h1&gt; | 'Helvetica Neue' 26px Light' | <h1> &lt;h1&gt; h1. flexygo Heading &lt;/h1&gt; </h1> |
+| &lt;h2&gt; | 'Helvetica Neue' 22px Light' | <h2> &lt;h2&gt; h2. flexygo Heading &lt;/h2&gt; </h2> |
+| &lt;h3&gt; | 'Helvetica Neue' 20px Light' | <h3> &lt;h3&gt; h3. flexygo Heading &lt;/h3&gt; </h3> |
+| &lt;h4&gt; | 'Helvetica Neue' 18px Light' | <h4> &lt;h4&gt; h4. flexygo Heading &lt;/h4&gt; </h4> |
+| &lt;h5&gt; | 'Helvetica Neue' 17px Light' | <h5> &lt;h5&gt; h5. flexygo Heading &lt;/h5&gt; </h5> |
+| &lt;h6&gt; | 'Helvetica Neue' 15px Bold' | <h6> &lt;h6&gt; h6. flexygo Heading &lt;/h6&gt; </h6> |
 
 ## Text and BG color options
 
 | Text | Background | Buttons |
 | --- | --- | --- |
-| .txt-outstanding | .bg-outstanding | .btn .btn-outstanding |
-| .txt-success | .bg-success | .btn .btn-success |
-| .txt-warning | .bg-warning | .btn .btn-warning |
-| .txt-primary | .bg-primary | .btn .btn-primary |
-| .txt-danger | .bg-danger | .btn .btn-danger |
-| .txt-notify | .bg-notify | .btn .btn-notify |
-| .txt-tools | .bg-tools | .btn .btn-tools |
-| .txt-info | .bg-info | .btn .btn-info |
+| <span class="txt-outstanding">.txt-outstanding </span> | <span class="bg-outstanding"> .bg-outstanding </span> | <span class="btn btn-outstanding"> .btn .btn-outstanding </span> |
+| <span class="txt-success">.txt-success </span> | <span class="bg-success"> .bg-success </span> | <span class="btn btn-success"> .btn .btn-success </span> |
+| <span class="txt-warning">.txt-warning </span> | <span class="bg-warning"> .bg-warning </span> | <span class="btn btn-warning"> .btn .btn-warning </span> |
+| <span class="txt-primary">.txt-primary </span> | <span class="bg-primary"> .bg-primary </span> | <span class="btn btn-primary"> .btn .btn-primary </span> |
+| <span class="txt-danger">.txt-danger </span> | <span class="bg-danger"> .bg-danger </span> | <span class="btn btn-danger"> .btn .btn-danger </span> |
+| <span class="txt-notify">.txt-notify </span> | <span class="bg-notify"> .bg-notify </span> | <span class="btn btn-notify"> .btn .btn-notify </span> |
+| <span class="txt-tools">.txt-tools </span> | <span class="bg-tools"> .bg-tools </span> | <span class="btn btn-tools"> .btn .btn-tools </span> |
+| <span class="txt-info">.txt-info </span> | <span class="bg-info"> .bg-info </span> | <span class="btn btn-info"> .btn .btn-info </span> |
 
-## Alignment and text sizes
+## Alignments
 
-| Left, right and center alignment |     |
-| --- |
-| Left aligned text.<br><br>Center aligned text.<br><br>Right aligned text.<br><br>```<br><p class = "text-left">Left aligned text. </p> <p class = "text-center">Center aligned text.</p> <p class = "text-right">Right aligned text. </p><br>``` |
+<p style="text-align: left;">Left aligned text.</p>
+<p style="text-align: center;">Center aligned text.</p>
+<p style="text-align: right;">Right aligned text.</p>
 
-| Font size |     |
-| --- |
-| Take full control over the font by controling the size with the following CSS classes.<br><br>*   .size-l<br>*   .size-m<br>*   .size-s<br>*   .size-xs<br><br>```<br><span class="size-xs">.size-xs</span><br>``` |
+```html
+<p class="text-left">Left aligned text. </p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text. </p>
+```
 
-| Others |     |     |     |
-| --- |
-| txt-muted is used to put text off, displays the text in a gray color that makes the text appear to be disabled.  <br>_Example:_<br><br>Color text muted<br><br>```<br><p class = "txt-muted">Color text muted</p><br>``` |
-| Text decoration with .strike class  <br>_Example:_<br><br>Strike class<br><br>```<br><p class = "strike">Text decoration</p><br>``` |
-| The <abbr> tag defines an abbreviation or an acronym.  <br>_Example:_  <br>I do HTML<br><br>```<br><p> I do  <abbr title = "Hypertext Markup Language"> HTML </p><br>``` |
-| Secondary text of the heading <small>  <br>_Example:_<br><br>##### h5. flexygo Heading Secondary text<br><br>```<br><h5> h5. flexygo Heading <small> Secondary text </small></h5><br>``` |
+## Font sizes
 
+Take full control over the font by controling the size with the following CSS classes.
+
+<p>
+    <span class="size-l">.size-l</span>
+    <span class="size-m">.size-m</span>
+    <span class="size-s">.size-s</span>
+    <span class="size-xs">.size-xs</span>
+</p>
+
+```html
+<p class="size-l">.size-l</p>
+<p class="size-m">.size-m</p>
+<p class="size-s">.size-s</p>
+<p class="size-xs">.size-xs</p>
+```
+
+## Muted text
+
+To put text off **txt-muted** is used, displays the text in a gray color that makes the text appear to be disabled.
+
+Color text muted 
+{ .txt-muted }
+
+```html
+<p class = "txt-muted">Color text muted</p>
+```
+
+## Strikethrough text
+
+Text decoration with **strike** class.
+
+~~Strike class~~
+
+```html
+<p class = "strike">Text decoration</p>
+```
+
+## Acronyms
+
+The **<abbr\>** tag defines an abbreviation or an acronym.
+
+<p> I do  <abbr title = "Hypertext Markup Language"> HTML </p>
+
+```html
+<p> I do  <abbr title = "Hypertext Markup Language"> HTML </p>
+```
+
+## Secondary text
+
+Secondary text of the heading **<small\>**.
+
+<h4> h4. flexygo Heading <small> Secondary text </small></h4>
+
+```html
+<h4> h5. flexygo Heading <small> Secondary text </small></h4>
+```
 ## Description List
 
-| Align terms and descriptions horizontally by using our grid system’s predefined classes |
-| --- |
-| ```<br><dl>  <dt>...</dt>  <dd>...</dd> </dl><br>```<br><br>Description lists<br><br>A description list is perfect for defining terms.<br><br>Euismod<br><br>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<br><br>Donec id elit non mi porta gravida at eget metus.<br><br>Malesuada porta<br><br>Etiam porta sem malesuada magna mollis euismod.<br><br>Felis euismod semper eget lacinia<br><br>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<br><br>Nulla sed leo.<br><br>Nulla sed leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos<br><br>Description lists<br><br>A description list is perfect for defining terms.<br><br>Euismod<br><br>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<br><br>Donec id elit non mi porta gravida at eget metus.<br><br>Malesuada porta<br><br>Etiam porta sem malesuada magna mollis euismod.<br><br>Felis euismod semper eget lacinia<br><br>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<br><br>Nulla sed leo.<br><br>Nulla sed leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos<br><br>```<br><dl class="dl-horizontal">   <dt>...</dt>   <dd>...</dd> </dl><br>``` |
+Align terms and descriptions horizontally by using our grid system’s predefined classes.
 
-## All List
+<dl>
+	<dt>My description list</dt>
+	<dd>My description</dd>
+    <dt>My description list 2</dt>
+	<dd>My description 2</dd>
+</dl>
 
-| Unordered List |
-| --- |
-| ```<br><ul>  <li>...</li>  <li>...</li> </ul><br>```<br><br>*   **I am inside of a strong tag**<br>*   _I am Italic!_<br>    *   We can also be red<br>    *   Or green<br>    *   Even purple!<br>*   **_I am inside a strong and Italic tag, I may also break into a new line if squized_**<br>*   I am inside of a small tag |
-| Order List |     |
-| --- |
-| 1.  Ordered List Item<br>2.  **Ordered List Item**<br>    *   Unstyled list with custom icon<br>    *   **Unstyled list with custom icon**<br>    *   _Unstyled list with custom icon_<br>3.  **_I am inside a strong and Italic tag, I may also break into a new line if squized_**<br>  <br>5.  I am a label<br><br>```<br><ol>   <li>...</li> </ol><br>``` |
-| Inline / Piped List |     |
-| --- |
-| *   **Inline Item #1**<br>*   **Inline Item #2**<br>*   **_Inline Item #3_**<br><br>```<br><ul class="list-inline">   <li>...</li> </ul><br>```<br><br>*   **Piped Item #1**<br>*   **Piped Item #2**<br>*   **_Piped Item #3_**<br><br>```<br><ul class="list-piped">   <li>...</li> </ul><br>``` |     |
+```html
+<dl>
+	<dt>My description list</dt>
+	<dd>My description</dd>
+    <dt>My description list 2</dt>
+	<dd>My description 2</dd>
+</dl>
+```
+
+### Horizontal
+
+You can use the **dl-horizontal** class to make dt and dd aligned with its pair one net to the other.
+
+<dl class="dl-horizontal">
+	<dt>My description list</dt>
+	<dd>My description</dd>
+    <dt>My description list 2</dt>
+	<dd>My description 2</dd>
+</dl>
+
+```html
+<dl class="dl-horizontal">
+	<dt>My description list</dt>
+	<dd>My description</dd>
+    <dt>My description list 2</dt>
+	<dd>My description 2</dd>
+</dl>
+```
+
+## Lists
+
+There are multiple types of easy to do lists using directly html with no CSS.
+
+### Unordered
+
+This will add the list spacing and add a dot next to every element of the list.
+
+<ul>
+	<li>Lettuce</li>
+	<li>Tomatoes</li>
+    <li>Rice</li>
+</ul>
+
+```html
+<ul>
+	<li>Lettuce</li>
+	<li>Tomatoes</li>
+    <li>Rice</li>
+</ul>
+```
+
+### Ordered
+
+This will add the list spacing and add each element its correspondent number.
+
+<ol>
+  <li>Cook the vegetables</li>
+  <li>Add the rice and water</li>
+  <li>When water has been absorved serve and enjoy your meal</li>
+</ol>
+
+```html
+<ol>
+  <li>Cook the vegetables</li>
+  <li>Add the rice and water</li>
+  <li>When water has been absorved serve and enjoy your meal</li>
+</ol>
+```
+
+### Inline
+
+Create a list all in one line.
+
+<ul class="list-inline text-center">
+  <li>The legend of Zelda</li>
+  <li>The last of us</li>
+  <li>Halo</li>
+</ul>
+
+```html
+<ul class="list-inline text-center">
+  <li>The legend of Zelda</li>
+  <li>The last of us</li>
+  <li>Halo</li>
+</ul>
+```
+
+### Piped
+
+Create a list all in one line but separated using pipes.
+
+<ul class="list-piped">
+  <li>The legend of Zelda</li>
+  <li>The last of us</li>
+  <li>Halo</li>
+</ul>
+
+```html
+<ul class="list-piped">
+  <li>The legend of Zelda</li>
+  <li>The last of us</li>
+  <li>Halo</li>
+</ul>
+```
 
 ## Address
 
-| Present contact information. Preserve formatting by ending all lines with <br> |
-| --- |
-| ```<br><address>   <strong>Ahora Freeware.</strong><br>   <i class="flx-icon icon-house"/> Polígono Industrial Camí del Mar,<br>   <i class="flx-icon icon-house-1"/> C/Ceramistes, 19, 46120 Alboraia,<br>   Valencia <br>   <abbr title="Phone">P:</abbr> (+34) 963 021 000 </address> <address>   <strong>Full Name</strong><br>   <i class="flx-icon icon-email-2"/><a href="mailto:#">   info@ahora.es</a> </address><br>```<br><br>**Ahora Freeware.**  <br>Polígono Industrial Camí del Mar,  <br>C/Ceramistes, 19, 46120 Alboraia,  <br>Valencia  <br>P: (+34) 963 021 000<br><br>**Full Name**  <br>_[info@ahora.es](mailto:#)_ |
+Present contact information. Preserve formatting by ending all lines with **<br\>**.
+<address>
+  <strong>Ahora Freeware.</strong><br>
+  Polígono Industrial Camí del Mar,<br>
+  C/Ceramistes, 19, 46120 Alboraia,<br>
+  Valencia <br>
+  <abbr title="Phone">P:</abbr> (+34) 963 021 000
+</address>
+
+
+```html
+<address>
+  <strong>Ahora Freeware.</strong><br>
+  <i class="flx-icon icon-house"/> Polígono Industrial Camí del Mar,<br>
+  <i class="flx-icon icon-house-1"/> C/Ceramistes, 19, 46120 Alboraia,<br>
+  Valencia <br>
+  <abbr title="Phone">P:</abbr> (+34) 963 021 000
+</address>
+```
 
 ## Quotes
 
-| For quoting blocks of content from another source within your document. Wrap <blockquote> around any HTML as the quote. |
-| --- |
-| > Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>> <br>> Someone famous in Source Title<br><br>```<br><blockquote>   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>   <small>Someone famous in      <cite title="Source Title">Source Title</cite>   </small> </blockquote><br>```<br><br>> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>> <br>> Someone famous in Source Title<br><br>```<br><blockquote class="pull-right">    ... </blockquote><br>``` |
+For quoting blocks of content from another source within your document. Wrap **<blockquote\>** around any HTML as the quote.
 
-## Own classes applicable to HTML elements
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <small>Someone famous in 
+    <cite title="Source Title">Source Title</cite>
+  </small>
+</blockquote>
+
+```html
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <small>Someone famous in 
+    <cite title="Source Title">Source Title</cite>
+  </small>
+</blockquote>
+```
+
+## Flexygo classes applicable to HTML elements
 
 | Class | Description | Image |
 | --- | --- | --- |
-| .right | Move the item to the right |     |
-| .left | Move the item to the right position. |
-| .clear-both, clear | The box on which it is applied lowers until its upper edge is below the lower edge of any element floating left or right. |     |
-| .docs-section | Apply a lower margin on the 60px element. |     |
-| .nopadding | Removes margins from the element to the outside and from the element to the inside. |     |
-| .padding-0  <br>.padding-xs  <br>.padding-s  <br>.padding-m  <br>.padding-l  <br>.padding-left-0/xs/s/m/l  <br>.padding-right-0/xs/s/m/l  <br>.padding-top-0/xs/s/m/l  <br>.padding-bottom-0/xs/s/m/l | The "padding-x" classes apply a space on all four sides of the element. Padding-0 apply 0px and Padding-l apply 15px.<br><br>The "padding-left-x" classes apply a space and size by the side indicated. Padding-left-0 apply 0 pixel to left space and Padding-top-l apply 15 pixel to top space. |
-| .margin-0  <br>.margin-xs  <br>.margin-s  <br>.margin-m  <br>.margin-l  <br>.margin-left-0/xs/s/m/l  <br>.margin-right-0/xs/s/m/l  <br>.margin-top-0/xs/s/m/l  <br>.margin-bottom-0/xs/s/m/l | The "margin-x" classes apply a space on all four sides of the element. margin-0 apply 0px and margin-l apply 15px.<br><br>The "margin-left-x" classes apply a space and size by the side indicated. margin-left-0 apply 0 pixel to left space and margin-top-l apply 15 pixel to top space. |
-| .last-module-margin | Add a margin of 100 pixels below the module to which this class is applied. |     |
-| .inline | Causes an element to generate one or more inline boxes. |     |
-| .block | Transforms an element into a block element, so they always start on a new line and always occupy all available space on the line, even if its contents do not occupy the entire site. |
-| .inline-block | It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property. However, the inline-block value of the display property makes this even easier.<br><br>Inline-block elements are like inline elements but they can have a width and a height. |
-| .hidden  <br>.hidden-s  <br>.hidden-m  <br>.hidden-l | Is commonly used to hide and show elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "hidden-s" class will hide the element when the screen size is less than 728 pixels. With the other two classes it's the same depending on the screen size (m or l). |     |
-| .show  <br>.show-s  <br>.show-m  <br>.show-l | Is commonly used to show and hide elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "show-s" class will hide the element when the screen size is 728 pixels or more. With the other two classes it's the same depending on the screen size (m or l). | \-  |
-| .hidden-only-s  <br>.hidden-only-m  <br>.hidden-only-l  <br>.hidden-only-xl  <br>.show-only-s  <br>.show-only-m  <br>.show-only-l  <br>.show-only-xl | This classes are usefull if you just want to hide/or show something for specific sizes.<br><br>The "hide-only-s" will hide the element only if the screen size is in the s range (from 0 to the determined database s size). With the rest it will be the same, for example "hide-only-m" will hide element in screens larger than s size but smaller than m size. | \-  |
-| .nolist | Doesn't display any bookmarks in an ordered or unordered list. |     |
-| .clickable | When the pointer is positioned above the element, it adds a cursor icon. |     |
-| .roundBorders | When established on modules their borders will be rounded. |     |
-| .fullscreen | The element occupies 100% of the space of the window. |     |
-| .show-empty-column | Add it to an element with bootstrap .col class to get an empty column and avoid the movement of the other columns. |     |
-| .hover-underline | The element underlines when pointer it's hover. | \-  |
-| .hover-bold | The element set bold style when pointer it's hover. | \-  |
-| .hover-outstanding  <br>.hover-primary  <br>.hover-success  <br>.hover-info  <br>.hover-warning  <br>.hover-danger  <br>.hover-notify  <br>.hover-tools | The element set color style when pointer it's hover. | \-  |
-| .grid-column-separator | Show column separator in edit grid control. |     |
-
-# Color classes
-
-[Click here](javascript:void(0);) to show sample code
+| **.right** | Move the item to the right |     |
+| **.left** | Move the item to the right position. |
+| **.clear-both**, **.clear** | The box on which it is applied lowers until its upper edge is below the lower edge of any element floating left or right. |     |
+| **.docs-section** | Apply a lower margin on the 60px element. |     |
+| **.nopadding** | Removes margins from the element to the outside and from the element to the inside. |     |
+| **.padding-0**  <br> **.padding-xs**  <br> **.padding-s**  <br> **.padding-m**  <br> **.padding-l**  <br> **.padding-left-0/xs/s/m/l**  <br> **.padding-right-0/xs/s/m/l**  <br>.**padding-top-0/xs/s/m/l**  <br>**.padding-bottom-0/xs/s/m/l** | The "padding-x" classes apply a space on all four sides of the element. Padding-0 apply 0px and Padding-l apply 15px.<br><br>The "padding-left-x" classes apply a space and size by the side indicated. Padding-left-0 apply 0 pixel to left space and Padding-top-l apply 15 pixel to top space. |
+| **.margin-0**  <br> **.margin-xs**  <br> **.margin-s**  <br> **.margin-m**  <br> **.margin-l**  <br> **.margin-left-0/xs/s/m/l**  <br> **.margin-right-0/xs/s/m/l**  <br>.**margin-top-0/xs/s/m/l**  <br> **.margin-bottom-0/xs/s/m/l** | The "margin-x" classes apply a space on all four sides of the element. margin-0 apply 0px and margin-l apply 15px.<br><br>The "margin-left-x" classes apply a space and size by the side indicated. margin-left-0 apply 0 pixel to left space and margin-top-l apply 15 pixel to top space. |
+| **.last-module-margin** | Add a margin of 100 pixels below the module to which this class is applied. |     |
+| **.inline** | Causes an element to generate one or more inline boxes. |     |
+| **.block** | Transforms an element into a block element, so they always start on a new line and always occupy all available space on the line, even if its contents do not occupy the entire site. |
+| **.inline-block** | It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property. However, the inline-block value of the display property makes this even easier.<br><br>Inline-block elements are like inline elements but they can have a width and a height. |
+| **.hidden**  <br> **.hidden-s**  <br> **.hidden-m**  <br> **.hidden-l** | Is commonly used to hide and show elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "hidden-s" class will hide the element when the screen size is less than 728 pixels. With the other two classes it's the same depending on the screen size (m or l). |     |
+| **.show**  <br> **.show-s**  <br> **.show-m**  <br> **.show-l** | Is commonly used to show and hide elements without deleting and recreating them. Element with class hidden does not take up any space.<br><br>The "show-s" class will hide the element when the screen size is 728 pixels or more. With the other two classes it's the same depending on the screen size (m or l). | \-  |
+| **.hidden-only-s**  <br> **.hidden-only-m**  <br> **.hidden-only-l**  <br> **.hidden-only-xl**  <br> **.show-only-s**  <br> **.show-only-m**  <br> **.show-only-l**  <br>.**show-only-xl** | This classes are usefull if you just want to hide/or show something for specific sizes.<br><br>The "hide-only-s" will hide the element only if the screen size is in the s range (from 0 to the determined database s size). With the rest it will be the same, for example "hide-only-m" will hide element in screens larger than s size but smaller than m size. | \-  |
+| **.nolist** | Doesn't display any bookmarks in an ordered or unordered list. |     |
+| **.clickable** | When the pointer is positioned above the element, it adds a cursor icon. |     |
+| **.roundBorders** | When established on modules their borders will be rounded. |     |
+| **.fullscreen** | The element occupies 100% of the space of the window. |     |
+| **.show-empty-column** | Add it to an element with bootstrap .col class to get an empty column and avoid the movement of the other columns. |     |
+| **.hover-underline** | The element underlines when pointer it's hover. | \-  |
+| **.hover-bold** | The element set bold style when pointer it's hover. | \-  |
+| **.hover-outstanding**  <br>.hover-primary  <br>.hover-success  <br>.hover-info  <br>.hover-warning  <br>.hover-danger  <br>.hover-notify  <br>.hover-tools | The element set color style when pointer it's hover. | \-  |
+| **.grid-column-separator** | Show column separator in edit grid control. |     |
 
 ## Contextual colors
 
-**flexygo** has a predefined set of classes for coloring Text, Backgrounds and Boxes. Each of this color sets are defined under a series of names with their corresponding prefix for text, background or box.
+Flexygo has a predefined set of classes for coloring Text, Backgrounds and Boxes. Each of this color sets are defined under a series of names with their corresponding prefix for text, background or box.
 
 ### Outstanding
 
 .txt-outstanding
+{ .txt-outstanding }
 
 .bg-outstanding
+{ .bg-outstanding }
 
-  
-
-.box-outstanding  
-Etiam porta sem malesuada magna mollis euismod.
+.box-outstanding
+{ .box-outstanding }
 
 ### Primary
 
 .txt-primary
+{ .txt-primary }
 
 .bg-primary
+{ .bg-primary }
 
-  
-
-.box-primary  
-Etiam porta sem malesuada magna mollis euismod.
+.box-primary
+{ .box-primary }
 
 ### Success
 
 .txt-success
+{ .txt-success }
 
 .bg-success
+{ .bg-success }
 
-  
-
-.box-success  
-Etiam porta sem malesuada magna mollis euismod.
+.box-success 
+{ .box-success }
 
 ### Info
 
 .txt-info
+{ .txt-info }
 
 .bg-info
+{ .bg-info }
 
-  
-
-.box-info  
-Etiam porta sem malesuada magna mollis euismod.
+.box-info
+{ .box-info }
 
 ### Warning
 
 .txt-warning
+{ .txt-warning }
 
 .bg-warning
-
-  
+{ .bg-warning }
 
 .box-warning  
-Etiam porta sem malesuada magna mollis euismod.
+{ .box-warning }
 
 ### Danger
 
 .txt-danger
+{ .txt-danger }
 
 .bg-danger
-
-  
+{ .bg-danger }
 
 .box-danger  
-Etiam porta sem malesuada magna mollis euismod.
+{ .box-danger }
 
 ### Notify
 
 .txt-notify
+{ .txt-notify }
 
 .bg-notify
-
-  
+{ .bg-notify }
 
 .box-notify  
-Etiam porta sem malesuada magna mollis euismod.
+{ .box-notify }
 
-### tools
+### Tools
 
 .txt-tools
+{ .txt-tools }
 
 .bg-tools
-
+{ .bg-tools }
   
-
-.box-tools  
-Etiam porta sem malesuada magna mollis euismod.
+.box-tools
+{ .box-tools }
 
 ### Add icon and close button
 
-× **Info!** Press close button.
+<div class="alert box-info">
+  <button class="close" data-dismiss="alert" onclick="this.parentElement.remove()">x</button>
+  <span style="
+    border: 3px solid #2eafe7;
+    width: 22px;
+    border-radius: 50%;
+    height: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+">i</span>
+  <span><strong>Info!</strong>Press close button. </span>
+</div >
 
-  
-Example
-
+```html
+<div class="alert box-info">
+  <button class="close" data-dismiss="alert">x</button>
+  <i class="flx-icon icon-information-2 icon-lg"></i>
+  <span><strong>Info!</strong>Press close button. </span>
+</div>
 ```
-<div class="alert box-info">   <button class="close" data-dismiss="alert">x</button>   <i class="flx-icon icon-information-2 icon-lg"></i>   <span><strong>Info!</strong>Press close button. </span> </div >
-```
 
-## State colors
+## Input states colors
 
 **flexygo** has a predefined set of classes for coloring controls on forms. Each of theese color sets are defined under a series of names and can be used on nay flx-control web component.
 
-##### Input States
+.has-warning
+{ .txt-warning }
 
-flx Input warning
+![Has warning input](/assets/images/Typography/warning-input.png#only-light "Has warning input"){data-gallery="light"}
+![Has warning input](/assets/images/Typography/warning-input_dark.png#only-dark "Has warning input"){data-gallery="dark"}
 
-flx Input Error
+.has-error
+{ .txt-error }
 
-flx Input Success
+![Has error input](/assets/images/Typography/error-input.png#only-light "Has error input"){data-gallery="light"}
+![Has error input](/assets/images/Typography/error-input_dark.png#only-dark "Has error input"){data-gallery="dark"}
 
-flx Input info
+.has-success
+{ .txt-success }
 
-flx Input outstanding
+![Has success input](/assets/images/Typography/success-input.png#only-light "Has success input"){data-gallery="light"}
+![Has success input](/assets/images/Typography/success-input_dark.png#only-dark "Has success input"){data-gallery="dark"}
 
-flx Input tools
+.has-info
+{ .txt-info }
 
-flx Input notify
+![Has info input](/assets/images/Typography/info-input.png#only-light "Has info input"){data-gallery="light"}
+![Has info input](/assets/images/Typography/info-input_dark.png#only-dark "Has info input"){data-gallery="dark"}
 
-flx Input primary
+.has-outstanding
+{ .txt-outstanding }
 
-Example
+![Has outstanding input](/assets/images/Typography/outstanding-input.png#only-light "Has outstanding input"){data-gallery="light"}
+![Has outstanding input](/assets/images/Typography/outstanding-input_dark.png#only-dark "Has outstanding input"){data-gallery="dark"}
 
-```
-<flx-text type="text" iconclass="flx-icon icon-warning" name="warning" placeholder=".has-warning" required requiredmessage="You must enter a text"></flx-text>
-```
+.has-tools
+{ .txt-tools }
 
-```
-<flx-text type="text" iconclass="flx-icon icon-close" name="error" placeholder=".has-error" required requiredmessage="You must enter a valid text"></flx-text>
-```
+![Has tools input](/assets/images/Typography/tools-input.png#only-light "Has tools input"){data-gallery="light"}
+![Has tools input](/assets/images/Typography/tools-input_dark.png#only-dark "Has tools input"){data-gallery="dark"}
 
-```
-<flx-text type="text" iconclass="flx-icon icon-accepted" name="success" placeholder=".has-success" required requiredmessage="You must enter a valid text"></flx-text>
-```
+.has-notify
+{ .txt-notify }
+
+![Has notify input](/assets/images/Typography/notify-input.png#only-light "Has notify input"){data-gallery="light"}
+![Has notify input](/assets/images/Typography/notify-input_dark.png#only-dark "Has notify input"){data-gallery="dark"}
+
+.has-primary
+{ .txt-primary }
+
+![Has primary input](/assets/images/Typography/primary-input.png#only-light "Has primary input"){data-gallery="light"}
+![Has primary input](/assets/images/Typography/primary-input_dark.png#only-dark "Has primary input"){data-gallery="dark"}
 
 ## Sticky
 
@@ -252,8 +458,6 @@ To do so you just have to add class "sticky-header" to module as portayed in the
 
 ![Sticky toolbar](/assets/images/Typography/StickyHeader.png "Sticky toolbar")
 
-Sticky header
-
 ### Sticky toolbar
 
 Toolbar can now be set as sticky on modules.
@@ -262,57 +466,31 @@ To do so you just have to add class "sticky-toolbar" to module as portayed in th
 
 ![Sticky toolbar](/assets/images/Typography/StickyToolbar.png "Sticky toolbar")
 
-Sticky toolbar
-
 ## Flipcard colors
 
-**flexygo** has a predefined set of classes for defining flip cards backgrounds and text. Each of this color sets are defined under a series of names with their coresponding prefix for front and back.
+Flexygo has a predefined set of classes for defining flip cards backgrounds and text. Each of this color sets are defined under a series of names with their coresponding prefix for front and back.
 
-### Outstanding
+![Flipcards](/assets/images/Typography/flipcards.png#only-light "Flipcards"){data-gallery="light"}
+![Flipcards](/assets/images/Typography/flipcards_dark.png#only-dark "Flipcards"){data-gallery="dark"}
 
-More info
-
-*   Your items
-
-### Primary
-
-More info
-
-*   Your items
-
-### Success
-
-More info
-
-*   Your items
-
-### Info
-
-More info
-
-*   Your items
-
-### Warning
-
-More info
-
-*   Your items
-
-### Danger
-
-More info
-
-*   Your items
-
-### Tools
-
-More info
-
-*   Your items
-
-### Notify
-
-More info
+```html
+<div class="card card-outstanding">
+    <div class="flip-card" onclick="jQuery(this).toggleClass('flip-card-reverse');">
+        <div class="flip-card-flipper">
+        <div class="flip-card-front ">
+            <div class="admin"><h3>Outstanding</h3><span class="main-icon"> <i class="flx-icon flx-icon icon-pin icon-5x"></i></span></div>
+            <div class="more-info"><i class="flx-icon icon-arrow-head-2 "></i>More info</div>
+        </div>
+        <div class="flip-card-back">
+            <div class="admin reverse">
+            <div class="child-nodes admin-back"><ul><li><span>Your items</span></li></ul></div>
+            <div class="back"><i class="flx-icon icon-arrow-head-2 icon-rotate-180"></i>&nbsp;</div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+```
 
 *   Your items
 

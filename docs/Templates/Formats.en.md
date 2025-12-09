@@ -153,11 +153,11 @@ Type format **date** maintains the same syntax we've used so far, it also offers
 ```
 
 ```js
-moment().format(MMMM Do YYYY, h:mm:ss a);// October 17th 2025, 10:08:03 am
-moment().format(dddd);			// Friday
-moment().format(MMM Do YY);		// Oct 17th 25
-moment().format(YYYY [escaped] YYYY);	// 2025 escaped 2025
-moment().format();			// 2025-10-17T10:08:03+02:00
+moment().format(MMMM Do YYYY, h:mm:ss a); // October 17th 2025, 10:08:03 am
+moment().format(dddd);			          // Friday
+moment().format(MMM Do YY);		          // Oct 17th 25
+moment().format(YYYY [escaped] YYYY);	  // 2025 escaped 2025
+moment().format();			              // 2025-10-17T10:08:03+02:00
 ```
 
 ```js
@@ -173,115 +173,6 @@ moment().format(lll); 			// Oct 17, 2025 10:08 AM
 moment().format(LLLL);			// Friday, October 17, 2025 10:08 AM
 moment().format(llll);			// Fri, Oct 17, 2025 10:08 AM
 ```
-
-*   Afrikaans
-*   Albanian
-*   Arabic
-*   Arabic (Lybia)
-*   Arabic (Morocco)
-*   Arabic (Saudi Arabia)
-*   Arabic (Tunisia)
-*   Armenian
-*   Azerbaijani
-*   Basque
-*   Belarusian
-*   Bengali
-*   Bosnian
-*   Breton
-*   Bulgarian
-*   Burmese
-*   Cambodian
-*   Catalan
-*   Central Atlas Tamazight
-*   Central Atlas Tamazight Latin
-*   Chinese (China)
-*   Chinese (Hong Kong)
-*   Chinese (Taiwan)
-*   Chuvash
-*   Croatian
-*   Czech
-*   Danish
-*   Dutch
-*   English (Australia)
-*   English (Canada)
-*   English (Ireland)
-*   English (New Zealand)
-*   English (United Kingdom)
-*   English (United States)
-*   Esperanto
-*   Estonian
-*   Faroese
-*   French (Canada)
-*   French (Switzerland)
-*   Frisian
-*   Galician
-*   Georgian
-*   German
-*   German (Austria)
-*   Greek
-*   Hebrew
-*   Hindi
-*   Hungarian
-*   Icelandic
-*   Indonesian
-*   Italian
-*   Japanese
-*   Javanese
-*   Kazakh
-*   Klingon
-*   Korean
-*   Kyrgyz
-*   Lao
-*   Latvian
-*   Lithuanian
-*   Luxembourgish
-*   Macedonian
-*   Malay
-*   Malay
-*   Malayalam
-*   Maldivian
-*   Maori
-*   Marathi
-*   Montenegrin
-*   Nepalese
-*   Northern Sami
-*   Norwegian Bokmål
-*   Nynorsk
-*   Persian
-*   Polish
-*   Portuguese
-*   Portuguese (Brazil)
-*   Pseudo
-*   Punjabi (India)
-*   Romanian
-*   Russian
-*   Scottish Gaelic
-*   Serbian
-*   Serbian Cyrillic
-*   Sinhalese
-*   Slovak
-*   Slovenian
-*   Spanish
-*   Spanish (Dominican Republic)
-*   Swahili
-*   Swedish
-*   Tagalog (Philippines)
-*   Talossan
-*   Tamil
-*   Telugu
-*   Thai
-*   Tibetan
-*   Turkish
-*   Ukrainian
-*   Uzbek
-*   Vietnamese
-*   Welsh
-*   siSwati
-
-  
-  
-  
-  
 
 ##### From now
 
@@ -413,20 +304,51 @@ Generate a b64 string with QR image, if there's no size, default value is 400:
 
 When we have a form, we can indicate that number of characters we want to enter the user and the correct way that expected to be written.
 
-|     |     |
-| --- | --- |
-| Phone | ```<br><flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "99-999-99-99"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text><br>``` |
-| Phone + Ext | ```<br><flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text><br>``` |
-| Email | ```<br><flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web" </i></span></flx-text><br>``` |
-| Product Key | ```<br><flx-text name = "productKey" placeholder = "flx Key Field" iconclass = "flx-icon icon-key" Mask = "a*-999-a999"/><br>``` |
+### Phone
+
+```html
+<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "99-999-99-99"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text>
+```
+
+![Phone](/assets/images/Formats/Phone.png "Phone")
+
+### Phone + Extension
+
+```html
+<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text>
+```
+
+![Phone + Ext](/assets/images/Formats/PhoneExtension.png "Phone + Ext")
+
+### Email
+
+```html
+<flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web" </i></span></flx-text>
+```
+
+![Email](/assets/images/Formats/Email.png "Email")
+
+### Product key
+
+```html
+<flx-text name = "productKey" placeholder = "flx Key Field" iconclass = "flx-icon icon-key" Mask = "a*-999-a999"/>
+```
+
+![ProductKey](/assets/images/Formats/ProductKey.png "Product Key")
 
 ## File Linking
 
 **flexygo** has a system to return files in an encrypted link, for this, the field of the view that returns the address of the document must have an alias that begins with one of the following formats:
 
-| **flxpathimage** | **flxpathdocument** | **flxpath\|ObjectName\|PropertyName** | **flxpath** | **flxpathzoom** |
-| --- | --- | --- | --- | --- |
-| **flexygo** image management | **flexygo** document management | the property configuration of that object is read | management of images or ERP documents, as long as the document path is complete | thumbnail image management, can include thumbnail size separated by \_, if you do not specify a default size it will be 75x75 _\[width\]x\[height\]_ |
+<fh-copy class="link">flxpathimage</fh-copy>: Flexygo image management.
+
+<fh-copy class="link">flxpathdocument</fh-copy>: Flexygo document management.
+
+<fh-copy class="link">flxpath|ObjectName|PropertyName</fh-copy>: The property configuration of that object is read.
+
+<fh-copy class="link">flxpath</fh-copy>: Management of images or ERP documents, as long as the document path is complete.
+
+<fh-copy class="link">flxpathzoom</fh-copy>: Thumbnail image management, can include thumbnail size separated by _, if you do not specify a default size it will be 75x75 [width]x[height].
 
 View:
 

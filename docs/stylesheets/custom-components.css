@@ -122,6 +122,15 @@
     }
 }
 
+.md-typeset .flx-info-card {
+    background: #f0f8ff;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    padding: 0.4em 0.9em;
+    border: 1px solid #c7e1f8;
+    border-radius: 8px;
+}
+
 /* Buttons */
 .button, .md-typeset a.button {
     display: inline-block;
@@ -189,6 +198,7 @@ dialog {
     border-radius: 16px 0 0 16px;
 }
 
+/* EXAMPLES DIRECTLY COMING FROM OLD HELP */
 /* Module Example Table */
 #module-table-node1 {
     background-color: #ffffff;
@@ -249,4 +259,48 @@ dialog {
     height: 32px;
     width: 180px;
     float: right;
+}
+
+/* SparkLine Examples */
+.md-typeset {
+    .sparkline-large {
+        height: 100px;
+    }
+
+    .sparkline-medium {
+        height: 50px;
+    }
+
+    .sparkline-small {
+        height: 20px;
+    }
+}
+
+/* Skeleton */
+.skeletonElementContainer {
+    position: relative;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    height: 28px;
+}
+
+.skeletonElement {
+    display: block;
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #dfdfdf, transparent);
+    width: 110%;
+    height: 100%;
+    animation: skeletonEffect 1.2s infinite linear;
+    filter: blur(8px);
+}
+
+@keyframes skeletonEffect {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
 }

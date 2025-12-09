@@ -2,7 +2,7 @@
 
 **flexygo** includes different ways of establishing object **Insert**, **Update** and **Delete** actions. There are 4 different modes.
 
-| Table 1 - Update Modes |     |
+| Update Mode | Description |
 | --- | --- |
 | Standard | Does a direct insert, update or delete to the database, based on object properties |
 | Dll Process | Allows us to create a dll to perform the insert, delete and update |
@@ -14,7 +14,7 @@ There is a fifth mode called Ahora Freeware Stored procedure to be used when wor
 
 For the samples we have created an object called systmpTes based on two tables called **Test** (Table 2) and **TestConf** (Table 3)
 
-| Table 2 - Test Table |     |
+| Column | Description |
 | --- | --- |
 | TestId | int not null |
 | Descrip | nvarchar(2000) not null |
@@ -23,7 +23,7 @@ For the samples we have created an object called systmpTes based on two tables c
 | User | nvarchar(50) allows null |
 | InsertUpdateDate | datetime not null |
 
-| Table 3 - Test\_conf Table |     |
+| Column | Description |
 | --- | --- |
 | TestId | int not null |
 | Config | nvarchar(50) allows null |

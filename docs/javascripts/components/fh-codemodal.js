@@ -4,7 +4,11 @@ class FHCodeModal extends HTMLElement {
   }
 
   connectedCallback() {
-    this.addEventListener("click", ev => {
+    this.addEventListener("click", () => {
+      if (document.getElementsByClassName('fh-codemodal-content').length > 0) {
+        return;
+      }
+
       const code_element = document.getElementById(this.getAttribute('modal_id'));
       this.presentAsModal(code_element);
     });

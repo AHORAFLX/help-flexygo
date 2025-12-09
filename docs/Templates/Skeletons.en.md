@@ -45,3 +45,9 @@ _Example:_
 ```
 
 _Result:_
+
+<div class="flxSkeleton">
+    <div class="skeletonElementContainer">
+        <div class="skeletonElement"></div>
+    </div>
+</div>

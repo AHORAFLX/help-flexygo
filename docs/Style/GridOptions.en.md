@@ -2,132 +2,161 @@
 
 See how to use the grid system to work across multiple devices. **flexygo** system behaves great not only in the latest desktop browsers, but also in tablets and smartphone browsers too. It's packed with great features, such as the table with 12 columns.
 
-![flexygo grid](./img/resp_flexygo_horizontal.png "Image 1. flexygo grid")
+![flexygo grid](/assets/images/Style/resp_flexygo_horizontal.png "Image 1. flexygo grid")
 
-Image 1. flexygo grid
+<table>
+    <thead>
+        <tr>
+                <th>SYSTEM WORK</th>
+                <th>Small devices</th>
+                <th>Medium devices</th>
+                <th>Large devices</th>
+                <th>Extra large devices</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="bold">Grid behavior</td>
+            <td colspan="4">Collapsed to start, horizontal above breakpoints</td>
+        </tr>                  
+        <tr>
+            <td class="bold">Max container width</td>                    
+            <td>728px</td>
+            <td>992px</td>
+            <td>1200px</td>
+            <td>Larger than 1200px </td>
+        </tr>
+        <tr>
+            <td class="bold">Class prefix</td>                    
+            <td>col-s</td>
+            <td>col-m</td>
+            <td>col-l</td>
+            <td>col-xl</td>
+        </tr>
+        <tr>
+            <td class="bold">OffSets</td>                    
+            <td colspan="4">Yes</td>
+        </tr>
+        <tr>
+            <td class="bold">Nestable</td>                    
+            <td colspan="4">Yes</td>
+        </tr>
+    </tbody>
+</table>
 
-| SYSTEM WORK | Small devices | Medium devices | Large devices | Extra large devices |
-| --- | --- | --- | --- | --- |
-| Grid behavior | Collapsed to start, horizontal above breakpoints |     |     |     |
-| Max container width | 728px | 992px | 1200px | Larger than 1200px |
-| Class prefix | col-s | col-m | col-l | col-xl |
-| OffSets | Yes |     |     |     |
-| Nestable | Yes |     |     |     |
+## Examples
 
-###### Example
+### General
 
-Using a single set of .col-\*
+Using a single set of **.col-\***.
 
-.row .col-12
+<div class="bg-white" style="margin-bottom:1%;">
+    <div class="row col-12 borderAll">.row .col-12</div>      
+    <div class="row">
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+        <div class="col-1  borderAll padding-s">.col-1</div>
+    </div>
+    <div class="row ">
+        <div class="col-2  borderAll padding-s">.col-2</div>
+        <div class="col-2  borderAll padding-s">.col-2</div>
+        <div class="col-2  borderAll padding-s">.col-2</div>
+        <div class="col-2  borderAll padding-s">.col-2</div>
+        <div class="col-2  borderAll padding-s">.col-2</div>
+        <div class="col-2  borderAll padding-s">.col-2</div>
+    </div>
+    <div class="row ">
+        <div class="col-3  borderAll padding-s">.col-3</div>
+        <div class="col-3  borderAll padding-s">.col-3</div>
+        <div class="col-3  borderAll padding-s">.col-3</div>
+        <div class="col-3  borderAll padding-s">.col-3</div>
+    </div>
+    <div class="row ">
+        <div class="col-4  borderAll padding-s">.col-4</div>
+        <div class="col-4  borderAll padding-s">.col-4</div>
+        <div class="col-4  borderAll padding-s">.col-4</div>
+    </div>  
+    <div class="row ">
+        <div class="col-6  borderAll padding-s">.col-6</div>
+        <div class="col-6  borderAll padding-s">.col-6</div>
+    </div>
+</div> 
 
-.col-1
+### Mobile, tablet, desktops
 
-.col-1
+Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding **.col-s-\* .col-m-\*** to your columns. See the example below for a better idea of how it all works
 
-.col-1
+<div class="bg-white" style="margin-bottom:1%;">              
+    <div class="row">
+        <div class="col-s-12 col-m-8 col-8 borderAll padding-s">.col-s-12 .col-m-8 .col-8</div>
+        <div class="col-s-12 col-m-4 col-4 borderAll padding-s">.col-s-12 .col-m-4 .col-4</div>
+    </div>  
+    <div class="row">
+        <div class="col-s-12 col-m-4 col-4  borderAll padding-s">.col-s-12 .col-m-4 .col-4</div>
+        <div class="col-s-12 col-m-4 col-4  borderAll padding-s">.col-s-12 .col-m-4 .col-4</div>
+        <div class="col-s-12 col-m-4 col-4  borderAll padding-s">.col-s-12 .col-m-4 .col-4</div>
+    </div>
+    <div class="row">
+        <div class="col-s-6 col-6 borderAll padding-s">.col-s-6 .col-6</div>
+        <div class="col-s-6 col-6 borderAll padding-s">.col-s-6 .col-6</div>                
+    </div>
+</div>
 
-.col-1
+### Offsetting columns
 
-.col-1
+Move columns to the right using **.padL-\*** classes. These classes increase the left margin of a column by \* columns. For example, **.padL-m-4** moves **.col-4** over four columns.
 
-.col-1
+<div class="bg-white">              
+    <div class="row">
+        <div class="col-4 borderAll padding-s">.col-4</div>
+        <div class="col-4 padL-4 borderAll padding-s">.col-4 .padL-4</div>
+    </div>
+    <div class="row">
+        <div class="col-3 padL-3 borderAll padding-s">.col-3 .padL-3</div>
+        <div class="col-3 padL-3 borderAll padding-s">.col-3 .padL-3</div>
+    </div>
+    <div class="row">
+        <div class="col-6 padL-3 borderAll padding-s">.col-6 .padL-3</div>
+    </div>              
+</div>
 
-.col-1
+### Responsive offsetting columns
 
-.col-1
+Move columns to the right using **.padL-s-\* .padL-m-\* .padL-l-\* .padL-xl-\*** classes. These classes increase the left margin of a column by \* columns with a maximum to 12.
 
-.col-1
+<div class="row">
+    <div class="col-3 padL-3 padL-s-0 borderAll padding-s">.col-3 .padL-3 .padL-s-0</div>
+    <div class="col-3 padL-3 padL-s-0 borderAll padding-s">.col-3 .padL-3 .padL-s-0</div>
+</div>
 
-.col-1
+### Nesting columns
 
-.col-1
+To nest your content with the default grid, add a new .row and set of **.col-\*** columns within an existing **.col-\*** column. Nested rows should include a set of columns that add up to 12.
 
-.col-1
+<div class="row">
+    <div class="col-12 borderAll padding-l">
+        <p>Level 1: .col-12</p>
+        <div class="col-6 col-s-12 borderAll padding-s">Level 2: .col-6 .col-s-12</div>
+        <div class="col-6 col-s-12 borderAll padding-s">Level 2: .col-6 .col-s-12</div>
+    </div>
+</div>
 
-.col-2
+### Hidden columns
 
-.col-2
+Hide the column depending on the indicated screen size. If we use **.hidden-s** class, when the screen is small this column will be hidden.
 
-.col-2
-
-.col-2
-
-.col-2
-
-.col-2
-
-.col-3
-
-.col-3
-
-.col-3
-
-.col-3
-
-.col-4
-
-.col-4
-
-.col-4
-
-.col-6
-
-.col-6
-
-###### Example: Mobile, tablet, desktops
-
-Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding .col-s-\* .col-m-\* to your columns. See the example below for a better idea of how it all works
-
-.col-s-12 .col-m-8 .col-8
-
-.col-s-12 .col-m-4 .col-4
-
-.col-s-12 .col-m-4 .col-4
-
-.col-s-12 .col-m-4 .col-4
-
-.col-s-12 .col-m-4 .col-4
-
-.col-s-6 .col-6
-
-.col-s-6 .col-6
-
-###### Example: Offsetting columns
-
-Move columns to the right using .padL-\* classes. These classes increase the left margin of a column by \* columns. For example, .padL-m-4 moves .col-4 over four columns.
-
-.col-4
-
-.col-4 .padL-4
-
-.col-3 .padL-3
-
-.col-3 .padL-3
-
-.col-6 .padL-3
-
-###### Example: Responsive offsetting columns
-
-Move columns to the right using .padL-s-\* .padL-m-\* .padL-l-\* .padL-xl-\* classes. These classes increase the left margin of a column by \* columns with a maximum to 12.
-
-.col-3 .padL-3 .padL-s-0
-
-.col-3 .padL-3 .padL-s-0
-
-###### Example: Nesting columns
-
-To nest your content with the default grid, add a new .row and set of .col-\* columns within an existing .col-\* column. Nested rows should include a set of columns that add up to 12.
-
-Level 1: .col-12
-
-Level 2: .col-6 .col-s-12
-
-Level 2: .col-6 .col-s-12
-
-###### Example: Hidden columns
-
-Hide the column depending on the indicated screen size. If we use .hidden-s class, when the screen is small this column will be hidden.
-
-.col-12 .col-m-6 .hidden-s
-
-.col-12 .col-m-6 .col-s-12
+<div class="bg-white docs-section">              
+    <div class="row">
+        <div class="col-12 col-m-6 hidden-s borderAll padding-s">.col-12 .col-m-6 .hidden-s</div>
+        <div class="col-12 col-m-6 col-s-12 borderAll padding-s">.col-12 .col-m-6 .col-s-12</div>
+    </div>                        
+</div>

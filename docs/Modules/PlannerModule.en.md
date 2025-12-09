@@ -16,18 +16,18 @@ As many modes as necessary can be created in a single planner. In addition, in e
 
 To configure the planner, we need to fill in the following settings:
 
-## Module Settings
+### Module Settings
 
 ![](/assets/images/Planner/planner_module_conf.png "Image 2. Module Configuration")
 
-## Planner Settings
+### Planner Settings
 
 ![](/assets/images/Planner/planner_conf.png "Image 3. Planner Configuration")
 
 The module object table must be present in all sql views used in mode and card configurations.
 {: .flx-warning-card }
 
-## Mode Settings
+### Mode Settings
 
 ![](/assets/images/Planner/planner_mode_conf.png "Image 4. Mode Configuration example")
 
@@ -39,7 +39,7 @@ You can set as many modes as necessary. Each of these modes will have its own ca
 
 **Menus template**: You can customize the menu for each day (in the table header) or for each cell with processes. In this template you can use both the scheduler date, the group identifier (only in the cell) and the page defaults.
 
-## Cards Settings
+### Cards Settings
 
 ![](/assets/images/Planner/planner_card_conf.png "Image 5. Card Configuration example")
 
@@ -65,7 +65,7 @@ Within a mode you can have as many card configurations as you need.
 
 **OnMove Function**: Function that will be executed when a card is moved from one cell to another.
 
-## Draggable objects
+### Draggable objects
 
 You can have one draggable object for each card configuration. The different draggable objects will be displayed in a list on the left side.
 

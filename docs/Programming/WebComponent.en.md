@@ -26,7 +26,9 @@ SELECT Top 3 \* FROM objects
 3.  Set module parameter to **mode = "grid"** to obtain a grid layout.
 4.  Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.
 
-###### SQL Feed in grid mode
+**Example:**
+
+![SQL Feed in grid mode](/assets/images/Web%20Components/SQLFeedGrid.png "SQL Feed in grid mode")
 
 ### View mode
 
@@ -38,7 +40,9 @@ SELECT Top 1 \* FROM objects
 3.  Set moule parameter to **blank** to obtain a view layout.
 4.  Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.
 
-###### SQL Feed in view mode
+**Example:**
+
+![SQL Feed in view mode](/assets/images/Web%20Components/SQLFeedView.png "SQL Feed in view mode")
 
 ## RSS Module
 
@@ -57,5 +61,3 @@ Convert any external RSS provider in to your own formated news feed with what ev
     ```
     
 3.  Add any extra variables your XSL file might need in the parameter option.
-
-##### RSS module example

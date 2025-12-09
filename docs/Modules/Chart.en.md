@@ -2,8 +2,7 @@
 
 Easy Pie, Easy Info, Easy Line and Sparklines are some of the web components you can use for charting. Combined in a HTML module, you could obtain results similar to these ones:
 
-*   TIMELINE  
-    PROGRESS BAR
+![Sample charts](/assets/images/Charts/Main.png "Sample charts")
 
 ## Easy Line
 
@@ -30,6 +29,8 @@ You can add your easy line by adding directly the flx-easyline web component.
 ```
 
 Use any of the three pre defined sizes: small, medium or large. You can also leave size empty, the component will be adapted due to autosize.
+
+![Easy line charts](/assets/images/Charts/EasyLine.png "Easy line charts")
 
 ### Options
 
@@ -72,10 +73,7 @@ This component is mainly used for the Timeline, but you can also add your Timeli
 <flx-timeline-progressbar color="#ee9e1f" percentage="87">Custom template</flx-timeline-progressbar>
 ```
 
-  
-  
-  
-Custom template  
+![Timeline charts](/assets/images/Charts/Timeline.png "Timeline charts")
 
 ### Options
 
@@ -113,6 +111,8 @@ or by adding directly the flx-easypie web component.
 ```
 
 Use any of the three pre defined sizes: small, medium or large.
+
+![Pie charts](/assets/images/Charts/Pies.png "Pie charts")
 
 ### Options
 
@@ -165,6 +165,8 @@ or by Adding directly the flx-easyinfo web component.
 ```
 
 Use any of the three pre defined sizes: small, medium or large.
+
+![Easy info charts](/assets/images/Charts/Info.png "Easy info charts")
 
 ### Options
 
@@ -225,9 +227,15 @@ Use any of the three pre defined sizes: small, medium or large for any of the sp
 
 ### Small
 
+![SparkLine charts](/assets/images/Charts/SparkLine.png "SparkLine charts small"){ .sparkline-small }
+
 ### Medium
 
+![SparkLine charts](/assets/images/Charts/SparkLine.png "SparkLine charts medium"){ .sparkline-medium }
+
 ### Large
+
+![SparkLine charts](/assets/images/Charts/SparkLine.png "SparkLine charts large"){ .sparkline-large }
 
 ### Options
 
