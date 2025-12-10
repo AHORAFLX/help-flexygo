@@ -45,6 +45,7 @@ extra_javascript:
   - javascripts/components/flx-navbutton.js
   - javascripts/components/fh-modal.js
   - javascripts/components/fh-copy.js
+  - javascripts/components/fh-popover.js
 markdown_extensions:
   - toc:
       permalink: true
