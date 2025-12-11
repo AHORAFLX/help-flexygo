@@ -1,239 +1,316 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# Opciones de navegación offline
 
-# Offline Navigation options
+## Antes de empezar
 
-## Before we start
+Debemos distinguir entre dos maneras diferentes de navegación **Ir** y **Transferir**.
 
-We must distinguish between to different way of navigation **Go** and **Transfer**
+*    **Ir (go)** deja un rastro para que podamos ir hacia atrás y hacia adelante
+*    **Transferir (transfer)** no lo hace, lo que significa que reemplaza una página por otra en el historial de navegación
 
-*   **Go** leaves a trail so we can go backward and forward
-*   **Transfer** does not which means it replaces one page for another in the navigation history
 
-When using go the navigated pages will remain in the [ion-nav](https://ionicframework.com/docs/api/nav) DOM component just covered with an aria-hidden attribute. This pages will be eliminated of the DOM once the user goBacks from it or if it navigates with a transfer from it, as specified before.
+Al usar ir, las páginas navegadas permanecerán en el componente DOM [ion-nav](https://ionicframework.com/docs/api/nav) solo cubiertas con un atributo aria-hidden. Estas páginas serán eliminadas del DOM una vez el usuario regrese de ellas o si navega con una transferencia desde ellas, como se especificó antes.
 
-Warning: The same page with and without a where is detected as differents. So there could be a situation where the same page is instanced two times in the DOM.
+La misma página con y sin un where se detecta como diferentes. Por lo tanto, podría haber una situación en la que la misma página esté instanciada dos veces en el DOM.
+{: .flx-warning-card }
 
-##### Advices
+## Consejos
 
-This behaviour makes navigation faster, but it may cause some developer to make some mistakes when interacting with the pages, so here are some tips:
+Este comportamiento hace que la navegación sea más rápida, pero puede causar que algunos desarrolladores cometan errores al interactuar con las páginas, así que aquí hay algunos consejos:
 
+```js
 $( 'flx-list:not(\[aria-hidden\])' )\[ 0 )\].refresh());
+```
 
-Do
+Haz
 
+```js
 $('flx-list')\[0\].refresh();
+```
 
-Don't
+No hagas
 
-Usually when you need to refresh a flexygo component in the app, a simple jquery selector is used, but this could create a conflict between the component you wanna refresh and the ones previously when navigating to which you want to refresh. So to avoid that you could just add a ":not(\[aria-hidden\])" to the selector which will ignore the hidden ones.
+Por lo general, cuando necesitas refrescar un componente flexygo en la aplicación, se utiliza un simple selector jquery, pero esto podría crear un conflicto entre el componente que deseas refrescar y los que estaban previamente navegando a los que deseas refrescar. Así que para evitar eso, podrías agregar un ":not([aria-hidden])" al selector que ignorará los ocultos.
 
+```js
 $('flx-list\[page-name="My\_Page"\]')\[0\].refresh();
+```
 
-Do
+Haz
 
+```js
 $('flx-list')\[0\].refresh();
+```
 
-Dont
+No hagas
 
-When modifying a hidden page the something similar to the example before could happen, but in this case it getting aria-hidden attribute wouldn't solve the problem. So when trying to reload a hidden component it is recommended to add the page-name to the selector.
+Al modificar una página oculta, podría ocurrir algo similar al ejemplo anterior, pero en este caso obtener el atributo aria-hidden no resolvería el problema. Por lo tanto, al intentar recargar un componente oculto, se recomienda agregar el page-name al selector.
 
-Advice: Knowing that the same page opened with and without a "where" clause are detected as different pages, if this strange situation ever happens you just should check the where attributes on the selector.
+Sabiendo que la misma página abierta con y sin una cláusula "donde" se detectan como páginas diferentes, si alguna vez sucede esta extraña situación, solo debes verificar los atributos where en el selector.
+{: .flx-warning-card }
 
-## GO Options
+## Opciones de IR
 
-All the following options can be included in an **onclick** event of any of your HTML items.
+Todas las opciones siguientes pueden ser incluidas en un evento **onclick** de cualquiera de tus elementos HTML.
 
-##### Go to synchronization page
+### Página de sincronización
 
+```js
 flexygo.nav.goSync();
+```
 
-##### Go to home page
+### Página de inicio
 
+```js
 flexygo.nav.goHome();
+```
 
-##### Go back
+### Volver
 
+```js
 flexygo.nav.goBack();
+```
 
-##### Go to login page
+### Página de login
 
+```js
 flexygo.nav.goLogin();
+```
 
-##### Go to object list page
+### Lista de objetos
 
+```js
 flexygo.nav.goList(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.goList('Offline\_Action', 'Offline\_Action\_List',{{objIdent|JS}}, null);
+```js
+flexygo.nav.goList('Offline_Action', 'Offline_Action_List',{{objIdent|JS}}, null);
+```
 
-##### Go to object view page
+### Vista de objeto
 
+```js
 flexygo.nav.goView(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.goView('Offline\_Action', 'Offline\_Action\_View',{{objIdent|JS}}, null);
+```js
+flexygo.nav.goView('Offline_Action', 'Offline_Action_View',{{objIdent|JS}}, null);
+```
 
-##### Go to object edit page
+### Edición de objeto
 
+```js
 flexygo.nav.goEdit(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.goEdit('Offline\_Action', '',{{objIdent|JS}}, null);
+```js
+flexygo.nav.goEdit('Offline_Action', '',{{objIdent|JS}}, null);
+```
 
-##### Go to object insert page to create a new object
+### Insertar nuevo objeto
 
+```js
 flexygo.nav.goInsert(objectname, pagename, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.goInsert('Offline\_Action', '','{"EmployeeId":"{{currentReference}}"}');
+```js
+flexygo.nav.goInsert('Offline_Action', '','{"EmployeeId":"{{currentReference}}"}');
+```
 
-##### Go to object related image gallery
+### Galería de imágenes relacionada
 
+```js
 flexygo.nav.goGallery(objectname, objectId);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.goGallery('Offline\_Action', 1);
+```js
+flexygo.nav.goGallery('Offline_Action', 1);
+```
 
-##### Go to object related documents
+### Documentos relacionados
 
+```js
 flexygo.nav.goDocuments(objectname, objectId);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.goDocuments('Offline\_Action', 1);
+```js
+flexygo.nav.goDocuments('Offline_Action', 1);
+```
 
-## Transfer Options
+## Opciones de transferencia
 
-##### Transfer to object list page
+### Lista de objetos
 
+```js
 flexygo.nav.transferList(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.transferList('Offline\_Action', 'Offline\_Action\_List',{{objIdent|JS}}, null);
+```js
+flexygo.nav.transferList('Offline_Action', 'Offline_Action_List',{{objIdent|JS}}, null);
+```
 
-##### Transfer to object view page
+### Vista de objeto
 
+```js
 flexygo.nav.transferView(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.transferView('Offline\_Action', 'Offline\_Action\_View',{{objIdent|JS}}, null);
+```js
+flexygo.nav.transferView('Offline_Action', 'Offline_Action_View',{{objIdent|JS}}, null);
+```
 
-##### Transfer to object edit page
+### Edición de objeto
 
+```js
 flexygo.nav.transferEdit(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.transferEdit('Offline\_Action', '',{{objIdent|JS}}, null);
+```js
+flexygo.nav.transferEdit('Offline_Action', '',{{objIdent|JS}}, null);
+```
 
-##### Transfer to object insert page to create a new object
+### Insertar nuevo objeto
 
+```js
 flexygo.nav.transferInsert(objectname, pagename, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.transferInsert('Offline\_Action', '','{"EmployeeId":"{{currentReference}}"}');
+```js
+flexygo.nav.transferInsert('Offline_Action', '','{"EmployeeId":"{{currentReference}}"}');
+```
 
-##### Transfer to object related image gallery
+### Galería de imágenes relacionada
 
+```js
 flexygo.nav.transferGallery(objectname, objectId);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.transferGallery('Offline\_Action', 1);
+```js
+flexygo.nav.transferGallery('Offline_Action', 1);
+```
 
-##### Transfer to object related documents
+### Documentos relacionados
 
+```js
 flexygo.nav.transferDocuments(objectname, objectId);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.transferDocuments('Offline\_Action', 1);
+```js
+flexygo.nav.transferDocuments('Offline_Action', 1);
+```
 
-## Modal Options
+## Modal
 
-##### Modal to object list page
+### Lista de objetos
 
+```js
 flexygo.nav.modalList(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.modalList('Offline\_Action', 'Offline\_Action\_List',{{objIdent|JS}}, null);
+```js
+flexygo.nav.modalList('Offline_Action', 'Offline_Action_List',{{objIdent|JS}}, null);
+```
 
-##### Modal to object view page
+### Vista de objeto
 
+```js
 flexygo.nav.modalView(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.modalView('Offline\_Action', 'Offline\_Action\_View',{{objIdent|JS}}, null);
+```js
+flexygo.nav.modalView('Offline_Action', 'Offline_Action_View',{{objIdent|JS}}, null);
+```
 
-##### Modal to object edit page
+### Edición de objeto
 
+```js
 flexygo.nav.modalEdit(objectname, pagename, filter, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.modalEdit('Offline\_Action', '',{{objIdent|JS}}, null);
+```js
+flexygo.nav.modalEdit('Offline_Action', '',{{objIdent|JS}}, null);
+```
 
-##### Modal to object insert page to create a new object
+### Insertar nuevo objeto
 
+```js
 flexygo.nav.modalInsert(objectname, pagename, defaults);
+```
 
-###### Example:
+###### Ejemplo:
 
-flexygo.nav.modalInsert('Offline\_Action', '','{"EmployeeId":"{{currentReference}}"}');
+```js
+flexygo.nav.modalInsert('Offline_Action', '','{"EmployeeId":"{{currentReference}}"}');
+```
 
-## Usefull tokens
+## Tokens útiles
 
-In the filter parameter you can use the {{objIdent|JS}} token which allows you to autogenerate the object identity. You can reference previous uploaded resources using {{Filename.png|file}} token.
+En el parámetro **filter** puedes usar `{{objIdent|JS}}` para autogenerar la identidad del objeto.  
+Puedes referenciar recursos previamente subidos con `{{Filename.png|file}}`.
 
-## Online Navigation options
+## Navegación online
 
-For online navigation flexygo has two possibilities, by parameters and by URL
+### Página principal online
 
-*   ## By Parameters
+```js
+flexygo.navOnline.goHome();
+```    
     
-    The parameters which have a value assigned mean that that would be their value unless you give them one (not null, in that case they would get their assigned value).
+### Insertar objeto (requerido: *objectName*)
+
+```js
+flexygo.navOnline.goInsert(objectName, navigateFun, defaults, filterValues);
+```
+
+### Lista de objetos (requerido: *objectName*)
+
+```js
+flexygo.navOnline.goList(objectName, navigateFun, defaults, objectWhere, filterValues);
+```
+
+### Editar objeto (requeridos: *objectName*, *objectWhere*)
+
+```js
+flexygo.navOnline.goEdit(objectName, objectWhere, navigateFun, defaults, filterValues);
+```
+
+### Ver objeto (requeridos: *objectName*, *objectWhere*)
+
+```js
+flexygo.navOnline.goView(objectName, objectWhere, navigateFun , defaults, filterValues);
+```
     
-    ##### Go to online home page
-    
-    flexygo.navOnline.goHome();
-    
-    ##### Go to the specified object insert page
-    
-    Required parameter: **objectName**.
-    
-    flexygo.navOnline.goInsert(objectName, navigateFun, defaults, filterValues);
-    
-    ##### Go to the specified object list page
-    
-    Required parameter: **objectName**.
-    
-    flexygo.navOnline.goList(objectName, navigateFun, defaults, objectWhere, filterValues);
-    
-    ##### Go to the specified object edit page
-    
-    Required parameters: **objectName** and **objectWhere**.
-    
-    flexygo.navOnline.goEdit(objectName, objectWhere, navigateFun, defaults, filterValues);
-    
-    ##### Go to the specified object view page
-    
-    Required parameters: **objectName** and **objectWhere**.
-    
-    flexygo.navOnline.goView(objectName, objectWhere, navigateFun , defaults, filterValues);
-*   ## By URL
-    
-    ##### Go to the specified website
-    
-    Required parameters: **url**.
-    
-    flexygo.navOnline.goExternalURL(url);
+### URL externa (requerido: *url*)
+
+```js
+flexygo.navOnline.goExternalURL(url);
+```

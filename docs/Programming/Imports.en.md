@@ -12,13 +12,13 @@ Imports allow us to transfer information from files to the system, for example f
 *   Active: Enable/Unable the import setting.
 *   Success Delete File
 
-*   Enabled: When the import is executed successfully the imported file is deleted.
-*   Unable: When the import is executed successfully the imported file is stored in ~/custom/imports/{{ImportId}}.
+        *   Enabled: When the import is executed successfully the imported file is deleted.
+        *   Unable: When the import is executed successfully the imported file is stored in ~/custom/imports/{{ImportId}}.
 
 *   Error Delete File
 
-*   Enabled: When the import fails the imported file is deleted.
-*   Unable: When the import fails the imported file is stored in ~/custom/imports/{{ImportId}}.
+        *   Enabled: When the import fails the imported file is deleted.
+        *   Unable: When the import fails the imported file is stored in ~/custom/imports/{{ImportId}}.
 
 ![Import settings](/assets/images/Imports/setting.png "Image 1. Create Import Setting")
 

@@ -1,153 +1,654 @@
-# Web API
+# API Web
 
-**flexygo** Web API is an application programming interface to access externally authorized objects and processes from the control panel located at Admin Work Area > Security > WebAPI or just click here.
+Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde el panel de control ubicado en Área de Trabajo de Administrador > Seguridad > WebAPI o simplemente haz clic aquí. 
 
-This API follows [OpenAPI Initiative](https://www.openapis.org/) and SDKs can be generated with [Swagger Codegen](https://swagger.io/) using your current [Schema Definition.](./webapi)
+Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando su actual Definición de Esquema. 
 
-It is **highly** recommended to use **HTTPS**.
+Es **altamente** recomendado utilizar **HTTPS**.
+{: .flx-warning-card }
 
-## OAuth Authentication
+## Autenticación OAuth
 
-### Access token
+### Token de acceso
 
-The Access Token is a credential that can be used by an application to access an API. Must be transmitted in an HTTP Authorization header to the API to allow external users to call API methods.
+El Token de Acceso es una credencial que puede ser utilizada por una aplicación para acceder a una API. Debes ser transmitido en un encabezado de Autorización HTTP a la API para permitir que los usuarios externos llamen a los métodos de la API. 
 
-You can request an access token using two ways:
+Puedes solicitar un token de acceso utilizando dos formas: 
 
-##### Sending implicit user credentials
+#### Enviando credenciales implícitas de usuario
 
-| Request |
-| --- |
-| ```<br>let username='myuser';  let pass='mypass';  $.ajax({   type: 'POST',   url: './token',   data: {grant_type: 'password', username: username, password: pass},   success: function (response) {alert('Success!')},   error: function (error) { alert('Fail!')}  });<br>``` |
-| Response |
-| ```<br>HTTP/1.1 200 OK  Content-Type: application/json  {   "access_token":"ALLgqj...rAxRvWAkjsQ",   "token_type":"bearer",     "expires_in":29,     "refresh_token":"68b....fc97a1"  }<br>``` |
+#### Solicitud:
+```js
+let username='myuser';
+let pass='mypass';
+$.ajax({
+    type: 'POST',
+    url: './token',
+    data: {grant_type: 'password', username: username, password: pass},
+    success: function (response) {alert('Success!')},
+    error: function (error) { alert('Fail!')}
+});
+```
 
-##### Sending base 64 credentials token in authorization header
+#### Respuesta
+```js
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "access_token":"ALLgqj...rAxRvWAkjsQ",
+    "token_type":"bearer",
+    "expires_in":29,
+    "refresh_token":"68b....fc97a1"
+}
+```
 
-| Request |
-| --- |
-| ```<br>let username='myuser';  let pass='mypass';    let b64Token = flexygo.history.Base64.encode(username+':'+pass);  $.ajax({   type: 'POST',   url: './token',   data: {grant_type: 'password'},   success: function (response) {alert('Success!')},   error: function (error) { alert('Fail!')},   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Basic '+b64Token); }  );<br>``` |
-| Response |
-| ```<br>HTTP/1.1 200 OK  Content-Type: application/json  {     "access_token":"ALLgqj...rAxRvWAkjsQ",     "token_type":"bearer",     "expires_in":29,   "refresh_token":"68b....fc97a1"  }<br>``` |
+##### Enviando token de credenciales base 64 en el encabezado de autorización
 
-### Refresh token
+#### Solicitud
+```js
+let username='myuser';
+let pass='mypass';  
+let b64Token = flexygo.history.Base64.encode(username+':'+pass);
+$.ajax({
+    type: 'POST',
+    url: './token',
+    data: {grant_type: 'password'},
+    success: function (response) {alert('Success!')},
+    error: function (error) { alert('Fail!')},
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Basic '+b64Token); }
+);
+```
+#### Respuesta
+```js
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "access_token":"ALLgqj...rAxRvWAkjsQ",
+    "token_type":"bearer",
+    "expires_in":29,
+    "refresh_token":"68b....fc97a1"
+}
+```
 
-A Refresh Token is a special kind of token that contains the information required to obtain a new Access Token. We can use it to get new Access Token to avoid expiration without sending user credentials again.
+### Token de refresco
 
-| Request |
-| --- |
-| ```<br>let refreshToken='68b....fcasd7a1'  let accessToken='xxaasddfgqj...rAasadjsQ';  $.ajax({   type: 'POST',   url: './token',   data: {grant_type: 'refresh_token',refresh_token: refreshToken},   success: function (response) {alert('Success!')},   error: function (error) { alert('Fail!')},   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }  );<br>``` |
-| Response |
-| ```<br>HTTP/1.1 200 OK  Content-Type: application/json  {   "access_token":"Aadfasdfgqj...rAasdfjsQ",     "token_type":"bearer",     "expires_in":29,     "refresh_token":"68b....fc97a1"  }<br>``` |
+Un Token de Refresco es un tipo especial de token que contiene la información necesaria para obtener un nuevo Token de Acceso. Puede ser usado para obtener un nuevo Token de Acceso para evitar la expiración sin enviar las credenciales del usuario nuevamente. 
 
-## Web API Methods
+#### Solicitud
+```js
+let refreshToken='68b....fcasd7a1'
+let accessToken='xxaasddfgqj...rAasadjsQ';
+$.ajax({
+    type: 'POST',
+    url: './token',
+    data: {grant_type: 'refresh_token',refresh_token: refreshToken},
+    success: function (response) {alert('Success!')},
+    error: function (error) { alert('Fail!')},
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+);
+```
+#### Respuesta
+```js
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "access_token":"Aadfasdfgqj...rAasdfjsQ",
+    "token_type":"bearer",
+    "expires_in":29,
+    "refresh_token":"68b....fc97a1"
+}
+```
 
-DescriptionMethodUrlUrl ParamsDataCodeList collectionGETwebapi/list/{ObjectName}?filter={filter?}&page={page?}&pageSize={pageSize?}&orderBy={orderBy?}
+## Métodos de la API Web
 
-| List collection |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysObject';    let filter='ObjectName=\'AHORA_Documento\'';    let page=0;    let pageSize=500;    let orderBy='IsCollection';      let accessToken='xxaasddfgqj...rAasadjsQ';    let apiUrl='./webapi/list/' + objectName;        apiUrl += '?filter=' + encodeURIComponent(filter);     apiUrl += '&page=' + encodeURIComponent(page);     apiUrl += '&pageSize=' + encodeURIComponent(pageSize);     apiUrl += '&orderBy=' + encodeURIComponent(orderBy);       $.ajax({   type: 'GET',   url: apiUrl,   data: null,   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    [     {"Property1":"Value1","PropertyN":"ValueN"},   {"Property1":"Value1","PropertyN":"ValueN"}    ]                       ` |     |     |     |
+| Descripción | Método | Url | Parámetros de Url | Datos | Código |
+|-------------|--------|-----|------------|------|------|
+| Listar colección | GET | webapi/list/{ObjectName} | ?filter={filter?}&page={page?}&pageSize={pageSize?}&orderBy={orderBy?} | | <fh-modal class="link" modal_id="fhmodal_list" modal_title="List collection">&lt;/&gt;</fh-modal> |
+| Listar colección utilizando vista | GET | webapi/list/{ObjectName}/{ViewName} | ?filter={filter?}&page={page?}&pageSize={pageSize?}&orderBy={orderBy?} | | <fh-modal class="link" modal_id="fhmodal_list_view" modal_title="List collection using view">&lt;/&gt;</fh-modal> |
+| Obtener objeto por id | GET | webapi/object/{ObjectName}/{Id} | | | <fh-modal class="link" modal_id="fhmodal_object" modal_title="Get object by id">&lt;/&gt;</fh-modal> |
+| Obtener objeto por filtro | GET | webapi/object/{ObjectName} | ?filter={filter} | | <fh-modal class="link" modal_id="fhmodal_object_filter" modal_title="Get object by filter">&lt;/&gt;</fh-modal> |
+| Insertar Objeto | POST | webapi/object/{ObjectName} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_insert" modal_title="Insert Object">&lt;/&gt;</fh-modal> |
+| Actualizar objeto por id | PUT | webapi/object/{ObjectName}/{Id} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_update" modal_title="Update object by id">&lt;/&gt;</fh-modal> |
+| Actualizar objeto por filtro | PUT | webapi/object/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_update_filter" modal_title="Update object by filter">&lt;/&gt;</fh-modal> |
+| Eliminar objeto por id | DELETE | webapi/object/{ObjectName}/{Id} | | | <fh-modal class="link" modal_id="fhmodal_delete" modal_title="Delete object by id">&lt;/&gt;</fh-modal> |
+| Eliminar objeto por filtro | DELETE | webapi/object/{ObjectName} | ?filter={filter?} | | <fh-modal class="link" modal_id="fhmodal_delete_filter" modal_title="Delete object by filter">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso con objeto por id | PUT | webapi/exec/{ProcessName}/{ObjectName}/{Id} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process" modal_title="Execute process with object by id">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso con objeto por filtro | PUT | webapi/exec/{ProcessName}/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_filter" modal_title="Execute process with object by filter">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso sin objeto | PUT | webapi/exec/{ProcessName} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_no_object" modal_title="Execute process without object">&lt;/&gt;</fh-modal> |
 
-List collection using viewGETwebapi/list/{ObjectName}/{ViewName}?filter={filter?}&page={page?}&pageSize={pageSize?}&orderBy={orderBy?}
+<div id="codemodal_list" markdown="1">
 
-| List collection using view |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysObject';    let viewName = 'sysCollections'    let filter='ObjectName=\'AHORA_Documento\'';    let page=0;    let pageSize=500;    let orderBy='IsCollection';      let accessToken='xxaasddfgqj...rAasadjsQ';    let apiUrl='./webapi/list/' + objectName + '/' + viewName;        apiUrl += '?filter=' + encodeURIComponent(filter);     apiUrl += '&page=' + encodeURIComponent(page);     apiUrl += '&pageSize=' + encodeURIComponent(pageSize);     apiUrl += '&orderBy=' + encodeURIComponent(orderBy);       $.ajax({   type: 'GET',   url: apiUrl,   data: null,   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    [     {"Property1":"Value1","PropertyN":"ValueN"},   {"Property1":"Value1","PropertyN":"ValueN"}    ]                       ` |     |     |     |
+**Request:**
 
-Get object by idGETwebapi/object/{ObjectName}/{Id}
+```js
+let objectName='sysObject';
+let filter='ObjectName=\'AHORA_Documento\'';
+let page=0;
+let pageSize=500;
+let orderBy='IsCollection';
 
-| Get object by id |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysTmpTest';    let objectId=0      let accessToken='xxaasddfgqj...rAasadjsQ';    let apiUrl='./webapi/object/' + objectName + '/' + objectId;      $.ajax({   type: 'GET',   url: apiUrl,   data: null,   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":{          "Property1":{             "Text":"",           "Value":null,           "Label":"Property1"        },        "PropertyN":{             "Text":"",           "Value":null,           "Label":"PropertyN"        }     },     "ObjectName":null,     "ObjectWhere":null,     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+let accessToken='xxaasddfgqj...rAasadjsQ';
+let apiUrl='./webapi/list/' + objectName;
 
-Get object by filterGETwebapi/object/{ObjectName}?filter={filter}
+apiUrl += '?filter=' + encodeURIComponent(filter); 
+apiUrl += '&page=' + encodeURIComponent(page); 
+apiUrl += '&pageSize=' + encodeURIComponent(pageSize); 
+apiUrl += '&orderBy=' + encodeURIComponent(orderBy); 
 
-| Get object by filter |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysTmpTest';    let filter='TestId=0';      let accessToken='xxaasddfgqj...rAasadjsQ';    let apiUrl='./webapi/object/' + objectName;    apiUrl += '?filter=' + encodeURIComponent(filter);       $.ajax({   type: 'GET',   url: apiUrl,   data: null,   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":{          "Property1":{             "Text":"",           "Value":null,           "Label":"Property1"        },        "PropertyN":{             "Text":"",           "Value":null,           "Label":"PropertyN"        }     },     "ObjectName":null,     "ObjectWhere":null,     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+$.ajax({
+type: 'GET',
+url: apiUrl,
+data: null,
+crossDomain: true,
+contentType: 'application/json; charset=utf-8',
+success: function (response) { alert('Success'); console.log(response); },
+error: function (error) { alert('Fail'); console.log(error); },
+beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
 
-Insert ObjectPOSTwebapi/object/{ObjectName}data:JsonObject
+**Response:**
 
-| Insert Object |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `        let objectName='sysTmpTest';      let properties={'TestId': 1,'Descrip': 'Prueba'}      let accessToken='xxaasddfgqj...rAasadjsQ';    let apiUrl='./webapi/object/' + objectName;      $.ajax({   type: 'POST',   url: apiUrl,   data: JSON.stringify(properties),   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":{          "Property1":{             "Text":"",           "Value":null,           "Label":"Property1"        },        "PropertyN":{             "Text":"",           "Value":null,           "Label":"PropertyN"        }     },     "ObjectName":"sysTmpTest",     "ObjectWhere":"[_Test].[TestId] = 1",     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+[
+{"Property1":"Value1","PropertyN":"ValueN"},
+{"Property1":"Value1","PropertyN":"ValueN"}
+]
+```
+</div>
 
-Update object by idPUTwebapi/object/{ObjectName}/{Id}data:JsonObject
+<div id="codemodal_list_view" markdown="1">
 
-| Update object by id |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysTmpTest';      let objectId=1    let properties={'Descrip':'Prueba actualizada id'}      let accessToken='xxaasddfgqj...rAasadjsQ';    let apiUrl='./webapi/object/' + objectName + '/' + objectId;      $.ajax({   type: 'PUT',   url: apiUrl,   data: JSON.stringify(properties),   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":{          "Property1":{             "Text":"",           "Value":null,           "Label":"Property1"        },        "PropertyN":{             "Text":"",           "Value":null,           "Label":"PropertyN"        }     },     "ObjectName":"sysTmpTest",     "ObjectWhere":"[_Test].[TestId] = 1",     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+**Request:**
 
-Update object by filterPUTwebapi/object/{ObjectName}?filter={filter?}data:JsonObject
+```js
+let objectName='sysObject';
+let viewName = 'sysCollections'
+let filter='ObjectName=\'AHORA_Documento\'';
+let page=0;
+let pageSize=500;
+let orderBy='IsCollection';
 
-| Update object by filter |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysTmpTest';      let filter='TestId=1';    let properties={"Descrip":"Prueba actualizada filtro"}      let apiUrl='./webapi/object/' + objectName;    apiUrl += '?filter=' + encodeURIComponent(filter);       $.ajax({   type: 'PUT',   url: apiUrl,   data: JSON.stringify(properties),   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":{          "Property1":{             "Text":"",           "Value":null,           "Label":"Property1"        },        "PropertyN":{             "Text":"",           "Value":null,           "Label":"PropertyN"        }     },     "ObjectName":"sysTmpTest",     "ObjectWhere":"[_Test].[TestId] = 1",     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+let accessToken='xxaasddfgqj...rAasadjsQ';
+let apiUrl='./webapi/list/' + objectName + '/' + viewName;
 
-Delete object by idDELETEwebapi/object/{ObjectName}/{Id}
+apiUrl += '?filter=' + encodeURIComponent(filter); 
+apiUrl += '&page=' + encodeURIComponent(page); 
+apiUrl += '&pageSize=' + encodeURIComponent(pageSize); 
+apiUrl += '&orderBy=' + encodeURIComponent(orderBy); 
 
-| Delete object by id |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysTmpTest';      let objectId=1      let apiUrl='./webapi/object/' + objectName + '/' + objectId;      $.ajax({   type: 'DELETE',   url: apiUrl,   data: null,   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":null,     "ObjectName":null,     "ObjectWhere":null,     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+$.ajax({
+type: 'GET',
+url: apiUrl,
+data: null,
+crossDomain: true,
+contentType: 'application/json; charset=utf-8',
+success: function (response) { alert('Success'); console.log(response); },
+error: function (error) { alert('Fail'); console.log(error); },
+beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
 
-Delete object by filterDELETEwebapi/object/{ObjectName}?filter={filter}
+**Response:**
 
-| Delete object by filter |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let objectName='sysTmpTest';      let filter='TestId=1';      let apiUrl='./webapi/object/' + objectName;    apiUrl += '?filter=' + encodeURIComponent(filter);       $.ajax({   type: 'DELETE',   url: apiUrl,   data: null,   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {       "Properties":null,     "ObjectName":null,     "ObjectWhere":null,     "JavaScript":null,     "Message":null  }                       ` |     |     |     |
+```json
+HTTP/1.1 200 OK
+  Content-Type: application/json
+  [
+    {"Property1":"Value1","PropertyN":"ValueN"},
+    {"Property1":"Value1","PropertyN":"ValueN"}
+  ]
+```
+</div>
 
-Execute process with object by idPUTwebapi/exec/{ProcessName}/{ObjectName}/{Id}data:JsonObject
+<div id="codemodal_object" markdown="1">
 
-| Execute process with object by id |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let processName='MyProcess';      let objectName='sysTmpTest';      let objectId=1    let processParams = {"Param1":"ParamValue"}      let apiUrl='./webapi/exec/' + processName + '/' + objectName + '/' + objectId;      $.ajax({   type: 'POST',   url: apiUrl,   data: JSON.stringify(processParams),   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {      "Success":true,      "SuccessMessage":"",      "WarningMessage":"",      "LastException":null,      "JSCode":null,      "JSFile":"",      "CloseParamWindow":false,      "Refresh":false    }                       ` |     |     |     |
+**Request:**
 
-Execute process with object by filterPUTwebapi/exec/{ProcessName}/{ObjectName}?filter={filter}data:JsonObject
+```js
+let objectName='sysTmpTest';
+let objectId=0
 
-| Execute process with object by filter |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let processName='MyProcess';      let objectName='sysTmpTest';      let filter='TestId=1';    let processParams = {"Param1":"ParamValue"}      let apiUrl='./webapi/exec/' + processName + '/' + objectName;    apiUrl += '?filter=' + encodeURIComponent(filter);       $.ajax({   type: 'POST',   url: apiUrl,   data: JSON.stringify(processParams),   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {      "Success":true,      "SuccessMessage":"",      "WarningMessage":"",      "LastException":null,      "JSCode":null,      "JSFile":"",      "CloseParamWindow":false,      "Refresh":false    }                       ` |     |     |     |
+let accessToken='xxaasddfgqj...rAasadjsQ';
+let apiUrl='./webapi/object/' + objectName + '/' + objectId;
 
-Execute process without objectPUTwebapi/exec/{ProcessName}data:JsonObject
+$.ajax({
+type: 'GET',
+url: apiUrl,
+data: null,
+crossDomain: true,
+contentType: 'application/json; charset=utf-8',
+success: function (response) { alert('Success'); console.log(response); },
+error: function (error) { alert('Fail'); console.log(error); },
+beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
 
-| Execute process without object |     |     |     |
-| --- | --- | --- | --- |
-| JS  | SQL | VB .NET | C#  |
-| --- | --- | --- | --- |
-| **Request:**  `       let processName='MyProcess';      let processParams = {"Param1":"ParamValue"}      let apiUrl='./webapi/exec/' + processName      $.ajax({   type: 'POST',   url: apiUrl,   data: JSON.stringify(processParams),   crossDomain: true,   contentType: 'application/json; charset=utf-8',   success: function (response) { alert('Success'); console.log(response); },   error: function (error) { alert('Fail'); console.log(error); },   beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }    });                           `  `TO_DO VB`  `TO_DO SQL`  `TO_DO C#` |     |     |     |
-| **Response:**                                  `     HTTP/1.1 200 OK    Content-Type: application/json    {      "Success":true,      "SuccessMessage":"",      "WarningMessage":"",      "LastException":null,      "JSCode":null,      "JSFile":"",      "CloseParamWindow":false,      "Refresh":false    }                       ` |     |     |     |
+**Response:**
 
-/\*.codeLink th { cursor: pointer } .codeLink th:hover { background-color: silver; color: white }\*/ .link-sql,.link-c,.link-vb{display:none} function showMethodCode(itm) { $(itm).toggle(500); } function showCode(itm, newClass) { itm.closest('table').find('.code').hide(); itm.closest('table').find('.' + newClass).show(); }
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+"Properties":{  
+    "Property1":{  
+        "Text":"",
+        "Value":null,
+        "Label":"Property1"
+    },
+    "PropertyN":{  
+        "Text":"",
+        "Value":null,
+        "Label":"PropertyN"
+    }
+},
+"ObjectName":null,
+"ObjectWhere":null,
+"JavaScript":null,
+"Message":null
+}
+```
+</div>
+
+<div id="codemodal_object_filter" markdown="1">
+
+**Request:**
+
+```js
+let objectName='sysTmpTest';
+let filter='TestId=0';
+
+let accessToken='xxaasddfgqj...rAasadjsQ';
+let apiUrl='./webapi/object/' + objectName;
+apiUrl += '?filter=' + encodeURIComponent(filter); 
+
+$.ajax({
+    type: 'GET',
+    url: apiUrl,
+    data: null,
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+    "Properties":{  
+        "Property1":{  
+            "Text":"",
+            "Value":null,
+            "Label":"Property1"
+        },
+        "PropertyN":{  
+            "Text":"",
+            "Value":null,
+            "Label":"PropertyN"
+        }
+    },
+    "ObjectName":null,
+    "ObjectWhere":null,
+    "JavaScript":null,
+    "Message":null
+}
+```
+</div>
+
+
+<div id="codemodal_insert" markdown="1">
+
+**Request:**
+
+```js
+let objectName='sysTmpTest';  
+let properties={'TestId': 1,'Descrip': 'Prueba'}
+
+let accessToken='xxaasddfgqj...rAasadjsQ';
+let apiUrl='./webapi/object/' + objectName;
+
+$.ajax({
+    type: 'POST',
+    url: apiUrl,
+    data: JSON.stringify(properties),
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+    "Properties":{  
+        "Property1":{  
+            "Text":"",
+            "Value":null,
+            "Label":"Property1"
+        },
+        "PropertyN":{  
+            "Text":"",
+            "Value":null,
+            "Label":"PropertyN"
+        }
+    },
+    "ObjectName":"sysTmpTest",
+    "ObjectWhere":"[_Test].[TestId] = 1",
+    "JavaScript":null,
+    "Message":null
+}
+```
+</div>
+
+
+<div id="codemodal_update" markdown="1">
+
+**Request:**
+
+```js
+let objectName='sysTmpTest';  
+let objectId=1
+let properties={'Descrip':'Prueba actualizada id'}
+
+let accessToken='xxaasddfgqj...rAasadjsQ';
+let apiUrl='./webapi/object/' + objectName + '/' + objectId;
+
+$.ajax({
+    type: 'PUT',
+    url: apiUrl,
+    data: JSON.stringify(properties),
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+    "Properties":{  
+        "Property1":{  
+            "Text":"",
+            "Value":null,
+            "Label":"Property1"
+        },
+        "PropertyN":{  
+            "Text":"",
+            "Value":null,
+            "Label":"PropertyN"
+        }
+    },
+    "ObjectName":"sysTmpTest",
+    "ObjectWhere":"[_Test].[TestId] = 1",
+    "JavaScript":null,
+    "Message":null
+}
+```
+</div>
+
+<div id="codemodal_update_filter" markdown="1">
+
+**Request:**
+
+```js
+let objectName='sysTmpTest';  
+let filter='TestId=1';
+let properties={"Descrip":"Prueba actualizada filtro"}
+
+let apiUrl='./webapi/object/' + objectName;
+apiUrl += '?filter=' + encodeURIComponent(filter); 
+
+$.ajax({
+    type: 'PUT',
+    url: apiUrl,
+    data: JSON.stringify(properties),
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+    "Properties":{  
+        "Property1":{  
+            "Text":"",
+            "Value":null,
+            "Label":"Property1"
+        },
+        "PropertyN":{  
+            "Text":"",
+            "Value":null,
+            "Label":"PropertyN"
+        }
+    },
+    "ObjectName":"sysTmpTest",
+    "ObjectWhere":"[_Test].[TestId] = 1",
+    "JavaScript":null,
+    "Message":null
+}
+```
+</div>
+
+<div id="codemodal_delete" markdown="1">
+
+**Request:**
+
+```js
+let objectName='sysTmpTest';  
+let objectId=1
+
+let apiUrl='./webapi/object/' + objectName + '/' + objectId;
+
+$.ajax({
+    type: 'DELETE',
+    url: apiUrl,
+    data: null,
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+   "Properties":null,
+   "ObjectName":null,
+   "ObjectWhere":null,
+   "JavaScript":null,
+   "Message":null
+}
+```
+</div>
+
+<div id="codemodal_delete_filter" markdown="1">
+
+**Request:**
+
+```js
+let objectName='sysTmpTest';  
+let filter='TestId=1';
+
+let apiUrl='./webapi/object/' + objectName;
+apiUrl += '?filter=' + encodeURIComponent(filter); 
+
+$.ajax({
+    type: 'DELETE',
+    url: apiUrl,
+    data: null,
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{  
+   "Properties":null,
+   "ObjectName":null,
+   "ObjectWhere":null,
+   "JavaScript":null,
+   "Message":null
+}
+```
+</div>
+
+<div id="codemodal_process" markdown="1">
+
+**Request:**
+
+```js
+let processName='MyProcess';  
+let objectName='sysTmpTest';  
+let objectId=1
+let processParams = {"Param1":"ParamValue"}
+
+let apiUrl='./webapi/exec/' + processName + '/' + objectName + '/' + objectId;
+
+$.ajax({
+    type: 'POST',
+    url: apiUrl,
+    data: JSON.stringify(processParams),
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "Success":true,
+    "SuccessMessage":"",
+    "WarningMessage":"",
+    "LastException":null,
+    "JSCode":null,
+    "JSFile":"",
+    "CloseParamWindow":false,
+    "Refresh":false
+}
+```
+</div>
+
+<div id="codemodal_process_filter" markdown="1">
+
+**Request:**
+
+```js
+let processName='MyProcess';  
+let objectName='sysTmpTest';  
+let filter='TestId=1';
+let processParams = {"Param1":"ParamValue"}
+
+let apiUrl='./webapi/exec/' + processName + '/' + objectName;
+apiUrl += '?filter=' + encodeURIComponent(filter); 
+
+$.ajax({
+    type: 'POST',
+    url: apiUrl,
+    data: JSON.stringify(processParams),
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "Success":true,
+    "SuccessMessage":"",
+    "WarningMessage":"",
+    "LastException":null,
+    "JSCode":null,
+    "JSFile":"",
+    "CloseParamWindow":false,
+    "Refresh":false
+}
+```
+</div>
+
+<div id="codemodal_process_no_object" markdown="1">
+
+**Request:**
+
+```js
+let processName='MyProcess';  
+let processParams = {"Param1":"ParamValue"}
+
+let apiUrl='./webapi/exec/' + processName
+
+$.ajax({
+    type: 'POST',
+    url: apiUrl,
+    data: JSON.stringify(processParams),
+    crossDomain: true,
+    contentType: 'application/json; charset=utf-8',
+    success: function (response) { alert('Success'); console.log(response); },
+    error: function (error) { alert('Fail'); console.log(error); },
+    beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); }
+});
+```
+
+**Response:**
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "Success":true,
+    "SuccessMessage":"",
+    "WarningMessage":"",
+    "LastException":null,
+    "JSCode":null,
+    "JSFile":"",
+    "CloseParamWindow":false,
+    "Refresh":false
+}
+```
+</div>

@@ -1,79 +1,64 @@
-# Scheduler and Calendar
+# Programador y Calendario
 
-See how to use the Scheduller and Calendar web component. With Scheduller and Calendar it's possible to use the same configuration and obtain different visualizations.
+Consulta cómo utilizar el componente web Scheduler y Calendar. Con Scheduler y Calendar es posible usar la misma configuración y obtener distintas visualizaciones.
 
-![](/assets/images/Scheduller/Calendar_2.jpg "Image 1. Calendar")
+![](/assets/images/Scheduller/Calendar_2.jpg "Imagen 1. Calendario")
 
-Image 1. Calendar
+## Configuración de Scheduler y Calendar
 
-## Scheduler and Calendar configuration
+![](/assets/images/Scheduller/Scheduller_conf.png "Imagen 2. Configuración del Calendario")
 
-![](/assets/images/Scheduller/Scheduller_conf.png "Image 2. Calendar Configuration")
-
-Image 2. Calendar Configuration
-
-| DESCRIPTION | WHAT DO THE PARAMETERS MEAN? |
+| DESCRIPCIÓN | ¿QUÉ SIGNIFICAN LOS PARÁMETROS? |
 | --- | --- |
-| SCHEDULLER OPTIONS |     |
+| OPCIONES DEL SCHEDULLER |     |
 | --- | --- |
-| Default mode | How to display the default calendar |
-| Min / Max time | Start and end time of the calendar total time |
-| Slot duration | Defines the time applied of cells division in the form of day or week display |
-| Month / Week / List week / Day view | Allow the user to choose between different ways of viewing the calendar |
-| All Day Slot | Enable events with full-day duration |
-| Onclick Event | Allow event access to the records painted in the calendar |
-| Event Page Type | Open the view or edit from object |
-| Event target | Type of window where the view or edit of the object will open |
-| USER FILTER |     |
-| Object Name | Object that will work as a filter |
-| View Name | The SQL query associated to the object that will bring us the data with which to work the searches |
-| Value field | Property that brings value |
-| Display Field | Property that brings what we seek to paint |
-| Token Default | You must have the contextual variables configured. This field adds a filter to the search combo previously configured in the calendar |
+| Default mode | Cómo mostrar el calendario por defecto |
+| Min / Max time | Hora de inicio y fin del tiempo total del calendario |
+| Slot duration | Define la duración aplicada a la división de celdas en la vista de día o semana |
+| Month / Week / List week / Day view | Permite al usuario elegir entre diferentes formas de visualizar el calendario |
+| All Day Slot | Habilita eventos con duración de día completo |
+| Onclick Event | Permite acceder al registro pintado en el calendario al hacer clic en el evento |
+| Event Page Type | Abrir la vista o edición del objeto |
+| Event target | Tipo de ventana donde se abrirá la vista o edición del objeto |
+| FILTRO DE USUARIO |     |
+| Object Name | Objeto que funcionará como filtro |
+| View Name | La consulta SQL asociada al objeto que traerá los datos para realizar las búsquedas |
+| Value field | Propiedad que aporta el valor |
+| Display Field | Propiedad que aporta el texto a mostrar |
+| Token Default | Debes tener las variables contextuales configuradas. Este campo agrega un filtro al combo de búsqueda previamente configurado en el calendario |
 
-## How to associate objects to already created calendar
+## Cómo asociar objetos a un calendario ya creado
 
-![](/assets/images/Scheduller/Scheduller_conf_objt.PNG "Image 2. Scheduller Configuration Object")
+![](/assets/images/Scheduller/Scheduller_conf_objt.PNG "Imagen 2. Configuración del Objeto del Scheduler")
 
-Image 2. Scheduller Configuration Object
-
-| DESCRIPTION | WHAT DO THE PARAMETERS MEAN? |
+| DESCRIPCIÓN | ¿QUÉ SIGNIFICAN LOS PARÁMETROS? |
 | --- | --- |
-| SCHEDULLER OPTIONS |     |
+| OPCIONES DEL SCHEDULLER |     |
 | --- | --- |
-| Scheduler name | The calendar name already created |
-| Object name | The object that we're going to associate |
-| View name Example | The SQL query that will bring us the data. Important that, the first two fields are the primary key of the object and the primary key of the object that we're using in the search |
-| FIELDS |     |
-| Start date field | Obligatory field that, must come from the query indicated above. **Indicate the start date** |
-| End date field | Field come from the query indicated above. **Indicate the end date** |
-| Start time field | Field come from the query indicated above. **Indicate the start hour** |
-| End time field | Field come from the query indicated above. **Indicate the end hour** |
-| Duration field | Avoid putting the field Start time and end time. With duration field, FlexyGo would calculate it automatically. If you fill in the fields start time, end time, duration field the first two have priority. |
-| Color field | Color to paint the background of the record in the calendar. Provided through the SQL query |
-| Text color field | Color to paint the text of the record in the calendar. Provided through the SQL query |
-| User id field | It's the field by which you will filter the previously configured search |
-| Appointment Template | Marked html in charge of painting the record in the calendar |
+| Scheduler name | El nombre del calendario ya creado |
+| Object name | El objeto que vamos a asociar |
+| View name Example | La consulta SQL que traerá los datos. Importante que los dos primeros campos sean la clave primaria del objeto y la clave primaria del objeto que estamos usando en la búsqueda |
+| CAMPOS |     |
+| Start date field | Campo obligatorio que debe venir de la consulta indicada arriba. **Indica la fecha de inicio** |
+| End date field | Campo proveniente de la consulta indicada. **Indica la fecha de fin** |
+| Start time field | Campo proveniente de la consulta indicada. **Indica la hora de inicio** |
+| End time field | Campo proveniente de la consulta indicada. **Indica la hora de fin** |
+| Duration field | Evita incluir los campos de hora de inicio y fin. Con el campo de duración, FlexyGo lo calculará automáticamente. Si rellenas inicio, fin y duración, los dos primeros tienen prioridad. |
+| Color field | Color para pintar el fondo del registro en el calendario. Proporcionado a través de la consulta SQL |
+| Text color field | Color para pintar el texto del registro en el calendario. Proporcionado a través de la consulta SQL |
+| User id field | Es el campo por el que se filtrará la búsqueda previamente configurada |
+| Appointment Template | HTML marcado encargado de pintar el registro en el calendario |
 
-Whatch the following video for additional information
+Mira el siguiente vídeo para información adicional
 
-## Monthly calendar view
+## Vista de calendario mensual
 
-In the monthly calendar you can choose the month/day to display by using the parameters of the associated module.  
-This parameter can use the page defaults.
+En el calendario mensual puedes elegir el mes/día a mostrar usando los parámetros del módulo asociado.  
+Este parámetro puede usar los valores por defecto de la página.
 
-  
+Ejemplo : initialDate='20240110' El formato de la fecha indicada debe ser **YYYYMMDD**
+{: .flx-warning-card }
 
-Example : initialDate='20240110' The format of the indicated date must be **YYYYMMDD**
-
-  
-
-![](/assets/images/Scheduller/Scheduller_ModParam.PNG "Image 3. Scheduller Configuration Object")
-
-Image 3. Scheduller Configuration Module Param
-
-×
-
-#### Example SQL Query \[ View from action object \]
+![](/assets/images/Scheduller/Scheduller_ModParam.PNG "Imagen 3. Configuración del Scheduler")
 
 ![](/assets/images/Scheduller/ViewObjt_Action.PNG)

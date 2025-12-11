@@ -10,8 +10,6 @@
     
     ![Reference and Subreference configuration](/assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
     
-    Image 1. Reference and Subreference configuration
-    
 2.  Activate special objects for managing **Ahora ERP Images** instead of **flexygo** image management
 3.  Activate special objects for managing **Ahora ERP Documents** instead of **flexygo** document management
 4.  It enables an **afterLogin** process that creates the Ahora Session and sets the **context-info** before executing any query in the database

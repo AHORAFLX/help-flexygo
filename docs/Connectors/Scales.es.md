@@ -1,19 +1,23 @@
-# Scales Integration
+# Integración con Básculas
 
-**flexygo** has integration with scales that uses standart Samsung ES protocol.
+**flexygo** incluye integración con básculas que utilizan el protocolo estándar Samsung ES.
 
-Ensure that your scale is compatible with Samsung ES protocol and set it following the manufacturer's instructions.
+## Configuración
 
-To add a button next to textbox field (Image 1.) just configure your edit module adding on JS After Load this instruction (Image 2.): flexygo.integrations.scales.init('PropertyName'); When user clicks on this button at first time, he will be prompted to select current scale Serial port (Image 3.). Then Chrome saves configuration, and user can read weight just clicking scale button.
+Asegúrate de que tu báscula es compatible con el protocolo Samsung ES y configúrala siguiendo las instrucciones del fabricante.
+{: .flx-warning-card }
+
+Para añadir un botón junto al campo de tipo textbox (Imagen 1), simplemente configura tu módulo de edición añadiendo en **JS After Load** la siguiente instrucción (Imagen 2):
+
+```javascript
+flexygo.integrations.scales.init('PropertyName'); 
+```
+
+Cuando el usuario pulse este botón por primera vez, el navegador solicitará seleccionar el puerto serie correspondiente a la báscula (Imagen 3).
+Después de esto, Chrome guardará la configuración y el usuario podrá leer el peso simplemente haciendo clic en el botón de la báscula.
 
 ![](/assets/images/Scales/2.png "Image 1. Get weight button")
 
-Image 1. Get weight button
-
 ![](/assets/images/Scales/1.png "Image 2. Module settings")
 
-Image 2. Module settings
-
 ![](/assets/images/Scales/3.png "Image 3. Port selector")
-
-Image 3. Port selector

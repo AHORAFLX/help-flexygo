@@ -1,34 +1,53 @@
-# Cl@ve Authentication { .flx-title-with-image }
+# Autenticación Cl@ve { .flx-title-with-image }
 
 ![Cl@ve](/assets/images/clave/clave-icon.svg){ .flx-image-of-title }
 
-We are pleased to share an exciting update to our **flexygo** web application: the introduction of Cl@ve as an authentication method. This addition aims to streamline user access, bolster security, and significantly enhance the overall user experience
+Nos complace anunciar una nueva actualización en nuestra aplicación web **flexygo**: la incorporación de **Cl@ve** como método de autenticación. Esta mejora tiene como objetivo agilizar el acceso de los usuarios, reforzar la seguridad y mejorar significativamente la experiencia general de uso.
 
-## What is Cl@ve?
+## ¿Qué es Cl@ve?
 
-Cl@ve stands for "Identificación Electrónica para las Administraciones Públicas" (Electronic Identification for Public Administrations) and serves as a single gateway for citizens to authenticate themselves across various governmental platforms. It supports multiple authentication methods, including Cl@ve PIN, Cl@ve Permanente, electronic certificates, and DNIe (Electronic National Identity Document).
+Cl@ve significa **“Identificación Electrónica para las Administraciones Públicas”**, y actúa como una puerta de acceso única para que los ciudadanos puedan autenticarse en diversas plataformas gubernamentales.  
+Permite varios métodos de autenticación, entre ellos:
+
+- Cl@ve PIN  
+- Cl@ve Permanente  
+- Certificados electrónicos  
+- DNIe (Documento Nacional de Identidad electrónico)
 
 ![Cl@ve Authentication](/assets/images/clave/clave_preview.png "Image 1. Cl@ve Authentication")
 
-Image 1. Cl@ve Authentication
+Imagen 1. Autenticación Cl@ve
 
-## How it Works
+## Cómo funciona
 
-To begin using this new authentication method, the first step is to register as a Service Provider (SP) with Cl@ve. This registration is essential because it involves requesting sensitive citizen information, and Cl@ve must validate that you meet the necessary requirements to access and use this data. You can find the required documentation in the [Cl@ve Directory](https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip "Cl@ve Directory").
+Para comenzar a utilizar este nuevo método de autenticación, el primer paso es **registrarse como Proveedor de Servicios (SP)** en la plataforma Cl@ve.  
+Este registro es obligatorio ya que solicitarás información sensible de los ciudadanos, y Cl@ve debe validar que cumples los requisitos necesarios para acceder y usar dichos datos.
 
-Following the successful registration as an SP with Cl@ve and the definition of the electronic certificate to validate SAML requests (information available in the provided documentation), we can proceed with the activation of Cl@ve authentication:
+La documentación requerida se puede encontrar en el  
+[Directorio de Cl@ve](https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip "Cl@ve Directory").
 
-Generate Cl@ve Integration
+Tras completar el registro como SP y definir el certificado electrónico para validar las solicitudes SAML (información incluida en la documentación indicada), puedes proceder a activar la autenticación mediante Cl@ve:
 
-## Settings
+<flx-navbutton class="button" type="execprocess" processname="pNet_EnableClaveAuth" showprogress="false">
+    Generar Integración Cl@ve
+</flx-navbutton>
 
-You can enable the registration of new users in your **flexygo** application using their Cl@ve account. Set the following configurations in Admin Area -> Environment -> Settings -> Security or by clicking here
+## Configuración
 
-Once the user pass through registration, it activates Register Process called "NewUserFromClave" which create a new user, applying values of profile, role, language by default. These parameters can be modified by Admin.
+Puedes habilitar el registro de nuevos usuarios en tu aplicación **flexygo** utilizando su cuenta Cl@ve.  
+Configura los siguientes parámetros en:
 
-| Parametro | Descripción |
+**Admin Area → Environment → Settings → Security**
+
+o haciendo clic en:  
+<flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton>
+
+Una vez que el usuario completa el registro mediante Cl@ve, se ejecuta el proceso **NewUserFromClave**, que crea un nuevo usuario aplicando los valores de perfil, rol y lenguaje por defecto.  
+Estos parámetros pueden ser modificados por el Administrador.
+
+| Parámetro | Descripción |
 | --- | --- |
-| aadRegistrationEnabled | Allow registration in your app using cl@ve. Values: true/false |
-| aadRegistrationDefaultProfile | ProfileName of new user by default |
-| aadRegistrationDefaultRole | Role Id of new user by default |
-| aadDefaultCultureId | Default language for new users |
+| **aadRegistrationEnabled** | Permite el registro en la app usando Cl@ve. Valores: true/false |
+| **aadRegistrationDefaultProfile** | Nombre del perfil asignado por defecto al nuevo usuario |
+| **aadRegistrationDefaultRole** | Id del rol asignado por defecto al nuevo usuario |
+| **aadDefaultCultureId** | Idioma por defecto para nuevos usuarios |

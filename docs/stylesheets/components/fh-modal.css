@@ -1,4 +1,4 @@
-[id^="codemodal_"] {
+[id^="fhmodal_"] {
     display: none;
 }
 
@@ -15,7 +15,7 @@
 
     font-size: 12px;
 
-    [id^="codemodal_"] {
+    [id^="fhmodal_"] {
         display: block;
     }
 }

@@ -1,52 +1,60 @@
-# Context Variables
+# Variables de Contexto
 
-Context variables are the variables which can have different values in different environments. These variables are used to make the code production ready and can be used in solutions as tokens in any Template or SQL Sentence.
+Las variables de contexto son aquellas que pueden tener diferentes valores en diferentes entornos. Estas variables se utilizan para hacer que el código esté listo para producción y se pueden usar en soluciones como tokens en cualquier plantilla o sentencia SQL.
 
-Whatch the following video about context variables.
+Mira el siguiente video sobre las variables de contexto.
 
-## Default Tokens
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/0MMp44TEmg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
 
-All tokens must be referenced with curly brackets **{{** / **}}**. **flexygo** includes the following variables by default:
+## Tokens por Defecto
 
-*   {{currentReference}}: Wildcard used for linking other system elements to the current user
-*   {{currentSubreference}}: 2º Wildcard used for linking other system elements to the current user
-*   {{currentRole}}: Current users role name
-*   {{currentRoleId}}: Current users role Id
-*   {{currentUserLogin}}: Current users login
-*   {{currentUserId}}: Current users Id
-*   {{currentUserFullName}}: Current users full name
-*   {{currentUserCultureId}}: Current users culture Id
-*   {{currentUserLang}}: Current users Language. First two digits of culture Id
-*   {{currentUserEmail}}: Current users Email.
-*   {{currentDate}}: Current Date.
-*   {{currentTime}}: Current Time with minutes precision.
-*   {{currentTimeSec}}: Current Time with seconds precision.
-*   {{currentDateTime}}: Current Date and Time with minutes precision.
-*   {{currentDateTimeSec}}: Current Date and Time with seconds precision.
+Todos los tokens deben ser referenciados con llaves **{{** / **}}**. Flexygo incluye las siguientes variables por defecto:
 
-## Generate Tokens
 
-**flexygo** allows you to generate your own Tokens by using SQL sentences. We shall indicate the Connection string we want to use and wich SQL Sentence using any of the previously generated tokens.
+*    **{{currentReference}}**: Comodín utilizado para vincular otros elementos del sistema al usuario actual
+*    **{{currentSubreference}}**: Segundo comodín utilizado para vincular otros elementos del sistema al usuario actual
+*    **{{currentRole}}**: Nombre del rol actual del usuario
+*    **{{currentRoleId}}**: Id del rol actual del usuario
+*    **{{currentUserLogin}}**: Login del usuario actual
+*    **{{currentUserId}}**: Id del usuario actual
+*    **{{currentUserFullName}}**: Nombre completo del usuario actual
+*    **{{currentUserCultureId}}**: Id de cultura del usuario actual
+*    **{{currentUserLang}}**: Idioma del usuario actual. Primeros dos dígitos del Id de cultura
+*    **{{currentUserEmail}}**: Correo electrónico del usuario actual.
+*    **{{currentDate}}**: Fecha actual.
+*    **{{currentTime}}**: Hora actual con precisión de minutos.
+*    **{{currentTimeSec}}**: Hora actual con precisión de segundos.
+*    **{{currentDateTime}}**: Fecha y hora actual con precisión de minutos.
+*    **{{currentDateTimeSec}}**: Fecha y hora actual con precisión de segundos.
 
-If I have an Employee Table in my data model with an Email and I want to obtain EmployeeID from employee table. We can create a new token called **{{EmployeeId}}**
 
+## Generar Tokens
+
+Flexygo te permite generar tus propios Tokens utilizando sentencias SQL. Indicaremos la cadena de conexión que queremos usar y qué sentencia SQL utilizando cualquiera de los tokens previamente generados.
+
+Si tengo una tabla de Empleados en mi modelo de datos con un correo electrónico y quiero obtener el EmployeeID de la tabla de empleados. Podemos crear un nuevo token llamado  **{{EmployeeId}}**
+```sql
 SELECT EmployeeId FROM Employees WHERE Email = '{{currentUserEmail}}'
+```
 
-Now our new {{EmployeeId}} token can be used as a standard variable anywhere in our solution.
+Ahora nuestro nuevo token {{EmployeeId}} puede ser utilizado como una variable estándar en cualquier parte de nuestra solución.
 
-## Special Tokens
+## Tokens Especiales
 
-There are some special tokens to access object forms or menus that can be used in templates or emails
+Existen algunos tokens especiales para acceder a formularios de objetos o menús que se pueden usar en plantillas o correos electrónicos
 
-#### Templates
+### Plantillas
 
-*   {{objectmenu}}: Used to display an object process menu button
-*   {{viewbutton}}: Used to display an object view button
-*   {{editbutton}}: Used to display an object edit button
-*   {{newbutton}}: Used to display an object new button
-*   {{deletebutton}}: Used to display an object delete button
+*    **{{objectmenu}}**: Se utiliza para mostrar un botón de menú de proceso de objeto
+*    **{{viewbutton}}**: Se utiliza para mostrar un botón de vista de objeto
+*    **{{editbutton}}**: Se utiliza para mostrar un botón de edición de objeto
+*    **{{newbutton}}**: Se utiliza para mostrar un botón de nuevo objeto
+*    **{{deletebutton}}**: Se utiliza para mostrar un botón de eliminación de objeto
 
-#### Mails o external links
 
-*   {{externalObjectView}}: Complete path to object view form
-*   {{externalObjectEdit}}: Complete path to object view form
+### Correos electrónicos o enlaces externos
+
+*    **{{externalObjectView}}**: Ruta completa al formulario de vista de objeto
+*    **{{externalObjectEdit}}**: Ruta completa al formulario de edición de objeto

@@ -1,48 +1,35 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# Base de datos de flexygo offline
 
-# **flexygo** Offline Database
+## Depuración básica
 
-### Basic Debugging
+1.  Desde las migraciones de bases de datos de aplicaciones offline a webassembly, se ha añadido un nuevo menú a las opciones avanzadas en el menú de sincronización, desde donde se puede ejecutar SQL. (Este menú solo está disponible en el escritorio)
+        
+    ![Menu](/assets/images/offline/DatabaseMenuNav.png "Image 1. Database Menu Navigation")
 
-1.  Since the migrations of offline app databases to webassembly, a new menu has been added to the advanced options in the sync menu, from where sql can be executed. (This menu is only available on desktop)
+2.  Una vez que ingreses a este menú, podrás ejecutar tus propios selects, desde la entrada superior o ver cualquier tabla haciendo clic en el ícono de la derecha junto a la entrada.
     
+    Consejo: Si alguna vez deseas reutilizar un select, puedes hacerlo utilizando las teclas de flecha arriba y abajo.
 
-![Menu](/assets/images/offline/DatabaseMenuNav.png "Image 1. Database Menu Navigation")
+    Consejo 2: Cuando se deba hacer un select complejo, puedes usar "shift + enter" para añadir otra línea y así hacer que la entrada sea más grande sin ejecutar la sentencia select. Y si tienes un select complejo de otro lugar, al pegarlo, la entrada crecerá automáticamente según el tamaño del select.
 
-Image 1. Database Menu Navigation
+    ![Menu](/assets/images/offline/DatabaseMenu.png "Image 2. Database Menu")
 
-3.  Once you enter this menu you will be able to execute your own selects, from the top input or view any table by clicking on the right icon next to the input.
+3.  Cuando haces clic en la entrada de tablas, se mostrarán todas las tablas en la base de datos actual. Desde allí, si seleccionas cualquiera de estas, se cargarán todos los registros en una tabla como puedes ver en la cuarta imagen.
     
+    ![Menu](/assets/images/offline/ShowTablesBtn.png "Image 3. Show Tables button")
 
-Tip: If you ever want to reuse a select, you can do so by using the up and down arrow keys.
+    ![Menu](/assets/images/offline/ShowTable.png "Image 4. Show Table")
 
-Tip 2: When a complex select must be done you may use "shift + enter" to add another line and so making the input bigger without executing the select sentence. And if you have a complex select from other place, when you paste it the input will automatically grow accoding to the select size.
+## Profiler de Base de Datos
 
-![Menu](/assets/images/offline/DatabaseMenu.png "Image 2. Database Menu")
+Desde la versión 6.11, la aplicación tiene un **profiler de base de datos** que permite registrar todas las sentencias SQL que se ejecutan en segundo plano (como por ejemplo las dependencias).
 
-Image 2. Database Menu
+Para usarlo, solo necesitarás conocer las funciones **flexygo.sql.initProfiler** y **flexygo.sql.stopProfiler**. En futuras actualizaciones, se añadirá un botón visual de play y stop en la pantalla de la base de datos.
 
-7.  When you click on the tables input, every table in the current database will be shown. From there if you tap any of this all records from it will load on a table as you can see on the fourth image.
-    
-
-![Menu](/assets/images/offline/ShowTablesBtn.png "Image 3. Show Tables button")
-
-Image 3. Show Tables button
-
-![Menu](/assets/images/offline/ShowTable.png "Image 4. Show Table")
-
-Image 4. Show Table
-
-### Database Profiler
-
-Since version 6.11 the app has a **database profiler** which allows to record all the sql sentences being executed in the background (as for example dependencies).
-
-To use it you'll just need to know the functions **flexygo.sql.initProfiler** and **flexygo.sql.stopProfiler**, in future updates a visual play and stop button will be added to the database screen.
-
-When **flexygo.sql.initProfiler** is executed all the sql executeds and their results will start being recorded, so when you run **flexygo.sql.stopProfiler** all of them will get logged on the console.
+Cuando se ejecuta **flexygo.sql.initProfiler**, todas las SQL ejecutadas y sus resultados comenzarán a ser registradas, por lo que cuando ejecutes **flexygo.sql.stopProfiler**, todas ellas se registrarán en la consola.
 
 ![Menu](/assets/images/offline/InitStopProfiler.png "Image 5. Initiate and stop profiler")
 
-If you ever want to search for a certain sentence, which can sometimes be difficult for example in big edits with lots of dependencies, you could use the function **flexygo.sql.filterProfiler** which will filter the data its given. By defaults it's not case sensitive, but if you prefer it then you could just give the third parameter the value true.
+Si alguna vez deseas buscar una sentencia en particular, lo que puede ser difícil en ediciones grandes con muchas dependencias, puedes usar la función **flexygo.sql.filterProfiler** que filtrará los datos que le pases. Por defecto, no distingue entre mayúsculas y minúsculas, pero si lo prefieres, puedes pasarle el tercer parámetro con el valor true.
 
 ![Menu](/assets/images/offline/FilterProfiler.png "Image 6. Filter profiler")

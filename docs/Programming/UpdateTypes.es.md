@@ -1,163 +1,1571 @@
-# Update Types
+# Tipos de Actualización
 
-**flexygo** includes different ways of establishing object **Insert**, **Update** and **Delete** actions. There are 4 different modes.
+Flexygo incluye diferentes formas de establecer acciones de **Insertar**, **Actualizar** y **Eliminar** objetos. Existen 4 modos diferentes.
 
-| Table 1 - Update Modes |     |
+| Modo de actualización | Descripción |
 | --- | --- |
-| Standard | Does a direct insert, update or delete to the database, based on object properties |
-| Dll Process | Allows us to create a dll to perform the insert, delete and update |
-| Stored Procedure XML | Allows us to do additional operatiosn without having to create a DLL process |
-| Stored Procedure JSON | Allows us to do additional operatiosn without having to create a DLL process |
-| Does absolutly nothing | Does nothing :) |
+| Estándar | Realiza una inserción, actualización o eliminación directa en la base de datos, basada en las propiedades del objeto. |
+| Proceso DLL | Nos permite crear una DLL para realizar la inserción, eliminación y actualización. |
+| Procedimiento Almacenado XML | Nos permite realizar operaciones adicionales sin tener que crear un proceso DLL. |
+| Procedimiento Almacenado JSON | Nos permite realizar operaciones adicionales sin tener que crear un proceso en una DLL |
+| No hace absolutamente nada | No hace nada :) |
 
-There is a fifth mode called Ahora Freeware Stored procedure to be used when working with Ahora Freeware ERP data Model
+Existe un quinto modo llamado Procedimiento Almacenado Ahora Freeware, que se usa cuando se trabaja con el modelo de datos de Ahora Freeware ERP.
 
-For the samples we have created an object called systmpTes based on two tables called **Test** (Table 2) and **TestConf** (Table 3)
+Para los ejemplos, hemos creado un objeto llamado systmpTes basado en dos tablas llamadas **Test** (Tabla 2) y **TestConf** (Tabla 3).
 
-| Table 2 - Test Table |     |
+| Columna | Descripción |
 | --- | --- |
-| TestId | int not null |
-| Descrip | nvarchar(2000) not null |
-| IdDoc | bit identity |
+| TestId | int no nulo |
+| Descrip | nvarchar(2000) no nulo |
+| IdDoc | identidad bit |
 | InsertUpdate | bit |
-| User | nvarchar(50) allows null |
-| InsertUpdateDate | datetime not null |
+| User | nvarchar(50) permite nulo |
+| InsertUpdateDate | datetime no nulo |
 
-| Table 3 - Test\_conf Table |     |
+| Columna | Descripción |
 | --- | --- |
-| TestId | int not null |
-| Config | nvarchar(50) allows null |
+| TestId | int no nulo |
+| Config | nvarchar(50) permite nulo |
 
-### Dll Process
+## Proceso DLL
 
-Insert object
+<fh-modal class="button" modal_id="fhmodal_insert_dll" modal_title="Insert object function">Insertar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_dll" modal_title="Update object function">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_dll" modal_title="Delete object function">Borrar objeto</fh-modal>
 
-Update object
+## Procedimiento Almacenado XML (Fácil)
 
-Delete object
+<fh-modal class="button" modal_id="fhmodal_insert_stored" modal_title="Insert object with easy stored procedure">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored" modal_title="Update object with easy stored procedure">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored" modal_title="Delete object with easy stored procedure">Borrar objeto</fh-modal>
 
-### Stored procedure XML (Easy)
+## Procedimiento Almacenado XML (Avanzado)
 
-Insert object
+Utiliza procedimientos almacenados optimizados para actualizar solo los campos que han cambiado.
 
-Update object
+<fh-modal class="button" modal_id="fhmodal_insert_stored_advanced" modal_title="Insert object with advanced stored procedure">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored_advanced" modal_title="Update object with advanced stored procedure">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored_advanced" modal_title="Delete object with advanced stored procedure">Borrar objeto</fh-modal>
 
-Delete object
+## Procedimiento Almacenado JSON
 
-### Stored procedure XML (Advanced)
+<fh-modal class="button" modal_id="fhmodal_insert_json" modal_title="Insert object with stored procedure JSON">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_json" modal_title="Update object with stored procedure JSON">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_json" modal_title="Delete object with stored procedure JSON">Borrar objeto</fh-modal>
 
-Use optimized Stored procedures for updating only fields that have changed
+## Procedimiento Almacenado Ahora Freeware
 
-Insert object
+Usar solo con el modelo de datos de Ahora Freeware ERP.
 
-Update object
+<fh-modal class="button" modal_id="fhmodal_insert_stored_ahora" modal_title="Insert object with Ahora Freeware stored procedure">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored_ahora" modal_title="Update object with Ahora Freeware stored procedure">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored_ahora" modal_title="Delete object with Ahora Freeware stored procedure">Borrar objeto</fh-modal>
 
-Delete object
+```vbnet { #fhmodal_insert_dll }
+Imports FLEXYGO.Configuration.Tokens
+Imports FLEXYGO.Data
+Imports FLEXYGO.Exceptions
+Imports FLEXYGO.Objects
+Imports FLEXYGO.Processing
+Imports FLEXYGO.Processing.ProcessManager
+Imports FLEXYGO.Utilities.General
+Imports FLEXYGO.Utilities.General.Util
 
-### Stored procedure JSON
+Public Class SampleDataProcesses
 
-Insert object
 
-Update object
+    '''''' <summary>
+    '''''' Insert new object
+    '''''' </summary>
+    '''''' <param name="Entity">User Entity object with all info</param>
+    '''''' <param name="Ret">ProcessHelper for returning results</param>
+    Public Shared Function InsertObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean
+        Try
 
-Delete object
+            If Not Entity.CanInsert Then
+                Ret.LastException = New LocalizedException("You do Not have enough credentials to insert this Object.")
+                Return False
+            End If
 
-### Ahora Freeware stored procedure
+            ''''Do something here before insert
 
-Use only with Ahora Freeware ERP data model
 
-Insert object
+            If Entity.InsertProcess(Entity.TableName, Settings.ObjectSettings.eUpdateType.Standard, "") Then
 
-Update object
-
-Delete object
-
-×
-
-#### Insert object function
-
-  Imports FLEXYGO.Configuration.Tokens  Imports FLEXYGO.Data  Imports FLEXYGO.Exceptions  Imports FLEXYGO.Objects  Imports FLEXYGO.Processing  Imports FLEXYGO.Processing.ProcessManager  Imports FLEXYGO.Utilities.General  Imports FLEXYGO.Utilities.General.Util    Public Class SampleDataProcesses          '''''' <summary>      '''''' Insert new object      '''''' </summary>      '''''' <param name="Entity">User Entity object with all info</param>      '''''' <param name="Ret">ProcessHelper for returning results</param>      Public Shared Function InsertObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean          Try                If Not Entity.CanInsert Then                  Ret.LastException = New LocalizedException("You do Not have enough credentials to insert this Object.")                  Return False              End If                ''''Do something here before insert                  If Entity.InsertProcess(Entity.TableName, Settings.ObjectSettings.eUpdateType.Standard, "") Then                    ''''Do something here after insert                        Ret.Success = True                  Return True              Else                  Ret.Success = False                  Ret.LastException = Entity.LastException                  Return False              End If            Catch ex As Exception              Ret.Success = False              Ret.LastException = ex              Return False          End Try      End Function     End Class          
-
-×
-
-#### Update object function
-
-      Public Shared Function UpdateObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean          Try                If Not Entity.CanUpdate Then                  Ret.LastException = New LocalizedException("You do Not have enough credentials to update this Object.")                  Return False              End If                Dim lTabla As DataTable = Entity.GetData.Tables(0).GetChanges                ''Dim OldValue As String = lTabla.Rows(0)("my\_data\_field", DataRowVersion.Original)              ''Dim NewValue As String = lTabla.Rows(0)("my\_data\_field", DataRowVersion.Original)              ''Use this sintax to compare old and new values                ''''Do something here begore update.                If Entity.UpdateProcess(Settings.ObjectSettings.eUpdateType.Standard, "") Then                      ''''Do something here after update.                    Ret.Success = True                  Return True              Else                  Ret.Success = False                  Ret.LastException = Entity.LastException                  Return False              End If            Catch ex As Exception              Ret.Success = False              Ret.LastException = ex              Return False          End Try      End Function          
-
-×
-
-#### Delete object function
-
-   Public Shared Function DeleteObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean          Try                If Not Entity.CanDelete Then                  Ret.LastException = New LocalizedException("You do Not have enough credentials to delete this Object.")                  Return False              End If                ''Do something here before delete                If Entity.DeleteProcess(Entity.TableName, Settings.ObjectSettings.eUpdateType.Standard, "") Then                    ''Do something here after delete                    Ret.Success = True                  Return True              Else                  Ret.Success = False                  Ret.LastException = Entity.LastException                  Return False              End If            Catch ex As Exception              Ret.Success = False              Ret.LastException = ex              Return False          End Try      End Function          
-
-×
-
-#### Insert object with easy stored procedure
-
-  CREATE PROCEDURE \[dbo\].\[P\_TestInsert\_Stored\]       @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT        AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestInsert\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object insert through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">  --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />  --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />  --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />  --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />  --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />  --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />  --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />  -- </Row>  --  -- ContextVars XML Sample    --  < Row>  --  < Property Name="reference" Value="0" />  --  < Property Name="subReference" Value="0" />  --  < Property Name="currentRole" Value="Admins" />  --  < Property Name="currentRoleId" Value="admins" />  --  < Property Name="currentUserLogin" Value="admin" />  --  < Property Name="currentUserId" Value="1" />  --  < Property Name="currentUserFullName" Value="admin" />  --  < Property Name="currentUserCultureId" Value="en-gb" />  --  < Property Name="currentUserLang" Value="en" />  --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />  --  </Row>  --  -- Return vars XML Sample    --  <Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />  --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50)         SET @TestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@Value)\[1\]', 'int' )      SET @Descrip=@Values.value('(/Row/Property\[@Name=''Descrip''\]/@Value)\[1\]', 'nvarchar(2000)' )      SET @Usuario=@Values.value('(/Row/Property\[@Name=''Usuario''\]/@Value)\[1\]', 'nvarchar(50)' )      SET @InsertUpdate=@Values.value('(/Row/Property\[@Name=''InsertUpdate''\]/@Value)\[1\]', 'bit' )         SET @FechaInsertUpdate=@Values.value('(/Row/Property\[@Name=''FechaInsertUpdate''\]/@Value)\[1\]', 'datetime' )      SET @Config=@Values.value('(/Row/Property\[@Name=''Config''\]/@Value)\[1\]', 'nvarchar(50)' )              /\* perform process (insert fields into different tables) \*/    INSERT INTO \_Test (TestId,Descrip, Usuario, InsertUpdate, FechaInsertUpdate)    SELECT @TestId, @DEscrip ,isnull(@Usuario,'nouser') ,@InsertUpdate ,isnull(@FechaInsertUpdate ,getdate())      INSERT INTO \_Test\_conf (TestId, Config)    SELECT @TestId , @Config       /\* change Keys \*/     -- When Property has Value replacing Value     --SET @Values.modify('replace value of (/Row/Property\[@Name=''TesId''\]/@Value)\[1\] with "sysNavigationNode"')     -- When Property has not Value inserting Value     -- SET @Values.modify('insert attribute Value {sql:variable("@TesId")} into (/Row/Property\[@Name=''TesId'' and empty(@Value)\])\[1\]')        /\* Process return values\*/    SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')    SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')   /\* Return 0 if error \*/    RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT >0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)      SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "Something went wrong"')   RETURN 0    END CATCH          
-
-×
-
-#### Update object with easy stored procedure
-
-     CREATE PROCEDURE \[dbo\].\[P\_TestUpdate\_Stored\]     @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT         AS   ----------------------------------------------------------------------------------  --#NAME  --  P\_TestUpdate\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object update through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample   --<  Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">    -- <  Property Name="TestId" Value="3" OldValue="3" TableName="\_Test" IsKey="True" />    -- <  Property Name="Descrip" Value="test4" OldValue="test3" TableName="\_Test" IsKey="False" />    -- <  Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />    -- <  Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />    -- <  Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />    -- <  Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />    -- <  Property Name="Config" Value="config4" OldValue="Config3" TableName="\_Test\_Conf" IsKey="False" />    --<  /Row>   --  -- ContextVars XML Sample    --  <  Row>   --  <  Property Name="reference" Value="0" />   --  <  Property Name="subReference" Value="0" />   --  <  Property Name="currentRole" Value="Admins" />   --  <  Property Name="currentRoleId" Value="admins" />   --  <  Property Name="currentUserLogin" Value="admin" />   --  <  Property Name="currentUserId" Value="1" />   --  <  Property Name="currentUserFullName" Value="admin" />   --  <  Property Name="currentUserCultureId" Value="en-gb" />   --  <  Property Name="currentUserLang" Value="en" />   --  <  Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  <  /Row>   --  -- Return vars XML Sample    --  <  Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50),    --OldValues   @OldTestId int               SET @OldTestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@OldValue)\[1\]', 'int' )     SET @TestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@Value)\[1\]', 'int' )      SET @Descrip=@Values.value('(/Row/Property\[@Name=''Descrip''\]/@Value)\[1\]', 'nvarchar(2000)' )      SET @Usuario=@Values.value('(/Row/Property\[@Name=''Usuario''\]/@Value)\[1\]', 'nvarchar(50)' )      SET @InsertUpdate=0       SET @FechaInsertUpdate=GETDATE()    SET @Config=@Values.value('(/Row/Property\[@Name=''Config''\]/@Value)\[1\]', 'nvarchar(50)' )              /\* perform process (insert fields into different tables) \*/    UPDATE \_Test set TestId=@TestId,Descrip=@Descrip, Usuario=@Usuario, @InsertUpdate=0, FechaInsertUpdate=@FechaInsertUpdate where TestId=@OldTestId    UPDATE \_Test\_conf set TestId=@TestId,Config=@Config where TestId=@OldTestId     /\* change Keys if necesary\*/      --SET @Values.modify('replace value of (/Row/Property\[@Name=''TesId''\]/@Value)\[1\] with @TestId')        /\* Process return values\*/    SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')    SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')        RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)         SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "Something went wrong"')   RETURN 0    END CATCH          
-
-×
-
-#### Delete object with easy stored procedure
-
-   CREATE PROCEDURE \[dbo\].\[P\_TestDelete\_Stored\]       @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT        AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestDelete\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object delete through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">   --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />   --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />   --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />   --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />   -- < /Row>   --  -- ContextVars XML Sample    --  < Row>   --  < Property Name="reference" Value="0" />   --  < Property Name="subReference" Value="0" />   --  < Property Name="currentRole" Value="Admins" />   --  < Property Name="currentRoleId" Value="admins" />   --  < Property Name="currentUserLogin" Value="admin" />   --  < Property Name="currentUserId" Value="1" />   --  < Property Name="currentUserFullName" Value="admin" />   --  < Property Name="currentUserCultureId" Value="en-gb" />   --  < Property Name="currentUserLang" Value="en" />   --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  < /Row>   --  -- Return vars XML Sample    --  < Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50)         SET @TestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@Value)\[1\]', 'int' )      SET @Descrip=@Values.value('(/Row/Property\[@Name=''Descrip''\]/@Value)\[1\]', 'nvarchar(2000)' )      SET @Usuario=@Values.value('(/Row/Property\[@Name=''Usuario''\]/@Value)\[1\]', 'nvarchar(50)' )      SET @InsertUpdate=@Values.value('(/Row/Property\[@Name=''InsertUpdate''\]/@Value)\[1\]', 'bit' )         SET @FechaInsertUpdate=@Values.value('(/Row/Property\[@Name=''FechaInsertUpdate''\]/@Value)\[1\]', 'datetime' )      SET @Config=@Values.value('(/Row/Property\[@Name=''Config''\]/@Value)\[1\]', 'nvarchar(50)' )              /\* perform process (delete fields into different tables) \*/    Delete from \_Test  where TestId=@TestId    Delete from \_Test\_Conf  where TestId=@TestId          /\* Process return values\*/    SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')    SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')   /\* Return 0 if error \*/    RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)       SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "something went wrong"')       RETURN 0    END CATCH          
-
-×
-
-#### Insert object with advanced stored procedure
-
-  CREATE PROCEDURE \[dbo\].\[P\_TestInsert\_Stored\_advanced\]       @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT        AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestInsert\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object insert through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">   --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />   --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />   --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />   --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />   -- < /Row>   --  -- ContextVars XML Sample    --  < Row>   --  < Property Name="reference" Value="0" />   --  < Property Name="subReference" Value="0" />   --  < Property Name="currentRole" Value="Admins" />   --  < Property Name="currentRoleId" Value="admins" />   --  < Property Name="currentUserLogin" Value="admin" />   --  < Property Name="currentUserId" Value="1" />   --  < Property Name="currentUserFullName" Value="admin" />   --  < Property Name="currentUserCultureId" Value="en-gb" />   --  < Property Name="currentUserLang" Value="en" />   --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  < /Row>   --  -- Return vars XML Sample    --  < Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50)        /\* load XML values into table @TableValues\*/   DECLARE @XmlDoc int   DECLARE @TableValues TABLE (Name nvarchar(50) ,Value nvarchar(max),OldValue nvarchar(max) ,TableName nvarchar(255) , IsKey Bit )      EXEC sp\_xml\_preparedocument @XmlDoc    OUTPUT, @Values       INSERT INTO @TableValues (Name, Value, OldValue, TableName , IsKey)      SELECT Name,Value,OldValue, TableName, IsKey  FROM OPENXML(@XmlDoc,'/Row/Property',1)      WITH(Name nvarchar(250) '@Name',Value nvarchar(max) '@Value',OldValue nvarchar(max) '@OldValue' ,TableName nvarchar(255) '@TableName', IsKey Bit '@IsKey')             EXEC sp\_xml\_removedocument @XmlDoc     /\* load Values into variables \*/      SELECT @TestId =Value FROM @TableValues WHERE Name='TestId'    SELECT @DEscrip =Value FROM @TableValues WHERE Name='Descrip'    SELECT @Usuario  =Value FROM @TableValues WHERE Name='Usuario'    SELECT @InsertUpdate =Value FROM @TableValues WHERE Name='InsertUpdate'    SELECT @FechaInsertUpdate =Value FROM @TableValues WHERE Name='FechaInsertUpdate'    SELECT @Config =Value FROM @TableValues WHERE Name='Config'       /\* perform process (insert fields into different tables) \*/    INSERT INTO \_Test (TestId,Descrip, Usuario, InsertUpdate, FechaInsertUpdate)    SELECT @TestId, @DEscrip ,isnull(@Usuario,'nouser') ,@InsertUpdate ,isnull(@FechaInsertUpdate ,getdate())      INSERT INTO \_Test\_conf (TestId, Config)    SELECT @TestId , @Config       /\* change Keys \*/    -- When Property has Value replacing Value    --SET @Values.modify('replace value of (/Row/Property\[@Name=''TesId''\]/@Value)\[1\] with "sysNavigationNode"')    -- When Property has not Value inserting Value    -- SET @Values.modify('insert attribute Value {sql:variable("@TesId")} into (/Row/Property\[@Name=''TesId'' and empty(@Value)\])\[1\]')        /\* Process return values\*/    SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')    SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')    /\* Return 0 if error \*/    RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)      SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "Something went wrong"')   RETURN 0    END CATCH          
-
-×
-
-#### Update object with advanced stored procedure
-
-    ALTER PROCEDURE \[dbo\].\[P\_TestUpdate\_Stored\_Advanced\]     @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT         AS   ----------------------------------------------------------------------------------  --#NAME  --  P\_TestUpdate\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object update through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample   --< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">    -- < Property Name="TestId" Value="3" OldValue="3" TableName="\_Test" IsKey="True" />    -- < Property Name="Descrip" Value="test4" OldValue="test3" TableName="\_Test" IsKey="False" />    -- < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />    -- < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />    -- < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />    -- < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />    -- < Property Name="Config" Value="config4" OldValue="Config3" TableName="\_Test\_Conf" IsKey="False" />    --< /Row>   --  -- ContextVars XML Sample    --  < Row>   --  < Property Name="reference" Value="0" />   --  < Property Name="subReference" Value="0" />   --  < Property Name="currentRole" Value="Admins" />   --  < Property Name="currentRoleId" Value="admins" />   --  < Property Name="currentUserLogin" Value="admin" />   --  < Property Name="currentUserId" Value="1" />   --  < Property Name="currentUserFullName" Value="admin" />   --  < Property Name="currentUserCultureId" Value="en-gb" />   --  < Property Name="currentUserLang" Value="en" />   --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  < /Row>   --  -- Return vars XML Sample    --  < Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50),    --OldValues   @OldTestId int ,    @OldDescrip nvarchar(2000),    @OldIdDoc int,   @OldInsertUpdate bit,       @OldUsuario nvarchar(50),   @OldFechaInsertUpdate datetime ,    @OldConfig nvarchar(50)        /\* load XML values into table @TableValues\*/   DECLARE @XmlDoc int   DECLARE @TableValues TABLE (Name nvarchar(50) ,Value nvarchar(max),OldValue nvarchar(max) ,TableName nvarchar(255) , IsKey Bit )      EXEC sp\_xml\_preparedocument @XmlDoc    OUTPUT, @Values       INSERT INTO @TableValues (Name, Value, OldValue, TableName , IsKey)      SELECT Name,Value,OldValue, TableName, IsKey  FROM OPENXML(@XmlDoc,'/Row/Property',1)      WITH(Name nvarchar(250) '@Name',Value nvarchar(max) '@Value',OldValue nvarchar(max) '@OldValue' ,TableName nvarchar(255) '@TableName', IsKey Bit '@IsKey')             EXEC sp\_xml\_removedocument @XmlDoc     /\* load Values into variables \*/      SELECT @TestId =Value, @OldTestId =OldValue FROM @TableValues WHERE Name='TestId'     SELECT @Descrip =Value, @OldDescrip =OldValue FROM @TableValues WHERE Name='Descrip'    SELECT @Usuario  =Value, @OldUsuario  =OldValue FROM @TableValues WHERE Name='Usuario'    SELECT @InsertUpdate =Value, @OldInsertUpdate =OldValue FROM @TableValues WHERE Name='InsertUpdate'    SELECT @FechaInsertUpdate=Value, @OldFechaInsertUpdate =OldValue FROM @TableValues WHERE Name='FechaInsertUpdate'    SELECT @Config =Value, @OldConfig =OldValue FROM @TableValues WHERE Name='Config'      /\* build update string for Table 1\*/    DECLARE @UpdateString nvarchar(max)    SELECT  @UpdateString  =      CASE WHEN ISNULL(OldValue,0) < > ISNULL(Value,0) THEN 'TestId=' + Value +','       ELSE '' END   FROM @TableValues WHERE Name='TestId'      SELECT  @UpdateString  =@UpdateString  +       CASE WHEN ISNULL(OldValue,'') < > ISNULL(Value,'')       THEN 'Descrip='+ CASE WHEN Value IS NULL  THEN 'NULL' ELSE '''' + Value +'''' END  +','       ELSE '' END   FROM @TableValues WHERE Name='Descrip'      SELECT  @UpdateString  =@UpdateString  +       CASE WHEN ISNULL(OldValue,'') < > ISNULL(Value,'')       THEN 'Usuario='+ CASE WHEN Value IS NULL  THEN 'NULL' ELSE '''' + Value +'''' END  +','       ELSE '' END   FROM @TableValues WHERE Name='Usuario'      SELECT  @UpdateString  =@UpdateString  + ' InsertUpdate=0,'    SELECT  @UpdateString  =@UpdateString  + 'FechaInsertUpdate=''' + CAst(GetDAte() as nvarchar)  +''''              SELECT @UpdateString = 'UPDATE \_Test SET ' +  @UpdateString  + ' WHERE TestId=' + CAST (ISNULL(@OldTestId ,'')   as nVarchar(50) )       /\* build update string for Table 1\*/    DECLARE @UpdateString2 nvarchar(max)    SELECT  @UpdateString2  =      CASE WHEN ISNULL(OldValue,0) < > ISNULL(Value,0) THEN 'TestId=' + Value +','       ELSE '' END   FROM @TableValues WHERE Name='TestId'      SELECT  @UpdateString2  =@UpdateString2  +       CASE WHEN ISNULL(OldValue,'') < > ISNULL(Value,'')       THEN 'Config='+ CASE WHEN Value IS NULL  THEN 'NULL' ELSE '''' + Value +'''' END  +','       ELSE '' END   FROM @TableValues WHERE Name='Config'      SELECT @UpdateString2 =  LEFT(@UpdateString2 , LEN(@UpdateString2 )-1)    /\*remove las coma\*/          SELECT @UpdateString2 = 'UPDATE \_Test\_Conf SET ' + @UpdateString2  + ' WHERE TestId=' + CAST (ISNULL(@OldTestId ,'') as nVarchar(50) )      /\* perform process (update fields into different tables) \*/    EXECUTE ( @UpdateString )    EXECUTE ( @UpdateString2 )       /\* perform process (insert fields into different tables) \*/    UPDATE \_Test set TestId=@TestId,Descrip=@Descrip, Usuario=@Usuario, @InsertUpdate=0, FechaInsertUpdate=@FechaInsertUpdate where TestId=@OldTestId    UPDATE \_Test\_conf set TestId=@TestId,Config=@Config where TestId=@OldTestId     /\* change Keys if necesary\*/      --SET @Values.modify('replace value of (/Row/Property\[@Name=''TesId''\]/@Value)\[1\] with sql:variable("@TestId")')            /\* Process return values\*/    SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')    SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')     RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)         SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "Something went wrong"')   RETURN 0    END CATCH          
-
-×
-
-#### Delete object with advanced stored procedure
-
-   CREATE PROCEDURE \[dbo\].\[P\_TestDelete\_Stored\_Advanced\]       @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT        AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestDelete\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object delete through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">   --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />   --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />   --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />   --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />   -- < /Row>   --  -- ContextVars XML Sample    --  < Row>   --  < Property Name="reference" Value="0" />   --  < Property Name="subReference" Value="0" />   --  < Property Name="currentRole" Value="Admins" />   --  < Property Name="currentRoleId" Value="admins" />   --  < Property Name="currentUserLogin" Value="admin" />   --  < Property Name="currentUserId" Value="1" />   --  < Property Name="currentUserFullName" Value="admin" />   --  < Property Name="currentUserCultureId" Value="en-gb" />   --  < Property Name="currentUserLang" Value="en" />   --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  < /Row>   --  -- Return vars XML Sample    --  < Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50)        /\* load XML values into table @TableValues\*/   DECLARE @XmlDoc int   DECLARE @TableValues TABLE (Name nvarchar(50) ,Value nvarchar(max),OldValue nvarchar(max) ,TableName nvarchar(255) , IsKey Bit )      EXEC sp\_xml\_preparedocument @XmlDoc    OUTPUT, @Values       INSERT INTO @TableValues (Name, Value, OldValue, TableName , IsKey)      SELECT Name,Value,OldValue, TableName, IsKey  FROM OPENXML(@XmlDoc,'/Row/Property',1)      WITH(Name nvarchar(250) '@Name',Value nvarchar(max) '@Value',OldValue nvarchar(max) '@OldValue' ,TableName nvarchar(255) '@TableName', IsKey Bit '@IsKey')             EXEC sp\_xml\_removedocument @XmlDoc     /\* load Values into variables \*/      SELECT @TestId =Value FROM @TableValues WHERE Name='TestId'    SELECT @DEscrip =Value FROM @TableValues WHERE Name='Descrip'    SELECT @Usuario  =Value FROM @TableValues WHERE Name='Usuario'    SELECT @InsertUpdate =Value FROM @TableValues WHERE Name='InsertUpdate'    SELECT @FechaInsertUpdate =Value FROM @TableValues WHERE Name='FechaInsertUpdate'    SELECT @Config =Value FROM @TableValues WHERE Name='Config'       /\* perform process (delete fields into different tables) \*/    Delete from \_Test  where TestId=@TestId    Delete from \_Test\_Conf  where TestId=@TestId      /\* Process return values\*/    SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')    SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')      /\* Return 0 if error \*/    RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)       SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "something went wrong"')       RETURN 0    END CATCH          
-
-×
-
-#### Insert object with Ahora Freeware stored procedure
-
-ALTER PROCEDURE \[dbo\].\[P\_Test\_I\]   @TestId int OUTPUT,   @Descrip nvarchar(2000) OUTPUT,   @IdDoc int OUTPUT,   @Usuario nvarchar(50) OUTPUT,   @FechaInsertUpdate datetime OUTPUT  AS   BEGIN        -- Next Id   IF @TestId IS NULL OR @TestId=0    SELECT @TestId=ISNULL(MAX(@TestId)+1,1) FROM \_Test    --  Insert     INSERT INTO \_Test(TestId,Descrip,Usuario)   VALUES (@TestId,@Descrip,@Usuario)     --Insert into \_Test\_Conf   INSERT INTO \_Test\_Conf (TestId )   SELECT T.TestID  FROM \_TEst T    LEFT JOIN \_Test\_Conf C ON T.TestId=C.TEstId    WHERE C.TestID IS NULL      -- Check   IF @@ROWCOUNT=1 BEGIN    SELECT @IdDoc=IdDoc,@Usuario=Usuario,@FechaInsertUpdate=FechaInsertUpdate FROM \_Test WHERE TestId = @TestId    RETURN -1       END ELSE BEGIN    PRINT  'ERROR IN TEST INSERT.'    RETURN 0   END     END          
-
-×
-
-#### Update object with Ahora Freeware stored procedure
-
-   CREATE PROCEDURE \[dbo\].\[P\_Test\_U\]   @TestId\_A int,   @Usuario nvarchar(50) OUTPUT,   @FechaInsertUpdate datetime OUTPUT   @TestId int OUTPUT,   @Descrip nvarchar(2000) OUTPUT    AS     Declare @Msg\_err Varchar(255)  Declare @Usuario\_ nvarchar(50)  Declare @FechaInsertUpdate\_ datetime      BEGIN       UPDATE \_Test SET TestId=@TestId, Descrip=@Descrip,InsertUpdate=1, Usuario=@usuario, FechaInsertUpdate=getdate()      WHERE TestId=@TestId\_A AND Usuario=@Usuario And Convert(Varchar(20),FechaInsertUpdate,113)=Convert(Varchar(20),@FechaInsertUpdate,113)   END    ------------------------------------------   -- Check if update was done   ------------------------------------------   IF @@ROWCOUNT=1 BEGIN    SELECT  @TestId=TestId,      @Descrip=Descrip,      @Usuario=Usuario,      @FechaInsertUpdate=FechaInsertUpdate    FROM \_Test WHERE TestId=@TestId     RETURN -1     END ELSE BEGIN     SELECT  @Usuario\_=Usuario,     @FechaInsertUpdate\_=FechaInsertUpdate    FROM \_Test WHERE TestId=@TestId\_A       IF @Usuario\_ IS NULL BEGIN      PRINT 'Could not update. Might have bee previously deleted'     RETURN 0    END ELSE IF (@Usuario< > @Usuario\_ OR Convert(Varchar(20),@FechaInsertUpdate,113)< > Convert(Varchar(20),@FechaInsertUpdate\_,113)) BEGIN      PRINT 'Could not update. Might have bee previously modifyed'      RETURN 0     END     PRINT  'Could not update. Update Error'    RETURN  0     END          
-
-×
-
-#### Delete object with Ahora Freeware stored procedure
-
-   CREATE PROCEDURE \[dbo\].\[P\_Test\_D\]   @TestId int OUTPUT,   @Usuario nvarchar(50) OUTPUT,   @FechaInsertUpdate datetime OUTPUT  AS     Declare @Usuario\_ nvarchar(50)   Declare @FechaInsertUpdate\_ datetime    BEGIN     DELETE \_Test   WHERE TestId=@TestId And Usuario=@Usuario And Convert(varchar(20),FechaInsertUpdate,113)=Convert(varchar(20),@FechaInsertUpdate,113)      -- check delete records      IF @@ROWCOUNT=1 BEGIN    RETURN  -1      END ELSE BEGIN    SELECT  @Usuario\_=Usuario,      @FechaInsertUpdate\_=FechaInsertUpdate     FROM \_test WHERE TestId=@TestId       IF @Usuario\_ IS NULL BEGIN     PRINT   'Could not delete. might have been previously deleted'     RETURN  0      END ELSE IF  (@Usuario< > @Usuario\_ Or Convert(varchar(20),@FechaInsertUpdate,113)< > Convert(varchar(20),@FechaInsertUpdate\_,113)) BEGIN          PRINT  'Could not delete. might have been previously changed'     RETURN  0    END      -- no se ha podido borrar    PRINT  'Could not delete'    RETURN 0   end  END          
-
-×
-
-#### Insert object with stored procedure JSON
-
-  CREATE PROCEDURE \[dbo\].\[P\_TestInsert\_Stored\]     @Values as nvarchar(max) OUTPUT,   @RetValues as nvarchar(max) OUTPUT      AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestInsert\_Stored  --#PARAMETERS  --   @Values OUTPUT (Required) : Object properties values,  --   @OldValues (Optional) : Old object properties values,  --   @Schema (Optional) : Schema object properties,  --  @ContextVars (Optional): Flexygo context variables,  --  @RetValues OUTPUT (Required) : Flexygo process Helper  --#OBSERVATIONS  -- Values JSON Sample  --   {  --    "TestId": 1,  --    "Descrip": "Test",  --    "IdDoc": null,  --    "InsertUpdate": null,  --    "User": "admin",  --    "InsertUpdateDate": "2025-04-23T16:23:00",  --    "Config": "TestConfig"  --   }  --  -- Old Values JSON Sample  --   {  --    "TestId": 1,  --    "Descrip": "Test",  --    "IdDoc": null,  --    "InsertUpdate": null,  --    "User": "admin",  --    "InsertUpdateDate": "2025-04-23T16:23:00",  --    "Config": null  --   }  --  -- Schema JSON Sample  --   {  --    "RowId": "714a1a4b-b2ce-4f4b-8f5c-a7acc274da85",  --    "ObjectName": "Test",  --    "Schema": {  --        "TestId": {  --            "Name": "TestId",  --            "Value": 1,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": true  --        },  --        "Descrip": {  --            "Name": "Descrip",  --            "Value": "Test",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "IdDoc": {  --            "Name": "IdDoc",  --            "Value": null,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "InsertUpdate": {  --            "Name": "InsertUpdate",  --            "Value": null,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "User": {  --            "Name": "User",  --            "Value": "admin",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "InsertUpdateDate": {  --            "Name": "InsertUpdateDate",  --            "Value": "2025-04-23T16:23:00",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "Config": {  --            "Name": "Config",  --            "Value": "TestConfig",  --            "OldValue": null,  --            "TableName": "Test\_Conf",  --            "IsKey": false  --        }  --      }  --   }  --  -- ContextVars JSON Sample    --   {  --    "currentReference": "0",  --    "currentSubreference": "0",  --    "currentRole": "Admins",  --    "currentRoleId": "admins",  --    "currentUserLogin": "admin",  --    "currentUserId": "1",  --    "currentUserFullName": "Admin Admin",  --    "currentUserCultureId": "en-gb",  --    "currentUserLang": "en",  --    "currentUserEmail": "mail@mail.es.com"  --   }  --  -- Return vars JSON Sample    --   {  --    "Success": false,  --    "SuccessMessage": "",  --    "WarningMessage": "",  --    "LastException": null,  --    "LastAfterProcessName": null,  --    "LastProcessName": null,  --    "MoreProcesses": false,  --    "JSCode": "",  --    "JSFile": "",  --    "Data": {},  --    "CloseParamWindow": false,  --    "ClearSelectionBag": false,  --    "Refresh": false,  --    "LastExecutedProcess": null  --   }  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load    DECLARE @TestId INT,          @Descrip NVARCHAR(2000),          @InsertUpdate BIT,          @User NVARCHAR(50),          @InsertUpdateDate DATETIME,    @Config NVARCHAR(50)     SELECT    @TestId = \[TestId\],    @Descrip = \[Descrip\],    @InsertUpdate = \[InsertUpdate\],    @User = \[User\],    @InsertUpdateDate = \[InsertUpdateDate\],    @Config = \[Config\]   FROM OPENJSON(@Values)   WITH (    TestId INT '$.TestId',    Descrip NVARCHAR(2000) '$.Descrip',    InsertUpdate BIT '$.InsertUpdate',    \[User\] NVARCHAR(50) '$.User',    InsertUpdateDate DATETIME '$.InsertUpdateDate',    Config NVARCHAR(50) '$.Config')      -- Insert register   INSERT INTO Test (\[TestId\], \[Descrip\], \[InsertUpdate\], \[User\], \[InsertUpdateDate\])   Select @TestId, @Descrip, isnull(@InsertUpdate,0), @User, @InsertUpdateDate     INSERT INTO Test\_Conf(\[TestId\], \[Config\])   Select @TestId, @Config     -- Change Keys   SET @Values = JSON\_MODIFY(@Values, '$.TestId', @TestId);           -- Process return values   SET @RetValues = JSON\_MODIFY(@RetValues, '$.Success', 1);   SET @RetValues = JSON\_MODIFY(@RetValues, '$.SuccessMessage', 'All went fine');   RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT >0 BEGIN    ROLLBACK TRAN    END     SET @RetValues = JSON\_MODIFY(@RetValues, '$.Success', 0);     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)      RETURN 0  END CATCH  GO          
-
-×
-
-#### Update object with stored procedure JSON
-
-  CREATE PROCEDURE \[dbo\].\[P\_TestUpdate\_Stored\]     @Values as nvarchar(max) OUTPUT,   @OldValues as nvarchar(max),   @RetValues as nvarchar(max) OUTPUT      AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestUpdate\_Stored  --#PARAMETERS  --   @Values OUTPUT (Required) : Object properties values,  --   @OldValues (Optional) : Old object properties values,  --   @Schema (Optional) : Schema object properties,  --  @ContextVars (Optional): Flexygo context variables,  --  @RetValues OUTPUT (Required) : Flexygo process Helper  --#OBSERVATIONS  -- Values JSON Sample  --   {  --    "TestId": 1,  --    "Descrip": "Test",  --    "IdDoc": null,  --    "InsertUpdate": null,  --    "User": "admin",  --    "InsertUpdateDate": "2025-04-23T16:23:00",  --    "Config": "TestConfig"  --   }  --  -- Old Values JSON Sample  --   {  --    "TestId": 1,  --    "Descrip": "Test",  --    "IdDoc": null,  --    "InsertUpdate": null,  --    "User": "admin",  --    "InsertUpdateDate": "2025-04-23T16:23:00",  --    "Config": null  --   }  --  -- Schema JSON Sample  --   {  --    "RowId": "714a1a4b-b2ce-4f4b-8f5c-a7acc274da85",  --    "ObjectName": "Test",  --    "Schema": {  --        "TestId": {  --            "Name": "TestId",  --            "Value": 1,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": true  --        },  --        "Descrip": {  --            "Name": "Descrip",  --            "Value": "Test",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "IdDoc": {  --            "Name": "IdDoc",  --            "Value": null,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "InsertUpdate": {  --            "Name": "InsertUpdate",  --            "Value": null,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "User": {  --            "Name": "User",  --            "Value": "admin",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "InsertUpdateDate": {  --            "Name": "InsertUpdateDate",  --            "Value": "2025-04-23T16:23:00",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "Config": {  --            "Name": "Config",  --            "Value": "TestConfig",  --            "OldValue": null,  --            "TableName": "Test\_Conf",  --            "IsKey": false  --        }  --      }  --   }  --  -- ContextVars JSON Sample    --   {  --    "currentReference": "0",  --    "currentSubreference": "0",  --    "currentRole": "Admins",  --    "currentRoleId": "admins",  --    "currentUserLogin": "admin",  --    "currentUserId": "1",  --    "currentUserFullName": "Admin Admin",  --    "currentUserCultureId": "en-gb",  --    "currentUserLang": "en",  --    "currentUserEmail": "mail@mail.es.com"  --   }  --  -- Return vars JSON Sample    --   {  --    "Success": false,  --    "SuccessMessage": "",  --    "WarningMessage": "",  --    "LastException": null,  --    "LastAfterProcessName": null,  --    "LastProcessName": null,  --    "MoreProcesses": false,  --    "JSCode": "",  --    "JSFile": "",  --    "Data": {},  --    "CloseParamWindow": false,  --    "ClearSelectionBag": false,  --    "Refresh": false,  --    "LastExecutedProcess": null  --   }  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load    DECLARE @TestId INT,          @Descrip NVARCHAR(2000),          @InsertUpdate BIT,          @User NVARCHAR(50),          @InsertUpdateDate DATETIME,    @Config NVARCHAR(50),    @OldTestId INT     --New Values   SELECT    @TestId = \[TestId\],    @Descrip = \[Descrip\],    @InsertUpdate = \[InsertUpdate\],    @User = \[User\],    @InsertUpdateDate = \[InsertUpdateDate\],    @Config = \[Config\]   FROM OPENJSON(@Values)   WITH (    TestId INT '$.TestId',    Descrip NVARCHAR(2000) '$.Descrip',    InsertUpdate BIT '$.InsertUpdate',    \[User\] NVARCHAR(50) '$.User',    InsertUpdateDate DATETIME '$.InsertUpdateDate',    Config NVARCHAR(50) '$.Config')       --Old Values   SELECT    @OldTestId = \[TestId\]   FROM OPENJSON(@OldValues)   WITH (    TestId INT '$.TestId')     -- Update register   UPDATE Test\_Conf Set Config = @Config Where TestId = @OldTestId   UPDATE Test SET TestId=@TestId, Descrip=@Descrip, InsertUpdate = @InsertUpdate, \[User\] = @User, InsertUpdateDate = @InsertUpdateDate Where TestId = @OldTestId     -- Change Keys   SET @Values = JSON\_MODIFY(@Values, '$.TestId', @TestId);           -- Process return values   SET @RetValues = JSON\_MODIFY(@RetValues, '$.Success', 1);   SET @RetValues = JSON\_MODIFY(@RetValues, '$.SuccessMessage', 'All went fine');   RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT >0 BEGIN    ROLLBACK TRAN    END     SET @RetValues = JSON\_MODIFY(@RetValues, '$.Success', 0);     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)      RETURN 0  END CATCH  GO          
-
-×
-
-#### Delete object with stored procedure JSON
-
-  CREATE PROCEDURE \[dbo\].\[P\_TestDelete\_Stored\]     @Values as nvarchar(max) OUTPUT,   @RetValues as nvarchar(max) OUTPUT      AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestDelete\_Stored  --#PARAMETERS  --   @Values OUTPUT (Required) : Object properties values,  --   @OldValues (Optional) : Old object properties values,  --   @Schema (Optional) : Schema object properties,  --  @ContextVars (Optional): Flexygo context variables,  --  @RetValues OUTPUT (Required) : Flexygo process Helper  --#OBSERVATIONS  -- Values JSON Sample  --   {  --    "TestId": 1,  --    "Descrip": "Test",  --    "IdDoc": null,  --    "InsertUpdate": null,  --    "User": "admin",  --    "InsertUpdateDate": "2025-04-23T16:23:00",  --    "Config": "TestConfig"  --   }  --  -- Old Values JSON Sample  --   {  --    "TestId": 1,  --    "Descrip": "Test",  --    "IdDoc": null,  --    "InsertUpdate": null,  --    "User": "admin",  --    "InsertUpdateDate": "2025-04-23T16:23:00",  --    "Config": null  --   }  --  -- Schema JSON Sample  --   {  --    "RowId": "714a1a4b-b2ce-4f4b-8f5c-a7acc274da85",  --    "ObjectName": "Test",  --    "Schema": {  --        "TestId": {  --            "Name": "TestId",  --            "Value": 1,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": true  --        },  --        "Descrip": {  --            "Name": "Descrip",  --            "Value": "Test",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "IdDoc": {  --            "Name": "IdDoc",  --            "Value": null,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "InsertUpdate": {  --            "Name": "InsertUpdate",  --            "Value": null,  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "User": {  --            "Name": "User",  --            "Value": "admin",  --            "OldValue": null,  --            "TableName": "Test",  --            "IsKey": false  --        },  --        "InsertUpdate
+                ''''Do something here after insert
+				
+                Ret.Success = True
+                Return True
+            Else
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function   
+End Class
+```
+
+```vbnet { #fhmodal_update_dll }
+Public Shared Function UpdateObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean
+        Try
+
+            If Not Entity.CanUpdate Then
+                Ret.LastException = New LocalizedException("You do Not have enough credentials to update this Object.")
+                Return False
+            End If
+
+            Dim lTabla As DataTable = Entity.GetData.Tables(0).GetChanges
+
+            ''Dim OldValue As String = lTabla.Rows(0)("my_data_field", DataRowVersion.Original)
+            ''Dim NewValue As String = lTabla.Rows(0)("my_data_field", DataRowVersion.Original)
+            ''Use this sintax to compare old and new values
+
+            ''''Do something here begore update.
+
+            If Entity.UpdateProcess(Settings.ObjectSettings.eUpdateType.Standard, "") Then
+
+
+                ''''Do something here after update.
+
+                Ret.Success = True
+                Return True
+            Else
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function
+```
+
+```vbnet { #fhmodal_delete_dll }
+Public Shared Function DeleteObj(Entity As EntityObject, Ret As ProcessHelper) As Boolean
+        Try
+
+            If Not Entity.CanDelete Then
+                Ret.LastException = New LocalizedException("You do Not have enough credentials to delete this Object.")
+                Return False
+            End If
+
+            ''Do something here before delete
+
+            If Entity.DeleteProcess(Entity.TableName, Settings.ObjectSettings.eUpdateType.Standard, "") Then
+
+                ''Do something here after delete
+
+                Ret.Success = True
+                Return True
+            Else
+                Ret.Success = False
+                Ret.LastException = Entity.LastException
+                Return False
+            End If
+
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return False
+        End Try
+    End Function
+```
+
+```sql { #fhmodal_insert_stored }
+CREATE PROCEDURE [dbo].[P_TestInsert_Stored]  
+
+	@Values as XML OUTPUT,
+	@ContextVars as XML,
+	@RetValues as XML OUTPUT 	 
+
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestInsert_Stored
+--#CREATION
+-- 		07/01/2016
+--#CLASIFICATION
+-- 		Framework/systemObjects
+--#DESCRIPTION
+-- 		Used for Testing object insert through Flexygo Stored procedure
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo ciontext variables,
+--		@RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)
+--#OBSERVATIONS
+-- Values XML Sample
+--	< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">
+--		< Property Name="TestId" Value="3" OldValue="" TableName="_Test" IsKey="True" />
+--		< Property Name="Descrip" Value="test3" OldValue="" TableName="_Test" IsKey="False" />
+--		< Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" />
+--		< Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" />
+--		< Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" />
+--		< Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" />
+--		< Property Name="Config" Value="config3" OldValue="" TableName="_Test_Conf" IsKey="False" />
+--	</Row>
+--
+-- ContextVars XML Sample		
+--  < Row>
+--		< Property Name="reference" Value="0" />
+--		< Property Name="subReference" Value="0" />
+--		< Property Name="currentRole" Value="Admins" />
+--		< Property Name="currentRoleId" Value="admins" />
+--		< Property Name="currentUserLogin" Value="admin" />
+--		< Property Name="currentUserId" Value="1" />
+--		< Property Name="currentUserFullName" Value="admin" />
+--		< Property Name="currentUserCultureId" Value="en-gb" />
+--		< Property Name="currentUserLang" Value="en" />
+--		< Property Name="currentUserEmail" Value="info@ahora.es.com" />
+--  </Row>
+--
+-- Return vars XML Sample		
+--		<Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />
+--
+--#CHANGES
+-- 		13/02/2018- David Miralpeix
+----------------------------------------------------------------------------------
+BEGIN TRY
+	
+	--Declare field variables to load
+	DECLARE @TestId int, 
+	@Descrip nvarchar(2000), 
+	@IdDoc int,
+	@InsertUpdate bit, 
+    @Usuario nvarchar(50),
+	@FechaInsertUpdate datetime , 
+	@Config nvarchar(50)
+
+	
+	 SET @TestId=@Values.value('(/Row/Property[@Name=''TestId'']/@Value)[1]', 'int' )  
+	 SET @Descrip=@Values.value('(/Row/Property[@Name=''Descrip'']/@Value)[1]', 'nvarchar(2000)' )  
+	 SET @Usuario=@Values.value('(/Row/Property[@Name=''Usuario'']/@Value)[1]', 'nvarchar(50)' )  
+	 SET @InsertUpdate=@Values.value('(/Row/Property[@Name=''InsertUpdate'']/@Value)[1]', 'bit' )  
+     SET @FechaInsertUpdate=@Values.value('(/Row/Property[@Name=''FechaInsertUpdate'']/@Value)[1]', 'datetime' )  
+	 SET @Config=@Values.value('(/Row/Property[@Name=''Config'']/@Value)[1]', 'nvarchar(50)' )  
+		 
+
+
+	/* perform process (insert fields into different tables) */
+	 INSERT INTO _Test (TestId,Descrip, Usuario, InsertUpdate, FechaInsertUpdate)
+	 SELECT @TestId, @DEscrip ,isnull(@Usuario,'nouser') ,@InsertUpdate ,isnull(@FechaInsertUpdate ,getdate())
+
+	 INSERT INTO _Test_conf (TestId, Config)
+	 SELECT @TestId , @Config 
+
+	 /* change Keys */
+	  -- When Property has Value replacing Value
+	  --SET @Values.modify('replace value of (/Row/Property[@Name=''TesId'']/@Value)[1] with "sysNavigationNode"')
+	  -- When Property has not Value inserting Value
+	  -- SET @Values.modify('insert attribute Value {sql:variable("@TesId")} into (/Row/Property[@Name=''TesId'' and empty(@Value)])[1]')
+
+    /* Process return values*/
+		SET @RetValues.modify('replace value of (/Property/@Success)[1] with 1')
+		SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "All went fine"')
+	/* Return 0 if error */
+		RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT >0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+	SET @RetValues.modify('replace value of (/Property/@Success)[1] with 0')
+	SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "Something went wrong"')
+	RETURN 0
+
+END CATCH
+```
+
+```sql { #fhmodal_update_stored }
+CREATE PROCEDURE [dbo].[P_TestUpdate_Stored]  
+	@Values as XML OUTPUT,
+	@ContextVars as XML,
+	@RetValues as XML OUTPUT  	 
+
+	AS
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestUpdate_Stored
+--#CREATION
+-- 		07/01/2016
+--#CLASIFICATION
+-- 		Framework/systemObjects
+--#DESCRIPTION
+-- 		Used for Testing object update through Flexygo Stored procedure
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo ciontext variables,
+--		@RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)
+--#OBSERVATIONS
+-- Values XML Sample
+	--<  Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest"> 
+	--	<  Property Name="TestId" Value="3" OldValue="3" TableName="_Test" IsKey="True" /> 
+	--	<  Property Name="Descrip" Value="test4" OldValue="test3" TableName="_Test" IsKey="False" /> 
+	--	<  Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+	--	<  Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" /> 
+	--	<  Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+	--	<  Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" /> 
+	--	<  Property Name="Config" Value="config4" OldValue="Config3" TableName="_Test_Conf" IsKey="False" /> 
+	--<  /Row> 
+--
+-- ContextVars XML Sample		
+--  <  Row> 
+--		<  Property Name="reference" Value="0" /> 
+--		<  Property Name="subReference" Value="0" /> 
+--		<  Property Name="currentRole" Value="Admins" /> 
+--		<  Property Name="currentRoleId" Value="admins" /> 
+--		<  Property Name="currentUserLogin" Value="admin" /> 
+--		<  Property Name="currentUserId" Value="1" /> 
+--		<  Property Name="currentUserFullName" Value="admin" /> 
+--		<  Property Name="currentUserCultureId" Value="en-gb" /> 
+--		<  Property Name="currentUserLang" Value="en" /> 
+--		<  Property Name="currentUserEmail" Value="info@ahora.es.com" /> 
+--  <  /Row> 
+--
+-- Return vars XML Sample		
+--		<  Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" /> 
+--
+--#CHANGES
+-- 		13/02/2018- David Miralpeix
+----------------------------------------------------------------------------------
+BEGIN TRY
+	
+	--Declare field variables to load
+	DECLARE @TestId int, 
+	@Descrip nvarchar(2000), 
+	@IdDoc int,
+	@InsertUpdate bit, 
+    @Usuario nvarchar(50),
+	@FechaInsertUpdate datetime , 
+	@Config nvarchar(50),
+		--OldValues
+	@OldTestId int 
+
+	
+	
+
+	 SET @OldTestId=@Values.value('(/Row/Property[@Name=''TestId'']/@OldValue)[1]', 'int' ) 
+	 SET @TestId=@Values.value('(/Row/Property[@Name=''TestId'']/@Value)[1]', 'int' )  
+	 SET @Descrip=@Values.value('(/Row/Property[@Name=''Descrip'']/@Value)[1]', 'nvarchar(2000)' )  
+	 SET @Usuario=@Values.value('(/Row/Property[@Name=''Usuario'']/@Value)[1]', 'nvarchar(50)' )  
+	 SET @InsertUpdate=0
+     SET @FechaInsertUpdate=GETDATE()
+	 SET @Config=@Values.value('(/Row/Property[@Name=''Config'']/@Value)[1]', 'nvarchar(50)' )  
+		 
+
+
+	/* perform process (insert fields into different tables) */
+	 UPDATE _Test set TestId=@TestId,Descrip=@Descrip, Usuario=@Usuario, @InsertUpdate=0, FechaInsertUpdate=@FechaInsertUpdate where TestId=@OldTestId
+	 UPDATE _Test_conf set TestId=@TestId,Config=@Config where TestId=@OldTestId
+
+	/* change Keys if necesary*/
+
+		--SET @Values.modify('replace value of (/Row/Property[@Name=''TesId'']/@Value)[1] with @TestId')
+
+    /* Process return values*/
+		SET @RetValues.modify('replace value of (/Property/@Success)[1] with 1')
+		SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "All went fine"')  
+	
+	RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT > 0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+    SET @RetValues.modify('replace value of (/Property/@Success)[1] with 0')
+	SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "Something went wrong"')
+	RETURN 0
+
+END CATCH
+```
+
+```sql { #fhmodal_delete_stored }
+CREATE PROCEDURE [dbo].[P_TestDelete_Stored]  
+
+	@Values as XML OUTPUT,
+	@ContextVars as XML,
+	@RetValues as XML OUTPUT 	 
+
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestDelete_Stored
+--#CREATION
+-- 		07/01/2016
+--#CLASIFICATION
+-- 		Framework/systemObjects
+--#DESCRIPTION
+-- 		Used for Testing object delete through Flexygo Stored procedure
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo ciontext variables,
+--		@RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)
+--#OBSERVATIONS
+-- Values XML Sample
+--	< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest"> 
+--		< Property Name="TestId" Value="3" OldValue="" TableName="_Test" IsKey="True" /> 
+--		< Property Name="Descrip" Value="test3" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Config" Value="config3" OldValue="" TableName="_Test_Conf" IsKey="False" /> 
+--	< /Row> 
+--
+-- ContextVars XML Sample		
+--  < Row> 
+--		< Property Name="reference" Value="0" /> 
+--		< Property Name="subReference" Value="0" /> 
+--		< Property Name="currentRole" Value="Admins" /> 
+--		< Property Name="currentRoleId" Value="admins" /> 
+--		< Property Name="currentUserLogin" Value="admin" /> 
+--		< Property Name="currentUserId" Value="1" /> 
+--		< Property Name="currentUserFullName" Value="admin" /> 
+--		< Property Name="currentUserCultureId" Value="en-gb" /> 
+--		< Property Name="currentUserLang" Value="en" /> 
+--		< Property Name="currentUserEmail" Value="info@ahora.es.com" /> 
+--  < /Row> 
+--
+-- Return vars XML Sample		
+--		< Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" /> 
+--
+--#CHANGES
+-- 		13/02/2018- David Miralpeix
+----------------------------------------------------------------------------------
+BEGIN TRY
+	
+	--Declare field variables to load
+	DECLARE @TestId int, 
+	@Descrip nvarchar(2000), 
+	@IdDoc int,
+	@InsertUpdate bit, 
+    @Usuario nvarchar(50),
+	@FechaInsertUpdate datetime , 
+	@Config nvarchar(50)
+
+	
+	 SET @TestId=@Values.value('(/Row/Property[@Name=''TestId'']/@Value)[1]', 'int' )  
+	 SET @Descrip=@Values.value('(/Row/Property[@Name=''Descrip'']/@Value)[1]', 'nvarchar(2000)' )  
+	 SET @Usuario=@Values.value('(/Row/Property[@Name=''Usuario'']/@Value)[1]', 'nvarchar(50)' )  
+	 SET @InsertUpdate=@Values.value('(/Row/Property[@Name=''InsertUpdate'']/@Value)[1]', 'bit' )  
+     SET @FechaInsertUpdate=@Values.value('(/Row/Property[@Name=''FechaInsertUpdate'']/@Value)[1]', 'datetime' )  
+	 SET @Config=@Values.value('(/Row/Property[@Name=''Config'']/@Value)[1]', 'nvarchar(50)' )  
+		 
+
+
+	/* perform process (delete fields into different tables) */
+	 Delete from _Test  where TestId=@TestId
+	 Delete from _Test_Conf  where TestId=@TestId
+	 
+    /* Process return values*/
+		SET @RetValues.modify('replace value of (/Property/@Success)[1] with 1')
+		SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "All went fine"')
+	/* Return 0 if error */
+		RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT > 0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+
+
+	SET @RetValues.modify('replace value of (/Property/@Success)[1] with 0')
+	SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "something went wrong"') 
+	
+	RETURN 0
+
+END CATCH
+```
+
+```sql { #fhmodal_insert_stored_advanced }
+CREATE PROCEDURE [dbo].[P_TestInsert_Stored_advanced]  
+
+	@Values as XML OUTPUT,
+	@ContextVars as XML,
+	@RetValues as XML OUTPUT 	 
+
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestInsert_Stored
+--#CREATION
+-- 		07/01/2016
+--#CLASIFICATION
+-- 		Framework/systemObjects
+--#DESCRIPTION
+-- 		Used for Testing object insert through Flexygo Stored procedure
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo ciontext variables,
+--		@RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)
+--#OBSERVATIONS
+-- Values XML Sample
+--	< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest"> 
+--		< Property Name="TestId" Value="3" OldValue="" TableName="_Test" IsKey="True" /> 
+--		< Property Name="Descrip" Value="test3" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Config" Value="config3" OldValue="" TableName="_Test_Conf" IsKey="False" /> 
+--	< /Row> 
+--
+-- ContextVars XML Sample		
+--  < Row> 
+--		< Property Name="reference" Value="0" /> 
+--		< Property Name="subReference" Value="0" /> 
+--		< Property Name="currentRole" Value="Admins" /> 
+--		< Property Name="currentRoleId" Value="admins" /> 
+--		< Property Name="currentUserLogin" Value="admin" /> 
+--		< Property Name="currentUserId" Value="1" /> 
+--		< Property Name="currentUserFullName" Value="admin" /> 
+--		< Property Name="currentUserCultureId" Value="en-gb" /> 
+--		< Property Name="currentUserLang" Value="en" /> 
+--		< Property Name="currentUserEmail" Value="info@ahora.es.com" /> 
+--  < /Row> 
+--
+-- Return vars XML Sample		
+--		< Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" /> 
+--
+--#CHANGES
+-- 		13/02/2018- David Miralpeix
+----------------------------------------------------------------------------------
+BEGIN TRY
+	
+	--Declare field variables to load
+	DECLARE @TestId int, 
+	@Descrip nvarchar(2000), 
+	@IdDoc int,
+	@InsertUpdate bit, 
+    @Usuario nvarchar(50),
+	@FechaInsertUpdate datetime , 
+	@Config nvarchar(50)
+
+	
+	/* load XML values into table @TableValues*/
+	DECLARE @XmlDoc int
+	DECLARE @TableValues TABLE (Name nvarchar(50) ,Value nvarchar(max),OldValue nvarchar(max) ,TableName nvarchar(255) , IsKey Bit )
+    EXEC sp_xml_preparedocument @XmlDoc    OUTPUT, @Values  
+
+	INSERT INTO @TableValues (Name, Value, OldValue, TableName , IsKey)
+    SELECT Name,Value,OldValue, TableName, IsKey  FROM OPENXML(@XmlDoc,'/Row/Property',1)
+    WITH(Name nvarchar(250) '@Name',Value nvarchar(max) '@Value',OldValue nvarchar(max) '@OldValue' ,TableName nvarchar(255) '@TableName', IsKey Bit '@IsKey')
+     
+    EXEC sp_xml_removedocument @XmlDoc
+
+	/* load Values into variables */
+
+	 SELECT @TestId =Value FROM @TableValues WHERE Name='TestId'
+	 SELECT @DEscrip =Value FROM @TableValues WHERE Name='Descrip'
+	 SELECT @Usuario  =Value FROM @TableValues WHERE Name='Usuario'
+	 SELECT @InsertUpdate =Value FROM @TableValues WHERE Name='InsertUpdate'
+	 SELECT @FechaInsertUpdate =Value FROM @TableValues WHERE Name='FechaInsertUpdate'
+	 SELECT @Config =Value FROM @TableValues WHERE Name='Config'
+
+
+	/* perform process (insert fields into different tables) */
+	 INSERT INTO _Test (TestId,Descrip, Usuario, InsertUpdate, FechaInsertUpdate)
+	 SELECT @TestId, @DEscrip ,isnull(@Usuario,'nouser') ,@InsertUpdate ,isnull(@FechaInsertUpdate ,getdate())
+
+	 INSERT INTO _Test_conf (TestId, Config)
+	 SELECT @TestId , @Config 
+
+	 /* change Keys */
+	 -- When Property has Value replacing Value
+	 --SET @Values.modify('replace value of (/Row/Property[@Name=''TesId'']/@Value)[1] with "sysNavigationNode"')
+	 -- When Property has not Value inserting Value
+	 -- SET @Values.modify('insert attribute Value {sql:variable("@TesId")} into (/Row/Property[@Name=''TesId'' and empty(@Value)])[1]')
+
+    /* Process return values*/
+		SET @RetValues.modify('replace value of (/Property/@Success)[1] with 1')
+		SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "All went fine"')	
+	/* Return 0 if error */
+		RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT > 0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+	SET @RetValues.modify('replace value of (/Property/@Success)[1] with 0')
+	SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "Something went wrong"')
+	RETURN 0
+
+END CATCH
+```
+
+```sql { #fhmodal_update_stored_advanced }
+ALTER PROCEDURE [dbo].[P_TestUpdate_Stored_Advanced]  
+	@Values as XML OUTPUT,
+	@ContextVars as XML,
+	@RetValues as XML OUTPUT  	 
+
+	AS
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestUpdate_Stored
+--#CREATION
+-- 		07/01/2016
+--#CLASIFICATION
+-- 		Framework/systemObjects
+--#DESCRIPTION
+-- 		Used for Testing object update through Flexygo Stored procedure
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo ciontext variables,
+--		@RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)
+--#OBSERVATIONS
+-- Values XML Sample
+	--< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest"> 
+	--	< Property Name="TestId" Value="3" OldValue="3" TableName="_Test" IsKey="True" /> 
+	--	< Property Name="Descrip" Value="test4" OldValue="test3" TableName="_Test" IsKey="False" /> 
+	--	< Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+	--	< Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" /> 
+	--	< Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+	--	< Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" /> 
+	--	< Property Name="Config" Value="config4" OldValue="Config3" TableName="_Test_Conf" IsKey="False" /> 
+	--< /Row> 
+--
+-- ContextVars XML Sample		
+--  < Row> 
+--		< Property Name="reference" Value="0" /> 
+--		< Property Name="subReference" Value="0" /> 
+--		< Property Name="currentRole" Value="Admins" /> 
+--		< Property Name="currentRoleId" Value="admins" /> 
+--		< Property Name="currentUserLogin" Value="admin" /> 
+--		< Property Name="currentUserId" Value="1" /> 
+--		< Property Name="currentUserFullName" Value="admin" /> 
+--		< Property Name="currentUserCultureId" Value="en-gb" /> 
+--		< Property Name="currentUserLang" Value="en" /> 
+--		< Property Name="currentUserEmail" Value="info@ahora.es.com" /> 
+--  < /Row> 
+--
+-- Return vars XML Sample		
+--		< Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" /> 
+--
+--#CHANGES
+-- 		13/02/2018- David Miralpeix
+----------------------------------------------------------------------------------
+BEGIN TRY
+	
+	--Declare field variables to load
+	DECLARE @TestId int, 
+	@Descrip nvarchar(2000), 
+	@IdDoc int,
+	@InsertUpdate bit, 
+    @Usuario nvarchar(50),
+	@FechaInsertUpdate datetime , 
+	@Config nvarchar(50),
+		--OldValues
+	@OldTestId int , 
+	@OldDescrip nvarchar(2000), 
+	@OldIdDoc int,
+	@OldInsertUpdate bit, 
+    @OldUsuario nvarchar(50),
+	@OldFechaInsertUpdate datetime , 
+	@OldConfig nvarchar(50)
+
+	
+	/* load XML values into table @TableValues*/
+	DECLARE @XmlDoc int
+	DECLARE @TableValues TABLE (Name nvarchar(50) ,Value nvarchar(max),OldValue nvarchar(max) ,TableName nvarchar(255) , IsKey Bit )
+    EXEC sp_xml_preparedocument @XmlDoc    OUTPUT, @Values  
+
+	INSERT INTO @TableValues (Name, Value, OldValue, TableName , IsKey)
+    SELECT Name,Value,OldValue, TableName, IsKey  FROM OPENXML(@XmlDoc,'/Row/Property',1)
+    WITH(Name nvarchar(250) '@Name',Value nvarchar(max) '@Value',OldValue nvarchar(max) '@OldValue' ,TableName nvarchar(255) '@TableName', IsKey Bit '@IsKey')
+     
+    EXEC sp_xml_removedocument @XmlDoc
+
+	/* load Values into variables */
+
+	 SELECT @TestId =Value, @OldTestId =OldValue FROM @TableValues WHERE Name='TestId' 
+	 SELECT @Descrip =Value, @OldDescrip =OldValue FROM @TableValues WHERE Name='Descrip'
+	 SELECT @Usuario  =Value, @OldUsuario  =OldValue FROM @TableValues WHERE Name='Usuario'
+	 SELECT @InsertUpdate =Value, @OldInsertUpdate =OldValue FROM @TableValues WHERE Name='InsertUpdate'
+	 SELECT @FechaInsertUpdate=Value, @OldFechaInsertUpdate =OldValue FROM @TableValues WHERE Name='FechaInsertUpdate'
+	 SELECT @Config =Value, @OldConfig =OldValue FROM @TableValues WHERE Name='Config'
+
+	 /* build update string for Table 1*/
+	 DECLARE @UpdateString nvarchar(max)
+	 SELECT  @UpdateString  =
+			 CASE WHEN ISNULL(OldValue,0) < > ISNULL(Value,0) THEN 'TestId=' + Value +',' 
+			 ELSE '' END   FROM @TableValues WHERE Name='TestId'
+
+	 SELECT  @UpdateString  =@UpdateString  + 
+			 CASE WHEN ISNULL(OldValue,'') < > ISNULL(Value,'') 
+				THEN 'Descrip='+ CASE WHEN Value IS NULL  THEN 'NULL' ELSE '''' + Value +'''' END  +',' 
+			 ELSE '' END   FROM @TableValues WHERE Name='Descrip'
+
+	 SELECT  @UpdateString  =@UpdateString  + 
+			 CASE WHEN ISNULL(OldValue,'') < > ISNULL(Value,'') 
+				THEN 'Usuario='+ CASE WHEN Value IS NULL  THEN 'NULL' ELSE '''' + Value +'''' END  +',' 
+			 ELSE '' END   FROM @TableValues WHERE Name='Usuario'
+
+	 SELECT  @UpdateString  =@UpdateString  + ' InsertUpdate=0,'
+	 SELECT  @UpdateString  =@UpdateString  + 'FechaInsertUpdate=''' + CAst(GetDAte() as nvarchar)  +''''
+	 			
+	
+	 SELECT @UpdateString = 'UPDATE _Test SET ' +  @UpdateString  + ' WHERE TestId=' + CAST (ISNULL(@OldTestId ,'') 	 as nVarchar(50) )
+
+	  /* build update string for Table 1*/
+	 DECLARE @UpdateString2 nvarchar(max)
+	 SELECT  @UpdateString2  =
+			 CASE WHEN ISNULL(OldValue,0) < > ISNULL(Value,0) THEN 'TestId=' + Value +',' 
+			 ELSE '' END   FROM @TableValues WHERE Name='TestId'
+
+	 SELECT  @UpdateString2  =@UpdateString2  + 
+			 CASE WHEN ISNULL(OldValue,'') < > ISNULL(Value,'') 
+				THEN 'Config='+ CASE WHEN Value IS NULL  THEN 'NULL' ELSE '''' + Value +'''' END  +',' 
+			 ELSE '' END   FROM @TableValues WHERE Name='Config'
+
+	 SELECT @UpdateString2 =  LEFT(@UpdateString2 , LEN(@UpdateString2 )-1) 			/*remove las coma*/		 			
+	 SELECT @UpdateString2 = 'UPDATE _Test_Conf SET ' + @UpdateString2  + ' WHERE TestId=' + CAST (ISNULL(@OldTestId ,'') as nVarchar(50) )
+	
+	/* perform process (update fields into different tables) */
+	 EXECUTE ( @UpdateString )
+	 EXECUTE ( @UpdateString2 )
+
+
+	/* perform process (insert fields into different tables) */
+	 UPDATE _Test set TestId=@TestId,Descrip=@Descrip, Usuario=@Usuario, @InsertUpdate=0, FechaInsertUpdate=@FechaInsertUpdate where TestId=@OldTestId
+	 UPDATE _Test_conf set TestId=@TestId,Config=@Config where TestId=@OldTestId
+
+	/* change Keys if necesary*/
+
+		--SET @Values.modify('replace value of (/Row/Property[@Name=''TesId'']/@Value)[1] with sql:variable("@TestId")')
+
+  
+    /* Process return values*/
+		SET @RetValues.modify('replace value of (/Property/@Success)[1] with 1')
+		SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "All went fine"')
+
+	RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT > 0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+    SET @RetValues.modify('replace value of (/Property/@Success)[1] with 0')
+	SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "Something went wrong"')
+	RETURN 0
+
+END CATCH
+```
+
+```sql { #fhmodal_delete_stored_advanced }
+CREATE PROCEDURE [dbo].[P_TestDelete_Stored_Advanced]  
+
+	@Values as XML OUTPUT,
+	@ContextVars as XML,
+	@RetValues as XML OUTPUT 	 
+
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestDelete_Stored
+--#CREATION
+-- 		07/01/2016
+--#CLASIFICATION
+-- 		Framework/systemObjects
+--#DESCRIPTION
+-- 		Used for Testing object delete through Flexygo Stored procedure
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo ciontext variables,
+--		@RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)
+--#OBSERVATIONS
+-- Values XML Sample
+--	< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest"> 
+--		< Property Name="TestId" Value="3" OldValue="" TableName="_Test" IsKey="True" /> 
+--		< Property Name="Descrip" Value="test3" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Config" Value="config3" OldValue="" TableName="_Test_Conf" IsKey="False" /> 
+--	< /Row> 
+--
+-- ContextVars XML Sample		
+--  < Row> 
+--		< Property Name="reference" Value="0" /> 
+--		< Property Name="subReference" Value="0" /> 
+--		< Property Name="currentRole" Value="Admins" /> 
+--		< Property Name="currentRoleId" Value="admins" /> 
+--		< Property Name="currentUserLogin" Value="admin" /> 
+--		< Property Name="currentUserId" Value="1" /> 
+--		< Property Name="currentUserFullName" Value="admin" /> 
+--		< Property Name="currentUserCultureId" Value="en-gb" /> 
+--		< Property Name="currentUserLang" Value="en" /> 
+--		< Property Name="currentUserEmail" Value="info@ahora.es.com" /> 
+--  < /Row> 
+--
+-- Return vars XML Sample		
+--		< Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" /> 
+--
+--#CHANGES
+-- 		13/02/2018- David Miralpeix
+----------------------------------------------------------------------------------
+BEGIN TRY
+	
+	--Declare field variables to load
+	DECLARE @TestId int, 
+	@Descrip nvarchar(2000), 
+	@IdDoc int,
+	@InsertUpdate bit, 
+    @Usuario nvarchar(50),
+	@FechaInsertUpdate datetime , 
+	@Config nvarchar(50)
+
+	
+	/* load XML values into table @TableValues*/
+	DECLARE @XmlDoc int
+	DECLARE @TableValues TABLE (Name nvarchar(50) ,Value nvarchar(max),OldValue nvarchar(max) ,TableName nvarchar(255) , IsKey Bit )
+    EXEC sp_xml_preparedocument @XmlDoc    OUTPUT, @Values  
+
+	INSERT INTO @TableValues (Name, Value, OldValue, TableName , IsKey)
+    SELECT Name,Value,OldValue, TableName, IsKey  FROM OPENXML(@XmlDoc,'/Row/Property',1)
+    WITH(Name nvarchar(250) '@Name',Value nvarchar(max) '@Value',OldValue nvarchar(max) '@OldValue' ,TableName nvarchar(255) '@TableName', IsKey Bit '@IsKey')
+     
+    EXEC sp_xml_removedocument @XmlDoc
+
+	/* load Values into variables */
+
+	 SELECT @TestId =Value FROM @TableValues WHERE Name='TestId'
+	 SELECT @DEscrip =Value FROM @TableValues WHERE Name='Descrip'
+	 SELECT @Usuario  =Value FROM @TableValues WHERE Name='Usuario'
+	 SELECT @InsertUpdate =Value FROM @TableValues WHERE Name='InsertUpdate'
+	 SELECT @FechaInsertUpdate =Value FROM @TableValues WHERE Name='FechaInsertUpdate'
+	 SELECT @Config =Value FROM @TableValues WHERE Name='Config'
+
+
+	/* perform process (delete fields into different tables) */
+	 Delete from _Test  where TestId=@TestId
+	 Delete from _Test_Conf  where TestId=@TestId
+    /* Process return values*/
+		SET @RetValues.modify('replace value of (/Property/@Success)[1] with 1')
+		SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "All went fine"')	 
+		/* Return 0 if error */
+		RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT > 0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+
+
+	SET @RetValues.modify('replace value of (/Property/@Success)[1] with 0')
+	SET @RetValues.modify('replace value of (/Property/@SuccessMessage)[1] with "something went wrong"') 
+	
+	RETURN 0
+
+END CATCH
+```
+
+```sql { #fhmodal_insert_stored_ahora }
+CREATE PROCEDURE [dbo].[P_TestInsert_Stored]  
+	@Values as nvarchar(max) OUTPUT,
+	@RetValues as nvarchar(max) OUTPUT 	 
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestInsert_Stored
+--#PARAMETERS
+-- 		@Values OUTPUT (Required) : Object properties values,
+-- 		@OldValues (Optional) : Old object properties values,
+-- 		@Schema (Optional) : Schema object properties,
+--		@ContextVars (Optional): Flexygo context variables,
+--		@RetValues OUTPUT (Required) : Flexygo process Helper
+--#OBSERVATIONS
+-- Values JSON Sample
+--   {
+--    "TestId": 1,
+--    "Descrip": "Test",
+--    "IdDoc": null,
+--    "InsertUpdate": null,
+--    "User": "admin",
+--    "InsertUpdateDate": "2025-04-23T16:23:00",
+--    "Config": "TestConfig"
+--   }
+--
+-- Old Values JSON Sample
+--   {
+--    "TestId": 1,
+--    "Descrip": "Test",
+--    "IdDoc": null,
+--    "InsertUpdate": null,
+--    "User": "admin",
+--    "InsertUpdateDate": "2025-04-23T16:23:00",
+--    "Config": null
+--   }
+--
+-- Schema JSON Sample
+--   {
+--    "RowId": "714a1a4b-b2ce-4f4b-8f5c-a7acc274da85",
+--    "ObjectName": "Test",
+--    "Schema": {
+--        "TestId": {
+--            "Name": "TestId",
+--            "Value": 1,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": true
+--        },
+--        "Descrip": {
+--            "Name": "Descrip",
+--            "Value": "Test",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "IdDoc": {
+--            "Name": "IdDoc",
+--            "Value": null,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "InsertUpdate": {
+--            "Name": "InsertUpdate",
+--            "Value": null,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "User": {
+--            "Name": "User",
+--            "Value": "admin",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "InsertUpdateDate": {
+--            "Name": "InsertUpdateDate",
+--            "Value": "2025-04-23T16:23:00",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "Config": {
+--            "Name": "Config",
+--            "Value": "TestConfig",
+--            "OldValue": null,
+--            "TableName": "Test_Conf",
+--            "IsKey": false
+--        }
+--      }
+--   }
+--
+-- ContextVars JSON Sample		
+--   {
+--    "currentReference": "0",
+--    "currentSubreference": "0",
+--    "currentRole": "Admins",
+--    "currentRoleId": "admins",
+--    "currentUserLogin": "admin",
+--    "currentUserId": "1",
+--    "currentUserFullName": "Admin Admin",
+--    "currentUserCultureId": "en-gb",
+--    "currentUserLang": "en",
+--    "currentUserEmail": "mail@mail.es.com"
+--   }
+--
+-- Return vars JSON Sample		
+--   {
+--    "Success": false,
+--    "SuccessMessage": "",
+--    "WarningMessage": "",
+--    "LastException": null,
+--    "LastAfterProcessName": null,
+--    "LastProcessName": null,
+--    "MoreProcesses": false,
+--    "JSCode": "",
+--    "JSFile": "",
+--    "Data": {},
+--    "CloseParamWindow": false,
+--    "ClearSelectionBag": false,
+--    "Refresh": false,
+--    "LastExecutedProcess": null
+--   }
+----------------------------------------------------------------------------------
+BEGIN TRY 
+
+	--Declare field variables to load 
+	DECLARE @TestId INT,
+        @Descrip NVARCHAR(2000),
+        @InsertUpdate BIT,
+        @User NVARCHAR(50),
+        @InsertUpdateDate DATETIME,
+		@Config NVARCHAR(50)
+
+	SELECT
+		@TestId = [TestId],
+		@Descrip = [Descrip],
+		@InsertUpdate = [InsertUpdate],
+		@User = [User],
+		@InsertUpdateDate = [InsertUpdateDate],
+		@Config = [Config]
+	FROM OPENJSON(@Values)
+	WITH (
+		TestId INT '$.TestId',
+		Descrip NVARCHAR(2000) '$.Descrip',
+		InsertUpdate BIT '$.InsertUpdate',
+		[User] NVARCHAR(50) '$.User',
+		InsertUpdateDate DATETIME '$.InsertUpdateDate',
+		Config NVARCHAR(50) '$.Config')
+	
+	-- Insert register
+	INSERT INTO Test ([TestId], [Descrip], [InsertUpdate], [User], [InsertUpdateDate])
+	Select @TestId, @Descrip, isnull(@InsertUpdate,0), @User, @InsertUpdateDate
+
+	INSERT INTO Test_Conf([TestId], [Config])
+	Select @TestId, @Config
+
+	-- Change Keys
+	SET @Values = JSON_MODIFY(@Values, '$.TestId', @TestId);
+		 
+    -- Process return values
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.Success', 1);
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.SuccessMessage', 'All went fine');
+	RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT >0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.Success', 0);
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+	RETURN 0
+END CATCH
+GO
+```
+
+```sql { #fhmodal_update_stored_ahora }
+CREATE PROCEDURE [dbo].[P_TestUpdate_Stored]  
+	@Values as nvarchar(max) OUTPUT,
+	@OldValues as nvarchar(max),
+	@RetValues as nvarchar(max) OUTPUT 	 
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestUpdate_Stored
+--#PARAMETERS
+-- 		@Values OUTPUT (Required) : Object properties values,
+-- 		@OldValues (Optional) : Old object properties values,
+-- 		@Schema (Optional) : Schema object properties,
+--		@ContextVars (Optional): Flexygo context variables,
+--		@RetValues OUTPUT (Required) : Flexygo process Helper
+--#OBSERVATIONS
+-- Values JSON Sample
+--   {
+--    "TestId": 1,
+--    "Descrip": "Test",
+--    "IdDoc": null,
+--    "InsertUpdate": null,
+--    "User": "admin",
+--    "InsertUpdateDate": "2025-04-23T16:23:00",
+--    "Config": "TestConfig"
+--   }
+--
+-- Old Values JSON Sample
+--   {
+--    "TestId": 1,
+--    "Descrip": "Test",
+--    "IdDoc": null,
+--    "InsertUpdate": null,
+--    "User": "admin",
+--    "InsertUpdateDate": "2025-04-23T16:23:00",
+--    "Config": null
+--   }
+--
+-- Schema JSON Sample
+--   {
+--    "RowId": "714a1a4b-b2ce-4f4b-8f5c-a7acc274da85",
+--    "ObjectName": "Test",
+--    "Schema": {
+--        "TestId": {
+--            "Name": "TestId",
+--            "Value": 1,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": true
+--        },
+--        "Descrip": {
+--            "Name": "Descrip",
+--            "Value": "Test",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "IdDoc": {
+--            "Name": "IdDoc",
+--            "Value": null,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "InsertUpdate": {
+--            "Name": "InsertUpdate",
+--            "Value": null,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "User": {
+--            "Name": "User",
+--            "Value": "admin",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "InsertUpdateDate": {
+--            "Name": "InsertUpdateDate",
+--            "Value": "2025-04-23T16:23:00",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "Config": {
+--            "Name": "Config",
+--            "Value": "TestConfig",
+--            "OldValue": null,
+--            "TableName": "Test_Conf",
+--            "IsKey": false
+--        }
+--      }
+--   }
+--
+-- ContextVars JSON Sample		
+--   {
+--    "currentReference": "0",
+--    "currentSubreference": "0",
+--    "currentRole": "Admins",
+--    "currentRoleId": "admins",
+--    "currentUserLogin": "admin",
+--    "currentUserId": "1",
+--    "currentUserFullName": "Admin Admin",
+--    "currentUserCultureId": "en-gb",
+--    "currentUserLang": "en",
+--    "currentUserEmail": "mail@mail.es.com"
+--   }
+--
+-- Return vars JSON Sample		
+--   {
+--    "Success": false,
+--    "SuccessMessage": "",
+--    "WarningMessage": "",
+--    "LastException": null,
+--    "LastAfterProcessName": null,
+--    "LastProcessName": null,
+--    "MoreProcesses": false,
+--    "JSCode": "",
+--    "JSFile": "",
+--    "Data": {},
+--    "CloseParamWindow": false,
+--    "ClearSelectionBag": false,
+--    "Refresh": false,
+--    "LastExecutedProcess": null
+--   }
+----------------------------------------------------------------------------------
+BEGIN TRY 
+
+	--Declare field variables to load 
+	DECLARE @TestId INT,
+        @Descrip NVARCHAR(2000),
+        @InsertUpdate BIT,
+        @User NVARCHAR(50),
+        @InsertUpdateDate DATETIME,
+		@Config NVARCHAR(50),
+		@OldTestId INT
+
+	--New Values
+	SELECT
+		@TestId = [TestId],
+		@Descrip = [Descrip],
+		@InsertUpdate = [InsertUpdate],
+		@User = [User],
+		@InsertUpdateDate = [InsertUpdateDate],
+		@Config = [Config]
+	FROM OPENJSON(@Values)
+	WITH (
+		TestId INT '$.TestId',
+		Descrip NVARCHAR(2000) '$.Descrip',
+		InsertUpdate BIT '$.InsertUpdate',
+		[User] NVARCHAR(50) '$.User',
+		InsertUpdateDate DATETIME '$.InsertUpdateDate',
+		Config NVARCHAR(50) '$.Config')
+		
+	--Old Values
+	SELECT
+		@OldTestId = [TestId]
+	FROM OPENJSON(@OldValues)
+	WITH (
+		TestId INT '$.TestId')
+
+	-- Update register
+	UPDATE Test_Conf Set Config = @Config Where TestId = @OldTestId
+	UPDATE Test SET TestId=@TestId, Descrip=@Descrip, InsertUpdate = @InsertUpdate, [User] = @User, InsertUpdateDate = @InsertUpdateDate Where TestId = @OldTestId
+
+	-- Change Keys
+	SET @Values = JSON_MODIFY(@Values, '$.TestId', @TestId);
+		 
+    -- Process return values
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.Success', 1);
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.SuccessMessage', 'All went fine');
+	RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT >0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.Success', 0);
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+	RETURN 0
+END CATCH
+GO
+```
+
+```sql { #fhmodal_delete_stored_ahora }
+CREATE PROCEDURE [dbo].[P_TestDelete_Stored]  
+	@Values as nvarchar(max) OUTPUT,
+	@RetValues as nvarchar(max) OUTPUT 	 
+	AS 
+	----------------------------------------------------------------------------------
+--#NAME
+--		P_TestDelete_Stored
+--#PARAMETERS
+-- 		@Values OUTPUT (Required) : Object properties values,
+-- 		@OldValues (Optional) : Old object properties values,
+-- 		@Schema (Optional) : Schema object properties,
+--		@ContextVars (Optional): Flexygo context variables,
+--		@RetValues OUTPUT (Required) : Flexygo process Helper
+--#OBSERVATIONS
+-- Values JSON Sample
+--   {
+--    "TestId": 1,
+--    "Descrip": "Test",
+--    "IdDoc": null,
+--    "InsertUpdate": null,
+--    "User": "admin",
+--    "InsertUpdateDate": "2025-04-23T16:23:00",
+--    "Config": "TestConfig"
+--   }
+--
+-- Old Values JSON Sample
+--   {
+--    "TestId": 1,
+--    "Descrip": "Test",
+--    "IdDoc": null,
+--    "InsertUpdate": null,
+--    "User": "admin",
+--    "InsertUpdateDate": "2025-04-23T16:23:00",
+--    "Config": null
+--   }
+--
+-- Schema JSON Sample
+--   {
+--    "RowId": "714a1a4b-b2ce-4f4b-8f5c-a7acc274da85",
+--    "ObjectName": "Test",
+--    "Schema": {
+--        "TestId": {
+--            "Name": "TestId",
+--            "Value": 1,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": true
+--        },
+--        "Descrip": {
+--            "Name": "Descrip",
+--            "Value": "Test",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "IdDoc": {
+--            "Name": "IdDoc",
+--            "Value": null,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "InsertUpdate": {
+--            "Name": "InsertUpdate",
+--            "Value": null,
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "User": {
+--            "Name": "User",
+--            "Value": "admin",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "InsertUpdateDate": {
+--            "Name": "InsertUpdateDate",
+--            "Value": "2025-04-23T16:23:00",
+--            "OldValue": null,
+--            "TableName": "Test",
+--            "IsKey": false
+--        },
+--        "Config": {
+--            "Name": "Config",
+--            "Value": "TestConfig",
+--            "OldValue": null,
+--            "TableName": "Test_Conf",
+--            "IsKey": false
+--        }
+--      }
+--   }
+--
+-- ContextVars JSON Sample		
+--   {
+--    "currentReference": "0",
+--    "currentSubreference": "0",
+--    "currentRole": "Admins",
+--    "currentRoleId": "admins",
+--    "currentUserLogin": "admin",
+--    "currentUserId": "1",
+--    "currentUserFullName": "Admin Admin",
+--    "currentUserCultureId": "en-gb",
+--    "currentUserLang": "en",
+--    "currentUserEmail": "mail@mail.es.com"
+--   }
+--
+-- Return vars JSON Sample		
+--   {
+--    "Success": false,
+--    "SuccessMessage": "",
+--    "WarningMessage": "",
+--    "LastException": null,
+--    "LastAfterProcessName": null,
+--    "LastProcessName": null,
+--    "MoreProcesses": false,
+--    "JSCode": "",
+--    "JSFile": "",
+--    "Data": {},
+--    "CloseParamWindow": false,
+--    "ClearSelectionBag": false,
+--    "Refresh": false,
+--    "LastExecutedProcess": null
+--   }
+----------------------------------------------------------------------------------
+BEGIN TRY 
+
+	--Declare field variables to load 
+	DECLARE @TestId INT
+
+	SELECT
+		@TestId = [TestId]
+	FROM OPENJSON(@Values)
+	WITH (
+		TestId INT '$.TestId')
+	
+	--Delete registers
+	DELETE Test_Conf Where TestId = @TestId
+	DELETE Test Where TestId = @TestId
+		 
+    -- Process return values
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.Success', 1);
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.SuccessMessage', 'All went fine');
+	RETURN 1
+END TRY 
+
+BEGIN CATCH
+	IF @@TRANCOUNT >0 BEGIN
+		ROLLBACK TRAN 
+	END
+
+	SET @RetValues = JSON_MODIFY(@RetValues, '$.Success', 0);
+
+	DECLARE @CatchError NVARCHAR(MAX)
+	SET @CatchError=dbo.funprintError(ERROR_MESSAGE(),ERROR_NUMBER(),ERROR_PROCEDURE(),@@PROCID ,ERROR_LINE())
+	RAISERROR(@CatchError,12,1)
+ 
+	RETURN 0
+END CATCH
+GO
+```
+
+```sql { #fhmodal_insert_json }
+ALTER PROCEDURE [dbo].[P_Test_I]
+	@TestId int OUTPUT,
+	@Descrip nvarchar(2000) OUTPUT,
+	@IdDoc int OUTPUT,
+	@Usuario nvarchar(50) OUTPUT,
+	@FechaInsertUpdate datetime OUTPUT
+AS 
+BEGIN
+
+	
+	-- Next Id
+	IF @TestId IS NULL OR @TestId=0
+		SELECT @TestId=ISNULL(MAX(@TestId)+1,1) FROM _Test 
+	-- 	Insert
+
+	INSERT INTO _Test(TestId,Descrip,Usuario)
+	VALUES (@TestId,@Descrip,@Usuario)
+
+	--Insert into _Test_Conf
+	INSERT INTO _Test_Conf (TestId )
+	SELECT T.TestID  FROM _TEst T 
+	LEFT JOIN _Test_Conf C ON T.TestId=C.TEstId 
+	WHERE C.TestID IS NULL 
+
+	-- Check
+	IF @@ROWCOUNT=1 BEGIN
+		SELECT @IdDoc=IdDoc,@Usuario=Usuario,@FechaInsertUpdate=FechaInsertUpdate FROM _Test WHERE TestId = @TestId
+		RETURN -1
+		
+	END ELSE BEGIN
+		PRINT  'ERROR IN TEST INSERT.'
+		RETURN 0
+	END
+	
+END
+```
+
+```sql { #fhmodal_update_json }
+CREATE PROCEDURE [dbo].[P_Test_U]
+	@TestId_A	int,
+	@Usuario nvarchar(50) OUTPUT,
+	@FechaInsertUpdate datetime OUTPUT
+	@TestId int OUTPUT,
+	@Descrip nvarchar(2000) OUTPUT
+
+AS 
+
+Declare @Msg_err Varchar(255)
+Declare @Usuario_ nvarchar(50)
+Declare @FechaInsertUpdate_ datetime
+
+
+BEGIN
+
+			UPDATE _Test SET TestId=@TestId, Descrip=@Descrip,InsertUpdate=1, Usuario=@usuario, FechaInsertUpdate=getdate() 
+			WHERE TestId=@TestId_A AND	Usuario=@Usuario And Convert(Varchar(20),FechaInsertUpdate,113)=Convert(Varchar(20),@FechaInsertUpdate,113) 
+END 
+	------------------------------------------
+	-- Check if update was done
+	------------------------------------------
+	IF @@ROWCOUNT=1 BEGIN
+		SELECT 	@TestId=TestId, 
+			@Descrip=Descrip, 
+			@Usuario=Usuario, 
+			@FechaInsertUpdate=FechaInsertUpdate
+		FROM _Test WHERE TestId=@TestId 
+		RETURN -1
+
+	END ELSE BEGIN 
+		SELECT 	@Usuario_=Usuario,
+			@FechaInsertUpdate_=FechaInsertUpdate
+		FROM _Test WHERE TestId=@TestId_A 
+
+		IF @Usuario_ IS NULL BEGIN 
+			PRINT 'Could not update. Might have bee previously deleted'
+			RETURN 0
+		END ELSE IF (@Usuario< > @Usuario_ OR Convert(Varchar(20),@FechaInsertUpdate,113)< > Convert(Varchar(20),@FechaInsertUpdate_,113)) BEGIN 
+			PRINT 'Could not update. Might have bee previously modifyed'
+				RETURN 0 
+		END 
+		PRINT  'Could not update. Update Error'
+		RETURN  0 
+
+END
+```
+
+```sql { #fhmodal_delete_json }
+CREATE PROCEDURE [dbo].[P_Test_D]
+	@TestId int OUTPUT,
+	@Usuario nvarchar(50) OUTPUT,
+	@FechaInsertUpdate datetime OUTPUT
+AS 
+
+Declare @Usuario_ nvarchar(50) 
+Declare @FechaInsertUpdate_ datetime
+
+BEGIN
+
+	DELETE _Test
+	WHERE TestId=@TestId And Usuario=@Usuario And Convert(varchar(20),FechaInsertUpdate,113)=Convert(varchar(20),@FechaInsertUpdate,113) 
+
+	-- check delete records
+    IF @@ROWCOUNT=1 BEGIN
+		RETURN  -1 
+
+	END ELSE BEGIN
+		SELECT  @Usuario_=Usuario, 
+			@FechaInsertUpdate_=FechaInsertUpdate 
+		FROM _test WHERE TestId=@TestId 
+
+		IF @Usuario_ IS NULL BEGIN
+			PRINT   'Could not delete. might have been previously deleted'
+			RETURN  0
+
+		END ELSE IF  (@Usuario< > @Usuario_ Or Convert(varchar(20),@FechaInsertUpdate,113)< > Convert(varchar(20),@FechaInsertUpdate_,113)) BEGIN 
+		
+			PRINT  'Could not delete. might have been previously changed'
+			RETURN  0
+		END
+
+		-- no se ha podido borrar
+		PRINT  'Could not delete'
+		RETURN 0
+	end
+END
+```

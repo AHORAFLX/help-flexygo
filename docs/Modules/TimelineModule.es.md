@@ -1,66 +1,53 @@
 # Timeline
 
-Timeline module allows us to create planners based on any object in a simple and easy way. There are two configuration types:
+El módulo Timeline nos permite crear planificadores basados en cualquier objeto de forma sencilla y rápida. Existen dos tipos de configuración:
 
-*   **Basic:** Create simple and functional planners without any code.
-*   **Advanced:** It allows us to have total control over all the timeline's functionalities. Requirements: basic SQL and JavaScript knowledge.
+* **Básica:** Permite crear planificadores simples y funcionales sin necesidad de código.  
+* **Avanzada:** Ofrece control total sobre todas las funcionalidades del timeline. Requisitos: conocimientos básicos de SQL y JavaScript.
 
-All properties are documented.
+Todas las propiedades están documentadas.
 
-##### Basic example
+## Ejemplo básico
 
-**Configuration**
+### Configuración
 
-![](.\img\Help\Timeline\Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
+![](/assets/images/Timeline/Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
 
-Image 1. Timeline Basic Configuration
+### Resultado
 
-**Result**
+![](/assets/images/Timeline/Timeline_Basic_Result.png "Image 2. Timeline basic result")
 
-![](.\img\Help\Timeline\Timeline_Basic_Result.png "Image 2. Timeline basic result")
+## Ejemplo básico con grupos
 
-Image 2. Timeline basic result
+### Configuración
 
-##### Basic with groups example
+![](/assets/images/Timeline/Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
 
-**Configuration**
+### Resultado
 
-![](.\img\Help\Timeline\Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
+![](/assets/images/Timeline/Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
 
-Image 3. Basic timeline with groups
+## Ejemplo avanzado
 
-**Result**
+### Configuración
 
-![](.\img\Help\Timeline\Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
+![](/assets/images/Timeline/Timeline_Advanced_Configuracion.png "Image 5. Advanced")
 
-Image 4. Basic timeline with groups result
+### Resultado
 
-##### Advanced example
+![](/assets/images/Timeline/Timeline_Advanced_Result.png "Image 6. Advanced result")
 
-**Configuration**
+## Ejemplo avanzado con grupos
 
-![](.\img\Help\Timeline\Timeline_Advanced_Configuracion.png "Image 5. Advanced")
+### Configuración
 
-Image 5. Advanced
+![](/assets/images/Timeline/Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
 
-**Result**
+### Resultado
 
-![](.\img\Help\Timeline\Timeline_Advanced_Result.png "Image 6. Advanced result")
+![](/assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
 
-Image 6. Advanced result
-
-##### Advanced With Groups Example
-
-**Configuration**
-
-![](.\img\Help\Timeline\Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
-
-Image 7. Timeline Advanced With Groups Configuration
-
-**Result**
-
-![](.\img\Help\Timeline\Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
-
-Image 8. Timeline Advanced With Groups Result
-
-Check out the video about how to configurate timeline.
+Consulta el vídeo sobre cómo configurar Timeline:
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/_bVe_MLU5r0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

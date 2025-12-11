@@ -1,51 +1,43 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# Entorno de diseño
 
-# Design environment
-
-Once the application is saved, we will familiarize ourselves with the design environment of the application.
+Una vez que la aplicación está guardada, nos familiarizaremos con el entorno de diseño de la aplicación.
 
 ![Face Recognition settings](/assets/images/offline/Environment.png "Image 1. Environment")
 
-Image 1. Environment
+Este entorno se divide básicamente en 6 áreas que explicaremos a continuación.
 
-This environment is basically divided into 6 areas we will explain bellow.
+## Áreas de trabajo
 
-## Work areas
+### Menús
 
-### Menus
+Para crear y diseñar los menús que aparecerán en el dispositivo.
 
-To create and design the menus that will appear on the device.
+### Información adicional de la App
 
-### App additional info
-
-From this section we can modify the basic data of the App, modify and design the home page and incorporate other resources like:
+Desde esta sección podemos modificar los datos básicos de la App, modificar y diseñar la página de inicio e incorporar otros recursos como:
 
 ![Face Recognition settings](/assets/images/offline/buttons.png "Image 2. Buttons")
 
-Image 2. Buttons
+* Diseñar la página de inicio  
+* Añadir código JavaScript  
+* Añadir nuestras propias clases CSS  
+* Consultar el esquema de la base de datos que se enviará a nuestro dispositivo móvil  
+* Incluir algún archivo de recurso adicional como imágenes o documentos
 
-*   Design the home page
-*   Add JavaScript code
-*   Add our own CSS classes
-*   Check the DB schema that will be sent to our mobile device
-*   Include some additional resource file like images or documents
+### Objetos
 
-### Objects
+Desde esta sección podemos crear o modificar nuestros objetos offline. Podemos crear nuevos o basarlos en objetos online ya existentes.
 
-From this section we can modify create or modify our offline objects. we can create new ones or base them on allready existing online objects.
+### Páginas de objeto
 
-### Object Pages
+Diseñar páginas de lista y vista usando HTML5 y el framework Ionic para cualquiera de los objetos ya creados.
 
-Design list and view template pages using HTML5 and Ionic framework for any of our already created objects
+### Vistas de objeto
 
-### Object Views
+Ampliar la información del objeto mediante vistas de datos complejas.
 
-Extend object information using complex data views
+### Emulador
 
-### Emulator
-
-From this section we can emulate the display and operation of the application, and experiment what the result will be on IOS or Android devices.
+Desde esta sección podemos emular la visualización y funcionamiento de la aplicación, y comprobar el resultado final en dispositivos iOS o Android.
 
 ![Face Recognition settings](/assets/images/offline/Environment2.png "Image 3. Environment")
-
-Image 3. Environment

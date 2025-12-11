@@ -1,99 +1,103 @@
-# **flexygo** Security
+# Security { .flx-title-with-image }
 
-**flexygo** includes 3 different security levels:
+![flexygo](/assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
-*   Role security
-*   Faculty Security (overrides Role security)
-*   User security (overrides Faculty and Role security)
+**flexygo** incluye 3 niveles de seguridad diferentes:
 
-User security allows us to establish security for a given user. We recommend to use role security that allows us to implement security for a group of users. Recently we have incorporated Faculty security. User can have as many faculties as we want, so it is a good complement to role security.
+* Seguridad por roles  
+* Seguridad por facultades (sobrescribe la seguridad por roles)  
+* Seguridad por usuario (sobrescribe seguridad por facultades y por roles)
 
-_Example:_  
-User John belongs to the sales role. In sales role we establish that each sales man can only see customers from his area. Maybe there are a couple of users that have to see other areas. We can create faculties for those areas and add them to the corresponding users.
+La seguridad por usuario permite establecer permisos específicos para un usuario concreto. Se recomienda usar la seguridad por roles, que permite aplicar seguridad a grupos de usuarios. Recientemente se ha incorporado la seguridad por facultades. Un usuario puede tener tantas facultades como queramos, por lo que es un buen complemento a la seguridad por roles.
+
+_Ejemplo:_  
+El usuario John pertenece al rol de ventas. En el rol de ventas se establece que cada comercial solo puede ver clientes de su zona. Puede que haya algunos usuarios que necesiten ver otras zonas. Podemos crear facultades para esas zonas y asignarlas a los usuarios correspondientes.
 
 ## Role Security
 
-**flexygo** includes five default roles, two main roles: **Admin** and **All Users**. The Admin Role gives full attributions to any member of the group. The All Users is a container for the rest of groups that enables us to assign permissions directly to all the child groups. Inside the All Users we will find the second level with the **Registered** and **Not registered** roles. Registered role will contain any new roles we create, including the default users role. Security always applies upwards that is if a lower group has security the higher group security is overwritten. The same applies if we set the security on a user level and not on a role level. The **user security will always overwrite his role security**.  
-To begin with the examples and more extensive explanations, we will set off dividing in to two parent groups (All Users and Admin).
+**flexygo** incluye cinco roles por defecto, dos roles principales: **Admin** y **All Users**.  
+El rol Admin concede acceso total a cualquier miembro del grupo.  
+El rol All Users agrupa al resto de roles y permite asignar permisos directamente a todos los grupos hijos. Dentro de All Users encontramos un segundo nivel con los roles **Registered** y **Not registered**. El rol Registered contendrá todos los nuevos roles creados, incluido el rol de usuarios por defecto.
 
-All Users
+La seguridad siempre se aplica hacia arriba: si un grupo inferior tiene seguridad definida, sobrescribe la del grupo superior.  
+Lo mismo ocurre si la seguridad se establece a nivel de usuario:  
+**la seguridad del usuario siempre sobrescribe la del rol**.
 
-Registered
+Para comenzar con los ejemplos y explicaciones más extensas, dividiremos en dos grupos principales (All Users y Admin).
 
-Users
+![](/assets/images/Security/Circles-graph.png)
 
-Employees
+### Admin
 
-Customers
+El rol Admin puede acceder a todas las funciones de cualquier objeto existente: editar, ver, ejecutar procesos o crear nuevos. Tiene acceso a todas las configuraciones del framework, por lo que está completamente excluido del grupo All Users.
 
-Partner\_Customer
+### Guest Access
 
-Partner
+En caso de querer permitir acceso sin registrar a ciertos menús o funcionalidades estándar, utilizaremos el rol Not Registered.  
+Debemos asegurarnos de tener un usuario invitado que pertenezca a este rol.  
+También debemos establecer una página por defecto para la seguridad del invitado y configurar permisos de visualización al menos en:
 
-Leads
+* Nodes  
+* Pages  
+* Modules  
+* Objects  
+* Processes  
+* Reports  
 
-- - -
+Si queremos permitir acceso no registrado, debemos asegurarnos de que el archivo *web.config* contiene:
 
-No Registered
+1. Cambiar autenticación de Forms a None:  
+   **<authentication mode="None">**  
+2. Comentar el bloque de denegación de autorización:  
+   **<authorization> <deny users="?"/> </authorization>**  
+3. Establecer **AllowGuest** a **true** en  
+   *Admin Work Area > Environment > Settings*
 
-Admin
-
-#### Example
-
-Imaging the case of having security for the Customers role, they can list the invoices but cannot see the actual invoice. We can set that the Customers role can View Invoice listings but cannot view the invoice.
-
-To guarantee that they cannot see anything else we could remove the Can view security for all the objects in the registered group.
-
-#### Admin
-
-Admin role can access all functions of any existing object, edit, view run processes or create a new one. It has access to all of the framework settings, reason why it is completely excluded from the All Users group.
-
-#### Guest Access
-
-In the case of wanting to allow unregistered access to our solution without the need to register and maybe let them be able to view and navigate through a few standard menus and features, we will use the Not Registered role. We must make sure that we have a guest user that belongs to the Not Registered role. We must establish a default Page Id for the guest security and make sure to set at least a view security to the things we want him to see that is:
-
-*   Nodes
-*   Pages
-*   Modules
-*   Objects
-*   Processes
-*   Reports
-
-If we want to use unregistered access, we must make sure that our web.config contains a series of entries:
-
-1.  Set authentication from Forms to None: **<authentication mode="None">**
-2.  Comment the authorization deny block: **<authorization> <deny users="?"/> </authorization>**
-3.  Set **AllowGuest** setting to **true** in Admin Work Area **\>** Environment **\>** Settings
-
-| To what can we apply security? | On Roles group | On User |
+| ¿A qué podemos aplicar seguridad? | En Roles | En Usuario |
 | --- | --- | --- |
-| Tables |     |     |
-| Modules |     |     |
-| Navigation Nodes |     |     |
-| Objets |     |     |
-| Processes |     |     |
-| Reports |     |     |
-| Pages |     |     |
-| Pages modules |     |     |
+| Tables | ✓ | ✓ |
+| Modules | ✓ | ✓ |
+| Navigation Nodes | ✓ | ✓ |
+| Objects | ✓ | ✓ |
+| Processes | ✓ | ✓ |
+| Reports | ✓ | ✓ |
+| Pages | ✓ | ✓ |
+| Pages modules | ✓ | ✓ |
+
+### Example
+
+Imaginemos que existe un rol Customers. Este rol puede listar facturas pero no puede ver la factura en detalle. Podemos definir que Customers puede ver el listado pero no abrir la factura.
+
+Para garantizar que no puedan ver nada más, podemos retirar el permiso **Can view** para todos los objetos dentro del grupo Registered.
 
 ## LDAP Authentication
 
-**flexygo** can authenticate users against Active Directory. Just create a new user on Security **\>** Users using format MyDomain**\\**MyUserName If you want an LDAP autologin with current windows user, open **flexygo** and follow this steps:
+**flexygo** puede autenticar usuarios contra Active Directory.  
+Solo debemos crear un nuevo usuario en Security > Users usando el formato:
 
-1.  Open IIS
-2.  Enable **Windows Autentication** option on Autentication menu
-3.  Disable **anonymous authentication** option on Autentication menu
-4.  Set **EnableLDAPAutoLogin** setting to **true** in Admin Work Area > Environment > Settings
-5.  Edit web.config file and set authentication from Forms to Windows
+**MiDominio\\MiUsuario**
+
+Si queremos un autologin LDAP con el usuario actual de Windows, seguimos estos pasos:
+
+1. Abrir IIS  
+2. Habilitar **Windows Authentication**  
+3. Deshabilitar **Anonymous Authentication**  
+4. Establecer **EnableLDAPAutoLogin = true** en  
+   *Admin Work Area > Environment > Settings*  
+5. Editar *web.config* y cambiar la autenticación de Forms a Windows  
 
 ## Password Strength
 
-When you are using login form **flexygo** allows you to define the password strenght by editing the entries in environment setting section:
+Cuando se usa el formulario de login, **flexygo** permite definir la complejidad de la contraseña editando estas entradas en las configuraciones de entorno:
 
-*   **PasswordRequireDigit**: set to true if you allways demand a digit in your password
-*   **PasswordRequiredLength**: Minimum password lenght
-*   **PasswordRequireLowercase**: set to true if you allways demand lower case character
-*   **PasswordRequireNonLetterOrDigit**: set to true if you allways demand a special character
-*   **PasswordRequireUppercase**: set to true if you allways demand upper case character
+* **PasswordRequireDigit**: true si se requiere al menos un dígito  
+* **PasswordRequiredLength**: longitud mínima  
+* **PasswordRequireLowercase**: true si se requiere una minúscula  
+* **PasswordRequireNonLetterOrDigit**: true si se requiere un carácter especial  
+* **PasswordRequireUppercase**: true si se requiere una mayúscula  
 
-Check out the following video about **flexygo** security:
+Consulta el siguiente vídeo sobre seguridad en **flexygo**:
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/XEgrAegs0mo" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
+</div>

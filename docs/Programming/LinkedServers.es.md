@@ -1,17 +1,35 @@
-# Linked Servers
+# Servidores Vinculados
 
-## Multiple databases in one query
+## Múltiples bases de datos en una consulta
 
-**flexygo** includes possibility to add views from different databases at different SQL Engines on unique SQL Sentence without having to worry about the database name.
+Flexygo incluye la posibilidad de añadir vistas de diferentes bases de datos en diferentes motores SQL en una única sentencia SQL sin tener que preocuparse por el nombre de la base de datos.
 
-For example, this query:
+Por ejemplo, esta consulta:
 
-SELECT EmployeeId, \[Name\], Surname, isnull(DocsQ,0) as DocsQuantity FROM employees LEFT JOIN ( SELECT ObjectName, ObjectId, Count(\*) as DocsQ FROM MyServer.flexygo\_ic.dbo.documents\_objects D GROUP BY objectname, objectid ) Docs ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```sql
+SELECT EmployeeId, [Name], Surname, isnull(DocsQ,0) as DocsQuantity
+FROM employees
+LEFT JOIN (
+      SELECT ObjectName, ObjectId, Count(*) as DocsQ 
+      FROM MyServer.flexygo_ic.dbo.documents_objects D 
+      GROUP BY objectname, objectid
+      ) Docs
+ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```
 
-can be replaced by this other using connection string prefix { ~ConfConnectionString~ }. (without blank spaces):
+puede ser reemplazada por esta otra usando el prefijo de cadena de conexión **{ ~ConfConnectionString~ }**. (sin espacios en blanco):
 
-SELECT EmployeeId, \[Name\], Surname, isnull(DocsQ,0) as DocsQuantity FROM employees LEFT JOIN( SELECT ObjectName, ObjectId, Count(\*) as DocsQ FROM { ~ConfConnectionString~ }.dbo.documents\_objects D GROUP BY objectname, objectid ) Docs ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```sql
+SELECT EmployeeId, [Name], Surname, isnull(DocsQ,0) as DocsQuantity
+FROM employees
+LEFT JOIN(
+      SELECT ObjectName, ObjectId, Count(*) as DocsQ 
+      FROM   { ~ConfConnectionString~ }.dbo.documents_objects D 
+      GROUP BY objectname, objectid
+      ) Docs
+ON Employees.EmployeeId = Docs.ObjectId and Docs.ObjectName = 'Employee'
+```
 
-## Linked server
+## Servidor vinculado
 
-If databases are hosted in different SQL instances you can set linked server name related to one SQL server for allowing **flexygo** include database server prefix. Add linked server
+Si las bases de datos están alojadas en diferentes instancias SQL, puedes establecer un nombre de servidor vinculado relacionado con un servidor SQL para permitir que flexygo incluya el prefijo del servidor de la base de datos. <flx-navbutton class="link" type="openEditTable" tablename="DBConnectionStrings_LinkedServers" objectname="sysAbhSigns_Objects_Config" tabledescrip="Linked Servers">Añadir servidor vinculado</flx-navbutton>.

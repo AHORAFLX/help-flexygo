@@ -1,81 +1,220 @@
-# Custom Stored Procedure
+# Procedimiento Almacenado Personalizado
 
-Stored procedure is a collection SQL statements and sql command logic, which is compiled and stored on the database. Stored procedues in SQL allows us to create SQL queries to be stored and executed on the server. The main purpose of stored procedures to hide direct SQL queries from the code and improve performance of database operations such as select, update, and delete data. You can create your own stored procedure. In this article we'll see the difference between object stored procedure and collection stored procedure.
+Un procedimiento almacenado es una colección de sentencias SQL y lógica de comandos SQL, que se compila y se almacena en la base de datos. Los procedimientos almacenados en SQL nos permiten crear consultas SQL que se almacenan y se ejecutan en el servidor. El principal objetivo de los procedimientos almacenados es ocultar las consultas SQL directas del código y mejorar el rendimiento de las operaciones de base de datos, como seleccionar, actualizar y eliminar datos. Puedes crear tu propio procedimiento almacenado. En este artículo veremos la diferencia entre el procedimiento almacenado de objeto y el procedimiento almacenado de colección.
 
-Whatch video about creating stored procedure in **flexygo** environment:
+Mira el video sobre cómo crear un procedimiento almacenado en el entorno de flexygo:
 
-## Object Stored Procedure
+## Procedimiento Almacenado de Objeto
 
-###### Add stored procedure process into object menu
+### Agregar proceso de procedimiento almacenado al menú de objeto
 
-1.  Code stored procedure in database. _Example._
-2.  Add it to **flexygo** stored procedure repository at Admin Work Area > Logic and Rules > DB Stored Procedures.
+1.  Codificar el procedimiento almacenado en la base de datos. <fh-modal class="link" modal_id="fhmodal_object" modal_title="Object Stored Procedure">Ejemplo</fh-modal>.
+
+2.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB.
     
     ![Stored Procedure Repository](/assets/images/Custom_DLL/ObjectStored.png "Image 1. Stored Procedure Repository")
     
-    Image 1. Stored Procedure Repository
-    
-3.  If stored has parameters insert it automatically using **Generate parameters** menu.
-4.  Add relation to object in Admin Work Area > Object management > Logic.
+3.  Si el procedimiento tiene parámetros, insértalos automáticamente usando el menú **Generar parámetros**.
+
+4.  Agrega relación al objeto en Área de Trabajo del Administrador > Gestión de objetos > Lógica.
     
     ![Stored and Object Relation](/assets/images/Custom_DLL/RelatedObjectStored.png "Image 2. Stored and Object Relation")
     
-    Image 2. Stored and Object Relation
-    
 
-## Collection Stored Procedure
+##  Procedimiento Almacenado de Colección
 
-###### Add stored procedure process into list menu
+### Agregar proceso de procedimiento almacenado al menú de lista
 
-1.  Set **Unique Identifier Field** in object configuration to allow collection process.
+1.  Establecer **Campo Identificador Único** en la configuración del objeto para permitir el proceso de colección. 
     
     ![Set Unique Identifier Field](/assets/images/Custom_DLL/UniqueIdentifier.png "Image 3. Set Unique Identifier Field")
     
-    Image 3. Set Unique Identifier Field
-    
-2.  Code stored procedure in database. Append a param with name **@sysCollectionSentence** and type **nvarchar(max)** to recive an SQL with selected items. _Example._
-3.  Add it to **flexygo** stored procedure repository at Admin Work Area > Logic and Rules > DB Stored Procedures.
+2.  Codificar el procedimiento almacenado en la base de datos. Agrega un parámetro con el nombre @sysCollectionSentence y tipo nvarchar(max) para recibir un SQL con los elementos seleccionados. <fh-modal class="link" modal_id="fhmodal_collection" modal_title="Collection Stored Procedure">Ejemplo</fh-modal>
+
+3.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB. 
     
     ![Stored Procedure Repository](/assets/images/Custom_DLL/CollectionStored.png "Image 4. Stored Procedure Repository")
     
-    Image 4. Stored Procedure Repository
-    
-4.  If stored has parameters insert it automatically using **Generate parameters** menu.
-5.  Add relation to collection in Admin Work Area > Object management > Logic. If process only can be executed with selected items, please set switch to true, otherwise process will be executed with all items filtered in current screen.
+4.  Si el procedimiento tiene parámetros, insértalos automáticamente usando el menú **Generar parámetros**.
+
+5.  Agrega relación a la colección en Área de Trabajo del Administrador > Gestión de objetos > Lógica. Si el proceso solo puede ejecutarse con los elementos seleccionados, por favor establece el interruptor en verdadero, de lo contrario el proceso se ejecutará con todos los elementos filtrados en la pantalla actual. 
     
     ![Stored and Collection Relation](/assets/images/Custom_DLL/RelatedCollectionStored.png "Image 5. Stored and Collection Relation")
+
+## Procedimiento Almacenado al Cargar el Objeto o Cambiar la Propiedad
+
+Se puede asignar un Procedimiento Almacenado Personalizado a cada objeto o propiedad para que se ejecute cuando este sea creado o cambiado, para eso el Procedimiento recibirá un XML con cada valor de propiedad, aquí tienes un ejemplo de cómo usarlo:
+
+<fh-modal class="button" modal_id="fhmodal_property_change" modal_title="Stored Procedure on object load or property changed">Ejemplo</fh-modal>
+
+```sql { #fhmodal_ }
+```
+
+```sql { #fhmodal_object }
+CREATE PROCEDURE [dbo].[pPers_LockClient]
+
+        @IdClient int,
+        @IdState int, 
+        @BlockReason varchar(250),
+        @BlockDate smalldatetime
+
+        AS
+
+            BEGIN TRY
+
+            if exists (select * from Client where IdClient = @IdClient and IdState = @IdState ) begin
+                RAISERROR( 'Selected client is already blocked.',12,1)
+            end
+
+            begin tran	
+
+                    -- Update Client
+                    UPDATE Client SET IdState = @IdState, blockReason = @BlockReason, blockDate = @BlockDate				
+                    WHERE IdClient = @IdClient
+
+            COMMIT TRAN			
+            RETURN -1
+        END TRY
+        BEGIN CATCH
+
+            IF @@TRANCOUNT >0 BEGIN
+                ROLLBACK TRAN 
+            END
+
+            print 'The selected client could not be updated. ' + ERROR_MESSAGE()
+            RETURN 0
+
+        END CATCH
+```
+
+```sql { #fhmodal_collection }
+CREATE PROCEDURE [dbo].[pPers_LockClientBatch]
+          @IdState int,
+          @BlockReason varchar(250),
+          @BlockDate smalldatetime,
+          @sysCollectionSentence nvarchar(max) --This param has sql sentence with selected items unique identifiers.
+          AS
+
+              BEGIN TRY
+
+              begin tran	
+
+                      Declare @Clients Table (IdClient int)
+                      INSERT INTO @Clients EXEC sp_executesql @sysCollectionSentence;
+
+                      update C 
+                      set IdState=@IdState, BlockReason=@BlockReason, BlockDate=@BlockDate
+                      from Client C inner join @Clients Sel on C.IdClient=Sel.IdClient			
+
+
+              COMMIT TRAN	
+
+              RETURN -1
+          END TRY
+          BEGIN CATCH
+
+              IF @@TRANCOUNT >0 BEGIN
+                  ROLLBACK TRAN 
+              END
+
+              declare @Error nvarchar(max) = 'The selected client could not be updated. ' + ERROR_MESSAGE()
+              RAISERROR(@Error,12,1)
+              RETURN 0
+
+          END CATCH
+```
+
+```sql { #fhmodal_property_change }
+--#NAME
+--		SampleLoadProcess
+--#CREATION
+-- 		18/02/2022
+--#CLASIFICATION
+-- 		
+--#DESCRIPTION
+-- 		Sample load object/change property custom process.
+--#PARAMETERS
+-- 		@Values : Object properties	,
+--		@ContextVars: Flexygo context variables,
+--#OBSERVATIONS
+-- Values XML Sample
+--	< Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest"> 
+--		< Property Name="TestId" Value="3" OldValue="" TableName="_Test" IsKey="True" /> 
+--		< Property Name="Descrip" Value="test3" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="IdDoc" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="InsertUpdate" Value="False" OldValue="False" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Usuario" Value="" OldValue="" TableName="_Test" IsKey="False" /> 
+--		< Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="_Test" IsKey="False" /> 
+--		< Property Name="Config" Value="config3" OldValue="" TableName="_Test_Conf" IsKey="False" /> 
+--	< /Row> 
+--
+-- ContextVars XML Sample		
+--  < Row> 
+--		< Property Name="reference" Value="0" /> 
+--		< Property Name="subReference" Value="0" /> 
+--		< Property Name="currentRole" Value="Admins" /> 
+--		< Property Name="currentRoleId" Value="admins" /> 
+--		< Property Name="currentUserLogin" Value="admin" /> 
+--		< Property Name="currentUserId" Value="1" /> 
+--		< Property Name="currentUserFullName" Value="admin" /> 
+--		< Property Name="currentUserCultureId" Value="en-gb" /> 
+--		< Property Name="currentUserLang" Value="en" /> 
+--		< Property Name="currentUserEmail" Value="info@ahora.es.com" /> 
+--  < /Row> 
+--
+--#CHANGES
+-- 		
+----------------------------------------------------------------------------------
+CREATE PROCEDURE [dbo].[SampleLoadProcess]
+	@Values AS XML,
+        @ContextVars as XML
+AS
+	DECLARE 
+	  @PropertyName AS NVARCHAR(50),
+	  @changeValue AS BIT,
+	  @newValue AS NVARCHAR(MAX),
+	  @changeClass AS BIT,
+	  @newClass AS NVARCHAR(MAX),
+	  @changeRequired AS BIT,
+          @newRequired AS BIT,
+          @changeEnabled AS BIT,
+          @newEnabled AS BIT,
+          @changeVisibility AS BIT,
+          @newVisibility AS BIT,
+          @changeSQL AS BIT,
+          @newSQL AS NVARCHAR(MAX),
+          @docu AS NVARCHAR(50) 
+
+	SET @docu = @Values.value('(/Row/Property[@Name=''Docu'']/@Value)[1]', 'nvarchar(50)' )
+	
+        SET @PropertyName = 'OriginId'
+	SET @changeValue = 1
+	SET @newValue = '1'
+	SET @changeClass = 1
+	SET @newClass = 'box-danger'
+	SET @changeRequired = 1
+        SET @newRequired = 1
+        SET @changeEnabled = 1
+        SET @newEnabled = 0
+        SET @changeVisibility = 1
+        SET @newVisibility = 1
+        SET @changeSQL = 1
+	SET @newSQL = 'select ObjectName from objects where objectname like ''' + @docu + ''''
     
-    Image 5. Stored and Collection Relation
-    
-
-## Custom Stored When Object Load Or Property Change
-
-To every object or property a Custom Stored can be assigned to get executed when this one is created or changed, for that the Stored will receive an XML with every propertie value, here you have an example on how to use it:
-
-_Example_
-
-_×
-
-#### Insert, Update and Delete Stored
-
-  CREATE PROCEDURE \[dbo\].\[P\_TestInsert\_Stored\]       @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT        AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestInsert\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object insert through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">  --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />  --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />  --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />  --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />  --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />  --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />  --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />  -- </Row>  --  -- ContextVars XML Sample    --  < Row>  --  < Property Name="reference" Value="0" />  --  < Property Name="subReference" Value="0" />  --  < Property Name="currentRole" Value="Admins" />  --  < Property Name="currentRoleId" Value="admins" />  --  < Property Name="currentUserLogin" Value="admin" />  --  < Property Name="currentUserId" Value="1" />  --  < Property Name="currentUserFullName" Value="admin" />  --  < Property Name="currentUserCultureId" Value="en-gb" />  --  < Property Name="currentUserLang" Value="en" />  --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />  --  </Row>  --  -- Return vars XML Sample    --  <Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />  --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50)         SET @TestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@Value)\[1\]', 'int' )      SET @Descrip=@Values.value('(/Row/Property\[@Name=''Descrip''\]/@Value)\[1\]', 'nvarchar(2000)' )      SET @Usuario=@Values.value('(/Row/Property\[@Name=''Usuario''\]/@Value)\[1\]', 'nvarchar(50)' )      SET @InsertUpdate=@Values.value('(/Row/Property\[@Name=''InsertUpdate''\]/@Value)\[1\]', 'bit' )         SET @FechaInsertUpdate=@Values.value('(/Row/Property\[@Name=''FechaInsertUpdate''\]/@Value)\[1\]', 'datetime' )      SET @Config=@Values.value('(/Row/Property\[@Name=''Config''\]/@Value)\[1\]', 'nvarchar(50)' )              /\* perform process (insert fields into different tables) \*/    INSERT INTO \_Test (TestId,Descrip, Usuario, InsertUpdate, FechaInsertUpdate)    SELECT @TestId, @DEscrip ,isnull(@Usuario,'nouser') ,@InsertUpdate ,isnull(@FechaInsertUpdate ,getdate())      INSERT INTO \_Test\_conf (TestId, Config)    SELECT @TestId , @Config       /\* change Keys \*/     -- When Property has Value replacing Value     --SET @Values.modify('replace value of (/Row/Property\[@Name=''TesId''\]/@Value)\[1\] with "sysNavigationNode"')     -- When Property has not Value inserting Value     -- SET @Values.modify('insert attribute Value {sql:variable("@TesId")} into (/Row/Property\[@Name=''TesId'' and empty(@Value)\])\[1\]')        /\* Process return values\*/     SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')     SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')     /\* Return 0 if error \*/    RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT >0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)      SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "Something went wrong"')   RETURN 0    END CATCH    CREATE PROCEDURE \[dbo\].\[P\_TestUpdate\_Stored\]     @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT         AS   ----------------------------------------------------------------------------------  --#NAME  --  P\_TestUpdate\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object update through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo ciontext variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample   --<  Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">    -- <  Property Name="TestId" Value="3" OldValue="3" TableName="\_Test" IsKey="True" />    -- <  Property Name="Descrip" Value="test4" OldValue="test3" TableName="\_Test" IsKey="False" />    -- <  Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />    -- <  Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />    -- <  Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />    -- <  Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />    -- <  Property Name="Config" Value="config4" OldValue="Config3" TableName="\_Test\_Conf" IsKey="False" />    --<  /Row>   --  -- ContextVars XML Sample    --  <  Row>   --  <  Property Name="reference" Value="0" />   --  <  Property Name="subReference" Value="0" />   --  <  Property Name="currentRole" Value="Admins" />   --  <  Property Name="currentRoleId" Value="admins" />   --  <  Property Name="currentUserLogin" Value="admin" />   --  <  Property Name="currentUserId" Value="1" />   --  <  Property Name="currentUserFullName" Value="admin" />   --  <  Property Name="currentUserCultureId" Value="en-gb" />   --  <  Property Name="currentUserLang" Value="en" />   --  <  Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  <  /Row>   --  -- Return vars XML Sample    --  <  Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50),    --OldValues   @OldTestId int               SET @OldTestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@OldValue)\[1\]', 'int' )     SET @TestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@Value)\[1\]', 'int' )      SET @Descrip=@Values.value('(/Row/Property\[@Name=''Descrip''\]/@Value)\[1\]', 'nvarchar(2000)' )      SET @Usuario=@Values.value('(/Row/Property\[@Name=''Usuario''\]/@Value)\[1\]', 'nvarchar(50)' )      SET @InsertUpdate=0       SET @FechaInsertUpdate=GETDATE()    SET @Config=@Values.value('(/Row/Property\[@Name=''Config''\]/@Value)\[1\]', 'nvarchar(50)' )              /\* perform process (insert fields into different tables) \*/    UPDATE \_Test set TestId=@TestId,Descrip=@Descrip, Usuario=@Usuario, @InsertUpdate=0, FechaInsertUpdate=@FechaInsertUpdate where TestId=@OldTestId    UPDATE \_Test\_conf set TestId=@TestId,Config=@Config where TestId=@OldTestId     /\* change Keys if necesary\*/      --SET @Values.modify('replace value of (/Row/Property\[@Name=''TesId''\]/@Value)\[1\] with @TestId')      /\* Process return values\*/     SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')     SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')           RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)         SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "Something went wrong"')   RETURN 0    END CATCH    CREATE PROCEDURE \[dbo\].\[P\_TestDelete\_Stored\]       @Values as XML OUTPUT,   @ContextVars as XML,   @RetValues as XML OUTPUT        AS    ----------------------------------------------------------------------------------  --#NAME  --  P\_TestDelete\_Stored  --#CREATION  --   07/01/2016  --#CLASIFICATION  --   Framework/systemObjects  --#DESCRIPTION  --   Used for Testing object delete through Flexygo Stored procedure  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo context variables,  --  @RetValues : Flexygo process Helper (CloseParamWindow,JSCode,JSFile,LastException,Params,Refresh,Success,SuccesMessage,WarningMessage)  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">   --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />   --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />   --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />   --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />   -- < /Row>   --  -- ContextVars XML Sample    --  < Row>   --  < Property Name="reference" Value="0" />   --  < Property Name="subReference" Value="0" />   --  < Property Name="currentRole" Value="Admins" />   --  < Property Name="currentRoleId" Value="admins" />   --  < Property Name="currentUserLogin" Value="admin" />   --  < Property Name="currentUserId" Value="1" />   --  < Property Name="currentUserFullName" Value="admin" />   --  < Property Name="currentUserCultureId" Value="en-gb" />   --  < Property Name="currentUserLang" Value="en" />   --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  < /Row>   --  -- Return vars XML Sample    --  < Property Success="False" SuccessMessage="" WarningMessage="" JSCode="" JSFile="" CloseParamWindow="False" refresh="False" />   --  --#CHANGES  --   13/02/2018- David Miralpeix  ----------------------------------------------------------------------------------  BEGIN TRY      --Declare field variables to load   DECLARE @TestId int,    @Descrip nvarchar(2000),    @IdDoc int,   @InsertUpdate bit,       @Usuario nvarchar(50),   @FechaInsertUpdate datetime ,    @Config nvarchar(50)         SET @TestId=@Values.value('(/Row/Property\[@Name=''TestId''\]/@Value)\[1\]', 'int' )      SET @Descrip=@Values.value('(/Row/Property\[@Name=''Descrip''\]/@Value)\[1\]', 'nvarchar(2000)' )      SET @Usuario=@Values.value('(/Row/Property\[@Name=''Usuario''\]/@Value)\[1\]', 'nvarchar(50)' )      SET @InsertUpdate=@Values.value('(/Row/Property\[@Name=''InsertUpdate''\]/@Value)\[1\]', 'bit' )         SET @FechaInsertUpdate=@Values.value('(/Row/Property\[@Name=''FechaInsertUpdate''\]/@Value)\[1\]', 'datetime' )      SET @Config=@Values.value('(/Row/Property\[@Name=''Config''\]/@Value)\[1\]', 'nvarchar(50)' )              /\* perform process (delete fields into different tables) \*/    Delete from \_Test  where TestId=@TestId    Delete from \_Test\_Conf  where TestId=@TestId        /\* Process return values\*/     SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 1')     SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "All went fine"')     /\* Return 0 if error \*/    RETURN 1  END TRY     BEGIN CATCH   IF @@TRANCOUNT > 0 BEGIN    ROLLBACK TRAN    END     DECLARE @CatchError NVARCHAR(MAX)   SET @CatchError=dbo.funprintError(ERROR\_MESSAGE(),ERROR\_NUMBER(),ERROR\_PROCEDURE(),@@PROCID ,ERROR\_LINE())   RAISERROR(@CatchError,12,1)       SET @RetValues.modify('replace value of (/Property/@Success)\[1\] with 0')   SET @RetValues.modify('replace value of (/Property/@SuccessMessage)\[1\] with "something went wrong"')       RETURN 0    END CATCH            
-
-×
-
-#### Object Stored Procedure
-
-  CREATE PROCEDURE \[dbo\].\[pPers\_LockClient\]            @IdClient int,          @IdState int,           @BlockReason varchar(250),          @BlockDate smalldatetime            AS                BEGIN TRY                if exists (select \* from Client where IdClient = @IdClient and IdState = @IdState ) begin                  RAISERROR( 'Selected client is already blocked.',12,1)              end                begin tran                         -- Update Client                      UPDATE Client SET IdState = @IdState, blockReason = @BlockReason, blockDate = @BlockDate                          WHERE IdClient = @IdClient                COMMIT TRAN                 RETURN -1          END TRY          BEGIN CATCH                IF @@TRANCOUNT >0 BEGIN                  ROLLBACK TRAN               END                print 'The selected client could not be updated. ' + ERROR\_MESSAGE()              RETURN 0            END CATCH          
-
-×
-
-#### Collection Stored Procedure
-
-  CREATE PROCEDURE \[dbo\].\[pPers\_LockClientBatch\]            @IdState int,            @BlockReason varchar(250),            @BlockDate smalldatetime,            **@sysCollectionSentence nvarchar(max)** \--This param has sql sentence with selected items unique identifiers.            AS                  BEGIN TRY                  begin tran                           Declare @Clients Table (IdClient int)                        INSERT INTO @Clients EXEC sp\_executesql @sysCollectionSentence;                          update C                         set IdState=@IdState, BlockReason=@BlockReason, BlockDate=@BlockDate                        from Client C inner join @Clients Sel on C.IdClient=Sel.IdClient                       COMMIT TRAN                   RETURN -1            END TRY            BEGIN CATCH                  IF @@TRANCOUNT >0 BEGIN                    ROLLBACK TRAN                 END                  declare @Error nvarchar(max) = 'The selected client could not be updated. ' + ERROR\_MESSAGE()                RAISERROR(@Error,12,1)                RETURN 0              END CATCH          
-
-×
-
-#### Collection Stored Procedure
-
-Here the Stored Procedure is getting the properties from Code Object and is returning the necessary data to change the properties that need to get changed
-
-  ----------------------------------------------------------------------------------  --#NAME  --  SampleLoadProcess  --#CREATION  --   18/02/2022  --#CLASIFICATION  --     --#DESCRIPTION  --   Sample load object/change property custom process.  --#PARAMETERS  --   @Values : Object properties ,  --  @ContextVars: Flexygo context variables,  --#OBSERVATIONS  -- Values XML Sample  -- < Row rowId="d4ec88a0-3129-4c5d-b5ac-8c9d2867db64" ObjectName="systmpTest">   --  < Property Name="TestId" Value="3" OldValue="" TableName="\_Test" IsKey="True" />   --  < Property Name="Descrip" Value="test3" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="IdDoc" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="InsertUpdate" Value="False" OldValue="False" TableName="\_Test" IsKey="False" />   --  < Property Name="Usuario" Value="" OldValue="" TableName="\_Test" IsKey="False" />   --  < Property Name="FechaInsertUpdate" Value="14/02/2018 0:00:00" OldValue="14/02/2018 0:00:00" TableName="\_Test" IsKey="False" />   --  < Property Name="Config" Value="config3" OldValue="" TableName="\_Test\_Conf" IsKey="False" />   -- < /Row>   --  -- ContextVars XML Sample    --  < Row>   --  < Property Name="reference" Value="0" />   --  < Property Name="subReference" Value="0" />   --  < Property Name="currentRole" Value="Admins" />   --  < Property Name="currentRoleId" Value="admins" />   --  < Property Name="currentUserLogin" Value="admin" />   --  < Property Name="currentUserId" Value="1" />   --  < Property Name="currentUserFullName" Value="admin" />   --  < Property Name="currentUserCultureId" Value="en-gb" />   --  < Property Name="currentUserLang" Value="en" />   --  < Property Name="currentUserEmail" Value="info@ahora.es.com" />   --  < /Row>   --  --#CHANGES  --     ----------------------------------------------------------------------------------  CREATE PROCEDURE \[dbo\].\[SampleLoadProcess\]   @Values AS XML,          @ContextVars as XML  AS   DECLARE      @PropertyName AS NVARCHAR(50),     @changeValue AS BIT,     @newValue AS NVARCHAR(MAX),     @changeClass AS BIT,     @newClass AS NVARCHAR(MAX),     @changeRequired AS BIT,            @newRequired AS BIT,            @changeEnabled AS BIT,            @newEnabled AS BIT,            @changeVisibility AS BIT,            @newVisibility AS BIT,            @changeSQL AS BIT,            @newSQL AS NVARCHAR(MAX),            @docu AS NVARCHAR(50)      SET @docu = @Values.value('(/Row/Property\[@Name=''Docu''\]/@Value)\[1\]', 'nvarchar(50)' )             SET @PropertyName = 'OriginId'   SET @changeValue = 1   SET @newValue = '1'   SET @changeClass = 1   SET @newClass = 'box-danger'   SET @changeRequired = 1          SET @newRequired = 1          SET @changeEnabled = 1          SET @newEnabled = 0          SET @changeVisibility = 1          SET @newVisibility = 1          SET @changeSQL = 1   SET @newSQL = 'select ObjectName from objects where objectname like ''' + @docu + ''''                SELECT            @PropertyName AS PropertyName,               @changeValue AS changeValue,               @newValue AS newValue,               @changeClass AS changeClass,               @newClass AS newClass,               @changeRequired AS changeRequired,               @newRequired AS newRequired,               @changeEnabled AS changeEnabled,               @newEnabled AS newEnabled,               @changeVisibility AS changeVisibility,               @newVisibility AS newVisibility,               @changeSQL AS changeSQL,               @newSQL AS newSQL     RETURN 1_
+        SELECT 
+    	    @PropertyName AS PropertyName, 
+            @changeValue AS changeValue, 
+            @newValue AS newValue, 
+            @changeClass AS changeClass, 
+            @newClass AS newClass, 
+            @changeRequired AS changeRequired, 
+            @newRequired AS newRequired, 
+            @changeEnabled AS changeEnabled, 
+            @newEnabled AS newEnabled, 
+            @changeVisibility AS changeVisibility, 
+            @newVisibility AS newVisibility, 
+            @changeSQL AS changeSQL, 
+            @newSQL AS newSQL
+	
+RETURN 1
+```

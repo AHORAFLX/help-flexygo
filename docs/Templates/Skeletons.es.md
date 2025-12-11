@@ -1,37 +1,53 @@
-# Skeletons
+# Esqueletos
 
-When loading a module is always good to show the user that something is happening, so that's where skeletons take place.
+Al cargar un módulo, siempre es bueno mostrar al usuario que algo está sucediendo, así que aquí es donde entran en juego los esqueletos.
 
-Skeletons are basic html structures that will show while the module is loading, instead of leaving blank modules. They can be added to every module, where an standard one can be used or a new one can be created.
+Los esqueletos son estructuras básicas de html que se mostrarán mientras el módulo se está cargando, en lugar de dejar módulos en blanco. Pueden ser añadidos a cada módulo, donde se puede usar uno estándar o crear uno nuevo.
 
-The most common module types (flx-list, flx-edit, flx-view, flx-moduletab and flx-buttontab) have got an standard skeleton set, but it can be overwritten by setting to your desired module the skeleton you want to show.
+Los tipos de módulos más comunes (flx-list, flx-edit, flx-view, flx-moduletab y flx-buttontab) tienen un conjunto de esqueletos estándar, pero se puede sobrescribir configurando el módulo deseado con el esqueleto que se quiere mostrar.
 
-## How to create your own skeleton
+## Cómo crear tu propio esqueleto
 
-Adding a custom skeleton is as easy as navigating to the skeletons page through the admin work, and through the list adding a new one.
+El esqueleto puede dividirse en tres partes (skeletonHeader, skeletonBody, skeletonFooter) esto se debe a la necesidad de mostrar o no ciertos elementos dependiendo si es la primera carga del módulo o si es una actualización. Para que Flexygo sepa qué parte es, será necesario encapsular el esqueleto con divs que contengan las clases (skeletonHeader, skeletonBody, skeletonFooter), como en el siguiente ejemplo.
 
-![Menu](/assets/images/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
+![Navegación del Menú de la Base de Datos](/assets/images/Skeletons/SkeletonNavigation.png "Imagen 1. Navegación del Menú de la Base de Datos")
 
-Image 1. Database Menu Navigation
+El esqueleto puede dividirse en tres partes (skeletonHeader, skeletonBody, skeletonFooter) esto se debe a la necesidad de mostrar o no ciertos elementos dependiendo si es la primera carga del módulo o si es una actualización. Para que Flexygo sepa qué parte es, será necesario encapsular el esqueleto con divs que contengan las clases (skeletonHeader, skeletonBody, skeletonFooter), como en el siguiente ejemplo.
 
-Skeleton may divide in three parts (skeletonHeader, skeletonBody, skeletonFooter) this is do to the necesity of showing or not certain elements depending if it's the module first load or if it's a refresh. For flexygo to know which part it is, it will be needed to encapsulate skeleton with divs containing the classes (skeletonHeader, skeletonBody, skeletonFooter), as in the following example.
+_Ejemplo:_
 
-_Example:_
-
-```
-<div class="skeletonHeader">      <div> My Skeleton Header </div>  </div>        <div class="skeletonBody">      <div> My Skeleton Body </div>  </div>        <div class="skeletonFooter">      <div> My Skeleton Footer </div>  </div>
-```
-
-Once stablished the skeleton html you could add an image to the skeleton so when searching through the skeletons list is easier to find, but is not compulsory.
-
-## Using Flexygo skeleton effect
-
-Flexygo skeletons use an animation to show the user that the app is still running properly. Using this animation is as easy as using the classes skeletonElementContainer and skeletonElement as shown in this example.
-
-_Example:_
-
-```
-<div class="skeletonElementContainer">      <div class="skeletonElement"></div>  </div>
+```html
+<div class="skeletonHeader">
+    <div> My Skeleton Header </div>
+</div>
+    
+<div class="skeletonBody">
+    <div> My Skeleton Body </div>
+</div>
+    
+<div class="skeletonFooter">
+    <div> My Skeleton Footer </div>
+</div>
 ```
 
-_Result:_
+Una vez establecido el html del esqueleto, puedes agregar una imagen al esqueleto para que al buscar a través de la lista de esqueletos sea más fácil de encontrar, pero no es obligatorio.
+
+## Usar el efecto de esqueleto de Flexygo
+
+Los esqueletos de Flexygo utilizan una animación para mostrar al usuario que la aplicación sigue funcionando correctamente. Usar esta animación es tan fácil como utilizar las clases skeletonElementContainer y skeletonElement como se muestra en este ejemplo.
+
+_Ejemplo:_
+
+```html
+<div class="skeletonElementContainer">
+    <div class="skeletonElement"></div>
+</div>
+```
+
+_Resultado:_
+
+<div class="flxSkeleton">
+    <div class="skeletonElementContainer">
+        <div class="skeletonElement"></div>
+    </div>
+</div>

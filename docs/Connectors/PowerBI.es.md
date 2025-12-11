@@ -1,51 +1,75 @@
-# Power BI Integration
+# Integración con Power BI { .flx-title-with-image }
 
-![](/assets/images/PowerBI/PowerBiLogo.png)
+![](/assets/images/PowerBI/PowerBiLogo.png){ .flx-image-of-title }
 
-Power BI is a Microsoft data analysis service aimed at providing interactive visualizations and business intelligence (BI) capabilities with an interface simple enough for end users to create their own reports themselves and panels. **flexygo** enables you to use Microsot Power BI to embed reports.
+Power BI es un servicio de análisis de datos de Microsoft que ofrece visualizaciones interactivas y capacidades de inteligencia empresarial (BI) con una interfaz lo suficientemente sencilla como para que los usuarios finales puedan crear sus propios informes y paneles.  
+**flexygo** permite utilizar Microsoft Power BI para incrustar informes dentro de tus páginas.
 
-## Settings
+## Configuración
 
-All Power BI settings must be established before we can use Microsoft Power BI. You can use the Power BI integration option in your integration menu to generate the empty settings. Then you should fill out each setting.
+Todos los ajustes de Power BI deben establecerse antes de poder utilizar Microsoft Power BI.  
+Puedes usar la opción Power BI Integration en el menú de integraciones para generar la configuración vacía.  
+Después, debes completar cada parámetro:
 
-*   **PowerBIApiUrl**: https://api.powerbi.com
-*   **PowerBIApplicationId**: Application ID Secret
-*   **PowerBIApplicationSecret**: Application ID Secret
-*   **PowerBIAuthenticationType**: MasterUser
-*   **PowerBIAuthorityUrl**: https://login.microsoftonline.com/common/
-*   **PowerBIPassword**: Password
-*   **PowerBIResourceUrl**: https://analysis.windows.net/powerbi/api
-*   **PowerBITenant**: Tenant Id
-*   **PowerBIUsername**: Username
-*   **PowerBIWorkspaceId**: Workspace Id
+* **PowerBIApiUrl**: https://api.powerbi.com  
+* **PowerBIApplicationId**: Application ID  
+* **PowerBIApplicationSecret**: Application ID Secret  
+* **PowerBIAuthenticationType**: MasterUser  
+* **PowerBIAuthorityUrl**: https://login.microsoftonline.com/common/  
+* **PowerBIPassword**: Password  
+* **PowerBIResourceUrl**: https://analysis.windows.net/powerbi/api  
+* **PowerBITenant**: Tenant Id  
+* **PowerBIUsername**: Username  
+* **PowerBIWorkspaceId**: Workspace Id  
 
-To generate Power BI setting click on Generate Power BI settings
+Para generar la configuración de Power BI, haz clic en:  
+<flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton>
 
-## Incorporating Power BI report
+## Incorporación de un informe Power BI
 
-Access to the Reports section and incorporate your Power BI report introducing th ReportId in the report path field.
+Accede a la sección **Reports** e incorpora tu informe de Power BI introduciendo el **ReportId** en el campo *report path*.
 
-## Filtering Power BI from **flexygo** pages
+## Filtrar Power BI desde páginas flexygo
 
-Microsoft only allows you to pass filters with embedded BI.
+Microsoft solo permite pasar filtros a informes Power BI embebidos.
 
-To achieve this we must add a new Role to our BI document, imagine that we are going to pass the provider id. We create the provider role and associate the condition _\[ProviderId\] = value(username())_
+Para lograrlo, debemos añadir un nuevo **Role** al documento BI.  
+Imaginemos que vamos a pasar el *ProviderId*.  
+Creamos el rol "Provider" y asociamos la condición:
+
+```
+
+[ProviderId] = value(username())
+
+```
 
 ![Power BI](/assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
 
-Image 1. Power BI
+Luego, debemos indicar el role y el username desde nuestra aplicación para que el filtro se aplique automáticamente.  
+Para ello se utilizan dos campos de configuración en el registro del informe dentro de flexygo:
 
-Now we must be able to pass the role and the username from our application, so that it automatically filters the field, for this we use the two fields that are in the report registration in flexygo:
+* **Filter sentence:**
 
-*   Filter sentence: SELECT {{currentReference}} AS filter
-*   Role Sentence: SELECT 'Provider' AS Role
+```sql
+SELECT {{currentReference}} AS filter
+```
 
-To make it working, the report cannot be published directly, so you need the PowerBI Embedded, which is an Azure resource that is within the Azure Marketplace (Image 2).
+* **Role sentence:**
+
+```sql
+SELECT 'Provider' AS Role
+```
+
+Para que esto funcione, **el informe no puede publicarse directamente**.
+Es necesario usar **PowerBI Embedded**, un recurso de Azure disponible en Azure Marketplace (Imagen 2).
+{: .flx-warning-card }
 
 ![Azure Marketplace](/assets/images/PowerBI/powerbi2.png "Image 2. Azure Marketplace")
 
-Image 2. Azure Marketplace
+## Componente web de Power BI
 
-## Power BI web component
+Una vez configurado todo, ya puedes añadir un módulo HTML a tu página e incluir el componente web de Power BI:
 
-Now you are ready to add a HTML module to your page and include the Power BI web component _<flx-powerbi reportname="your report name"><flx-powerbi>_
+```html
+<flx-powerbi reportname="your report name"></flx-powerbi>
+```

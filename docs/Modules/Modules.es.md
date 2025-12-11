@@ -1,772 +1,504 @@
-Modules filter
+# Módulos de **flexygo**
 
-Button Tab
+Los módulos de **flexygo** han sido diseñados específicamente para facilitar la creación de diversas utilidades que serán útiles para tu proyecto. Los módulos pueden ayudarnos a añadir información adicional a páginas existentes; por ejemplo, usando Popover puedes mostrar información adicional, organizar el trabajo en equipo con el módulo Kanban o representar ubicaciones con Maps.
 
-Chart
+Antes de empezar a configurar los módulos seleccionados, es esencial leer el artículo sobre [Gestión de Módulos](/Modules/ModuleManagement)
+{: .flx-warning-card }
 
-Chatter
+En este capítulo explicaremos brevemente todos los módulos de **flexygo**; para obtener más información, podrás dirigirte a los artículos específicos con información detallada de cada módulo.
 
-Calendar
+## Button Tab
 
-Document & Image Manager
+Un botón de pestaña es un componente de UI que se coloca dentro de una barra de pestañas. Este módulo funciona como una pestaña, pero con la apariencia de un botón desplegable. Es útil cuando necesitas ahorrar espacio en tu página.
 
-Easy Info
+![](/assets/images/ModulesConf/buttonTab.png "Imagen 1. Button Tab")
 
-Easy Line
+Para añadir este módulo debemos rellenar los siguientes campos del formulario de configuración:
 
-Easy Pie
+![Button Tab](/assets/images/ModulesConf/buttonTabConf.png "Imagen 2. Configuración Button Tab")
 
-Edit Object List
-
-File Browser
-
-Funnel
-
-HTML Module
-
-Kanban
-
-Timeline Module
-
-List Filter
-
-Map
-
-Mail
-
-Module tab
-
-Nav Panel
-
-Network Graphic
-
-Object Edit
-
-Object List
-
-Object Process
-
-Object Reports
-
-Object Search
-
-Object View
-
-Org Chart
-
-Related Objects
-
-Related Processes
-
-Related Reports
-
-Rss Feed
-
-Sparklines
-
-SQL Feed
-
-Upload Plugin
-
-# **flexygo** modules
-
-**flexygo** modules have been specially designed to facilitate the creation of various utilities that will be useful for your project. Modules can help us to add additional information to existen pages, for instance, using Popover you can show additional information; organizate your team work with Kanban module; represent location with Maps.
-
-Before you'll start to configure selected modules, it's essential to read the article about Module Management
-
-In this chapter we will shortly explain all **flexygo** modules, for more information you'll be able to redirect to the special article with detailed module information.
-
-# Button Tab
-
-A tab button is a UI component that is placed inside of a tab bar. The following module does the function of a tab, but with the appearance of a drop-down button. This module can be useful when you need to save space on your page.
-
-![](.\img\Help\ModulesConf\buttonTab.png "Image 1. Button Tab")
-
-Image 1. Button Tab
-
-To add this module we must fill in the following fields of the configuration form:
-
-![Button Tab](.\img\Help\ModulesConf\buttonTabConf.png "Image 2. Button Tab Configuration")
-
-Image 2. Button Tab Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Button Tab |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
+| Id | Identifica el módulo |
+| Type | Tipo de módulo, en este caso Button Tab |
+| Description | Breve descripción del módulo |
+| Title | Título que aparece en el módulo |
+| Classification | Al no ser un módulo por defecto, siempre es Project Module |
+| Container | Tipo de contenedor del módulo |
 
-# Module Tab
+## Module Tab
 
-A module tab is a design pattern where content is separated into different panes, and each pane is viewable one at a time. The user requests content to be displayed by clicking the content’s corresponding tab control. The following module works as a tabulator with different modules inside. It can be used as traditional tab or as dropdown buttons.
+Un Module Tab es un patrón de diseño donde el contenido se separa en paneles distintos, cada uno visible individualmente. El usuario selecciona qué contenido mostrar al hacer clic en la pestaña correspondiente. Este módulo funciona como un tabulador con distintos módulos en su interior; puede usarse como pestaña tradicional o como menú desplegable.
 
-![Module Tab](.\img\Help\ModulesConf\moduletab.png "Image 3. Module Tab")
+![Module Tab](/assets/images/ModulesConf/moduletab.png "Imagen 3. Module Tab")
 
-Image 3. Module Tab
+![Module Tab Configuration](/assets/images/ModulesConf/moduletabConf.png "Imagen 4. Configuración Module Tab")
 
-To add this module ans setup its configuration form:
-
-![Module Tab Configuration](.\img\Help\ModulesConf\moduletabConf.png "Image 4. Module Tab Configuration")
-
-Image 4. Module Tab Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, Module tab or Module dropdown buttons |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
+| Id | Identifica el módulo |
+| Type | Tipo de módulo, Module Tab o Module dropdown buttons |
+| Description | Breve descripción del módulo |
+| Title | Título que aparece en el módulo |
+| Classification | Siempre Project Module |
+| Container | Tipo de contenedor del módulo |
 
-# Calendar and Scheduller
+## Calendar and Scheduler
 
-The following module allows us to display a calendar. It provides its users with features that help them plan and schedule important events and tasks while also enabling various functions such as creating time reports and analyzing the time allocation to different sectors.
+Este módulo permite mostrar un calendario. Facilita al usuario la planificación de eventos y tareas, permitiendo además informar tiempos y analizar la asignación temporal a distintos sectores.
 
-![Calendar](.\img\Help\ModulesConf\CalendarMonth.png "Image 5. Calendar")
+![Calendar](/assets/images/ModulesConf/CalendarMonth.png "Imagen 5. Calendar")
 
-Image 5. Calendar
+<div class="flx-info-card" markdown="1">
+Consulta ayuda adicional para configurar el módulo:
 
-Check out additional help to see how to set it up
+[Manual Calendar and Scheduler](/Modules/Scheduler&Calendar)
 
-#### Manual Calendar and Scheduler
+[Vídeo Scheduler](https://youtu.be/lKKMce5PsrA)
+</div>
 
-[
+## Chart
 
-#### Video Scheduller
+Un gráfico es una representación visual de datos, donde la información se muestra mediante símbolos como barras, líneas o sectores circulares. Este módulo permite mostrar distintos tipos de gráficos.
 
-](https://youtu.be/lKKMce5PsrA)
+![Chart](/assets/images/ModulesConf/Chart.png "Imagen 6. Chart")
 
-# Chart
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-A chart is a graphical representation for data visualization, in which "the data is represented by symbols, such as bars in a bar chart, lines in a line chart, or slices in a pie chart". A chart can represent tabular numeric data, functions or some kinds of quality structure and provides different info. The following module allows us to display different types of charts.
+[Manual Chart](/Modules/Chart)
 
-![Chart](.\img\Help\ModulesConf\Chart.png "Image 6. Chart")
+[Manual Chart II](/Modules/ChartII)
 
-Image 6. Chart
+[Vídeo Chart](https://youtu.be/Nj8si7aUPe4)
+</div>
 
-Check out additional help to see how to set it up
+## Document & Image Manager
 
-#### Manual Chart
+Este módulo permite subir documentos e imágenes vinculados a un objeto. Posteriormente pueden editarse o eliminarse.
 
-#### Manual Chart II
+![Document Manager](/assets/images/ModulesConf/DocumentManager.png "Imagen 7. Document Manager")
 
-[
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-#### Video Chart
+[Manual Document & Image Manager](/Modules/Chart)
 
-](https://youtu.be/Nj8si7aUPe4)
+[Vídeo Document and Image Manager](https://youtu.be/qNQOoO1TcyA)
 
-# Document & Image Manager
+[Vídeo Document Manager](https://youtu.be/ktET_gXxdl0)
 
-Thanks to this module, you can upload documents and pictures that will be linked to a particular object. Subsequently, you can edit and delete uploaded documents/pictures.
+[Vídeo Image Manager](https://youtu.be/apdpn_i0t4A)
+</div>
 
-![Document Manager](.\img\Help\ModulesConf\DocumentManager.png "Image 7. Chart")
+## Chatter
 
-Image 7. Document Manager
+Chatter es un módulo que permite crear conversaciones relacionadas con un objeto.
 
-Check out additional help to see how to set it up
+![Chatter](.\img\Help\Chatter\Chatter-example.png "Imagen 8. Chatter")
 
-#### Manual Document & Image Manager
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-[
+[Manual Chatter](/Modules/Chatter)
+</div>
 
-#### Video Document and Image Manager
+## Easy Pie, Easy Info, Easy Line y Sparklines
 
-](https://youtu.be/qNQOoO1TcyA)[
+Estos componentes permiten realizar gráficos sencillos. Combinados en un módulo HTML pueden crear visualizaciones rápidas y compactas.
 
-#### Video Document Manager
+![Easy Pie](/assets/images/ModulesConf/EasyInfoExamples.png "Imagen 9. Easy Pie")
 
-](https://youtu.be/ktET_gXxdl0)[
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-#### Video Image Manager
+[Manual Easy Pie/Line/Info](/Modules/ChartII)
+</div>
 
-](https://youtu.be/apdpn_i0t4A)
+## Edit Object List
 
-# Chatter
+Permite editar el contenido de una colección sin abrir una nueva ventana.
 
-Chatter is a type of module, which allows us to create object related conversations.
+![Edit Object List](/assets/images/ModulesConf/EditObjectList.png "Imagen 10. Edit Object List")
 
-![Chatter](.\img\Help\Chatter\Chatter-example.png "Image 8. Chatter")
+1. Usar el asistente del objeto para configurar las propiedades de edición:
 
-Image 8. Chatter
+![Edit Grid Properties](/assets/images/ModulesConf/PrevEditObjectList.png "Imagen 11. Edit Grid Properties")
 
-Check out additional help to see how to set it up
+2. Después configurar el módulo:
 
-#### Manual Chatter
+![Edit Grid Configuration](/assets/images/ModulesConf/EditObjectListConf.png "Imagen 12. Edit Grid Configuration")
 
-# Easy Pie, Easy Info, Easy Line and Sparklines
-
-Easy Pie, Easy Info, Easy Line and Sparklines are some of the web components you can use for charting. Combined in a HTML module, you could obtain results similar to these ones:
-
-![Easy Pie](.\img\Help\ModulesConf\EasyInfoExamples.png "Image 9. Easy Pie")
-
-Image 9. Easy Pie
-
-Check out additional help to see how to set it up
-
-#### Manual Easy Pie/Line/Info
-
-# Edit Object List
-
-This module allows you to edit the content of the collection without opening a new window.
-
-![Edit Object List](.\img\Help\ModulesConf\EditObjectList.png "Image 10. Edit Object List")
-
-Image 10. Edit Object List
-
-To add this module we must fill in the following fields.
-
-1\. Use Object's wizard to configure the Edit Grid Properties
-
-![Edit Grid Properties](.\img\Help\ModulesConf\PrevEditObjectList.png "Image 11. Edit Grid Properties")
-
-Image 11. Edit Grid Properties
-
-2\. Then you can configure the module
-
-![Edit Grid Configuration](.\img\Help\ModulesConf\EditObjectListConf.png "Image 12. Edit Grid Configuration")
-
-Image 12. Edit Grid Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Edit Object List/td> |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object (Collection) that we want to edit |
+| Id | Identifica el módulo |
+| Type | Tipo de módulo, Edit Object List |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Siempre Project Module |
+| Container | Tipo de contenedor |
+| Object Name | Seleccionar la colección a editar |
 
-Check out additional help to see how to set it up
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-[
+[Vídeo Edit Object List](https://youtu.be/UH-WqcCFWJI)
+</div>
 
-#### Video Edit Object List
+## Funnel
 
-](https://youtu.be/UH-WqcCFWJI)
+El embudo se usa comúnmente en marketing para mostrar el recorrido del cliente desde el conocimiento del producto hasta la compra.
 
-# Funnel
+![Funnel](/assets/images/ModulesConf/Funnel.png "Imagen 13. Funnel")
 
-The funnel is commonly uses in marketing to shows the way a potential customer goes from becoming aware of your brand to purchasing a good or service.
+![Funnel Configuration](/assets/images/ModulesConf/FunnelConf.png "Imagen 14. Configuración Funnel")
 
-![Funnel](.\img\Help\ModulesConf\Funnel.png "Image 13. Funnel")
-
-Image 13. Funnel
-
-To add this module use its configuration form:
-
-![Edit Grid Configuration](.\img\Help\ModulesConf\FunnelConf.png "Image 14. Funnel Configuration")
-
-Image 14. Funnel Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Funnel |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Connection string | To identify from wich data model we obtain the data from |
-| SQL Sentence | Here we introduce the necessary query that must have the following structure: SELECT Label AS label, Value AS value, Background AS background FROM Table |
+| Id | Identifica el módulo |
+| Type | Funnel |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo de contenedor |
+| Connection string | Identifica el modelo de datos |
+| SQL Sentence | Consulta SQL con estructura: SELECT Label AS label, Value AS value, Background AS background FROM Table |
 
-Check out additional help to see how it works:
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:  
+[Manual Funnel](/Modules/Funnel)
+</div>
 
-#### Manual Funnel
+## HTML Module
 
-# HTML Module
+Incluye un componente *flx-html* en tu página y su contenido se mostrará inmediatamente. Puede contener cualquier otro componente de **flexygo**.
 
-Just add a flx-html web component to your page and you will imediatly get its content displayed on the screen. You can include any other **flexygo** web component y your HTML module.
+![HTML Module](/assets/images/ModulesConf/html2.png "Imagen 15. HTML Module")
 
-  
+![HTML Module Configuration](/assets/images/ModulesConf/html.png "Imagen 16. Configuración HTML Module")
 
-![HTML Module](.\img\Help\ModulesConf\html2.png "Image 15. HTML Module")
-
-Image 15. HTML Module
-
-To add this module we must fill in the following fields of the configuration form:
-
-![HTML Module Configuration](.\img\Help\ModulesConf\html.png "Image 16. HTML Module Configuration")
-
-Image 16. HTML Module Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case HTML |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Html | Insert your html code |
+| Id | Identifica el módulo |
+| Type | HTML |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo de contenedor |
+| Html | Código HTML |
 
-Check out additional help to see how to set it up
+## Kanban
 
-[
+Kanban es un framework visual que permite gestionar tareas eficientemente mediante tarjetas organizadas en columnas.
 
-#### HTML module with on-screen programming
+![Kanban](/assets/images/ModulesConf/kanban.png "Imagen 17. Kanban")
 
-](https://youtu.be/CReFCxm3S44)
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-# Kanban
+[Manual Kanban](/Modules/Kanban)
 
-Kanban is one of the simplest frameworks used as it allows project managers to efficiently manage and keep track of their projects. A distinguishing feature of the Kanban framework among different agile methodologies is its compatibility with the existing organizational setting. The Kanban module simulates a list of posits to organize your tasks:
+[Vídeo Kanban](https://youtu.be/AidJrIHQHZc)
+</div>
 
-![Kanban](.\img\Help\ModulesConf\kanban.png "Image 17. Kanban")
+## Timeline
 
-Image 17. Kanban
+El módulo Timeline es una herramienta visual que representa una secuencia de eventos en un periodo determinado.
 
-Check out additional help to see how to set it up
+![Timeline](.\img\Help\Timeline\Timeline_AdvancedWithGroups_Result.png "Imagen 18. Timeline")
 
-#### Manual Kanban
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-[
+[Manual Timeline](/Modules/Timeline)
 
-#### Video Kanban
+[Vídeo Timeline](https://youtu.be/_bVe_MLU5r0)
+</div>
 
-](https://youtu.be/AidJrIHQHZc)
+## List Filter
 
-# Timeline
+Permite añadir un control de búsqueda a tus formularios y vincularlo al contenido del módulo.
 
-Timeline module is a visual tool that outlines a sequence of events for a specific time period. It allows us to create planners based on an object in a simple and easy way.
+![List Filter](/assets/images/ModulesConf/ListFilter.png "Imagen 19. List Filter")
 
-![Timeline](.\img\Help\Timeline\Timeline_AdvancedWithGroups_Result.png "Image 18. Timeline")
+![List Filter Configuration](/assets/images/ModulesConf/ListFilterConf.png "Imagen 20. Configuración List Filter")
 
-Image 18. Timeline
-
-Check out additional help to see how to set it up
-
-#### Manual Timeline
-
-[
-
-#### Video Timeline
-
-](https://youtu.be/_bVe_MLU5r0)
-
-# List Filter
-
-With this module you can add a search control to your forms and link them to module content.
-
-![List Filter](.\img\Help\ModulesConf\ListFilter.png "Image 19. List Filter")
-
-Image 19. List Filter
-
-To add this module use the configuration form:
-
-![List Filter Configuration](.\img\Help\ModulesConf\ListFilterConf.png "Image 20. List Filter Configuration")
-
-Image 20. List Filter Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case List Filter |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the manager |
+| Id | Identifica el módulo |
+| Type | List Filter |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo de contenedor |
+| Object Name | Objeto vinculado |
 
-# Map
+## Map
 
-With this module you can visualize a Google Map with the desired address:
+Permite visualizar un mapa de Google con la dirección deseada.
 
-![Map](.\img\Help\ModulesConf\map.png "Image 21. Map")
+![Map](/assets/images/ModulesConf/map.png "Imagen 21. Map")
 
-Image 21. Map
+![Map Configuration](/assets/images/ModulesConf/mapConf.png "Imagen 22. Configuración Map")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Map Configuration](.\img\Help\ModulesConf\mapConf.png "Image 22. Map Configuration")
-
-Image 22. Map Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case List Map |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Connection string | To identify from wich data model we obtain the data from |
-| SQl Sentence | Here we introduce the necessary query that must have the following structure. Select '60' as lat, '20' as lng, 'Noruega' as address, 'Titulo' as title, 'Content' as content, 'Icon' as icon, 'Label' as label, '1' as zIndex {"Cluster":"true","Color":"retro","Width":"100%","Height":"400"} |
+| Id | Identifica el módulo |
+| Type | List Map |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo de contenedor |
+| Connection string | Modelo de datos |
+| SQL Sentence | Consulta SQL mínima: Select '60' as lat, '20' as lng... {"Cluster":"true","Color":"retro","Width":"100%","Height":"400"} |
 
-Check out additional help to see how to set it up
+## Mail
 
-#### Manual Maps
+Permite visualizar tus correos del servidor de correo y vincularlos a objetos.
 
-[
+![Mail](/assets/images/ModulesConf/mail.png "Imagen 23. Mail")
 
-#### Video Maps on dashboard
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-](https://www.youtube.com/watch?v=2CDScKLUVjw)[
+[Manual Mail](/Modules/Mail)
+</div>
 
-#### Video Maps in object view
+## Nav Panel
 
-](https://www.youtube.com/watch?v=qV9uGvAL_5g)
+Permite crear tarjetas con nodos como contenido.
 
-# Mail
+![Navigation Panel](/assets/images/ModulesConf/navPanel.png "Imagen 24. Navigation Panel")
 
-With this module you can visualize your emails from your mail server. you can also link mails to your aplication objects.
+![Navigation Panel Configuration](/assets/images/ModulesConf/navPanelConf.png "Imagen 25. NavPanel Config")
 
-![Mail](.\img\Help\ModulesConf\mail.png "Image 23. Mail")
-
-Image 23. Mail
-
-Check out additional help to see how to set it up
-
-#### Manual Mail
-
-# Nav Panel
-
-With the following module you can create cards with nodes as content:
-
-![Navigation Panel](.\img\Help\ModulesConf\navPanel.png "Image 24. Navigation Panel")
-
-Image 24. Navigation Panel
-
-To add this module we must fill in the following fields of the configuration form:
-
-![Navigation Panel Configuration](.\img\Help\ModulesConf\navPanelConf.png "Image 25. Navigation Panel Configuration")
-
-Image 25. Navigation Panel Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case List Map |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Params | There choose the nodeId and the mode to show. Params: initNode="10123EDB-C67D-4FFB-904D-639DBFD32301" mode="panel" |
+| Id | Identifica el módulo |
+| Type | List Map |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo de contenedor |
+| Params | Ej.: initNode="10123EDB..." mode="panel" |
 
-# Network Graphic
+## Network Graphic
 
-With this module you can see a map of relations, processes, properties, templates, data views and security for an object.
+Muestra un mapa de relaciones entre procesos, propiedades, plantillas, vistas y seguridad de un objeto.
 
-![Network Graphic](.\img\Help\ModulesConf\networkGraphic.png "Image 26. Network Graphic")
+![Network Graphic](/assets/images/ModulesConf/networkGraphic.png "Imagen 26. Network Graphic")
 
-Image 26. Network Graphic
+![Network Graphic Configuration](/assets/images/ModulesConf/networkGraphicConf.png "Imagen 27. Configuración Network Graphic")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Network Graphic Configuration](.\img\Help\ModulesConf\networkGraphicConf.png "Image 27. Network Graphic Configuration")
-
-Image 27. Network Graphic Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Network Graphic |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Network Graphic |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto relacionado |
+| Object Where | Filtro del objeto |
 
-# Object Edit
+## Object Edit
 
-With this module you can edit any object:
+Permite editar cualquier objeto.
 
-![Object Edit](.\img\Help\ModulesConf\ObjectEdit.png "Image 28. Object Edit")
+![Object Edit](/assets/images/ModulesConf/ObjectEdit.png "Imagen 28. Object Edit")
 
-Image 28. Object Edit
+![Object Edit Configuration](/assets/images/ModulesConf/ObjectEditConf.png "Imagen 29. Configuración Object Edit")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object Edit Configuration](.\img\Help\ModulesConf\ObjectEditConf.png "Image 29. Object Edit Configuration")
-
-Image 29. Object Edit Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object Edit |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
-| Module Class | You can add size-xs, size-s, size-m or size-l to change font size or no-label to hide form all form labels |
+| Id | Identifica |
+| Type | Object Edit |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
+| Module Class | size-xs, size-s, size-m, size-l, no-label |
 
-# Object List
+## Object List
 
-With this module you can display a list of objects (collection):
+Permite mostrar una lista de objetos.
 
-![Object List](.\img\Help\ModulesConf\ObjectList.png "Image 30. Object List")
+![Object List](/assets/images/ModulesConf/ObjectList.png "Imagen 30. Object List")
 
-Image 30. Object List
+![Object List Configuration](/assets/images/ModulesConf/ObjectListConf.png "Imagen 31. Configuración Object List")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object List Configuration](.\img\Help\ModulesConf\ObjectListConf.png "Image 31. Object List Configuration")
-
-Image 31. Object List Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object List |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Object List |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
 
-# Object Processes
+## Object Processes
 
-With this module you can visualize the processes related to an object:
+Permite visualizar los procesos relacionados a un objeto.
 
-![Object Processes](.\img\Help\ModulesConf\ObjectProcesses.png "Image 32. Object Processes")
+![Object Processes](/assets/images/ModulesConf/ObjectProcesses.png "Imagen 32. Object Processes")
 
-Image 32. Object Processes
+![Object Processes Configuration](/assets/images/ModulesConf/ObjectProcessesConf.png "Imagen 33. Configuración Object Processes")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object Processes Configuration](.\img\Help\ModulesConf\ObjectProcessesConf.png "Image 33. Object Processes Configuration")
-
-Image 33. Object Processes Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object Process |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Object Process |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
 
-Check out additional help to see how to set it up
+<div class="flx-info-card" markdown="1">
+Ayuda adicional:
 
-#### Update Types
+[Update Types](/Programming/UpdateTypes)
+</div>
 
-# Object Reports
+## Object Reports
 
-With this module you can visualize the reports related to any object:
+Permite visualizar los informes relacionados con un objeto.
 
-![Object Reports](.\img\Help\ModulesConf\ObjectReports.png "Image 34. Object Reports")
+![Object Reports](/assets/images/ModulesConf/ObjectReports.png "Imagen 34. Object Reports")
 
-Image 34. Object Reports
+![Object Reports Configuration](/assets/images/ModulesConf/ObjectProcessesConf.png "Imagen 35. Configuración Object Reports")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object Reports Configuration](.\img\Help\ModulesConf\ObjectProcessesConf.png "Image 35. Object Reports Configuration")
-
-Image 35. Object Reports Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object Reports |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Object Reports |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
 
-# Object Search
+## Object Search
 
-With this module you can do searches for any object:
+Permite realizar búsquedas de cualquier objeto.
 
-![Object Search](.\img\Help\ModulesConf\ObjectSearch.png "Image 36. Object Search")
+![Object Search](/assets/images/ModulesConf/ObjectSearch.png "Imagen 36. Object Search")
 
-Image 36. Object Search
+![Object Search Configuration](/assets/images/ModulesConf/ObjectSearchConf.png "Imagen 37. Configuración Object Search")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object Search Configuration](.\img\Help\ModulesConf\ObjectSearchConf.png "Image 37. Object Search Configuration")
-
-Image 37. Object Search Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object Search |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
+| Id | Identifica |
+| Type | Object Search |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
 
-# Object View
+## Object View
 
-With this module you can display and view any object:
+Permite visualizar cualquier objeto.
 
-![Object View](.\img\Help\ModulesConf\ObjectView.png "Image 38. Object View")
+![Object View](/assets/images/ModulesConf/ObjectView.png "Imagen 38. Object View")
 
-Image 38. Object View
+![Object View Configuration](/assets/images/ModulesConf/ObjectViewConf.png "Imagen 39. Configuración Object View")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object View Configuration](.\img\Help\ModulesConf\ObjectViewConf.png "Image 39. Object View Configuration")
-
-Image 39. Object View Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object View |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Object View |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
 
-# Organization Chart
+## Organization Chart
 
-With this module you can see an organization hierarchical structure:
+Muestra una estructura jerárquica organizativa.
 
-![Organization Chart](.\img\Help\ModulesConf\OrgChart.png "Image 40. Organization Chart")
+![Organization Chart](/assets/images/ModulesConf/OrgChart.png "Imagen 40. Organization Chart")
 
-Image 40. Organization Chart
+![Organization Chart Configuration](/assets/images/ModulesConf/OrgChartConf.png "Imagen 41. Configuración OrgChart")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Organization Chart Configuration](.\img\Help\ModulesConf\OrgChartConf.png "Image 41. Organization Chart Configuration")
-
-Image 41. Organization Chart Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Org. Chart |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
-| Connection string | To identify from wich data model we obtain the data from |
-| SQL Sentence | Here we introduce the necessary query that must have at least the following fields:<br><br>*   Id<br>*   Parent<br>*   And any other field you need to use in the template<br><br>SELECT EmployeeId AS Id, Responsible AS Parent, Name, Area, Level, Img FROM Employees |
-| Html | Insert your html code you want to use as a template for each node |
-| Header | Insert your html code you want to use as the headder |
-| Footer | Insert your html code you want to use as a the footer |
-| Options | A Json string with treant orgchart options. for more info go [here](http://fperucic.github.io/treant-js/). Default options are: Options: { chart: { connectors: { type: 'step' }, node: { HTMLclass: 'orgchartnode' }, hideRootNode: true } } |
+| Id | Identifica |
+| Type | Org. Chart |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
+| Connection string | Modelo de datos |
+| SQL Sentence | Consulta mínima con campos: Id, Parent, etc. Ejemplo: SELECT EmployeeId AS Id, Responsible AS Parent, Name, Area, Level, Img FROM Employees |
+| Html | Template HTML por nodo |
+| Header | HTML del encabezado |
+| Footer | HTML del pie |
+| Options | Cadena JSON con opciones de Treant. Opciones por defecto incluidas |
 
-# Related Objects
+## Related Objects
 
-With this module you can display relations between an object and its childs:
+Permite mostrar relaciones entre un objeto y sus hijos.
 
-![Related Objects](.\img\Help\ModulesConf\RelatedObjectsHtml.png "Image 42. Related Objects")
+![Related Objects](/assets/images/ModulesConf/RelatedObjectsHtml.png "Imagen 42. Related Objects")
 
-Image 42. Related Objects
+![Related Objects Configuration](/assets/images/ModulesConf/RelatedObjectsHtmlConf.png "Imagen 43. Configuración Related Objects")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Related Objects Configuration](.\img\Help\ModulesConf\RelatedObjectsHtmlConf.png "Image 43. Related Objects Configuration")
-
-Image 43. Related Objects Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Object Html |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Object Html |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
 
-# Object Related Processes
+## Object Related Processes
 
-![Object Related Processes](.\img\Help\ModulesConf\RelatedProcessesHtml.png "Image 44. Object Related Processes")
+![Object Related Processes](/assets/images/ModulesConf/RelatedProcessesHtml.png "Imagen 44. Object Related Processes")
 
-Image 44. Object Related Processes
+Permite ver procesos relacionados con un objeto.
 
-With this module you can see processes related to an object.
+![Related Processes Configuration](/assets/images/ModulesConf/RelatedProcessesHtmlConf.png "Imagen 45. Configuración Related Processes")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Related Objects Processes Configuration](.\img\Help\ModulesConf\RelatedProcessesHtmlConf.png "Image 45. Related Objects Processes Configuration")
-
-Image 45. Related Objects Processes Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Related Processes Html |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where | They have to select the where options for the object |
+| Id | Identifica |
+| Type | Related Processes Html |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |
 
-# Object Related Reports
+## Object Related Reports
 
-With this module you can see the related reports to an object.
+Permite ver los informes relacionados con un objeto.
 
-![Object Related Reports](.\img\Help\ModulesConf\RelatedReportsHtml.png "Image 46. Object Related Reports")
+![Object Related Reports](/assets/images/ModulesConf/RelatedReportsHtml.png "Imagen 46. Object Related Reports")
 
-Image 46. Object Related Reports
+![Related Reports Configuration](/assets/images/ModulesConf/RelatedReportsHtmlConf.png "Imagen 47. Configuración Related Reports")
 
-To add this module we must fill in the following fields of the configuration form:
-
-![Object Related Reports Configuration](.\img\Help\ModulesConf\RelatedReportsHtmlConf.png "Image 47. Object Related Reports Configuration")
-
-Image 47. Object Related Reports Configuration
-
-For the correct configuration of this module it is necessary to fill in the following fields:
-
-|     |     |
+| Campo | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case Related Reports Html |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | They have to select the object that we want to relational with the module |
-| Object Where |
+| Id | Identifica |
+| Type | Related Reports Html |
+| Description | Breve descripción |
+| Title | Título |
+| Classification | Project Module |
+| Container | Tipo |
+| Object Name | Objeto |
+| Object Where | Filtro |

@@ -1,39 +1,27 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# Flexygo Offline Database
 
-# **flexygo** Offline Database
-
-### Basic Debugging
+## Basic Debugging
 
 1.  Since the migrations of offline app databases to webassembly, a new menu has been added to the advanced options in the sync menu, from where sql can be executed. (This menu is only available on desktop)
+        
+    ![Menu](/assets/images/offline/DatabaseMenuNav.png "Image 1. Database Menu Navigation")
+
+2.  Once you enter this menu you will be able to execute your own selects, from the top input or view any table by clicking on the right icon next to the input.
     
 
-![Menu](/assets/images/offline/DatabaseMenuNav.png "Image 1. Database Menu Navigation")
+    Tip: If you ever want to reuse a select, you can do so by using the up and down arrow keys.
 
-Image 1. Database Menu Navigation
+    Tip 2: When a complex select must be done you may use "shift + enter" to add another line and so making the input bigger without executing the select sentence. And if you have a complex select from other place, when you paste it the input will automatically grow accoding to the select size.
 
-3.  Once you enter this menu you will be able to execute your own selects, from the top input or view any table by clicking on the right icon next to the input.
+    ![Menu](/assets/images/offline/DatabaseMenu.png "Image 2. Database Menu")
+
+3.  When you click on the tables input, every table in the current database will be shown. From there if you tap any of this all records from it will load on a table as you can see on the fourth image.
     
+    ![Menu](/assets/images/offline/ShowTablesBtn.png "Image 3. Show Tables button")
 
-Tip: If you ever want to reuse a select, you can do so by using the up and down arrow keys.
+    ![Menu](/assets/images/offline/ShowTable.png "Image 4. Show Table")
 
-Tip 2: When a complex select must be done you may use "shift + enter" to add another line and so making the input bigger without executing the select sentence. And if you have a complex select from other place, when you paste it the input will automatically grow accoding to the select size.
-
-![Menu](/assets/images/offline/DatabaseMenu.png "Image 2. Database Menu")
-
-Image 2. Database Menu
-
-7.  When you click on the tables input, every table in the current database will be shown. From there if you tap any of this all records from it will load on a table as you can see on the fourth image.
-    
-
-![Menu](/assets/images/offline/ShowTablesBtn.png "Image 3. Show Tables button")
-
-Image 3. Show Tables button
-
-![Menu](/assets/images/offline/ShowTable.png "Image 4. Show Table")
-
-Image 4. Show Table
-
-### Database Profiler
+## Database Profiler
 
 Since version 6.11 the app has a **database profiler** which allows to record all the sql sentences being executed in the background (as for example dependencies).
 

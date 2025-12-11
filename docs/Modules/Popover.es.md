@@ -1,30 +1,47 @@
-# Popover and Tooltip
+# Popover y Tooltip
 
-Popovers and tooltips allows you to display further information on an element when the user **clicks (popover)** or **hovers (tooltip)**. It's very useful when you need to show extended information.
+Los popovers y tooltips permiten mostrar información adicional sobre un elemento cuando el usuario **hace clic (popover)** o **pasa el ratón por encima (tooltip)**. Es muy útil cuando necesitas mostrar información ampliada.
 
-The flx-popover web component has two working modes and four additional attributes:
+## Configuración
 
-#### Modes
+El componente web flx-popover tiene dos modos de funcionamiento y cuatro atributos adicionales:
 
-*   **tooltip:** Disappears when focus is lost
-*   **popover:** Click to appear and click on any other element to make it disappear
+### Modos
 
-#### Attributes
+*   **tooltip:** Desaparece cuando se pierde el foco
+*   **popover:** Aparece al hacer clic y desaparece al hacer clic en cualquier otro elemento
 
-*   **objectname:** Object Name
-*   **objectwhere:** Object Where
-*   **templateid:** Object Template
-*   **placement:** auto, top or bottom of parent item
-*   **container:** Optional parent container. If not defined, gets first parent as container
+### Atributos
 
-##### Examples
+*   **objectname:** Nombre del objeto
+*   **objectwhere:** Filtro del objeto
+*   **templateid:** Plantilla del objeto
+*   **placement:** auto, arriba o abajo del elemento padre
+*   **container:** Contenedor padre opcional. Si no se define, toma el primer contenedor padre
 
-Tooltip mode Popover mode
+## Ejemplos
 
-Tooltip mode Popover mode
+<fh-popover class="button margin-right-m" src="/assets/images/Popover/Popover.png" mode="tooltip">Modo Tooltip</fh-popover>
+<fh-popover class="button margin-right-m" src="/assets/images/Popover/Popover.png" mode="popover">Modo Popover</fh-popover>
 
-## Coding samples
+<fh-popover class="link margin-right-m" src="/assets/images/Popover/Popover.png" mode="tooltip">Modo Tooltip</fh-popover>
+<fh-popover class="link margin-right-m" src="/assets/images/Popover/Popover.png" mode="popover">Modo Popover</fh-popover>
 
-Tooltip mode Popover mode
+### Ejemplos de código
+```html
+<button class="btn bg-info">
+    <flx-tooltip mode="tooltip" objectname="sysObject" objectwhere="objectName='sysObject'" templateid="flx-sysobjectview"></flx-tooltip>
+	<i class="flx-icon icon-choose-hand tex-white"></i>Modo Tooltip
+</button>
+```
+```html
+<span class="btn txt-info">
+    <flx-tooltip mode="popover" objectname="sysObject" objectwhere="objectName='sysObject'" templateid="flx-sysobjectview"></flx-tooltip>
+    <i class="flx-icon icon-choose-hand tex-white"></i>Popover mode
+</span>
+```
 
-Watch the following video on our YouTube channel for additional information
+Mira el siguiente vídeo en nuestro canal de YouTube para más información
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/lKKMce5PsrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

@@ -1,40 +1,89 @@
-# Database script job
+# Tarea de script de base de datos
 
-This innovative utility of **flexygo**, allows the developer to make changes in the data model. Simply by creating the registry with the SQL instruction, the system will start it at startup, informing the user of any problems detected. In the case of having more than one script, it will execute them in the specified order.
+Esta innovadora utilidad de flexygo permite al desarrollador hacer cambios en el modelo de datos. Simplemente creando el registro con la instrucción SQL, el sistema lo iniciará al inicio, informando al usuario de cualquier problema detectado. En el caso de tener más de un script, los ejecutará en el orden especificado.
 
-## How it works
+## Cómo funciona
 
-The scripts run automatically when the **flexygo** service restarts, for example, when we update **flexygo** to a new version. Only scripts in Pending or Error status will be executed. You can also run the scripts manually from the list of records itself.
+Los scripts se ejecutan automáticamente cuando el servicio flexygo se reinicia, por ejemplo, cuando actualizamos flexygo a una nueva versión. Sólo se ejecutarán los scripts con estado Pendiente o Error. También puede ejecutar los scripts manualmente desde la lista de registros.
 
-## General considerations
+## Consideraciones generales
 
-The scripts must be idempotent. That is, they must be prepared to be able to execute more than once with the same result.
+Los scripts deben ser idempotentes. Es decir, deben estar preparados para poder ejecutarse más de una vez con el mismo resultado.
 
-Keywords such as GO are not allowed
+No se permiten palabras clave como GO
+{: .flx-warning-card }
 
-### Connection string
+### Cadena de conexión
 
-You must select the connection string to indicate the data model, and very importantly, the user must have privileges to modify the data model.
+Debe seleccionar la cadena de conexión para indicar el modelo de datos, y muy importante, el usuario debe tener privilegios para modificar el modelo de datos.
 
-After the update, **flexygo** does not overwrite the status of existing scripts. Therefore, in case of switching to a database, the administrator must change the status of the scripts so that they are executed again.
+Después de la actualización, flexygo no sobrescribe el estado de los scripts existentes. Por lo tanto, en caso de cambiar a una base de datos, el administrador debe cambiar el estado de los scripts para que se ejecuten nuevamente.
 
-### States
+### Estados
 
-*   **Draft:** System does nothing
-*   **Pending:** Run process execute the script automatically or manually
-*   **Error:** Display an error. The system could rerun it again. You must repair the script or change the status to draft or to fix it later
-*   **Success:** Everything went well. System does nothing
+*   **Borrador**: El sistema no hace nada
+*   **Pendiente**: Ejecutar proceso para ejecutar el script automáticamente o manualmente
+*   **Error**: Mostrar un error. El sistema podría volver a ejecutarlo. Debe reparar el script o cambiar el estado a borrador o para arreglarlo más tarde.
+*   **Éxito**: Todo salió bien. El sistema no hace nada.
 
-###### Examples
+###### Ejemplos
 
-To create a new table:
+Para crear una nueva tabla:
 
-IF NOT EXISTS (Select 1 from sys.tables where name = 'MyNewTable') BEGIN CREATE TABLE \[dbo\].\[MyNewTable\]( \[RegId\] \[smallint\] NOT NULL, \[Descrip\] \[nvarchar\](50) NOT NULL, \[CssClass\] \[nvarchar\](255) NULL, \[IconCssClass\] \[nvarchar\](255) NULL, \[Visible\] \[bit\] NOT NULL DEFAULT (1), \[Inserted\] \[smalldatetime\] NULL, \[Modify\] \[smalldatetime\] NOT NULL, CONSTRAINT \[PK\_MyNewTable\] PRIMARY KEY CLUSTERED (\[RegId\] ASC) ) ON \[PRIMARY\] END;
+```vbnet
+IF NOT EXISTS (Select 1 from sys.tables where name = 'MyNewTable') 
+BEGIN
+CREATE TABLE [dbo].[MyNewTable](
+	[RegId] [smallint] NOT NULL, 
+	[Descrip] [nvarchar](50) NOT NULL, 
+	[CssClass] [nvarchar](255) NULL,
+	[IconCssClass] [nvarchar](255) NULL,
+	[Visible] [bit] NOT NULL DEFAULT (1),
+	[Inserted] [smalldatetime] NULL,
+	[Modify] [smalldatetime] NOT NULL,
+	CONSTRAINT [PK_MyNewTable] PRIMARY KEY CLUSTERED
+	([RegId] ASC)
+) ON [PRIMARY]
+END;
+```
 
-To create new columns:
+Para crear nuevas columnas:
+```vbnet
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE name = 'CreatedById' AND OBJECT_ID=OBJECT_ID('MyNewTable'))	
+BEGIN
+	ALTER TABLE MyNewTable ADD CreatedById float DEFAULT (0) NULL
+END
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE name = 'ModifiedById' AND OBJECT_ID=OBJECT_ID('MyNewTable'))	
+BEGIN
+	ALTER TABLE MyNewTable ADD ModifiedById int NULL
+END
+```
 
-IF NOT EXISTS(SELECT \* FROM sys.columns WHERE name = 'CreatedById' AND OBJECT\_ID=OBJECT\_ID('MyNewTable')) BEGIN ALTER TABLE MyNewTable ADD CreatedById float DEFAULT (0) NULL END IF NOT EXISTS(SELECT \* FROM sys.columns WHERE name = 'ModifiedById' AND OBJECT\_ID=OBJECT\_ID('MyNewTable')) BEGIN ALTER TABLE MyNewTable ADD ModifiedById int NULL END
+Para crear un trigger utilizando executesql:
+```vbnet
+DECLARE @SQL nvarchar (MAX)='' 
+IF Exists (Select 1 from sys.triggers where name = 'mytrig') 
+BEGIN
+	DROP TRIGGER mytrig
+END
 
-To create a trigger using executesql:
-
-DECLARE @SQL nvarchar (MAX)='' IF Exists (Select 1 from sys.triggers where name = 'mytrig') BEGIN DROP TRIGGER mytrig END SET @SQL = ' -- ============================================= -- Author: Daniel E. Lutz -- Create date: 01/11/2019 -- Description: trigger example -- ============================================= CREATE TRIGGER \[dbo\].\[mytrig\] ON \[dbo\].\[mytable\] FOR Insert AS BEGIN SET NOCOUNT ON; IF EXISTS(SELECT 1 FROM inserted) BEGIN --do something print ''hello'' END END ' EXEC sp\_executesql @SQL
+SET @SQL = '
+	-- =============================================
+	-- Author:		Daniel E. Lutz
+	-- Create date: 01/11/2019
+	-- Description:	trigger example
+	-- =============================================
+	CREATE TRIGGER [dbo].[mytrig] 
+	ON  [dbo].[mytable]
+	FOR Insert AS 
+	BEGIN
+		SET NOCOUNT ON;
+		IF EXISTS(SELECT 1 FROM inserted) 
+		BEGIN
+        	--do something
+        	print ''hello''
+        END
+    END
+'
+EXEC sp_executesql @SQL
+```

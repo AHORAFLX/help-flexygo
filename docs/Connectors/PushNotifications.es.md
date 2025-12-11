@@ -1,30 +1,30 @@
-# Push Notifications
+# Notificaciones Push
 
-**flexygo** enables you to use push notifications in your offline apps and in your web browser. Push notifications may be subject to additional charges in the future depending on number of messages.
+**flexygo** permite utilizar notificaciones push en tus aplicaciones offline y en tu navegador web.  
+En el futuro, las notificaciones push podrían tener un coste adicional dependiendo del número de mensajes enviados.
 
-It is mandatory for using push notifications in your web browser to have a domain **HTTPS certificate** issued by an authorized entity, required to use the Google Firebase service.
+Para utilizar notificaciones push en el navegador **es obligatorio disponer de un certificado HTTPS** emitido por una entidad autorizada, ya que es necesario para usar el servicio Google Firebase.
+{: .flx-warning-card }
 
-## Settings
+## Configuración
 
-1\. Firstly, you must obtain a Push API Key from **flexygo** which you can order through [flexygo help](https://help.flexygo.com).
+1. Primero, debes obtener una **Push API Key** de **flexygo**, que puedes solicitar a través de [flexygo help](https://help.flexygo.com).
 
-2\. Once you have obtained your key, fill out your Push API Key settings.
+2. Una vez tengas tu clave, complétala en los ajustes de **Push API Key**:
 
 ![](/assets/images/Push/Push_1.png "Image 1. API Key settings")
 
-Image 1. API Key settings
+3. Completa tu tabla de notificaciones o tu objeto de notificación, seleccionando el tipo de notificación que deseas habilitar.  
+   Existen distintos tipos de notificaciones push:
 
-3\. Fill out your notices table or notice object, selecting the type of notification you would like to enable. There are some different types of push notification:
-
-*   **app** for normal bell notifications in your **flexygo** environment.
-*   **push** for push notification that will be sent to all devices connected to your application (browsers and devices).
-*   **pushmobile** for push notifications only on mobile devices with a **flexygo** app installed.
-*   **pushweb** for push notifications only in web browser running **flexygo** (it's mandatory https domain certificate).
+* **app**: notificaciones normales en la campanita dentro del entorno **flexygo**.  
+* **push**: notificaciones enviadas a todos los dispositivos conectados a tu aplicación (navegadores y móviles).  
+* **pushmobile**: notificaciones push enviadas solo a dispositivos móviles con la app de **flexygo** instalada.  
+* **pushweb**: notificaciones push enviadas únicamente al navegador web (requiere certificado HTTPS obligatorio).
 
 ![](/assets/images/Push/Push_2.png "Image 2. API Key setting")
 
-Image 2. API Key setting
+## Uso de sentencias de notificación
 
-## Using notices sentences
-
-You can also use the notice sentences to automatize the generation of notices based on database information an conditions. For more info checkout: Notice sentences
+También puedes utilizar **sentencias de notificación** para automatizar la generación de avisos basados en información y condiciones de la base de datos.  
+Para más información consulta: [Notice sentences](/Programming/NoticesSentences)

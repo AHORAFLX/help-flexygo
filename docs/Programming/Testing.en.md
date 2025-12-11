@@ -61,7 +61,7 @@ End Sub
 
 ## Exclude tests from flexygo
 
-If there are test in a dll that we do not want **flexygo** to run, we can tag them with a testCategory attribute and inform **flexygo** of which test should not be used by using the exclude attributes. In te following sample if we don't want to execute this test we should set **flexygo** exlude attributes = ExcludeClient
+If there are test in a dll that we do not want **flexygo** to run, we can tag them with a testCategory attribute and inform **flexygo** of which test should not be used by using the exclude attributes. In te following sample if we don't want to execute this test we should set **flexygo** exlude **attributes = ExcludeClient**.
 
 ![Exclude dll Tests ](/assets/images/Custom_DLL/testing1.png "Image 2. Exclude dll Tests ")
 

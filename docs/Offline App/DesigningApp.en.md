@@ -1,6 +1,4 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
-
-# Designing **flexygo** offline App
+# Designing flexygo offline App
 
 Once the application is created, we will need to give it functionality, creating the objects, pages, menus and functions. There are 5 basic steps to create an applcation and 4 other steps that allow us to have greater functionality in our App.
 
@@ -28,11 +26,7 @@ Then we will access to the wizzard of offline objects, where we will only assign
 
 ![New Object](/assets/images/offline/NewObject.png "Image 1. New Object")
 
-Image 1. New Object
-
 ![New Object](/assets/images/offline/NewObject2.png "Image 2. New Object")
-
-Image 2. New Object
 
 ### Adding Properties
 
@@ -40,25 +34,17 @@ Now you can use the object wizard
 
 ![Wizzard](/assets/images/offline/Wizzard1.png "Image 3. Wizzard")
 
-Image 3. Wizzard
-
 Next we will create and configure each of the properties of the object.
 
 ![Wizzard](/assets/images/offline/Wizzard2.png "Image 4. Wizzard")
-
-Image 4. Wizzard
 
 Setting up Properties.
 
 ![Wizzard](/assets/images/offline/Wizzard3.png "Image 5. Wizzard")
 
-Image 5. Wizzard
-
 Unlike the **flexygo** environment, in the offline environment, when the properties are like combo or dbcombo, we will have the option of adding an object or a view instead of establishing a SQL statement.
 
 ![Wizzard](/assets/images/offline/PropertyCombo.png "Image 6. Property Combo")
-
-Image 6. Property Combo
 
 ## Extend data model through object views
 
@@ -66,13 +52,9 @@ Object views are used for combo dropdowns or to extend the information that is d
 
 ![Object View](/assets/images/offline/ObjectView.png "Image 7. Object View")
 
-Image 7. Object View
-
 You can check the generated database schemaat any time just by using the schea button.
 
 ![Schema](/assets/images/offline/schema.png "Image 8. Schema")
-
-Image 8. Schema
 
 ## Object Pages
 
@@ -80,13 +62,9 @@ It should be noted that the development platform will automatically create the v
 
 ![Object Pages](/assets/images/offline/ObjectPages.png "Image 9. Object Pages")
 
-Image 9. Object Pages
-
 We therefore have the option of editing existing templates or creating new templates. Only filling description sections (name, type, title), html sections (header, body, footer, empty ) and the SQL sentence in case you need additional information to that offered by the object itself with its properties.
 
 ![Object Pages Edit](/assets/images/offline/ObjectPagesEdit.png "Image 9. Object Pages Edit")
-
-Image 9. Object Pages Edit
 
 ## App Menus
 
@@ -94,11 +72,7 @@ They are the shortcuts to the objects that we are going to offer on the device. 
 
 ![Menu](/assets/images/offline/MenuMenu1.png "Image 10. Menu")
 
-Image 10. Menu
-
 ![Menu](/assets/images/offline/MenuMenu2.png "Image 11. Menu")
-
-Image 11. Menu
 
 ## Additional steps
 
@@ -108,8 +82,6 @@ Access and design of AppOffline HomePage
 
 ![Home Page](/assets/images/offline/HomePage.png "Image 12. Home Page")
 
-Image 12. Home Page
-
 ## Adding additional JavaScript
 
 We can expand functionallity just by creating our own js functions or using native functions of the Offline **flexygo** environment
@@ -117,8 +89,6 @@ We can expand functionallity just by creating our own js functions or using nati
 ### Own JavaScript Functions
 
 ![JavaScript function](/assets/images/offline/JS.png "Image 13. JavaScript function")
-
-Image 13. JavaScript function
 
 ### Using **flexygo** native functions
 
@@ -128,24 +98,16 @@ In device mode > F12 -> Console > Flexygo + Intro we access the self-documented 
 
 ![Native Functions](/assets/images/offline/NativeFunctions.png "Image 14. Native Functions")
 
-Image 14. Native Functions
-
 ## Adding additional styles
 
 ![Styles](/assets/images/offline/styles.png "Image 15. Styles")
 
-Image 15. Styles
-
 ## Adding additional resources
 
 ![Files](/assets/images/offline/files.png "Image 16. Files")
-
-Image 16. Files
 
 ## Adding a logo
 
 You can set the login screen app logo on flexygo miscellaneous settings, as can bee seen in the image
 
 ![Logo](/assets/images/offline/AddLogo.png "Image 17. Logo")
-
-Image 17. Logo

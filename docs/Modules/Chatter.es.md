@@ -1,81 +1,63 @@
 # Chatter
 
-Chatter module allows participants to have a synchronous discussion in real time on related objects. By adding the chat feature in your application, you are moving towards the customer-centric approach which means you are concerned regarding your clients or just mantain informed all users about some detailes.
+El módulo Chatter permite a los participantes mantener discusiones síncronas en tiempo real sobre objetos relacionados. Al añadir la funcionalidad de chat en tu aplicación, avanzas hacia un enfoque centrado en el cliente, lo que significa que te preocupas por tus usuarios o simplemente mantienes informados a todos sobre ciertos detalles.
 
 ![](/assets/images/Chatter/chatter-example.png "Image 1. Chatter")
 
-Image 1. Chatter
+## Configuración
 
-## Settings
-
-To enable this module, follow the next steps:
+Para habilitar este módulo, sigue los siguientes pasos:
 
 ![Chatter Configuration](/assets/images/Chatter/ChatterConf1.png "Image 2. Chatter Configuration")
 
-Image 2. Chatter Configuration
-
-|     |     |
+| Propiedad | Descripción |
 | --- | --- |
-| Id  | Identify the module |
-| Type | Module type, in this case **Chatter** |
-| Description | Brief description of the module |
-| Title | Title that appears on the module |
-| Icon | Icon that appears on the module |
-| Classification | Since it is not a default module it is always Project Module |
-| Container | Module container type |
-| Object Name | In this case you should choose **sysChatter** |
+| Id | Identifica el módulo |
+| Type | Tipo de módulo, en este caso **Chatter** |
+| Description | Breve descripción del módulo |
+| Title | Título que aparece en el módulo |
+| Icon | Icono que aparece en el módulo |
+| Classification | Como no es un módulo por defecto, siempre es Project Module |
+| Container | Tipo de contenedor del módulo |
+| Object Name | En este caso debes elegir **sysChatter** |
 
-After setting up the previous configuration, you'll see the following box. Click on Settings Icon.
+Tras configurar lo anterior, verás la siguiente caja. Haz clic en el icono de Settings.
 
 ![Chatter Configuration](/assets/images/Chatter/ChatterConf2.png "Image 3. Chatter Configuration")
 
-Image 3. Chatter Configuration
-
-Put the name of the object you want to relate chatter module.
+Introduce el nombre del objeto que quieres relacionar con el módulo chatter.
 
 ![Chatter Configuration](/assets/images/Chatter/ChatterConf3.png "Image 4. Chatter Configuration")
 
-Image 4. Chatter Configuration
-
-If you want to define a specific field of your object for the subject **(email notifications)** you can define here:
+Si quieres definir un campo específico de tu objeto como asunto **(notificaciones por email)**, puedes hacerlo aquí:
 
 ![Subject Definition](/assets/images/Chatter/subject_definition.png "Image 5. Subject Definition")
 
-Image 5. Subject Definition
+## Configuración de Menciones
 
-## Mentions Configuration
-
-Now we will select the object and the view that contain the information for mention autocomplete and which will be used later for the alerts/notifications.
+Ahora seleccionaremos el objeto y la vista que contienen la información para el autocompletado de menciones y que se utilizarán más adelante para las alertas/notificaciones.
 
 ![Mentions Configuration](/assets/images/Chatter/mention_config.png "Image 6. Mentions Configuration")
 
-Image 6. Mentions Configuration
+La estructura correcta en la vista de menciones es:
 
-The correct data structure in the mention view is:
-
-| Alias | Description | Required |
+| Alias | Descripción | Requerido |
 | --- | --- | --- |
-| id  | user id | ✔   |
-| name | name to display | ✔   |
-| avatar | image to show | ✘   |
-| email | email address for email notifications | ✘   |
+| id | id de usuario | ✓ |
+| name | nombre a mostrar | ✓ |
+| avatar | imagen a mostrar | ✘ |
+| email | dirección de correo para notificaciones | ✘ |
 
-After configure the mentions, you can decide what kind of notification will receive the mentioned users.
+Después de configurar las menciones, puedes decidir qué tipo de notificación recibirán los usuarios mencionados.
 
-(Remember, if you want to use the email notification you have to configure your SMTP service)
+(Recuerda, si quieres usar la notificación por email debes configurar tu servicio SMTP)
 
 ![Alerts Configuration](/assets/images/Chatter/mention_notifications.png "Image 7. Alerts Configuration")
 
-Image 7. Alerts Configuration
-
-If You want to use the following option in email notifications:
+Si quieres usar la siguiente opción en las notificaciones por email:
 
 ![Email notification](/assets/images/Chatter/email_notification.png "Image 8. Email notification")
 
-Image 8. Email notification
-
-You need to configure the following setting:
+Necesitas configurar el siguiente ajuste:
 
 ![Link configuration](/assets/images/Chatter/link_configuration.png "Image 8. Link configuration")
-
-Image 9. Link configuration

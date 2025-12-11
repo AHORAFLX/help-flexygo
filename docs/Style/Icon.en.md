@@ -13,6 +13,7 @@ Watch the following video for additional information:
 You can place flexygo icons nearly anywhere using the CSS Prefix **flx-icon** and the icon's name. flexygo is designed to be used with inline elements (we like the **<i\>** tag for brevity, but using a **<span\>** is more semantically correct).
 
 If you change the font-size of the icon's container, the icon gets bigger. Same things goes for color, drop shadow, and anything else that gets inherited using CSS.
+{: flx-warning-card }
 
 <p><i class="flx-icon icon-process icon-margin-right"></i>icon icon-process</p>
 

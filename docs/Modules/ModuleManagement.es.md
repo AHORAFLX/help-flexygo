@@ -1,23 +1,30 @@
 # Module Management
 
-Each page has a layout where it is possible to add different modules related to the page object information. To do this, it is necessary to access the page, click the Page config tab to the right of the screen and access the Module Manager. In the _image 1_ it is possible to visualize the different layout possibilities that exist for dividing the screen. On a second level there are two columns. On the left whe can see the different placeholders according to the selected layout above. In right column, there is list with all available existing modules. It also has a search engine to easyly find allready created modules. The search engine has two icons, The first one quickly generatea a tab-type module and athe second icon gives us the possibility to create new types of modules.
+Cada página tiene un diseño (layout) donde es posible añadir diferentes módulos relacionados con la información del objeto de la página. Para hacerlo, es necesario acceder a la página, hacer clic en la pestaña **Page config** situada a la derecha de la pantalla y acceder al **Module Manager**. En la *imagen 1* se pueden visualizar las distintas posibilidades de diseño que existen para dividir la pantalla.
 
-![](/assets/images/ModuleManagement/ModuleManagement_2.jpg "Image 1. Display Management Modules")
+En un segundo nivel aparecen dos columnas.  
+En la columna izquierda podemos ver los distintos **placeholders** según el layout seleccionado previamente.  
+En la columna derecha tenemos una lista con todos los módulos disponibles. Esta lista incluye un buscador para localizar fácilmente los módulos ya creados. El buscador tiene dos iconos:  
+- El **primer icono** genera rápidamente un módulo de tipo tabulador.  
+- El **segundo icono** nos permite crear nuevos tipos de módulos.
 
-Image 1. Display Management Modules
+![](/assets/images/ModuleManagement/ModuleManagement_2.jpg "Imagen 1. Gestión de Módulos")
 
-![](/assets/images/ModuleManagement/ModuleManagement_newTab.jpg "Image 2. Create new tab")
+![](/assets/images/ModuleManagement/ModuleManagement_newTab.jpg "Imagen 2. Crear nueva pestaña")
 
-Image 2. Create new tab
+Las pestañas (tabs) no son más que módulos clasificados como tabuladores. Con ellos es posible anidar múltiples módulos en su interior, facilitando un acceso más compacto y una visualización más ordenada de diferentes secciones. El usuario puede generar una nueva pestaña desde la ventana de gestión de módulos (primer icono del buscador). Existen dos tipos de pestañas:  
+- El **button tabulator** (pestaña tipo botón)  
+- El **default tabulator** (tabulador por defecto)
 
-Tabs are nothing more than modules classified as tabulators. With them, it is possible to nest multiple modules inside facilitating a more compact access and visualization of different sections. The user can generate a new tab from the module management window (the first icon in the search box). There are two types of tabs: The button tabulator and the default tabulator that can be seen in the following image.
+Ambos pueden verse en la siguiente imagen:
 
-![](/assets/images/ModuleManagement/Tabs.png "Image 3. Tab type")
+![](/assets/images/ModuleManagement/Tabs.png "Imagen 3. Tipos de Tabuladores")
 
-Image 3. Tab type
+A continuación, un ejemplo de anidación de módulos:
 
-![](/assets/images/ModuleManagement/ModuleManagement.png "Image 4. Example of module nesting")
+![](/assets/images/ModuleManagement/ModuleManagement.png "Imagen 4. Ejemplo de módulos anidados")
 
-Image 4. Example of module nesting
-
-Watch the following video on our YouTube channel for additional information.
+Mira el siguiente vídeo en nuestro canal de YouTube para más información:
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/-VYdJIDVIG8" title="Reproductor de video de YouTube" frameborder="0" allow="accelerómetro; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

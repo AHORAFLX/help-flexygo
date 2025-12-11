@@ -1,25 +1,23 @@
-# News and version notes
+# Noticias y notas de versión
 
-*   Publish your own news and inform users of what is happening in the environment.
-*   Tell your users about the news that you have incorporated into each version of the application.
+*   Publica tus propias noticias e informa a los usuarios sobre lo que está sucediendo en el entorno.
+*   Informa a tus usuarios sobre las novedades que has incorporado en cada versión de la aplicación.
 
 ![Publish article](/assets/images/News/Entire-news-1.jpg "Image 1. Reference and Subreference configuration")
 
-News and version notes
+## Debes elegir un tipo de noticia
 
-## You must choose a type of news.
+El tipo de noticia de Actualizaciones de Producto te permite informar a los usuarios sobre las novedades de versión que has desarrollado en flexygo. Aunque, también puedes publicar noticias sobre una mejora específica.
 
-The Product updates type news allows you to inform users of the version news that you have developed in flexygo. Although, you can also publish news regarding a specific improvement.
+*   **Noticias:** Cuando deseas proporcionar información sobre algo que se considera interesante divulgar.
+*   **Anuncios:** Cuando deseas proporcionar información sobre algo que se considera demasiado interesante o crítico.
+*   **Actualizaciones de producto:** Utiliza esta opción para comunicar las notas de versión. Permite agrupar notas como nuevas características, mejoras y correcciones.
+*   **Nuevas características:** Noticias sobre nuevas funcionalidades que agregaste a tu aplicación.
+*   **Mejoras:** Noticias sobre mejoras que deseas resaltar.
+*   **Correcciones:** Noticias sobre secciones de la aplicación que has reparado.
 
-*   **News:** When you want to provide information about something that is considered interesting to disclose.
-*   **Announcements:** When you want to provide information about something that is considered too interesting or critical.
-*   **Product updates:** Use this option to comunicate the version notes. Allows you to group notes as new features, enhancements, and fixes..
-*   **New features:** News about new functionalities you added to your application.
-*   **Enhancements:** News about improvements that you want to highlight.
-*   **Fixes:** News about sections of the application that you have repaired.
+**También puedes agregar tus propios tipos de noticias, en caso de que desees ampliar la funcionalidad actual.**
 
-**You can also add your own types of news, in case you want to extend the current functionality.**
+## Vincula tus noticias enlazando un artículo externo.
 
-## Link your news linking an external article.
-
-If the news already exists on an external portal or website, indicate the link and the user will be redirected to said publication.
+Si la noticia ya existe en un portal o sitio web externo, indica el enlace y el usuario será redirigido a dicha publicación.

@@ -1,278 +1,172 @@
-.microsoft\[aria-expanded=true\] .icon-arrow-head-5 { display: none; } .microsoft\[aria-expanded=false\] .icon-order-down-1 { display: none; } .office\[aria-expanded=true\] .icon-arrow-head-5 { display: none; } .office\[aria-expanded=false\] .icon-order-down-1 { display: none; } .azure\[aria-expanded=true\] .icon-arrow-head-5 { display: none; } .azure\[aria-expanded=false\] .icon-order-down-1 { display: none; } .google\[aria-expanded=true\] .icon-arrow-head-5 { display: none; } .google\[aria-expanded=false\] .icon-order-down-1 { display: none; }
-
 # Web Mail
 
-## New OAuth 2.0 credential flow
+## Nuevo flujo de credenciales OAuth 2.0
 
-Both Microsoft and Google are deprecating Basic Auth and migrating to OAuth. In each of the two we have to carry out some additional configurations and prerequisites.
+Tanto Microsoft como Google están dejando de usar la Autenticación Básica y migrando a OAuth. En ambos casos debemos realizar configuraciones y requisitos adicionales.
 
-#### Microsoft
+## Microsoft
 
-Register your app using the [Azure portal](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).  
-Other example [link](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).
+Registra tu aplicación usando el [portal de Azure](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).  
+Otro ejemplo [aquí](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).
 
-##### Office 365 configuration
+### Configuración Office 365
 
-Make sure IMAP/POP3/SMTP is enabled for your organization and mailbox.
+Asegúrate de que IMAP/POP3/SMTP están habilitados para tu organización y buzón.
 
-First log in to Microsoft 365 admin portal at https://admin.microsoft.com/ as an administrator, go to Org settings screen and find Modern authentication entry.
+Primero inicia sesión como administrador en https://admin.microsoft.com/, ve a la pantalla Org settings y busca la entrada Modern authentication.
 
-![](.\img\Help\ModulesConf\MailOffice4.png "Image 1. Show all settings")
+![](/assets/images/ModulesConf/MailOffice4.png "Image 1. Show all settings")
 
-Image 1. Show all settings
+![](/assets/images/ModulesConf/MailOffice5.png "Image 2. Org settings")
 
-  
+Marca ‘Turn on modern authentication…‘ para los flujos OAuth y las opciones IMAP, POP3 y SMTP para los flujos de contraseñas de aplicaciones.
 
-![](.\img\Help\ModulesConf\MailOffice5.png "Image 2. Org settings")
+![](/assets/images/ModulesConf/MailOffice6.png "Image 3. Modern authentication")
 
-Image 2. Org settings
+Luego ve a la pantalla Users:
 
-  
+![](/assets/images/ModulesConf/MailOffice7.png "Image 4. Users")
 
-Check ‘Turn on modern authentication…‘ for OAuth flows and IMAP, POP3 and SMTP for App passwords flows
+Selecciona un usuario y en la pestaña Mail haz clic en Manage email apps.
 
-![](.\img\Help\ModulesConf\MailOffice6.png "Image 3. Modern authentication")
+![](/assets/images/ModulesConf/MailOffice8.png "Image 5. User config")
 
-Image 3. Modern authentication
+Activa IMAP, POP y Authenticated SMTP para habilitar los protocolos en esta cuenta.
 
-  
+![](/assets/images/ModulesConf/MailOffice9.png "Image 6. Manage email apps")
 
-Then go to Users screen:
+Ten en cuenta que los cambios pueden tardar entre 20 y 30 minutos en aplicarse.
 
-![](.\img\Help\ModulesConf\MailOffice7.png "Image 4. Users")
+### Configuración Azure
 
-Image 4. Users
+En tu Active Directory asegúrate de que Enable Security defaults esté en No.
 
-  
+![](/assets/images/ModulesConf/MailOffice10.png "Image 7. Security defaults")
 
-Select an user and on the Mail tab click Manage email apps
+Asegúrate de que no haya políticas definidas en Conditional Access | Policies.
 
-![](.\img\Help\ModulesConf\MailOffice8.png "Image 5. User config")
+![](/assets/images/ModulesConf/MailOffice11.png "Image 8. Policies")
 
-Image 5. User config
+Una vez registrada la aplicación, lo primero será indicar la URL base de tu app + /Webhooks/MailToken.aspx como URL de redirección.
 
-  
+![](/assets/images/ModulesConf/MailOffice1.png "Image 9. Redirect URL")
 
-Check IMAP, Pop and Authenticated SMTP to turn on the protocols for this account.
+Luego aplica los permisos correctos y concede el admin consent a tu dominio. En API permissions / Add a permission, selecciona Microsoft Graph y luego Delegated permissions para añadir:
 
-![](.\img\Help\ModulesConf\MailOffice9.png "Image 6. Manage email apps")
+* offline_access  
+* email  
+* IMAP.AccessAsUser.All  
+* POP.AccessAsUser.All  
+* SMTP.Send  
+* User.Read  
 
-Image 6. Manage email apps
+Recuerda conceder el admin consent.
 
-  
+![](/assets/images/ModulesConf/MailOffice2.png "Image 10. API permissions")
 
-Have in mind it takes 20-30 minutes for the changes to take effect.
+Crea un secreto para la app y guarda su valor.
 
-##### Azure configuration
+![](/assets/images/ModulesConf/MailOffice3.png "Image 11. Client secret")
 
-In your Active Directory, make sure Enable Security defaults is set to No.
+Para finalizar, rellena los campos de configuración del endpoint de la cuenta de correo con el client id, tenant id y el secreto generado.
 
-![](.\img\Help\ModulesConf\MailOffice10.png "Image 7. Security defaults")
+## Google
 
-Image 7. Security defaults
+Primero inicia sesión en [https://console.cloud.google.com/](https://console.cloud.google.com/) y selecciona un proyecto existente o crea uno nuevo.
 
-  
+![](/assets/images/ModulesConf/MailOffice12.png "Image 12. Projects")
 
-Make sure there are no Conditional Access | Policies defined in your AD
+Después busca Gmail API en la biblioteca de APIs y actívala.
 
-![](.\img\Help\ModulesConf\MailOffice11.png "Image 8. Policies")
+![](/assets/images/ModulesConf/MailOffice13.png "Image 1. Gmail API")
 
-Image 8. Policies
+Antes de crear las credenciales OAuth debemos configurar la pantalla de consentimiento. Lo primero es seleccionarlo como interno (solo organización) o externo.
 
-  
+![](/assets/images/ModulesConf/MailOffice18.png "Image 13. Consent screen")
 
-Once you have registered your app the first thing we will do is inform the base URL of your app + /Webhooks/MailToken.aspx as your redirect URl's.
+Luego rellena la información de la aplicación, dominio, etc.
 
-![](.\img\Help\ModulesConf\MailOffice1.png "Image 9. Redirect URL")
+![](/assets/images/ModulesConf/MailOffice19.png "Image 14. App information")
 
-Image 9. Redirect URL
+Aplica los siguientes scopes:
 
-  
+* https://mail.google.com/  
+* https://www.googleapis.com/auth/userinfo.profile  
+* https://www.googleapis.com/auth/userinfo.email  
 
-Then you need to apply correct API permissions and grant the admin consent for your domain. In the API permissions / Add a permission wizard, select Microsoft Graph and then Delegated permissions to find the following permission scopes listed:
+En el siguiente paso añade los usuarios que usarán la aplicación.
 
-*   offline\_access
-*   email
-*   IMAP.AccessAsUser.All
-*   POP.AccessAsUser.All
-*   SMTP.Send
-*   User.Read
+![](/assets/images/ModulesConf/MailOffice20.png "Image 15. Users")
 
-  
+Una vez configurado, añade las credenciales para usar el flujo OAuth.
 
-Remember to Grant admin consent.
+![](/assets/images/ModulesConf/MailOffice14.png "Image 16. Credentials")
 
-![](.\img\Help\ModulesConf\MailOffice2.png "Image 10. API permissions")
+En el primer paso elige el tipo de aplicación: web application.
 
-Image 10. API permissions
+![](/assets/images/ModulesConf/MailOffice15.png "Image 17. Application type")
 
-  
+Luego asigna un nombre y añade una URL de redirección autorizada: URL base + /Webhooks/MailToken.aspx.
 
-Create an app secret and remember its value.
+![](/assets/images/ModulesConf/MailOffice16.png "Image 18. Credentials 2")
 
-![](.\img\Help\ModulesConf\MailOffice3.png "Image 11. Client secret")
+Una vez registradas las credenciales, puedes descargar un archivo JSON que contiene todos los datos necesarios como ClientID, ClientSecret, etc.
 
-Image 11. Client secret
+![](/assets/images/ModulesConf/MailOffice17.png "Image 19. Client ID")
 
-  
+Para finalizar, rellena los campos del endpoint de correo con el client id, tenant id y el secreto generado.
 
-To finish fill mail account endpoint setting fields with your app client id, tenant id and genereted secret.
+## Nueva configuración para la ruta de la aplicación
 
-  
+Para evitar problemas al tomar automáticamente la URL de la aplicación al autorizar el webmail, se ha creado una nueva configuración que permite asignar manualmente el valor de la URL.
 
-#### Google
+## Módulo Webmail
 
-#### 
+Este módulo permite añadir un correo web a tus proyectos **flexygo**.
 
-First you must login on [https://console.cloud.google.com/](https://console.cloud.google.com/) and select an existing project or create a new one.
+![](/assets/images/ModulesConf/mail.png "Image 20. Web Mail")
 
-![](.\img\Help\ModulesConf\MailOffice12.png "Image 12. Projects")
+## Añadir icono de Webmail a la barra de herramientas
 
-Image 12. Projects
+El icono ya existe, pero está deshabilitado por defecto. Puedes habilitarlo como administrador en la barra superior.
 
-  
+![](/assets/images/ModulesConf/Mail2.png "Image 21. Webmail icon")
 
-After this you have to search in the API Library section, the Gmail API and activate it
+o haciendo clic en el enlace correspondiente. Tras activarlo, sal y vuelve a iniciar sesión.
 
-![](.\img\Help\ModulesConf\MailOffice13.png "Image 1. Gmail API")
+## Establecer conexión con el servidor de correo
 
-Image 1. Gmail API
+Para habilitar Webmail debes configurar el servidor de correo. Usa el icono de configuración.
 
-  
+![](/assets/images/ModulesConf/Mail6.png "Image 22. Webmail settings")
 
-Before creating the OAuth credentials we have to configure the consent screen, the first thing is to select if it will be for internal use (only for the organization) or external. Depending on the use that is going to be given.
+Configura los parámetros de tu cuenta de correo:
 
-![](.\img\Help\ModulesConf\MailOffice18.png "Image 13. Consent screen")
+![](/assets/images/ModulesConf/Mail3.png "Image 23. Webmail settings")
 
-Image 13. Consent screen
+* **SMTP Host:** Host SMTP  
+* **PopImap Host:** Host IMAP  
+* **Account User Name:** Nombre de la cuenta  
+* **Acount:** Tu e-mail  
+* **SMTP Port:** Puerto SMTP  
+* **PopImap Port:** Puerto POP  
+* **Visible Name:** Alias de la cuenta  
+* **Acount Password:** Contraseña del correo  
+* **SSL:** Si usa SSL  
+* **Use TLS:** Poner en true para servidores Exchange
 
-  
+## Vincular correos a tus objetos
 
-Then you must fill your app information, domain, etc...
+Puedes guardar correos localmente y vincularlos a objetos igual que con documentos o imágenes. Para ello carga cualquier formulario y como admin haz clic en la barra lateral derecha.
 
-![](.\img\Help\ModulesConf\MailOffice19.png "Image 14. App information")
+![](/assets/images/ModulesConf/Mail5.png "Image 24. Webmail settings")
 
-Image 14. App information
+Haz clic en mail settings y completa el formulario.
 
-  
+![](/assets/images/ModulesConf/Mail4.png "Image 25. Web Mail")
 
-After that apply the next scopes:
-
-*   https://mail.google.com/
-*   https://www.googleapis.com/auth/userinfo.profile
-*   https://www.googleapis.com/auth/userinfo.email
-
-  
-
-In the next step add the email users who will use the application.
-
-![](.\img\Help\ModulesConf\MailOffice20.png "Image 15. Users")
-
-Image 15. Users
-
-  
-
-Once it is configured you have to add credentials to use OAuth flow.
-
-![](.\img\Help\ModulesConf\MailOffice14.png "Image 16. Credentials")
-
-Image 16. Credentials
-
-  
-
-In the first step you have to choose the type of application, in our case web application.
-
-![](.\img\Help\ModulesConf\MailOffice15.png "Image 17. Application type")
-
-Image 17. Application type
-
-  
-
-Then give a name and add an authorized redirect URls, remember that the valid structure is the base URL of your app + /Webhooks/MailToken.aspx
-
-![](.\img\Help\ModulesConf\MailOffice16.png "Image 18. Credentials 2")
-
-Image 18. Credentials 2
-
-  
-
-Once you have registered the credentials you can download a JSON file which has all the data you will need to configure in the application like ClientID, ClientSecret, etc...
-
-![](.\img\Help\ModulesConf\MailOffice17.png "Image 19. Client ID")
-
-Image 19. Client ID
-
-To finish fill mail account endpoint setting fields with your app client id, tenant id and genereted secret.
-
-  
-
-## New setting for application path
-
-To avoid problems when automatically taking the url of the application when authorizing the webmail, we have created a new setting so that the value of the URL can be assigned manually by the user.
-
-  
-
-## Webmail module
-
-This module allows you to add a web mail to your **flexygo** projects.
-
-![](.\img\Help\ModulesConf\mail.png "Image 20. Web Mail")
-
-Image 20. Web Mail
-
-  
-
-## Add Webmail icon to your toolbar
-
-Icon already exists, but it's disabled by default. You can enable it as Admin on the top toolbar
-
-![](.\img\Help\ModulesConf\Mail2.png "Image 21. Webmail icon")
-
-Image 21. Webmail icon
-
-or by clicking on the following link: Enable Mail Options. After clicking on the link, exit and re-login to the system.
-
-## Establish connection with mail server
-
-To enable Webmail, you need to establish mail server settings. Use the mail settings icon to open settings.
-
-![](.\img\Help\ModulesConf\Mail6.png "Image 22. Webmail settings")
-
-Image 22. Webmail settings
-
-Set configuration of your mail account. Bellow you'll see the detailed explication.
-
-![](.\img\Help\ModulesConf\Mail3.png "Image 23. Webmail settings")
-
-Image 23. Webmail settings
-
-*   **SMTP Host:** SMTP host
-*   **PopImap Host:** IMAP host
-*   **Account User Name:** Account name
-*   **Acount:** Your e-mail
-*   **SMTP Port:** Mail SMTP port
-*   **PopImap Port:** Mail POP port
-*   **Visible Name:** Acount alias (your name)
-*   **Acount Password:** The e-mail account password
-*   **SSL:** If it's using SSL security
-*   **Use TLS:** Set to true when you're using exchange mail server
-
-## Linking mails to your objects
-
-You can save mails locally and link them to objects exactly the same as with document or image management. To do this just load any object form and as admin click on the right hand side bar.
-
-![](.\img\Help\ModulesConf\Mail5.png "Image 24. Webmail settings")
-
-Image 24. Webmail settings
-
-Click on mail settings and fill out the form.
-
-![](.\img\Help\ModulesConf\Mail4.png "Image 25. Web Mail")
-
-Image 25. Web Mail
-
-*   **Object Name:** Object to link e-mails to
-*   **Object Primary Key:** Object primery key or object Id
-*   **Email Address Field:** Object e-mail field to do the filtering with
-*   **Filter Using Domain:** When it's setting, it only use e-mail domain part an not whole email to do filtering
-*   **Path:** Path where e-mails will be saved locally
+* **Object Name:** Objeto al que se vincularán los correos  
+* **Object Primary Key:** Clave primaria del objeto  
+* **Email Address Field:** Campo e-mail del objeto para hacer el filtrado  
+* **Filter Using Domain:** Si se activa, solo usa el dominio del correo para filtrar  
+* **Path:** Ruta donde se guardarán los correos localmente

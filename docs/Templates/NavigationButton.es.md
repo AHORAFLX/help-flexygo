@@ -1,151 +1,240 @@
-# Navigation button
+# Botón de navegación
 
-Navigation button, developed such as web component, used to avoid pasting JavaScript in to your HTML markup and keeping the markup clean.
+El botón de navegación, desarrollado como un componente web, se utiliza para evitar pegar JavaScript en el marcado HTML y mantener el marcado limpio.
 
-#### Go Home
+## Ir a Inicio
 
-To go home use:
+Para ir a inicio usa:
 
-View sample here
+```html
+<flx-navbutton type="home">
+    <button class="btn btn-outstanding">Ver ejemplo aquí</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
-
+En lugar de un evento onclick con:
+```js
 flexygo.nav.goHome();
+```
 
-#### Open Page
+## Abrir Página
 
-*   Edit sample here
-*   View sample here
-*   List sample here
-*   List with preset id sample here
-*   List with preset object sample here
+<flx-navbutton class="button" type="openpage" pagetypeid="edit" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')">Editar ejemplo aquí</flx-navbutton>
+<flx-navbutton class="button" type="openpage" pagetypeid="view" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')">Ver ejemplo aquí</flx-navbutton>
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')">Lista de ejemplo aquí</flx-navbutton>
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')" presets="Help_Offline_App">Lista con id de preset aquí</flx-navbutton>
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')" presets="{'sys-systemHelp':'Help_Offline_App'}">Lista con objeto de preset aquí</flx-navbutton>
 
-To edit an object use:
+Para editar un objeto usa:
 
-Instead of onclick event with:
+```html
+<flx-navbutton type="openpage" pagetypeid="edit" objectname="sysHelpItem" objectwhere="(HelpId='{{syshelp-navbutton}}')" defaults="{'Field':'{{value}}','DateField':'{{value|date:YYYY-MM-DD}}'}" targetid="current" excludehist="false"></flx-navbutton>
+```
 
+En lugar de un evento onclick con:
+
+```js
 flexygo.nav.openPage('edit','sysHelpItem','(HelpId=\\'syshelp-navbutton\\')','{"Field":"{{value}}","DateField":"{{value|date:YYYY-MM-DD}}"}','current',false,$(this));
+```
 
-To view an object use:
+Para ver un objeto usa:
+```html
+<flx-navbutton type="openpage" pagetypeid="view" objectname="sysHelpItem" objectwhere="(HelpId='syshelp-navbutton')" defaults="" targetid="popup" excludehist="false">
+    <button class="btn btn-outstanding">View sample here</button>
+</flx-navbutton>
+```
 
-View sample here
+En lugar de un evento onclick con:
 
-Instead of onclick event with:
-
+```js
 flexygo.nav.openPage('view','sysHelpItem','(HelpId=\\'syshelp-navbutton\\')','null','popup',false,$(this));
+```
 
-To list a collection use:
+Para listar una colección usa:
+```html
+<flx-navbutton type="openpage" pagetypeid="list" objectname="sysHelp" objectwhere="" defaults="" targetid="popup" excludehist="false">
+    <button class="btn btn-outstanding">View sample here</button>
+</flx-navbutton>
+```
 
-View sample here
+En lugar de un evento onclick con:
 
-Instead of onclick event with:
-
+```js
 flexygo.nav.openPage('list','sysHelpItems','','null','popup',false,$(this));
+```
 
-To list a collection with a global default preset use:
+Para listar una colección con un preset global por defecto usa:
 
-View sample here
+```html
+<flx-navbutton type="openpage" pagetypeid="list" objectname="sysHelp" objectwhere="" defaults="" targetid="popup" excludehist="false" presets="Help_Offline_App">
+    <button class="btn btn-outstanding">View sample here</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
-
+En lugar de un evento onclick con:
+```js
 flexygo.nav.openPage('list','sysHelpItems','','null','popup',false,$(this),null,null,'Help\_Offline\_App');
+```
 
-To **list** a collection with a **default preset for a module** use:
+Para listar una colección con un preset por defecto para un módulo usa:
 
-View sample here
+```html
+<flx-navbutton type="openpage" pagetypeid="list" objectname="sysHelp" objectwhere="" defaults="" targetid="popup" excludehist="false" presets="{'sys-systemHelp':'Help_Offline_App'}">
+    <button class="btn btn-outstanding">View sample here</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.openPage('list','sysHelpItems','','null','popup',false,$(this),null,null,'{"sys-systemHelp":"Help\_Offline\_App"}');
+```
 
-#### OpenPageName
+## OpenPageName
 
-Click here to Open Page by Name
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysHelp" presets="{'sys-systemHelp':'Help_Offline_App'}">Haz click aquí para abrir la página por nombre</flx-navbutton>
 
-To **open** a page:
+Para **abrir** una página:
 
-Click here to Open Page by Name
+```html
+<flx-navbutton class="test" type="openpagename" pagename="syspage-generic-admon" targetid="popup" excludehist="false">
+     <div class="btn btn-outstanding">Haz clic aquí para abrir la página por nombre</div>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
-
+En lugar de un evento onclick con:
+```js
 flexygo.nav.openPageName('syspage-generic-admon','','',null,'popup',false,$(this));
+```
 
-You can also open a page with an object, use:
+También puedes abrir una página con un objeto, usa:
 
-Click here to Open Page by Name with Sysactionlog object
+```html
+<flx-navbutton class="test" type="openpagename" objectname="sysobject" objectwhere="ObjectName='sysactionlog'" pagename="syspage-generic-admon" targetid="popup" excludehist="false">
+    <div class="btn btn-outstanding">Click here to Open Page by Name with Sysactionlog object</div>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.openPageName('syspage-generic-admon','sysobject','objectname=\\'sysactionlog\\'',null,'popup',false,$(this));
+```
 
-#### ExecProcess
+## ExecProcess
 
-Click to execute PrintPage procees
+<flx-navbutton class="button" type="execprocess" processname="PrintPage">Haz click para ejecutar proceso PrintPage</flx-navbutton>
 
-To execute a process use:
+Para ejecutar un proceso usa:
 
-Click to execute PrintPage process
+```html
+<flx-navbutton class="test" type="execprocess" processname="GoHome" targetid="popup" excludehist="false" showprogress="false">
+      <button class="btn btn-outstanding">Click to execute PrintPage process</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.execProcess('PrintPage','','',null,null,'popup',false,$(this),false);
+```
 
-#### ViewReport
+## ViewReport
 
-Click to view report
+<flx-navbutton class="button" type="viewReport" reportname="test_object_html_print" objectname="sysUsers">Click to view report</flx-navbutton>
 
-To view a report use:
+Para ver un reporte usa:
 
-Click to view report
+```html
+<flx-navbutton type="viewReport" reportname="reportname" objectname="yourobject" objectwhere="yourwhere" targetid="popup" excludehist="false">
+       <button class="btn btn-outstanding">Click to view report</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.viewReport('reportname','','yourobject','yourwhere',null,null,'popup',false,$(this));
+```
 
-#### OpenHelpId
+## OpenHelpId
 
-Click to open help
+[Haz click para abrir la ayuda](./){ .button }
 
-To open help use:
+Para abrir la ayuda usa:
 
-Click to open help
+```html
+<flx-navbutton type="openhelpid" helpid="syshelp-navbutton" targetid="popup" excludehist="false">
+       <button class="btn btn-outstanding">Click to open help</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.openHelpId('syshelp-navbutton','popup',false,$(this));
+```
 
-#### OpenProcessParams and OpenProcessParamsPage
+## OpenProcessParams
 
-To open default process parameter page use:
+Para abrir la página de parámetros de proceso por defecto usa:
 
-Click to open process params page
+```html
+<flx-navbutton type="openprocessparams" processname="testprocess" objectname="sysHelpItem" objectwhere="(HelpId='{{syshelp-navbutton}}')" defaults="{'Field':'{{value}}'}" targetid="popup" excludehist="false">
+    <button class="btn btn-outstanding">Click to open process params page</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.openProcessParams('testprocess', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
+```
 
-To open process specific parameter page use:
+## OpenProcessParamsPage
 
-Click to open specific process params page
+Para abrir la página de parámetros de proceso específica usa:
 
-Instead of onclick event with:
+```html
+<flx-navbutton type="openprocessparamspage" pagename="yourpagename" processname="testprocess" objectname="sysHelpItem" objectwhere="(HelpId='{{syshelp-navbutton}}')" defaults="{'Field':'{{value}}'}" targetid="popup" excludehist="false">
+    <button class="btn btn-outstanding">Click to open specific process params page</button>
+</flx-navbutton>
+```
 
+En lugar de un evento onclick con:
+
+```js
 flexygo.nav.openProcessParams('yourpagename','testprocess', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
+```
 
-#### OpenReportParams and OpenReportsParamsPage
+## OpenReportParams
 
-To open default reports parameter page use:
+Para abrir la página de parámetros del reporte por defecto usa:
 
-Click to open report params page
+```html
+<flx-navbutton type="openreportparams" reportname="testreport" reportwhere="" objectname="sysHelpItem" objectwhere="(HelpId='{{syshelp-navbutton}}')" defaults="{'Field':'{{value}}'}" targetid="popup" excludehist="false">
+    <button class="btn btn-outstanding">Click to open report params page</button>
+</flx-navbutton>
+```
 
-Instead of onclick event with:
+En lugar de un evento onclick con:
 
+```js
 flexygo.nav.openReportsParams('testreport', '', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
+```
 
-To open report specific parameter page use:
+## OpenReportsParamsPage
 
-Click to open specific report params page
+Para abrir la página de parámetros específicos del reporte usa:
 
-Instead of onclick event with:
+```html
+<flx-navbutton type="openreportparamspage" pagename="yourpagename" reportname="testreport" reportwhere="" objectname="sysHelpItem" objectwhere="(HelpId='{{syshelp-navbutton}}')" defaults="{'Field':'{{value}}'}" targetid="popup" excludehist="false">
+    <button class="btn btn-outstanding">Click to open specific report params page</button>
+</flx-navbutton>
+```
 
+En lugar de un evento onclick con:
+
+```js
 flexygo.nav.openProcessParams('yourpagename','testreport','', 'sysHelpItem', '(HelpId=\\'{{syshelp-navbutton}}\\')', '{"Field":"{{value}}"}', 'popup', false, $(this));
+```

@@ -1,46 +1,35 @@
-# **flexygo** MFA
+# Flexygo MFA
 
-New in flexygo! Implementation of Multi-Factor Authentication (MFA) system
+¡Nuevo en flexygo! Implementación del sistema de **Autenticación Multifactor (MFA)**.
 
-What is MFA and why is it important? MFA adds an additional layer of security by requiring users to verify their identity using two or more different methods before accessing their accounts. This measure significantly reduces the risk of unauthorized access, thus protecting your data and the integrity of your information.
+¿Qué es MFA y por qué es importante? MFA añade una capa adicional de seguridad al requerir que los usuarios verifiquen su identidad utilizando dos o más métodos antes de acceder a sus cuentas. Esto reduce significativamente el riesgo de accesos no autorizados, protegiendo tus datos y la integridad de tu información.
 
-### Verification options
+## Opciones de verificación
 
-With flexygo MFA, **administrators** have the freedom to choose between two verification methods: **email and SMS**. This allows them to select the option that best suits their organization's needs and resources.
+Con flexygo MFA, los **administradores** pueden elegir entre dos métodos de verificación: **email y SMS**. Esto permite seleccionar la opción que mejor se adapte a las necesidades y recursos de la organización.
 
-Remember that to use **MFA by SMS** you must have Abh SMS integration.
+Recuerda que para usar **MFA por SMS** debes tener configurada la [integración de Abh SMS](/Ahora%20Business%20Hub/AbhSms).
+{: .flx-warning-card }
 
-### Granular control
+## Control granular
 
-Furthermore, at flexygo we understand that not all users require the same level of security. Therefore, we have incorporated the ability to define which **roles or users** will have two-step verification enabled. This allows for accurate and efficient management of application security.
+En flexygo entendemos que no todos los usuarios requieren el mismo nivel de seguridad. Por esta razón, se ha incorporado la posibilidad de definir qué **roles o usuarios** tendrán habilitada la verificación en dos pasos. Esto permite una gestión precisa y eficiente de la seguridad de la aplicación.
 
-## How to configure it?
+## ¿Cómo configurarlo?
 
-First of all we have 2 new settings:
+En primer lugar, tenemos 2 nuevos ajustes:
 
 ![](/assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
 
-Image 1. MFA Settings
+* **MFA_cookie_duration**: En esta sección puedes definir el número de días durante los cuales estará activo el mensaje "¿Confiar en este dispositivo?".
+* **MFA_Type**: En esta sección el administrador puede definir qué tipo de MFA se utilizará.
 
-*   **MFA\_cookie\_duration**: In this section you can define the number of days that the "Trust this device?
-*   **MFA\_Type**: In this section the administrator can define which type of MFA will be used.
-
-  
-
-After configuring these parameters as we see fit, we can define at user or role level to whom to activate MFA.
+Después de configurar estos parámetros como consideremos oportuno, podemos definir a nivel de usuario o rol a quién activar el MFA.
 
 ![](/assets/images/MFA/mfa_user.png "Image 2. MFA in user")
 
-Image 2. MFA in user
-
 ![](/assets/images/MFA/mfa_role.png "Image 3. MFA in role")
 
-Image 3. MFA in role
-
-  
-
-Finally, if we try to log in with the user that has the MFA active, we will see the following screen to enter our security code
+Finalmente, si intentamos iniciar sesión con un usuario que tenga MFA activo, veremos la siguiente pantalla para introducir nuestro código de seguridad:
 
 ![](/assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")
-
-Image 4. MFA Screen

@@ -1,45 +1,51 @@
 # Funnel
 
-In this article we will explain how to configurate and use the funnel module. The funnel is commonly uses in marketing to shows the way a potential customer goes from becoming aware of your brand to purchasing a good or service.
+En este artículo explicaremos cómo configurar y usar el módulo funnel. El funnel se utiliza habitualmente en marketing para mostrar el camino que sigue un cliente potencial desde que conoce tu marca hasta que compra un producto o servicio.
 
 ![](/assets/images/Funnel/Funnel_1.png "Image 1. Funnel")
 
-Image 1. Funnel
+## Opciones del Módulo
 
-#### Module Options
+1. Añade tu sentencia SQL:
+```sql
+SELECT Label AS label, Value AS value, Background AS background FROM table
+```
 
-1.  Add your SQL sentence: SELECT Label AS label, Value AS value, Background AS background FROM table
-2.  Set optional JSON options. _Example:_ {"inverted":true,"animate":1}
+2. Establece opciones JSON opcionales. *Ejemplo:*
 
-### JSON Options
+```json
+{"inverted":true,"animate":1}
+```
 
-| OPTION | DESCRIPTION | TYPE | DEFAULT |
-| --- | --- | --- | --- |
-| bottomWidth | The percent of total width the bottom should be. | number | 1 / 3 |
-| bottomPinch | How many blocks to pinch on the bottom to create a funnel "neck". | number | 1   |
-| inverted | Whether the funnel direction is inverted (like a pyramid). | bool | false |
-| animate | The load animation speed in milliseconds. | number | 0 (disabled) |
-| curveEnabled | Whether the funnel is curved. | bool | true |
-| curveHeight | The curvature amount. | number | 20  |
-| totalCount | Override the total count used in ratio calculations. | number | null |
-| dynamicHeight | Whether the block heights are proportional to their weight. | bool | true |
-| dynamicSlope | Whether the block widths are proportional to their value decrease. | bool | false |
-| barOverlay | Whether the blocks have bar chart overlays proportional to its weight. | bool | false |
-| fillType | Either 'solid' or 'gradient'. | string | 'solid' |
-| minHeight | The minimum pixel height of a block. | number | 25  |
-| highlight | Whether the blocks are highlighted on hover. | bool | false |
-| labelEnabled | Whether the block labels should be displayed. | bool | true |
-| fontFamily | Any valid font family for the labels. | string | null |
-| fontSize | Any valid font size for the labels. | string | '14px' |
-| fill | Any valid hex color for the label color. | string | '#fff' |
-| labelFormat | Either function(label, value) or a format string. See below. | mixed | '{l}\\n{f}' |
-| tooltipEnabled | Whether tooltips should be enabled on hover. | bool | false |
-| tooltipFormat | Either function(label, value) or a format string. See below. | mixed | '{l}\\n{f}' |
+## Opciones JSON
 
-### Label/Tooltip Format
+| OPCIÓN         | DESCRIPCIÓN                                                                          | TIPO   | DEFAULT         |
+| -------------- | ------------------------------------------------------------------------------------ | ------ | --------------- |
+| bottomWidth    | El porcentaje del ancho total que debe tener la parte inferior.                      | number | 1 / 3           |
+| bottomPinch    | Cuántos bloques se reducen en la parte inferior para crear un “cuello” en el funnel. | number | 1               |
+| inverted       | Indica si la dirección del funnel está invertida (como una pirámide).                | bool   | false           |
+| animate        | Velocidad de la animación de carga en milisegundos.                                  | number | 0 (desactivado) |
+| curveEnabled   | Indica si el funnel es curvado.                                                      | bool   | true            |
+| curveHeight    | La cantidad de curvatura.                                                            | number | 20              |
+| totalCount     | Sobrescribe el total utilizado en los cálculos de proporciones.                      | number | null            |
+| dynamicHeight  | Indica si la altura de los bloques es proporcional a su peso.                        | bool   | true            |
+| dynamicSlope   | Indica si el ancho de los bloques es proporcional a la disminución de valor.         | bool   | false           |
+| barOverlay     | Indica si los bloques tienen superposiciones de barras proporcionales a su peso.     | bool   | false           |
+| fillType       | Puede ser 'solid' o 'gradient'.                                                      | string | 'solid'         |
+| minHeight      | Altura mínima en píxeles de un bloque.                                               | number | 25              |
+| highlight      | Indica si los bloques se resaltan al pasar el cursor.                                | bool   | false           |
+| labelEnabled   | Indica si deben mostrarse las etiquetas de los bloques.                              | bool   | true            |
+| fontFamily     | Cualquier familia tipográfica válida para las etiquetas.                             | string | null            |
+| fontSize       | Cualquier tamaño de fuente válido para las etiquetas.                                | string | '14px'          |
+| fill           | Cualquier color hex válido para el color de la etiqueta.                             | string | '#fff'          |
+| labelFormat    | Puede ser function(label, value) o un formato de texto. Ver más abajo.               | mixed  | '{l}\n{f}'      |
+| tooltipEnabled | Indica si deben habilitarse los tooltips al pasar el cursor.                         | bool   | false           |
+| tooltipFormat  | Puede ser function(label, value) o un formato de texto. Ver más abajo.               | mixed  | '{l}\n{f}'      |
 
-| KEY | DESCRIPTION |
-| --- | --- |
-| '{l}' | The block's supplied label. |
-| '{v}' | The block's raw value. |
-| '{f}' | The block's formatted value. |
+## Formato de Etiquetas/Tooltips
+
+| KEY   | DESCRIPCIÓN                           |
+| ----- | ------------------------------------- |
+| '{l}' | La etiqueta proporcionada del bloque. |
+| '{v}' | El valor bruto del bloque.            |
+| '{f}' | El valor formateado del bloque.       |

@@ -1,51 +1,63 @@
-# Web Component
+# Componente Web
 
-HTML module, SQL Feed and RSS Feed all use the flx-html web component. The way they act is based on the module type and this is retrieved by indicating the modulename on the web component.
+Los módulos HTML, SQL Feed y RSS Feed utilizan todos el componente web flx-html. La forma en que actúan se basa en el tipo de módulo y esto se recupera indicando el nombre del módulo en el componente web.
 
-## HTML Module
+## Módulo HTML
 
-Just add a flx-html web component on your page and you will inmediatly get its content displayed on the screen. You can include any other **flexygo** web component in your HTML module.
+Solo agrega un **flx-html** componente web en tu página y inmediatamente obtendrás su contenido mostrado en la pantalla. Puedes incluir cualquier otro flexygo componente web en tu módulo HTML.
 
-To add a SQLFeed module or a RSS module to your HTML just add the flx-html web component and indicate your SQLFeed or RSS modulename.
+Para agregar un módulo SQLFeed o un módulo RSS a tu HTML, simplemente agrega el componente web flx-html e indica tu nombre de módulo SQLFeed o RSS.
 
-## SQL Feed Module
+```html
+<flx-html modulename="sysmod-sqlfeed-grid"></flx-html>
+```
 
-Convert any SQL Sentence in a standard XML file and transform the result with what ever XSL transformation file you want. If you don't want to deal with complex XSL language, just use the pre-built in SQLFeed.xsl file which allows you to display any SQL sentence as a view form or as a grid, just by setting the mode in the module parameter options.
+## Módulo SQL Feed
 
-### Grid mode
+Convierte cualquier sentencia SQL en un archivo XML estándar y transforma el resultado con cualquier archivo de transformación XSL que desees. Si no quieres lidiar con el lenguaje XSL complejo, solo utiliza el archivo preconstruido SQLFeed.xsl que te permite mostrar cualquier sentencia SQL como un formulario de vista o como una cuadrícula, solo configurando el modo en las opciones de parámetros del módulo.
 
-1.  Add your SQL sentence to the module. SELECT Top 3 \* FROM objects
-2.  Indicate Transform XSL file path or used built in **SQLFeed.xsl** file.
-3.  Set module parameter to **mode = "grid"** to obtain a grid layout.
-4.  Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.
+### Modo cuadrícula
 
-###### SQL Feed in grid mode
+1.  Agrega tu sentencia SQL al módulo. 
+```sql
+SELECT Top 3 \* FROM objects
+```
+2.  Indica la ruta del archivo de transformación XSL o usa el archivo preconstruido SQLFeed.xsl. 
+3.  Establece el parámetro del módulo en **mode = "grid"** para obtener un diseño de cuadrícula. 
+4.  Agrega una relación al objeto que llama. Esta sentencia será analizada contra el objeto principal que llama o se puede usar un token predeterminado del sistema. Solo usa llaves {{propiedad de objeto o nombre de token}} para analizar el contenido. 
 
-### View mode
+**Ejemplo:**
 
-1.  Add your SQL sentence to the module: SELECT Top 1 \* FROM objects
-2.  Indicate Transform XSL file path or used built in **Rss.xsl** file.
-3.  Set moule parameter to **blank** to obtain a view layout.
-4.  Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.
+![SQL Feed en modo cuadrícula](/assets/images/Web%20Components/SQLFeedGrid.png "SQL Feed en modo cuadrícula")
 
-###### SQL Feed in view mode
+### Modo vista
 
-## RSS Module
+1.  Agrega tu sentencia SQL al módulo: 
+```sql
+SELECT Top 1 \* FROM objects
+```
+2.  Indica la ruta del archivo de transformación XSL o usa el archivo preconstruido **Rss.xsl.** 
+3.  Establece el parámetro del módulo en **blank** para obtener un diseño de vista.
+4.  Agrega una relación al objeto que llama. Esta sentencia será analizada contra el objeto principal que llama o se puede usar un token predeterminado del sistema. Solo usa llaves {{propiedad de objeto o nombre de token}} para analizar el contenido. 
 
-Convert any external RSS provider in to your own formated news feed with what ever XSL transformation file you want. If you don't want to deal with complex XSL language just use the pre built in Rss.xsl file wich allows you to display news in a simple format.
+**Ejemplo:**
 
-1.  Select the external RSS Url address:
+![SQL Feed en modo vista](/assets/images/Web%20Components/SQLFeedView.png "SQL Feed en modo vista")
+
+## Módulo RSS
+
+Convierte cualquier proveedor de RSS externo en tu propio feed de noticias formateado con cualquier archivo de transformación XSL que desees. Si no quieres lidiar con el lenguaje XSL complejo, simplemente utiliza el archivo preconstruido Rss.xsl que te permite mostrar noticias en un formato simple.
+
+1.  Selecciona la dirección URL del RSS externo: 
     
-    ```
+    ```js
     RSS address: https://www.yahoo.com/news/rss 
     ```
     
-2.  Select you transformation XSL File.
+2.  Selecciona tu archivo de transformación XSL. 
     
-    ```
+    ```js
     XSL file Path: ~/xsl/Rss.xsl
     ```
     
-3.  Add any extra variables your XSL file might need in the parameter option.
-
-##### RSS module example
+3.  Agrega cualquier variable extra que tu archivo XSL pueda necesitar en la opción de parámetro.

@@ -116,7 +116,7 @@ Align terms and descriptions horizontally by using our grid system’s predefine
 
 ### Horizontal
 
-You can use the **dl-horizontal** class to make dt and dd aligned with its pair one net to the other.
+You can use the **dl-horizontal** class to make dt and dd aligned with its pair one next to the other.
 
 <dl class="dl-horizontal">
 	<dt>My description list</dt>

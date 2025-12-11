@@ -1,35 +1,40 @@
 # Abh Sms
 
-Abh sms is an integration of Ahora Business Hub that allows **flexygo** to send sms.
+Abh Sms es una integración de **Ahora Business Hub** que permite a **flexygo** enviar SMS.
 
-## Enable Abh Sms
+## Activar Abh Sms
 
-Add Abh Sms to this project
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbh_Integrations_Settings" defaults="{'IntegrationId':'abh_sms'}" excludehist="false">
+    Add Abh Sms to your project
+</flx-navbutton>
 
-## Configure Abh Sms
+## Configurar Abh Sms
 
 ![Abh Sms configuration](/assets/images/AbhSms/AbhSmsSettings.png "Abh Sms configuration")
 
-**Integration:** Name of the integration that we are going to configure, in this case Ahora Business Hub - SMS.
+**Integration:** Nombre de la integración que vamos a configurar, en este caso *Ahora Business Hub – SMS*.
 
-**Client Id:** Ahora Business Hub client id.
+**Client Id:** Identificador de cliente de Ahora Business Hub.  
+Más información en: https://help.flexygo.com/
+{: .flx-warning-card }
 
-For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+**Client Secret:** Clave secreta de cliente de Ahora Business Hub.  
+Más información en: https://help.flexygo.com/
+{: .flx-warning-card }
 
-**Client Secret:** Ahora Business Hub client secret.
+**Tenant Id:** Identificador de tenant de Ahora Business Hub.  
+Más información en: https://help.flexygo.com/
+{: .flx-warning-card }
 
-For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
+## Casos de uso
 
-**Tenant Id:** Ahora Business Hub tenant id.
-
-For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
-
-## Use cases
-
-Once the settings are configured, it is possible to use the notices sentences to send notifications SMS. For more information see the help of notice sentences.
+Una vez configurados los ajustes, es posible utilizar las *notice sentences* para enviar notificaciones por SMS.  
+Para más información, consulta la ayuda de *notice sentences*.
 
 ## SMS Outbox
 
-From here it is possible to view the sms outbox to have a control of the errors and sent.
+Desde aquí es posible visualizar la bandeja de salida de SMS para controlar errores y envíos realizados.
 
-Sms Outbox
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysOutboxsSms">
+    Sms Outbox
+</flx-navbutton>

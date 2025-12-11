@@ -1,41 +1,112 @@
-# Common Functions
+# Funciones Comunes
 
-## Open page
+## Abrir página
 
-We can open any object default page using the flexygo.nav.openPage method and indicating the taget type and the entity or collection.
+Podemos abrir cualquier página de objeto predeterminada utilizando el método flexygo.nav.openPage e indicando el tipo de objetivo y la entidad o colección.
 
-```
-/*** Opens the default object page * @method openPage * @param {string} pagetypeid - Type of the page (list, view, edit) * @param {string} objectname - Name of the collection or entity * @param {string} objectwhere - Where of the collection or entity * @param {string} defaults - Defaults to be added to the page * @param {string} targetid - Target to open the window * @param {boolean} excludeHist - True to not store in history * @param {JQuery} triggerElement - Relative element to open the page * @param {boolean} isClone - Only for opening page with clone options * @param {flexygo.nav.FlexygoHistory} previousHist - Previous page history * @param {string} presets - Used for opening page with a default preset, can be a preset ID or a JSON string  */  openPage(pagetypeid: string, objectname: string, objectwhere: string, defaults: string | flexygo.nav.PageDefaults, targetid: string, excludeHist?: boolean, triggerElement?: JQuery, isClone?: boolean, previousHist?: flexygo.nav.FlexygoHistory, presets?: string ): void
+```ts
+/**
+* Abre la página de objeto predeterminada
+ * @method openPage
+ * @param {string} pagetypeid - Tipo de la página (lista, vista, editar)
+ * @param {string} objectname - Nombre de la colección o entidad
+ * @param {string} objectwhere - Dónde de la colección o entidad
+ * @param {string} defaults - Valores predeterminados que se agregarán a la página
+ * @param {string} targetid - Objetivo para abrir la ventana
+ * @param {boolean} excludeHist - Verdadero para no almacenar en el historial
+ * @param {JQuery} triggerElement - Elemento relativo para abrir la página
+ * @param {boolean} isClone - Solo para abrir una página con opciones de clonación
+ * @param {flexygo.nav.FlexygoHistory} previousHist - Historial de la página anterior
+ * @param {string} presets - Utilizado para abrir la página con un preset predeterminado, puede ser un ID de preset o una cadena JSON 
+ */
+
+openPage(pagetypeid: string, objectname: string, objectwhere: string, defaults: string | flexygo.nav.PageDefaults, targetid: string, excludeHist?: boolean, triggerElement?: JQuery, isClone?: boolean, previousHist?: flexygo.nav.FlexygoHistory, presets?: string ): void
 ```
 
 ## Open page by name
 
-We can open an specific page using the flexygo.nav.openPageName method and indicating the paget name and the entity or collection
+Podemos abrir una página específica utilizando el método **flexygo.nav.openPageName** e indicando el nombre de la página y la entidad o colección.
 
+```ts
+ /**
+ * Abre una página por su nombre
+ * @method openPageName
+ * @param {string} pagename - Identificador de la página
+ * @param {string} objectname - Nombre de la colección o entidad
+ * @param {string} objectwhere - Dónde de la colección o entidad
+ * @param {string} defaults - Valores predeterminados que se agregarán a la página
+ * @param {string} targetid - Objetivo para abrir la ventana
+ * @param {boolean} excludeHist - Verdadero para no almacenar en el historial
+ * @param {JQuery} triggerElement - Elemento relativo para abrir la página
+ * @param {boolean} isClone - Solo para abrir página con opciones de clonación
+ * @param {flexygo.nav.FlexygoHistory} previousHist - Historial de la página anterior
+ * @param {string} presets - Utilizado para abrir la página con un preset predeterminado, puede ser un ID de preset o una cadena JSON 
+ */
+
+openPageName(pagename: string, objectname: string, objectwhere: string, defaults: string, targetid: string, excludeHist: boolean, triggerElement?: JQuery, isClone?: boolean, previousHist?: flexygo.nav.FlexygoHistory, presets?: string): void 
 ```
- /** * Opens a page by its name * @method openPageName * @param {string} pagename - Identifier of the page * @param {string} objectname - Name of the collection or entity * @param {string} objectwhere - Where of the collection or entity * @param {string} defaults - Defaults to be added to the page * @param {string} targetid - Target to open the window * @param {boolean} excludeHist - True to not store in history * @param {JQuery} triggerElement - Relative element to open the page * @param {boolean} isClone -Only for opening page with clone options * @param {flexygo.nav.FlexygoHistory} previousHist - Previous page history * @param {string} presets - Used for opening page with a default preset, can be a preset ID or a JSON string  */  openPageName(pagename: string, objectname: string, objectwhere: string, defaults: string, targetid: string, excludeHist: boolean, triggerElement?: JQuery, isClone?: boolean, previousHist?: flexygo.nav.FlexygoHistory, presets?: string): void 
+
+## Ejecutar proceso
+
+Podemos ejecutar cualquier proceso en el repositorio de flexygo utilizando el método **flexygo.nav.executeProcess** e indicando el proceso y la entidad o colección.
+
+```ts
+/**
+ * Ejecuta un proceso, abriendo su página de parámetros si es necesario
+ * @method execProcess
+ * @param {string} processname - Identificador del proceso
+ * @param {string} objectname - Nombre de la colección o entidad
+ * @param {string} objectwhere - Dónde de la colección o entidad
+ * @param {string} defaults - Valores predeterminados que se agregarán al proceso
+ * @param {any} processparams - Array de parámetros del proceso
+ * @param {string} targetid - Objetivo para abrir la ventana
+ * @param {boolean} excludeHist - Verdadero para no almacenar en el historial
+ * @param {JQuery} triggerElement - Elemento relativo para abrir la página
+ * @param {function} callBack - callback que se llamará después de ejecutar
+* @param {boolean} showprogress - falso para ocultar el indicador de progreso
+ */
+
+execProcess(processname: string, objectname: string, objectwhere: string, defaults: string | flexygo.nav.PageDefaults, processparams: any, targetid: string, excludeHist: boolean, triggerElement: JQuery, callBack?: any, showProgress?: boolean):void
 ```
 
-## Execute process
+##### Ejemplo de ejecución de un proceso con parámetros
 
-We can execute any process in the **flexygo** repository by using the flexygo.nav.executeProcess method and indicating the process and the entity or collection.
+En este ejemplo traduciremos el contenido de la propiedad MyTextbox en el formulario de edición actual utilizando el proceso TranslateTextTo.
 
-```
-/** * Executes a process, opening its param page if required * @method execProcess * @param {string} processname - Identifier of the process * @param {string} objectname - Name of the collection or entity * @param {string} objectwhere - Where of the collection or entity * @param {string} defaults - Defaults to be added to the process * @param {any} processparams - Array of process parameters * @param {string} targetid - Target to open the window * @param {boolean} excludeHist - True to not store in history * @param {JQuery} triggerElement - Relative element to open the page * @param {function} callBack - callback to be called after execute* @param {boolean} showprogress - false to hide progress indicator */  execProcess(processname: string, objectname: string, objectwhere: string, defaults: string | flexygo.nav.PageDefaults, processparams: any, targetid: string, excludeHist: boolean, triggerElement: JQuery, callBack?: any, showProgress?: boolean):void
-```
-
-##### Sample of executing a process with parameters
-
-In this sample we shall translate the content of the MyTextbox property on the current edit form using the The TranslateTextTo process
-
-```
-var module = $(triggerElement).closest('flx-module')[0];  var TextBox =$(module).find("[Property='MyTextbox']")[0];  var qs= TextBox.getValue();  if(qs!=null){   flexygo.nav.execProcess('TranslateTextTo','sysProcess','',null,[{"key":'Text',"value":qs},{"key":'Lang',"value":'es'}],'current',false,$(this),function (ret){TextBox.setValue(ret.JSCode)})  }
+```js
+let module = $(triggerElement).closest('flx-module')[0];
+let TextBox =$(module).find("[Property='MyTextbox']")[0];
+let qs= TextBox.getValue();
+if(qs!=null){
+	flexygo.nav.execProcess('TranslateTextTo','sysProcess','',null,[{"key":'Text',"value":qs},{"key":'Lang',"value":'es'}],'current',false,$(this),function (ret){TextBox.setValue(ret.JSCode)})
+}
 ```
 
-## Object actions
+## Acciones de objeto
 
-We can create any entity or collection and execute object actions such as read, insert, update, delete using flexygo.obj.Entity method
+Podemos crear cualquier entidad o colección y ejecutar acciones de objeto como leer, insertar, actualizar, eliminar utilizando el método **flexygo.obj.Entity**.
 
-```
-/*** Library to access entity objects and collections from JS.** @class flexygo.Entity* @constructor* @param {string} objectName - The object name.* @param {string} [objectWhere] - Where condition (only if object isn't new).* @return {object} - Entity object.*/  var e = flexygo.obj.Entity (objectName, objectWhere);  /* read object info */e.read();/* insert */e.data.PropertyName=newValue;e.insert();/* update */e['PropertyName']=newValue;e.update();/* delete */e.delete();
+```js
+/**
+* Biblioteca para acceder a objetos y colecciones de entidad desde JS.
+*
+* @class flexygo.Entity
+* @constructor
+* @param {string} objectName - El nombre del objeto.
+* @param {string} [objectWhere] - Condición donde (solo si el objeto no es nuevo).
+* @return {object} - Objeto de entidad.
+*/
+
+var e = flexygo.obj.Entity (objectName, objectWhere);
+
+/* leer información del objeto */
+e.read();
+/* insertar */
+e.data.PropertyName=newValue;
+e.insert();
+/* actualizar */
+e['PropertyName']=newValue;
+e.update();
+/* eliminar */
+e.delete();
 ```

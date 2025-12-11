@@ -1,196 +1,178 @@
 # Document Manager & Image Manager
 
-**flexygo** allows us to add documents and images to any existing objects. We could add documents (pdf, doc, docx, txt, odt, etc.) and images (jpg, png, gif, bmp, etc.) to our articles, clients, buildings etc. By using the document manager object we can edit and display any document related to an object.
+**flexygo** nos permite añadir documentos e imágenes a cualquier objeto existente. Podemos añadir documentos (pdf, doc, docx, txt, odt, etc.) e imágenes (jpg, png, gif, bmp, etc.) a nuestros artículos, clientes, edificios, etc. Usando el objeto document manager podemos editar y mostrar cualquier documento relacionado con un objeto.
 
-Watch the following video on our YouTube channel about Document and Image Manager.
+Mira el siguiente vídeo en nuestro canal de YouTube sobre Document y Image Manager.
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/qNQOoO1TcyA" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 ## Document Manager
 
-### Configuration
+### Configuración
 
-First of all, you need to enable document manager before staring to use it by following some simple steps. From any object page (view or edit) go to the right-hand side toolbox and click on document settings.
+Primero, debes habilitar el document manager antes de empezar a usarlo siguiendo unos pasos muy simples. Desde cualquier página del objeto (vista o edición), ve a la barra lateral derecha y haz clic en document settings.
 
-![](.\img\Help\ModulesConf\DocumentBar.png "Image 1. Document Bar")
+![](/assets/images/ModulesConf/DocumentBar.png "Image 1. Document Bar")
 
-Image 1. Document Bar
+Rellena el siguiente formulario:
 
-Fill out the following form.
+* **Type**: Selecciona flexygo standard  
+* **Object Name**: Objeto al que se vincularán los documentos  
+* **Object Primary Key**: La clave primaria del objeto  
+* **Path**: Ruta raíz para documentos  
+* **Default Category**: Categoría por defecto para los documentos; las distintas categorías pueden encontrarse en las tablas maestras "Document categories"  
+* **Category Filter**: De la lista de categorías selecciona cuáles utilizar con ese objeto  
+* **Permisions**: Selecciona qué opciones deben estar disponibles para los documentos de ese objeto  
 
-*   **Type**: Select flexygo standard
-*   **Object Name**: Object the documents will be linking to
-*   **Object Primary Key**: The object primary key
-*   **Path**: Root path for documents
-*   **Default Category**: Default category tabs for the documents, the different categories can be found in master tables "Document categories"
-*   **Category Filter**: From the list of categories select which ones to use with that object
-*   **Permisions**: Select which options should be available for documents on the current object
+![](/assets/images/ModulesConf/DocSettings.png "Image 2. Document Settings")
 
-![](.\img\Help\ModulesConf\DocSettings.png "Image 2. Document Settings")
+Ahora desde el menú de procesos de relaciones del objeto puedes acceder a cualquier documento relacionado con tu objeto.
 
-Image 2. Document Settings
+### Visualización de documentos
 
-Now from the object relations process menu you can access to any document related to your object.
+Hay diferentes opciones para mostrar el document manager. Explicamos algunas de ellas.
 
-## Viewing documents
+### Añadir un enlace a los documentos
 
-There are different options to show document manager. We will explain some of them.
+Puedes usar easy info objects para obtener algo como esto:
 
-#### Add a link to the documents to show them
+![](/assets/images/ModulesConf/DocLinks.png "Image 3. Document Links")
 
-You can use easy info objects to obtain something like this:
+Añade un evento onclick para abrir la página genérica del document manager con el módulo correspondiente.
 
-![](.\img\Help\ModulesConf\DocLinks.png "Image 3. Document Links")
-
-Image 3. Document Links
-
-Add an onclick event to open generic document manager page with the document manager module.
-
-```
+```js
 flexygo.nav.openPage('list','Documents_Object','Documents_Objects.ObjectId = \'{{MyobjectId}}\' And Documents_Objects.ObjectName = \'MyObjectName\'','\'ObjectId\':{{MyobjectId}},\'ObjectName\':\'MyObjectName\'','popup1024x678',false,$(this))"
 ```
 
-#### Add a document manager module to your object page
+### Añadir un módulo de document manager
 
-With this module you can upload documents to the selected object. To add this module you must fill in the following fields of the configuration form:
+Con este módulo puedes subir documentos al objeto seleccionado. Para añadir este módulo debes rellenar los siguientes campos del formulario de configuración:
 
-![](.\img\Help\ModulesConf\DocManager.png "Image 4. Document Manager")
+![](/assets/images/ModulesConf/DocManager.png "Image 4. Document Manager")
 
-Image 4. Document Manager
+![](/assets/images/ModulesConf/DocManagerConf.png "Image 5. Document Manager Configuration")
 
-![](.\img\Help\ModulesConf\DocManagerConf.png "Image 5. Document Manager Configuration")
+Para la correcta configuración de este módulo es necesario completar los siguientes campos:
 
-Image 5. Document Manager Configuration
+* **Id:** Identifica el módulo
+* **Type:** Tipo de módulo, en este caso Document Manager
+* **Description:** Breve descripción del módulo
+* **Title:** Título que aparece en el módulo
+* **Classification:** Como no es un módulo por defecto, siempre es Project Module
+* **Container:** Tipo de contenedor del módulo
+* **Object Name:** Se debe seleccionar el objeto que se desea relacionar con el manager
 
-For the correct configuration of this module it is necessary to fill in the following fields:
+### Añadir un módulo Document Viewer
 
-*   **Id:** Identify the module
-*   **Type:** Module type, in this case Image Manager
-*   **Description:** brief description of the module
-*   **Title:** Title that appears on the module
-*   **Classification:** Since it is not a default module it is always Project Module
-*   **Container:** Module container type
-*   **Object Name:** They have to select the object that we want to relational with the manager.
+Este módulo tiene las mismas funcionalidades que el document manager, pero no permite subir documentos y los documentos ya subidos no pueden modificarse ni eliminarse.
 
-#### Add a Document Viewer module on your page
+![](/assets/images/ModulesConf/DocManagerViewer.png "Image 6. Document Manager Viewer")
 
-This module has the same features tha? the document manager, but there is no option to upload documents and already uploaded documents can't be modified or deleted.
+## Todos los documentos del sistema
 
-![](.\img\Help\ModulesConf\DocManagerViewer.png "Image 6. Document Manager Viewer")
+También tienes acceso a ver todos los documentos de tu proyecto flexygo. Ve a Admin Work Area > Reporting > Document Viewer.
 
-Image 6. Document Manager Configuration
-
-## All documents in the system
-
-You also have the access to see all documents in your flexygo project. Go to the Admin Work Area > Reporting > Documemt Viewer.
-
-![](.\img\Help\ModulesConf\DocumentManager.png "Image 7. Document Manager")
-
-Image 7. Document Manager
+![](/assets/images/ModulesConf/DocumentManager.png "Image 7. Document Manager")
 
 ## Document Classification Manager
 
-This module enables you to access to every category of your documents. When you click on one category it will open a document manager page, with only the documents of the category selected.
+Este módulo te permite acceder a todas las categorías de tus documentos. Al hacer clic en una categoría, se abrirá una página del document manager con solo los documentos de la categoría seleccionada.
 
-![](.\img\Help\ModulesConf\DocumentClassificationManager.png "Image 8. Document Classification Manage")
+![](/assets/images/ModulesConf/DocumentClassificationManager.png "Image 8. Document Classification Manager")
 
-Image 8. Document Classification Manage
+### Añadir un enlace para abrir el Classification Manager
 
-#### Add a link to open the Classification Manager
+Evento onclick para abrir el document classification manager genérico.
 
-Onclik event to open generic document classsification manager.
-
-```
+```js
 flexygo.nav.openPageName('syspage-documents-classification','sysDocumentsCategories','','{\'ObjectId\':\'{{MyobjectId}}\',\'ObjectName\':\'{{MyObjectName}}\'}','popup1024x678',false,$(this))
 ```
 
-FlexyGo navbutton to open generic document classsification manager.
+Botón FlexyGo para abrir el document classification manager genérico:
+
+```html
+<flx-navbutton type="openpagename" pagename="syspage-documents-classification" targetid="popup1024x678" defaults="{'ObjectId':'{{MyobjectId}}', 'ObjectName':'{{MyObjectName}}'}" excludehist="false"></flx-navbutton>
+```
 
 ## Image Manager
 
-### Configuration
+### Configuración
 
-From any object form (view or edit) go to the right-hand side toolbox and click on image manager.
+Desde cualquier formulario del objeto (vista o edición), ve a la barra lateral derecha y haz clic en image manager.
 
-![](.\img\Help\ModulesConf\ImageBar.png "Image 9. Image Bar")
+![](/assets/images/ModulesConf/ImageBar.png "Image 9. Image Bar")
 
-Image 9. Image Bar
+Rellena el siguiente formulario y estará listo para usar.
 
-Fill out the following form and you are ready to go.
+![](/assets/images/ModulesConf/ImageSettings.png "Image 10. Image Settings")
 
-![](.\img\Help\ModulesConf\ImageSettings.png "Image 10. Image Settings")
+Ahora desde el menú de procesos del objeto puedes acceder a cualquier imagen relacionada con él.
 
-Image 10. Image Settings
+* **Type**: Selecciona flexygo Standard
+* **Object Name**: Objeto al que vincularás las imágenes
+* **Object Primary Key**: La clave primaria del objeto
+* **Path**: Ruta raíz para las imágenes
 
-Now from the object relations process menu you can access any image related to your object.
+### Visualización de imágenes
 
-*   **Type**: Select flexygo Standard
-*   **Object Name**: Object you will be linking the images to
-*   **Object Primary Key**: The object primary key
-*   **Path**:Root path for images
+Básicamente hay tres opciones:
 
-### Viewing images on my object page
+### Añadir un enlace a las imágenes
 
-There are basicaly three options:
+Puedes usar easy info objects para obtener algo como esto:
 
-#### Add a link to the images to view access htem from the object form
+![](/assets/images/ModulesConf/DocLinks.png "Image 11. Image Links")
 
-You can use easy info objects to obtain something like this:
+Básicamente añade un evento onclick para abrir la página genérica del image manager con el módulo correspondiente.
 
-![](.\img\Help\ModulesConf\DocLinks.png "Image 11. Image Links")
-
-Image 11. Image Links
-
-Basically add an onclik event to open generic image manager page with the image manager module.
-
-```
+```js
 flexygo.nav.openPage('list','sysObjectImages','Objects_Images.ObjectId = \'{{MyobjectId}}\' And Objects_Images.ObjectName = \'MyObjectName\'','{\'ObjectId\':{{MyobjectId}},\'ObjectName\':\'MyObjectName\'}','popup1024x678',false,$(this)");
 ```
 
-#### Add a image manager module to your object page
+### Añadir un módulo de image manager
 
-With this module you can upload images to the selected object.
+Con este módulo puedes subir imágenes al objeto seleccionado.
 
-![](.\img\Help\ModulesConf\ImageManager.png "Image 12. Image Manager")
+![](/assets/images/ModulesConf/ImageManager.png "Image 12. Image Manager")
 
-Image 12. Image Manager
+Para añadir este módulo debes rellenar los siguientes campos del formulario de configuración:
 
-To add this module you must fill in the following fields on the configuration form:
+![](/assets/images/ModulesConf/imageManagerConf.png "Image 13. Image Manager Configuration")
 
-![](.\img\Help\ModulesConf\imageManagerConf.png "Image 13. Image Manager Configuration")
+Para la correcta configuración de este módulo es necesario completar los siguientes campos:
 
-Image 13. Image Manager Configuration
+* **Id:** Identifica el módulo
+* **Type:** Tipo de módulo, en este caso Image Manager
+* **Description:** Breve descripción del módulo
+* **Title:** Título que aparece en el módulo
+* **Classification:** Como no es un módulo por defecto, siempre es Project Module
+* **Container:** Tipo de contenedor del módulo
+* **Object Name:** Se debe seleccionar el objeto que se desea relacionar con el manager
 
-For the correct configuration of this module it is necessary to fill in the following fields:
+### Añadir un módulo Image Viewer
 
-*   **Id:** Identify the module
-*   **Type:** Module type, in this case Image Manager
-*   **Description:** brief description of the module
-*   **Title:** Title that appears on the module
-*   **Classification:** Since it is not a default module it is always Project Module
-*   **Container:** Module container type
-*   **Object Name:** They have to select the object that we want to relational with the manager.
+El módulo de Image Manager también actúa como visor y tiene su propio modo de presentación:
 
-#### Add a Image Viewer module to your page
-
-The actual Image manager module is also used as a viewer. it has its own presentation mode:
-
-![](.\img\Help\ModulesConf\ImageViewer.png "Image 14. Image Manager Configuration")
-
-Image 14. Image Manager Configuration
+![](/assets/images/ModulesConf/ImageViewer.png "Image 14. Image Manager Configuration")
 
 ## Image Classification Manager
 
-This module enables you to access to every category of your images. When you click on one category it will open a image manager page, with only the images of the category selected.
+Este módulo te permite acceder a todas las categorías de tus imágenes. Al hacer clic en una categoría se abrirá una página del image manager con solo las imágenes de esa categoría.
 
-![](.\img\Help\ModulesConf\ImageClassificationManager.png "Image 15. Image Classification Manage")
+![](/assets/images/ModulesConf/ImageClassificationManager.png "Image 15. Image Classification Manager")
 
-Image 15. Image Classification Manage
+### Añadir un enlace al Image Classification Manager
 
-#### Add a link to open the Image Classification Manager
+Evento onclick para abrir el image classification manager genérico:
 
-Onclik event to open generic document classsification manager.
-
-```
+```js
 flexygo.nav.openPageName('syspage-images-classification','sysObjectImagesClassifications','','{\'ObjectId\':\'{{MyobjectId}}\',\'ObjectName\':\'{{MyObjectName}}\'}','popup1024x678',false,$(this))
 ```
 
-FlexyGo navbutton to open generic document classsification manager.
+Botón FlexyGo para abrir el image classification manager genérico:
+
+```html
+<flx-navbutton type="openpagename" pagename="syspage-images-classification" targetid="popup1024x678" defaults="{'ObjectId':'{{MyobjectId}}', 'ObjectName':'{{MyObjectName}}'}" excludehist="false"></flx-navbutton>
+```

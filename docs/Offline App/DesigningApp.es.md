@@ -1,151 +1,111 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# Diseñando la App offline de flexygo
 
-# Designing **flexygo** offline App
+Una vez creada la aplicación, será necesario darle funcionalidad creando los objetos, páginas, menús y funciones. Hay 5 pasos básicos para crear una aplicación y otros 4 pasos adicionales que permiten dotarla de mayor funcionalidad.
 
-Once the application is created, we will need to give it functionality, creating the objects, pages, menus and functions. There are 5 basic steps to create an applcation and 4 other steps that allow us to have greater functionality in our App.
+## Pasos básicos
 
-## Basic Steps
+1. Crear objetos  
+2. Crear páginas de lista y de vista  
+3. Ampliar el modelo de datos con vistas  
+4. Crear menús
 
-1.  Create Objects
-2.  Cretate list and view pages
-3.  Expand data model with views
-4.  Create menus
+## Pasos adicionales
 
-## Additional Steps
+1. Editar la página de inicio  
+2. Añadir funciones JS  
+3. Ampliar los estilos de la App con clases CSS  
+4. Añadir recursos estáticos
 
-1.  Edit home page
-2.  Add JS functions
-3.  Expand your App styles with css classes
-4.  Add Static resources
+## Crear un objeto
 
-## Create an object
+### Asistente de objetos
 
-### Object wizzard
+Puedes crear nuevos objetos desde cero o basarte en objetos existentes.  
+En la sección de objetos pulsaremos el botón + (Crear nuevo objeto).  
+Después accederemos al asistente de objetos offline, donde solo asignaremos un nombre, descripción e icono para el objeto y la colección, además del nombre de la tabla o vista en la que se basará. Pulsa el botón Guardar y Continuar para ir al segundo paso.
 
-You can create a new objects from 0 or create objects based on existing objects.  
-In the section of objects we will press on the button + (Create new object to start).  
-Then we will access to the wizzard of offline objects, where we will only assign a name, description and icon for the object and collection, in addition to assigning the name of the table or view on which it will be based. Press the Save and Continue button and we will go to the second step.
-
-![New Object](/assets/images/offline/NewObject.png "Image 1. New Object")
-
-Image 1. New Object
-
+![New Object](/assets/images/offline/NewObject.png "Image 1. New Object")  
 ![New Object](/assets/images/offline/NewObject2.png "Image 2. New Object")
 
-Image 2. New Object
+### Añadiendo propiedades
 
-### Adding Properties
-
-Now you can use the object wizard
+Ahora puedes usar el asistente de objetos.
 
 ![Wizzard](/assets/images/offline/Wizzard1.png "Image 3. Wizzard")
 
-Image 3. Wizzard
-
-Next we will create and configure each of the properties of the object.
+A continuación crearemos y configuraremos cada una de las propiedades del objeto.
 
 ![Wizzard](/assets/images/offline/Wizzard2.png "Image 4. Wizzard")
 
-Image 4. Wizzard
-
-Setting up Properties.
+Configuración de propiedades.
 
 ![Wizzard](/assets/images/offline/Wizzard3.png "Image 5. Wizzard")
 
-Image 5. Wizzard
-
-Unlike the **flexygo** environment, in the offline environment, when the properties are like combo or dbcombo, we will have the option of adding an object or a view instead of establishing a SQL statement.
+A diferencia del entorno **flexygo**, en el entorno offline, cuando las propiedades son del tipo combo o dbcombo, tendremos la opción de añadir un objeto o una vista en lugar de establecer una sentencia SQL.
 
 ![Wizzard](/assets/images/offline/PropertyCombo.png "Image 6. Property Combo")
 
-Image 6. Property Combo
+## Ampliar el modelo de datos mediante vistas de objeto
 
-## Extend data model through object views
-
-Object views are used for combo dropdowns or to extend the information that is displayed on object lists or object view pages. All theese views will be created as tables and sent to your mobile device. You only have to fill in the main information, the SQL sentence and save.
+Las vistas de objeto se utilizan para combos desplegables o para ampliar la información que se muestra en las listas de objetos o páginas de vista. Todas estas vistas se crearán como tablas y se enviarán al dispositivo móvil. Solo necesitas rellenar la información principal, la sentencia SQL y guardar.
 
 ![Object View](/assets/images/offline/ObjectView.png "Image 7. Object View")
 
-Image 7. Object View
-
-You can check the generated database schemaat any time just by using the schea button.
+Puedes consultar el esquema de base de datos generado en cualquier momento utilizando el botón de esquema.
 
 ![Schema](/assets/images/offline/schema.png "Image 8. Schema")
 
-Image 8. Schema
+## Páginas de objeto
 
-## Object Pages
-
-It should be noted that the development platform will automatically create the view and list pages for each object that we create through the wizzard. Therefore we can use the initial templates and redesign them to our liking, in addition to adding new ones.
+Cabe destacar que la plataforma de desarrollo creará automáticamente las páginas de vista y lista para cada objeto que creemos mediante el asistente. Por lo tanto, podemos usar las plantillas iniciales y rediseñarlas a nuestro gusto, además de añadir nuevas.
 
 ![Object Pages](/assets/images/offline/ObjectPages.png "Image 9. Object Pages")
 
-Image 9. Object Pages
-
-We therefore have the option of editing existing templates or creating new templates. Only filling description sections (name, type, title), html sections (header, body, footer, empty ) and the SQL sentence in case you need additional information to that offered by the object itself with its properties.
+Tenemos la opción de editar plantillas existentes o crear nuevas. Solo debemos rellenar las secciones de descripción (nombre, tipo, título), las secciones HTML (cabecera, cuerpo, pie, vacío) y la sentencia SQL en caso de necesitar información adicional a la ofrecida por el propio objeto con sus propiedades.
 
 ![Object Pages Edit](/assets/images/offline/ObjectPagesEdit.png "Image 9. Object Pages Edit")
 
-Image 9. Object Pages Edit
+## Menús de la App
 
-## App Menus
+Son los accesos directos a los objetos que vamos a ofrecer en el dispositivo. En la sección de menús tendremos el botón para añadir nuevos menús, además de la posibilidad de editar los existentes. Al crear nuevos menús, en cuanto pulsemos el botón de añadir, se generará un menú genérico que deberemos modificar con la opción Editar.
 
-They are the shortcuts to the objects that we are going to offer on the device. In the menus section we will have on one side the button to add new menus, in addition to the possibility of editing the existing menus. When creating new menus, as soon as we press the add button, a generic menu will be created that we must modify with the Edit option.
-
-![Menu](/assets/images/offline/MenuMenu1.png "Image 10. Menu")
-
-Image 10. Menu
-
+![Menu](/assets/images/offline/MenuMenu1.png "Image 10. Menu")  
 ![Menu](/assets/images/offline/MenuMenu2.png "Image 11. Menu")
 
-Image 11. Menu
+## Pasos adicionales
 
-## Additional steps
+### Diseño de la página de inicio
 
-### Designing home page
-
-Access and design of AppOffline HomePage
+Acceso y diseño de la HomePage de AppOffline.
 
 ![Home Page](/assets/images/offline/HomePage.png "Image 12. Home Page")
 
-Image 12. Home Page
+## Añadiendo JavaScript adicional
 
-## Adding additional JavaScript
+Podemos ampliar la funcionalidad creando nuestras propias funciones JS o utilizando funciones nativas del entorno Offline **flexygo**.
 
-We can expand functionallity just by creating our own js functions or using native functions of the Offline **flexygo** environment
-
-### Own JavaScript Functions
+### Funciones JavaScript propias
 
 ![JavaScript function](/assets/images/offline/JS.png "Image 13. JavaScript function")
 
-Image 13. JavaScript function
+### Uso de funciones nativas de **flexygo**
 
-### Using **flexygo** native functions
+Podemos utilizar cualquiera de las funciones nativas integradas en **flexygo**. Para consultarlas simplemente:
 
-We can use any of the **flexygo** built in native functions. To check them out just:
-
-In device mode > F12 -> Console > Flexygo + Intro we access the self-documented functions:
+En modo dispositivo > F12 -> Consola > Flexygo + Intro, accedemos a las funciones autodocumentadas:
 
 ![Native Functions](/assets/images/offline/NativeFunctions.png "Image 14. Native Functions")
 
-Image 14. Native Functions
-
-## Adding additional styles
+## Añadiendo estilos adicionales
 
 ![Styles](/assets/images/offline/styles.png "Image 15. Styles")
 
-Image 15. Styles
-
-## Adding additional resources
+## Añadiendo recursos adicionales
 
 ![Files](/assets/images/offline/files.png "Image 16. Files")
 
-Image 16. Files
+## Añadiendo un logo
 
-## Adding a logo
-
-You can set the login screen app logo on flexygo miscellaneous settings, as can bee seen in the image
+Puedes establecer el logo de la pantalla de inicio de sesión de la app en la configuración miscelánea de flexygo, como se muestra en la imagen.
 
 ![Logo](/assets/images/offline/AddLogo.png "Image 17. Logo")
-
-Image 17. Logo

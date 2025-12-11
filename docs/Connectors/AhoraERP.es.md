@@ -1,27 +1,36 @@
-# Ahora ERP Integration { .flx-title-with-image }
+```md
+# Integración con Ahora ERP { .flx-title-with-image }
 
 ![Ahora ERP](/assets/images/AhoraERP/ahora.svg){ .flx-image-of-title }
 
-**flexygo** facilitates integration with Ahora ERP. To enable this, it puts at a simple click of a button a series of processes that facilitate the development of solutions on the Ahora ERP DB.
+**flexygo** facilita la integración con **Ahora ERP**. Para ello, pone a un solo clic una serie de procesos que simplifican el desarrollo de soluciones sobre la base de datos de Ahora ERP.
 
-## Settings
+## Configuración
 
-1.  Configure the **Reference** and **Subreference** fields for user registration (you can find it in Admin Work Area > Security > Users), so they have drop-downs of the **employee** table and the **delegation** table respectively
+1. Configura los campos **Reference** y **Subreference** para el registro de usuarios  
+   (ubicado en *Admin Work Area > Security > Users*)  
+   de modo que dispongan de desplegables de la tabla **employee** y la tabla **delegation** respectivamente.
     
     ![Reference and Subreference configuration](/assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
     
-    Image 1. Reference and Subreference configuration
-    
-2.  Activate special objects for managing **Ahora ERP Images** instead of **flexygo** image management
-3.  Activate special objects for managing **Ahora ERP Documents** instead of **flexygo** document management
-4.  It enables an **afterLogin** process that creates the Ahora Session and sets the **context-info** before executing any query in the database
+2. Activa los objetos especiales para gestionar **Imágenes de Ahora ERP** en lugar de la gestión estándar de imágenes de **flexygo**.  
+3. Activa los objetos especiales para gestionar **Documentos de Ahora ERP** en lugar de la gestión estándar de documentos de **flexygo**.  
+4. Se habilita un proceso **afterLogin** que crea la sesión de Ahora y establece el **context-info** antes de ejecutar cualquier consulta en la base de datos.
 
-## Run process
+## Ejecutar proceso
 
-You can run the standard integration process by clicking on:
+Puedes ejecutar el proceso estándar de integración haciendo clic en:
 
-Generate Ahora ERP integration with standard afterlogin process
+<flx-navbutton class="button" type="execprocess" processname="pNet_ERPAhoraIntegration" excludehist="false" showprogress="false">
+    Generate Ahora ERP integration with standard afterlogin process
+</flx-navbutton>
 
-You can change the standard afterlogin process to the Portal Afterlogin process (integrate with a single user, employee 0 and dpto 0) or Anti-fraud law: the User SQL Impersonate afterLogin process (Use the SQL user associated with the employee in the ERP, it is mandatory that the employee have a specified login in the Ahora ERP)
+Puedes cambiar el proceso *afterlogin* estándar por el proceso *Portal Afterlogin*  
+(integra con un único usuario, empleado 0 y dpto 0)  
+o por el proceso *Anti-fraud law: User SQL Impersonate Afterlogin*  
+(usa el usuario SQL asociado al empleado en el ERP; es obligatorio que el empleado tenga un login definido en Ahora ERP):
 
-Change standard afterlogin process to Portal Afterlogin process or Anti-fraud law: User SQL impersonate Afterlogin process
+<flx-navbutton class="button" type="execprocess" processname="pNet_ERP_SetAfterloginProcess" excludehist="false" showprogress="false">
+    Change standard afterlogin process to Portal Afterlogin process or Anti-fraud law: User SQL impersonate Afterlogin process
+</flx-navbutton>
+```

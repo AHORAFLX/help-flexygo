@@ -2,22 +2,29 @@
 
 ![Azure Form Recognizer](/assets/images/FormRecognizer/logo.png){ .flx-image-of-title }
 
-Azure Form Recognizer is a cloud service that uses machine learning to analyze text and structured data from your documents. **flexygo** offers you the possibility to read documents through the Azure Form Recognizer service.
+Azure Form Recognizer es un servicio en la nube que utiliza machine learning para analizar texto y datos estructurados de tus documentos. **flexygo** te ofrece la posibilidad de leer documentos mediante el servicio Azure Form Recognizer.
 
-## Configure Azure Portal
+## Configurar Azure Portal
 
-Configure Azure Form Recognizer Settings
+Configura Azure desde  
+<flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-azure')" showprogress="false">Form Recognizer Settings</flx-navbutton>
 
 ## Form OCR Tool
 
-[Form OCR Testing Tool](https://github.com/microsoft/OCR-Form-Tools#readme) is an open source tagging tool for Form Recognizer that allows you to create and train your custom models.In it you can specify your labels for each type of document you want to read.
+[Form OCR Testing Tool](https://github.com/microsoft/OCR-Form-Tools#readme) es una herramienta de etiquetado *open source* para Form Recognizer que te permite crear y entrenar tus propios modelos personalizados.  
+En ella puedes especificar tus etiquetas para cada tipo de documento que desees leer.
 
 ## Demo
 
-After configuring the Azure portal as the **flexygo** settings, you can test its operation by uploading a file: read document.
+Después de configurar el portal de Azure y los ajustes en **flexygo**, puedes probar su funcionamiento subiendo un archivo:  
+<flx-navbutton class="link" type="execprocess" processname="FormRecognizer_Read" showprogress="false">leer documento</flx-navbutton>
 
-Format json [here](http://jsonviewer.stack.hu/).
+Format json [aquí](http://jsonviewer.stack.hu/).
 
-**Response: **     
+```json
+Response:
+```
 
-Read more information about Azure Form Recognition: [Link](https://azure.microsoft.com/es-es/services/form-recognizer/#overview)
+Para más información sobre Azure Form Recognizer:
+[Link](https://azure.microsoft.com/es-es/services/form-recognizer/#overview)
+{: .flx-warning-card }

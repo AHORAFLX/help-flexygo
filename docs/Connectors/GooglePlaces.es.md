@@ -1,27 +1,57 @@
-# Google Places
+# Google Places { .flx-title-with-image }
 
-![Google Places](/assets/images/Google/GooglePlaces.png)
+![Google Places](/assets/images/Google/GooglePlaces.png){ .flx-image-of-title }
 
-Google Places integration provides a convenient UI for connecting to and querying Google Maps Platform APIs. It can be used to provide autocomplete functionality for text-based geographic searches by returning places such as businesses, addresses and points of interest. To make it possible you need to realize some steps.
+La integración con **Google Places** proporciona una interfaz cómoda para conectar y consultar las APIs de Google Maps Platform.  
+Puede utilizarse para ofrecer funcionalidad de autocompletado en búsquedas geográficas basadas en texto, devolviendo lugares como negocios, direcciones y puntos de interés.  
+Para hacerlo posible es necesario seguir algunos pasos.
 
-## Settings
+## Configuración
 
-1.  Once you've obtained Google API Key by following some steps in flexygo help, you can start configurating Google Places.
-2.  With this connector you can transform a simple textbox into a autocomplete address dropdown and get sliced each part on distinct fields.
-    
-    ![Autocomplete Preview](/assets/images/GoogleAPIKey/autocomplete_preview.png "Autocomplete Preview")
-    
-    Image 1. Autocomplete Preview
-    
-3.  To add this function, you need to invoke the following function from **AfterLoadJS** module event.
-    
-    ![AfterLoadJS](/assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
-    
-    Image 2. AfterLoadJS
-    
+1.  Una vez que hayas obtenido tu **Google API Key** siguiendo  
+    [las instrucciones en la ayuda de flexygo](/Connectors/GoogleAPIKey), podrás empezar a configurar Google Places.
 
-#### JavaScript documentation
+2.  Con este conector puedes transformar un simple **textbox** en un **desplegable con autocompletado de direcciones**, obteniendo cada parte de la dirección dividida en distintos campos.
 
-You can find more information about some specifics of Google Autocomplete visiting [Google Maps Platform](https://developers.google.com/maps/documentation/places/web-service/autocomplete)
+![Autocomplete Preview](/assets/images/GoogleAPIKey/autocomplete_preview.png "Autocomplete Preview")
 
-flexygo.utils.googlePlaces.autocomplete.init(adressTextBox: string, config: Object, options: Object, cllback:Function); adressTextBox: Property name or Input ID of autocomplete text input. config (optional): Object with property names or input ids to set values. { "administrative\_area\_level\_1": 'txtDependentLocality' "administrative\_area\_level\_1\_short": 'txtDependentLocalityCode', "administrative\_area\_level\_2": 'txtDoubleDependentLocality', "administrative\_area\_level\_2\_short": 'txtDoubleDependentLocalityCode', "country": 'txtCountry', "country\_short": 'txtCountryId', "geo": 'txtCoords', "lat": 'txtLatitude', "lng": 'txtLongitude', "locality": 'txtLocality', "postal\_code": 'txtPostalCode', "route": 'txtStreet', "street\_number": 'txtNumber' } options (optional): Goolge Places autocomplete options. Example: { componentRestrictions: { country: \["us", "ca"\] }, types: \["address"\], } callback (optional): function that recives an object with select adress after change event.
+3.  Para añadir esta funcionalidad, debes invocar la siguiente función desde el evento **AfterLoadJS** del módulo.
+
+![AfterLoadJS](/assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
+
+#### Documentación JavaScript
+
+Puedes encontrar más información detallada sobre Google Autocomplete en  
+[Google Maps Platform](https://developers.google.com/maps/documentation/places/web-service/autocomplete)
+{: .flx-warning-card }
+
+```js
+flexygo.utils.googlePlaces.autocomplete.init(adressTextBox: string, config: Object, options: Object, callback: Function);
+
+// adressTextBox: Nombre de la propiedad o ID del input para autocompletar.
+
+config (opcional) // Objeto con nombres de propiedades o IDs de inputs donde se asignarán los valores.
+{
+    "administrative_area_level_1": 'txtDependentLocality',
+    "administrative_area_level_1_short": 'txtDependentLocalityCode',
+    "administrative_area_level_2": 'txtDoubleDependentLocality',
+    "administrative_area_level_2_short": 'txtDoubleDependentLocalityCode',
+    "country": 'txtCountry',
+    "country_short": 'txtCountryId',
+    "geo": 'txtCoords',
+    "lat": 'txtLatitude',
+    "lng": 'txtLongitude',
+    "locality": 'txtLocality',
+    "postal_code": 'txtPostalCode',
+    "route": 'txtStreet',
+    "street_number": 'txtNumber'
+}
+
+options (opcional) // Opciones del autocompletado de Google Places. Ejemplo:
+{
+    componentRestrictions: { country: ["us", "ca"] },
+    types: ["address"],
+}
+
+callback (opcional) // Función que recibe un objeto con la dirección seleccionada tras el evento change.
+```

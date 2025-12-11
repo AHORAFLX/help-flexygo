@@ -24,7 +24,7 @@ openPage(pagetypeid: string, objectname: string, objectwhere: string, defaults: 
 
 ## Open page by name
 
-We can open an specific page using the flexygo.nav.openPageName method and indicating the paget name and the entity or collection
+We can open an specific page using the **flexygo.nav.openPageName** method and indicating the paget name and the entity or collection
 
 ```ts
  /**
@@ -47,7 +47,7 @@ openPageName(pagename: string, objectname: string, objectwhere: string, defaults
 
 ## Execute process
 
-We can execute any process in the **flexygo** repository by using the flexygo.nav.executeProcess method and indicating the process and the entity or collection.
+We can execute any process in the **flexygo** repository by using the **flexygo.nav.executeProcess** method and indicating the process and the entity or collection.
 
 ```ts
 /**
@@ -83,7 +83,7 @@ if(qs!=null){
 
 ## Object actions
 
-We can create any entity or collection and execute object actions such as read, insert, update, delete using flexygo.obj.Entity method
+We can create any entity or collection and execute object actions such as read, insert, update, delete using **flexygo.obj.Entity** method
 
 ```js
 /**

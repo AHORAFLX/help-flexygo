@@ -1,68 +1,75 @@
 # Abh Sign
 
-EN ESPAÑOL
-Abh sign is an integration of Ahora Business Hub that allows **flexygo** to send pdf documents to sign and save them in document management.
+Abh Sign es una integración de **Ahora Business Hub** que permite a **flexygo** enviar documentos PDF para su firma y guardarlos posteriormente en la gestión documental.
 
-## How to hire ABH Sign services?
+## ¿Cómo contratar los servicios de ABH Sign?
 
-AHB Sign is not included in the Flexygo license, therefore it is a service that must be contracted separately.
+**ABH Sign no está incluido en la licencia de Flexygo**, por lo que debe contratarse por separado.
 
-To hire the service you can do it in any of the following ways:
+Puedes contratar el servicio de cualquiera de las siguientes formas:
 
-*   **By E-Mail:** Sending an E-Mail to [abh@ahora.es](mailto:abh@ahora.es) with the subject "Hire ABH Sign" and, into the message, your contact details such as your name, the name of the company and a contact phone number. A sales agent will contact you to carry out the process.
+* **Por Email:** Envía un correo a [abh@ahora.es](mailto:abh@ahora.es) con el asunto **"Hire ABH Sign"** e incluye en el mensaje tus datos de contacto (nombre, empresa y teléfono).  
+  Un agente comercial se pondrá en contacto contigo para continuar con el proceso.
 
-## Enable Abh Sign
+## Activar Abh Sign
 
-Add Abh Sign to this project
+<flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbhSigns_Objects_Config" excludehist="false">
+    Add Abh Sign to your project 🦦
+</flx-navbutton>
 
-## Configure Abh Sign
+## Configurar Abh Sign
 
 ![Abh Sign configuration](/assets/images/AbhSign/AbhSignSettings.png "Abh Sign configuration")
 
-**Object Name:** Object we want to enable Abh Sign.
+**Object Name:** Objeto al que queremos habilitar Abh Sign.
 
-**Type:** Signature mode that we want to enable.
+**Type:** Modo de firma que queremos habilitar.
 
-*   **Remote:** Send an email with the document to sign.
-*   **In-person:** Send the document to be signed to a [compatible device](https://www.validatedid.com/es/dispositivos) to perform the signature. It is necessary to download the following application to view pending documents, available on [Android](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Android?language=es), [iOS](https://help.vidsigner.net/s/article/Manual-de-Usuario-de-la-Firma-BIO-para-iOS?language=es) and [Windows](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Windows?language=es).
+* **Remote:** Envía un correo electrónico con el documento para ser firmado.
+* **In-person:** Envía el documento a un [dispositivo compatible](https://www.validatedid.com/es/dispositivos) para realizar la firma de manera presencial.  
+  Es necesario descargar la app que muestra los documentos pendientes, disponible en:  
+  [Android](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Android?language=es) |  
+  [iOS](https://help.vidsigner.net/s/article/Manual-de-Usuario-de-la-Firma-BIO-para-iOS?language=es) |  
+  [Windows](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Windows?language=es)
 
-**Client Id:** Ahora Business Hub client id.
+**Client Id:** Identificador de cliente de Ahora Business Hub.  
+*Más información en:* https://help.flexygo.com/
 
-For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
-{: .flx-warning-card }
+**Client Secret:** Clave secreta de cliente de Ahora Business Hub.  
+*Más información en:* https://help.flexygo.com/
 
-**Client Secret:** Ahora Business Hub client secret.
+**Tenant Id:** Identificador de tenant de Ahora Business Hub.  
+*Más información en:* https://help.flexygo.com/
 
-For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
-{: .flx-warning-card }
+## Configurar Reports
 
-**Tenant Id:** Ahora Business Hub tenant id.
-
-For more information consult on [https://help.flexygo.com/](https://help.flexygo.com/)
-{: .flx-warning-card }
-
-## Configure Reports
-
-Once configured, a module is enabled to configure the reports that we want to be able to send.
+Una vez configurado, se habilita un módulo para seleccionar los informes que queremos enviar a firmar.
 
 ![Abh Sign reports configuration](/assets/images/AbhSign/AbhSignReports.png "Abh Sign reports configuration")
 
-**Type:** Enable configuration by report or document management.
+**Type:** Permite configurar por informe o por gestión documental.
 
-**Report:** Report that we want to enable, the reports associated with the configured object appear.
+**Report:** Informe que queremos habilitar (se muestran los asociados al objeto configurado).
 
-**Document Category:** Category (Id) that we want to enable, the documents associated with the configured object that have that category appear (If the category is empty, the configuration applies to all).
+**Document Category:** Categoría del documento (Id).  
+Si la categoría está vacía, la configuración aplica a todos los documentos del objeto.
 
-**After Process:** Process that we want to execute once we recover the signed document. (You can add the DocGuid parameter to receive the inserted document or any property of the object)
+**After Process:** Proceso que queremos ejecutar cuando el documento firmado sea recuperado.  
+(Puede recibir el parámetro DocGuid o cualquier propiedad del objeto).
 
-To choose where we want to sign in the document, there is an assistant that is enabled with a button on the toolbar in which we can upload an example document and draw where we want to sign.
+Para indicar **dónde se debe firmar en el documento**, existe un asistente disponible en la barra de herramientas.  
+Permite cargar un PDF de ejemplo y dibujar la posición de la firma.
 
 ![Signing assistant](/assets/images/AbhSign/SelectSign.png "Signing assistant")
 
-## Processes
+## Procesos
 
-In the configured object, a process called "Send signed report" or "Send signed document" is enabled, in which you select a report or document from those configured and an email is sent for a person to sign it.
+En el objeto configurado se habilita un proceso llamado **"Send signed report"** o **"Send signed document"**, desde el cual se selecciona un informe/documento configurado y se envía por email para firma.
 
-A cron job is enabled in the system that every 30 minutes checks if any of the documents sent has been signed and, if so, collects it and inserts it into document management. Execute after process if configured.
+Además, se añade un **cron job cada 30 minutos** que:
+
+1. Comprueba si algún documento enviado ha sido firmado.  
+2. Si lo está, lo recoge y lo inserta en la gestión documental.  
+3. Ejecuta el *After Process* si existe.
 
 ![Abh Sign operation](/assets/images/AbhSign/AbhSignOperation.png "Abh Sign operation")

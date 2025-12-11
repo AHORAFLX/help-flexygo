@@ -1,55 +1,52 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# IA Flexygo offline
 
-# **flexygo** Offline AI
+## Assistentes IA
 
-### AI Assistants
+Antes de nada se debe saber que para que funcione la IA en las aplicaciones offline hace falta primero configurar [IA de Flexygo](/Connectors/OpenAI).
 
-Before anything you've gotta know that for the offline ai to work you must first configure the Flexygo AI.
+Después de haber configurado la IA en flexygo, usarla en la app es tan sencillo como utilizar cualquiera de estas dos funciones:
 
-After configuring Flexygo AI, using it at an offline app is as easy as utilizing one of this two functions:
+## Usar un asistente
 
-##### **flexygo.nav.goAI:**
+Con <fh-copy class="link">flexygo.nav.goAI</fh-copy> te permitirá navegar al asistente IA que le indiques.
 
-With this function you will be able of navigating to any configured Flexygo AI asstistant.
+### Parámetros
 
-**Parameters:**
-
-**\-Setting Id:** Here you just need to specify Assitant Id of the one you want to navigate to.
-
-**\-First Message (optional):** If you want to start the chat with an already sent message by the user you just need to specify that message here.
+| Parametro | Tipo | Descripción |
+| ------ | ------ | ------ |
+| setting_id | string | En este parámetro tan solo debes indicar el id del asistente al que deseas navegar |
+| first_message? | string | Al asignarle un valor la conversación empezará con un mensaje ya enviado por el usuario y el asistente responderá a este |
+| defaults? | string | Los defaults a parsear por el asistente en el prompt de sistema |
+| is_first_message_by_mic? | bool | Esto es un valor interno que no debería ser alterado |
 
 ![Go AI](/assets/images/offline/GoAi.png "Image 1. Go AI")
 
-Image 1. Go AI
+## Empezar mediante reconocimiento de voz
 
-##### flexygo.ai.startVoiceRecognition:
+Puedes iniciar un asistente IA directamente con un mensaje enviado por el usuario usando el micrófono utilizando <fh-copy class="link">flexygo.ai.startVoiceRecognition</fh-copy>.
 
-You can start an AI Assistant directly with a first message that the user asks with its mic.
+El reconocimiento de voz se parará automaticamente tras detectar un breve silencio y tras ello navegará a al asistente con el mensaje que haya escuchado ya enviado. De todos modos si el usuario prefiere parar el reconocimiento antes de una pausa puede pulsar el icono del micrófono.
 
-The voice recognition will stop after a moment of silence, and it will automatically navigate to the chat with that message. But iff the user wants to stop it before it just needs to press the mic button.
+### Parámetros
 
-**Parameters:**
-
-**\-Setting Id:** Here you just need to specify Assitant Id of the one you want to navigate to.
+| Parametro | Tipo | Descripción |
+| ------ | ------ | ------ |
+| setting_id | string | En este parámetro tan solo debes indicar el id del asistente al que deseas navegar |
+| defaults? | string | Los defaults a parsear por el asistente en el prompt de sistema |
 
 ![Voice Recognition](/assets/images/offline/VoiceRecognition.png "Image 2. Voice Recognition")
 
-Image 2. Voice Recognition
+## Texto a voz
 
-### Text to speech
+La app offline también admite convertir texto en un mensaje de voz mediante la función <fh-copy class="link">flexygo.ai.textToSpeech</fh-copy>:
 
-Offline app also admits the possibility of turning text into audio. For that we've got the following function:
+Con esta función podrás hacer que la app lea al usuario el texto que le especifiques.
 
-##### flexygo.ai.textToSpeech:
+### Parámetros
 
-With this function the text that is given will be read directly to the user.
-
-**Parameters:**
-
-**\-Text:** This is just the text that will be converted into an audio.
-
-**\-Language (optional):** You can specify the language of the text so it gets properly pronounced, the format must be like "es-ES" as in any HTML element as seen [here.](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) If its not specified it will get the current user language.
-
-**\-Volume (optional):** It just indicates how loud will the speech be. It's a decimal property that can range from 0 to 2. By default it will be set as 1.
-
-**\-Speed (optional):** It alters the speed in which the voice will read the text. It's a decimal property that can range from 0 to 2. By default it will be set as 1.
+| Parametro | Tipo | Descripción |
+| ------ | ------ | ------ |
+| text | string | En este parámetro tan solo debes indicar el id del asistente al que deseas navegar |
+| language? | string | Puede especificar el idioma del texto para que se pronuncie correctamente. El formato debe ser «es-ES», como en cualquier elemento HTML, tal y como se ve. [aquí.](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) Si no se especifica, se utilizará el idioma actual del usuario. |
+| volume? | decimal | Solo indica el volumen del discurso, que puede oscilar entre 0 y 2. Por defecto, se establecerá en 1. |
+| speed? | decimal | Altera la velocidad a la que la voz leerá el texto, puede variar entre 0 y 2. Por defecto, se establecerá en 1. |

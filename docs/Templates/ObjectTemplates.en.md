@@ -1,6 +1,6 @@
 # Object Templates
 
-**flexygo** modules like lists or views normally include a change template button . This button allows us to switch different forms of displaying the module allowing each user to establish which view is best for him setting this one such as default template. Each view for each module is memorized just by selecting it.
+Flexygo modules like lists or views normally include a change template button . This button allows us to switch different forms of displaying the module allowing each user to establish which view is best for him setting this one such as default template. Each view for each module is memorized just by selecting it.
 
 ![template](/assets/images/ObjectsTemplates/Toolbar.png)
 

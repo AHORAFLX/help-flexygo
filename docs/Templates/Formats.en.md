@@ -86,25 +86,25 @@ _Example:_
 
 **String** type format keeps the same syntax we've used so far, it also offers three possibilities of configuration. If you want to display the text returned by the property to lowercase, we will use the following:
 
-###### Lowercase
+### Lowercase
 
 ```html
 <span> {{ Address|string: lower }} </span>
 ```
 
-###### Uppercase
+### Uppercase
 
 ```html
 <span> {{ Address|string: upper }} </span>
 ```
 
-###### Capitalized / Title case
+### Capitalized / Title case
 
 ```html
 <span> {{ Address|string: capitalized }} </span>
 ```
 
-###### String length
+### String length
 
 Finally, offers us to tell you that number of characters we want to show by adding back three points. We have to take into account that the spaces are counts.
 
@@ -174,7 +174,7 @@ moment().format(LLLL);			// Friday, October 17, 2025 10:08 AM
 moment().format(llll);			// Fri, Oct 17, 2025 10:08 AM
 ```
 
-##### From now
+### From now
 
 ```json
 {{DateValue|fromnow}}
@@ -190,7 +190,7 @@ If our property contained the first day of the year 2016.
 
 {{Date|fromnow:LL}} -> 01 de enero de 2016
 
-##### From the moment in which it made until now
+### From the moment in which it made until now
 
 ```json
 {{DateValue|tonow}}

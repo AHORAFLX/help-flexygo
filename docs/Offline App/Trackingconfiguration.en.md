@@ -1,7 +1,5 @@
 # Tracking configuration
 
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
-
 ## Configure device
 
 Before even starting is important to configure devices to allow the app to track users position while closed. For this the app will automatically ask permissions to users with tracking enabled, but most devices will need extra configuration depending of their brand, for that you should follow [dontkillmyapp](https://dontkillmyapp.com/) steps.

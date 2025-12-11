@@ -1,148 +1,201 @@
-.helpCenter { width: 100%!important; display: flex; justify-content: center; } .helpPassbook span { font-family: 'Courier New'; font-size: 10pt; color: #000000; } .sc0 { } .sc1 { color: #008000!important; } .sc3 { color: #0000FF!important; } .sc4 { color: #808080!important; } .sc6 { font-weight: bold!important; } .sc7 { }
+# Integración con Passbook { .flx-title-with-image }
 
-# Passbook integration
+![Passbook](/assets/images/Passbook/WalletIcon.png){ .flx-image-of-title }
 
-![Passbook](/assets/images/Passbook/WalletIcon.png)
+Passbook es el formato utilizado por tarjetas y cupones para integrarse en Apple Wallet.  
+**flexygo** permite ahora generar un passbook de forma sencilla.
 
-Passbook is the format used by cards and coupons to be integrated into the Apple Wallet. **flexygo** now allows us to generate a passbook easily.
+A continuación explicaremos cómo generar e instalar los certificados obligatorios para poder generar el passbook correctamente.  
+El primer requisito es disponer de una cuenta de desarrollador de Apple.
 
-Next we will explain how to generate and install the certificates that are mandatory to be able to generate the passbook correctly. The first requirement to be able to generate it is to have an apple developer account.
+## Apple WWDR
 
-### Apple WWDR
+Para obtener el primer certificado solo tenemos que ir a  
+[https://www.apple.com/certificateauthority/](https://www.apple.com/certificateauthority/)  
+y descargar  
+[Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)](https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer), que es el que funciona actualmente.
 
-To obtain the first certificate we only have to go to [https://www.apple.com/certificateauthority/](https://www.apple.com/certificateauthority/) and download [Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)](https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer) , which is currently the one that works.
+Instalamos el certificado y seleccionamos el almacén **“Intermediate Certification Authorities”**.
 
-We install the certificate and select the store "intermediate certification authorities".
+![](/assets/images/Passbook/passbook1.png "Image 1. Certificate store")
 
-![](.\img\Help\Passbook\passbook1.png "Image 1. Certificate store")
+## Crear Pass Type ID
 
-Image 1. Certificate store
+Accede a [https://developer.apple.com/](https://developer.apple.com/) e inicia sesión con una cuenta de desarrollador.  
+Una vez dentro, entra en **Account** y accede al menú de la izquierda **Certificates, IDs & Profiles**.
 
-### Create Pass Type ID from the Apple Developer Portal
+![](/assets/images/imagesPassbook/passbook2.png "Image 2. Developer panel")
 
-Go to [https://developer.apple.com/](https://developer.apple.com/) and sign in with a development account. Once inside we enter Account and we will see the following web, we access the menu on the left Certificates, IDs & Profiles.
+![](/assets/images/Passbook/passbook3.png "Image 2. Developer panel")
 
-![](.\img\Help\Passbook\passbook2.png "Image 2. Developer panel")
+Añadimos un nuevo **Identifier** y elegimos el tipo **Pass Type IDs**, rellenando la información.  
+Es recomendable que el identificador mantenga la estructura `pass.com.x`.
 
-![](.\img\Help\Passbook\passbook3.png "Image 2. Developer panel")
+![](/assets/images/Passbook/passbook4.png "Image 3. Pass Type IDs")
 
-Image 2. Developer panel
+![](/assets/images/Passbook/passbook5.png "Image 3. Pass Type IDs")
 
-  
+## Crear una petición de certificado (CSR)
 
-We add a new Identifier and choose the type Pass Type IDs, fill in the information. It is advisable that the identifier maintains the structure pass.com.x
+Si no tenemos **OpenSSL** instalado, podemos descargarlo e instalarlo desde aquí:  
+[OpenSSL](https://wiki.openssl.org/index.php/Binaries)
 
-![](.\img\Help\Passbook\passbook4.png "Image 3. Pass Type IDs")
+Una vez instalado, abrimos la consola con permisos de administrador, nos situamos en la ruta donde queremos generar los ficheros y ejecutamos el comando:
 
-![](.\img\Help\Passbook\passbook5.png "Image 3. Pass Type IDs")
+```shell
+openssl req -new -newkey rsa:2048 -out passbook.csr -keyout passbook.key
+````
 
-Image 3. Pass Type IDs
+Aparecerá una serie de datos a rellenar. El primero será la **PEM pass phrase**; es muy importante recordarla ya que la usaremos para generar el passbook y para firmar con la clave.
 
-  
+Al terminar de rellenar la información, se habrán generado dos ficheros en la ruta indicada:
 
-### Create a certificate request (CSR) using OpenSSL
+* `passbook.key` (clave privada para firmar)
+* `passbook.csr` (petición de certificado)
 
-First if we do not have OpenSSL installed we can download and install it from here [OpenSSL](https://wiki.openssl.org/index.php/Binaries)
+## Firmar la CSR y crear el certificado Passbook
 
-Once we have it, we open the console with administrator permissions, we position ourselves in the path where we want the files to be generated and we use the command:
+Volvemos al portal de desarrolladores y, desde el menú de certificados, pulsamos **+** para crear un nuevo **Pass Type Id Certificate**.
 
-**openssl req -new -newkey rsa:2048 -out passbook.csr -keyout passbook.key**
+![](/assets/images/Passbook/passbook6.png "Image 4. Passbook certificate")
 
-A series of data will appear to fill in, among them the first will be the PEM pass phrase, it is very important that we remember what we have put because we are also going to use it to generate the passbook and to use the key to sign.
+A continuación, rellenamos el nombre del certificado y elegimos el identificador que hemos creado previamente; aparecerá como opción desplegable.
+Si nos fijamos en el valor del desplegable, coincide con **TeamID.IdentifierPassTypeID**.
 
-When all the information is filled in, two files will have been generated in the path to which you point a passbook.key (private key to sign) and passbook.csr which is the certificate request.
+![](/assets/images/Passbook/passbook7.png "Image 5. Passbook certificate")
 
-### Use the developer portal to sign the request (CSR) and create a Passbook certificate
+En el siguiente paso debemos seleccionar el archivo CSR que generamos antes (`passbook.csr`), lo subimos y continuamos.
+Se mostrará una ventana de resumen con el certificado recién generado, su fecha de caducidad, nombre, tipo, etc.
 
-We return to the developer portal and this time from the certificates menu and click + to create a new Pass Type Id Certficate.
+![](/assets/images/Passbook/passbook8.png "Image 6. Certificate request")
 
-![](.\img\Help\Passbook\passbook6.png "Image 4. Passbook certificate")
+## Convertir el certificado pass.cer a PEM y luego a PFX
 
-Image 4. Passbook certificate
+Primero, colocamos el archivo `.cer` descargado desde la web de Apple en la misma carpeta que `passbook.key` y `passbook.csr`.
 
-Next, we have to fill in the name of our certificate and we have to choose the identifier that we have previously created, which will appear as an option in that drop-down. If we look at the value of the dropdown, it will match the value of TeamID.IdentifierPassTypeID
+Después abrimos la consola de OpenSSL, navegamos hasta esa carpeta y ejecutamos:
 
-![](.\img\Help\Passbook\passbook7.png "Image 5. Passbook certificate")
+```shell
+openssl x509 -in pass.cer -inform der -out passbook.pem
+```
 
-Image 5. Passbook certificate
+```shell
+openssl pkcs12 -export -out passbook.pfx -inkey passbook.key -in passbook.pem
+```
 
-  
+Con este último comando, nos pedirá la contraseña (pass phrase) asociada a la clave privada.
+Una vez introducida, se generará el archivo `passbook.pfx`, que debemos instalar en el equipo.
 
-In the next step it asks us to choose the certificate request file that we have generated in the previous step, we upload it and continue. Then a summary window will appear with the certificate that we have just generated with its expiration date, its name, the type of certificate, etc...
+## Añadir el certificado PFX al servidor
 
-![](.\img\Help\Passbook\passbook8.png "Image 6. Certificate request")
+Vamos a la consola de certificados:
+**Certificates (Local Computer) -> Personal -> Certificates**.
 
-Image 6. Certificate request
+Botón derecho, **All Tasks → Import**, siguiente, y al examinar el archivo cambiamos el filtro de extensión para buscar `.pfx` y seleccionamos el fichero generado.
 
-### Use OpenSSL to convert the pass.cer certificate from a binary-encoded type to a PEM-formatted plain text file and then to PFX
+En el siguiente paso introducimos la contraseña de la clave privada, marcamos la opción de exportable e incluimos todas las propiedades extendidas.
+Lo añadimos al almacén **Personal**.
 
-First of all, we put the .cer certificate file that we have downloaded from the Apple website in the same folder as Passbook.key and Passbook.csr. Once this is done, we open the OpenSSL console and navigate to that folder and launch the following commands:
+![](/assets/images/Passbook/passbook9.png "Image 7. Import PFX certificate")
 
-**openssl x509 -in pass.cer -inform der -out passbook.pem**
-
-**openssl pkcs12 -export -out passbook.pfx -inkey passbook.key -in passbook.pem**
-
-With the latter, it will ask you for the password to sign with your private key (pass phrase), which is the one you established at the beginning. Once entered, a Passbook.pfx file will have been generated, which we have to install on the computer.
-
-### Add the PFX certificate to the server
-
-We go to the console where we have the certificates listed Certificates (Local Computer) -> Personal -> Certificates. Right click, all tasks and import, next and when examining the file we change the extension we are looking for to .pfx and import the file that we have generated .pfx
-
-In the next step it will ask us for the password of the private key, we mark it as exportable and include all the extended properties. We add it to the Personal store.
-
-![](.\img\Help\Passbook\passbook9.png "Image 7. Import PFX certificate")
-
-![](.\img\Help\Passbook\passbook10.png "Image 7. Import PFX certificate")
-
-Image 7. Import PFX certificate
-
-With this we would have installed the necessary certificates to be able to generate Passbook through Flexygo, it is important that both the passbook.pfx file and the AppleWWDRCAG4.cer that we downloaded from Apple have to be in a folder accessible by the application since they must be accessed.
-
-It is also important that from the console once we have imported our certificate in the personal store, right click all the tasks, manage private keys and add to IIS\_IUSRS and give it permissions.
-
-![](.\img\Help\Passbook\passbook11.png "Image 8. Certificate management")
-
-Image 8. Certificate management
-
-  
-
-It is also necessary to have the impersonate configured since the generation of the passbook makes use of it.
-
-In the event that, although having given permissions to IIS\_USRS and using a user for impersonation with elevated permissions, it continues to give a permissions error when it is generated. In this case, it would be necessary to modify the identity of the application group that is being used to LocalSystem
-
-![](.\img\Help\Passbook\passbook12.png "Image 8. IIS configuration")
-
-Image 9. IIS configuration
-
-### Flexygo Settings
-
-Once we have this we can proceed to configure the settings in Flexygo
-
-*   **Passbook\_AppleWWDRCACertificatePath:** Absolute path to apple certificate
-*   **Passbook\_CertificatePath:** Absolute path to our certificate
-*   **Passbook\_CertificatePassword:** Private key of our certificate
-*   **Passbook\_PassTypeIdentifier:** Pass Type IDs created in apple (pass.com.x)
-*   **Passbook\_TeamIdentifier:** We can check our Team ID value in the apple developer portal in Membership -> Team ID
-
-### Example of use from DLL
-
-*   DLL example
-    
-
-×
-
-#### DLL function example
-
-     Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean          Try              Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))              Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))              Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))              Dim aBackField As List(Of KeyValuePair(Of String, String)) \= New List(Of KeyValuePair(Of String, String))              aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))              Dim aBackgroundColor As String \= "#000000"              Dim aForegroundColor As String \= "#FFFFFF"              Dim aLabelColor As String \= "#FFFFFF"              Dim aIcon As Byte() \= File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\\img\\icons\\icon-256x256.png"))              Dim aLogo As Byte() \= File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\\img\\icons\\icon-256x256.png"))              Dim aDescription As String \= "Passbook flexygo"              Dim aOrganizationName As String \= "Flexygo"              Dim aLogoText As String \= "Logo text"              Dim aThumbnail As Byte() \= File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\\img\\Avatars\\avatar\_blank.png"))              Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")                'vCard info for qr barcode  Dim FirstName As String \= "Aitor"              Dim LastName As String \= "Torres"              Dim CompanyName As String \= "Flexygo"              Dim JobTitle As String \= "Programador"              Dim StreetAddress As String \= "Carrer dels Ceramistes 19"              Dim Zip As String \= "46900"              Dim City As String \= "Valencia"              Dim CountryName As String \= "España"              Dim Phone As String \= "123456"              Dim Mobile As String \= "987654"              Dim Fax As String \= ""              Dim Email As String \= "aitor@ahora.es"              Dim HomePage As String \= "www.flexygo.com"              Dim loUid As String \= System.Guid.NewGuid().ToString()              Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)                Dim aBarcode As String \= vCard.VCardBody()                Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)              'We can write on disk, download it, send by mail, etc...  File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\\Custom\\passbook\\prueba.pkpass"), passbook.generatePassbook())              Dim path As String \= HttpContext.Current.Server.MapPath("~\\Custom\\passbook\\prueba.pkpass")              Dim dw As New Utilities.Download With {                      .Path \= path,                      .DeleteAfterDownload \= True                  }                                Ret.JSCode \= String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))              Ret.Success \= True              Ret.SuccessMessage \= "Passbook generated"              Return Ret.Success            Catch ex As Exception              Ret.Success \= False              Ret.LastException \= ex              Return Ret.Success          End Try      End Function          
-
-### Design example and layout
-
-![](.\img\Help\Passbook\passbook14.png "Image 10. Layout example")
-
-Image 10. Layout example
-
-  
-
-![](.\img\Help\Passbook\passbook13.png "Image 11. Passbook example")
-
-Image 11. Passbook example
+![](/assets/images/Passbook/passbook10.png "Image 7. Import PFX certificate")
+
+Con esto tendremos instalados los certificados necesarios para poder generar Passbook desde **flexygo**.
+Es importante que tanto el archivo `passbook.pfx` como `AppleWWDRCAG4.cer` estén en una carpeta accesible para la aplicación.
+
+También es importante que, desde la consola, una vez importado el certificado en el almacén Personal, hagamos:
+
+* Botón derecho → All Tasks → Manage Private Keys
+* Añadimos **IIS_IUSRS** y le damos permisos.
+
+![](/assets/images/Passbook/passbook11.png "Image 8. Certificate management")
+
+Es necesario también tener configurado el **impersonate**, ya que la generación del passbook hace uso de él.
+
+Si, aun habiendo dado permisos a **IIS_IUSRS** y usando un usuario de impersonation con permisos elevados, sigue dando error de permisos al generar el passbook, será necesario modificar la identidad del Application Pool a **LocalSystem**.
+
+![](/assets/images/Passbook/passbook12.png "Image 8. IIS configuration")
+
+## Configuración en flexygo
+
+Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en **flexygo**:
+
+* **Passbook_AppleWWDRCACertificatePath**: Ruta absoluta al certificado de Apple.
+* **Passbook_CertificatePath**: Ruta absoluta a nuestro certificado.
+* **Passbook_CertificatePassword**: Contraseña (clave privada) de nuestro certificado.
+* **Passbook_PassTypeIdentifier**: Pass Type ID creado en Apple (por ejemplo, `pass.com.x`).
+* **Passbook_TeamIdentifier**: Valor Team ID, visible en el portal de desarrolladores de Apple en
+  *Membership → Team ID*.
+
+## Ejemplo de uso desde DLL
+
+<fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">DLL example</fh-modal>
+
+## Ejemplo de diseño y layout
+
+![](/assets/images/Passbook/passbook14.png "Image 10. Layout example")
+
+![](/assets/images/Passbook/passbook13.png "Image 11. Passbook example")
+
+Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
+Try
+Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))
+Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))
+Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))
+Dim aBackField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))
+Dim aBackgroundColor As String = "#000000"
+Dim aForegroundColor As String = "#FFFFFF"
+Dim aLabelColor As String = "#FFFFFF"
+Dim aIcon As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
+Dim aLogo As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
+Dim aDescription As String = "Passbook flexygo"
+Dim aOrganizationName As String = "Flexygo"
+Dim aLogoText As String = "Logo text"
+Dim aThumbnail As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\Avatars\avatar_blank.png"))
+Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")
+
+```
+        'vCard info for qr barcode
+        Dim FirstName As String = "Aitor"
+        Dim LastName As String = "Torres"
+        Dim CompanyName As String = "Flexygo"
+        Dim JobTitle As String = "Programador"
+        Dim StreetAddress As String = "Carrer dels Ceramistes 19"
+        Dim Zip As String = "46900"
+        Dim City As String = "Valencia"
+        Dim CountryName As String = "España"
+        Dim Phone As String = "123456"
+        Dim Mobile As String = "987654"
+        Dim Fax As String = ""
+        Dim Email As String = "aitor@ahora.es"
+        Dim HomePage As String = "www.flexygo.com"
+        Dim loUid As String = System.Guid.NewGuid().ToString()
+        Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)
+
+        Dim aBarcode As String = vCard.VCardBody()
+
+        Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)
+        'We can write on disk, download it, send by mail, etc...
+        File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass"), passbook.generatePassbook())
+        Dim path As String = HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass")
+        Dim dw As New Utilities.Download With {
+                .Path = path,
+                .DeleteAfterDownload = True
+            }
+            
+        Ret.JSCode = String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))
+        Ret.Success = True
+        Ret.SuccessMessage = "Passbook generated"
+        Return Ret.Success
+
+    Catch ex As Exception
+        Ret.Success = False
+        Ret.LastException = ex
+        Return Ret.Success
+    End Try
+End Function
+```

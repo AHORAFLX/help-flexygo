@@ -1,48 +1,80 @@
-# Good practices for customizing **flexygo**
+# Buenas prácticas  { .flx-title-with-image }
 
-Follow these simple advices to extended or customize your **flexygo** environment to create a high-quality project.
+![flexygo](/assets/images/FlexygoLogo.png){ .flx-image-of-title }
+
+Sigue estos sencillos consejos para extender o personalizar tu entorno **flexygo** y crear un proyecto de alta calidad.
 
 ## Custom folder
 
-Creating custom folder it is a fundamental step in developing your **flexygo** project. In this folder you will place customized css, javascript files, images, documents, reports and etc. Put your custom folder named, for instance, exactly as your project, in _~/yourCustomFolder/_
+Crear una carpeta **custom** es un paso fundamental en el desarrollo de tu proyecto **flexygo**.  
+En esta carpeta colocarás tus archivos personalizados: css, javascript, imágenes, documentos, informes, etc.
+
+Coloca tu carpeta personalizada, por ejemplo con el mismo nombre de tu proyecto, en:  
+_~/yourCustomFolder/_
 
 ## Login
 
-**flexygo** has a **default login.css, which shouldn't be changed or moved** from its default folder, because it will be overwritten the next time a version update takes place. **Create a css folder in your custom folder** and place a login.css file which will overwrite the original login.less file. This way you can change the class or id you want on your login screen. You can also create a js folder in the custom folder and add a login.js to add any client-side logic to your login form. In addition to this, you can customize the language of the login screen, modifying Login Language Setting in the Admin Work Area > Enviroment > Settings Section with 4 possible languages: _es-ES | ca-ES | fr-FR | de-DE_
+**flexygo** tiene un **login.css por defecto que no debe modificarse ni moverse** de su carpeta original, ya que será sobrescrito en la siguiente actualización de versión.  
+Crea una carpeta **css** dentro de tu custom folder y coloca allí un archivo **login.css**, el cual sobrescribirá al login.less original.  
+De esta forma puedes cambiar cualquier clase o id de la pantalla de login.
+
+También puedes crear una carpeta **js** en el custom folder y añadir un **login.js** para incluir lógica de cliente.
+
+Además, puedes personalizar el idioma de la pantalla de login modificando *Login Language Setting* en:  
+**Admin Work Area > Environment > Settings**, con 4 opciones disponibles:  
+_es-ES | ca-ES | fr-FR | de-DE_
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 ## Skin
 
-**flexygo** uses **less** style sheet language, so most of the variables like colours or screen sizes can be changed directly on the **flexygo** view interface. You can add styles to overwrite or expand default **flexygo** skin in various places like:
+**flexygo** usa el lenguaje de estilos **less**, por lo que la mayoría de variables como colores o tamaños de pantalla pueden cambiarse directamente desde la interfaz de diseño de **flexygo**.
 
-*   A template header
-*   Interface custom style field
-*   Skin css field
-*   Add a customized css file to your flexygo plugins (recommended)
+Puedes añadir estilos para sobrescribir o ampliar el skin por defecto en varios lugares:
 
-If you are going to use the last option remember to drop the file in your customized css folder.
+* Encabezado de una plantilla  
+* Campo de estilo personalizado de la interfaz  
+* Campo css del skin  
+* Añadiendo un archivo css personalizado a tus plugins de flexygo (recomendado)
 
-Also you are welcome to watch our video tutorial.
+Si usas esta última opción, recuerda colocar el archivo dentro de tu carpeta css personalizada.
+{: .flx-warning-card }
+
+Puedes ver también el video tutorial:
+
+<div class="video-wrapper">  
+    <iframe src="https://www.youtube.com/embed/2Hged5XQ4G0" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 ## System mails
 
-**flexygo** has several **email templates** used by the system (default, confirm, resetpass). In the mail templates section you can modify the subject and body of the messages.
+**flexygo** incluye varias **plantillas de correo** usadas por el sistema (default, confirm, resetpass).  
+En la sección de mail templates puedes modificar el asunto y el cuerpo de los mensajes.
 
-It is important to note that in the case of **confirmation -> confirm** and **remember password -> resetpass -> emails**, you must keep the **{{Msg}}** marker in the body of the message as it will be replaced by the link that will be sent to the user.
+Es importante recordar que, en el caso de los emails de **confirmación (confirm)** y **recuperación de contraseña (resetpass)**, debes mantener el marcador **{{Msg}}** dentro del cuerpo del mensaje, ya que será reemplazado por el enlace enviado al usuario.
+{: .flx-warning-card }
 
 ## Scripts
 
-**flexygo** uses **plugins** to include web-components, jquery code or javascript code. You can add your own client-side code to expand **flexygo** in the following ways:
+**flexygo** utiliza **plugins** para incluir web-components, código jQuery o javascript.  
+Puedes añadir código cliente personalizado para extender flexygo de las siguientes formas:
 
-*   Add code to your modules
-*   Add code to your template header, footer or body
-*   Add to your interface form script control
-*   Add to your Skin form script control
-*   Add as a file to **flexygo** plugins
+* Añadir código en tus módulos  
+* Añadir código en el header, footer o body de tus plantillas  
+* Añadir código en el control de script de tu interfaz  
+* Añadir código en el control de script del Skin  
+* Añadir código como archivo dentro de los plugins de flexygo  
 
 ## DLL Processes
 
-**Create a bin folder inside the custom folder** and add your personalizade dll into it. You can see how to create you dll process by looking at the Custom dll tutorial. Don’t place dll directly into **flexygo** bin folder or you will loose then on the next version update.
+**Crea una carpeta bin dentro del custom folder** y coloca allí tus dll personalizadas.  
+Puedes ver cómo crear procesos dll consultando el tutorial de Custom dll.
+
+No coloques las dll directamente en la carpeta bin de flexygo o se perderán al actualizar la versión.
 
 ## Favicon
 
-Place your favicon.ico file directly into the custom folder, for example: _~/yourCustomFolder/yourFavicon_.
+Coloca tu archivo **favicon.ico** directamente dentro de tu custom folder, por ejemplo:  
+_~/yourCustomFolder/yourFavicon_

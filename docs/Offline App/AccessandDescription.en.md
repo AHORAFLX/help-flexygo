@@ -1,8 +1,10 @@
-# **flexygo** Offline App description
+# Offline App description
 
 **flexygo** low code allows you to design applications for mobile devices, so that users can work even when they are offline.
 
 It allows generating an App that will be installed on the mobile device and will connect to **flexygo** through the Web API, allowing offline work and data synchronization when the connection is available. Performing bi-directional data synchronizations between the device and the API will update both the data and the working environment.
+
+## Accessing Offline Apps environment
 
 Access to the Offline Apps section in the **flexygo** environment is done as follows:
 
@@ -13,6 +15,7 @@ Access to the Offline Apps section in the **flexygo** environment is done as fol
 2.  Then, within the Developer option we will access the Admin Area section where we will find Offline App section
     
     ![Menu](/assets/images/offline/menu2.png "Image 2. Menu")
+
 3.  Then within the Developer option we will access the Admin Area section
     
     ![Menu](/assets/images/offline/menu3.png "Image 4. Menu")

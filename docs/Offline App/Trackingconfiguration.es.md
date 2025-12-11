@@ -1,73 +1,57 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
+# Configuración de seguimiento
 
-# Tracking configuration
+## Configurar dispositivo
 
-## Configure device
+Antes de empezar, es importante configurar los dispositivos para permitir que la aplicación rastree la posición de los usuarios mientras está cerrada. Para esto, la aplicación solicitará automáticamente permisos a los usuarios con el seguimiento habilitado, pero la mayoría de los dispositivos necesitarán configuración adicional dependiendo de su marca, por lo que deberías seguir los pasos de [dontkillmyapp](https://dontkillmyapp.com/).
 
-Before even starting is important to configure devices to allow the app to track users position while closed. For this the app will automatically ask permissions to users with tracking enabled, but most devices will need extra configuration depending of their brand, for that you should follow [dontkillmyapp](https://dontkillmyapp.com/) steps.
+## Menú de configuración de seguimiento
 
-## Tracking configuration menu
-
-A new tracking button has been added to app creation menu, which will send you to tracking configuration menu, where you'll be able to configure and visualize every tracking setting:
+Se ha añadido un nuevo botón de seguimiento al menú de creación de aplicaciones, que te llevará al menú de configuración de seguimiento, donde podrás configurar y visualizar cada ajuste de seguimiento:
 
 ![](/assets/images/offline/TrackingButton.png "Image 1. Set tracking")
 
-Image 1. Tracking configuration button
+En este nuevo menú podrás ver esta información en los siguientes módulos:
 
-In this new menu you'll be able to see this information in the following modules:
+Últimas ubicaciones: Muestra la última ubicación conocida de cada usuario, y cuando se hace clic en el marcador, podrás ver cuándo se tomó esa ubicación y el teléfono y correo electrónico del usuario.
 
-Last locations: Shows every user last location known, and when marker is clicked you'll be able to see when was that location taken and users phone and mail address.
+Horario de seguimiento: Muestra cada horario de seguimiento establecido y permite crear más y editar los que ya existen.
 
-Tracking schedule: Shows every stablished tracking schedule, and it allows to create more and edit the ones that already exist.
-
-User tracking information: Shows every user and its tracking configuration information(radius and inaccuracy) divided between users with active tracking and the ones that don't. On the right of every user there'll be an icon which shows if there's a calendar schedule assigned to him (blue icon) or if not (red icon), if clicked you'll navigate to that schedule view, or if it's of a not scheduled one to a new schedule creation for that user. Lastly if you click on the green map icon (only appears on correctly configured users) you'll see that user route
+Información de seguimiento del usuario: Muestra cada usuario y su información de configuración de seguimiento (radio e imprecisión) dividida entre usuarios con seguimiento activo y aquellos que no lo tienen. A la derecha de cada usuario habrá un icono que muestra si hay un calendario asignado a él (icono azul) o si no (icono rojo). Si se hace clic, navegarás a esa vista de calendario, o si no tiene calendario, a la creación de un nuevo horario para ese usuario. Por último, si haces clic en el icono verde de mapa (que solo aparece en usuarios configurados correctamente), verás la ruta de ese usuario.
 
 ![](/assets/images/offline/TrackingCnfMenu.png "Image 2. Set tracking")
 
-Image 2. Tracking configuration menu
+## Configurar el seguimiento del usuario
 
-## Configure user tracking
+El seguimiento se activa individualmente en cada creación o edición de usuario.
 
-Tracking is activated individually on every user creation or edition
+Allí necesitas activar el interruptor de seguimiento y configurar las siguientes propiedades:
 
-There you need to activate the tracking switch and configure the following properties:
+### Radio
 
-### Radius
+El radio es la distancia, en metros, que el usuario necesita moverse para que la aplicación actualice su posición.
 
-Radius is the distance, in meters, that the user needs to move for the app to update its position.
+Cuanto más pequeño sea el parámetro de radio, más datos obtendrá la base de datos, por lo que se recomienda no configurarlo por debajo de 20 para evitar registrar demasiados logs en la base de datos.
 
-As smaller the radius parameter is, the more data the database will get, so it's recommended not to set it smaller than 20 to avoid getting too many logs into the database.
+### Máxima imprecisión
 
-### Maxim Inaccuracy
-
-Maxim Inaccuracy is used to only send to server those coordenates which the app knows that the distance between obtained coordenates and the true user position is smaller than this value. This value is important to avoid getting bad information, because of that is recommended the value not to be lower than 45.
+La máxima imprecisión se utiliza para enviar al servidor solo aquellas coordenadas de las que la aplicación sabe que la distancia entre las coordenadas obtenidas y la verdadera posición del usuario es menor que este valor. Este valor es importante para evitar obtener información incorrecta, por lo que se recomienda que el valor no sea inferior a 45.
 
 ![](/assets/images/offline/SetTracking.png "Image 3. Set tracking")
 
-Image 3. Set tracking
+Cuando estos parámetros están configurados y guardados, la aplicación podrá rastrear cada posición todo el tiempo desde la primera iniciación de la aplicación del usuario. Pero esta no es la forma en que esta funcionalidad está destinada a ser utilizada, por eso necesitarás establecer horarios para que la funcionalidad funcione durante las horas laborales indicadas. Para ello, tenemos el objeto Horario de Seguimiento, que se puede ver y crear desde el menú de configuración de seguimiento. Cuando creas uno, solo necesitas seleccionar a quién se aplicará (usuario individual o un rol), establecer un título para que lo identifiques, establecer un horario diario y establecer la vista (que el objeto debe ser sysUsers) que debe contener una columna con cada día festivo del usuario; puede ser tan simple como se muestra en estas dos imágenes.
 
-When this parameters are configured and saved the app will be able to track every position all the time since the user first app initiation. But this isn't the way this functionalitie is intended to be used for, is cause of that that you will need to set schedules for the functionalitie to work during the indicated work hours, for that we have the Tracking Schedule object, which can be seen and created from the tracking configuration menu. When you create one you just need to select to who it will be applied (individual user or a role), set a title for you to identify it, stablish a daily schedule and set view (which object must be sysUsers) that must contain a column with every user holiday, it can be as simple as it's shown in this two images.
-
-Once you have all of this configured functionalitie will be completely operational.
+Una vez que tengas todo esto configurado, la funcionalidad estará completamente operativa.
 
 ![](/assets/images/offline/SelectTrackingSchedules.png "Image 5. Set schedules")
 
-Image 4. Set schedules
-
 ![](/assets/images/offline/SetHolidaysView.png "Image 5. Set holidays")
 
-Image 5. Set holidays
+## Configurar proceso de limpieza de datos
 
-## Configure data clean process
+De forma predeterminada, flexygo tiene un Cronjob llamado ClearLocations que eliminará cada semana los registros de ubicaciones más antiguos de 7 días, que deberás habilitar.
 
-On default flexygo has a Cronjob called ClearLocations that will be deleting every week locations logs older than 7 days, that You will have to enable.
-
-This Job can also be edited to be triggered in a diferent timespan and you can modify its Days process param to delete logs older than that value.
+Este trabajo también se puede editar para que se active en un intervalo de tiempo diferente y puedes modificar su parámetro de días para eliminar registros más antiguos que ese valor.
 
 ![](/assets/images/offline/SelectTrackingProcess.png "Image 6. Select clear locations process")
 
-Image 6. Select clear locations process
-
 ![](/assets/images/offline/ConfigureClearLocations.png "Image 7. Configure clear locations process")
-
-Image 7. Configure clear locations process

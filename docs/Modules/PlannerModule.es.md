@@ -1,83 +1,72 @@
 # Planner
 
-Planner module allows you to create schedules from multiple objects and different visualization modes.
+El módulo Planner te permite crear planificaciones a partir de múltiples objetos y con diferentes modos de visualización.
 
-This component, unlike the Timeline module, does not take into account times, only dates.
+A diferencia del módulo Timeline, este componente **no tiene en cuenta las horas**, solo las fechas.
 
-Some properties are documented in the respective form.
+Algunas propiedades están documentadas en su formulario correspondiente.
 
-## Visualization modes
+## Modos de visualización
 
-As many modes as necessary can be created in a single planner. In addition, in each mode you can create multiple cards associated to different objects.
+Puedes crear tantos modos como necesites en un único planner. Además, en cada modo puedes crear múltiples tarjetas asociadas a distintos objetos.
 
-![](.\img\Help\Planner\planner_example.png "Image 1. Timeline Basic Configuration")
+![](/assets/images/Planner/planner_example.png "Imagen 1. Configuración básica del Planner")
 
-Image 1. Planner basic example
+## Configuración
 
-## Configuration
+Para configurar el planner, debemos completar los siguientes ajustes:
 
-To configure the planner, we need to fill in the following settings:
+### Configuración del Módulo
 
-## Module Settings
+![](/assets/images/Planner/planner_module_conf.png "Imagen 2. Configuración del Módulo")
 
-![](.\img\Help\Planner\planner_module_conf.png "Image 2. Module Configuration")
+### Configuración del Planner
 
-Image 2. Module Configuration
+![](/assets/images/Planner/planner_conf.png "Imagen 3. Configuración del Planner")
 
-## Planner Settings
+La tabla del objeto del módulo debe estar presente en todas las vistas SQL usadas en las configuraciones de modos y tarjetas.
+{: .flx-warning-card }
 
-![](.\img\Help\Planner\planner_conf.png "Image 3. Planner Configuration")
+### Configuración de Modos
 
-Image 3. Planner Configuration
+![](/assets/images/Planner/planner_mode_conf.png "Imagen 4. Ejemplo de Configuración de Modo")
 
-The module object table must be present in all sql views used in mode and card configurations.
+Puedes definir tantos modos como necesites. Cada modo tendrá sus propias tarjetas y configuración de celdas.
 
-## Mode Settings
+**Configuración de la primera columna**: El objeto y la vista que se usarán en la primera columna. El campo *First column id* será el que relacione la primera columna con las tarjetas.
 
-![](.\img\Help\Planner\planner_mode_conf.png "Image 4. Mode Configuration example")
+**Title template**: Campo HTML que se mostrará sobre el planner. Puedes mostrar información o botones con procesos personalizados.
 
-Image 4. Mode Configuration
+**Menus template**: Permite personalizar el menú de cada día (en el encabezado de la tabla) o de cada celda con procesos. En esta plantilla puedes usar la fecha del scheduler, el identificador del grupo (solo en la celda) y los valores por defecto de la página.
 
-You can set as many modes as necessary. Each of these modes will have its own cards and cell configuration.
+### Configuración de Tarjetas (Cards)
 
-**First column configuration**: The object and view to be used in the first column. The First column id field will be the field that matches the first column with the cards.
+![](/assets/images/Planner/planner_card_conf.png "Imagen 5. Ejemplo de Configuración de Tarjeta")
 
-**Title template**: Html field to be drawn over the planner. You can display information or buttons with custom processes.
+Dentro de un modo puedes tener tantas configuraciones de tarjetas como necesites.
 
-**Menus template**: You can customize the menu for each day (in the table header) or for each cell with processes. In this template you can use both the scheduler date, the group identifier (only in the cell) and the page defaults.
+**Object configuration**: El objeto y la vista que devolverán todas las tarjetas.
 
-## Cards Settings
+**Priority**: Cuando hay más de un tipo de tarjeta en la celda, la prioridad determina cuál se muestra en el scheduler. Con la misma prioridad, se muestran ambas; con prioridades distintas, se muestra la de menor valor (igual que el orden).
 
-![](.\img\Help\Planner\planner_card_conf.png "Image 5. Card Configuration example")
+**Card date field**: El campo de la vista SQL que contiene la fecha.
 
-Image 5. Card Configuration
+**Card First Column relation**: El campo de la vista SQL que relaciona con la primera columna.
 
-Within a mode you can have as many card configurations as you need.
+**Class y Style fields**: Campos en la vista SQL que contienen los estilos para la tarjeta.
 
-**Object configuration**: The object and the view that will return all the cards.
+**Editable**: Si está activo, la tarjeta puede editarse y eliminarse desde el scheduler, además de ser arrastrada de una celda a otra ejecutando la función *OnMove*.
 
-**Priority**: When there is more than one type of card in the cell, the priority will determine which of them is displayed in the scheduler. With the same priority, both will be displayed, if different, the one with the lower priority will be displayed (same as the order).
+**Draggables**: Esta configuración permite crear una lista de objetos que se pueden arrastrar al planner para realizar diferentes acciones mediante la ejecución de la función *OnAdd*.
 
-**Card date** field: The sql view field with the date.
+**OnAdd function**: Función que se ejecutará al arrastrar un objeto desde la columna lateral al planner.
 
-**Card First** Column relation: The sql view field that relates to the first column.
+**OnDelete Function**: Función que se ejecutará cuando se elimina un elemento del planner. Si no se especifica ninguna, se ejecuta el borrado del objeto.
 
-**Class and Style fields**: The fields in the sql view containing the styles for the card.
+**OnMove Function**: Función que se ejecutará cuando una tarjeta se mueve de una celda a otra.
 
-**Editable**: If active, the card can be edited and deleted from the scheduler, as well as dragged from one cell to another, by executing the OnMove function.
+### Objetos Arrastrables (Draggables)
 
-**Draggables**: This setting allows you to create a list of objects that can be dragged into the planner to perform different actions by executing the OnAdd function.
+Puedes tener un objeto arrastrable por cada configuración de tarjeta. Los distintos objetos arrastrables se mostrarán en una lista en la parte izquierda.
 
-**OnAdd function**: Function that will be executed when dragging an object from the side column to the planner.
-
-**OnDelete Function**: Function that will be executed when you delete an element from the planner. If none is specified, the object delete type will be executed.
-
-**OnMove Function**: Function that will be executed when a card is moved from one cell to another.
-
-## Draggable objects
-
-You can have one draggable object for each card configuration. The different draggable objects will be displayed in a list on the left side.
-
-![](.\img\Help\Planner\planner_draggables.png "Image 6. Draggable objects column")
-
-Image 6. Draggable objects column
+![](/assets/images/Planner/planner_draggables.png "Imagen 6. Columna de objetos arrastrables")
