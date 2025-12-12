@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+    </url>
+    <url>
+        <loc>NoneAhora%20Business%20Hub/AbhSign/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneAhora%20Business%20Hub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Ahora%20Business%20Hub/AbhSign/"/>
+    </url>
+    <url>
+        <loc>NoneAhora%20Business%20Hub/AbhSms/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneAhora%20Business%20Hub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Ahora%20Business%20Hub/AbhSms/"/>
+    </url>
+    <url>
+        <loc>NoneAhora%20Business%20Hub/AbhTicket/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneAhora%20Business%20Hub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Ahora%20Business%20Hub/AbhTicket/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/AhoraERP/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/AhoraERP/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/AzureADIntegration/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/AzureADIntegration/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/AzureFormRecognizer/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/AzureFormRecognizer/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/ClaveAuthentication/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/ClaveAuthentication/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/FaceRecognition/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/FaceRecognition/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/Google/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Google/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/GoogleAPIKey/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/GoogleAPIKey/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/GooglePlaces/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/GooglePlaces/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/MailChimp/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/MailChimp/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/MailChimpProcesses/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/MailChimpProcesses/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/Office365/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Office365/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/OpenAI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/OpenAI/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/OtherflexygoIntegration/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/OtherflexygoIntegration/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/Passbook/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Passbook/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/PowerBI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/PowerBI/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/PushNotifications/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/PushNotifications/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/RedSys/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/RedSys/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/Scales/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Scales/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/SendinBlue/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/SendinBlue/"/>
+    </url>
+    <url>
+        <loc>NoneConnectors/WacomSignature/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/WacomSignature/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/FriendlyURLs/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/FriendlyURLs/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/GoodPractices/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/GoodPractices/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/MFA/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/MFA/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/MailAccountsSettings/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/MailAccountsSettings/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/Navigator/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/Navigator/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/PageHierarchy/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/PageHierarchy/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/Security/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/Security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/Security/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Chart/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Chart/"/>
+    </url>
+    <url>
+        <loc>NoneModules/ChartII/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/ChartII/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Chatter/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Chatter/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Doc%26ImageManager/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Doc%26ImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Doc%26ImageManager/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Funnel/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Funnel/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Kanban/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Kanban/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Maps/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Maps/"/>
+    </url>
+    <url>
+        <loc>NoneModules/ModuleManagement/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/ModuleManagement/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Modules/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Modules/"/>
+    </url>
+    <url>
+        <loc>NoneModules/ObjectFilters/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/ObjectFilters/"/>
+    </url>
+    <url>
+        <loc>NoneModules/PlannerModule/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/PlannerModule/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Popover/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Popover/"/>
+    </url>
+    <url>
+        <loc>NoneModules/Scheduler%26Calendar/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Scheduler%26Calendar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Scheduler%26Calendar/"/>
+    </url>
+    <url>
+        <loc>NoneModules/TimelineModule/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/TimelineModule/"/>
+    </url>
+    <url>
+        <loc>NoneModules/WebMail/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/WebMail/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/AccessandDescription/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/AccessandDescription/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/DesignEnvironment/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/DesignEnvironment/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/DesigningApp/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/DesigningApp/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/NavigationOptions/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/NavigationOptions/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/Offline%26Emulatordifferences/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/Offline%26Emulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/Offline%26Emulatordifferences/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/OfflineAI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/OfflineAI/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/OfflineDatabase/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/OfflineDatabase/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/ReturnDataProcess/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/ReturnDataProcess/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/Trackingconfiguration/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/Trackingconfiguration/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/UsefulTokens/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/UsefulTokens/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/AI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/AI/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Camera/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Camera/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Exports/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Exports/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Forms/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Forms/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Location/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Location/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Messages/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Messages/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/NFC/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/NFC/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Navigation/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Navigation/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Online-navigation/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Online-navigation/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Parser/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Parser/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Utils/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Utils/"/>
+    </url>
+    <url>
+        <loc>NoneOffline%20App/JS%20Functions/Zebra-Printer/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Zebra-Printer/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/CommonFunctions/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/CommonFunctions/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/ContextVariables/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/ContextVariables/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/Controls/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Controls/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/CustomDLL/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/CustomDLL/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/CustomStored/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/CustomStored/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/DatabaseScriptJobs/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/DatabaseScriptJobs/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/Events/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Events/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/FormValidators/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/FormValidators/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/Imports/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Imports/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/LinkedServers/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/LinkedServers/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/NoticesSentences/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/NoticesSentences/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/Testing/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Testing/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/UpdateTypes/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/UpdateTypes/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/WebAPI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/WebAPI/"/>
+    </url>
+    <url>
+        <loc>NoneProgramming/WebComponent/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/WebComponent/"/>
+    </url>
+    <url>
+        <loc>NoneReporting/Newsandversionnotes/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneReporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Reporting/Newsandversionnotes/"/>
+    </url>
+    <url>
+        <loc>NoneStyle/CSSAndTypography/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/CSSAndTypography/"/>
+    </url>
+    <url>
+        <loc>NoneStyle/FlagIcons/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/FlagIcons/"/>
+    </url>
+    <url>
+        <loc>NoneStyle/GridOptions/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/GridOptions/"/>
+    </url>
+    <url>
+        <loc>NoneStyle/Icon/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/Icon/"/>
+    </url>
+    <url>
+        <loc>NoneStyle/Timeline/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/Timeline/"/>
+    </url>
+    <url>
+        <loc>NoneTemplates/Formats/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/Formats/"/>
+    </url>
+    <url>
+        <loc>NoneTemplates/NavigationButton/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/NavigationButton/"/>
+    </url>
+    <url>
+        <loc>NoneTemplates/ObjectTemplates/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/ObjectTemplates/"/>
+    </url>
+    <url>
+        <loc>NoneTemplates/Skeletons/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/Skeletons/"/>
+    </url>
+    <url>
+        <loc>NoneTemplates/Targets/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/Targets/"/>
+    </url>
+    <url>
+        <loc>Nonees/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Nonees/Ahora%20Business%20Hub/AbhSign/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Ahora%20Business%20Hub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneAhora%20Business%20Hub/AbhSign/"/>
+    </url>
+    <url>
+        <loc>Nonees/Ahora%20Business%20Hub/AbhSms/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Ahora%20Business%20Hub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneAhora%20Business%20Hub/AbhSms/"/>
+    </url>
+    <url>
+        <loc>Nonees/Ahora%20Business%20Hub/AbhTicket/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Ahora%20Business%20Hub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneAhora%20Business%20Hub/AbhTicket/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/AhoraERP/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/AhoraERP/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/AzureADIntegration/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/AzureADIntegration/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/AzureFormRecognizer/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/AzureFormRecognizer/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/ClaveAuthentication/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/ClaveAuthentication/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/FaceRecognition/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/FaceRecognition/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/Google/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Google/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/GoogleAPIKey/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/GoogleAPIKey/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/GooglePlaces/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/GooglePlaces/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/MailChimp/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/MailChimp/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/MailChimpProcesses/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/MailChimpProcesses/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/Office365/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Office365/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/OpenAI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/OpenAI/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/OtherflexygoIntegration/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/OtherflexygoIntegration/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/Passbook/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Passbook/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/PowerBI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/PowerBI/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/PushNotifications/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/PushNotifications/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/RedSys/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/RedSys/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/Scales/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/Scales/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/SendinBlue/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/SendinBlue/"/>
+    </url>
+    <url>
+        <loc>Nonees/Connectors/WacomSignature/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Connectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneConnectors/WacomSignature/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/FriendlyURLs/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/FriendlyURLs/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/GoodPractices/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/GoodPractices/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/MFA/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/MFA/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/MailAccountsSettings/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/MailAccountsSettings/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/Navigator/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/Navigator/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/PageHierarchy/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/PageHierarchy/"/>
+    </url>
+    <url>
+        <loc>Nonees/Information/Security/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Information/Security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneInformation/Security/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Chart/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Chart/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/ChartII/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/ChartII/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Chatter/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Chatter/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Doc%26ImageManager/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Doc%26ImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Doc%26ImageManager/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Funnel/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Funnel/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Kanban/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Kanban/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Maps/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Maps/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/ModuleManagement/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/ModuleManagement/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Modules/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Modules/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/ObjectFilters/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/ObjectFilters/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/PlannerModule/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/PlannerModule/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Popover/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Popover/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/Scheduler%26Calendar/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/Scheduler%26Calendar/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/Scheduler%26Calendar/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/TimelineModule/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/TimelineModule/"/>
+    </url>
+    <url>
+        <loc>Nonees/Modules/WebMail/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Modules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneModules/WebMail/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/AccessandDescription/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/AccessandDescription/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/DesignEnvironment/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/DesignEnvironment/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/DesigningApp/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/DesigningApp/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/NavigationOptions/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/NavigationOptions/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/Offline%26Emulatordifferences/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/Offline%26Emulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/Offline%26Emulatordifferences/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/OfflineAI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/OfflineAI/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/OfflineDatabase/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/OfflineDatabase/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/ReturnDataProcess/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/ReturnDataProcess/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/Trackingconfiguration/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/Trackingconfiguration/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/UsefulTokens/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/UsefulTokens/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/AI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/AI/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Camera/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Camera/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Exports/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Exports/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Forms/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Forms/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Location/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Location/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Messages/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Messages/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/NFC/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/NFC/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Navigation/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Navigation/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Online-navigation/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Online-navigation/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Parser/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Parser/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Utils/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Utils/"/>
+    </url>
+    <url>
+        <loc>Nonees/Offline%20App/JS%20Functions/Zebra-Printer/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Offline%20App/JS%20Functions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneOffline%20App/JS%20Functions/Zebra-Printer/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/CommonFunctions/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/CommonFunctions/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/ContextVariables/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/ContextVariables/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/Controls/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Controls/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/CustomDLL/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/CustomDLL/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/CustomStored/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/CustomStored/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/DatabaseScriptJobs/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/DatabaseScriptJobs/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/Events/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Events/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/FormValidators/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/FormValidators/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/Imports/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Imports/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/LinkedServers/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/LinkedServers/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/NoticesSentences/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/NoticesSentences/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/Testing/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/Testing/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/UpdateTypes/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/UpdateTypes/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/WebAPI/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/WebAPI/"/>
+    </url>
+    <url>
+        <loc>Nonees/Programming/WebComponent/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Programming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneProgramming/WebComponent/"/>
+    </url>
+    <url>
+        <loc>Nonees/Reporting/Newsandversionnotes/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Reporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneReporting/Newsandversionnotes/"/>
+    </url>
+    <url>
+        <loc>Nonees/Style/CSSAndTypography/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/CSSAndTypography/"/>
+    </url>
+    <url>
+        <loc>Nonees/Style/FlagIcons/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/FlagIcons/"/>
+    </url>
+    <url>
+        <loc>Nonees/Style/GridOptions/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/GridOptions/"/>
+    </url>
+    <url>
+        <loc>Nonees/Style/Icon/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/Icon/"/>
+    </url>
+    <url>
+        <loc>Nonees/Style/Timeline/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Style/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneStyle/Timeline/"/>
+    </url>
+    <url>
+        <loc>Nonees/Templates/Formats/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/Formats/"/>
+    </url>
+    <url>
+        <loc>Nonees/Templates/NavigationButton/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/NavigationButton/"/>
+    </url>
+    <url>
+        <loc>Nonees/Templates/ObjectTemplates/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/ObjectTemplates/"/>
+    </url>
+    <url>
+        <loc>Nonees/Templates/Skeletons/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/Skeletons/"/>
+    </url>
+    <url>
+        <loc>Nonees/Templates/Targets/</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/Templates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NoneTemplates/Targets/"/>
+    </url>
+</urlset>
