@@ -14,7 +14,7 @@ Mira el siguiente vídeo en nuestro canal de YouTube sobre Document y Image Mana
 
 Primero, debes habilitar el document manager antes de empezar a usarlo siguiendo unos pasos muy simples. Desde cualquier página del objeto (vista o edición), ve a la barra lateral derecha y haz clic en document settings.
 
-![](/assets/images/ModulesConf/DocumentBar.png "Image 1. Document Bar")
+![](/docs_assets/images/ModulesConf/DocumentBar.png "Image 1. Document Bar")
 
 Rellena el siguiente formulario:
 
@@ -26,7 +26,7 @@ Rellena el siguiente formulario:
 * **Category Filter**: De la lista de categorías selecciona cuáles utilizar con ese objeto  
 * **Permisions**: Selecciona qué opciones deben estar disponibles para los documentos de ese objeto  
 
-![](/assets/images/ModulesConf/DocSettings.png "Image 2. Document Settings")
+![](/docs_assets/images/ModulesConf/DocSettings.png "Image 2. Document Settings")
 
 Ahora desde el menú de procesos de relaciones del objeto puedes acceder a cualquier documento relacionado con tu objeto.
 
@@ -38,7 +38,7 @@ Hay diferentes opciones para mostrar el document manager. Explicamos algunas de 
 
 Puedes usar easy info objects para obtener algo como esto:
 
-![](/assets/images/ModulesConf/DocLinks.png "Image 3. Document Links")
+![](/docs_assets/images/ModulesConf/DocLinks.png "Image 3. Document Links")
 
 Añade un evento onclick para abrir la página genérica del document manager con el módulo correspondiente.
 
@@ -50,9 +50,9 @@ flexygo.nav.openPage('list','Documents_Object','Documents_Objects.ObjectId = \'{
 
 Con este módulo puedes subir documentos al objeto seleccionado. Para añadir este módulo debes rellenar los siguientes campos del formulario de configuración:
 
-![](/assets/images/ModulesConf/DocManager.png "Image 4. Document Manager")
+![](/docs_assets/images/ModulesConf/DocManager.png "Image 4. Document Manager")
 
-![](/assets/images/ModulesConf/DocManagerConf.png "Image 5. Document Manager Configuration")
+![](/docs_assets/images/ModulesConf/DocManagerConf.png "Image 5. Document Manager Configuration")
 
 Para la correcta configuración de este módulo es necesario completar los siguientes campos:
 
@@ -68,19 +68,19 @@ Para la correcta configuración de este módulo es necesario completar los sigui
 
 Este módulo tiene las mismas funcionalidades que el document manager, pero no permite subir documentos y los documentos ya subidos no pueden modificarse ni eliminarse.
 
-![](/assets/images/ModulesConf/DocManagerViewer.png "Image 6. Document Manager Viewer")
+![](/docs_assets/images/ModulesConf/DocManagerViewer.png "Image 6. Document Manager Viewer")
 
 ## Todos los documentos del sistema
 
 También tienes acceso a ver todos los documentos de tu proyecto flexygo. Ve a Admin Work Area > Reporting > Document Viewer.
 
-![](/assets/images/ModulesConf/DocumentManager.png "Image 7. Document Manager")
+![](/docs_assets/images/ModulesConf/DocumentManager.png "Image 7. Document Manager")
 
 ## Document Classification Manager
 
 Este módulo te permite acceder a todas las categorías de tus documentos. Al hacer clic en una categoría, se abrirá una página del document manager con solo los documentos de la categoría seleccionada.
 
-![](/assets/images/ModulesConf/DocumentClassificationManager.png "Image 8. Document Classification Manager")
+![](/docs_assets/images/ModulesConf/DocumentClassificationManager.png "Image 8. Document Classification Manager")
 
 ### Añadir un enlace para abrir el Classification Manager
 
@@ -102,11 +102,11 @@ Botón FlexyGo para abrir el document classification manager genérico:
 
 Desde cualquier formulario del objeto (vista o edición), ve a la barra lateral derecha y haz clic en image manager.
 
-![](/assets/images/ModulesConf/ImageBar.png "Image 9. Image Bar")
+![](/docs_assets/images/ModulesConf/ImageBar.png "Image 9. Image Bar")
 
 Rellena el siguiente formulario y estará listo para usar.
 
-![](/assets/images/ModulesConf/ImageSettings.png "Image 10. Image Settings")
+![](/docs_assets/images/ModulesConf/ImageSettings.png "Image 10. Image Settings")
 
 Ahora desde el menú de procesos del objeto puedes acceder a cualquier imagen relacionada con él.
 
@@ -123,7 +123,7 @@ Básicamente hay tres opciones:
 
 Puedes usar easy info objects para obtener algo como esto:
 
-![](/assets/images/ModulesConf/DocLinks.png "Image 11. Image Links")
+![](/docs_assets/images/ModulesConf/DocLinks.png "Image 11. Image Links")
 
 Básicamente añade un evento onclick para abrir la página genérica del image manager con el módulo correspondiente.
 
@@ -135,11 +135,11 @@ flexygo.nav.openPage('list','sysObjectImages','Objects_Images.ObjectId = \'{{Myo
 
 Con este módulo puedes subir imágenes al objeto seleccionado.
 
-![](/assets/images/ModulesConf/ImageManager.png "Image 12. Image Manager")
+![](/docs_assets/images/ModulesConf/ImageManager.png "Image 12. Image Manager")
 
 Para añadir este módulo debes rellenar los siguientes campos del formulario de configuración:
 
-![](/assets/images/ModulesConf/imageManagerConf.png "Image 13. Image Manager Configuration")
+![](/docs_assets/images/ModulesConf/imageManagerConf.png "Image 13. Image Manager Configuration")
 
 Para la correcta configuración de este módulo es necesario completar los siguientes campos:
 
@@ -155,13 +155,13 @@ Para la correcta configuración de este módulo es necesario completar los sigui
 
 El módulo de Image Manager también actúa como visor y tiene su propio modo de presentación:
 
-![](/assets/images/ModulesConf/ImageViewer.png "Image 14. Image Manager Configuration")
+![](/docs_assets/images/ModulesConf/ImageViewer.png "Image 14. Image Manager Configuration")
 
 ## Image Classification Manager
 
 Este módulo te permite acceder a todas las categorías de tus imágenes. Al hacer clic en una categoría se abrirá una página del image manager con solo las imágenes de esa categoría.
 
-![](/assets/images/ModulesConf/ImageClassificationManager.png "Image 15. Image Classification Manager")
+![](/docs_assets/images/ModulesConf/ImageClassificationManager.png "Image 15. Image Classification Manager")
 
 ### Añadir un enlace al Image Classification Manager
 

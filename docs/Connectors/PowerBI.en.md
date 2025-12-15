@@ -1,6 +1,6 @@
 # Power BI Integration { .flx-title-with-image }
 
-![](/assets/images/PowerBI/PowerBiLogo.png){ .flx-image-of-title }
+![](/docs_assets/images/PowerBI/PowerBiLogo.png){ .flx-image-of-title }
 
 Power BI is a Microsoft data analysis service aimed at providing interactive visualizations and business intelligence (BI) capabilities with an interface simple enough for end users to create their own reports themselves and panels. **flexygo** enables you to use Microsot Power BI to embed reports.
 
@@ -31,7 +31,7 @@ Microsoft only allows you to pass filters with embedded BI.
 
 To achieve this we must add a new Role to our BI document, imagine that we are going to pass the provider id. We create the provider role and associate the condition _\[ProviderId\] = value(username())_
 
-![Power BI](/assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
+![Power BI](/docs_assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
 
 Now we must be able to pass the role and the username from our application, so that it automatically filters the field, for this we use the two fields that are in the report registration in flexygo:
 
@@ -47,7 +47,7 @@ SELECT 'Provider' AS Role
 To make it working, the report cannot be published directly, so you need the PowerBI Embedded, which is an Azure resource that is within the Azure Marketplace (Image 2).
 {: .flx-warning-card }
 
-![Azure Marketplace](/assets/images/PowerBI/powerbi2.png "Image 2. Azure Marketplace")
+![Azure Marketplace](/docs_assets/images/PowerBI/powerbi2.png "Image 2. Azure Marketplace")
 
 ## Power BI web component
 

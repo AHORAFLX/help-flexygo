@@ -2,7 +2,7 @@
 
 Los módulos de flexygo como listas o vistas normalmente incluyen un botón para cambiar la plantilla . Este botón nos permite cambiar entre diferentes formas de mostrar el módulo, permitiendo que cada usuario establezca qué vista es la más adecuada para él, marcando esta como la plantilla predeterminada. Cada vista para cada módulo se guarda solo con seleccionarla.
 
-![Imagen 1. Botón de Plantilla](/assets/images/ObjectsTemplates/Toolbar.png)
+![Imagen 1. Botón de Plantilla](/docs_assets/images/ObjectsTemplates/Toolbar.png)
 
 ## Plantillas de Listas
 
@@ -62,12 +62,12 @@ Las plantillas también pueden incluir cadenas específicas para mostrar diferen
 
 A veces es necesario anidar plantillas para lograr una visualización más compleja:
 
-![template](/assets/images/ObjectsTemplates/Groups.png)
+![template](/docs_assets/images/ObjectsTemplates/Groups.png)
 
 Puede lograr esto utilizando tantos grupos de plantillas como necesite. Para el ejemplo anterior, utilizamos:
 
-![template](/assets/images/ObjectsTemplates/Groups-examples.png)
+![template](/docs_assets/images/ObjectsTemplates/Groups-examples.png)
 
 Después de crear los grupos, puede incluir el siguiente marcado en el encabezado de su plantilla.
 
-![template](/assets/images/ObjectsTemplates/Groups-config.png)
+![template](/docs_assets/images/ObjectsTemplates/Groups-config.png)

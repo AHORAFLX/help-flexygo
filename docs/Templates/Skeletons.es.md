@@ -10,7 +10,7 @@ Los tipos de módulos más comunes (flx-list, flx-edit, flx-view, flx-moduletab 
 
 El esqueleto puede dividirse en tres partes (skeletonHeader, skeletonBody, skeletonFooter) esto se debe a la necesidad de mostrar o no ciertos elementos dependiendo si es la primera carga del módulo o si es una actualización. Para que Flexygo sepa qué parte es, será necesario encapsular el esqueleto con divs que contengan las clases (skeletonHeader, skeletonBody, skeletonFooter), como en el siguiente ejemplo.
 
-![Navegación del Menú de la Base de Datos](/assets/images/Skeletons/SkeletonNavigation.png "Imagen 1. Navegación del Menú de la Base de Datos")
+![Navegación del Menú de la Base de Datos](/docs_assets/images/Skeletons/SkeletonNavigation.png "Imagen 1. Navegación del Menú de la Base de Datos")
 
 El esqueleto puede dividirse en tres partes (skeletonHeader, skeletonBody, skeletonFooter) esto se debe a la necesidad de mostrar o no ciertos elementos dependiendo si es la primera carga del módulo o si es una actualización. Para que Flexygo sepa qué parte es, será necesario encapsular el esqueleto con divs que contengan las clases (skeletonHeader, skeletonBody, skeletonFooter), como en el siguiente ejemplo.
 

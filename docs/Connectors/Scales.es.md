@@ -16,8 +16,8 @@ flexygo.integrations.scales.init('PropertyName');
 Cuando el usuario pulse este botón por primera vez, el navegador solicitará seleccionar el puerto serie correspondiente a la báscula (Imagen 3).
 Después de esto, Chrome guardará la configuración y el usuario podrá leer el peso simplemente haciendo clic en el botón de la báscula.
 
-![](/assets/images/Scales/2.png "Image 1. Get weight button")
+![](/docs_assets/images/Scales/2.png "Image 1. Get weight button")
 
-![](/assets/images/Scales/1.png "Image 2. Module settings")
+![](/docs_assets/images/Scales/1.png "Image 2. Module settings")
 
-![](/assets/images/Scales/3.png "Image 3. Port selector")
+![](/docs_assets/images/Scales/3.png "Image 3. Port selector")

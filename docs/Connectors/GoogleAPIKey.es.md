@@ -1,6 +1,6 @@
 # Google API Key { .flx-title-with-image }
 
-![Google](/assets/images/GoogleAPIKey/GoogleLogo.png){ .flx-image-of-title }
+![Google](/docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .flx-image-of-title }
 
 Las **Google APIs** son interfaces de programación desarrolladas por Google que permiten la comunicación con sus servicios y su integración con otras aplicaciones.  
 Entre los ejemplos más conocidos se encuentran *Search*, *Gmail*, *Translate* o *Google Maps*.  
@@ -13,13 +13,13 @@ Entre los ejemplos más conocidos se encuentran *Search*, *Gmail*, *Translate* o
 
 2.  Selecciona el/los productos que necesites activar.
 
-    ![Google Cloud Platform Console](/assets/images/GoogleAPIKey/Api_1.png "Google Cloud Platform Console")
+    ![Google Cloud Platform Console](/docs_assets/images/GoogleAPIKey/Api_1.png "Google Cloud Platform Console")
 
 3.  Selecciona un proyecto existente o crea uno nuevo.
 
-    ![Google Cloud Platform Console](/assets/images/GoogleAPIKey/Api_2.png "Google Cloud Platform Console")
+    ![Google Cloud Platform Console](/docs_assets/images/GoogleAPIKey/Api_2.png "Google Cloud Platform Console")
 
 4.  Configura la facturación y obtén tu API Key.  
     Una vez generada la clave, cópiala y pégala en la configuración de tu aplicación.
 
-    ![Google Cloud Platform Console](/assets/images/GoogleAPIKey/Api_3.png "Google Cloud Platform Console")
+    ![Google Cloud Platform Console](/docs_assets/images/GoogleAPIKey/Api_3.png "Google Cloud Platform Console")

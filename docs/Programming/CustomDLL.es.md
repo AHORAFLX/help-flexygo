@@ -40,7 +40,7 @@ Los procesos de C# embebidos sirven para el mismo propósito que los procesos de
 
 Las referencias a bibliotecas y el código del proceso se insertan directamente en el formulario de flexygo (Imagen 2.)
 
-![Custom C# Process in flexygo](/assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
+![Custom C# Process in flexygo](/docs_assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
 
 Cuando guardas tu proceso C# en flexygo, se compila para verificar si hay errores.
 

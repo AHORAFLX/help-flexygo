@@ -38,11 +38,11 @@ Si el tipo de gráfico es **line**, existen atributos adicionales para modificar
 
 ### Line Border Dashed Chart
 
-![Line Border Dashed Chart](/assets/images/Charts/LineBorder.png "Line Border Dashed Chart"){ .unfiltered-graph }
+![Line Border Dashed Chart](/docs_assets/images/Charts/LineBorder.png "Line Border Dashed Chart"){ .unfiltered-graph }
 
 ### Line Fill Chart
 
-![Line Fill Chart](/assets/images/Charts/LineFill.png "Line Fill Chart"){ .unfiltered-graph }
+![Line Fill Chart](/docs_assets/images/Charts/LineFill.png "Line Fill Chart"){ .unfiltered-graph }
 
 También hay una opción de filtrado que puedes usar pulsando el siguiente botón:
 
@@ -62,7 +62,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample1" modulename="sysmod-chart-default" type="line" width="200" height="200"></flx-chart>
 ```
 
-![Line Chart](/assets/images/Charts/Line.png "Line Chart")
+![Line Chart](/docs_assets/images/Charts/Line.png "Line Chart")
 
 ### Bubble Chart
 
@@ -70,7 +70,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample2" modulename="sysmod-chart-default" type="bubble" width="200" height="200"></flx-chart>
 ```
 
-![Bubble Chart](/assets/images/Charts/Bubble.png "Bubble Chart")
+![Bubble Chart](/docs_assets/images/Charts/Bubble.png "Bubble Chart")
 
 ### Doughnut Chart
 
@@ -78,7 +78,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample3" modulename="sysmod-chart-default" type="doughnut" width="200" height="200"></flx-chart>
 ```
 
-![Doughnut Chart](/assets/images/Charts/Doughnut.png "Doughnut Chart")
+![Doughnut Chart](/docs_assets/images/Charts/Doughnut.png "Doughnut Chart")
 
 ### Radar chart
 
@@ -86,7 +86,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample4" modulename="sysmod-chart-default" type="radar" width="200" height="200"></flx-chart>
 ```
 
-![Radar Chart](/assets/images/Charts/Radar.png "Radar Chart")
+![Radar Chart](/docs_assets/images/Charts/Radar.png "Radar Chart")
 
 ### PolarArea chart
 
@@ -94,7 +94,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample5" modulename="sysmod-chart-default" type="polarArea" width="200" height="200"></flx-chart>
 ```
 
-![Polar area Chart](/assets/images/Charts/PolarArea.png "Polar area Chart")
+![Polar area Chart](/docs_assets/images/Charts/PolarArea.png "Polar area Chart")
 
 ### Bar chart
 
@@ -102,7 +102,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample6" modulename="sysmod-chart-default" type="bar" width="200" height="200"></flx-chart>
 ```
 
-![Bar Chart](/assets/images/Charts/Bar.png "Bar Chart")
+![Bar Chart](/docs_assets/images/Charts/Bar.png "Bar Chart")
 
 ### Pie chart
 
@@ -110,7 +110,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample7" modulename="sysmod-chart-default" type="pie" width="200" height="200"></flx-chart>
 ```
 
-![Pie Chart](/assets/images/Charts/Pie.png "Pie Chart")
+![Pie Chart](/docs_assets/images/Charts/Pie.png "Pie Chart")
 
 ### Mixed chart
 
@@ -118,7 +118,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 <flx-chart name="sample8" modulename="sysmod-chart-default-mixed" type="mixed" width="200" height="200"></flx-chart>
 ```
 
-![Mixed Chart](/assets/images/Charts/MixedChart.png "Mixed Chart")
+![Mixed Chart](/docs_assets/images/Charts/MixedChart.png "Mixed Chart")
 
 ## Configuración de gráficos
 
@@ -127,19 +127,19 @@ Hay varios tipos de gráficos que puedes utilizar.
 Ahora podemos definir un estilo de animación para cada configuración de gráfico y su duración. Si la duración se establece en 0, las animaciones se desactivan.
 Más información sobre animaciones: [https://easings.net/](https://easings.net/)
 
-![](/assets/images/Charts/Animations.png "Image 1. Animations Chart Configuration")
+![](/docs_assets/images/Charts/Animations.png "Image 1. Animations Chart Configuration")
 
 ### Configuración de gráficos mixtos
 
 Al configurar un gráfico mixto nuevo, debes definir **n** sentencias SQL separadas por **;**. Luego debes definir qué tipo de gráfico será cada dataset y el nombre que le asignarás.
 
-![](/assets/images/Charts/Mixed.png "Image 2. Mixed Chart Configuration")
+![](/docs_assets/images/Charts/Mixed.png "Image 2. Mixed Chart Configuration")
 
 ### Estilo de gráficos lineales
 
 Nuevas opciones de estilo para gráficos de líneas.
 
-![](/assets/images/Charts/LineStyle.png "Image 3. Line Chart Style")
+![](/docs_assets/images/Charts/LineStyle.png "Image 3. Line Chart Style")
 
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/wbAhtiqgcnA" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>

@@ -19,7 +19,7 @@ To hire the service you can do it in any of the following ways:
 ## Configure Abh Sign
 
 
-![Abh Sign configuration](/assets/images/AbhSign/AbhSignSettings.png "Abh Sign configuration")
+![Abh Sign configuration](/docs_assets/images/AbhSign/AbhSignSettings.png "Abh Sign configuration")
 
 **Object Name:** Object we want to enable Abh Sign.
 
@@ -47,7 +47,7 @@ For more information consult on [https://help.flexygo.com/](https://help.flexygo
 
 Once configured, a module is enabled to configure the reports that we want to be able to send.
 
-![Abh Sign reports configuration](/assets/images/AbhSign/AbhSignReports.png "Abh Sign reports configuration")
+![Abh Sign reports configuration](/docs_assets/images/AbhSign/AbhSignReports.png "Abh Sign reports configuration")
 
 **Type:** Enable configuration by report or document management.
 
@@ -59,7 +59,7 @@ Once configured, a module is enabled to configure the reports that we want to be
 
 To choose where we want to sign in the document, there is an assistant that is enabled with a button on the toolbar in which we can upload an example document and draw where we want to sign.
 
-![Signing assistant](/assets/images/AbhSign/SelectSign.png "Signing assistant")
+![Signing assistant](/docs_assets/images/AbhSign/SelectSign.png "Signing assistant")
 
 ## Processes
 
@@ -67,4 +67,4 @@ In the configured object, a process called "Send signed report" or "Send signed 
 
 A cron job is enabled in the system that every 30 minutes checks if any of the documents sent has been signed and, if so, collects it and inserts it into document management. Execute after process if configured.
 
-![Abh Sign operation](/assets/images/AbhSign/AbhSignOperation.png "Abh Sign operation")
+![Abh Sign operation](/docs_assets/images/AbhSign/AbhSignOperation.png "Abh Sign operation")

@@ -14,7 +14,7 @@ Watch the following video on our YouTube channel about Document and Image Manage
 
 First of all, you need to enable document manager before staring to use it by following some simple steps. From any object page (view or edit) go to the right-hand side toolbox and click on document settings.
 
-![](/assets/images/ModulesConf/DocumentBar.png "Image 1. Document Bar")
+![](/docs_assets/images/ModulesConf/DocumentBar.png "Image 1. Document Bar")
 
 Fill out the following form.
 
@@ -26,7 +26,7 @@ Fill out the following form.
 *   **Category Filter**: From the list of categories select which ones to use with that object
 *   **Permisions**: Select which options should be available for documents on the current object
 
-![](/assets/images/ModulesConf/DocSettings.png "Image 2. Document Settings")
+![](/docs_assets/images/ModulesConf/DocSettings.png "Image 2. Document Settings")
 
 Now from the object relations process menu you can access to any document related to your object.
 
@@ -38,7 +38,7 @@ There are different options to show document manager. We will explain some of th
 
 You can use easy info objects to obtain something like this:
 
-![](/assets/images/ModulesConf/DocLinks.png "Image 3. Document Links")
+![](/docs_assets/images/ModulesConf/DocLinks.png "Image 3. Document Links")
 
 Add an onclick event to open generic document manager page with the document manager module.
 
@@ -50,9 +50,9 @@ flexygo.nav.openPage('list','Documents_Object','Documents_Objects.ObjectId = \'{
 
 With this module you can upload documents to the selected object. To add this module you must fill in the following fields of the configuration form:
 
-![](/assets/images/ModulesConf/DocManager.png "Image 4. Document Manager")
+![](/docs_assets/images/ModulesConf/DocManager.png "Image 4. Document Manager")
 
-![](/assets/images/ModulesConf/DocManagerConf.png "Image 5. Document Manager Configuration")
+![](/docs_assets/images/ModulesConf/DocManagerConf.png "Image 5. Document Manager Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -68,19 +68,19 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 This module has the same features tha? the document manager, but there is no option to upload documents and already uploaded documents can't be modified or deleted.
 
-![](/assets/images/ModulesConf/DocManagerViewer.png "Image 6. Document Manager Viewer")
+![](/docs_assets/images/ModulesConf/DocManagerViewer.png "Image 6. Document Manager Viewer")
 
 ## All documents in the system
 
 You also have the access to see all documents in your flexygo project. Go to the Admin Work Area > Reporting > Documemt Viewer.
 
-![](/assets/images/ModulesConf/DocumentManager.png "Image 7. Document Manager")
+![](/docs_assets/images/ModulesConf/DocumentManager.png "Image 7. Document Manager")
 
 ## Document Classification Manager
 
 This module enables you to access to every category of your documents. When you click on one category it will open a document manager page, with only the documents of the category selected.
 
-![](/assets/images/ModulesConf/DocumentClassificationManager.png "Image 8. Document Classification Manage")
+![](/docs_assets/images/ModulesConf/DocumentClassificationManager.png "Image 8. Document Classification Manage")
 
 ### Adding a link to open the Classification Manager
 
@@ -102,11 +102,11 @@ FlexyGo navbutton to open generic document classsification manager.
 
 From any object form (view or edit) go to the right-hand side toolbox and click on image manager.
 
-![](/assets/images/ModulesConf/ImageBar.png "Image 9. Image Bar")
+![](/docs_assets/images/ModulesConf/ImageBar.png "Image 9. Image Bar")
 
 Fill out the following form and you are ready to go.
 
-![](/assets/images/ModulesConf/ImageSettings.png "Image 10. Image Settings")
+![](/docs_assets/images/ModulesConf/ImageSettings.png "Image 10. Image Settings")
 
 Now from the object relations process menu you can access any image related to your object.
 
@@ -123,7 +123,7 @@ There are basicaly three options:
 
 You can use easy info objects to obtain something like this:
 
-![](/assets/images/ModulesConf/DocLinks.png "Image 11. Image Links")
+![](/docs_assets/images/ModulesConf/DocLinks.png "Image 11. Image Links")
 
 Basically add an onclik event to open generic image manager page with the image manager module.
 
@@ -135,11 +135,11 @@ flexygo.nav.openPage('list','sysObjectImages','Objects_Images.ObjectId = \'{{Myo
 
 With this module you can upload images to the selected object.
 
-![](/assets/images/ModulesConf/ImageManager.png "Image 12. Image Manager")
+![](/docs_assets/images/ModulesConf/ImageManager.png "Image 12. Image Manager")
 
 To add this module you must fill in the following fields on the configuration form:
 
-![](/assets/images/ModulesConf/imageManagerConf.png "Image 13. Image Manager Configuration")
+![](/docs_assets/images/ModulesConf/imageManagerConf.png "Image 13. Image Manager Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -155,13 +155,13 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 The actual Image manager module is also used as a viewer. it has its own presentation mode:
 
-![](/assets/images/ModulesConf/ImageViewer.png "Image 14. Image Manager Configuration")
+![](/docs_assets/images/ModulesConf/ImageViewer.png "Image 14. Image Manager Configuration")
 
 ## Image Classification Manager
 
 This module enables you to access to every category of your images. When you click on one category it will open a image manager page, with only the images of the category selected.
 
-![](/assets/images/ModulesConf/ImageClassificationManager.png "Image 15. Image Classification Manage")
+![](/docs_assets/images/ModulesConf/ImageClassificationManager.png "Image 15. Image Classification Manage")
 
 ### Adding a link to the Image Classification Manager
 

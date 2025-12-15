@@ -2,7 +2,7 @@
 
 Una vez que la aplicación está guardada, nos familiarizaremos con el entorno de diseño de la aplicación.
 
-![Face Recognition settings](/assets/images/offline/Environment.png "Image 1. Environment")
+![Face Recognition settings](/docs_assets/images/offline/Environment.png "Image 1. Environment")
 
 Este entorno se divide básicamente en 6 áreas que explicaremos a continuación.
 
@@ -16,7 +16,7 @@ Para crear y diseñar los menús que aparecerán en el dispositivo.
 
 Desde esta sección podemos modificar los datos básicos de la App, modificar y diseñar la página de inicio e incorporar otros recursos como:
 
-![Face Recognition settings](/assets/images/offline/buttons.png "Image 2. Buttons")
+![Face Recognition settings](/docs_assets/images/offline/buttons.png "Image 2. Buttons")
 
 * Diseñar la página de inicio  
 * Añadir código JavaScript  
@@ -40,4 +40,4 @@ Ampliar la información del objeto mediante vistas de datos complejas.
 
 Desde esta sección podemos emular la visualización y funcionamiento de la aplicación, y comprobar el resultado final en dispositivos iOS o Android.
 
-![Face Recognition settings](/assets/images/offline/Environment2.png "Image 3. Environment")
+![Face Recognition settings](/docs_assets/images/offline/Environment2.png "Image 3. Environment")

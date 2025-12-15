@@ -6,7 +6,7 @@ Al obtener datos SQL de funciones js, es un error común intentar usar directame
 
 **flexygo.sql.getRow** es normalmente el método preferido, a menos que necesite usar la mayoría de los resultados sql, en cuyo caso sería mejor usar el **flexygo.sql.getRows**.
 
-![Object View](/assets/images/offline/EmulatorPhoneSQL.png "Emulator/Phone SQL differences")
+![Object View](/docs_assets/images/offline/EmulatorPhoneSQL.png "Emulator/Phone SQL differences")
 
 ## Image gallery methods
 

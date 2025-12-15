@@ -1,6 +1,6 @@
 # Security { .flx-title-with-image }
 
-![flexygo](/assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
 **flexygo** includes 3 different security levels:
 
@@ -18,7 +18,7 @@ User John belongs to the sales role. In sales role we establish that each sales 
 **flexygo** includes five default roles, two main roles: **Admin** and **All Users**. The Admin Role gives full attributions to any member of the group. The All Users is a container for the rest of groups that enables us to assign permissions directly to all the child groups. Inside the All Users we will find the second level with the **Registered** and **Not registered** roles. Registered role will contain any new roles we create, including the default users role. Security always applies upwards that is if a lower group has security the higher group security is overwritten. The same applies if we set the security on a user level and not on a role level. The **user security will always overwrite his role security**.  
 To begin with the examples and more extensive explanations, we will set off dividing in to two parent groups (All Users and Admin).
 
-![](/assets/images/Security/Circles-graph.png)
+![](/docs_assets/images/Security/Circles-graph.png)
 
 ### Admin
 

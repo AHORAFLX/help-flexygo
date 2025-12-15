@@ -2,11 +2,11 @@
 
 See how to use the Scheduller and Calendar web component. With Scheduller and Calendar it's possible to use the same configuration and obtain different visualizations.
 
-![](/assets/images/Scheduller/Calendar_2.jpg "Image 1. Calendar")
+![](/docs_assets/images/Scheduller/Calendar_2.jpg "Image 1. Calendar")
 
 ## Scheduler and Calendar configuration
 
-![](/assets/images/Scheduller/Scheduller_conf.png "Image 2. Calendar Configuration")
+![](/docs_assets/images/Scheduller/Scheduller_conf.png "Image 2. Calendar Configuration")
 
 | DESCRIPTION | WHAT DO THE PARAMETERS MEAN? |
 | --- | --- |
@@ -29,7 +29,7 @@ See how to use the Scheduller and Calendar web component. With Scheduller and Ca
 
 ## How to associate objects to already created calendar
 
-![](/assets/images/Scheduller/Scheduller_conf_objt.PNG "Image 2. Scheduller Configuration Object")
+![](/docs_assets/images/Scheduller/Scheduller_conf_objt.PNG "Image 2. Scheduller Configuration Object")
 
 | DESCRIPTION | WHAT DO THE PARAMETERS MEAN? |
 | --- | --- |
@@ -59,6 +59,6 @@ This parameter can use the page defaults.
 Example : initialDate='20240110' The format of the indicated date must be **YYYYMMDD**
 {: .flx-warning-card }
 
-![](/assets/images/Scheduller/Scheduller_ModParam.PNG "Image 3. Scheduller Configuration Object")
+![](/docs_assets/images/Scheduller/Scheduller_ModParam.PNG "Image 3. Scheduller Configuration Object")
 
-![](/assets/images/Scheduller/ViewObjt_Action.PNG)
+![](/docs_assets/images/Scheduller/ViewObjt_Action.PNG)

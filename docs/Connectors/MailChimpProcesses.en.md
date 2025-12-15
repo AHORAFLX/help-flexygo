@@ -1,6 +1,6 @@
 # MailChimp Demo Processes { .flx-title-with-image }
 
-![MailChimp](/assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
+![MailChimp](/docs_assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
 
 Some examples of how to perform certain actions in your custom processes are the following :
 

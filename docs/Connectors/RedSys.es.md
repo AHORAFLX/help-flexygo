@@ -1,6 +1,6 @@
 # Integración con RedSys { .flx-title-with-image }
 
-![](/assets/images/RedSys/RedSysLogo.png){ .flx-image-of-title }
+![](/docs_assets/images/RedSys/RedSysLogo.png){ .flx-image-of-title }
 
 RedSys es una plataforma segura de pagos virtuales que puedes aplicar en tu e-commerce para ofrecer a tus clientes pagos con tarjeta de crédito y débito de distintos bancos.  
 **flexygo** tiene la capacidad de realizar pagos a través de esta plataforma.
@@ -13,16 +13,16 @@ En los siguientes pasos se explica cómo realizar la integración con la platafo
 2. Configurar los <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Settings" showprogress="false">ajustes de RedSys</flx-navbutton>.
 3. Configurar un proceso que se ejecutará cuando se realice el pago. Puede ser un proceso *Stored* o un proceso *DLL*.
 
-![](/assets/images/RedSys/RedSys_2.png "Image 1. RedSys configuration")
+![](/docs_assets/images/RedSys/RedSys_2.png "Image 1. RedSys configuration")
 
-![](/assets/images/RedSys/RedSys_3.png "Image 2. RedSys configuration")
+![](/docs_assets/images/RedSys/RedSys_3.png "Image 2. RedSys configuration")
 
 El proceso puede recibir como parámetros los campos del objeto enviado o el parámetro de respuesta.  
 Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nombre **ResponseCode**.
 
 4. Después, abre la configuración de RedSys y crea una nueva relación de objeto:
 
-![](/assets/images/RedSys/RedSys_1.png "Image 3. RedSys configuration")
+![](/docs_assets/images/RedSys/RedSys_1.png "Image 3. RedSys configuration")
 
 * **Object Name:** Nombre del objeto a relacionar con RedSys  
 * **Process Name:** Proceso que se ejecutará al realizar el pago  
@@ -35,7 +35,7 @@ Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nomb
 
 Puedes usar el proceso estándar de pago y vincularlo directamente a un objeto:
 
-![](/assets/images/RedSys/RedSys_6.png "Image 4. RedSys configuration")
+![](/docs_assets/images/RedSys/RedSys_6.png "Image 4. RedSys configuration")
 
 También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago  
 <fh-copy class="link">FLEXYGO.PaymentsProcess.PayRequest</fh-copy>.  

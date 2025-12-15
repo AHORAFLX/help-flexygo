@@ -35,7 +35,7 @@
   --flx-main-content-margin: 2rem;
 
   /* Images */
-  --flx-main-background: url(/assets/images/backgrounds/light-background.svg);
+  --flx-main-background: url(/docs_assets/images/backgrounds/light-background.svg);
 
   /* Box Shadw */
   --flx-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
@@ -67,7 +67,7 @@
   --md-code-fg-color: white; /* Code blocks */
 
   /* Images */
-  --flx-main-background: url(/assets/images/backgrounds/dark-background.svg);
+  --flx-main-background: url(/docs_assets/images/backgrounds/dark-background.svg);
 }
 
 html:has(dialog[open]) {

@@ -4,29 +4,37 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
 
 <ul class="flx-home-cards">
     <li class="flx-home-card">
-        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
-            <p><b>Offline App</b></p>
-            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        <a href="./Modules/Modules">
+            <span class="flx-home-card-icon">
+                <i class="flx-icon icon-modules"></i>
+            </span>
+            <p><b>Modules</b></p>
+            <p class="flx-small-text">Get to know every flexygo module</p>
         </a>
     </li>
     <li class="flx-home-card">
-        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
-            <p><b>Offline App</b></p>
-            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        <a href="./Programming/Controls">
+            <span class="flx-home-card-icon">
+                <i class="flx-icon icon-vcard"></i>
+            </span>
+            <p><b>Form Controls</b></p>
+            <p class="flx-small-text">Discover every flexygo custom controls</p>
         </a>
     </li>
     <li class="flx-home-card">
-        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
-            <p><b>Offline App</b></p>
-            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+        <a href="./Information/GoodPractices">
+            <span class="flx-home-card-icon">
+                <i class="flx-icon icon-select-1"></i>
+            </span>
+            <p><b>Good practices</b></p>
+            <p class="flx-small-text">Remind yourself of good practices when developing with flexygo</p>
         </a>
     </li>
     <li class="flx-home-card">
-        <a href="./Offline App/Creating your first app/0-UnderstandingOfflineApps">
-            <span class="flx-home-card-icon"><img class="not-zoomable" src="./assets/images/icons/phone.svg"></img></span>
+        <a href="./Offline App/AccessandDescription">
+            <span class="flx-home-card-icon">
+                <i class="flx-icon icon-mobile"></i>
+            </span>
             <p><b>Offline App</b></p>
             <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
         </a>
@@ -37,16 +45,18 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
 Flexygo is engineered on the .NET core framework, providing a modern, cross-platform, and high-performance foundation. Its native compatibility with both SQL Server and Oracle databases offers significant architectural flexibility.
 
 ### Front End
-When developing a Flexygo product front-end you'll be able to use Flexygo's own tools like prebuilt [modules](./Modules/Basic.md) and [components](./Components). Also you'll have acces to HTML, CSS, JS and [Bootstrap](https://getbootstrap.com/).
+When developing a Flexygo product front-end you'll be able to use Flexygo's own tools like prebuilt [modules](./Modules/Modules) and [components](./Components). Also you'll have acces to HTML, CSS, JS and [Bootstrap](https://getbootstrap.com/).
 
 ### Back End
 As Flexygo has been developed in .NET Core it does admit creating DLL process in C# or vb.net, and also admits stored procedures from SQL Server and Oracle as previously mentioned.
 
 ## Objects
-No se muy bien que poner aquí, pero habría que explicar de forma hiper básica el concepto de objeto 🤔 🦦. BBBB
+FlexyGo Objects are the fundamental building blocks for creating applications in FlexyGo. Each object corresponds to a main element of your business—like a Customer, Project, or Invoice—and bundles everything needed to manage it: its data structure, input forms, list views, reports, and related processes.
+
+By configuring these reusable objects, you can rapidly build tailored web applications without extensive coding, ensuring consistency and saving development time.
 
 ## Modules
-Flexygo products are built using [modules](./Modules/basic.md) which are easy to configure components with lots of differents capabilities like showing [charts](./Modules/Chart.md), creaing a [Kanban](./Modules/Kanban.md), showing [maps](./Modules/Maps.md) with locations and [routes](./Modules/Maps.md#routes) and lots more.
+Flexygo products are built using [modules](./Modules/Modules) which are easy to configure components with lots of differents capabilities like showing [charts](./Modules/Chart.md), creaing a [Kanban](./Modules/Kanban.md), showing [maps](./Modules/Maps.md) with locations and [routes](./Modules/Maps.md#routes) and lots more.
 
 ## Creating Reports
 Flexygo does also have the possibilty of creatintg your own [reports](./Reporting/Newsandversionnotes.md) in HTML, Power BI, DevExpress and Crystal Reports.
@@ -61,4 +71,4 @@ Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-Understa
 Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) product development requires of a bigger programming knowdledge as the pages must be built with HTML, CSS, JS and Ionic knowdlege.
 
 ### Tracking
-Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) has [tracking](./Offline%20App/1-Trackingconfiguration.md) functionality which allows getting the exact location data of the configured devices even when the app is closed. It can be configured to just track during ceratin periods of time.
+Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) has [tracking](./Offline%20App/Trackingconfiguration) functionality which allows getting the exact location data of the configured devices even when the app is closed. It can be configured to just track during ceratin periods of time.

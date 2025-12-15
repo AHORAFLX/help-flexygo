@@ -2,7 +2,7 @@
 
 Google Maps is a service developed by Google with which you can find the exact location of cities, businesses or attractions on the Internet. To implement Google Maps in your **flexygo** project, you need to obtain a Google API Key. Once you have the key, you should add it to **flexygo** settings (Image 1).
 
-![](/assets/images/ModulesConf/ApiKey.png "Image 1. API Keys")
+![](/docs_assets/images/ModulesConf/ApiKey.png "Image 1. API Keys")
 
 See how to obtain Google API Key in flexygo [help.](/Connectors/GoogleAPIKey)
 {: .flx-warning-card }
@@ -19,7 +19,7 @@ Or you can add directly the flx-map web component.
 </flx-map> 
 ```
 
-![Standard map](/assets/images/Maps/Main.png "Standard map")
+![Standard map](/docs_assets/images/Maps/Main.png "Standard map")
 
 ## Module Options
 
@@ -34,7 +34,7 @@ SELECT '60' AS lat, '20' AS lng, 'Noruega' AS address, 'Titulo' AS title, 'Conte
 
 ## Marker Cluster Example
 
-![Marker cluster map](/assets/images/Maps/Cluster.png "Marker cluster map")
+![Marker cluster map](/docs_assets/images/Maps/Cluster.png "Marker cluster map")
 
 ## Routes
 
@@ -50,7 +50,7 @@ If you want to add information on click to one of the points of the route you ne
 </flx-map>
 ```
 
-![Routes map](/assets/images/Maps/Routes.png "Routes map")
+![Routes map](/docs_assets/images/Maps/Routes.png "Routes map")
 
 ### Customizing route styles
 
@@ -72,7 +72,7 @@ Routes can be customized using this propperties:
 </flx-map>
 ```
 
-![Routes styled red arrows map](/assets/images/Maps/RouteStyledRed.png "Routes styled red arrows map")
+![Routes styled red arrows map](/docs_assets/images/Maps/RouteStyledRed.png "Routes styled red arrows map")
 
 ```html
 <flx-map cluster="false" width="auto" height="400" route="true" arrow="true" dotted="false" linecolor="rgb(114,137,218)" linewidht="5">
@@ -83,7 +83,7 @@ Routes can be customized using this propperties:
 </flx-map>
 ```
 
-![Routes styled blue arrows map](/assets/images/Maps/RouteStyledBlue.png "Routes styled blue arrows map")
+![Routes styled blue arrows map](/docs_assets/images/Maps/RouteStyledBlue.png "Routes styled blue arrows map")
 
 ### Multiple routes in one map
 
@@ -104,7 +104,7 @@ With the parameter **group** you will be able to divide markers in different rou
 </flx-map>
 ```
 
-![Multiple routes map](/assets/images/Maps/MultipleRoutes.png "Multiple routes map")
+![Multiple routes map](/docs_assets/images/Maps/MultipleRoutes.png "Multiple routes map")
 
 ## Polygons in google maps
 
@@ -118,7 +118,7 @@ With the parameter **coords** you will be able to add markers with polygons inst
 </flx-map>
 ```
 
-![Polygons map](/assets/images/Maps/Polygons.png "Polygons map")
+![Polygons map](/docs_assets/images/Maps/Polygons.png "Polygons map")
 
 ## Circles in google maps
 
@@ -130,29 +130,29 @@ With the parameter **radius** and **radiuscolor** you will be able to add marker
 </flx-map>
 ```
 
-![Circles map](/assets/images/Maps/Circles.png "Circles map")
+![Circles map](/docs_assets/images/Maps/Circles.png "Circles map")
 
 ## Custom Skins
 
 Map on default will use light or dark skin depending on users mode. But with the color property you can set a theme that will stay the same for everyone.
 
 ### Light
-![Light map](/assets/images/Maps/Light.png "Light map")
+![Light map](/docs_assets/images/Maps/Light.png "Light map")
 
 ### Dark
-![Dark map](/assets/images/Maps/Dark.png "Dark map")
+![Dark map](/docs_assets/images/Maps/Dark.png "Dark map")
 
 ### Retro
-![Retro map](/assets/images/Maps/Retro.png "Retro map")
+![Retro map](/docs_assets/images/Maps/Retro.png "Retro map")
 
 ### Silver
-![Silver map](/assets/images/Maps/Silver.png "Silver map")
+![Silver map](/docs_assets/images/Maps/Silver.png "Silver map")
 
 ### Night
-![Night map](/assets/images/Maps/Night.png "Night map")
+![Night map](/docs_assets/images/Maps/Night.png "Night map")
 
 ### Aubergine
-![Aubergine map](/assets/images/Maps/Aubergine.png "Aubergine map")
+![Aubergine map](/docs_assets/images/Maps/Aubergine.png "Aubergine map")
 
 Watch the following videos on our YouTube channel related to Maps Module.
 <div class="video-wrapper">

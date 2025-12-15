@@ -10,7 +10,7 @@ Abh sms is an integration of Ahora Business Hub that allows **flexygo** to send 
 
 ## Configure Abh Sms
 
-![Abh Sms configuration](/assets/images/AbhSms/AbhSmsSettings.png "Abh Sms configuration")
+![Abh Sms configuration](/docs_assets/images/AbhSms/AbhSmsSettings.png "Abh Sms configuration")
 
 **Integration:** Name of the integration that we are going to configure, in this case Ahora Business Hub - SMS.
 

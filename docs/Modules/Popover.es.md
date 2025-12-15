@@ -21,11 +21,11 @@ El componente web flx-popover tiene dos modos de funcionamiento y cuatro atribut
 
 ## Ejemplos
 
-<fh-popover class="button margin-right-m" src="/assets/images/Popover/Popover.png" mode="tooltip">Modo Tooltip</fh-popover>
-<fh-popover class="button margin-right-m" src="/assets/images/Popover/Popover.png" mode="popover">Modo Popover</fh-popover>
+<fh-popover class="button margin-right-m" src="/docs_assets/images/Popover/Popover.png" mode="tooltip">Modo Tooltip</fh-popover>
+<fh-popover class="button margin-right-m" src="/docs_assets/images/Popover/Popover.png" mode="popover">Modo Popover</fh-popover>
 
-<fh-popover class="link margin-right-m" src="/assets/images/Popover/Popover.png" mode="tooltip">Modo Tooltip</fh-popover>
-<fh-popover class="link margin-right-m" src="/assets/images/Popover/Popover.png" mode="popover">Modo Popover</fh-popover>
+<fh-popover class="link margin-right-m" src="/docs_assets/images/Popover/Popover.png" mode="tooltip">Modo Tooltip</fh-popover>
+<fh-popover class="link margin-right-m" src="/docs_assets/images/Popover/Popover.png" mode="popover">Modo Popover</fh-popover>
 
 ### Ejemplos de código
 ```html

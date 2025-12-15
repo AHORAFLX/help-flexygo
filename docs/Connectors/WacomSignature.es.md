@@ -1,5 +1,5 @@
 # Integración con Wacom SDK { .flx-title-with-image }
-![Wacom](/assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .flx-image-of-title }
+![Wacom](/docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .flx-image-of-title }
 
 **flexygo** ha incorporado con éxito la capacidad de firmar con tabletas STU de forma fluida y sencilla.  
 Esta guía ofrece instrucciones detalladas paso a paso sobre cómo instalar y configurar el SDK y los servicios necesarios para habilitar la captura de firmas usando los **Wacom Signature Controls**.  
@@ -16,7 +16,7 @@ Además, se explican los distintos valores personalizables que pueden configurar
 
 1. Define una propiedad de tipo **Wacom Signature**:
 
-   ![Adding a property of Wacom Signature Type](/assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
+   ![Adding a property of Wacom Signature Type](/docs_assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
 
 2. Configurar Opciones:  
    Puedes personalizar algunas características del **Wacom Signature control** usando el campo **Options**, ubicado al final del formulario de configuración de la propiedad:
@@ -41,12 +41,12 @@ Además, se explican los distintos valores personalizables que pueden configurar
 * **titleText**: Texto fijo que se mostrará como título.
 * **titleProperty**: Nombre de una propiedad cuyo valor se mostrará dinámicamente como título.
 
-![Title demostration](/assets/images/Wacom/title_demostration.png "Image 2. Title demostration")
+![Title demostration](/docs_assets/images/Wacom/title_demostration.png "Image 2. Title demostration")
 
 * **nameText**: Texto fijo que se mostrará como nombre del firmante.
 * **nameProperty**: Nombre de una propiedad cuyo valor se mostrará dinámicamente como nombre.
 
-![Name demostration](/assets/images/Wacom/name_demostration.png "Image 3. Name demostration")
+![Name demostration](/docs_assets/images/Wacom/name_demostration.png "Image 3. Name demostration")
 
 * **style**: Dentro de esta sección puedes definir dos propiedades
   **(solo afectan al guardar, no en la vista previa)**:
@@ -54,4 +54,4 @@ Además, se explican los distintos valores personalizables que pueden configurar
   * **inkColor**: Color de la tinta de la firma.
   * **backgroundColor**: Color de fondo de la imagen generada con la firma.
 
-![Style demostration](/assets/images/Wacom/style_demostration.png "Image 4. Style demostration")
+![Style demostration](/docs_assets/images/Wacom/style_demostration.png "Image 4. Style demostration")

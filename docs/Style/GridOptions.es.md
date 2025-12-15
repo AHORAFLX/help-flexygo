@@ -2,7 +2,7 @@
 
 Vea cómo usar el sistema de cuadrícula para trabajar en múltiples dispositivos. flexygo el sistema se comporta genial no solo en los navegadores de escritorio más recientes, sino también en navegadores de tabletas y smartphones. Está repleto de grandes características, como la tabla con 12 columnas.
 
-![flexygo grid](/assets/images/Style/resp_flexygo_horizontal.png "Image 1. flexygo grid")
+![flexygo grid](/docs_assets/images/Style/resp_flexygo_horizontal.png "Image 1. flexygo grid")
 
 <table>
     <thead>

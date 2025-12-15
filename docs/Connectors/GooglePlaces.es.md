@@ -1,6 +1,6 @@
 # Google Places { .flx-title-with-image }
 
-![Google Places](/assets/images/Google/GooglePlaces.png){ .flx-image-of-title }
+![Google Places](/docs_assets/images/Google/GooglePlaces.png){ .flx-image-of-title }
 
 La integración con **Google Places** proporciona una interfaz cómoda para conectar y consultar las APIs de Google Maps Platform.  
 Puede utilizarse para ofrecer funcionalidad de autocompletado en búsquedas geográficas basadas en texto, devolviendo lugares como negocios, direcciones y puntos de interés.  
@@ -13,11 +13,11 @@ Para hacerlo posible es necesario seguir algunos pasos.
 
 2.  Con este conector puedes transformar un simple **textbox** en un **desplegable con autocompletado de direcciones**, obteniendo cada parte de la dirección dividida en distintos campos.
 
-![Autocomplete Preview](/assets/images/GoogleAPIKey/autocomplete_preview.png "Autocomplete Preview")
+![Autocomplete Preview](/docs_assets/images/GoogleAPIKey/autocomplete_preview.png "Autocomplete Preview")
 
 3.  Para añadir esta funcionalidad, debes invocar la siguiente función desde el evento **AfterLoadJS** del módulo.
 
-![AfterLoadJS](/assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
+![AfterLoadJS](/docs_assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
 
 #### Documentación JavaScript
 

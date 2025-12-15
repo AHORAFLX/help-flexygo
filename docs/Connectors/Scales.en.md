@@ -14,8 +14,8 @@ flexygo.integrations.scales.init('PropertyName');
 
 When user clicks on this button at first time, he will be prompted to select current scale Serial port (Image 3.). Then Chrome saves configuration, and user can read weight just clicking scale button.
 
-![](/assets/images/Scales/2.png "Image 1. Get weight button")
+![](/docs_assets/images/Scales/2.png "Image 1. Get weight button")
 
-![](/assets/images/Scales/1.png "Image 2. Module settings")
+![](/docs_assets/images/Scales/1.png "Image 2. Module settings")
 
-![](/assets/images/Scales/3.png "Image 3. Port selector")
+![](/docs_assets/images/Scales/3.png "Image 3. Port selector")

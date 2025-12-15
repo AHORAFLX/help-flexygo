@@ -6,11 +6,11 @@ Configure return data process to synchronize device and data model.
 
 1.  Add it to **flexygo** stored procedure repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures**.
     
-    ![Create Stored](/assets/images/Offline/CreateStored.png "Image 1. Create Stored")
+    ![Create Stored](/docs_assets/images/Offline/CreateStored.png "Image 1. Create Stored")
     
 2.  Edit the App Offline and assign the process:
     
-    ![App Offline](/assets/images/Offline/AppOfflineSave.png "Image 2. App Offline")
+    ![App Offline](/docs_assets/images/Offline/AppOfflineSave.png "Image 2. App Offline")
     
 3. <fh-modal class="link" modal_id="fhmodal_stored" modal_title="Stored for return Data Process">Stored example</fh-modal>
 

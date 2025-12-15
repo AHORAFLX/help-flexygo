@@ -42,14 +42,14 @@ function changeLanguage(new_language) {
 }
 
 
-// We look for any <link> that points into /assets/ and grab its prefix so that will be the base path
+// We look for any <link> that points into /docs_assets/ and grab its prefix so that will be the base path
 function getBasePath() {
-    const link_element = document.querySelector('link[href*="/assets/"]');
+    const link_element = document.querySelector('link[href*="/docs_assets/"]');
     if (!link_element) return '';
     try {
-        // We get the prefix up to (but not including) /assets/ and remove the last / if present 
+        // We get the prefix up to (but not including) /docs_assets/ and remove the last / if present 
         const url = new URL(link_element.href, window.location.origin);
-        const base_path = url.pathname.split('/assets/')[0];
+        const base_path = url.pathname.split('/docs_assets/')[0];
         
         return base_path.endsWith('/') ? base_path.slice(0, -1) : base_path;
     } catch {

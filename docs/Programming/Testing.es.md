@@ -1,6 +1,6 @@
 # Automatización de Pruebas { .flx-title-with-image }
 
-![flexygo](/assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
 La Automatización de Pruebas es un valor importante al evaluar y verificar el correcto funcionamiento de nuestras aplicaciones. De hecho, las pruebas son solo pequeños programas usados para verificar que los resultados de nuestra aplicación son correctos o que no ocurre ningún tipo de mal funcionamiento. La prueba no es más que un pedazo de código que se compila en una dll y puede ser ejecutado ya sea desde el IDE del programador, una Máquina de Integración o por flexygo mismo.
 
@@ -9,7 +9,7 @@ Flexygo nos permite no solo tener las propias pruebas de flexygo, sino también 
 Puedes encontrar más información sobre pruebas con flexygo aquí [Test Unitario](https://nuget.flexygo.com/develop/readme.html#TestUnitario).
 {: .flx-warning-card }
 
-![Dll Test management](/assets/images/Custom_DLL/testing2.png "Imagen 1. Gestión de Pruebas Dll")
+![Dll Test management](/docs_assets/images/Custom_DLL/testing2.png "Imagen 1. Gestión de Pruebas Dll")
 
 ## Ejemplo de Prueba
 
@@ -63,7 +63,7 @@ End Sub
 
 Si hay pruebas en una dll que no queremos que flexygo ejecute, podemos etiquetarlas con un atributo testCategory e informar a flexygo qué pruebas no deben ser utilizadas usando los atributos de exclusión. En el siguiente ejemplo, si no queremos ejecutar esta prueba, debemos configurar los atributos de exclusión de flexygo como **attributes = ExcludeClient**.
 
-![Exclude dll Tests ](/assets/images/Custom_DLL/testing1.png "Image 2. Exclude dll Tests ")
+![Exclude dll Tests ](/docs_assets/images/Custom_DLL/testing1.png "Image 2. Exclude dll Tests ")
 
 ```vbnet
 ''' <summary>

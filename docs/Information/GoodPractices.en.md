@@ -1,6 +1,6 @@
 # Good practices  { .flx-title-with-image }
 
-![flexygo](/assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
 Follow these simple advices to extended or customize your **flexygo** environment to create a high-quality project.
 

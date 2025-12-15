@@ -20,7 +20,7 @@ Imports allow us to transfer information from files to the system, for example f
         *   Enabled: When the import fails the imported file is deleted.
         *   Unable: When the import fails the imported file is stored in ~/custom/imports/{{ImportId}}.
 
-![Import settings](/assets/images/Imports/setting.png "Image 1. Create Import Setting")
+![Import settings](/docs_assets/images/Imports/setting.png "Image 1. Create Import Setting")
 
 ## Excel
 
@@ -30,13 +30,13 @@ The first row must be the names of the columns, they cannot be empty, they canno
 
 More than one sheet can be added as in the example, the name of the sheets follows the same criteria as the columns.
 
-![Excel example](/assets/images/Imports/excel.png "Image 2. Excel example")
+![Excel example](/docs_assets/images/Imports/excel.png "Image 2. Excel example")
 
 ## Process example
 
 1.  Add it to **flexygo** process repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures or Server Dll**.
     
-![Create Process](/assets/images/Imports/process.png "Image 3. Create Process")
+![Create Process](/docs_assets/images/Imports/process.png "Image 3. Create Process")
     
 <fh-modal class="button" modal_id="fhmodal_stored" modal_title="Stored example">Stored example</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll example">Dll example</fh-modal>
@@ -48,7 +48,7 @@ To execute the import it is found in the upper menu Tools->Import.
 
 In the process window a button appears to download the template of the file that has been previously placed in the creation of the setting.
 
-![Process window](/assets/images/Imports/process_window.png "Image 4. Process window")
+![Process window](/docs_assets/images/Imports/process_window.png "Image 4. Process window")
 
 ```sql { #fhmodal_stored }
 CREATE PROCEDURE [dbo].[pImportacion]

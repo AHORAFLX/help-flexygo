@@ -3,7 +3,7 @@
 *   Publica tus propias noticias e informa a los usuarios sobre lo que está sucediendo en el entorno.
 *   Informa a tus usuarios sobre las novedades que has incorporado en cada versión de la aplicación.
 
-![Publish article](/assets/images/News/Entire-news-1.jpg "Image 1. Reference and Subreference configuration")
+![Publish article](/docs_assets/images/News/Entire-news-1.jpg "Image 1. Reference and Subreference configuration")
 
 ## Debes elegir un tipo de noticia
 

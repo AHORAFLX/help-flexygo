@@ -1,6 +1,6 @@
 # Procesos de demostración de MailChimp  { .flx-title-with-image }
 
-![MailChimp](/assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
+![MailChimp](/docs_assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
 
 Algunos ejemplos de cómo realizar ciertas acciones en tus procesos personalizados son los siguientes:
 

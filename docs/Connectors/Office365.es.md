@@ -1,6 +1,6 @@
 # Integración con Office 365 { .flx-title-with-image }
 
-![Office 365](/assets/images/Office365/Office365Logo.png){ .flx-image-of-title }
+![Office 365](/docs_assets/images/Office365/Office365Logo.png){ .flx-image-of-title }
 
 Para poder realizar llamadas a **Microsoft Graph**, una API REST que permite acceder a los recursos de Microsoft Cloud, es necesario registrar tu aplicación y obtener *tokens* de autenticación para un usuario o servicio.  
 Si deseas desarrollar una integración con Office desde la plataforma **flexygo**, tienes dos opciones:
@@ -16,13 +16,13 @@ https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-a
 
 Además de registrar la aplicación en Azure, asegúrate de **habilitar permisos de acceso a Contacts y Calendars**.
 
-![](/assets/images/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
+![](/docs_assets/images/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
 
-![](/assets/images/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
+![](/docs_assets/images/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
 
-![](/assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
+![](/docs_assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
 
-![](/assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
+![](/docs_assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
 
 Indica la URL base de tu aplicación + `/Webhooks/OfficeToken.aspx` como Redirect URL.  
 Rellena los campos de configuración de Office con tu **client id**, **tenant id** y el **secret** generado.

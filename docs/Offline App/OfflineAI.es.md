@@ -1,4 +1,4 @@
-# IA Flexygo offline
+# IA offline
 
 ## Assistentes IA
 
@@ -19,7 +19,7 @@ Con <fh-copy class="link">flexygo.nav.goAI</fh-copy> te permitirá navegar al as
 | defaults? | string | Los defaults a parsear por el asistente en el prompt de sistema |
 | is_first_message_by_mic? | bool | Esto es un valor interno que no debería ser alterado |
 
-![Go AI](/assets/images/offline/GoAi.png "Image 1. Go AI")
+![Go AI](/docs_assets/images/offline/GoAi.png "Image 1. Go AI")
 
 ## Empezar mediante reconocimiento de voz
 
@@ -34,7 +34,7 @@ El reconocimiento de voz se parará automaticamente tras detectar un breve silen
 | setting_id | string | En este parámetro tan solo debes indicar el id del asistente al que deseas navegar |
 | defaults? | string | Los defaults a parsear por el asistente en el prompt de sistema |
 
-![Voice Recognition](/assets/images/offline/VoiceRecognition.png "Image 2. Voice Recognition")
+![Voice Recognition](/docs_assets/images/offline/VoiceRecognition.png "Image 2. Voice Recognition")
 
 ## Texto a voz
 

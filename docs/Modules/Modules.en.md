@@ -1,6 +1,6 @@
-# **flexygo** modules
+# Modules
 
-**flexygo** modules have been specially designed to facilitate the creation of various utilities that will be useful for your project. Modules can help us to add additional information to existen pages, for instance, using Popover you can show additional information; organizate your team work with Kanban module; represent location with Maps.
+**Flexygo** modules have been specially designed to facilitate the creation of various utilities that will be useful for your project. Modules can help us to add additional information to existen pages, for instance, using Popover you can show additional information; organizate your team work with Kanban module; represent location with Maps.
 
 Before you'll start to configure selected modules, it's essential to read the article about [Module Management](/Modules/ModuleManagement)
 {: .flx-warning-card }
@@ -11,11 +11,11 @@ In this chapter we will shortly explain all **flexygo** modules, for more inform
 
 A tab button is a UI component that is placed inside of a tab bar. The following module does the function of a tab, but with the appearance of a drop-down button. This module can be useful when you need to save space on your page.
 
-![](/assets/images/ModulesConf/buttonTab.png "Image 1. Button Tab")
+![](/docs_assets/images/ModulesConf/buttonTab.png "Image 1. Button Tab")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Button Tab](/assets/images/ModulesConf/buttonTabConf.png "Image 2. Button Tab Configuration")
+![Button Tab](/docs_assets/images/ModulesConf/buttonTabConf.png "Image 2. Button Tab Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -32,11 +32,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 A module tab is a design pattern where content is separated into different panes, and each pane is viewable one at a time. The user requests content to be displayed by clicking the content’s corresponding tab control. The following module works as a tabulator with different modules inside. It can be used as traditional tab or as dropdown buttons.
 
-![Module Tab](/assets/images/ModulesConf/moduletab.png "Image 3. Module Tab")
+![Module Tab](/docs_assets/images/ModulesConf/moduletab.png "Image 3. Module Tab")
 
 To add this module ans setup its configuration form:
 
-![Module Tab Configuration](/assets/images/ModulesConf/moduletabConf.png "Image 4. Module Tab Configuration")
+![Module Tab Configuration](/docs_assets/images/ModulesConf/moduletabConf.png "Image 4. Module Tab Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -53,7 +53,7 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 The following module allows us to display a calendar. It provides its users with features that help them plan and schedule important events and tasks while also enabling various functions such as creating time reports and analyzing the time allocation to different sectors.
 
-![Calendar](/assets/images/ModulesConf/CalendarMonth.png "Image 5. Calendar")
+![Calendar](/docs_assets/images/ModulesConf/CalendarMonth.png "Image 5. Calendar")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
@@ -67,7 +67,7 @@ Check out additional help to see how to set it up:
 
 A chart is a graphical representation for data visualization, in which "the data is represented by symbols, such as bars in a bar chart, lines in a line chart, or slices in a pie chart". A chart can represent tabular numeric data, functions or some kinds of quality structure and provides different info. The following module allows us to display different types of charts.
 
-![Chart](/assets/images/ModulesConf/Chart.png "Image 6. Chart")
+![Chart](/docs_assets/images/ModulesConf/Chart.png "Image 6. Chart")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
@@ -83,7 +83,7 @@ Check out additional help to see how to set it up:
 
 Thanks to this module, you can upload documents and pictures that will be linked to a particular object. Subsequently, you can edit and delete uploaded documents/pictures.
 
-![Document Manager](/assets/images/ModulesConf/DocumentManager.png "Image 7. Chart")
+![Document Manager](/docs_assets/images/ModulesConf/DocumentManager.png "Image 7. Chart")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
@@ -115,7 +115,7 @@ Check out additional help to see how to set it up:
 
 Easy Pie, Easy Info, Easy Line and Sparklines are some of the web components you can use for charting. Combined in a HTML module, you could obtain results similar to these ones:
 
-![Easy Pie](/assets/images/ModulesConf/EasyInfoExamples.png "Image 9. Easy Pie")
+![Easy Pie](/docs_assets/images/ModulesConf/EasyInfoExamples.png "Image 9. Easy Pie")
 
 Check out additional help to see how to set it up
 
@@ -129,17 +129,17 @@ Check out additional help to see how to set it up:
 
 This module allows you to edit the content of the collection without opening a new window.
 
-![Edit Object List](/assets/images/ModulesConf/EditObjectList.png "Image 10. Edit Object List")
+![Edit Object List](/docs_assets/images/ModulesConf/EditObjectList.png "Image 10. Edit Object List")
 
 To add this module we must fill in the following fields.
 
 1\. Use Object's wizard to configure the Edit Grid Properties
 
-![Edit Grid Properties](/assets/images/ModulesConf/PrevEditObjectList.png "Image 11. Edit Grid Properties")
+![Edit Grid Properties](/docs_assets/images/ModulesConf/PrevEditObjectList.png "Image 11. Edit Grid Properties")
 
 2\. Then you can configure the module
 
-![Edit Grid Configuration](/assets/images/ModulesConf/EditObjectListConf.png "Image 12. Edit Grid Configuration")
+![Edit Grid Configuration](/docs_assets/images/ModulesConf/EditObjectListConf.png "Image 12. Edit Grid Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -163,11 +163,11 @@ Check out additional help to see how to set it up:
 
 The funnel is commonly uses in marketing to shows the way a potential customer goes from becoming aware of your brand to purchasing a good or service.
 
-![Funnel](/assets/images/ModulesConf/Funnel.png "Image 13. Funnel")
+![Funnel](/docs_assets/images/ModulesConf/Funnel.png "Image 13. Funnel")
 
 To add this module use its configuration form:
 
-![Edit Grid Configuration](/assets/images/ModulesConf/FunnelConf.png "Image 14. Funnel Configuration")
+![Edit Grid Configuration](/docs_assets/images/ModulesConf/FunnelConf.png "Image 14. Funnel Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -192,11 +192,11 @@ Check out additional help to see how to set it up:
 
 Just add a flx-html web component to your page and you will imediatly get its content displayed on the screen. You can include any other **flexygo** web component y your HTML module.
 
-![HTML Module](/assets/images/ModulesConf/html2.png "Image 15. HTML Module")
+![HTML Module](/docs_assets/images/ModulesConf/html2.png "Image 15. HTML Module")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![HTML Module Configuration](/assets/images/ModulesConf/html.png "Image 16. HTML Module Configuration")
+![HTML Module Configuration](/docs_assets/images/ModulesConf/html.png "Image 16. HTML Module Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -220,7 +220,7 @@ Check out additional help to see how to set it up:
 
 Kanban is one of the simplest frameworks used as it allows project managers to efficiently manage and keep track of their projects. A distinguishing feature of the Kanban framework among different agile methodologies is its compatibility with the existing organizational setting. The Kanban module simulates a list of posits to organize your tasks:
 
-![Kanban](/assets/images/ModulesConf/kanban.png "Image 17. Kanban")
+![Kanban](/docs_assets/images/ModulesConf/kanban.png "Image 17. Kanban")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
@@ -248,11 +248,11 @@ Check out additional help to see how to set it up:
 
 With this module you can add a search control to your forms and link them to module content.
 
-![List Filter](/assets/images/ModulesConf/ListFilter.png "Image 19. List Filter")
+![List Filter](/docs_assets/images/ModulesConf/ListFilter.png "Image 19. List Filter")
 
 To add this module use the configuration form:
 
-![List Filter Configuration](/assets/images/ModulesConf/ListFilterConf.png "Image 20. List Filter Configuration")
+![List Filter Configuration](/docs_assets/images/ModulesConf/ListFilterConf.png "Image 20. List Filter Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -270,11 +270,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can visualize a Google Map with the desired address:
 
-![Map](/assets/images/ModulesConf/map.png "Image 21. Map")
+![Map](/docs_assets/images/ModulesConf/map.png "Image 21. Map")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Map Configuration](/assets/images/ModulesConf/mapConf.png "Image 22. Map Configuration")
+![Map Configuration](/docs_assets/images/ModulesConf/mapConf.png "Image 22. Map Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -303,7 +303,7 @@ Check out additional help to see how to set it up:
 
 With this module you can visualize your emails from your mail server. you can also link mails to your aplication objects.
 
-![Mail](/assets/images/ModulesConf/mail.png "Image 23. Mail")
+![Mail](/docs_assets/images/ModulesConf/mail.png "Image 23. Mail")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
@@ -315,11 +315,11 @@ Check out additional help to see how to set it up:
 
 With the following module you can create cards with nodes as content:
 
-![Navigation Panel](/assets/images/ModulesConf/navPanel.png "Image 24. Navigation Panel")
+![Navigation Panel](/docs_assets/images/ModulesConf/navPanel.png "Image 24. Navigation Panel")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Navigation Panel Configuration](/assets/images/ModulesConf/navPanelConf.png "Image 25. Navigation Panel Configuration")
+![Navigation Panel Configuration](/docs_assets/images/ModulesConf/navPanelConf.png "Image 25. Navigation Panel Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -337,11 +337,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can see a map of relations, processes, properties, templates, data views and security for an object.
 
-![Network Graphic](/assets/images/ModulesConf/networkGraphic.png "Image 26. Network Graphic")
+![Network Graphic](/docs_assets/images/ModulesConf/networkGraphic.png "Image 26. Network Graphic")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Network Graphic Configuration](/assets/images/ModulesConf/networkGraphicConf.png "Image 27. Network Graphic Configuration")
+![Network Graphic Configuration](/docs_assets/images/ModulesConf/networkGraphicConf.png "Image 27. Network Graphic Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -360,11 +360,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can edit any object:
 
-![Object Edit](/assets/images/ModulesConf/ObjectEdit.png "Image 28. Object Edit")
+![Object Edit](/docs_assets/images/ModulesConf/ObjectEdit.png "Image 28. Object Edit")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object Edit Configuration](/assets/images/ModulesConf/ObjectEditConf.png "Image 29. Object Edit Configuration")
+![Object Edit Configuration](/docs_assets/images/ModulesConf/ObjectEditConf.png "Image 29. Object Edit Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -384,11 +384,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can display a list of objects (collection):
 
-![Object List](/assets/images/ModulesConf/ObjectList.png "Image 30. Object List")
+![Object List](/docs_assets/images/ModulesConf/ObjectList.png "Image 30. Object List")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object List Configuration](/assets/images/ModulesConf/ObjectListConf.png "Image 31. Object List Configuration")
+![Object List Configuration](/docs_assets/images/ModulesConf/ObjectListConf.png "Image 31. Object List Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -407,11 +407,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can visualize the processes related to an object:
 
-![Object Processes](/assets/images/ModulesConf/ObjectProcesses.png "Image 32. Object Processes")
+![Object Processes](/docs_assets/images/ModulesConf/ObjectProcesses.png "Image 32. Object Processes")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object Processes Configuration](/assets/images/ModulesConf/ObjectProcessesConf.png "Image 33. Object Processes Configuration")
+![Object Processes Configuration](/docs_assets/images/ModulesConf/ObjectProcessesConf.png "Image 33. Object Processes Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -436,11 +436,11 @@ Check out additional help to see how to set it up:
 
 With this module you can visualize the reports related to any object:
 
-![Object Reports](/assets/images/ModulesConf/ObjectReports.png "Image 34. Object Reports")
+![Object Reports](/docs_assets/images/ModulesConf/ObjectReports.png "Image 34. Object Reports")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object Reports Configuration](/assets/images/ModulesConf/ObjectProcessesConf.png "Image 35. Object Reports Configuration")
+![Object Reports Configuration](/docs_assets/images/ModulesConf/ObjectProcessesConf.png "Image 35. Object Reports Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -459,11 +459,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can do searches for any object:
 
-![Object Search](/assets/images/ModulesConf/ObjectSearch.png "Image 36. Object Search")
+![Object Search](/docs_assets/images/ModulesConf/ObjectSearch.png "Image 36. Object Search")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object Search Configuration](/assets/images/ModulesConf/ObjectSearchConf.png "Image 37. Object Search Configuration")
+![Object Search Configuration](/docs_assets/images/ModulesConf/ObjectSearchConf.png "Image 37. Object Search Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -481,11 +481,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can display and view any object:
 
-![Object View](/assets/images/ModulesConf/ObjectView.png "Image 38. Object View")
+![Object View](/docs_assets/images/ModulesConf/ObjectView.png "Image 38. Object View")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object View Configuration](/assets/images/ModulesConf/ObjectViewConf.png "Image 39. Object View Configuration")
+![Object View Configuration](/docs_assets/images/ModulesConf/ObjectViewConf.png "Image 39. Object View Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -504,11 +504,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can see an organization hierarchical structure:
 
-![Organization Chart](/assets/images/ModulesConf/OrgChart.png "Image 40. Organization Chart")
+![Organization Chart](/docs_assets/images/ModulesConf/OrgChart.png "Image 40. Organization Chart")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Organization Chart Configuration](/assets/images/ModulesConf/OrgChartConf.png "Image 41. Organization Chart Configuration")
+![Organization Chart Configuration](/docs_assets/images/ModulesConf/OrgChartConf.png "Image 41. Organization Chart Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -533,11 +533,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can display relations between an object and its childs:
 
-![Related Objects](/assets/images/ModulesConf/RelatedObjectsHtml.png "Image 42. Related Objects")
+![Related Objects](/docs_assets/images/ModulesConf/RelatedObjectsHtml.png "Image 42. Related Objects")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Related Objects Configuration](/assets/images/ModulesConf/RelatedObjectsHtmlConf.png "Image 43. Related Objects Configuration")
+![Related Objects Configuration](/docs_assets/images/ModulesConf/RelatedObjectsHtmlConf.png "Image 43. Related Objects Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -554,13 +554,13 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 ## Object Related Processes
 
-![Object Related Processes](/assets/images/ModulesConf/RelatedProcessesHtml.png "Image 44. Object Related Processes")
+![Object Related Processes](/docs_assets/images/ModulesConf/RelatedProcessesHtml.png "Image 44. Object Related Processes")
 
 With this module you can see processes related to an object.
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Related Objects Processes Configuration](/assets/images/ModulesConf/RelatedProcessesHtmlConf.png "Image 45. Related Objects Processes Configuration")
+![Related Objects Processes Configuration](/docs_assets/images/ModulesConf/RelatedProcessesHtmlConf.png "Image 45. Related Objects Processes Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 
@@ -579,11 +579,11 @@ For the correct configuration of this module it is necessary to fill in the foll
 
 With this module you can see the related reports to an object.
 
-![Object Related Reports](/assets/images/ModulesConf/RelatedReportsHtml.png "Image 46. Object Related Reports")
+![Object Related Reports](/docs_assets/images/ModulesConf/RelatedReportsHtml.png "Image 46. Object Related Reports")
 
 To add this module we must fill in the following fields of the configuration form:
 
-![Object Related Reports Configuration](/assets/images/ModulesConf/RelatedReportsHtmlConf.png "Image 47. Object Related Reports Configuration")
+![Object Related Reports Configuration](/docs_assets/images/ModulesConf/RelatedReportsHtmlConf.png "Image 47. Object Related Reports Configuration")
 
 For the correct configuration of this module it is necessary to fill in the following fields:
 

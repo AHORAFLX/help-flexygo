@@ -8,9 +8,9 @@ En la columna derecha tenemos una lista con todos los módulos disponibles. Esta
 - El **primer icono** genera rápidamente un módulo de tipo tabulador.  
 - El **segundo icono** nos permite crear nuevos tipos de módulos.
 
-![](/assets/images/ModuleManagement/ModuleManagement_2.jpg "Imagen 1. Gestión de Módulos")
+![](/docs_assets/images/ModuleManagement/ModuleManagement_2.jpg "Imagen 1. Gestión de Módulos")
 
-![](/assets/images/ModuleManagement/ModuleManagement_newTab.jpg "Imagen 2. Crear nueva pestaña")
+![](/docs_assets/images/ModuleManagement/ModuleManagement_newTab.jpg "Imagen 2. Crear nueva pestaña")
 
 Las pestañas (tabs) no son más que módulos clasificados como tabuladores. Con ellos es posible anidar múltiples módulos en su interior, facilitando un acceso más compacto y una visualización más ordenada de diferentes secciones. El usuario puede generar una nueva pestaña desde la ventana de gestión de módulos (primer icono del buscador). Existen dos tipos de pestañas:  
 - El **button tabulator** (pestaña tipo botón)  
@@ -18,11 +18,11 @@ Las pestañas (tabs) no son más que módulos clasificados como tabuladores. Con
 
 Ambos pueden verse en la siguiente imagen:
 
-![](/assets/images/ModuleManagement/Tabs.png "Imagen 3. Tipos de Tabuladores")
+![](/docs_assets/images/ModuleManagement/Tabs.png "Imagen 3. Tipos de Tabuladores")
 
 A continuación, un ejemplo de anidación de módulos:
 
-![](/assets/images/ModuleManagement/ModuleManagement.png "Imagen 4. Ejemplo de módulos anidados")
+![](/docs_assets/images/ModuleManagement/ModuleManagement.png "Imagen 4. Ejemplo de módulos anidados")
 
 Mira el siguiente vídeo en nuestro canal de YouTube para más información:
 <div class="video-wrapper">

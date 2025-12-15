@@ -14,24 +14,24 @@ Ten en cuenta que el reconocimiento facial requiere un **servidor de 64 bits**.
 
 1.  <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysObjectImageRecognitionSettings">Abrir configuración de reconocimiento</flx-navbutton> y crear una nueva relación de objeto.
 
-    ![Face Recognition settings](/assets/images/Recognition/Recognition_1.png "Image 1. Face Recognition settings")
+    ![Face Recognition settings](/docs_assets/images/Recognition/Recognition_1.png "Image 1. Face Recognition settings")
 
 2.  Tras configurarlo, aparecerá una nueva colección relacionada con tu objeto, con un gestor de imágenes.
 
-    ![Face Recognition settings](/assets/images/Recognition/Recognition_2.png "Image 2. Face Recognition settings")
+    ![Face Recognition settings](/docs_assets/images/Recognition/Recognition_2.png "Image 2. Face Recognition settings")
 
 3.  Sube una o varias fotos con el rostro claramente visible para cada objeto.
 
-    ![Face Recognition example](/assets/images/Recognition/Recognition_3.png "Image 3. Face Recognition example")
+    ![Face Recognition example](/docs_assets/images/Recognition/Recognition_3.png "Image 3. Face Recognition example")
 
 4.  Después podrás probarlo usando el proceso de ejemplo **Find Faces** o programar tu propia  
     <fh-modal class="link" modal_id="fhmodal_own_code" modal_title="Insert object function">función personalizada</fh-modal>:
 
-    ![Face Recognition example](/assets/images/Recognition/Recognition_6.png "Image 4. Face Recognition example")
+    ![Face Recognition example](/docs_assets/images/Recognition/Recognition_6.png "Image 4. Face Recognition example")
 
-    ![Face Recognition example](/assets/images/Recognition/Recognition_4.png "Image 5. Face Recognition example")
+    ![Face Recognition example](/docs_assets/images/Recognition/Recognition_4.png "Image 5. Face Recognition example")
 
-    ![Face Recognition example](/assets/images/Recognition/Recognition_5.png "Image 6. Face Recognition example")
+    ![Face Recognition example](/docs_assets/images/Recognition/Recognition_5.png "Image 6. Face Recognition example")
 
 ```js { #fhmodal_own_code }
 function showFaces(file, objectname, tolerance, e): {

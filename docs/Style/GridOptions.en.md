@@ -2,7 +2,7 @@
 
 See how to use the grid system to work across multiple devices. **flexygo** system behaves great not only in the latest desktop browsers, but also in tablets and smartphone browsers too. It's packed with great features, such as the table with 12 columns.
 
-![flexygo grid](/assets/images/Style/resp_flexygo_horizontal.png "Image 1. flexygo grid")
+![flexygo grid](/docs_assets/images/Style/resp_flexygo_horizontal.png "Image 1. flexygo grid")
 
 <table>
     <thead>

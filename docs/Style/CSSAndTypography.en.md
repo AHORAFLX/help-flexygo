@@ -403,50 +403,50 @@ Flexygo has a predefined set of classes for coloring Text, Backgrounds and Boxes
 .has-warning
 { .txt-warning }
 
-![Has warning input](/assets/images/Typography/warning-input.png#only-light "Has warning input"){data-gallery="light"}
-![Has warning input](/assets/images/Typography/warning-input_dark.png#only-dark "Has warning input"){data-gallery="dark"}
+![Has warning input](/docs_assets/images/Typography/warning-input.png#only-light "Has warning input"){data-gallery="light"}
+![Has warning input](/docs_assets/images/Typography/warning-input_dark.png#only-dark "Has warning input"){data-gallery="dark"}
 
 .has-error
 { .txt-error }
 
-![Has error input](/assets/images/Typography/error-input.png#only-light "Has error input"){data-gallery="light"}
-![Has error input](/assets/images/Typography/error-input_dark.png#only-dark "Has error input"){data-gallery="dark"}
+![Has error input](/docs_assets/images/Typography/error-input.png#only-light "Has error input"){data-gallery="light"}
+![Has error input](/docs_assets/images/Typography/error-input_dark.png#only-dark "Has error input"){data-gallery="dark"}
 
 .has-success
 { .txt-success }
 
-![Has success input](/assets/images/Typography/success-input.png#only-light "Has success input"){data-gallery="light"}
-![Has success input](/assets/images/Typography/success-input_dark.png#only-dark "Has success input"){data-gallery="dark"}
+![Has success input](/docs_assets/images/Typography/success-input.png#only-light "Has success input"){data-gallery="light"}
+![Has success input](/docs_assets/images/Typography/success-input_dark.png#only-dark "Has success input"){data-gallery="dark"}
 
 .has-info
 { .txt-info }
 
-![Has info input](/assets/images/Typography/info-input.png#only-light "Has info input"){data-gallery="light"}
-![Has info input](/assets/images/Typography/info-input_dark.png#only-dark "Has info input"){data-gallery="dark"}
+![Has info input](/docs_assets/images/Typography/info-input.png#only-light "Has info input"){data-gallery="light"}
+![Has info input](/docs_assets/images/Typography/info-input_dark.png#only-dark "Has info input"){data-gallery="dark"}
 
 .has-outstanding
 { .txt-outstanding }
 
-![Has outstanding input](/assets/images/Typography/outstanding-input.png#only-light "Has outstanding input"){data-gallery="light"}
-![Has outstanding input](/assets/images/Typography/outstanding-input_dark.png#only-dark "Has outstanding input"){data-gallery="dark"}
+![Has outstanding input](/docs_assets/images/Typography/outstanding-input.png#only-light "Has outstanding input"){data-gallery="light"}
+![Has outstanding input](/docs_assets/images/Typography/outstanding-input_dark.png#only-dark "Has outstanding input"){data-gallery="dark"}
 
 .has-tools
 { .txt-tools }
 
-![Has tools input](/assets/images/Typography/tools-input.png#only-light "Has tools input"){data-gallery="light"}
-![Has tools input](/assets/images/Typography/tools-input_dark.png#only-dark "Has tools input"){data-gallery="dark"}
+![Has tools input](/docs_assets/images/Typography/tools-input.png#only-light "Has tools input"){data-gallery="light"}
+![Has tools input](/docs_assets/images/Typography/tools-input_dark.png#only-dark "Has tools input"){data-gallery="dark"}
 
 .has-notify
 { .txt-notify }
 
-![Has notify input](/assets/images/Typography/notify-input.png#only-light "Has notify input"){data-gallery="light"}
-![Has notify input](/assets/images/Typography/notify-input_dark.png#only-dark "Has notify input"){data-gallery="dark"}
+![Has notify input](/docs_assets/images/Typography/notify-input.png#only-light "Has notify input"){data-gallery="light"}
+![Has notify input](/docs_assets/images/Typography/notify-input_dark.png#only-dark "Has notify input"){data-gallery="dark"}
 
 .has-primary
 { .txt-primary }
 
-![Has primary input](/assets/images/Typography/primary-input.png#only-light "Has primary input"){data-gallery="light"}
-![Has primary input](/assets/images/Typography/primary-input_dark.png#only-dark "Has primary input"){data-gallery="dark"}
+![Has primary input](/docs_assets/images/Typography/primary-input.png#only-light "Has primary input"){data-gallery="light"}
+![Has primary input](/docs_assets/images/Typography/primary-input_dark.png#only-dark "Has primary input"){data-gallery="dark"}
 
 ## Sticky
 
@@ -456,7 +456,7 @@ List header can now be set as sticky on modules.
 
 To do so you just have to add class "sticky-header" to module as portayed in the image.
 
-![Sticky toolbar](/assets/images/Typography/StickyHeader.png "Sticky toolbar")
+![Sticky toolbar](/docs_assets/images/Typography/StickyHeader.png "Sticky toolbar")
 
 ### Sticky toolbar
 
@@ -464,14 +464,14 @@ Toolbar can now be set as sticky on modules.
 
 To do so you just have to add class "sticky-toolbar" to module as portayed in the image.
 
-![Sticky toolbar](/assets/images/Typography/StickyToolbar.png "Sticky toolbar")
+![Sticky toolbar](/docs_assets/images/Typography/StickyToolbar.png "Sticky toolbar")
 
 ## Flipcard colors
 
 Flexygo has a predefined set of classes for defining flip cards backgrounds and text. Each of this color sets are defined under a series of names with their coresponding prefix for front and back.
 
-![Flipcards](/assets/images/Typography/flipcards.png#only-light "Flipcards"){data-gallery="light"}
-![Flipcards](/assets/images/Typography/flipcards_dark.png#only-dark "Flipcards"){data-gallery="dark"}
+![Flipcards](/docs_assets/images/Typography/flipcards.png#only-light "Flipcards"){data-gallery="light"}
+![Flipcards](/docs_assets/images/Typography/flipcards_dark.png#only-dark "Flipcards"){data-gallery="dark"}
 
 ```html
 <div class="card card-outstanding">
@@ -492,41 +492,41 @@ Flexygo has a predefined set of classes for defining flip cards backgrounds and 
 </div>
 ```
 
-![](/assets/images/Typography/rightLeft_float.jpg)
+![](/docs_assets/images/Typography/rightLeft_float.jpg)
 { #fhmodal_right_left }
 
-![](/assets/images/Typography/clearBoth.jpg)
+![](/docs_assets/images/Typography/clearBoth.jpg)
 { #fhmodal_clear }
 
-![](/assets/images/Typography/docSection.jpg)
+![](/docs_assets/images/Typography/docSection.jpg)
 { #fhmodal_docs }
 
-![](/assets/images/Typography/padding.jpg)
+![](/docs_assets/images/Typography/padding.jpg)
 { #fhmodal_padding_margin }
 
-![](/assets/images/Typography/LastModuleMargin.jpg)
+![](/docs_assets/images/Typography/LastModuleMargin.jpg)
 { #fhmodal_last_margin }
 
-![](/assets/images/Typography/inlineBlock.jpg)
+![](/docs_assets/images/Typography/inlineBlock.jpg)
 { #fhmodal_inline_block }
 
-![](/assets/images/Typography/hidden.jpg)
+![](/docs_assets/images/Typography/hidden.jpg)
 { #fhmodal_hidden }
 
-![](/assets/images/Typography/nolist.jpg)
+![](/docs_assets/images/Typography/nolist.jpg)
 { #fhmodal_no_list }
 
-![](/assets/images/Typography/cursorPointer.jpg)
+![](/docs_assets/images/Typography/cursorPointer.jpg)
 { #fhmodal_clickable }
 
-![](/assets/images/Typography/cleanRounded.png)
+![](/docs_assets/images/Typography/cleanRounded.png)
 { #fhmodal_round }
 
-![](/assets/images/Typography/fullScreen.jpg)
+![](/docs_assets/images/Typography/fullScreen.jpg)
 { #fhmodal_fullscreen }
 
-![](/assets/images/Typography/ShowEmptyColumn.png)
+![](/docs_assets/images/Typography/ShowEmptyColumn.png)
 { #fhmodal_show_empty }
 
-![](/assets/images/Typography/ColumnSeparator.png)
+![](/docs_assets/images/Typography/ColumnSeparator.png)
 { #fhmodal_column_separator }

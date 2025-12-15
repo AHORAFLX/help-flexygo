@@ -40,7 +40,7 @@ Embedded C# processes serve the same purpose as custom DLL processes.
 
 References to libraries and the code of the process are directly inserted into the flexygo form (Image 2.)
 
-![Custom C# Process in flexygo](/assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
+![Custom C# Process in flexygo](/docs_assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
 
 When you save your C# process in flexygo, it is compiled to check for any errors.
 

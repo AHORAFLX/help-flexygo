@@ -10,19 +10,19 @@ Access to the Offline Apps section in the **flexygo** environment is done as fol
 
 1.  With an administrator user (admin), and within the Tools section we will click on the Develop Mode option
     
-    ![Menu](/assets/images/offline/menu1.png "Image 1. Menu")
+    ![Menu](/docs_assets/images/offline/menu1.png "Image 1. Menu")
     
 2.  Then, within the Developer option we will access the Admin Area section where we will find Offline App section
     
-    ![Menu](/assets/images/offline/menu2.png "Image 2. Menu")
+    ![Menu](/docs_assets/images/offline/menu2.png "Image 2. Menu")
 
 3.  Then within the Developer option we will access the Admin Area section
     
-    ![Menu](/assets/images/offline/menu3.png "Image 4. Menu")
+    ![Menu](/docs_assets/images/offline/menu3.png "Image 4. Menu")
     
 4.  From which we can access the already designed Apps or a "New App" Menu to design and configure a new offline application
     
-    ![Menu](/assets/images/offline/menu4.png "Image 5. Menu")
+    ![Menu](/docs_assets/images/offline/menu4.png "Image 5. Menu")
     
 
 We therefore have the option of editing existing templates or creating new templates.

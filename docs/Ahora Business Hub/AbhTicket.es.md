@@ -10,7 +10,7 @@ Abh Ticket es una integración de **Ahora Business Hub** que permite a **flexygo
 
 ## Configurar Abh Ticket
 
-![Abh Ticket configuration](/assets/images/AbhTicket/AbhTicketSettings.png "Abh Ticket configuration")
+![Abh Ticket configuration](/docs_assets/images/AbhTicket/AbhTicketSettings.png "Abh Ticket configuration")
 
 **Integration:** Nombre de la integración que vamos a configurar, en este caso *Ahora Business Hub – Ticket*.
 

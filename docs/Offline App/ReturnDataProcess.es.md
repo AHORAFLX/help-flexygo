@@ -6,11 +6,11 @@ Configura el proceso de devolución de datos para sincronizar el dispositivo y e
 
 1.  Agregalo al flexygo repositorio de procedimientos almacenados en **Área de trabajo de administrador** > **Logica y Reglas** > **Procedimientos Almacenados de DB**.
     
-    ![Create Stored](/assets/images/Offline/CreateStored.png "Image 1. Create Stored")
+    ![Create Stored](/docs_assets/images/Offline/CreateStored.png "Image 1. Create Stored")
     
 2.  Edita la aplicación offline y asigna el proceso:
     
-    ![App Offline](/assets/images/Offline/AppOfflineSave.png "Image 2. App Offline")
+    ![App Offline](/docs_assets/images/Offline/AppOfflineSave.png "Image 2. App Offline")
     
 3. <fh-modal class="link" modal_id="fhmodal_stored" modal_title="Stored for return Data Process">Ejemplo de almacenado</fh-modal>
 

@@ -19,17 +19,17 @@ Furthermore, at flexygo we understand that not all users require the same level 
 
 First of all we have 2 new settings:
 
-![](/assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
+![](/docs_assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
 
 *   **MFA\_cookie\_duration**: In this section you can define the number of days that the "Trust this device?
 *   **MFA\_Type**: In this section the administrator can define which type of MFA will be used.
 
 After configuring these parameters as we see fit, we can define at user or role level to whom to activate MFA.
 
-![](/assets/images/MFA/mfa_user.png "Image 2. MFA in user")
+![](/docs_assets/images/MFA/mfa_user.png "Image 2. MFA in user")
 
-![](/assets/images/MFA/mfa_role.png "Image 3. MFA in role")
+![](/docs_assets/images/MFA/mfa_role.png "Image 3. MFA in role")
   
 Finally, if we try to log in with the user that has the MFA active, we will see the following screen to enter our security code
 
-![](/assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")
+![](/docs_assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")

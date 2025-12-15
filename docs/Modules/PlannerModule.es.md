@@ -10,7 +10,7 @@ Algunas propiedades están documentadas en su formulario correspondiente.
 
 Puedes crear tantos modos como necesites en un único planner. Además, en cada modo puedes crear múltiples tarjetas asociadas a distintos objetos.
 
-![](/assets/images/Planner/planner_example.png "Imagen 1. Configuración básica del Planner")
+![](/docs_assets/images/Planner/planner_example.png "Imagen 1. Configuración básica del Planner")
 
 ## Configuración
 
@@ -18,18 +18,18 @@ Para configurar el planner, debemos completar los siguientes ajustes:
 
 ### Configuración del Módulo
 
-![](/assets/images/Planner/planner_module_conf.png "Imagen 2. Configuración del Módulo")
+![](/docs_assets/images/Planner/planner_module_conf.png "Imagen 2. Configuración del Módulo")
 
 ### Configuración del Planner
 
-![](/assets/images/Planner/planner_conf.png "Imagen 3. Configuración del Planner")
+![](/docs_assets/images/Planner/planner_conf.png "Imagen 3. Configuración del Planner")
 
 La tabla del objeto del módulo debe estar presente en todas las vistas SQL usadas en las configuraciones de modos y tarjetas.
 {: .flx-warning-card }
 
 ### Configuración de Modos
 
-![](/assets/images/Planner/planner_mode_conf.png "Imagen 4. Ejemplo de Configuración de Modo")
+![](/docs_assets/images/Planner/planner_mode_conf.png "Imagen 4. Ejemplo de Configuración de Modo")
 
 Puedes definir tantos modos como necesites. Cada modo tendrá sus propias tarjetas y configuración de celdas.
 
@@ -41,7 +41,7 @@ Puedes definir tantos modos como necesites. Cada modo tendrá sus propias tarjet
 
 ### Configuración de Tarjetas (Cards)
 
-![](/assets/images/Planner/planner_card_conf.png "Imagen 5. Ejemplo de Configuración de Tarjeta")
+![](/docs_assets/images/Planner/planner_card_conf.png "Imagen 5. Ejemplo de Configuración de Tarjeta")
 
 Dentro de un modo puedes tener tantas configuraciones de tarjetas como necesites.
 
@@ -69,4 +69,4 @@ Dentro de un modo puedes tener tantas configuraciones de tarjetas como necesites
 
 Puedes tener un objeto arrastrable por cada configuración de tarjeta. Los distintos objetos arrastrables se mostrarán en una lista en la parte izquierda.
 
-![](/assets/images/Planner/planner_draggables.png "Imagen 6. Columna de objetos arrastrables")
+![](/docs_assets/images/Planner/planner_draggables.png "Imagen 6. Columna de objetos arrastrables")

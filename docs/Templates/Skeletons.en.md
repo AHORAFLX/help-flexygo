@@ -10,7 +10,7 @@ The most common module types (flx-list, flx-edit, flx-view, flx-moduletab and fl
 
 Adding a custom skeleton is as easy as navigating to the skeletons page through the admin work, and through the list adding a new one.
 
-![Menu](/assets/images/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
+![Menu](/docs_assets/images/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
 
 Skeleton may divide in three parts (skeletonHeader, skeletonBody, skeletonFooter) this is do to the necesity of showing or not certain elements depending if it's the module first load or if it's a refresh. For flexygo to know which part it is, it will be needed to encapsulate skeleton with divs containing the classes (skeletonHeader, skeletonBody, skeletonFooter), as in the following example.
 
