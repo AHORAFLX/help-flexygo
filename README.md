@@ -20,27 +20,30 @@ To test changes you may use the following command, which will loadthe docs in lo
 py -m mkdocs serve
 ```
 
-## Publishing new version
+## Publishing 
 
-To deploy a new version you need mike installed, if you don't have it use the follwoing command:
+We have made it easier to publish with custom commands, but for them to work you'll first need mike installed, if you don't have it just use the following command:
 
 ```shell
 py -m pip install mike
 ```
 
-Once you've got mike, you'll just need to run this two commands, the first line will add the new version to the docs, and the second one will just set it as the default one so when the user enters to the website it shows this version.
+### Realising a new version
 
-Version will always be a big version to avoid getingg a version for every month, so for example the version 8 will always be 8.x and not 8.1, 8.2, 8.3...
+With mike installed you'll just need to run the following command, replacing the x by the new version number (always an int like 8, 9, 10 because we will only update to avoid overloading help with versions).
+
+This command will automatically create a commit in your git gh-pages with the new version added to the docs folder. After checking the commit changes you'll need to upload so teamcity gets the new version.
 
 ```shell
-py -m mike deploy x.0 latest
-py -m mike set-default x.0
+npm run docs:publish -- x
 ```
 
-## Updating version
+### Updating a version
 
-If instead of creating a new version you just need to update one, it will work with executing this command.
+With mike installed you'll just need to run the following command, replacing the x by the new version number (always an int like 8, 9, 10 because we will only update to avoid overloading help with versions).
+
+This command will automatically create a commit in your git gh-pages with the version selected getting the changes that has been done made like an html to the version docs folder. After checking the commit changes you'll need to upload so teamcity gets the version updated.
 
 ```shell
-py -m mike deploy --update x.0
+npm run docs:update -- x
 ```
