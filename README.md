@@ -47,3 +47,142 @@ This command will automatically create a commit in your git gh-pages with the ve
 ```shell
 npm run docs:update -- x
 ```
+
+## Guidelines
+
+When developing new pages or updating old ones you need to follow some guidelines to make theme more coherent between one another.
+
+- You should never writte to long paragraphs so the user never get overwhelmed, you could use images or block codes to divide texts and make it more readable.
+- You should never use an image as a B64 you'll always save it to its correspondent docs_assets folder and make showing it with a reference to that file.
+- Every title musn't be an order, so instead of writting something like "Add messages" you should writte "Adding messages".
+- You should always use our [custom components](#custom-components) or  [classes](#custom-classes) instead of creating specific ones for your page, unless you think it'll  be something usefull for more pages (if you do so add them to this readme to make people get to know it).
+
+## Custom components
+
+When developing help it's usefull to use reusable components, that's why we have inside the docs/javascript/components folder a bunch of them.
+
+To insert them is as easy as adding them in the markdown file directly like in this example because markdown will interpret that as an html component.
+
+```md
+My paragraph <my-component its="attributes"></my-component> continue my paragraph.
+```
+
+### Copy
+
+```html
+<fh-copy>My text</fh-copy>
+```
+
+When clicked it will copy the text written inside of it to the users clipboard and show a copied message.
+
+Normally you'll want to use it with a [link](#link-class), but you can use whatever class you want.
+
+### Modal
+
+```html
+<fh-modal modal_id="fhnodal_Your_Id" modal_title="Your_Title">My text</fh-modal>
+
+...
+
+    ``js { #fhnodal_Your_Id }
+    console.log("test");
+    ``
+```
+
+When clicked it will show the desired block as a modal, it's normally used to show large block codes or images.
+
+For this component to work properly you need to set the block you want to show as a modal an ID that starts with "fhmodal_" so it get's hidden by default with our styles and onle get's shown when clicked.
+
+Also to make page code more readable you should always set modal block at the end of the page.
+
+Normally you'll want to use it with a [button](#button) or [link](#link-class), but you can use whatever class you want.
+
+| Attribute | Description |
+| --------- | ----------- |
+| modal_id | Must be the same id as the one the block's got so it gets identified by the component |
+| modal_title | This will be the title displayed on top when displaying the modal |
+
+### Popover
+
+```html
+<fh-popover mode="My_Mode" src="My_Image">My text</fh-popover>
+```
+
+It will display an image as a popover (on click) or tooltip (on hover) depending on the image
+
+| Attribute | Description |
+| --------- | ----------- |
+| mode | Must be "tooltip" or "popover" depending if you want it to show on hover or popover |
+| src | The URL of the image (must be saved on its docs_assets folder) |
+
+### Navigation to flexygo
+
+```html
+<flx-navbutton>My text</flx-navbutton>
+```
+
+This is just a translation of the flx-navbutton from flexygo, that's why it starts with "flx-" instead of "fh-" so you can copy one directly from flexygo here.
+
+When clicked it will open in a new page that flexygo page, if help comes from a flexygo it will just open it in that flexygo if it's from the docs.flexygo.com page it will open a modal to writte you own flexygo URL.
+
+Normally you'll want to use it with a [button](#button) or [link](#link-class), but you can use whatever class you want.
+
+## Custom classes
+
+There are multiple classes that you can use to style directly help sections or components and make it more cohesive.
+
+### Link
+
+```md
+My text <span class="link"></span> continue my text
+```
+
+It will just style like a link with it's flexygo text color and cursor pointer on hover.
+
+### Button
+
+```md
+My text <span class="button"></span> continue my text
+```
+
+It will just style like a link with it's flexygo background color and cursor pointer on hover with round borders.
+
+### Warning cards
+
+```md
+My text
+{: .flx-warning-card }
+```
+
+It will make your block have a yellow background with round borders and an info icon on the top left corner.
+
+### Warning cards
+
+```md
+My text
+{: .flx-info-card }
+```
+
+It will make your block have a blue background with round borders.
+
+### Title with images
+
+```md
+# Paco { .flx-title-with-image }
+
+![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .flx-image-of-title }
+```
+
+It will set at the right of the title the iamge you desire, normally used to show the logo of something.
+
+### Youtube videos
+
+```html
+<div class="video-wrapper">  
+    <iframe src="Your_URL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+```
+
+This is a div class that must wrapp the iframes of youtube videos.
+
+This class needs to be used as a html block, that it will automatically be interpreted by markdown, because markdown does not contain iframes by itself.
