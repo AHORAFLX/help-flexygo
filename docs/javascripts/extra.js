@@ -42,14 +42,15 @@ function changeLanguage(new_language) {
 }
 
 
-// We look for any <link> that points into /docs_assets/ and grab its prefix so that will be the base path
+// We look for any <link> that points into /main-flexygo-styles.css and grab that url from before stylesheets so that will know the base path
+// We do it with main-flexygo-styles.css because /docs_assets/ is saved in a different place
 function getBasePath() {
-    const link_element = document.querySelector('link[href*="/docs_assets/"]');
+    const link_element = document.querySelector('link[href*="/main-flexygo-styles.css"]');
     if (!link_element) return '';
     try {
         // We get the prefix up to (but not including) /docs_assets/ and remove the last / if present 
         const url = new URL(link_element.href, window.location.origin);
-        const base_path = url.pathname.split('/docs_assets/')[0];
+        const base_path = url.pathname.split('/stylesheets/')[0];
         
         return base_path.endsWith('/') ? base_path.slice(0, -1) : base_path;
     } catch {
@@ -76,6 +77,11 @@ function navigateToFlexy(json, ctrlKey_pressed) {
             _nav(document.getElementById('navigation-dialog-flexy-url').value);
         } else {
             navigation_dialog.showModal();
+
+            //We focus the end of the input
+            const dialog_input = navigation_dialog.querySelector('input');
+            const input_length = dialog_input.value.length;
+            dialog_input.setSelectionRange(input_length, input_length);
         }
 
         return;
