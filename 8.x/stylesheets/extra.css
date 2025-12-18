@@ -499,3 +499,12 @@ i[data-toggle="collapse"] {
   border-color: var(--outstanding-color);
   border-radius: 2px; 
 }
+
+/* Ocultar otros idiomas en la barra de búsqueda */
+html[lang="es"] .md-search-result__item:not(:has(a[href*="/es/"])) {
+  display: none;
+}
+
+html[lang="en"] .md-search-result__item:has(a[href*="/es/"]) {
+  display: none;
+}
