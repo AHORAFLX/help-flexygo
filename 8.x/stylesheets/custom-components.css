@@ -13,9 +13,10 @@
         max-height: 182px;
         border: var(--flx-border);
         border-radius: var(--flx-border-radius);
+        border-color: var(--flx-table-border-color);
 
         a {
-            color: var(--md-default-fg-color);
+            color: var(--md-typeset-color);
         }
 
         a > * {
