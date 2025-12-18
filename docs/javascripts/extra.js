@@ -1,5 +1,5 @@
 let navigation_dialog;
-addEventListener("DOMContentLoaded", (event) => { 
+addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
 })
 

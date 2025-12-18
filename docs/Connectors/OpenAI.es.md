@@ -4,18 +4,25 @@
 
 **flexygo** busca adaptarse a las tecnologías emergentes y por ello incorpora la integración de ChatGPT a través de la API de OpenAI.
 
-En esta nueva versión podrás crear, configurar y asignar un chat dentro de los tipos de propiedades: multilinea, editor HTML y todos los controles de código (SQL, HTML, CSS, C#), además de poder configurar tus propios *prompts* por defecto.
+En esta nueva versión podrás crear, configurar y asignar un chat dentro de los tipos de propiedades: multilinea, editor HTML y todos los controles de código (SQL, HTML, CSS, C#), además de poder configurar tus propias indicaciones predeterminadas, consultar bases de datos, ejecutar procesos y mucho más!
 
 ## Modelos disponibles
 
-* **[GPT-4o](https://platform.openai.com/docs/models/gpt-4o)**  
-  El modelo más avanzado de OpenAI. Capaz de manejar tareas complejas. Es también el más costoso. Recomendado para tareas exigentes.
+* [GPT-5](https://platform.openai.com/docs/models/gpt-5)
 
-* **[GPT-4o-mini](https://platform.openai.com/docs/models/gpt-4o-mini)**  
-  Una versión rápida y muy económica de GPT-4o. Diseñada para tareas simples. No recomendada para problemas complejos.
+  El modelo LLM más avanzado de OpenAI. Este modelo puede manejar tareas complejas en muchos temas. También es el más caro. Recomendado cuando las tareas son realmente duraderas.
 
-* **[GPT-3.5-turbo](https://platform.openai.com/docs/models/gpt-3-5-turbo)**  
-  El modelo original de ChatGPT. Se sitúa entre GPT-4o y GPT-4o-mini en inteligencia, velocidad y coste.
+* [GPT-5-mini](https://platform.openai.com/docs/models/gpt-5-mini)
+
+  Una versión más rápida y económica de GPT-5. Aunque está diseñado para tareas más sencillas, debería ser capaz de proporcionar soluciones para la mayoría de las tareas.
+
+* [GPT-5-nano](https://platform.openai.com/docs/models/gpt-5-nano)
+
+  La versión más rápida y barata de GPT-5. No se recomienda para proporcionar soluciones muy complejas y puede producir errores cuando la tarea es difícil.
+
+* [GPT-4o-mini](https://platform.openai.com/docs/models/gpt-4o-mini)
+
+  La versión anterior de GPT. A diferencia de los modelos gpt-5, no se puede especificar el razonamiento y la verbosidad. Además, no se recomienda para tareas complejas.
 
 ## Configuración
 
@@ -52,25 +59,21 @@ En esta nueva versión podrás crear, configurar y asignar un chat dentro de los
    ![Field selector](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector_dark.png#only-dark "Image 6. Database field selector"){data-gallery="dark"}
 
    Busca las tablas necesarias pulsando el icono **+** y selecciónalas.
-   {: .flx-warning-card }
 
    ![Table selector](/docs_assets/images/openAI/chatgpt_dbconnection_tableselector.png#only-light "Image 7. ChatGPT tables selector"){data-gallery="light"}
    ![Table selector](/docs_assets/images/openAI/chatgpt_dbconnection_tableselector_dark.png#only-dark "Image 7. ChatGPT tables selector"){data-gallery="dark"}
 
    Selecciona los campos a los que el chatbot podrá acceder (doble clic en el título para marcar todos).
-   {: .flx-warning-card }
 
    ![Field selector 2](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector3.png#only-light "Image 8. ChatGPT fields selector"){data-gallery="light"}
    ![Field selector 2](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector3_dark.png#only-dark "Image 8. ChatGPT fields selector"){data-gallery="dark"}
 
    Podrás ver claves primarias, foráneas y relaciones pasando el cursor sobre cada campo.  
-   {: .flx-warning-card }
 
    ![Related fields](/docs_assets/images/openAI/chatgpt_dbconnection_relatedfields.png#only-light "Image 9. ChatGPT related fields"){data-gallery="light"}
    ![Related fields](/docs_assets/images/openAI/chatgpt_dbconnection_relatedfields_dark.png#only-dark "Image 9. ChatGPT related fields"){data-gallery="dark"}
 
    Puedes añadir automáticamente tablas relacionadas con las claves foráneas usando las flechas.
-   {: .flx-warning-card }
 
 ## Llamada a procesos desde ChatGPT
 
@@ -121,3 +124,108 @@ Finalmente, tendrás acceso directo al chat desde la propiedad:
 
 ![ChatGPT in property](/docs_assets/images/openAI/chatgpt_in_property.png#only-light "Image 15 Property with ChatGPT"){data-gallery="light"}
 ![ChatGPT in property](/docs_assets/images/openAI/chatgpt_in_property_dark.png#only-dark "Image 15 Property with ChatGPT"){data-gallery="dark"}
+
+## Con la WebAPI de FlexyGo
+
+Si has creado tus propios asistentes y flujos de trabajo y quieres utilizarlos fuera de la plataforma de FlexyGo, no te preocupes, es posible **usando la WebAPI**.
+
+Debes habilitarla y conceder permisos al proceso **WebAPI_AIRequest**. Una vez tengas un token válido, ¡puedes empezar a realizar solicitudes a este endpoint!
+
+### Estructura de la solicitud
+
+Esta es la estructura del cuerpo JSON que debe enviarse en la solicitud:
+
+```json
+{
+  "assistantId": "string",
+
+  "newMessage": [
+    {
+      "type": "text" | "image_url" | "file",
+
+      // Si type = "text"
+      "text": "string",
+
+      // Si type = "image_url"
+      "image_url": {
+        "url": "string"
+      },
+
+      // Si type = "file"
+      "file": {
+        "filename": "string",
+        "file_data": "string"
+      }
+    }
+  ],
+
+  "conversationId": "string (opcional)",
+  "conversationType": "string (opcional)", // "Chat" por defecto
+
+  "defaults": [ // Opcional
+    {
+      "key": "string",
+      "value": "string"
+    }
+  ]
+}
+```
+
+### Ejemplo de solicitud
+
+```json
+{
+    "assistantId": "Helper",
+    "newMessage": [
+        {
+            "type": "image_url",
+            "image_url": {
+                "url": "data:image/png;base64,..."
+            }
+        },
+        {
+            "type": "text",
+            "text": "Describeme la imagen"
+        }
+    ],
+    "defaults": [
+        {
+            "key": "name",
+            "value": "Ismael"
+        }
+    ]
+}
+```
+
+### Ejemplo de respuesta
+
+```json
+{
+    "Success": true,
+    "SuccessMessage": "Proceso ejecutado correctamente",
+    "WarningMessage": "",
+    "LastException": null,
+    "LastAfterProcessName": null,
+    "LastProcessName": null,
+    "MoreProcesses": false,
+    "JSCode": "",
+    "JSFile": "",
+    "Data": {
+        "ConversationId": "c6a3f9ab-371a-4c03-a348-c4330e0557b1",
+        "Result": {
+            "choices": [
+                {
+                    "message": {
+                        "content": "La imagen muestra un panda con gafas, que está vestido con una camisa de color claro. El panda tiene una expresión amigable y parece estar en un ambiente tranquilo. Si necesitas más información, házmelo saber.",
+                        "role": "assistant"
+                    }
+                }
+            ]
+        }
+    },
+    "CloseParamWindow": false,
+    "ClearSelectionBag": false,
+    "Refresh": true,
+    "LastExecutedProcess": null
+}
+```
