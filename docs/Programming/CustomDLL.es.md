@@ -31,7 +31,7 @@ En algunos casos, es necesario programar funcionalidades que flexygo no tiene. P
 5.   Compilar la DLL personalizada y agregarla a la carpeta ~/custom/bin
 6.   Configurar su proceso dentro de flexygo, visualizar imagen (Imagen 1.) 
     
-    ![](img/Help/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
+![Custom DLL configuration example](/docs_assets/images/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
     
 
 ## C# Personalizado

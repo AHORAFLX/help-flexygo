@@ -31,7 +31,7 @@ In some cases it's necessary to program functionalities which **flexygo** doesn'
 5.  Compile custom DLL and add it to the folder ~/custom/bin
 6.  Configure your process inside **flexygo**, visualize image (Image 1.)
     
-    ![](img/Help/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
+![Custom DLL configuration example](/docs_assets/images/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
     
 
 ## Custom C\#

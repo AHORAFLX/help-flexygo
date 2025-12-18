@@ -28,6 +28,7 @@ class FlxNavButton extends HTMLElement {
         tabledescrip: this.getAttribute('tabledescrip'),
         defaults: this.getAttribute('defaults'),
         pagetypeid: this.getAttribute('pagetypeid'),
+        helpid: this.getAttribute('helpid'),
         filtersValues:null,
         presetsValues:null,
         //userid:"1",
