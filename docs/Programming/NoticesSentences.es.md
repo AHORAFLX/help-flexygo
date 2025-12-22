@@ -1,67 +1,68 @@
-# Frases de Notificación
+# Sentencia de Notificación
 
-Las frases de notificación son una utilidad para gestionar alertas automáticas, ya sea a través de advertencias en pantalla, notificaciones push o envío de correos electrónicos. Consiste en automatizar un proceso para añadir registros a las tablas del sistema Notices, Notices\_Users y/o Mails\_Outbox. Para utilizar las frases de notificación debemos definir 2 cosas: una frase de notificación y una tarea cron.
+Las frases de notificación son una utilidad para gestionar alertas automáticas, ya sea a través de advertencias en pantalla, notificaciones push o envío de correos electrónicos. Consiste en automatizar un proceso para añadir registros a las tablas del sistema Notices, Notices\_Users y/o Mails\_Outbox. Para utilizar las frases de notificación debemos definir 2 cosas: una sentencia de notificación y una tarea cron.
 
-*   **La frase de notificación**: consiste en definir consultas en SQL que nos proporcionarán la información para incluir en las tablas de notificación.
+*   **La sentencia de notificación**: consiste en definir consultas en SQL que nos proporcionarán la información para incluir en las tablas de notificación.
 *   **La tarea cron**: se utiliza para definir cuándo queremos que se generen las notificaciones.
 
-## Notificaciones
+## Notificaciones 
 
 Es la forma en que el sistema puede enviar notificaciones push o mostrar alertas en la pantalla. Esto se muestra con una lista en un ícono que se ilumina cuando el usuario tiene mensajes no leídos. Para generar una notificación, es suficiente con añadir un registro en la tabla "Notices", y si necesitamos que la notificación se muestre para un grupo de usuarios, debemos añadirlos como registros en la tabla "Notices\_Users".
 
-Para que funcione, la tarea cron llamada **UpdateNoticeBadge** debe estar activa.
+Para que funcione, el cron **UpdateNoticeBadge** debe estar activo.
 {: .flx-warning-card }
 
 ## Frases
 
-En primera instancia, definiremos una frase de notificación indicando una descripción, una tarea cron y la cadena de conexión (base de datos donde se realizarán las consultas SQL).
+En primera instancia, definiremos una sentencia de notificación indicando una descripción, una tarea cron y la cadena de conexión (base de datos donde se realizarán las consultas SQL).
 
 ### Frases de Notificación
 
-Utiliza la Frase de Notificación para seleccionar qué campos se colocarán en la Tabla de Notificaciones.
+Utiliza la sentencia de notificación para seleccionar qué campos se colocarán en la Tabla de Notificaciones.
 
 Recuerda que la tabla de notificaciones funciona de manera similar a un nodo de navegación.
 {: .flx-warning-card }
 
 ```sql
-SELECT 'Nuevas acciones pendientes' as <b>Título</b>,
-'Tienes una nueva acción pendiente' as <b>Mensaje</b>,
-cast(getdate() as smallDatetime) as <b>HoraRecordatorio</b>, 
-cast(Dateadd(WEEK,1,getdate()) as smalldatetime) as <b>HoraExpiración</b>, 
-'app' as <b>NombreMétodo</b>, 
-0 as <b>TodasLosUsuarios</b>, 
-'object' as <b>IdTipo</b>, 
-'action' as <b>NombreObjeto</b>, 
-'EstadoAcción=0' as <b>ObjetoDonde</b>, 
-'list' as <b>IdTipoPágina</b>, 
-EmployeeId as <b>ReferenciaActual</b>
+SELECT 'Nuevas acciones pendientes' as <b>Title</b>,
+'Tienes una nueva acción pendiente' as <b>Message</b>,
+cast(getdate() as smallDatetime) as <b>ReminderTime</b>, 
+cast(Dateadd(WEEK,1,getdate()) as smalldatetime) as <b>ExpiryTime</b>, 
+'app' as <b>MethodName</b>, 
+0 as <b>AllUsers</b>, 
+'object' as <b>TypeId</b>, 
+'action' as <b>ObjectName</b>, 
+'EstadoAcción=0' as <b>ObjectWhere</b>, 
+'list' as <b>PageTypeId</b>, 
+EmployeeId as <b>CurrentReference</b>
 FROM ...
 ```
 
 | Propiedad | Descripción | Requerido |
 | --- | --- | --- |
-| **Título** | Título de la Notificación | ✓ |
-| **Mensaje de Notificación** | Usar un Marcado HTML | ✓ |
-| **Nombre del Método** | **App** Notificación, **Push** notificación, **PushMobile** solo para notificación de dispositivo móvil o **Pushweb** solo para notificación de navegador web | ✓ |
-| **Hora de Recordatorio** | Desde cuándo debería aparecer | ✓ |
-| **Fecha de Expiración** | La notificación debería desaparecer | ✓ |
-| **Todas Los Usuarios** | Si se establece en falso, recuerda completar la frase de usuario de la notificación | ✓ |
-| **IdTipo** | Uno de los tipos de nodo válidos: Enlace de Objeto (object), Enlace de Página (page), Proceso (process), Texto (text), etc. | ✓ |
-| **ReferenciaActual** | Valor correspondiente al campo "Referencia" del usuario de Flexygo. Puede contener múltiples valores separados por ";". Con esto evitas tener que poner una declaración de usuario. |     |
-| **IdUsuario** | Valor correspondiente al campo "Id" del usuario de Flexygo. Puede contener múltiples valores separados por ";". Con esto evitas tener que poner una declaración de usuario. Si usas el campo ReferenciaActual, no necesitas especificarlo. |     |
-| **EventoDespuésDeClic** | Ejecutar tu propia función después del clic |     |
-| **ClaseCss** |     |     |
-| **NombreObjeto** | Enlace clic a un objeto |     |
-| **ObjetoDonde** | Enlace clic a un objeto |     |
-| **IdTipoPágina** | Enlace clic a un tipo de página |     |
-| **NombrePágina** | Enlace clic a un nombre de página |     |
-| **NombreReporte** | Enlace clic al nombre del reporte |     |
-| **ParametrosReporte** | Enlace clic al reporte con parámetros |     |
-| **NombreProceso** | Enlace clic al nombre del proceso |     |
-| **Parámetros** | Para parámetros de proceso |     |
-| **IdAyuda** | Enlace clic a ayuda |     |
-| **URL** | Enlace clic a una url externa |     |
-| **NombreTabla** | Enlace clic a la tabla maestra |     |
+| **Title** | Título de la notificación | ✓ |
+| **Message** | El mensaje de la notificación, para el cual deberá usar marcado HTML | ✓ |
+| **MethodName** | Notificación <fh-copy class="link">App</fh-copy>, notificación <fh-copy class="link">Push</fh-copy>, <fh-copy class="link">PushMobile</fh-copy> solo para notificaciones en dispositivos móviles o <fh-copy class="link">Pushweb</fh-copy> solo para notificaciones en navegadores web | ✓ |
+| **ReminderTime** | Fecha y hora en la que se enviará la notificación | ✓ |
+| **ExpiryTime** | Fecha y hora en la que la notificación expirará | ✓ |
+| **AllUsers** | Enviar la notificación a todos los usuarios; si se establece en false, recuerde rellenar la sentencia de usuarios de la notificación | ✓ |
+| **TypeId** | Uno de los tipos de nodo válidos: Enlace a objeto (object), Enlace a página (page), Proceso (process), Texto (text), etc. | ✓ |
+| **CurrentReference** | Valor correspondiente al campo «Reference» del usuario de Flexygo. Puede contener múltiples valores separados por “;”. Con esto se evita tener que indicar una sentencia de usuarios. | |
+| **UserId** | Valor correspondiente al campo «Id» del usuario de Flexygo. Puede contener múltiples valores separados por “;”. Con esto se evita tener que indicar una sentencia de usuarios. Si se utiliza el campo CurrentReference, no es necesario especificarlo. | |
+| **AfterClickEvent** | Código JavaScript que se ejecutará después de hacer clic en la notificación | |
+| **CssClass** | Clase CSS aplicada a la notificación | |
+| **ObjectName** | Nombre del objeto si necesita enlazar a uno al hacer clic | |
+| **ObjectWhere** | Condición (where) del objeto si necesita enlazar a uno al hacer clic | |
+| **PageTypeId** | Id del tipo de página si necesita enlazar a una al hacer clic | |
+| **PageName** | Nombre de la página si necesita enlazar a una al hacer clic | |
+| **ReportName** | Nombre del informe si necesita enlazar a uno al hacer clic | |
+| **ReportParams** | Parámetros del informe si necesita enlazar a uno al hacer clic | |
+| **ProcessName** | Nombre del proceso si necesita enlazar a uno al hacer clic | |
+| **Params** | Parámetros del proceso si necesita enlazar a uno al hacer clic | |
+| **HelpId** | Id de la página de ayuda si necesita enlazar a una al hacer clic | |
+| **URL** | Una URL si necesita enlazar a ella al hacer clic | |
+| **TableName** | Nombre de la tabla si necesita enlazar a una al hacer clic | |
+
 
 _Ejemplo:_ "Próximas ofertas que expiran"
 
@@ -91,11 +92,11 @@ FROM (
 GROUP BY EmployeeId
 ```
 
-### Frase de Notificación de Usuario
+### sentencia de notificación de Usuario
 
  Si no has utilizado la referencia al usuario en la declaración principal de notificación, puedes establecer qué usuarios recibirán la notificación usando una consulta SQL, en la que puedes especificar el identificador de usuario (IdUsuario) o la referencia (ReferenciaActual).
 
-Utiliza "Frase de Notificación de Usuario" para seleccionar qué IdUsuario debería recibir la notificación.
+Utiliza "sentencia de notificación de Usuario" para seleccionar qué IdUsuario debería recibir la notificación.
 Recuerda que el IdUsuario debe obtenerse de la Base de Datos de Configuración.
 
 ```sql

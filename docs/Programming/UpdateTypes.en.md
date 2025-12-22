@@ -6,8 +6,10 @@
 | --- | --- |
 | Standard | Does a direct insert, update or delete to the database, based on object properties |
 | Dll Process | Allows us to create a dll to perform the insert, delete and update |
+| C# Embedded | It allows us to create the insertion, deletion, and updating of an object with embedded C# |
 | Stored Procedure XML | Allows us to do additional operatiosn without having to create a DLL process |
 | Stored Procedure JSON | Allows us to do additional operatiosn without having to create a DLL process |
+| Ahora Freeware Stored | Performs an insertion, update, or deletion based on AHORA ERP stored procedures (if not performed in standard mode). In an additional object, it is assumed that the main object performs the insertion into the additional table |
 | Does absolutly nothing | Does nothing :) |
 
 There is a fifth mode called Ahora Freeware Stored procedure to be used when working with Ahora Freeware ERP data Model

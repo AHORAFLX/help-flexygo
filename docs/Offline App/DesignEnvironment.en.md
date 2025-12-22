@@ -1,5 +1,3 @@
-App description Common JS Functions Creating App Design Environment Designing App Navigation Options Return Data Process Useful Tokens Tracking Configuration Database Debugging App/Emulator differences Offline AI
-
 # Design environment
 
 Once the application is saved, we will familiarize ourselves with the design environment of the application.

@@ -37,23 +37,17 @@ Puedes usar el proceso estándar de pago y vincularlo directamente a un objeto:
 
 ![](/docs_assets/images/RedSys/RedSys_6.png "Image 4. RedSys configuration")
 
-También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago  
-<fh-copy class="link">FLEXYGO.PaymentsProcess.PayRequest</fh-copy>.  
-
-Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.  
+También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago (<fh-copy class="link">FLEXYGO.PaymentsProcess.PayRequest</fh-copy>(). Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.  
 Si no se especifica el campo de cantidad, el importe se obtendrá del campo indicado en la relación del objeto con RedSys.
 
 ## Log
 
-Todas las transacciones realizadas con RedSys quedan registradas en un log que indica su estado y la respuesta recibida.  
-<flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Logs" showprogress="false">Ir al Log de RedSys</flx-navbutton>.
+Todas las transacciones realizadas con RedSys quedan registradas en un log que indica su estado y la respuesta recibida. <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Logs" showprogress="false">Ir al Log de RedSys</flx-navbutton>.
 
-Para conocer el significado de los códigos de respuesta, visita el siguiente  
-[**enlace**](https://pagosonline.redsys.es/codigosRespuesta.html#codigo-dsresponse).
+Para conocer el significado de los códigos de respuesta, visita el siguiente [**enlace**](https://pagosonline.redsys.es/codigosRespuesta.html#codigo-dsresponse).
 {: .flx-warning-card }
 
 ## Pruebas
 
 RedSys dispone de un entorno de pruebas donde se puede verificar el correcto funcionamiento antes de la implantación real.  
-Para más información visita el siguiente  
-[**enlace**](https://pagosonline.redsys.es/entornosPruebas.html).
+Para más información visita el siguiente [**enlace**](https://pagosonline.redsys.es/entornosPruebas.html).

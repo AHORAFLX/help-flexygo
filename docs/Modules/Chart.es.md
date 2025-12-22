@@ -1,6 +1,6 @@
 # Chart
 
-Easy Pie, Easy Info, Easy Line y Sparklines son algunos de los componentes web que puedes usar para crear gráficos. Combinados en un módulo HTML, puedes obtener resultados similares a los siguientes:
+**Easy Pie**, **Easy Info**, **Easy Line** y **Sparklines** son algunos de los componentes web que puedes usar para crear gráficos. Combinados en un módulo HTML, puedes obtener resultados similares a los siguientes:
 
 ![Sample charts](/docs_assets/images/Charts/Main.png "Sample charts")
 
@@ -121,7 +121,7 @@ Usa cualquiera de los tres tamaños: small, medium o large.
 1. Añade tu sentencia SQL al módulo
 2. Indica tus parámetros EasyPie básicos
 3. Indica tus parámetros EasyPie básicos con sentencia SQL
-4. Indica opciones JSON de EasyPie opcionales
+4. Indica opciones JSON de EasyPie opcionales, las que puedes ver [aquí](https://rendro.github.io/easy-pie-chart/).
 5. Indica parámetros básicos y JSON con sentencia SQL
 
 Sentencia SQL:

@@ -10,8 +10,6 @@ Cl@ve stands for "Identificación Electrónica para las Administraciones Públic
 
 ![Cl@ve Authentication](/docs_assets/images/clave/clave_preview.png "Image 1. Cl@ve Authentication")
 
-Image 1. Cl@ve Authentication
-
 ## How it Works
 
 To begin using this new authentication method, the first step is to register as a Service Provider (SP) with Cl@ve. This registration is essential because it involves requesting sensitive citizen information, and Cl@ve must validate that you meet the necessary requirements to access and use this data. You can find the required documentation in the [Cl@ve Directory](https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip "Cl@ve Directory").

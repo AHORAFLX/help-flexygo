@@ -1,4 +1,4 @@
-# Esqueletos
+# Esqueletos de carga
 
 Al cargar un módulo, siempre es bueno mostrar al usuario que algo está sucediendo, así que aquí es donde entran en juego los esqueletos.
 

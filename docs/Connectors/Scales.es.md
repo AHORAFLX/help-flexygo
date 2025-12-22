@@ -1,6 +1,6 @@
 # Integración con Básculas
 
-**flexygo** incluye integración con básculas que utilizan el protocolo estándar Samsung ES.
+**Flexygo** incluye integración con básculas que utilizan el protocolo estándar Samsung ES.
 
 ## Configuración
 

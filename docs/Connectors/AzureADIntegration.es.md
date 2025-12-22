@@ -47,7 +47,7 @@ Para asignar usuarios:
 Una vez tengas todas las claves necesarias y configuradas las URLs de redirección y cierre de sesión, puedes ejecutar el siguiente proceso:
 
 <flx-navbutton class="button" type="execprocess" processname="pNet_AzureIntegration" showprogress="false">
-    Generate Azure AD Integration
+    Generar integración con Azure AD
 </flx-navbutton>
 
 ## Configuración

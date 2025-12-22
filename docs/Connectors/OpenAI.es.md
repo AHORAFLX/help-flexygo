@@ -2,7 +2,7 @@
 
 ![openAI](/docs_assets/images/openAI/chatgpt-icon.svg){ .flx-image-of-title }
 
-**flexygo** busca adaptarse a las tecnologías emergentes y por ello incorpora la integración de ChatGPT a través de la API de OpenAI.
+**Flexygo** busca adaptarse a las tecnologías emergentes y por ello incorpora la integración de ChatGPT a través de la API de OpenAI.
 
 En esta nueva versión podrás crear, configurar y asignar un chat dentro de los tipos de propiedades: multilinea, editor HTML y todos los controles de código (SQL, HTML, CSS, C#), además de poder configurar tus propias indicaciones predeterminadas, consultar bases de datos, ejecutar procesos y mucho más!
 
@@ -26,74 +26,77 @@ En esta nueva versión podrás crear, configurar y asignar un chat dentro de los
 
 ## Configuración
 
-1. Abre la ventana de configuración:  
-   <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysChatGPT_Settings" objectwhere="" defaults="" targetid="popup800x600" excludehist="false">Open ChatGPT settings</flx-navbutton>  
-   Si no sabes cómo generar un API Key puedes leer [este artículo](https://www.splendidfi.com/blog/how-to-get-an-openai-api-key-for-chatgpt).
-   {: .flx-warning-card }
+1. <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysChatGPT_Settings" objectwhere="" defaults="" targetid="popup800x600" excludehist="false">Abre la ventana de configuración de ChatGPT</flx-navbutton> y crea una nueva configuración de chat.
 
-   ![ChatGPT setting page](/docs_assets/images/openAI/chatgpt_setting.png#only-light "Image 1. ChatGPT setting page"){data-gallery="light"}
-   ![ChatGPT setting page](/docs_assets/images/openAI/chatgpt_setting_dark.png#only-dark "Image 1. ChatGPT setting page"){data-gallery="dark"}
+    Si no sabes cómo generar un API Key puedes leer [este artículo](https://www.splendidfi.com/blog/how-to-get-an-openai-api-key-for-chatgpt).
+    {: .flx-warning-card }
 
-2. **(Opcional)** Configura tus *prompts* personalizados que aparecerán en el chat.
+    ![ChatGPT setting page](/docs_assets/images/openAI/chatgpt_setting.png#only-light "Image 1. ChatGPT setting page"){data-gallery="light"}
+    ![ChatGPT setting page](/docs_assets/images/openAI/chatgpt_setting_dark.png#only-dark "Image 1. ChatGPT setting page"){data-gallery="dark"}
 
-   ![ChatGPT prompts list](/docs_assets/images/openAI/chatgpt_prompts_list.png#only-light "Image 2. ChatGPT prompts list"){data-gallery="light"}
-   ![ChatGPT prompts list](/docs_assets/images/openAI/chatgpt_prompts_list_dark.png#only-dark "Image 2. ChatGPT prompts list"){data-gallery="dark"}
+2. **(Opcional)** Tras guardar los ajustes del chat configura tus *prompts* personalizados para que aparezcan en este.
 
-   ![ChatGPT chat](/docs_assets/images/openAI/chatgpt_chat.png#only-light "Image 3. ChatGPT chat"){data-gallery="light"}
-   ![ChatGPT chat](/docs_assets/images/openAI/chatgpt_chat_dark.png#only-dark "Image 3. ChatGPT chat"){data-gallery="dark"}
+    ![ChatGPT prompts list](/docs_assets/images/openAI/chatgpt_prompts_list.png#only-light "Image 2. ChatGPT prompts list"){data-gallery="light"}
+    ![ChatGPT prompts list](/docs_assets/images/openAI/chatgpt_prompts_list_dark.png#only-dark "Image 2. ChatGPT prompts list"){data-gallery="dark"}
 
-   Puedes referenciar la propiedad a la que se asigne el ChatGPT usando `{{Value}}` o cualquier propiedad del objeto.
-   {: .flx-warning-card }
+    ![ChatGPT chat](/docs_assets/images/openAI/chatgpt_chat.png#only-light "Image 3. ChatGPT chat"){data-gallery="light"}
+    ![ChatGPT chat](/docs_assets/images/openAI/chatgpt_chat_dark.png#only-dark "Image 3. ChatGPT chat"){data-gallery="dark"}
 
-   ![ChatGPT prompt configuration](/docs_assets/images/openAI/chatgpt_prompts.png#only-light "Image 4. ChatGPT prompt configuration page"){data-gallery="light"}
-   ![ChatGPT prompt configuration](/docs_assets/images/openAI/chatgpt_prompts_dark.png#only-dark "Image 4. ChatGPT prompt configuration page"){data-gallery="dark"}
+    Como puedes ver en la siguiente imagen puedes hacer referencia a las propiedades de un objeto usando `{{Nombre_De_La_Propiedad}}` .
+    {: .flx-warning-card }
 
-## Acceso a la base de datos desde ChatGPT
+    ![ChatGPT prompt configuration](/docs_assets/images/openAI/chatgpt_prompts.png#only-light "Image 4. ChatGPT prompt configuration page"){data-gallery="light"}
+    ![ChatGPT prompt configuration](/docs_assets/images/openAI/chatgpt_prompts_dark.png#only-dark "Image 4. ChatGPT prompt configuration page"){data-gallery="dark"}
+
+    ## ChatGPT con acceso a la base de datos
 
 3. **(Opcional)** Tras guardar la configuración, puedes habilitar el acceso del chatbot a tu base de datos.
 
-   ![DB option](/docs_assets/images/openAI/chatgpt_dbconnection.png#only-light "Image 5. ChatGPT access database option"){data-gallery="light"}
-   ![DB option](/docs_assets/images/openAI/chatgpt_dbconnection_dark.png#only-dark "Image 5. ChatGPT access database option"){data-gallery="dark"}
+    ![DB option](/docs_assets/images/openAI/chatgpt_dbconnection.png#only-light "Image 5. ChatGPT access database option"){data-gallery="light"}
+    ![DB option](/docs_assets/images/openAI/chatgpt_dbconnection_dark.png#only-dark "Image 5. ChatGPT access database option"){data-gallery="dark"}
 
-   ![Field selector](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector.png#only-light "Image 6. Database field selector"){data-gallery="light"}
-   ![Field selector](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector_dark.png#only-dark "Image 6. Database field selector"){data-gallery="dark"}
+    ![Field selector](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector.png#only-light "Image 6. Database field selector"){data-gallery="light"}
+    ![Field selector](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector_dark.png#only-dark "Image 6. Database field selector"){data-gallery="dark"}
 
-   Busca las tablas necesarias pulsando el icono **+** y selecciónalas.
+    Busca las tablas necesarias pulsando el icono **+** y selecciónalas.
 
-   ![Table selector](/docs_assets/images/openAI/chatgpt_dbconnection_tableselector.png#only-light "Image 7. ChatGPT tables selector"){data-gallery="light"}
-   ![Table selector](/docs_assets/images/openAI/chatgpt_dbconnection_tableselector_dark.png#only-dark "Image 7. ChatGPT tables selector"){data-gallery="dark"}
+    ![Table selector](/docs_assets/images/openAI/chatgpt_dbconnection_tableselector.png#only-light "Image 7. ChatGPT tables selector"){data-gallery="light"}
+    ![Table selector](/docs_assets/images/openAI/chatgpt_dbconnection_tableselector_dark.png#only-dark "Image 7. ChatGPT tables selector"){data-gallery="dark"}
 
-   Selecciona los campos a los que el chatbot podrá acceder (doble clic en el título para marcar todos).
+    Selecciona los campos a los que el chatbot podrá acceder (doble clic en el título para marcar todos).
 
-   ![Field selector 2](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector3.png#only-light "Image 8. ChatGPT fields selector"){data-gallery="light"}
-   ![Field selector 2](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector3_dark.png#only-dark "Image 8. ChatGPT fields selector"){data-gallery="dark"}
+    ![Field selector 2](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector3.png#only-light "Image 8. ChatGPT fields selector"){data-gallery="light"}
+    ![Field selector 2](/docs_assets/images/openAI/chatgpt_dbconnection_fieldselector3_dark.png#only-dark "Image 8. ChatGPT fields selector"){data-gallery="dark"}
 
-   Podrás ver claves primarias, foráneas y relaciones pasando el cursor sobre cada campo.  
+    Podrás ver claves primarias, foráneas y relaciones pasando el cursor sobre cada campo. Ahora solo queda guardar y tu chatbot podrá lanzar consultas.
 
-   ![Related fields](/docs_assets/images/openAI/chatgpt_dbconnection_relatedfields.png#only-light "Image 9. ChatGPT related fields"){data-gallery="light"}
-   ![Related fields](/docs_assets/images/openAI/chatgpt_dbconnection_relatedfields_dark.png#only-dark "Image 9. ChatGPT related fields"){data-gallery="dark"}
+    ![Related fields](/docs_assets/images/openAI/chatgpt_dbconnection_relatedfields.png#only-light "Image 9. ChatGPT related fields"){data-gallery="light"}
+    ![Related fields](/docs_assets/images/openAI/chatgpt_dbconnection_relatedfields_dark.png#only-dark "Image 9. ChatGPT related fields"){data-gallery="dark"}
 
-   Puedes añadir automáticamente tablas relacionadas con las claves foráneas usando las flechas.
+    También puedes añadir automáticamente tablas relacionadas con las claves foráneas usando las flechas que aparecen en dichas columnas.
 
-## Llamada a procesos desde ChatGPT
+    ## Llamada a procesos desde ChatGPT
 
-4. **(Opcional)** Puedes permitir que el asistente ejecute procesos de flexygo.  
-   Es recomendable que los procesos y sus parámetros tengan una descripción clara.
-   {: .flx-warning-card }
+4. **(Opcional)** Una vez configurado el asistente puedes también hacer que ejecute procesos de flexygo.
+    
+    Es altamente recomendable que los procesos y sus parámetros tengan una descripción clara.
+    {: .flx-warning-card }
 
-   ![Process switch](/docs_assets/images/openAI/chatgpt_processes_switch.png#only-light "Image 10. ChatGPT Processes Switch"){data-gallery="light"}
-   ![Process switch](/docs_assets/images/openAI/chatgpt_processes_switch_dark.png#only-dark "Image 10. ChatGPT Processes Switch"){data-gallery="dark"}
+    ![Process switch](/docs_assets/images/openAI/chatgpt_processes_switch.png#only-light "Image 10. ChatGPT Processes Switch"){data-gallery="light"}
+    ![Process switch](/docs_assets/images/openAI/chatgpt_processes_switch_dark.png#only-dark "Image 10. ChatGPT Processes Switch"){data-gallery="dark"}
 
-   Si el proceso tiene *SuccessMessage*, ChatGPT podrá usarlo para responder al usuario.
-   {: .flx-warning-card }
+    Si el proceso tiene *SuccessMessage*, ChatGPT podrá usarlo para responder al usuario.
+    {: .flx-warning-card }
 
-   ![Processes module](/docs_assets/images/openAI/chatgpt_processes_module.png#only-light "Image 11. ChatGPT Processes Module"){data-gallery="light"}
-   ![Processes module](/docs_assets/images/openAI/chatgpt_processes_module_dark.png#only-dark "Image 11. ChatGPT Processes Module"){data-gallery="dark"}
+    ![Processes module](/docs_assets/images/openAI/chatgpt_processes_module.png#only-light "Image 11. ChatGPT Processes Module"){data-gallery="light"}
+    ![Processes module](/docs_assets/images/openAI/chatgpt_processes_module_dark.png#only-dark "Image 11. ChatGPT Processes Module"){data-gallery="dark"}
 
-   ![Processes form](/docs_assets/images/openAI/chatgpt_processes_form.png#only-light "Image 12. ChatGPT Processes Form"){data-gallery="light"}
-   ![Processes form](/docs_assets/images/openAI/chatgpt_processes_form_dark.png#only-dark "Image 12. ChatGPT Processes Form"){data-gallery="dark"}
+    Puedes vincular cualquier proceso flexygo con el asistente. Se recomienda utilizar GPT-5 si los procesos son complejos o hay muchos vinculados.
 
-## ChatGPT Logs
+    ![Processes form](/docs_assets/images/openAI/chatgpt_processes_form.png#only-light "Image 12. ChatGPT Processes Form"){data-gallery="light"}
+    ![Processes form](/docs_assets/images/openAI/chatgpt_processes_form_dark.png#only-dark "Image 12. ChatGPT Processes Form"){data-gallery="dark"}
+
+    ## ChatGPT Logs
 
 5. Cuando los usuarios comiencen a conversar con el chatbot, podrás revisar los mensajes desde el botón **Conversations**.
 

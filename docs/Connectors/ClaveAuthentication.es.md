@@ -16,15 +16,12 @@ Permite varios métodos de autenticación, entre ellos:
 
 ![Cl@ve Authentication](/docs_assets/images/clave/clave_preview.png "Image 1. Cl@ve Authentication")
 
-Imagen 1. Autenticación Cl@ve
-
 ## Cómo funciona
 
 Para comenzar a utilizar este nuevo método de autenticación, el primer paso es **registrarse como Proveedor de Servicios (SP)** en la plataforma Cl@ve.  
 Este registro es obligatorio ya que solicitarás información sensible de los ciudadanos, y Cl@ve debe validar que cumples los requisitos necesarios para acceder y usar dichos datos.
 
-La documentación requerida se puede encontrar en el  
-[Directorio de Cl@ve](https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip "Cl@ve Directory").
+La documentación requerida se puede encontrar en el [Directorio de Cl@ve](https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip "Cl@ve Directory").
 
 Tras completar el registro como SP y definir el certificado electrónico para validar las solicitudes SAML (información incluida en la documentación indicada), puedes proceder a activar la autenticación mediante Cl@ve:
 
@@ -39,8 +36,7 @@ Configura los siguientes parámetros en:
 
 **Admin Area → Environment → Settings → Security**
 
-o haciendo clic en:  
-<flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton>
+o haciendo clic en: <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton>
 
 Una vez que el usuario completa el registro mediante Cl@ve, se ejecuta el proceso **NewUserFromClave**, que crea un nuevo usuario aplicando los valores de perfil, rol y lenguaje por defecto.  
 Estos parámetros pueden ser modificados por el Administrador.

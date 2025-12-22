@@ -10,8 +10,8 @@ Crea y configura el proyecto en [console de Google](https://console.cloud.google
 
 En el siguiente ejemplo puedes obtener una colección de contactos de la carpeta de contactos predeterminada del usuario que ha iniciado sesión.
 
-1.   Primero, obtén y almacena el proceso de token requerido <flx-navbutton class="link" type="execprocess" processname="GetGoogleToken" defaults="{'service':'contacts'}" showprogress="false">obtener token de Google</flx-navbutton>.
-2.  Luego, obtén tus contactos con  <flx-navbutton class="link" type="execprocess" processname="GetGoogleContacts" showprogress="false">obtener contactos de Google</flx-navbutton>
+1.   Primero, obtén y almacena el proceso de token requerido <flx-navbutton class="link" type="execprocess" processname="GetGoogleToken" defaults="{'service':'contacts'}" showprogress="false">obten el token de Google</flx-navbutton>.
+2.  Luego, obtén tus contactos con <flx-navbutton class="link" type="execprocess" processname="GetGoogleContacts" showprogress="false">obten los contactos de Google</flx-navbutton>
 
 ```
 Response:
@@ -23,8 +23,8 @@ Response:
 
 En el ejemplo a continuación recuperaremos una lista de eventos de calendario del usuario que ha iniciado sesión.
 
-1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetGoogleToken" defaults="{'service':'calendar'}" showprogress="false"> obtener token de Google </flx-navbutton>
-2.  Luego, obtén tus eventos con <flx-navbutton class="link" type="execprocess" processname="GetGoogleCalendar" showprogress="false">obtener calendario de Google</flx-navbutton>
+1.  Primero, obtén y almacena el proceso de token requerido <flx-navbutton class="link" type="execprocess" processname="GetGoogleToken" defaults="{'service':'calendar'}" showprogress="false"> obten el token de Google </flx-navbutton>
+2.  Luego, obtén tus eventos con <flx-navbutton class="link" type="execprocess" processname="GetGoogleCalendar" showprogress="false">obten el calendario de Google</flx-navbutton>
 
 ```
 Response:

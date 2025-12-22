@@ -1,6 +1,6 @@
 # Notificaciones Push
 
-**flexygo** permite utilizar notificaciones push en tus aplicaciones offline y en tu navegador web.  
+**Flexygo** permite utilizar notificaciones push en tus aplicaciones offline y en tu navegador web.  
 En el futuro, las notificaciones push podrían tener un coste adicional dependiendo del número de mensajes enviados.
 
 Para utilizar notificaciones push en el navegador **es obligatorio disponer de un certificado HTTPS** emitido por una entidad autorizada, ya que es necesario para usar el servicio Google Firebase.
@@ -8,14 +8,13 @@ Para utilizar notificaciones push en el navegador **es obligatorio disponer de u
 
 ## Configuración
 
-1. Primero, debes obtener una **Push API Key** de **flexygo**, que puedes solicitar a través de [flexygo help](https://help.flexygo.com).
+1\. Primero, debes obtener una **Push API Key** de **flexygo**, que puedes solicitar a través de [flexygo help](https://help.flexygo.com).
 
-2. Una vez tengas tu clave, complétala en los ajustes de **Push API Key**:
+2\. Una vez tengas tu clave, complétala en los ajustes de **Push API Key**:
 
 ![](/docs_assets/images/Push/Push_1.png "Image 1. API Key settings")
 
-3. Completa tu tabla de notificaciones o tu objeto de notificación, seleccionando el tipo de notificación que deseas habilitar.  
-   Existen distintos tipos de notificaciones push:
+3\. Completa tu tabla de notificaciones o tu objeto de notificación, seleccionando el tipo de notificación que deseas habilitar. Existen distintos tipos de notificaciones push:
 
 * **app**: notificaciones normales en la campanita dentro del entorno **flexygo**.  
 * **push**: notificaciones enviadas a todos los dispositivos conectados a tu aplicación (navegadores y móviles).  

@@ -1,4 +1,4 @@
-# Automatización de Pruebas { .flx-title-with-image }
+# Automatización de tests { .flx-title-with-image }
 
 ![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
@@ -11,11 +11,11 @@ Puedes encontrar más información sobre pruebas con flexygo aquí [Test Unitari
 
 ![Dll Test management](/docs_assets/images/Custom_DLL/testing2.png "Imagen 1. Gestión de Pruebas Dll")
 
-## Ejemplo de Prueba
+## Ejemplo de test
 
 En el ejemplo vemos una prueba que recorre todas las definiciones de nodos de la aplicación y verifica que se cargan correctamente. El nodo tiene una característica que, si debería fallar durante la carga, cambia su título a **Error de Nodo**, por lo que su mal funcionamiento es muy fácil de detectar.
 
-### Ejemplo de codificación de Prueba
+### Ejemplo de codificación de tset
 
 ```vbnet
 ''' <summary>
@@ -59,7 +59,7 @@ Public Sub TestNodes()
 End Sub
 ```
 
-## Excluir pruebas de flexygo
+## Excluir tests de flexygo
 
 Si hay pruebas en una dll que no queremos que flexygo ejecute, podemos etiquetarlas con un atributo testCategory e informar a flexygo qué pruebas no deben ser utilizadas usando los atributos de exclusión. En el siguiente ejemplo, si no queremos ejecutar esta prueba, debemos configurar los atributos de exclusión de flexygo como **attributes = ExcludeClient**.
 

@@ -34,6 +34,7 @@ extra_css:
   - stylesheets/custom-components.css
   - stylesheets/404-error.css
   - stylesheets/components/fh-modal.css
+  - stylesheets/components/fh-copy.css
   - stylesheets/flexygo-styles/main-flexygo-styles.css
   - stylesheets/flexygo-styles/cols.css
   - stylesheets/flexygo-styles/list-groups.css

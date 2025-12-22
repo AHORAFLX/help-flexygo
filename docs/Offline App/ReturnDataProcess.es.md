@@ -12,9 +12,9 @@ Configura el proceso de devolución de datos para sincronizar el dispositivo y e
     
     ![App Offline](/docs_assets/images/Offline/AppOfflineSave.png "Image 2. App Offline")
     
-3. <fh-modal class="link" modal_id="fhmodal_stored" modal_title="Stored for return Data Process">Ejemplo de almacenado</fh-modal>
+3. <fh-modal class="link" modal_id="fhmodal_stored" modal_title="Proceso almacenado para retorno de datos">Ejemplo de almacenado</fh-modal>
 
-4. <fh-modal class="link" modal_id="fhmodal_debug_stored" modal_title="Debugging return Data Process">Depuración de errores en almacenados</fh-modal>
+4. <fh-modal class="link" modal_id="fhmodal_debug_stored" modal_title="Depuración del proceso de retorno">Depuración del proceso de retorno</fh-modal>
     
 ```vb.net { #fhmodal_stored }
 SET ANSI_NULLS ON

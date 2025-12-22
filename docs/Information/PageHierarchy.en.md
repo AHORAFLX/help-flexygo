@@ -1,6 +1,6 @@
 # Page Hierarchy
 
-**flexygo** works with a single page document (SPA). Each page can have different layouts with different areas to place the different modules on.
+**Flexygo** works with a single page document (SPA). Each page can have different layouts with different areas to place the different modules on.
 
 ## Layouts
 
@@ -43,7 +43,7 @@ There are several pre built module containers that can be used with your modules
 *   **Empty**: Option with no header and no background but still mantains Object buttons and maximize and refresh options.
 *   **None**: Option with no header and no buttons.
 
-Default, Clean and No Header can be combined with the **roundBorders** CSS Class to obtain a rounded effect. This class can be added in the module Class field on the module configuration form.
+**Default**, **Clean** and **No Header** can be combined with the **roundBorders** CSS Class to obtain a rounded effect. This class can be added in the module Class field on the module configuration form.
 
 ### Default
 

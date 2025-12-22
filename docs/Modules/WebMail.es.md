@@ -13,17 +13,17 @@ Otro ejemplo [aquí](https://www.re-mark-able.net/how-to-access-data-from-the-be
 
 Asegúrate de que IMAP/POP3/SMTP están habilitados para tu organización y buzón.
 
-Primero inicia sesión como administrador en https://admin.microsoft.com/, ve a la pantalla Org settings y busca la entrada Modern authentication.
+Primero inicia sesión como administrador en [https://admin.microsoft.com/](https://admin.microsoft.com/), ve a la pantalla Org settings y busca la entrada Modern authentication.
 
 ![](/docs_assets/images/ModulesConf/MailOffice4.png "Image 1. Show all settings")
 
 ![](/docs_assets/images/ModulesConf/MailOffice5.png "Image 2. Org settings")
 
-Marca ‘Turn on modern authentication…‘ para los flujos OAuth y las opciones IMAP, POP3 y SMTP para los flujos de contraseñas de aplicaciones.
+Marca **Turn on modern authentication…** para los flujos OAuth y las opciones **IMAP**, **POP3** y **SMTP** para los flujos de contraseñas de aplicaciones.
 
 ![](/docs_assets/images/ModulesConf/MailOffice6.png "Image 3. Modern authentication")
 
-Luego ve a la pantalla Users:
+Luego ve a la pantalla **Users**:
 
 ![](/docs_assets/images/ModulesConf/MailOffice7.png "Image 4. Users")
 
@@ -31,7 +31,7 @@ Selecciona un usuario y en la pestaña Mail haz clic en Manage email apps.
 
 ![](/docs_assets/images/ModulesConf/MailOffice8.png "Image 5. User config")
 
-Activa IMAP, POP y Authenticated SMTP para habilitar los protocolos en esta cuenta.
+Activa **IMAP**, **POP** y **Authenticated SMTP** para habilitar los protocolos en esta cuenta.
 
 ![](/docs_assets/images/ModulesConf/MailOffice9.png "Image 6. Manage email apps")
 
@@ -68,7 +68,7 @@ Crea un secreto para la app y guarda su valor.
 
 ![](/docs_assets/images/ModulesConf/MailOffice3.png "Image 11. Client secret")
 
-Para finalizar, rellena los campos de configuración del endpoint de la cuenta de correo con el client id, tenant id y el secreto generado.
+Para finalizar, rellena los <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">campos de configuración del endpoint de la cuenta de correo</flx-navbutton> con el **client id**, **tenant id** y el **secret** generado.
 
 ## Google
 
@@ -90,9 +90,9 @@ Luego rellena la información de la aplicación, dominio, etc.
 
 Aplica los siguientes scopes:
 
-* https://mail.google.com/  
-* https://www.googleapis.com/auth/userinfo.profile  
-* https://www.googleapis.com/auth/userinfo.email  
+*   <fh-copy class="link">https://mail.google.com/</fh-copy>
+*   <fh-copy class="link">https://www.googleapis.com/auth/userinfo.profile</fh-copy>
+*   <fh-copy class="link">https://www.googleapis.com/auth/userinfo.email</fh-copy>
 
 En el siguiente paso añade los usuarios que usarán la aplicación.
 
@@ -114,11 +114,11 @@ Una vez registradas las credenciales, puedes descargar un archivo JSON que conti
 
 ![](/docs_assets/images/ModulesConf/MailOffice17.png "Image 19. Client ID")
 
-Para finalizar, rellena los campos del endpoint de correo con el client id, tenant id y el secreto generado.
+Para finalizar, rellena <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':2}" showprogress="false">los campos del endpoint de correo</flx-navbutton> con el client id, tenant id y el secreto generado.
 
 ## Nueva configuración para la ruta de la aplicación
 
-Para evitar problemas al tomar automáticamente la URL de la aplicación al autorizar el webmail, se ha creado una nueva configuración que permite asignar manualmente el valor de la URL.
+Para evitar problemas al tomar automáticamente la URL de la aplicación al autorizar el webmail, se ha creado una <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-system')" showprogress="false">nueva configuración</flx-navbutton> que permite asignar manualmente el valor de la URL.
 
 ## Módulo Webmail
 
@@ -132,7 +132,7 @@ El icono ya existe, pero está deshabilitado por defecto. Puedes habilitarlo com
 
 ![](/docs_assets/images/ModulesConf/Mail2.png "Image 21. Webmail icon")
 
-o haciendo clic en el enlace correspondiente. Tras activarlo, sal y vuelve a iniciar sesión.
+o haciendo clic en el siguiente enlace: <flx-navbutton class="link" type="execprocess" processname="EnableMailSettings" targetid="popup" excludehist="false" showprogress="false">Activar opciones de correo</flx-navbutton>. Tras activarlo, sal y vuelve a iniciar sesión.
 
 ## Establecer conexión con el servidor de correo
 

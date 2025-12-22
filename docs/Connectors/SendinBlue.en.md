@@ -19,9 +19,7 @@ You can create campaigns using the functions provided by flexygo, for example :
 
 In the following example you can get all information of campaign emails. Get all
 
-Format json [here](http://jsonviewer.stack.hu/).
-
-**Response:**       
+Format json [here](http://jsonviewer.stack.hu/).   
 
 ## Transactional email
 
@@ -32,7 +30,6 @@ Transactional emails are used for all non-promotional emails: send them when a u
 
 <fh-modal class="button" modal_id="fhmodal_create_transaction_email" modal_title="Create Transactional email">Create Transactional email</fh-modal>
 
-### Create Campaign email
 ```vbnet { #fhmodal_create_campaign_email }
 Imports FLEXYGO.SendinBlue
 Imports FLEXYGO.SendinBlueResourcesTypes
@@ -168,7 +165,6 @@ Public Class SampleSendinBlue
 End Class
 ```
 
-### Create Campaign email
 ```vbnet { #fhmodal_create_transaction_email }
 Imports FLEXYGO.SendinBlue
 Imports FLEXYGO.SendinBlueResourcesTypes

@@ -13,13 +13,13 @@ Other example [link](https://www.re-mark-able.net/how-to-access-data-from-the-be
 
 Make sure IMAP/POP3/SMTP is enabled for your organization and mailbox.
 
-First log in to Microsoft 365 admin portal at https://admin.microsoft.com/ as an administrator, go to Org settings screen and find Modern authentication entry.
+First log in to Microsoft 365 admin portal at [https://admin.microsoft.com/](https://admin.microsoft.com/) as an administrator, go to Org settings screen and find Modern authentication entry.
 
 ![](/docs_assets/images/ModulesConf/MailOffice4.png "Image 1. Show all settings")
 
 ![](/docs_assets/images/ModulesConf/MailOffice5.png "Image 2. Org settings")
 
-Check ‘Turn on modern authentication…‘ for OAuth flows and IMAP, POP3 and SMTP for App passwords flows
+Check **Turn on modern authentication…** for OAuth flows and **IMAP**, **POP3** and **SMTP** for App passwords flows
 
 ![](/docs_assets/images/ModulesConf/MailOffice6.png "Image 3. Modern authentication")
 
@@ -31,7 +31,7 @@ Select an user and on the Mail tab click Manage email apps
 
 ![](/docs_assets/images/ModulesConf/MailOffice8.png "Image 5. User config")
 
-Check IMAP, Pop and Authenticated SMTP to turn on the protocols for this account.
+Check **IMAP**, **Pop** and **Authenticated SMTP** to turn on the protocols for this account.
 
 ![](/docs_assets/images/ModulesConf/MailOffice9.png "Image 6. Manage email apps")
 
@@ -68,7 +68,7 @@ Create an app secret and remember its value.
 
 ![](/docs_assets/images/ModulesConf/MailOffice3.png "Image 11. Client secret")
 
-To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app client id, tenant id and genereted secret.
+To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app **client id**, **tenant id** and genereted **secret**.
 
 ## Google
 
@@ -90,9 +90,9 @@ Then you must fill your app information, domain, etc...
 
 After that apply the next scopes:
 
-*   https://mail.google.com/
-*   https://www.googleapis.com/auth/userinfo.profile
-*   https://www.googleapis.com/auth/userinfo.email
+*   <fh-copy class="link">https://mail.google.com/</fh-copy>
+*   <fh-copy class="link">https://www.googleapis.com/auth/userinfo.profile</fh-copy>
+*   <fh-copy class="link">https://www.googleapis.com/auth/userinfo.email</fh-copy>
 
 In the next step add the email users who will use the application.
 

@@ -1,4 +1,4 @@
-# Procesos de demostración de MailChimp  { .flx-title-with-image }
+# Procesos de ejemplo de MailChimp  { .flx-title-with-image }
 
 ![MailChimp](/docs_assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
 
@@ -8,13 +8,13 @@ Algunos ejemplos de cómo realizar ciertas acciones en tus procesos personalizad
 
 Puedes crear un contacto, subirlo a Mailchimp y eliminarlo de la lista usando las funciones que ofrece **flexygo**, por ejemplo:
 
-<fh-modal class="button" modal_id="fhmodal_create_contact" modal_title="Create Contact and Upload">Create/Upload/Remove</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_create_contact" modal_title="Create Contact and Upload">Crear/Subir/Eliminar</fh-modal>
 
 ## Campaña
 
 Puedes crear una campaña, subirla a Mailchimp, lanzarla y eliminarla usando las funciones proporcionadas por **flexygo**, por ejemplo:
 
-<fh-modal class="button" modal_id="fhmodal_create_campaign" modal_title="Create Campaign email">Create/Upload/Launch/Remove</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_create_campaign" modal_title="Create Campaign email">Crear/Subir/Eliminar</fh-modal>
 
 ```vbnet { #fhmodal_create_contact }
 Imports FLEXYGO.Data

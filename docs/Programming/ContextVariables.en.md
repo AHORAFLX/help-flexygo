@@ -12,25 +12,25 @@ Whatch the following video about context variables.
 
 All tokens must be referenced with curly brackets **{{** / **}}**. **flexygo** includes the following variables by default:
 
-*   **{{currentReference}}**: Wildcard used for linking other system elements to the current user
-*   **{{currentSubreference}}**: 2º Wildcard used for linking other system elements to the current user
-*   **{{currentRole}}**: Current users role name
-*   **{{currentRoleId}}**: Current users role Id
-*   **{{currentUserLogin}}**: Current users login
-*   **{{currentUserId}}**: Current users Id
-*   **{{currentUserFullName}}**: Current users full name
-*   **{{currentUserCultureId}}**: Current users culture Id
-*   **{{currentUserLang}}**: Current users Language. First two digits of culture Id
-*   **{{currentUserEmail}}**: Current users Email.
-*   **{{currentDate}}**: Current Date.
-*   **{{currentTime}}**: Current Time with minutes precision.
-*   **{{currentTimeSec}}**: Current Time with seconds precision.
-*   **{{currentDateTime}}**: Current Date and Time with minutes precision.
-*   **{{currentDateTimeSec}}**: Current Date and Time with seconds precision.
+*   <fh-copy class="link">{{currentReference}}</fh-copy>: Wildcard used for linking other system elements to the current user
+*   <fh-copy class="link">{{currentSubreference}}</fh-copy>: 2º Wildcard used for linking other system elements to the current user
+*   <fh-copy class="link">{{currentRole}}</fh-copy>: Current users role name
+*   <fh-copy class="link">{{currentRoleId}}</fh-copy>: Current users role Id
+*   <fh-copy class="link">{{currentUserLogin}}</fh-copy>: Current users login
+*   <fh-copy class="link">{{currentUserId}}</fh-copy>: Current users Id
+*   <fh-copy class="link">{{currentUserFullName}}</fh-copy>: Current users full name
+*   <fh-copy class="link">{{currentUserCultureId}}</fh-copy>: Current users culture Id
+*   <fh-copy class="link">{{currentUserLang}}</fh-copy>: Current users Language. First two digits of culture Id
+*   <fh-copy class="link">{{currentUserEmail}}</fh-copy>: Current users Email.
+*   <fh-copy class="link">{{currentDate}}</fh-copy>: Current Date.
+*   <fh-copy class="link">{{currentTime}}</fh-copy>: Current Time with minutes precision.
+*   <fh-copy class="link">{{currentTimeSec}}</fh-copy>: Current Time with seconds precision.
+*   <fh-copy class="link">{{currentDateTime}}</fh-copy>: Current Date and Time with minutes precision.
+*   <fh-copy class="link">{{currentDateTimeSec}}</fh-copy>: Current Date and Time with seconds precision.
 
 ## Generate Tokens
 
-**flexygo** allows you to generate your own Tokens by using SQL sentences. We shall indicate the Connection string we want to use and wich SQL Sentence using any of the previously generated tokens.
+**Flexygo** allows you to generate your own Tokens by using SQL sentences. We shall indicate the Connection string we want to use and wich SQL Sentence using any of the previously generated tokens.
 
 If I have an Employee Table in my data model with an Email and I want to obtain EmployeeID from employee table. We can create a new token called **{{EmployeeId}}**
 ```sql

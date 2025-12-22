@@ -8,8 +8,7 @@ Para hacerlo posible es necesario seguir algunos pasos.
 
 ## Configuración
 
-1.  Una vez que hayas obtenido tu **Google API Key** siguiendo  
-    [las instrucciones en la ayuda de flexygo](/Connectors/GoogleAPIKey), podrás empezar a configurar Google Places.
+1.  Una vez que hayas obtenido tu **Google API Key** siguiendo [las instrucciones en la ayuda de flexygo](/Connectors/GoogleAPIKey), podrás empezar a configurar Google Places.
 
 2.  Con este conector puedes transformar un simple **textbox** en un **desplegable con autocompletado de direcciones**, obteniendo cada parte de la dirección dividida en distintos campos.
 
@@ -19,7 +18,7 @@ Para hacerlo posible es necesario seguir algunos pasos.
 
 ![AfterLoadJS](/docs_assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
 
-#### Documentación JavaScript
+## Documentación de JavaScript
 
 Puedes encontrar más información detallada sobre Google Autocomplete en  
 [Google Maps Platform](https://developers.google.com/maps/documentation/places/web-service/autocomplete)

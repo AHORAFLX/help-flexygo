@@ -1,6 +1,6 @@
 #  Flexygo MFA
 
-New in flexygo! Implementation of Multi-Factor Authentication (MFA) system
+Implementation of **Multi-Factor Authentication (MFA)** system.
 
 What is MFA and why is it important? MFA adds an additional layer of security by requiring users to verify their identity using two or more different methods before accessing their accounts. This measure significantly reduces the risk of unauthorized access, thus protecting your data and the integrity of your information.
 

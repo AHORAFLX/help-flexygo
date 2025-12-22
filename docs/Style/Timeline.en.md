@@ -1,4 +1,4 @@
-## Timeline
+# Timeline
 
 Timeline is a set of css classes that allows the user to have a chronological view, since the Timeline offers a better structure of the relevant news or of greater interest, such as for example, actions carried out throughout the day of each employee. In order to display a timeline correctly, it is necessary to indicate an **<entry\>** and a **</body\>**.
 

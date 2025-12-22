@@ -1,6 +1,6 @@
 # Document Manager & Image Manager
 
-**flexygo** allows us to add documents and images to any existing objects. We could add documents (pdf, doc, docx, txt, odt, etc.) and images (jpg, png, gif, bmp, etc.) to our articles, clients, buildings etc. By using the document manager object we can edit and display any document related to an object.
+**Flexygo** allows us to add documents and images to any existing objects. We could add documents (pdf, doc, docx, txt, odt, etc.) and images (jpg, png, gif, bmp, etc.) to our articles, clients, buildings etc. By using the document manager object we can edit and display any document related to an object.
 
 Watch the following video on our YouTube channel about Document and Image Manager.
 

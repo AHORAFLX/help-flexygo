@@ -1,4 +1,4 @@
-# Configuración de seguimiento
+# Configuración del seguimiento
 
 ## Configurar dispositivo
 

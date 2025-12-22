@@ -1,9 +1,8 @@
-```md
 # Integración con Ahora ERP { .flx-title-with-image }
 
 ![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .flx-image-of-title }
 
-**flexygo** facilita la integración con **Ahora ERP**. Para ello, pone a un solo clic una serie de procesos que simplifican el desarrollo de soluciones sobre la base de datos de Ahora ERP.
+**Flexygo** facilita la integración con **Ahora ERP**. Para ello, pone a un solo clic una serie de procesos que simplifican el desarrollo de soluciones sobre la base de datos de Ahora ERP.
 
 ## Configuración
 
@@ -22,7 +21,7 @@
 Puedes ejecutar el proceso estándar de integración haciendo clic en:
 
 <flx-navbutton class="button" type="execprocess" processname="pNet_ERPAhoraIntegration" excludehist="false" showprogress="false">
-    Generate Ahora ERP integration with standard afterlogin process
+    Generar integración de Ahora ERP con el proceso estándar posterior al inicio de sesión
 </flx-navbutton>
 
 Puedes cambiar el proceso *afterlogin* estándar por el proceso *Portal Afterlogin*  
@@ -31,6 +30,5 @@ o por el proceso *Anti-fraud law: User SQL Impersonate Afterlogin*
 (usa el usuario SQL asociado al empleado en el ERP; es obligatorio que el empleado tenga un login definido en Ahora ERP):
 
 <flx-navbutton class="button" type="execprocess" processname="pNet_ERP_SetAfterloginProcess" excludehist="false" showprogress="false">
-    Change standard afterlogin process to Portal Afterlogin process or Anti-fraud law: User SQL impersonate Afterlogin process
+    Cambiar el proceso estandar de después del inicio de sesión a un proceso de después del inicio de sesión del Portal o ley antifraude
 </flx-navbutton>
-```

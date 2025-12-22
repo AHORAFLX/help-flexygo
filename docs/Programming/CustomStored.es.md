@@ -8,7 +8,7 @@ Mira el video sobre cómo crear un procedimiento almacenado en el entorno de fle
 
 ### Agregar proceso de procedimiento almacenado al menú de objeto
 
-1.  Codificar el procedimiento almacenado en la base de datos. <fh-modal class="link" modal_id="fhmodal_object" modal_title="Object Stored Procedure">Ejemplo</fh-modal>.
+1.  Codificar el procedimiento almacenado en la base de datos. <fh-modal class="link" modal_id="fhmodal_object" modal_title="Proceso almacenado">Ejemplo</fh-modal>.
 
 2.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB.
     
@@ -45,7 +45,7 @@ Mira el video sobre cómo crear un procedimiento almacenado en el entorno de fle
 
 Se puede asignar un Procedimiento Almacenado Personalizado a cada objeto o propiedad para que se ejecute cuando este sea creado o cambiado, para eso el Procedimiento recibirá un XML con cada valor de propiedad, aquí tienes un ejemplo de cómo usarlo:
 
-<fh-modal class="button" modal_id="fhmodal_property_change" modal_title="Stored Procedure on object load or property changed">Ejemplo</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_property_change" modal_title="Proceso almacenado al cargar un objeto o cambiar una propiedad">Ejemplo</fh-modal>
 
 ```sql { #fhmodal_ }
 ```

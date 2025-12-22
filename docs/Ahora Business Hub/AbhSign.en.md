@@ -18,7 +18,6 @@ To hire the service you can do it in any of the following ways:
 
 ## Configure Abh Sign
 
-
 ![Abh Sign configuration](/docs_assets/images/AbhSign/AbhSignSettings.png "Abh Sign configuration")
 
 **Object Name:** Object we want to enable Abh Sign.

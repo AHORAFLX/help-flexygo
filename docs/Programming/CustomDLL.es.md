@@ -13,17 +13,17 @@ En algunos casos, es necesario programar funcionalidades que flexygo no tiene. P
 
 4.  Ver el código SampleCode.vb:
 
-     <fh-modal class="button" modal_id="fhmodal_insert" modal_title="Insert object function">Función de insertar, actualizar y eliminar objeto</fh-modal>
+     <fh-modal class="button" modal_id="fhmodal_insert" modal_title="Función de insertar, actualizar y eliminar objeto">Función de insertar, actualizar y eliminar objeto</fh-modal>
 
-     <fh-modal class="button" modal_id="fhmodal_process" modal_title="Process with parameters">Proceso de objeto con parámetros</fh-modal>
+     <fh-modal class="button" modal_id="fhmodal_process" modal_title="Proceso de objeto con parámetros">Proceso de objeto con parámetros</fh-modal>
 
-     <fh-modal class="button" modal_id="fhmodal_process_no_params" modal_title="Process without parameters">Proceso de objeto sin parámetros</fh-modal>
+     <fh-modal class="button" modal_id="fhmodal_process_no_params" modal_title="Proceso de objeto sin parámetros">Proceso de objeto sin parámetros</fh-modal>
 
-     <fh-modal class="button" modal_id="fhmodal_collection" modal_title="Collection Process with parameters">Proceso de colección con parámetros *</fh-modal>
+     <fh-modal class="button" modal_id="fhmodal_collection" modal_title="Proceso de colección con parámetros">Proceso de colección con parámetros *</fh-modal>
 
-     <fh-modal class="button" modal_id="fhmodal_collection_no_params" modal_title="Collection Process without parameters">Proceso de colección sin parámetros *</fh-modal>
+     <fh-modal class="button" modal_id="fhmodal_collection_no_params" modal_title="Proceso de colección sin parámetros">Proceso de colección sin parámetros *</fh-modal>
 
-     <fh-modal class="button" modal_id="fhmodal_load" modal_title="Load Object/Process/Report or Change Property">Cargar objeto o cambiar propiedad</fh-modal>
+     <fh-modal class="button" modal_id="fhmodal_load" modal_title="Cargar objeto o cambiar propiedad">Cargar objeto o cambiar propiedad</fh-modal>
 
      No olvide configurar el Identificador Único en la configuración del objeto
      {: .flx-warning-card }

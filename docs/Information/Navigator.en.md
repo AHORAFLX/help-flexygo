@@ -1,6 +1,6 @@
 # Navigator Module
 
-The navigator has all necesary logic to enable navigation to different targets and to differrent node types given an initial node Id.
+The **navigator** has all necesary logic to enable navigation to different targets and to differrent node types given an initial node Id.
 
 ## Navigation mode
 

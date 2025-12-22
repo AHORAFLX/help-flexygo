@@ -1,5 +1,4 @@
-## Cronología
-
+# Cronología
 
 La cronología es un conjunto de clases css que permite al usuario tener una vista cronológica, ya que la cronología ofrece una mejor estructura de las noticias relevantes o de mayor interés, como por ejemplo, las acciones realizadas a lo largo del día de cada empleado. Para mostrar una cronología correctamente, es necesario indicar un **<entry\>** y un **</body\>**.
 

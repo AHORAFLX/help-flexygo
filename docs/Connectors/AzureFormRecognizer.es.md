@@ -6,8 +6,7 @@ Azure Form Recognizer es un servicio en la nube que utiliza machine learning par
 
 ## Configurar Azure Portal
 
-Configura Azure desde  
-<flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-azure')" showprogress="false">Form Recognizer Settings</flx-navbutton>
+Configura Azure desde <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-azure')" showprogress="false">Form Recognizer Settings</flx-navbutton>
 
 ## Form OCR Tool
 
@@ -16,8 +15,7 @@ En ella puedes especificar tus etiquetas para cada tipo de documento que desees 
 
 ## Demo
 
-Después de configurar el portal de Azure y los ajustes en **flexygo**, puedes probar su funcionamiento subiendo un archivo:  
-<flx-navbutton class="link" type="execprocess" processname="FormRecognizer_Read" showprogress="false">leer documento</flx-navbutton>
+Después de configurar el portal de Azure y los ajustes en **flexygo**, puedes probar su funcionamiento subiendo un archivo: <flx-navbutton class="link" type="execprocess" processname="FormRecognizer_Read" showprogress="false">leer documento</flx-navbutton>
 
 Format json [aquí](http://jsonviewer.stack.hu/).
 

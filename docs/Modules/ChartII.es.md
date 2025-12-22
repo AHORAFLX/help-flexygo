@@ -46,7 +46,7 @@ Si el tipo de gráfico es **line**, existen atributos adicionales para modificar
 
 También hay una opción de filtrado que puedes usar pulsando el siguiente botón:
 
-<span class="button" onclick="toggleGraphsFilter(this)">Filter charts</span>
+<span class="button" onclick="toggleGraphsFilter(this)">Filtrar gráficas</span>
 
 Para hacer este filtrado, alternamos las etiquetas del gráfico con:
 
@@ -125,7 +125,7 @@ Hay varios tipos de gráficos que puedes utilizar.
 ### Animaciones
 
 Ahora podemos definir un estilo de animación para cada configuración de gráfico y su duración. Si la duración se establece en 0, las animaciones se desactivan.
-Más información sobre animaciones: [https://easings.net/](https://easings.net/)
+Más información sobre animaciones [aquí](https://easings.net/).
 
 ![](/docs_assets/images/Charts/Animations.png "Image 1. Animations Chart Configuration")
 
@@ -150,7 +150,7 @@ Nuevas opciones de estilo para gráficos de líneas.
 
 ## Datos del gráfico
 
-Explicamos brevemente la estructura de datos de cada gráfico; para más información ver: [http://www.chartjs.org/docs/](http://www.chartjs.org/docs/)
+Explicamos brevemente la estructura de datos de cada gráfico; para más información navega a [esta página](http://www.chartjs.org/docs/)
 
 ### Datos de línea
 
@@ -281,7 +281,7 @@ let dataBar = {
 
 ## Opciones de gráficos
 
-Aquí solo se explican opciones específicas; para opciones globales consulta: [http://www.chartjs.org/docs/2.9.4](http://www.chartjs.org/docs/2.9.4)
+Aquí solo se explican opciones específicas; para opciones globales consulta el [siguiente link](http://www.chartjs.org/docs/2.9.4)
 {: .flx-warning-card }
 
 ### Opciones Line

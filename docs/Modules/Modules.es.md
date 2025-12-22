@@ -7,7 +7,7 @@ Antes de empezar a configurar los módulos seleccionados, es esencial leer el ar
 
 En este capítulo explicaremos brevemente todos los módulos de **flexygo**; para obtener más información, podrás dirigirte a los artículos específicos con información detallada de cada módulo.
 
-## Button Tab
+## Botón Tab
 
 Un botón de pestaña es un componente de UI que se coloca dentro de una barra de pestañas. Este módulo funciona como una pestaña, pero con la apariencia de un botón desplegable. Es útil cuando necesitas ahorrar espacio en tu página.
 
@@ -26,7 +26,7 @@ Para añadir este módulo debemos rellenar los siguientes campos del formulario 
 | Classification | Al no ser un módulo por defecto, siempre es Project Module |
 | Container | Tipo de contenedor del módulo |
 
-## Module Tab
+## Modulo Tab
 
 Un Module Tab es un patrón de diseño donde el contenido se separa en paneles distintos, cada uno visible individualmente. El usuario selecciona qué contenido mostrar al hacer clic en la pestaña correspondiente. Este módulo funciona como un tabulador con distintos módulos en su interior; puede usarse como pestaña tradicional o como menú desplegable.
 
@@ -43,7 +43,7 @@ Un Module Tab es un patrón de diseño donde el contenido se separa en paneles d
 | Classification | Siempre Project Module |
 | Container | Tipo de contenedor del módulo |
 
-## Calendar and Scheduler
+## Calendario y planificador
 
 Este módulo permite mostrar un calendario. Facilita al usuario la planificación de eventos y tareas, permitiendo además informar tiempos y analizar la asignación temporal a distintos sectores.
 
@@ -57,14 +57,14 @@ Consulta ayuda adicional para configurar el módulo:
 [Vídeo Scheduler](https://youtu.be/lKKMce5PsrA)
 </div>
 
-## Chart
+## Gráfica
 
 Un gráfico es una representación visual de datos, donde la información se muestra mediante símbolos como barras, líneas o sectores circulares. Este módulo permite mostrar distintos tipos de gráficos.
 
 ![Chart](/docs_assets/images/ModulesConf/Chart.png "Imagen 6. Chart")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Chart](/Modules/Chart)
 
@@ -73,14 +73,14 @@ Ayuda adicional:
 [Vídeo Chart](https://youtu.be/Nj8si7aUPe4)
 </div>
 
-## Document & Image Manager
+## Organizador de documentos e imágenes
 
 Este módulo permite subir documentos e imágenes vinculados a un objeto. Posteriormente pueden editarse o eliminarse.
 
 ![Document Manager](/docs_assets/images/ModulesConf/DocumentManager.png "Imagen 7. Document Manager")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Document & Image Manager](/Modules/Chart)
 
@@ -95,10 +95,10 @@ Ayuda adicional:
 
 Chatter es un módulo que permite crear conversaciones relacionadas con un objeto.
 
-![Chatter](.\img\Help\Chatter\Chatter-example.png "Imagen 8. Chatter")
+![Chatter](/docs_assets/images/Chatter/Chatter-example.png "Imagen 8. Chatter")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Chatter](/Modules/Chatter)
 </div>
@@ -110,42 +110,44 @@ Estos componentes permiten realizar gráficos sencillos. Combinados en un módul
 ![Easy Pie](/docs_assets/images/ModulesConf/EasyInfoExamples.png "Imagen 9. Easy Pie")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Easy Pie/Line/Info](/Modules/ChartII)
 </div>
 
-## Edit Object List
+## Lista de objetos editable
 
 Permite editar el contenido de una colección sin abrir una nueva ventana.
 
 ![Edit Object List](/docs_assets/images/ModulesConf/EditObjectList.png "Imagen 10. Edit Object List")
 
+Para añadir este módulo debemos rellenar los sigientes campos.
+
 1. Usar el asistente del objeto para configurar las propiedades de edición:
 
-![Edit Grid Properties](/docs_assets/images/ModulesConf/PrevEditObjectList.png "Imagen 11. Edit Grid Properties")
+    ![Edit Grid Properties](/docs_assets/images/ModulesConf/PrevEditObjectList.png "Imagen 11. Edit Grid Properties")
 
 2. Después configurar el módulo:
 
-![Edit Grid Configuration](/docs_assets/images/ModulesConf/EditObjectListConf.png "Imagen 12. Edit Grid Configuration")
+    ![Edit Grid Configuration](/docs_assets/images/ModulesConf/EditObjectListConf.png "Imagen 12. Edit Grid Configuration")
 
-| Campo | Descripción |
-| --- | --- |
-| Id | Identifica el módulo |
-| Type | Tipo de módulo, Edit Object List |
-| Description | Breve descripción |
-| Title | Título |
-| Classification | Siempre Project Module |
-| Container | Tipo de contenedor |
-| Object Name | Seleccionar la colección a editar |
+    | Campo | Descripción |
+    | --- | --- |
+    | Id | Identifica el módulo |
+    | Type | Tipo de módulo, Edit Object List |
+    | Description | Breve descripción |
+    | Title | Título |
+    | Classification | Siempre Project Module |
+    | Container | Tipo de contenedor |
+    | Object Name | Seleccionar la colección a editar |
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Vídeo Edit Object List](https://youtu.be/UH-WqcCFWJI)
 </div>
 
-## Funnel
+## Embudo
 
 El embudo se usa comúnmente en marketing para mostrar el recorrido del cliente desde el conocimiento del producto hasta la compra.
 
@@ -165,11 +167,11 @@ El embudo se usa comúnmente en marketing para mostrar el recorrido del cliente 
 | SQL Sentence | Consulta SQL con estructura: SELECT Label AS label, Value AS value, Background AS background FROM Table |
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:  
+Revisa las siguientes ayudas para aprender a como conigurarlo:  
 [Manual Funnel](/Modules/Funnel)
 </div>
 
-## HTML Module
+## Módulo HTML
 
 Incluye un componente *flx-html* en tu página y su contenido se mostrará inmediatamente. Puede contener cualquier otro componente de **flexygo**.
 
@@ -194,28 +196,28 @@ Kanban es un framework visual que permite gestionar tareas eficientemente median
 ![Kanban](/docs_assets/images/ModulesConf/kanban.png "Imagen 17. Kanban")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Kanban](/Modules/Kanban)
 
 [Vídeo Kanban](https://youtu.be/AidJrIHQHZc)
 </div>
 
-## Timeline
+## Línea de tiempo
 
 El módulo Timeline es una herramienta visual que representa una secuencia de eventos en un periodo determinado.
 
-![Timeline](.\img\Help\Timeline\Timeline_AdvancedWithGroups_Result.png "Imagen 18. Timeline")
+![Timeline](/docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Imagen 18. Timeline")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Timeline](/Modules/Timeline)
 
 [Vídeo Timeline](https://youtu.be/_bVe_MLU5r0)
 </div>
 
-## List Filter
+## Filtro de listado
 
 Permite añadir un control de búsqueda a tus formularios y vincularlo al contenido del módulo.
 
@@ -233,7 +235,7 @@ Permite añadir un control de búsqueda a tus formularios y vincularlo al conten
 | Container | Tipo de contenedor |
 | Object Name | Objeto vinculado |
 
-## Map
+## Mapa
 
 Permite visualizar un mapa de Google con la dirección deseada.
 
@@ -252,19 +254,29 @@ Permite visualizar un mapa de Google con la dirección deseada.
 | Connection string | Modelo de datos |
 | SQL Sentence | Consulta SQL mínima: Select '60' as lat, '20' as lng... {"Cluster":"true","Color":"retro","Width":"100%","Height":"400"} |
 
-## Mail
+<div class="flx-info-card" markdown="1">
+Revisa las siguientes ayudas para aprender a como conigurarlo:
+
+[Manual Maps](/Modules/Maps)
+
+[Video Maps on dashboard](https://youtu.be/2CDScKLUVjw)
+
+[Video Maps in object view](https://youtu.be/qV9uGvAL_5g)
+</div>
+
+## Correo
 
 Permite visualizar tus correos del servidor de correo y vincularlos a objetos.
 
 ![Mail](/docs_assets/images/ModulesConf/mail.png "Imagen 23. Mail")
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Manual Mail](/Modules/Mail)
 </div>
 
-## Nav Panel
+## Panel de navegación
 
 Permite crear tarjetas con nodos como contenido.
 
@@ -282,7 +294,7 @@ Permite crear tarjetas con nodos como contenido.
 | Container | Tipo de contenedor |
 | Params | Ej.: initNode="10123EDB..." mode="panel" |
 
-## Network Graphic
+## Gráfico de red
 
 Muestra un mapa de relaciones entre procesos, propiedades, plantillas, vistas y seguridad de un objeto.
 
@@ -301,7 +313,7 @@ Muestra un mapa de relaciones entre procesos, propiedades, plantillas, vistas y 
 | Object Name | Objeto relacionado |
 | Object Where | Filtro del objeto |
 
-## Object Edit
+## Edición de objeto
 
 Permite editar cualquier objeto.
 
@@ -321,7 +333,7 @@ Permite editar cualquier objeto.
 | Object Where | Filtro |
 | Module Class | size-xs, size-s, size-m, size-l, no-label |
 
-## Object List
+## Listado de objeto
 
 Permite mostrar una lista de objetos.
 
@@ -340,7 +352,7 @@ Permite mostrar una lista de objetos.
 | Object Name | Objeto |
 | Object Where | Filtro |
 
-## Object Processes
+## Procesos de objeto
 
 Permite visualizar los procesos relacionados a un objeto.
 
@@ -360,12 +372,12 @@ Permite visualizar los procesos relacionados a un objeto.
 | Object Where | Filtro |
 
 <div class="flx-info-card" markdown="1">
-Ayuda adicional:
+Revisa las siguientes ayudas para aprender a como conigurarlo:
 
 [Update Types](/Programming/UpdateTypes)
 </div>
 
-## Object Reports
+## Informes de objeto
 
 Permite visualizar los informes relacionados con un objeto.
 
@@ -384,7 +396,7 @@ Permite visualizar los informes relacionados con un objeto.
 | Object Name | Objeto |
 | Object Where | Filtro |
 
-## Object Search
+## Busqueda de objetos
 
 Permite realizar búsquedas de cualquier objeto.
 
@@ -402,7 +414,7 @@ Permite realizar búsquedas de cualquier objeto.
 | Container | Tipo |
 | Object Name | Objeto |
 
-## Object View
+## Vista de objetos
 
 Permite visualizar cualquier objeto.
 
@@ -421,7 +433,7 @@ Permite visualizar cualquier objeto.
 | Object Name | Objeto |
 | Object Where | Filtro |
 
-## Organization Chart
+## Organigrama
 
 Muestra una estructura jerárquica organizativa.
 
@@ -446,7 +458,7 @@ Muestra una estructura jerárquica organizativa.
 | Footer | HTML del pie |
 | Options | Cadena JSON con opciones de Treant. Opciones por defecto incluidas |
 
-## Related Objects
+## Objetos relacionados
 
 Permite mostrar relaciones entre un objeto y sus hijos.
 
@@ -465,7 +477,7 @@ Permite mostrar relaciones entre un objeto y sus hijos.
 | Object Name | Objeto |
 | Object Where | Filtro |
 
-## Object Related Processes
+## Procesos Relacionados con el Objeto
 
 ![Object Related Processes](/docs_assets/images/ModulesConf/RelatedProcessesHtml.png "Imagen 44. Object Related Processes")
 
@@ -484,7 +496,7 @@ Permite ver procesos relacionados con un objeto.
 | Object Name | Objeto |
 | Object Where | Filtro |
 
-## Object Related Reports
+## Informes Relacionados con el Objeto
 
 Permite ver los informes relacionados con un objeto.
 

@@ -1,29 +1,29 @@
-# Abh Ticket
+# Ticket Abh
 
-Abh Ticket es una integración de **Ahora Business Hub** que permite a **flexygo** consultar gastos.
+Ticket Abh es una integración de **Ahora Business Hub** que permite a **flexygo** consultar gastos.
 
-## Activar Abh Ticket
+## Activar Ticket Abh
 
 <flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbh_Integrations_Settings" defaults="{'IntegrationId':'abh_ticket'}" excludehist="false">
-    Add Abh Ticket to your project
+    Añadir Ticket Abh a tu proyecto
 </flx-navbutton>
 
-## Configurar Abh Ticket
+## Configurar Ticket Abh
 
-![Abh Ticket configuration](/docs_assets/images/AbhTicket/AbhTicketSettings.png "Abh Ticket configuration")
+![Ticket Abh configuration](/docs_assets/images/AbhTicket/AbhTicketSettings.png "Ticket Abh configuration")
 
-**Integration:** Nombre de la integración que vamos a configurar, en este caso *Ahora Business Hub – Ticket*.
+**Integración:** Nombre de la integración que vamos a configurar, en este caso *Ahora Business Hub – Ticket*.
 
 **Client Id:** Identificador de cliente de Ahora Business Hub.  
-Más información en: https://help.flexygo.com/
+Más información en: [https://help.flexygo.com/](https://help.flexygo.com/)
 {: .flx-warning-card }
 
 **Client Secret:** Clave secreta de cliente de Ahora Business Hub.  
-Más información en: https://help.flexygo.com/
+Más información en: [https://help.flexygo.com/](https://help.flexygo.com/)
 {: .flx-warning-card }
 
 **Tenant Id:** Identificador de tenant de Ahora Business Hub.  
-Más información en: https://help.flexygo.com/
+Más información en: [https://help.flexygo.com/](https://help.flexygo.com/)
 {: .flx-warning-card }
 
 ## Funciones DLL

@@ -1,6 +1,6 @@
 # Page Hierarchy
 
-**flexygo** funciona con un documento de página única (SPA). Cada página puede tener diferentes **layouts**, con distintas áreas donde colocar los módulos.
+**Flexygo** funciona con un documento de página única (SPA). Cada página puede tener diferentes **layouts**, con distintas áreas donde colocar los módulos.
 
 ## Layouts
 

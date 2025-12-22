@@ -9,10 +9,8 @@ Si deseas desarrollar una integración con Office desde la plataforma **flexygo*
 
 ### Opción recomendada
 
-Registra tu aplicación usando el **Azure portal**:  
-https://docs.microsoft.com/en-us/graph/auth-register-app-v2  
-Otro ejemplo:  
-https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/
+Registra tu aplicación usando el [Azure portal](https://docs.microsoft.com/en-us/graph/auth-register-app-v2  ):  
+Otro [ejemplo](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).
 
 Además de registrar la aplicación en Azure, asegúrate de **habilitar permisos de acceso a Contacts y Calendars**.
 
@@ -37,11 +35,9 @@ Rellena los campos de configuración de Office con tu **client id**, **tenant id
 
 En este ejemplo se obtiene una colección de contactos desde la carpeta de contactos por defecto del usuario autenticado.
 
-1. Obtén y guarda el token necesario:  
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Get Office Token</flx-navbutton>
+1. Obtén y guarda el token necesario: <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Conseguir token de Office</flx-navbutton>
 
-2. Recupera los contactos:  
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts" showprogress="false">Get Office Contacts</flx-navbutton>
+2. Recupera los contactos: <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts" showprogress="false">Conseguir contacto de Office</flx-navbutton>
 
 ```
 Response:
@@ -53,15 +49,13 @@ Response:
 
 En este ejemplo se recupera una lista de eventos del calendario del usuario autenticado.
 
-1. Obtén y guarda el token necesario:  
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'calendar'}" showprogress="false">Get Office Token</flx-navbutton>
+1. Obtén y guarda el token necesario: <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'calendar'}" showprogress="false">Conseguir token de Office</flx-navbutton>
 
-2. Recupera los eventos:  
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeCalendar" showprogress="false">Get Office Calendar</flx-navbutton>
+2. Recupera los eventos: <flx-navbutton class="link" type="execprocess" processname="GetOfficeCalendar" showprogress="false">Conseguir contacto de Office</flx-navbutton>
 
 Response:
 
-<fh-modal class="button" modal_id="fhmodal_office_events" modal_title="Office 365 Events">Insert, Update And Delete event</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_office_events" modal_title="Office 365 Events">Insertar, actualizar y borrar evento</fh-modal>
 
 ```vbnet { #fhmodal_office_contacts }
 Imports FLEXYGO.Objects

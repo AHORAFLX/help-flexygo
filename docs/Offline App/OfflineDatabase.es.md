@@ -9,8 +9,10 @@
 2.  Una vez que ingreses a este menú, podrás ejecutar tus propios selects, desde la entrada superior o ver cualquier tabla haciendo clic en el ícono de la derecha junto a la entrada.
     
     Consejo: Si alguna vez deseas reutilizar un select, puedes hacerlo utilizando las teclas de flecha arriba y abajo.
+    { .flx-info-card }
 
     Consejo 2: Cuando se deba hacer un select complejo, puedes usar "shift + enter" para añadir otra línea y así hacer que la entrada sea más grande sin ejecutar la sentencia select. Y si tienes un select complejo de otro lugar, al pegarlo, la entrada crecerá automáticamente según el tamaño del select.
+    { .flx-info-card }
 
     ![Menu](/docs_assets/images/offline/DatabaseMenu.png "Image 2. Database Menu")
 

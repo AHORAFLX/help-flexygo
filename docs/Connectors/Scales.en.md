@@ -1,6 +1,6 @@
 # Scales Integration
 
-**flexygo** has integration with scales that uses standart Samsung ES protocol.
+**Flexygo** has integration with scales that uses standart Samsung ES protocol.
 
 ## Settings
 

@@ -1,6 +1,6 @@
-# Timeline
+# Línea de tiempo
 
-El módulo Timeline nos permite crear planificadores basados en cualquier objeto de forma sencilla y rápida. Existen dos tipos de configuración:
+El módulo línea de tiempo nos permite crear planificadores basados en cualquier objeto de forma sencilla y rápida. Existen dos tipos de configuración:
 
 * **Básica:** Permite crear planificadores simples y funcionales sin necesidad de código.  
 * **Avanzada:** Ofrece control total sobre todas las funcionalidades del timeline. Requisitos: conocimientos básicos de SQL y JavaScript.

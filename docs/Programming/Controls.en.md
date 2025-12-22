@@ -1,6 +1,6 @@
 # Form controls
 
-<flx-navbutton class="link" type="openhelpid" helpid="syshelp-controls">Click here</flx-navbutton>to test them on Flexygo.
+<flx-navbutton class="link" type="openhelpid" helpid="syshelp-controls">Click here</flx-navbutton> to test them on Flexygo.
 
 ## Default Form Elements
 

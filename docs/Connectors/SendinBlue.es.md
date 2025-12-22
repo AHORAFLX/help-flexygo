@@ -4,12 +4,10 @@
 
 SendinBlue es una plataforma de automatización de marketing que te ayuda a compartir campañas de email y publicidad con clientes y otros destinatarios.
 
-Puedes acceder al área de integración de SendinBlue desde  
-<flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-sendinblue')" showprogress="false">aquí</flx-navbutton>.
+Puedes acceder al área de integración de SendinBlue desde <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-sendinblue')" showprogress="false">aquí</flx-navbutton>.
 
 Para conectar con la API de SendinBlue es necesaria una **API Key**, así que el primer paso es indicar dicha clave.  
-Si necesitas más información, puedes consultar la documentación oficial de SendinBlue sobre API Keys:  
-[documentación](https://help.sendinblue.com/hc/es/articles/209467485--Qu%C3%A9-es-una-clave-API-y-d%C3%B3nde-puedo-conseguir-la-m%C3%ADa-).
+Si necesitas más información, puedes consultar la documentación oficial de SendinBlue sobre API Keys: [documentación](https://help.sendinblue.com/hc/es/articles/209467485--Qu%C3%A9-es-una-clave-API-y-d%C3%B3nde-puedo-conseguir-la-m%C3%ADa-).
 {: .flx-warning-card }
 
 Una vez incluidos los parámetros, podrás utilizar las funciones que flexygo proporciona para la creación de **campañas**, **emails transaccionales**, **contactos** y **listas**.
@@ -18,12 +16,10 @@ Una vez incluidos los parámetros, podrás utilizar las funciones que flexygo pr
 
 Puedes crear campañas usando las funciones proporcionadas por flexygo, por ejemplo:
 
-<fh-modal class="button" modal_id="fhmodal_create_campaign_email" modal_title="Create Campaign email">Create Campaign email</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_create_campaign_email" modal_title="Crear email de campaña">Crear email de campaña</fh-modal>
 
 En el siguiente ejemplo puedes obtener toda la información de campañas de email.  
 Formato JSON [aquí](http://jsonviewer.stack.hu/).
-
-**Response:**
 
 ## Email transaccional
 
@@ -32,11 +28,8 @@ Puedes enviar emails transaccionales utilizando las funciones proporcionadas por
 Los emails transaccionales se utilizan para todos los correos no promocionales: creación de cuenta, confirmación de pedido, solicitud de nueva contraseña, etc.
 {: .flx-warning-card }
 
-<fh-modal class="button" modal_id="fhmodal_create_transaction_email" modal_title="Create Transactional email">Create Transactional email</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_create_transaction_email" modal_title="Crear email transaccional">Crear email transaccional</fh-modal>
 
----
-
-## Crear email de campaña
 ```vbnet { #fhmodal_create_campaign_email }
 Imports FLEXYGO.SendinBlue
 Imports FLEXYGO.SendinBlueResourcesTypes
@@ -168,10 +161,6 @@ Public Class SampleSendinBlue
 
 End Class
 ```
-
----
-
-## Crear email transaccional
 
 ```vbnet { #fhmodal_create_transaction_email }
 Imports FLEXYGO.SendinBlue

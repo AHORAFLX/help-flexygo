@@ -36,9 +36,9 @@ Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas si
     
 ![Create Process](/docs_assets/images/Imports/process.png "Image 3. Create Process")
     
-<fh-modal class="button" modal_id="fhmodal_stored" modal_title="Stored example">Ejemplo Almacenado</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll example">Ejemplo DLL</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_json" modal_title="Json example">Ejemplo de valor Json</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_stored" modal_title="Proceso almacenado">Ejemplo Almacenado</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll">Ejemplo DLL</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_json" modal_title="Json">Ejemplo de valor Json</fh-modal>
 
 ## Ejecutar importación
 

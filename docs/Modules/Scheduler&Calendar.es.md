@@ -49,7 +49,11 @@ Consulta cómo utilizar el componente web Scheduler y Calendar. Con Scheduler y 
 | User id field | Es el campo por el que se filtrará la búsqueda previamente configurada |
 | Appointment Template | HTML marcado encargado de pintar el registro en el calendario |
 
-Mira el siguiente vídeo para información adicional
+Mira el siguiente vídeo para información adicional:
+
+<div class="video-wrapper">  
+    <iframe src="https://www.youtube.com/embed/lKKMce5PsrA" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
 
 ## Vista de calendario mensual
 

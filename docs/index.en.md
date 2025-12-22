@@ -62,13 +62,13 @@ Flexygo products are built using [modules](./Modules/Modules) which are easy to 
 Flexygo does also have the possibilty of creatintg your own [reports](./Reporting/Newsandversionnotes.md) in HTML, Power BI, DevExpress and Crystal Reports.
 
 ## Offline Application
-Flexygo does also have the possibilty of creating an aside [mobile app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) to be accessed offline allowing to continue working even in remote places with low connectivity. 
+Flexygo does also have the possibilty of creating an aside [mobile app](./Offline%20App/AccessandDescription) to be accessed offline allowing to continue working even in remote places with low connectivity. 
 
 ### Technologies
-Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) does use [Ionic](https://ionicframework.com/docs/v4/components) at is base, with [Capacitor](https://capacitorjs.com/docs) and [Stencil](https://stenciljs.com/). It also uses [SQLite](https://sqlite.org/) as its way to store the data that will come in a synchronization with your Flexygo project.
+Flexygo's [Offline app](./Offline%20App/AccessandDescription) does use [Ionic](https://ionicframework.com/docs/v4/components) at is base, with [Capacitor](https://capacitorjs.com/docs) and [Stencil](https://stenciljs.com/). It also uses [SQLite](https://sqlite.org/) as its way to store the data that will come in a synchronization with your Flexygo project.
 
 ### Development
-Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) product development requires of a bigger programming knowdledge as the pages must be built with HTML, CSS, JS and Ionic knowdlege.
+Flexygo's [Offline app](./Offline%20App/AccessandDescription) product development requires of a bigger programming knowdledge as the pages must be built with HTML, CSS, JS and Ionic knowdlege.
 
 ### Tracking
-Flexygo's [Offline app](./Offline%20App/Creating%20your%20first%20app/0-UnderstandingOfflineApps.md) has [tracking](./Offline%20App/Trackingconfiguration) functionality which allows getting the exact location data of the configured devices even when the app is closed. It can be configured to just track during ceratin periods of time.
+Flexygo's [Offline app](./Offline%20App/AccessandDescription) has [tracking](./Offline%20App/Trackingconfiguration) functionality which allows getting the exact location data of the configured devices even when the app is closed. It can be configured to just track during ceratin periods of time.

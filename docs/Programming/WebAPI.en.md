@@ -1,6 +1,6 @@
 # Web API
 
-**flexygo** Web API is an application programming interface to access externally authorized objects and processes from the control panel located at Admin Work Area > Security > WebAPI or just click here.
+**Flexygo** Web API is an application programming interface to access externally authorized objects and processes from the control panel located at Admin Work Area > Security > WebAPI or just click here.
 
 This API follows [OpenAPI Initiative](https://www.openapis.org/) and SDKs can be generated with [Swagger Codegen](https://swagger.io/) using your current [Schema Definition.](./webapi)
 

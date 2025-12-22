@@ -49,7 +49,11 @@ See how to use the Scheduller and Calendar web component. With Scheduller and Ca
 | User id field | It's the field by which you will filter the previously configured search |
 | Appointment Template | Marked html in charge of painting the record in the calendar |
 
-Whatch the following video for additional information
+Watch the following video for additional information
+
+<div class="video-wrapper">  
+    <iframe src="https://www.youtube.com/embed/lKKMce5PsrA" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
 
 ## Monthly calendar view
 

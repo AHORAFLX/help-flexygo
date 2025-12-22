@@ -1,4 +1,4 @@
-# Diseñando la App offline de flexygo
+# Diseñar la App offline de flexygo
 
 Una vez creada la aplicación, será necesario darle funcionalidad creando los objetos, páginas, menús y funciones. Hay 5 pasos básicos para crear una aplicación y otros 4 pasos adicionales que permiten dotarla de mayor funcionalidad.
 
@@ -27,7 +27,7 @@ Después accederemos al asistente de objetos offline, donde solo asignaremos un 
 ![New Object](/docs_assets/images/offline/NewObject.png "Image 1. New Object")  
 ![New Object](/docs_assets/images/offline/NewObject2.png "Image 2. New Object")
 
-### Añadiendo propiedades
+### Añadir propiedades
 
 Ahora puedes usar el asistente de objetos.
 
@@ -80,7 +80,7 @@ Acceso y diseño de la HomePage de AppOffline.
 
 ![Home Page](/docs_assets/images/offline/HomePage.png "Image 12. Home Page")
 
-## Añadiendo JavaScript adicional
+## Añadir JavaScript adicional
 
 Podemos ampliar la funcionalidad creando nuestras propias funciones JS o utilizando funciones nativas del entorno Offline **flexygo**.
 
@@ -96,15 +96,15 @@ En modo dispositivo > F12 -> Consola > Flexygo + Intro, accedemos a las funcione
 
 ![Native Functions](/docs_assets/images/offline/NativeFunctions.png "Image 14. Native Functions")
 
-## Añadiendo estilos adicionales
+## Añadir estilos adicionales
 
 ![Styles](/docs_assets/images/offline/styles.png "Image 15. Styles")
 
-## Añadiendo recursos adicionales
+## Añadir recursos adicionales
 
 ![Files](/docs_assets/images/offline/files.png "Image 16. Files")
 
-## Añadiendo un logo
+## Añadir un logo
 
 Puedes establecer el logo de la pantalla de inicio de sesión de la app en la configuración miscelánea de flexygo, como se muestra en la imagen.
 

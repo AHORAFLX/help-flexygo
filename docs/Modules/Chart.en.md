@@ -1,6 +1,6 @@
 # Chart
 
-Easy Pie, Easy Info, Easy Line and Sparklines are some of the web components you can use for charting. Combined in a HTML module, you could obtain results similar to these ones:
+**Easy Pie**, **Easy Info**, **Easy Line** and **Sparklines** are some of the web components you can use for charting. Combined in a HTML module, you could obtain results similar to these ones:
 
 ![Sample charts](/docs_assets/images/Charts/Main.png "Sample charts")
 

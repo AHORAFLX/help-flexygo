@@ -35,7 +35,7 @@ In this new version you will be able to create, configure and assign a chat with
     ![How create a new ChatGPT setting](/docs_assets/images/openAI/chatgpt_setting.png#only-light "Image 1. ChatGPT setting page"){data-gallery="light"}
     ![How create a new ChatGPT setting](/docs_assets/images/openAI/chatgpt_setting_dark.png#only-dark "Image 1. ChatGPT setting page"){data-gallery="dark"}
 
-2. **(Optional)** After save your settings, configure your custom prompts that will be rendered in your chat
+2. **(Optional)** After saving your settings, configure your custom prompts which will be rendered in your chat
 
     ![ChatGPT prompts list](/docs_assets/images/openAI/chatgpt_prompts_list.png#only-light "Image 2. ChatGPT prompts list"){data-gallery="light"}
     ![ChatGPT prompts list](/docs_assets/images/openAI/chatgpt_prompts_list_dark.png#only-dark "Image 2. ChatGPT prompts list"){data-gallery="dark"}
@@ -43,7 +43,7 @@ In this new version you will be able to create, configure and assign a chat with
     ![ChatGPT chat](/docs_assets/images/openAI/chatgpt_chat.png#only-light "Image 3. ChatGPT chat"){data-gallery="light"}
     ![ChatGPT chat](/docs_assets/images/openAI/chatgpt_chat_dark.png#only-dark "Image 3. ChatGPT chat"){data-gallery="dark"}
 
-    As you can see in the following image, you can reference the property to which the chatGPT setting will be assigned with the format `{{Value}}` or any property of the object
+    As you can see in the following image you can reference an object property with the format `{{Property_Name}}`.
     {: .flx-warning-card }
 
     ![ChatGPT prompt configuration page](/docs_assets/images/openAI/chatgpt_prompts.png#only-light "Image 4. ChatGPT prompt configuration page"){data-gallery="light"}
@@ -51,7 +51,7 @@ In this new version you will be able to create, configure and assign a chat with
 
     ## ChatGPT database access
 
-3. **(Optional)** After save your settings, you can also configure the connection with your database.
+3. **(Optional)** After saving your settings, you can also configure the connection with your database.
     
     ![ChatGPT access database option](/docs_assets/images/openAI/chatgpt_dbconnection.png#only-light "Image 5. ChatGPT access database option"){data-gallery="light"}
     ![ChatGPT access database option](/docs_assets/images/openAI/chatgpt_dbconnection_dark.png#only-dark "Image 5. ChatGPT access database option"){data-gallery="dark"}
@@ -78,7 +78,7 @@ In this new version you will be able to create, configure and assign a chat with
         
     ## ChatGPT processes calling
 
-4.  **(Optional)** After save your settings, you can also configure the assistant to be able to call flexygo processes.  
+4.  **(Optional)** After saving your settings, you can also configure the assistant to be able to call flexygo processes.  
 
     It is heavily recommended that the processes linked and its parameters have a description of what the process does.
     {: .flx-warning-card }
@@ -92,7 +92,7 @@ In this new version you will be able to create, configure and assign a chat with
     ![ChatGPT Processes Module](/docs_assets/images/openAI/chatgpt_processes_module.png#only-light "Image 2. ChatGPT Processes Module"){data-gallery="light"}
     ![ChatGPT Processes Module](/docs_assets/images/openAI/chatgpt_processes_module_dark.png#only-dark "Image 2. ChatGPT Processes Module"){data-gallery="dark"}
 
-    You can link any flexygo process with the assistant. It is recommeded to use GPT-4o if the processes are complex or there are many linked.
+    You can link any flexygo process with the assistant. It is recommeded to use GPT-5 if the processes are complex or there are many linked.
 
     ![ChatGPT Processes Form](/docs_assets/images/openAI/chatgpt_processes_form.png#only-light "Image 2. ChatGPT Processes Module"){data-gallery="light"}
     ![ChatGPT Processes Form](/docs_assets/images/openAI/chatgpt_processes_form_dark.png#only-dark "Image 2. ChatGPT Processes Module"){data-gallery="dark"}

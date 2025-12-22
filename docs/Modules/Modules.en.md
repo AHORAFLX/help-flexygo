@@ -90,8 +90,6 @@ Check out additional help to see how to set it up:
 
 [Manual Document & Image Manager](/Modules/Chart)
 
-[Manual Chart II](/Modules/ChartII)
-
 [Video Document and Image Manager](https://youtu.be/qNQOoO1TcyA)
 
 [Video Document Manager](https://youtu.be/ktET_gXxdl0)
@@ -103,7 +101,7 @@ Check out additional help to see how to set it up:
 
 Chatter is a type of module, which allows us to create object related conversations.
 
-![Chatter](.\img\Help\Chatter\Chatter-example.png "Image 8. Chatter")
+![Chatter](/docs_assets/images/Chatter/Chatter-example.png "Image 8. Chatter")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
@@ -234,7 +232,7 @@ Check out additional help to see how to set it up:
 
 Timeline module is a visual tool that outlines a sequence of events for a specific time period. It allows us to create planners based on an object in a simple and easy way.
 
-![Timeline](.\img\Help\Timeline\Timeline_AdvancedWithGroups_Result.png "Image 18. Timeline")
+![Timeline](/docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 18. Timeline")
 
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:

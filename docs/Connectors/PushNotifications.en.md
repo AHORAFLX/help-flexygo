@@ -1,6 +1,6 @@
 # Push Notifications
 
-**flexygo** enables you to use push notifications in your offline apps and in your web browser. Push notifications may be subject to additional charges in the future depending on number of messages.
+**Flexygo** enables you to use push notifications in your offline apps and in your web browser. Push notifications may be subject to additional charges in the future depending on number of messages.
 
 It is mandatory for using push notifications in your web browser to have a domain **HTTPS certificate** issued by an authorized entity, required to use the Google Firebase service.
 {: .flx-warning-card }

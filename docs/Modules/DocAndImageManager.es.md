@@ -1,6 +1,6 @@
-# Document Manager & Image Manager
+# Document Manager And Image Manager
 
-**flexygo** nos permite añadir documentos e imágenes a cualquier objeto existente. Podemos añadir documentos (pdf, doc, docx, txt, odt, etc.) e imágenes (jpg, png, gif, bmp, etc.) a nuestros artículos, clientes, edificios, etc. Usando el objeto document manager podemos editar y mostrar cualquier documento relacionado con un objeto.
+**Flexygo** nos permite añadir documentos e imágenes a cualquier objeto existente. Podemos añadir documentos (pdf, doc, docx, txt, odt, etc.) e imágenes (jpg, png, gif, bmp, etc.) a nuestros artículos, clientes, edificios, etc. Usando el objeto document manager podemos editar y mostrar cualquier documento relacionado con un objeto.
 
 Mira el siguiente vídeo en nuestro canal de YouTube sobre Document y Image Manager.
 
@@ -90,7 +90,7 @@ Evento onclick para abrir el document classification manager genérico.
 flexygo.nav.openPageName('syspage-documents-classification','sysDocumentsCategories','','{\'ObjectId\':\'{{MyobjectId}}\',\'ObjectName\':\'{{MyObjectName}}\'}','popup1024x678',false,$(this))
 ```
 
-Botón FlexyGo para abrir el document classification manager genérico:
+Flx-navbutton para abrir el document classification manager genérico:
 
 ```html
 <flx-navbutton type="openpagename" pagename="syspage-documents-classification" targetid="popup1024x678" defaults="{'ObjectId':'{{MyobjectId}}', 'ObjectName':'{{MyObjectName}}'}" excludehist="false"></flx-navbutton>
@@ -171,7 +171,7 @@ Evento onclick para abrir el image classification manager genérico:
 flexygo.nav.openPageName('syspage-images-classification','sysObjectImagesClassifications','','{\'ObjectId\':\'{{MyobjectId}}\',\'ObjectName\':\'{{MyObjectName}}\'}','popup1024x678',false,$(this))
 ```
 
-Botón FlexyGo para abrir el image classification manager genérico:
+Flx-navbutton para abrir el image classification manager genérico:
 
 ```html
 <flx-navbutton type="openpagename" pagename="syspage-images-classification" targetid="popup1024x678" defaults="{'ObjectId':'{{MyobjectId}}', 'ObjectName':'{{MyObjectName}}'}" excludehist="false"></flx-navbutton>

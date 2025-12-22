@@ -56,6 +56,8 @@ When developing new pages or updating old ones you need to follow some guideline
 - You should never use an image as a B64 you'll always save it to its correspondent docs_assets folder and make showing it with a reference to that file.
 - Every title musn't be an order, so instead of writting something like "Add messages" you should writte "Adding messages".
 - You should always use our [custom components](#custom-components) or  [classes](#custom-classes) instead of creating specific ones for your page, unless you think it'll  be something usefull for more pages (if you do so add them to this readme to make people get to know it).
+- It's always preferable not to write a full URL when linking to an external page, and just doing something like `To know more about this visit the following [website](https://isitchristmas.com/).`.
+- Always use bold letters to higlight the property names, the objects, the settings or the menus the user needs to interact with.
 
 ## Custom components
 

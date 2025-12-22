@@ -6,9 +6,7 @@ En caso de necesitar abrir páginas de aplicaciones **flexygo** externas desde t
 
 ## Configuración
 
-1.  Primero debes registrar la aplicación externa que quieres abrir usando esta ventana de configuración:  
-    <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysFlexygoConnectors" showprogress="false">connect flexygo application</flx-navbutton>.  
-    **App name** es el nombre del proyecto de tu segunda aplicación **flexygo** (2) y **external url** es la URL de esa segunda app.
+1.  Primero debes registrar la aplicación externa que quieres abrir usando esta ventana de configuración:  <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysFlexygoConnectors" showprogress="false">connect flexygo application</flx-navbutton>.  **App name** es el nombre del proyecto de tu segunda aplicación **flexygo** (2) y **external url** es la URL de esa segunda app.
 
     ![Connected flexygo](/docs_assets/images/FlexygoConnector/ConnectedFlexygo.PNG "Image 1. Connected flexygo")
 

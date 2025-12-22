@@ -6,8 +6,10 @@ Flexygo incluye diferentes formas de establecer acciones de **Insertar**, **Actu
 | --- | --- |
 | Estándar | Realiza una inserción, actualización o eliminación directa en la base de datos, basada en las propiedades del objeto. |
 | Proceso DLL | Nos permite crear una DLL para realizar la inserción, eliminación y actualización. |
+| C# Embedido | Nos permite crear con un C# embedido la inserción, eliminación y actualización de un objeto |
 | Procedimiento Almacenado XML | Nos permite realizar operaciones adicionales sin tener que crear un proceso DLL. |
 | Procedimiento Almacenado JSON | Nos permite realizar operaciones adicionales sin tener que crear un proceso en una DLL |
+| Ahora Freeware Stored | Realiza una inserción, actualización o eliminación basadas en los procedimientos almacenados de AHORA ERP (si no se encuentran realizada el modo estándar). En un objeto adicional se asume que el objeto principal realiza la inserción en la tabla adicional |
 | No hace absolutamente nada | No hace nada :) |
 
 Existe un quinto modo llamado Procedimiento Almacenado Ahora Freeware, que se usa cuando se trabaja con el modelo de datos de Ahora Freeware ERP.
@@ -30,37 +32,37 @@ Para los ejemplos, hemos creado un objeto llamado systmpTes basado en dos tablas
 
 ## Proceso DLL
 
-<fh-modal class="button" modal_id="fhmodal_insert_dll" modal_title="Insert object function">Insertar objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_update_dll" modal_title="Update object function">Actualizar objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_delete_dll" modal_title="Delete object function">Borrar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_insert_dll" modal_title="Función de insertar objeto">Insertar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_dll" modal_title="Función de actualizar objeto">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_dll" modal_title="Función de borrar objeto">Borrar objeto</fh-modal>
 
 ## Procedimiento Almacenado XML (Fácil)
 
-<fh-modal class="button" modal_id="fhmodal_insert_stored" modal_title="Insert object with easy stored procedure">Insert objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_update_stored" modal_title="Update object with easy stored procedure">Actualizar objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_delete_stored" modal_title="Delete object with easy stored procedure">Borrar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_insert_stored" modal_title="Insertar objeto con proceso almacenado simple">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored" modal_title="Actualizar objeto con proceso almacenado simple">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored" modal_title="Borrar objeto con proceso almacenado simple">Borrar objeto</fh-modal>
 
 ## Procedimiento Almacenado XML (Avanzado)
 
 Utiliza procedimientos almacenados optimizados para actualizar solo los campos que han cambiado.
 
-<fh-modal class="button" modal_id="fhmodal_insert_stored_advanced" modal_title="Insert object with advanced stored procedure">Insert objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_update_stored_advanced" modal_title="Update object with advanced stored procedure">Actualizar objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_delete_stored_advanced" modal_title="Delete object with advanced stored procedure">Borrar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_insert_stored_advanced" modal_title="Insertar objeto con proceso almacenado complejo">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored_advanced" modal_title="Actualizar objeto con proceso almacenado complejo">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored_advanced" modal_title="Borrar objeto con proceso almacenado complejo">Borrar objeto</fh-modal>
 
 ## Procedimiento Almacenado JSON
 
-<fh-modal class="button" modal_id="fhmodal_insert_json" modal_title="Insert object with stored procedure JSON">Insert objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_update_json" modal_title="Update object with stored procedure JSON">Actualizar objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_delete_json" modal_title="Delete object with stored procedure JSON">Borrar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_insert_json" modal_title="Insertar objeto con proceso almacenado JSON">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_json" modal_title="Actualizar objeto con proceso almacenado JSON">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_json" modal_title="Borrar objeto con proceso almacenado JSON">Borrar objeto</fh-modal>
 
 ## Procedimiento Almacenado Ahora Freeware
 
 Usar solo con el modelo de datos de Ahora Freeware ERP.
 
-<fh-modal class="button" modal_id="fhmodal_insert_stored_ahora" modal_title="Insert object with Ahora Freeware stored procedure">Insert objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_update_stored_ahora" modal_title="Update object with Ahora Freeware stored procedure">Actualizar objeto</fh-modal>
-<fh-modal class="button" modal_id="fhmodal_delete_stored_ahora" modal_title="Delete object with Ahora Freeware stored procedure">Borrar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_insert_stored_ahora" modal_title="Insertar objeto con proceso almacenado de Ahora Freeware">Insert objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_update_stored_ahora" modal_title="Actualizar objeto con proceso almacenado de Ahora Freeware">Actualizar objeto</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_delete_stored_ahora" modal_title="Borrar objeto con proceso almacenado de Ahora Freeware">Borrar objeto</fh-modal>
 
 ```vbnet { #fhmodal_insert_dll }
 Imports FLEXYGO.Configuration.Tokens

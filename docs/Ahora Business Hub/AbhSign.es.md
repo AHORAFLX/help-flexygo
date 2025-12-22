@@ -1,60 +1,63 @@
-# Abh Sign
+# Firma Abh
 
-Abh Sign es una integración de **Ahora Business Hub** que permite a **flexygo** enviar documentos PDF para su firma y guardarlos posteriormente en la gestión documental.
+Firma Abh es una integración de **Ahora Business Hub** que permite a **flexygo** enviar documentos PDF para su firma y guardarlos posteriormente en la gestión documental.
 
-## ¿Cómo contratar los servicios de ABH Sign?
+## ¿Cómo contratar los servicios de Firma Abh?
 
-**ABH Sign no está incluido en la licencia de Flexygo**, por lo que debe contratarse por separado.
+**Firma Abh no está incluido en la licencia de Flexygo**, por lo que debe contratarse por separado.
 
 Puedes contratar el servicio de cualquiera de las siguientes formas:
 
-* **Por Email:** Envía un correo a [abh@ahora.es](mailto:abh@ahora.es) con el asunto **"Hire ABH Sign"** e incluye en el mensaje tus datos de contacto (nombre, empresa y teléfono).  
+* **Por Email:** Envía un correo a [abh@ahora.es](mailto:abh@ahora.es) con el asunto **"Hire Firma Abh"** e incluye en el mensaje tus datos de contacto (nombre, empresa y teléfono).  
   Un agente comercial se pondrá en contacto contigo para continuar con el proceso.
 
-## Activar Abh Sign
+## Activar Firma Abh
 
 <flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbhSigns_Objects_Config" excludehist="false">
-    Add Abh Sign to your project 🦦
+    Añade Firma Abh a tu proyecto
 </flx-navbutton>
 
-## Configurar Abh Sign
+## Configurar Firma Abh
 
-![Abh Sign configuration](/docs_assets/images/AbhSign/AbhSignSettings.png "Abh Sign configuration")
+![Firma Abh configuration](/docs_assets/images/AbhSign/AbhSignSettings.png "Firma Abh configuration")
 
-**Object Name:** Objeto al que queremos habilitar Abh Sign.
+**Nombre objeto:** Objeto al que queremos habilitar Firma Abh.
 
-**Type:** Modo de firma que queremos habilitar.
+**Tipo:** Modo de firma que queremos habilitar.
 
 * **Remote:** Envía un correo electrónico con el documento para ser firmado.
 * **In-person:** Envía el documento a un [dispositivo compatible](https://www.validatedid.com/es/dispositivos) para realizar la firma de manera presencial.  
-  Es necesario descargar la app que muestra los documentos pendientes, disponible en:  
-  [Android](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Android?language=es) |  
-  [iOS](https://help.vidsigner.net/s/article/Manual-de-Usuario-de-la-Firma-BIO-para-iOS?language=es) |  
-  [Windows](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Windows?language=es)
+  Es necesario descargar la app que muestra los documentos pendientes, disponible en: [Android](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Android?language=es) |  [iOS](https://help.vidsigner.net/s/article/Manual-de-Usuario-de-la-Firma-BIO-para-iOS?language=es) | [Windows](https://help.vidsigner.net/s/article/Manual-de-usuario-de-la-Firma-Bio-para-Windows?language=es)
 
 **Client Id:** Identificador de cliente de Ahora Business Hub.  
-*Más información en:* https://help.flexygo.com/
+    
+  Para más información cosalte en: [https://help.flexygo.com/](https://help.flexygo.com/)
+  { .flx-warning-card }
 
 **Client Secret:** Clave secreta de cliente de Ahora Business Hub.  
-*Más información en:* https://help.flexygo.com/
+
+  Para más información cosalte en: [https://help.flexygo.com/](https://help.flexygo.com/)
+  { .flx-warning-card }
 
 **Tenant Id:** Identificador de tenant de Ahora Business Hub.  
-*Más información en:* https://help.flexygo.com/
+
+  Para más información cosalte en: [https://help.flexygo.com/](https://help.flexygo.com/)
+  { .flx-warning-card }
 
 ## Configurar Reports
 
 Una vez configurado, se habilita un módulo para seleccionar los informes que queremos enviar a firmar.
 
-![Abh Sign reports configuration](/docs_assets/images/AbhSign/AbhSignReports.png "Abh Sign reports configuration")
+![Firma Abh reports configuration](/docs_assets/images/AbhSign/AbhSignReports.png "Firma Abh reports configuration")
 
-**Type:** Permite configurar por informe o por gestión documental.
+**Tipo:** Permite configurar por informe o por gestión documental.
 
-**Report:** Informe que queremos habilitar (se muestran los asociados al objeto configurado).
+**Informe:** Informe que queremos habilitar (se muestran los asociados al objeto configurado).
 
-**Document Category:** Categoría del documento (Id).  
+**Categoría de documento:** Categoría del documento (Id).  
 Si la categoría está vacía, la configuración aplica a todos los documentos del objeto.
 
-**After Process:** Proceso que queremos ejecutar cuando el documento firmado sea recuperado.  
+**Proceso de después:** Proceso que queremos ejecutar cuando el documento firmado sea recuperado.  
 (Puede recibir el parámetro DocGuid o cualquier propiedad del objeto).
 
 Para indicar **dónde se debe firmar en el documento**, existe un asistente disponible en la barra de herramientas.  
@@ -72,4 +75,4 @@ Además, se añade un **cron job cada 30 minutos** que:
 2. Si lo está, lo recoge y lo inserta en la gestión documental.  
 3. Ejecuta el *After Process* si existe.
 
-![Abh Sign operation](/docs_assets/images/AbhSign/AbhSignOperation.png "Abh Sign operation")
+![Firma Abh operation](/docs_assets/images/AbhSign/AbhSignOperation.png "Firma Abh operation")

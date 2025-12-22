@@ -2,7 +2,7 @@
 
 ![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
 
-**flexygo** incluye 3 niveles de seguridad diferentes:
+**Flexygo** incluye 3 niveles de seguridad diferentes:
 
 * Seguridad por roles  
 * Seguridad por facultades (sobrescribe la seguridad por roles)  
@@ -15,11 +15,11 @@ El usuario John pertenece al rol de ventas. En el rol de ventas se establece que
 
 ## Role Security
 
-**flexygo** incluye cinco roles por defecto, dos roles principales: **Admin** y **All Users**.  
-El rol Admin concede acceso total a cualquier miembro del grupo.  
-El rol All Users agrupa al resto de roles y permite asignar permisos directamente a todos los grupos hijos. Dentro de All Users encontramos un segundo nivel con los roles **Registered** y **Not registered**. El rol Registered contendrá todos los nuevos roles creados, incluido el rol de usuarios por defecto.
+**Flexygo** incluye cinco roles por defecto, dos roles principales: **Admin** y **All Users**.  
+El rol **Admin** concede acceso total a cualquier miembro del grupo.  
+El rol **All Users** agrupa al resto de roles y permite asignar permisos directamente a todos los grupos hijos. Dentro de All Users encontramos un segundo nivel con los roles **Registered** y **Not registered**. El rol **Registered** contendrá todos los nuevos roles creados, incluido el rol de usuarios por defecto.
 
-La seguridad siempre se aplica hacia arriba: si un grupo inferior tiene seguridad definida, sobrescribe la del grupo superior.  
+**La seguridad siempre se aplica hacia arriba**: si un grupo inferior tiene seguridad definida, sobrescribe la del grupo superior.  
 Lo mismo ocurre si la seguridad se establece a nivel de usuario:  
 **la seguridad del usuario siempre sobrescribe la del rol**.
 
@@ -44,14 +44,21 @@ También debemos establecer una página por defecto para la seguridad del invita
 * Processes  
 * Reports  
 
-Si queremos permitir acceso no registrado, debemos asegurarnos de que el archivo *web.config* contiene:
+Si queremos permitir acceso no registrado, debemos asegurarnos de que el archivo **web.config** contiene:
 
-1. Cambiar autenticación de Forms a None:  
-   **<authentication mode="None">**  
-2. Comentar el bloque de denegación de autorización:  
-   **<authorization> <deny users="?"/> </authorization>**  
-3. Establecer **AllowGuest** a **true** en  
-   *Admin Work Area > Environment > Settings*
+1\. Cambiar autenticación de Forms a None:  
+
+```xml
+<authentication mode="None">
+```
+
+2\. Comentar el bloque de denegación de autorización:  
+
+```xml
+<authorization> <deny users="?"/> </authorization> 
+```
+
+3\. Establecer **AllowGuest** a **true** en  *Admin Work Area > Environment > Settings*
 
 | ¿A qué podemos aplicar seguridad? | En Roles | En Usuario |
 | --- | --- | --- |

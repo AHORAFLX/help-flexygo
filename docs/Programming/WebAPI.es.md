@@ -2,7 +2,7 @@
 
 Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde el panel de control ubicado en Área de Trabajo de Administrador > Seguridad > WebAPI o simplemente haz clic aquí. 
 
-Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando su actual Definición de Esquema. 
+Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando su actual [Definición de Esquema](./webapi). 
 
 Es **altamente** recomendado utilizar **HTTPS**.
 {: .flx-warning-card }
@@ -118,7 +118,7 @@ Content-Type: application/json
 
 <div id="codemodal_list" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysObject';
@@ -147,7 +147,7 @@ beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Be
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -161,7 +161,7 @@ Content-Type: application/json
 
 <div id="codemodal_list_view" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysObject';
@@ -191,7 +191,7 @@ beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Be
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -205,7 +205,7 @@ HTTP/1.1 200 OK
 
 <div id="codemodal_object" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';
@@ -226,7 +226,7 @@ beforeSend: function (xhr, settings) { xhr.setRequestHeader('Authorization', 'Be
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -254,7 +254,7 @@ Content-Type: application/json
 
 <div id="codemodal_object_filter" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';
@@ -276,7 +276,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -305,7 +305,7 @@ Content-Type: application/json
 
 <div id="codemodal_insert" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';  
@@ -326,7 +326,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -355,7 +355,7 @@ Content-Type: application/json
 
 <div id="codemodal_update" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';  
@@ -377,7 +377,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -405,7 +405,7 @@ Content-Type: application/json
 
 <div id="codemodal_update_filter" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';  
@@ -427,7 +427,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -455,7 +455,7 @@ Content-Type: application/json
 
 <div id="codemodal_delete" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';  
@@ -475,7 +475,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -492,7 +492,7 @@ Content-Type: application/json
 
 <div id="codemodal_delete_filter" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let objectName='sysTmpTest';  
@@ -513,7 +513,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -530,7 +530,7 @@ Content-Type: application/json
 
 <div id="codemodal_process" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let processName='MyProcess';  
@@ -552,7 +552,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -572,7 +572,7 @@ Content-Type: application/json
 
 <div id="codemodal_process_filter" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let processName='MyProcess';  
@@ -595,7 +595,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK
@@ -615,7 +615,7 @@ Content-Type: application/json
 
 <div id="codemodal_process_no_object" markdown="1">
 
-**Request:**
+**Petición:**
 
 ```js
 let processName='MyProcess';  
@@ -635,7 +635,7 @@ $.ajax({
 });
 ```
 
-**Response:**
+**Respuesta:**
 
 ```json
 HTTP/1.1 200 OK

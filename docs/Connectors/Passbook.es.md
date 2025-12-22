@@ -10,10 +10,7 @@ El primer requisito es disponer de una cuenta de desarrollador de Apple.
 
 ## Apple WWDR
 
-Para obtener el primer certificado solo tenemos que ir a  
-[https://www.apple.com/certificateauthority/](https://www.apple.com/certificateauthority/)  
-y descargar  
-[Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)](https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer), que es el que funciona actualmente.
+Para obtener el primer certificado solo tenemos que ir a [https://www.apple.com/certificateauthority/](https://www.apple.com/certificateauthority/) y descargar [Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)](https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer), que es el que funciona actualmente.
 
 Instalamos el certificado y seleccionamos el almacén **“Intermediate Certification Authorities”**.
 
@@ -37,14 +34,13 @@ Es recomendable que el identificador mantenga la estructura `pass.com.x`.
 
 ## Crear una petición de certificado (CSR)
 
-Si no tenemos **OpenSSL** instalado, podemos descargarlo e instalarlo desde aquí:  
-[OpenSSL](https://wiki.openssl.org/index.php/Binaries)
+Si no tenemos **OpenSSL** instalado, podemos descargarlo e instalarlo desde aquí: [OpenSSL](https://wiki.openssl.org/index.php/Binaries).
 
 Una vez instalado, abrimos la consola con permisos de administrador, nos situamos en la ruta donde queremos generar los ficheros y ejecutamos el comando:
 
 ```shell
 openssl req -new -newkey rsa:2048 -out passbook.csr -keyout passbook.key
-````
+```
 
 Aparecerá una serie de datos a rellenar. El primero será la **PEM pass phrase**; es muy importante recordarla ya que la usaremos para generar el passbook y para firmar con la clave.
 
@@ -129,7 +125,7 @@ Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en
 
 ## Ejemplo de uso desde DLL
 
-<fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">DLL example</fh-modal>
+<fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">Ejemplo de DLL</fh-modal>
 
 ## Ejemplo de diseño y layout
 
@@ -137,65 +133,65 @@ Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en
 
 ![](/docs_assets/images/Passbook/passbook13.png "Image 11. Passbook example")
 
+```vbnet { #fhmodal_dll_example }
 Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
-Try
-Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))
-Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))
-Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))
-Dim aBackField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))
-Dim aBackgroundColor As String = "#000000"
-Dim aForegroundColor As String = "#FFFFFF"
-Dim aLabelColor As String = "#FFFFFF"
-Dim aIcon As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
-Dim aLogo As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
-Dim aDescription As String = "Passbook flexygo"
-Dim aOrganizationName As String = "Flexygo"
-Dim aLogoText As String = "Logo text"
-Dim aThumbnail As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\Avatars\avatar_blank.png"))
-Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")
+        Try
+            Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))
+            Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))
+            Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))
+            Dim aBackField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
+            aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))
+            Dim aBackgroundColor As String = "#000000"
+            Dim aForegroundColor As String = "#FFFFFF"
+            Dim aLabelColor As String = "#FFFFFF"
+            Dim aIcon As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
+            Dim aLogo As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
+            Dim aDescription As String = "Passbook flexygo"
+            Dim aOrganizationName As String = "Flexygo"
+            Dim aLogoText As String = "Logo text"
+            Dim aThumbnail As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\Avatars\avatar_blank.png"))
+            Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")
 
-```
-        'vCard info for qr barcode
-        Dim FirstName As String = "Aitor"
-        Dim LastName As String = "Torres"
-        Dim CompanyName As String = "Flexygo"
-        Dim JobTitle As String = "Programador"
-        Dim StreetAddress As String = "Carrer dels Ceramistes 19"
-        Dim Zip As String = "46900"
-        Dim City As String = "Valencia"
-        Dim CountryName As String = "España"
-        Dim Phone As String = "123456"
-        Dim Mobile As String = "987654"
-        Dim Fax As String = ""
-        Dim Email As String = "aitor@ahora.es"
-        Dim HomePage As String = "www.flexygo.com"
-        Dim loUid As String = System.Guid.NewGuid().ToString()
-        Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)
+            'vCard info for qr barcode
+            Dim FirstName As String = "Aitor"
+            Dim LastName As String = "Torres"
+            Dim CompanyName As String = "Flexygo"
+            Dim JobTitle As String = "Programador"
+            Dim StreetAddress As String = "Carrer dels Ceramistes 19"
+            Dim Zip As String = "46900"
+            Dim City As String = "Valencia"
+            Dim CountryName As String = "España"
+            Dim Phone As String = "123456"
+            Dim Mobile As String = "987654"
+            Dim Fax As String = ""
+            Dim Email As String = "aitor@ahora.es"
+            Dim HomePage As String = "www.flexygo.com"
+            Dim loUid As String = System.Guid.NewGuid().ToString()
+            Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)
 
-        Dim aBarcode As String = vCard.VCardBody()
+            Dim aBarcode As String = vCard.VCardBody()
 
-        Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)
-        'We can write on disk, download it, send by mail, etc...
-        File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass"), passbook.generatePassbook())
-        Dim path As String = HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass")
-        Dim dw As New Utilities.Download With {
-                .Path = path,
-                .DeleteAfterDownload = True
-            }
-            
-        Ret.JSCode = String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))
-        Ret.Success = True
-        Ret.SuccessMessage = "Passbook generated"
-        Return Ret.Success
+            Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)
+            'We can write on disk, download it, send by mail, etc...
+            File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass"), passbook.generatePassbook())
+            Dim path As String = HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass")
+            Dim dw As New Utilities.Download With {
+                    .Path = path,
+                    .DeleteAfterDownload = True
+                }
+                
+            Ret.JSCode = String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))
+            Ret.Success = True
+            Ret.SuccessMessage = "Passbook generated"
+            Return Ret.Success
 
-    Catch ex As Exception
-        Ret.Success = False
-        Ret.LastException = ex
-        Return Ret.Success
-    End Try
-End Function
+        Catch ex As Exception
+            Ret.Success = False
+            Ret.LastException = ex
+            Return Ret.Success
+        End Try
+    End Function
 ```

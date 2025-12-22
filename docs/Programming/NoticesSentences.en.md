@@ -9,7 +9,7 @@ Notices sentences is a utility to manage automatic alerts, either through on-scr
 
 It's the way system can send push notices or show alerts on the screen. This is shown with a list on an icon that lights up when the user has unread messages. To generate a notice, it is sufficient to add a record in the "Notices" table, and if we need the notification to be displayed by a group of users, we must add them as records in the "Notices\_Users" table.
 
-For make it works, the cron called **UpdateNoticeBadge** must be active.
+To make it work the cron **UpdateNoticeBadge** must be active.
 {: .flx-warning-card }
 
 ## Sentences
@@ -41,27 +41,27 @@ FROM ...
 | Property | Description | Required |
 | --- | --- | --- |
 | **Title** | Notification Title | ✓ |
-| **Notification Message** | Use HTML Markup | ✓ |
-| **Method Name** | **App** Notification, **Push** notification, **PushMobile** for mobile device notification only or **Pushweb** for web browser notification only | ✓ |
-| **Reminder Time** | Since when should it appear | ✓ |
-| **Expiry Date** | The notification should disappear | ✓ |
-| **All Users** | If set to false remeber to fill out notification user Sentence | ✓ |
+| **Message** | The notification message which you'll need to use HTML Markup | ✓ |
+| **MethodName** | <fh-copy class="link">App</fh-copy> Notification, <fh-copy class="link">Push</fh-copy> notification, <fh-copy class="link">PushMobile</fh-copy> for mobile device notification only or <fh-copy class="link">Pushweb</fh-copy> for web browser notification only | ✓ |
+| **ReminderTime** | The date time in which the notice will be sent | ✓ |
+| **ExpiryTime** | The datetime in which the the notice will expire | ✓ |
+| **AllUsers** | Send the notification to all users, if set to false remeber to fill out notification user Sentence | ✓ |
 | **TypeId** | One of the valid Node Types: Object Link (object), Page Link (page), Process (process), Text (text), etc. | ✓ |
 | **CurrentReference** | Value corresponding to the "Reference" field of Flexygo user. It can contain multiple values separated by ";". With this you avoid having to put a user statement. |     |
 | **UserId** | Value corresponding to the "Id" field of the Flexygo user. It can contain multiple values separated by ";". With this you avoid having to put a user statement. If you use the CurrentReference field, you do not need to specify it. |     |
-| **AfterClickEvent** | Fire your own function after click |     |
-| **CssClass** |     |     |
-| **ObjectName** | Link click to an object |     |
-| **ObjectWhere** | Link click to an object |     |
-| **PageTypeId** | Linck click to a page type |     |
-| **PageName** | Link click to a page Name |     |
-| **ReportName** | Link click to report name |     |
-| **ReportParams** | Link click to report with parameters |     |
-| **ProcessName** | Link click to process name |     |
-| **Params** | For process Parameters |     |
-| **HelpId** | Link click to help |     |
-| **URL** | Link click external url |     |
-| **TableName** | Link click to master table |     |
+| **AfterClickEvent** | The js code that will get triggered after clicking the notificaton  |     |
+| **CssClass** | The CSS class applied to the notification |     |
+| **ObjectName** | The object name if you need to link to one on click |     |
+| **ObjectWhere** | The object where if you need to link to one on click |     |
+| **PageTypeId** | The page type id if you need to link to one on click |     |
+| **PageName** | The page name if you need to link to one on click |     |
+| **ReportName** | The report name if you need to link to one on click |     |
+| **ReportParams** | The reports params if you need to link to one on click |     |
+| **ProcessName** | The process name if you need to link to one on click |     |
+| **Params** | The processes parameters if you need to link to one on click |     |
+| **HelpId** | The help page id if you need to link to one on click |     |
+| **URL** | An url if you need to link to one on click|     |
+| **TableName** | The table name if you need to link to one on click|     |
 
 _Example:_ "Upcoming offers that expire"
 

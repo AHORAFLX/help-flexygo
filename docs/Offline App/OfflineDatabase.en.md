@@ -10,8 +10,10 @@
     
 
     Tip: If you ever want to reuse a select, you can do so by using the up and down arrow keys.
+    { .flx-info-card }
 
     Tip 2: When a complex select must be done you may use "shift + enter" to add another line and so making the input bigger without executing the select sentence. And if you have a complex select from other place, when you paste it the input will automatically grow accoding to the select size.
+    { .flx-info-card }
 
     ![Menu](/docs_assets/images/offline/DatabaseMenu.png "Image 2. Database Menu")
 

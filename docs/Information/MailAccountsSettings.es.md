@@ -8,8 +8,7 @@ Si no existe ninguna configuración personalizada, la aplicación usará la conf
 
 ## Create Mail Account
 
-Puedes gestionar la configuración de cuentas de correo desde:  
-**Admin Panel Area > Security > Mail Account**.
+Puedes gestionar la configuración de cuentas de correo desde: **Admin Panel Area > Security > Mail Account**.
 
 ![](/docs_assets/images/MailAccountsSettings/AdminWorkArea.PNG "Image 1. Admin Work Area")
 
@@ -19,13 +18,11 @@ Completa la información del servidor de correo y los datos de la cuenta para en
 
 ## Link Mail Account
 
-Puedes vincular configuraciones de correo a usuarios desde:  
-**Admin Work Area > Security > Users**.
+Puedes vincular configuraciones de correo a usuarios desde: **Admin Work Area > Security > Users**.
 
 ![](/docs_assets/images/MailAccountsSettings/MailAccountUsers.PNG "Image 3. Mail Account Users")
 
-También puedes vincular configuraciones de correo a perfiles desde:  
-**Admin Work Area > Security > Profiles**.
+También puedes vincular configuraciones de correo a perfiles desde: **Admin Work Area > Security > Profiles**.
 
 ![](/docs_assets/images/MailAccountsSettings/MailAccountProfiles.PNG "Image 4. Mail Account Profiles")
 

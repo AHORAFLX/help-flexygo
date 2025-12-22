@@ -10,7 +10,7 @@ En flexygo hay un ejemplo de kanban disponible; <flx-navbutton class="link" type
 
 La configuración de Kanban se divide en cinco grupos:
 
-### Board Settings
+### Configuración del tablero
 
 Se utiliza para definir los ajustes básicos del tablero kanban.
 
@@ -21,7 +21,7 @@ Se utiliza para definir los ajustes básicos del tablero kanban.
 * **Board Title Template:** El título que se mostrará en la parte superior del kanban.
 * **Board Description Template:** Una breve descripción que aparecerá debajo del título.
 
-### Column Settings
+### Configuración de columnas
 
 Aquí se pueden establecer las vistas de columnas que se utilizarán como configuración de columnas.
 
@@ -33,7 +33,7 @@ Aquí se pueden establecer las vistas de columnas que se utilizarán como config
 * **CSS Class Field:** La clase CSS que se aplicará a la columna en el div `.kanban-col`.
 * **Icon Class:** El icono que aparecerá junto a la descripción.
 
-### Card Settings
+### Configuración de tarjetas
 
 Aquí se establece el objeto y las vistas que se utilizarán como configuración de las tarjetas.
 
@@ -46,7 +46,7 @@ Aquí se establece el objeto y las vistas que se utilizarán como configuración
 * **Card Description Field:** La descripción será el contenido de la tarjeta si no se asigna una plantilla de contenido.
 * **Card Content Template:** Es la plantilla HTML donde, si se especifica, seguirá el contenido de la tarjeta; se puede parsear el campo descripción.
 
-### Archive Settings
+### Configuración del area de archivo
 
 Usado para establecer la configuración del área de archivo que aparece al mover una tarjeta.
 
@@ -57,7 +57,7 @@ Usado para establecer la configuración del área de archivo que aparece al move
 * **Archived Icon:** El icono que se verá en el área de archivo.
 * **Archived CSS Class:** La clase CSS aplicada al área de archivo.
 
-### Event Settings
+### Configuración deeventos
 
 Usado para definir qué ocurre cuando se disparan los diferentes eventos.
 

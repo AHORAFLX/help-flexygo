@@ -1,7 +1,11 @@
 # Wacom SDK Integration { .flx-title-with-image }
 ![Wacom](/docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .flx-image-of-title }
 
-**flexygo** has successfully incorporated the capability to sign with STU tablets in a seamless and user-friendly manner. This guide provides detailed, step-by-step instructions on how to install and set up the required SDK and services to enable signature capture using Wacom Signature Controls. Furthermore, it explores the various customizable values that can be configured to adapt the signature capture experience according to your specific needs.
+**flexygo** has successfully incorporated the capability to sign with STU tablets in a seamless and user-friendly manner.
+
+This guide provides detailed, step-by-step instructions on how to install and set up the required SDK and services to enable signature capture using Wacom Signature Controls. 
+
+Furthermore, it explores the various customizable values that can be configured to adapt the signature capture experience according to your specific needs.
 
 ## Set Up
 

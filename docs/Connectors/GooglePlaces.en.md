@@ -16,7 +16,7 @@ Google Places integration provides a convenient UI for connecting to and queryin
 ![AfterLoadJS](/docs_assets/images/GoogleAPIKey/jsafterload.png "AfterLoadJS")
     
 
-#### JavaScript documentation
+## JavaScript documentation
 
 You can find more information about some specifics of Google Autocomplete visiting [Google Maps Platform](https://developers.google.com/maps/documentation/places/web-service/autocomplete)
 {: .flx-warning-card }

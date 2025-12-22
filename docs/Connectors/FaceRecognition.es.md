@@ -4,10 +4,7 @@ El reconocimiento facial es una forma de identificar o confirmar la identidad de
 
 ## Configuración
 
-Para habilitar esta función, debes **descargar los modelos entrenados** desde  
-https://nuget.flexygo.com/setup/models.zip  
-y extraerlos en tu directorio **flexygo**, por ejemplo:  
-_~/custom/models/_
+Para habilitar esta función, debes **descargar los modelos entrenados** desde [https://nuget.flexygo.com/setup/models.zip](https://nuget.flexygo.com/setup/models.zip) y extraerlos en tu directorio **flexygo**, por ejemplo: _~/custom/models/_
 
 Ten en cuenta que el reconocimiento facial requiere un **servidor de 64 bits**.
 {: .flx-warning-card }
@@ -24,8 +21,7 @@ Ten en cuenta que el reconocimiento facial requiere un **servidor de 64 bits**.
 
     ![Face Recognition example](/docs_assets/images/Recognition/Recognition_3.png "Image 3. Face Recognition example")
 
-4.  Después podrás probarlo usando el proceso de ejemplo **Find Faces** o programar tu propia  
-    <fh-modal class="link" modal_id="fhmodal_own_code" modal_title="Insert object function">función personalizada</fh-modal>:
+4.  Después podrás probarlo usando el proceso de ejemplo **Find Faces** o programar tu propia <fh-modal class="link" modal_id="fhmodal_own_code" modal_title="Insert object function">función personalizada</fh-modal>:
 
     ![Face Recognition example](/docs_assets/images/Recognition/Recognition_6.png "Image 4. Face Recognition example")
 

@@ -1,4 +1,4 @@
-# Tarea de script de base de datos
+# Trabajo de script de base de datos
 
 Esta innovadora utilidad de flexygo permite al desarrollador hacer cambios en el modelo de datos. Simplemente creando el registro con la instrucción SQL, el sistema lo iniciará al inicio, informando al usuario de cualquier problema detectado. En el caso de tener más de un script, los ejecutará en el orden especificado.
 

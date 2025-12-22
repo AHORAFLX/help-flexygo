@@ -22,8 +22,7 @@ Después, debes completar cada parámetro:
 * **PowerBIUsername**: Username  
 * **PowerBIWorkspaceId**: Workspace Id  
 
-Para generar la configuración de Power BI, haz clic en:  
-<flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton>
+Para generar la configuración de Power BI, haz clic en: <flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton>
 
 ## Incorporación de un informe Power BI
 
@@ -35,13 +34,7 @@ Microsoft solo permite pasar filtros a informes Power BI embebidos.
 
 Para lograrlo, debemos añadir un nuevo **Role** al documento BI.  
 Imaginemos que vamos a pasar el *ProviderId*.  
-Creamos el rol "Provider" y asociamos la condición:
-
-```
-
-[ProviderId] = value(username())
-
-```
+Creamos el rol "Provider" y asociamos la condición: `[ProviderId] = value(username())`
 
 ![Power BI](/docs_assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
 
