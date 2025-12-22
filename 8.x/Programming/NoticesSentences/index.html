@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -1277,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1633,7 +1635,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1697,12 +1699,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1720,12 +1722,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3119,7 +3121,7 @@
 </ul>
 <h2 id="notices">Notices<a class="headerlink" href="#notices" title="Permanent link">¶</a></h2>
 <p>It's the way system can send push notices or show alerts on the screen. This is shown with a list on an icon that lights up when the user has unread messages. To generate a notice, it is sufficient to add a record in the "Notices" table, and if we need the notification to be displayed by a group of users, we must add them as records in the "Notices_Users" table.</p>
-<p class="flx-warning-card">For make it works, the cron called <strong>UpdateNoticeBadge</strong> must be active.</p>
+<p class="flx-warning-card">To make it work the cron <strong>UpdateNoticeBadge</strong> must be active.</p>
 <h2 id="sentences">Sentences<a class="headerlink" href="#sentences" title="Permanent link">¶</a></h2>
 <p>In the first instance we will define a notice sentence indicating a description, a cron job and the connection string (database where sql queries will be made)</p>
 <h3 id="notice-sentences">Notice Sentences<a class="headerlink" href="#notice-sentences" title="Permanent link">¶</a></h3>
@@ -3153,28 +3155,28 @@
 <td>✓</td>
 </tr>
 <tr>
-<td><strong>Notification Message</strong></td>
-<td>Use HTML Markup</td>
+<td><strong>Message</strong></td>
+<td>The notification message which you'll need to use HTML Markup</td>
 <td>✓</td>
 </tr>
 <tr>
-<td><strong>Method Name</strong></td>
-<td><strong>App</strong> Notification, <strong>Push</strong> notification, <strong>PushMobile</strong> for mobile device notification only or <strong>Pushweb</strong> for web browser notification only</td>
+<td><strong>MethodName</strong></td>
+<td><fh-copy class="link">App</fh-copy> Notification, <fh-copy class="link">Push</fh-copy> notification, <fh-copy class="link">PushMobile</fh-copy> for mobile device notification only or <fh-copy class="link">Pushweb</fh-copy> for web browser notification only</td>
 <td>✓</td>
 </tr>
 <tr>
-<td><strong>Reminder Time</strong></td>
-<td>Since when should it appear</td>
+<td><strong>ReminderTime</strong></td>
+<td>The date time in which the notice will be sent</td>
 <td>✓</td>
 </tr>
 <tr>
-<td><strong>Expiry Date</strong></td>
-<td>The notification should disappear</td>
+<td><strong>ExpiryTime</strong></td>
+<td>The datetime in which the the notice will expire</td>
 <td>✓</td>
 </tr>
 <tr>
-<td><strong>All Users</strong></td>
-<td>If set to false remeber to fill out notification user Sentence</td>
+<td><strong>AllUsers</strong></td>
+<td>Send the notification to all users, if set to false remeber to fill out notification user Sentence</td>
 <td>✓</td>
 </tr>
 <tr>
@@ -3194,67 +3196,67 @@
 </tr>
 <tr>
 <td><strong>AfterClickEvent</strong></td>
-<td>Fire your own function after click</td>
+<td>The js code that will get triggered after clicking the notificaton</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>CssClass</strong></td>
-<td></td>
+<td>The CSS class applied to the notification</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>ObjectName</strong></td>
-<td>Link click to an object</td>
+<td>The object name if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>ObjectWhere</strong></td>
-<td>Link click to an object</td>
+<td>The object where if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>PageTypeId</strong></td>
-<td>Linck click to a page type</td>
+<td>The page type id if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>PageName</strong></td>
-<td>Link click to a page Name</td>
+<td>The page name if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>ReportName</strong></td>
-<td>Link click to report name</td>
+<td>The report name if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>ReportParams</strong></td>
-<td>Link click to report with parameters</td>
+<td>The reports params if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>ProcessName</strong></td>
-<td>Link click to process name</td>
+<td>The process name if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>Params</strong></td>
-<td>For process Parameters</td>
+<td>The processes parameters if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>HelpId</strong></td>
-<td>Link click to help</td>
+<td>The help page id if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>URL</strong></td>
-<td>Link click external url</td>
+<td>An url if you need to link to one on click</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>TableName</strong></td>
-<td>Link click to master table</td>
+<td>The table name if you need to link to one on click</td>
 <td></td>
 </tr>
 </tbody>

@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -672,7 +674,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1355,12 +1357,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1521,7 +1523,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1590,7 +1592,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1734,7 +1736,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1775,12 +1777,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1798,12 +1800,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1872,7 +1874,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2411,7 +2413,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2526,7 +2528,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2549,7 +2551,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2860,7 +2862,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -3004,7 +3006,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3080,36 +3082,33 @@ Después, debes completar cada parámetro:</p>
 <li><strong>PowerBIUsername</strong>: Username  </li>
 <li><strong>PowerBIWorkspaceId</strong>: Workspace Id  </li>
 </ul>
-<p>Para generar la configuración de Power BI, haz clic en:<br>
-<flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton></p>
+<p>Para generar la configuración de Power BI, haz clic en: <flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton></p>
 <h2 id="incorporacion-de-un-informe-power-bi">Incorporación de un informe Power BI<a class="headerlink" href="#incorporacion-de-un-informe-power-bi" title="Permanent link">¶</a></h2>
 <p>Accede a la sección <strong>Reports</strong> e incorpora tu informe de Power BI introduciendo el <strong>ReportId</strong> en el campo <em>report path</em>.</p>
 <h2 id="filtrar-power-bi-desde-paginas-flexygo">Filtrar Power BI desde páginas flexygo<a class="headerlink" href="#filtrar-power-bi-desde-paginas-flexygo" title="Permanent link">¶</a></h2>
 <p>Microsoft solo permite pasar filtros a informes Power BI embebidos.</p>
 <p>Para lograrlo, debemos añadir un nuevo <strong>Role</strong> al documento BI.<br>
 Imaginemos que vamos a pasar el <em>ProviderId</em>.<br>
-Creamos el rol "Provider" y asociamos la condición:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[ProviderId] = value(username())
-</span></code></pre></div>
+Creamos el rol "Provider" y asociamos la condición: <code>[ProviderId] = value(username())</code></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/PowerBI/powerbi1.png" data-desc-position="bottom"><img alt="Power BI" src="/docs_assets/images/PowerBI/powerbi1.png" title="Image 1. Power BI"></a></p>
 <p>Luego, debemos indicar el role y el username desde nuestra aplicación para que el filtro se aplique automáticamente.<br>
 Para ello se utilizan dos campos de configuración en el registro del informe dentro de flexygo:</p>
 <ul>
 <li><strong>Filter sentence:</strong></li>
 </ul>
-<div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">{{</span><span class="n">currentReference</span><span class="err">}}</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">filter</span>
+<div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="err">{{</span><span class="n">currentReference</span><span class="err">}}</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">filter</span>
 </span></code></pre></div>
 <ul>
 <li><strong>Role sentence:</strong></li>
 </ul>
-<div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Provider'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">Role</span>
+<div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Provider'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">Role</span>
 </span></code></pre></div>
 <p class="flx-warning-card">Para que esto funcione, <strong>el informe no puede publicarse directamente</strong>.
 Es necesario usar <strong>PowerBI Embedded</strong>, un recurso de Azure disponible en Azure Marketplace (Imagen 2).</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/PowerBI/powerbi2.png" data-desc-position="bottom"><img alt="Azure Marketplace" src="/docs_assets/images/PowerBI/powerbi2.png" title="Image 2. Azure Marketplace"></a></p>
 <h2 id="componente-web-de-power-bi">Componente web de Power BI<a class="headerlink" href="#componente-web-de-power-bi" title="Permanent link">¶</a></h2>
 <p>Una vez configurado todo, ya puedes añadir un módulo HTML a tu página e incluir el componente web de Power BI:</p>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">flx-powerbi</span> <span class="na">reportname</span><span class="o">=</span><span class="s">"your report name"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-powerbi</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">flx-powerbi</span> <span class="na">reportname</span><span class="o">=</span><span class="s">"your report name"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-powerbi</span><span class="p">&gt;</span>
 </span></code></pre></div>
 
 

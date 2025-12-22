@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -672,7 +674,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -830,6 +832,24 @@
   <a href="#crear-una-peticion-de-certificado-csr" class="md-nav__link">
     <span class="md-ellipsis">
       Crear una petición de certificado (CSR)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmar-la-csr-y-crear-el-certificado-passbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmar la CSR y crear el certificado Passbook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convertir-el-certificado-passcer-a-pem-y-luego-a-pfx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convertir el certificado pass.cer a PEM y luego a PFX
     </span>
   </a>
   
@@ -1382,12 +1402,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1548,7 +1568,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1617,7 +1637,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1761,7 +1781,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1802,12 +1822,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1825,12 +1845,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1899,7 +1919,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2438,7 +2458,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2553,7 +2573,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2576,7 +2596,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2887,7 +2907,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -3031,7 +3051,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3094,10 +3114,7 @@
 <p>A continuación explicaremos cómo generar e instalar los certificados obligatorios para poder generar el passbook correctamente.<br>
 El primer requisito es disponer de una cuenta de desarrollador de Apple.</p>
 <h2 id="apple-wwdr">Apple WWDR<a class="headerlink" href="#apple-wwdr" title="Permanent link">¶</a></h2>
-<p>Para obtener el primer certificado solo tenemos que ir a<br>
-<a href="https://www.apple.com/certificateauthority/">https://www.apple.com/certificateauthority/</a><br>
-y descargar<br>
-<a href="https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer">Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)</a>, que es el que funciona actualmente.</p>
+<p>Para obtener el primer certificado solo tenemos que ir a <a href="https://www.apple.com/certificateauthority/">https://www.apple.com/certificateauthority/</a> y descargar <a href="https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer">Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)</a>, que es el que funciona actualmente.</p>
 <p>Instalamos el certificado y seleccionamos el almacén <strong>“Intermediate Certification Authorities”</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook1.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook1.png" title="Image 1. Certificate store"></a></p>
 <h2 id="crear-pass-type-id">Crear Pass Type ID<a class="headerlink" href="#crear-pass-type-id" title="Permanent link">¶</a></h2>
@@ -3110,45 +3127,31 @@ Es recomendable que el identificador mantenga la estructura <code>pass.com.x</co
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook4.png" title="Image 3. Pass Type IDs"></a></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook5.png" title="Image 3. Pass Type IDs"></a></p>
 <h2 id="crear-una-peticion-de-certificado-csr">Crear una petición de certificado (CSR)<a class="headerlink" href="#crear-una-peticion-de-certificado-csr" title="Permanent link">¶</a></h2>
-<p>Si no tenemos <strong>OpenSSL</strong> instalado, podemos descargarlo e instalarlo desde aquí:<br>
-<a href="https://wiki.openssl.org/index.php/Binaries">OpenSSL</a></p>
+<p>Si no tenemos <strong>OpenSSL</strong> instalado, podemos descargarlo e instalarlo desde aquí: <a href="https://wiki.openssl.org/index.php/Binaries">OpenSSL</a>.</p>
 <p>Una vez instalado, abrimos la consola con permisos de administrador, nos situamos en la ruta donde queremos generar los ficheros y ejecutamos el comando:</p>
 <div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-out<span class="w"> </span>passbook.csr<span class="w"> </span>-keyout<span class="w"> </span>passbook.key
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="sb">````</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Aparecerá<span class="w"> </span>una<span class="w"> </span>serie<span class="w"> </span>de<span class="w"> </span>datos<span class="w"> </span>a<span class="w"> </span>rellenar.<span class="w"> </span>El<span class="w"> </span>primero<span class="w"> </span>será<span class="w"> </span>la<span class="w"> </span>**PEM<span class="w"> </span>pass<span class="w"> </span>phrase**<span class="p">;</span><span class="w"> </span>es<span class="w"> </span>muy<span class="w"> </span>importante<span class="w"> </span>recordarla<span class="w"> </span>ya<span class="w"> </span>que<span class="w"> </span>la<span class="w"> </span>usaremos<span class="w"> </span>para<span class="w"> </span>generar<span class="w"> </span>el<span class="w"> </span>passbook<span class="w"> </span>y<span class="w"> </span>para<span class="w"> </span>firmar<span class="w"> </span>con<span class="w"> </span>la<span class="w"> </span>clave.
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Al<span class="w"> </span>terminar<span class="w"> </span>de<span class="w"> </span>rellenar<span class="w"> </span>la<span class="w"> </span>información,<span class="w"> </span>se<span class="w"> </span>habrán<span class="w"> </span>generado<span class="w"> </span>dos<span class="w"> </span>ficheros<span class="w"> </span>en<span class="w"> </span>la<span class="w"> </span>ruta<span class="w"> </span>indicada:
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>*<span class="w"> </span><span class="sb">`</span>passbook.key<span class="sb">`</span><span class="w"> </span><span class="o">(</span>clave<span class="w"> </span>privada<span class="w"> </span>para<span class="w"> </span>firmar<span class="o">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>*<span class="w"> </span><span class="sb">`</span>passbook.csr<span class="sb">`</span><span class="w"> </span><span class="o">(</span>petición<span class="w"> </span>de<span class="w"> </span>certificado<span class="o">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">## Firmar la CSR y crear el certificado Passbook</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Volvemos<span class="w"> </span>al<span class="w"> </span>portal<span class="w"> </span>de<span class="w"> </span>desarrolladores<span class="w"> </span>y,<span class="w"> </span>desde<span class="w"> </span>el<span class="w"> </span>menú<span class="w"> </span>de<span class="w"> </span>certificados,<span class="w"> </span>pulsamos<span class="w"> </span>**+**<span class="w"> </span>para<span class="w"> </span>crear<span class="w"> </span>un<span class="w"> </span>nuevo<span class="w"> </span>**Pass<span class="w"> </span>Type<span class="w"> </span>Id<span class="w"> </span>Certificate**.
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>!<span class="o">[](</span>/docs_assets/images/Passbook/passbook6.png<span class="w"> </span><span class="s2">"Image 4. Passbook certificate"</span><span class="o">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>A<span class="w"> </span>continuación,<span class="w"> </span>rellenamos<span class="w"> </span>el<span class="w"> </span>nombre<span class="w"> </span>del<span class="w"> </span>certificado<span class="w"> </span>y<span class="w"> </span>elegimos<span class="w"> </span>el<span class="w"> </span>identificador<span class="w"> </span>que<span class="w"> </span>hemos<span class="w"> </span>creado<span class="w"> </span>previamente<span class="p">;</span><span class="w"> </span>aparecerá<span class="w"> </span>como<span class="w"> </span>opción<span class="w"> </span>desplegable.
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>Si<span class="w"> </span>nos<span class="w"> </span>fijamos<span class="w"> </span>en<span class="w"> </span>el<span class="w"> </span>valor<span class="w"> </span>del<span class="w"> </span>desplegable,<span class="w"> </span>coincide<span class="w"> </span>con<span class="w"> </span>**TeamID.IdentifierPassTypeID**.
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>!<span class="o">[](</span>/docs_assets/images/Passbook/passbook7.png<span class="w"> </span><span class="s2">"Image 5. Passbook certificate"</span><span class="o">)</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>En<span class="w"> </span>el<span class="w"> </span>siguiente<span class="w"> </span>paso<span class="w"> </span>debemos<span class="w"> </span>seleccionar<span class="w"> </span>el<span class="w"> </span>archivo<span class="w"> </span>CSR<span class="w"> </span>que<span class="w"> </span>generamos<span class="w"> </span>antes<span class="w"> </span><span class="o">(</span><span class="sb">`</span>passbook.csr<span class="sb">`</span><span class="o">)</span>,<span class="w"> </span>lo<span class="w"> </span>subimos<span class="w"> </span>y<span class="w"> </span>continuamos.
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>Se<span class="w"> </span>mostrará<span class="w"> </span>una<span class="w"> </span>ventana<span class="w"> </span>de<span class="w"> </span>resumen<span class="w"> </span>con<span class="w"> </span>el<span class="w"> </span>certificado<span class="w"> </span>recién<span class="w"> </span>generado,<span class="w"> </span>su<span class="w"> </span>fecha<span class="w"> </span>de<span class="w"> </span>caducidad,<span class="w"> </span>nombre,<span class="w"> </span>tipo,<span class="w"> </span>etc.
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>!<span class="o">[](</span>/docs_assets/images/Passbook/passbook8.png<span class="w"> </span><span class="s2">"Image 6. Certificate request"</span><span class="o">)</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">## Convertir el certificado pass.cer a PEM y luego a PFX</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>Primero,<span class="w"> </span>colocamos<span class="w"> </span>el<span class="w"> </span>archivo<span class="w"> </span><span class="sb">`</span>.cer<span class="sb">`</span><span class="w"> </span>descargado<span class="w"> </span>desde<span class="w"> </span>la<span class="w"> </span>web<span class="w"> </span>de<span class="w"> </span>Apple<span class="w"> </span>en<span class="w"> </span>la<span class="w"> </span>misma<span class="w"> </span>carpeta<span class="w"> </span>que<span class="w"> </span><span class="sb">`</span>passbook.key<span class="sb">`</span><span class="w"> </span>y<span class="w"> </span><span class="sb">`</span>passbook.csr<span class="sb">`</span>.
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>Después<span class="w"> </span>abrimos<span class="w"> </span>la<span class="w"> </span>consola<span class="w"> </span>de<span class="w"> </span>OpenSSL,<span class="w"> </span>navegamos<span class="w"> </span>hasta<span class="w"> </span>esa<span class="w"> </span>carpeta<span class="w"> </span>y<span class="w"> </span>ejecutamos:
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="sb">```</span>shell
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>pass.cer<span class="w"> </span>-inform<span class="w"> </span>der<span class="w"> </span>-out<span class="w"> </span>passbook.pem
 </span></code></pre></div>
-<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-export<span class="w"> </span>-out<span class="w"> </span>passbook.pfx<span class="w"> </span>-inkey<span class="w"> </span>passbook.key<span class="w"> </span>-in<span class="w"> </span>passbook.pem
+<p>Aparecerá una serie de datos a rellenar. El primero será la <strong>PEM pass phrase</strong>; es muy importante recordarla ya que la usaremos para generar el passbook y para firmar con la clave.</p>
+<p>Al terminar de rellenar la información, se habrán generado dos ficheros en la ruta indicada:</p>
+<ul>
+<li><code>passbook.key</code> (clave privada para firmar)</li>
+<li><code>passbook.csr</code> (petición de certificado)</li>
+</ul>
+<h2 id="firmar-la-csr-y-crear-el-certificado-passbook">Firmar la CSR y crear el certificado Passbook<a class="headerlink" href="#firmar-la-csr-y-crear-el-certificado-passbook" title="Permanent link">¶</a></h2>
+<p>Volvemos al portal de desarrolladores y, desde el menú de certificados, pulsamos <strong>+</strong> para crear un nuevo <strong>Pass Type Id Certificate</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook6.png" title="Image 4. Passbook certificate"></a></p>
+<p>A continuación, rellenamos el nombre del certificado y elegimos el identificador que hemos creado previamente; aparecerá como opción desplegable.
+Si nos fijamos en el valor del desplegable, coincide con <strong>TeamID.IdentifierPassTypeID</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook7.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook7.png" title="Image 5. Passbook certificate"></a></p>
+<p>En el siguiente paso debemos seleccionar el archivo CSR que generamos antes (<code>passbook.csr</code>), lo subimos y continuamos.
+Se mostrará una ventana de resumen con el certificado recién generado, su fecha de caducidad, nombre, tipo, etc.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook8.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook8.png" title="Image 6. Certificate request"></a></p>
+<h2 id="convertir-el-certificado-passcer-a-pem-y-luego-a-pfx">Convertir el certificado pass.cer a PEM y luego a PFX<a class="headerlink" href="#convertir-el-certificado-passcer-a-pem-y-luego-a-pfx" title="Permanent link">¶</a></h2>
+<p>Primero, colocamos el archivo <code>.cer</code> descargado desde la web de Apple en la misma carpeta que <code>passbook.key</code> y <code>passbook.csr</code>.</p>
+<p>Después abrimos la consola de OpenSSL, navegamos hasta esa carpeta y ejecutamos:</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>pass.cer<span class="w"> </span>-inform<span class="w"> </span>der<span class="w"> </span>-out<span class="w"> </span>passbook.pem
+</span></code></pre></div>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-export<span class="w"> </span>-out<span class="w"> </span>passbook.pfx<span class="w"> </span>-inkey<span class="w"> </span>passbook.key<span class="w"> </span>-in<span class="w"> </span>passbook.pem
 </span></code></pre></div>
 <p>Con este último comando, nos pedirá la contraseña (pass phrase) asociada a la clave privada.
 Una vez introducida, se generará el archivo <code>passbook.pfx</code>, que debemos instalar en el equipo.</p>
@@ -3182,69 +3185,70 @@ Es importante que tanto el archivo <code>passbook.pfx</code> como <code>AppleWWD
   <em>Membership → Team ID</em>.</li>
 </ul>
 <h2 id="ejemplo-de-uso-desde-dll">Ejemplo de uso desde DLL<a class="headerlink" href="#ejemplo-de-uso-desde-dll" title="Permanent link">¶</a></h2>
-<p><fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">DLL example</fh-modal></p>
+<p><fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">Ejemplo de DLL</fh-modal></p>
 <h2 id="ejemplo-de-diseno-y-layout">Ejemplo de diseño y layout<a class="headerlink" href="#ejemplo-de-diseno-y-layout" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook14.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook14.png" title="Image 10. Layout example"></a></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook13.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook13.png" title="Image 11. Passbook example"></a></p>
-<p>Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
-Try
-Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))
-Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))
-Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))
-Dim aBackField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))
-Dim aBackgroundColor As String = "#000000"
-Dim aForegroundColor As String = "#FFFFFF"
-Dim aLabelColor As String = "#FFFFFF"
-Dim aIcon As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
-Dim aLogo As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
-Dim aDescription As String = "Passbook flexygo"
-Dim aOrganizationName As String = "Flexygo"
-Dim aLogoText As String = "Logo text"
-Dim aThumbnail As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\Avatars\avatar_blank.png"))
-Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>        'vCard info for qr barcode
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        Dim FirstName As String = "Aitor"
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        Dim LastName As String = "Torres"
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        Dim CompanyName As String = "Flexygo"
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        Dim JobTitle As String = "Programador"
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        Dim StreetAddress As String = "Carrer dels Ceramistes 19"
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        Dim Zip As String = "46900"
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        Dim City As String = "Valencia"
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        Dim CountryName As String = "España"
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        Dim Phone As String = "123456"
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        Dim Mobile As String = "987654"
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        Dim Fax As String = ""
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        Dim Email As String = "aitor@ahora.es"
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        Dim HomePage As String = "www.flexygo.com"
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        Dim loUid As String = System.Guid.NewGuid().ToString()
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        Dim aBarcode As String = vCard.VCardBody()
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        'We can write on disk, download it, send by mail, etc...
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass"), passbook.generatePassbook())
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        Dim path As String = HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass")
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        Dim dw As New Utilities.Download With {
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>                .Path = path,
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>                .DeleteAfterDownload = True
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            }
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>        Ret.JSCode = String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>        Ret.Success = True
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>        Ret.SuccessMessage = "Passbook generated"
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        Return Ret.Success
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    Catch ex As Exception
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>        Ret.Success = False
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>        Ret.LastException = ex
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>        Return Ret.Success
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    End Try
-</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>End Function
+<div id="fhmodal_dll_example" class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-fhmodal_dll_example-1"><a id="__codelineno-fhmodal_dll_example-1" name="__codelineno-fhmodal_dll_example-1" href="#__codelineno-fhmodal_dll_example-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Shared</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">generatePassbook</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">Entity</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">EntityObject</span><span class="p">,</span><span class="w"> </span><span class="k">ByRef</span><span class="w"> </span><span class="n">Ret</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">ProcessHelper</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span>
+</span><span id="__span-fhmodal_dll_example-2"><a id="__codelineno-fhmodal_dll_example-2" name="__codelineno-fhmodal_dll_example-2" href="#__codelineno-fhmodal_dll_example-2"></a><span class="w">        </span><span class="k">Try</span>
+</span><span id="__span-fhmodal_dll_example-3"><a id="__codelineno-fhmodal_dll_example-3" name="__codelineno-fhmodal_dll_example-3" href="#__codelineno-fhmodal_dll_example-3"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aPrimaryField</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-4"><a id="__codelineno-fhmodal_dll_example-4" name="__codelineno-fhmodal_dll_example-4" href="#__codelineno-fhmodal_dll_example-4"></a><span class="w">            </span><span class="n">aPrimaryField</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">New</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">)(</span><span class="s">"Nombre"</span><span class="p">,</span><span class="w"> </span><span class="s">"Aitor"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-5"><a id="__codelineno-fhmodal_dll_example-5" name="__codelineno-fhmodal_dll_example-5" href="#__codelineno-fhmodal_dll_example-5"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aSecondaryField</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-6"><a id="__codelineno-fhmodal_dll_example-6" name="__codelineno-fhmodal_dll_example-6" href="#__codelineno-fhmodal_dll_example-6"></a><span class="w">            </span><span class="n">aSecondaryField</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">New</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">)(</span><span class="s">"Apellido"</span><span class="p">,</span><span class="w"> </span><span class="s">"Torres"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-7"><a id="__codelineno-fhmodal_dll_example-7" name="__codelineno-fhmodal_dll_example-7" href="#__codelineno-fhmodal_dll_example-7"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aAuxiliaryField</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-8"><a id="__codelineno-fhmodal_dll_example-8" name="__codelineno-fhmodal_dll_example-8" href="#__codelineno-fhmodal_dll_example-8"></a><span class="w">            </span><span class="n">aAuxiliaryField</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">New</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">)(</span><span class="s">"Movil"</span><span class="p">,</span><span class="w"> </span><span class="s">"123456"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-9"><a id="__codelineno-fhmodal_dll_example-9" name="__codelineno-fhmodal_dll_example-9" href="#__codelineno-fhmodal_dll_example-9"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aBackField</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-10"><a id="__codelineno-fhmodal_dll_example-10" name="__codelineno-fhmodal_dll_example-10" href="#__codelineno-fhmodal_dll_example-10"></a><span class="w">            </span><span class="n">aBackField</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">New</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">)(</span><span class="s">"Otros"</span><span class="p">,</span><span class="w"> </span><span class="s">"Loren ipsum"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-11"><a id="__codelineno-fhmodal_dll_example-11" name="__codelineno-fhmodal_dll_example-11" href="#__codelineno-fhmodal_dll_example-11"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aBackgroundColor</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#000000"</span>
+</span><span id="__span-fhmodal_dll_example-12"><a id="__codelineno-fhmodal_dll_example-12" name="__codelineno-fhmodal_dll_example-12" href="#__codelineno-fhmodal_dll_example-12"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aForegroundColor</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#FFFFFF"</span>
+</span><span id="__span-fhmodal_dll_example-13"><a id="__codelineno-fhmodal_dll_example-13" name="__codelineno-fhmodal_dll_example-13" href="#__codelineno-fhmodal_dll_example-13"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aLabelColor</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#FFFFFF"</span>
+</span><span id="__span-fhmodal_dll_example-14"><a id="__codelineno-fhmodal_dll_example-14" name="__codelineno-fhmodal_dll_example-14" href="#__codelineno-fhmodal_dll_example-14"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aIcon</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Byte</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllBytes</span><span class="p">(</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="n">MapPath</span><span class="p">(</span><span class="s">"~\img\icons\icon-256x256.png"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-15"><a id="__codelineno-fhmodal_dll_example-15" name="__codelineno-fhmodal_dll_example-15" href="#__codelineno-fhmodal_dll_example-15"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aLogo</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Byte</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllBytes</span><span class="p">(</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="n">MapPath</span><span class="p">(</span><span class="s">"~\img\icons\icon-256x256.png"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-16"><a id="__codelineno-fhmodal_dll_example-16" name="__codelineno-fhmodal_dll_example-16" href="#__codelineno-fhmodal_dll_example-16"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aDescription</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Passbook flexygo"</span>
+</span><span id="__span-fhmodal_dll_example-17"><a id="__codelineno-fhmodal_dll_example-17" name="__codelineno-fhmodal_dll_example-17" href="#__codelineno-fhmodal_dll_example-17"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aOrganizationName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Flexygo"</span>
+</span><span id="__span-fhmodal_dll_example-18"><a id="__codelineno-fhmodal_dll_example-18" name="__codelineno-fhmodal_dll_example-18" href="#__codelineno-fhmodal_dll_example-18"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aLogoText</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Logo text"</span>
+</span><span id="__span-fhmodal_dll_example-19"><a id="__codelineno-fhmodal_dll_example-19" name="__codelineno-fhmodal_dll_example-19" href="#__codelineno-fhmodal_dll_example-19"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aThumbnail</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Byte</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllBytes</span><span class="p">(</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="n">MapPath</span><span class="p">(</span><span class="s">"~\img\Avatars\avatar_blank.png"</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-20"><a id="__codelineno-fhmodal_dll_example-20" name="__codelineno-fhmodal_dll_example-20" href="#__codelineno-fhmodal_dll_example-20"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aHeaderField</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="s">"Cabecera"</span><span class="p">,</span><span class="s">"Business card"</span><span class="p">)</span>
+</span><span id="__span-fhmodal_dll_example-21"><a id="__codelineno-fhmodal_dll_example-21" name="__codelineno-fhmodal_dll_example-21" href="#__codelineno-fhmodal_dll_example-21"></a>
+</span><span id="__span-fhmodal_dll_example-22"><a id="__codelineno-fhmodal_dll_example-22" name="__codelineno-fhmodal_dll_example-22" href="#__codelineno-fhmodal_dll_example-22"></a><span class="w">            </span><span class="c">'vCard info for qr barcode</span>
+</span><span id="__span-fhmodal_dll_example-23"><a id="__codelineno-fhmodal_dll_example-23" name="__codelineno-fhmodal_dll_example-23" href="#__codelineno-fhmodal_dll_example-23"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">FirstName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Aitor"</span>
+</span><span id="__span-fhmodal_dll_example-24"><a id="__codelineno-fhmodal_dll_example-24" name="__codelineno-fhmodal_dll_example-24" href="#__codelineno-fhmodal_dll_example-24"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">LastName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Torres"</span>
+</span><span id="__span-fhmodal_dll_example-25"><a id="__codelineno-fhmodal_dll_example-25" name="__codelineno-fhmodal_dll_example-25" href="#__codelineno-fhmodal_dll_example-25"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">CompanyName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Flexygo"</span>
+</span><span id="__span-fhmodal_dll_example-26"><a id="__codelineno-fhmodal_dll_example-26" name="__codelineno-fhmodal_dll_example-26" href="#__codelineno-fhmodal_dll_example-26"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">JobTitle</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Programador"</span>
+</span><span id="__span-fhmodal_dll_example-27"><a id="__codelineno-fhmodal_dll_example-27" name="__codelineno-fhmodal_dll_example-27" href="#__codelineno-fhmodal_dll_example-27"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">StreetAddress</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Carrer dels Ceramistes 19"</span>
+</span><span id="__span-fhmodal_dll_example-28"><a id="__codelineno-fhmodal_dll_example-28" name="__codelineno-fhmodal_dll_example-28" href="#__codelineno-fhmodal_dll_example-28"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">Zip</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"46900"</span>
+</span><span id="__span-fhmodal_dll_example-29"><a id="__codelineno-fhmodal_dll_example-29" name="__codelineno-fhmodal_dll_example-29" href="#__codelineno-fhmodal_dll_example-29"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">City</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Valencia"</span>
+</span><span id="__span-fhmodal_dll_example-30"><a id="__codelineno-fhmodal_dll_example-30" name="__codelineno-fhmodal_dll_example-30" href="#__codelineno-fhmodal_dll_example-30"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">CountryName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"España"</span>
+</span><span id="__span-fhmodal_dll_example-31"><a id="__codelineno-fhmodal_dll_example-31" name="__codelineno-fhmodal_dll_example-31" href="#__codelineno-fhmodal_dll_example-31"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">Phone</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"123456"</span>
+</span><span id="__span-fhmodal_dll_example-32"><a id="__codelineno-fhmodal_dll_example-32" name="__codelineno-fhmodal_dll_example-32" href="#__codelineno-fhmodal_dll_example-32"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">Mobile</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"987654"</span>
+</span><span id="__span-fhmodal_dll_example-33"><a id="__codelineno-fhmodal_dll_example-33" name="__codelineno-fhmodal_dll_example-33" href="#__codelineno-fhmodal_dll_example-33"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">Fax</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span>
+</span><span id="__span-fhmodal_dll_example-34"><a id="__codelineno-fhmodal_dll_example-34" name="__codelineno-fhmodal_dll_example-34" href="#__codelineno-fhmodal_dll_example-34"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">Email</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"aitor@ahora.es"</span>
+</span><span id="__span-fhmodal_dll_example-35"><a id="__codelineno-fhmodal_dll_example-35" name="__codelineno-fhmodal_dll_example-35" href="#__codelineno-fhmodal_dll_example-35"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">HomePage</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"www.flexygo.com"</span>
+</span><span id="__span-fhmodal_dll_example-36"><a id="__codelineno-fhmodal_dll_example-36" name="__codelineno-fhmodal_dll_example-36" href="#__codelineno-fhmodal_dll_example-36"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">loUid</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Guid</span><span class="p">.</span><span class="n">NewGuid</span><span class="p">().</span><span class="n">ToString</span><span class="p">()</span>
+</span><span id="__span-fhmodal_dll_example-37"><a id="__codelineno-fhmodal_dll_example-37" name="__codelineno-fhmodal_dll_example-37" href="#__codelineno-fhmodal_dll_example-37"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">vCard</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">VCard</span><span class="p">(</span><span class="n">FirstName</span><span class="p">,</span><span class="w"> </span><span class="n">LastName</span><span class="p">,</span><span class="w"> </span><span class="n">CompanyName</span><span class="p">,</span><span class="w"> </span><span class="n">JobTitle</span><span class="p">,</span><span class="w"> </span><span class="n">StreetAddress</span><span class="p">,</span><span class="w"> </span><span class="n">Zip</span><span class="p">,</span><span class="w"> </span><span class="n">City</span><span class="p">,</span><span class="w"> </span><span class="n">CountryName</span><span class="p">,</span><span class="w"> </span><span class="n">Phone</span><span class="p">,</span><span class="w"> </span><span class="n">Mobile</span><span class="p">,</span><span class="w"> </span><span class="n">Fax</span><span class="p">,</span><span class="w"> </span><span class="n">Email</span><span class="p">,</span><span class="w"> </span><span class="n">HomePage</span><span class="p">,</span><span class="w"> </span><span class="n">loUid</span><span class="p">)</span>
+</span><span id="__span-fhmodal_dll_example-38"><a id="__codelineno-fhmodal_dll_example-38" name="__codelineno-fhmodal_dll_example-38" href="#__codelineno-fhmodal_dll_example-38"></a>
+</span><span id="__span-fhmodal_dll_example-39"><a id="__codelineno-fhmodal_dll_example-39" name="__codelineno-fhmodal_dll_example-39" href="#__codelineno-fhmodal_dll_example-39"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aBarcode</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vCard</span><span class="p">.</span><span class="n">VCardBody</span><span class="p">()</span>
+</span><span id="__span-fhmodal_dll_example-40"><a id="__codelineno-fhmodal_dll_example-40" name="__codelineno-fhmodal_dll_example-40" href="#__codelineno-fhmodal_dll_example-40"></a>
+</span><span id="__span-fhmodal_dll_example-41"><a id="__codelineno-fhmodal_dll_example-41" name="__codelineno-fhmodal_dll_example-41" href="#__codelineno-fhmodal_dll_example-41"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">passbook</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">Passbook</span><span class="p">(</span><span class="n">aPrimaryField</span><span class="p">,</span><span class="w"> </span><span class="n">aBackgroundColor</span><span class="p">,</span><span class="w"> </span><span class="n">aForegroundColor</span><span class="p">,</span><span class="w"> </span><span class="n">aLabelColor</span><span class="p">,</span><span class="w"> </span><span class="n">aIcon</span><span class="p">,</span><span class="w"> </span><span class="n">aDescription</span><span class="p">,</span><span class="w"> </span><span class="n">aOrganizationName</span><span class="p">,</span><span class="w"> </span><span class="n">aLogoText</span><span class="p">,</span><span class="w"> </span><span class="n">aBarcode</span><span class="p">,</span><span class="w"> </span><span class="n">aHeaderField</span><span class="p">,</span><span class="w"> </span><span class="n">aLogo</span><span class="p">,</span><span class="w"> </span><span class="n">aSecondaryField</span><span class="p">,</span><span class="w"> </span><span class="n">aAuxiliaryField</span><span class="p">,</span><span class="w"> </span><span class="n">aBackField</span><span class="p">,</span><span class="w"> </span><span class="n">aThumbnail</span><span class="p">)</span>
+</span><span id="__span-fhmodal_dll_example-42"><a id="__codelineno-fhmodal_dll_example-42" name="__codelineno-fhmodal_dll_example-42" href="#__codelineno-fhmodal_dll_example-42"></a><span class="w">            </span><span class="c">'We can write on disk, download it, send by mail, etc...</span>
+</span><span id="__span-fhmodal_dll_example-43"><a id="__codelineno-fhmodal_dll_example-43" name="__codelineno-fhmodal_dll_example-43" href="#__codelineno-fhmodal_dll_example-43"></a><span class="w">            </span><span class="n">File</span><span class="p">.</span><span class="n">WriteAllBytes</span><span class="p">(</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="n">MapPath</span><span class="p">(</span><span class="s">"~\Custom\passbook\prueba.pkpass"</span><span class="p">),</span><span class="w"> </span><span class="n">passbook</span><span class="p">.</span><span class="n">generatePassbook</span><span class="p">())</span>
+</span><span id="__span-fhmodal_dll_example-44"><a id="__codelineno-fhmodal_dll_example-44" name="__codelineno-fhmodal_dll_example-44" href="#__codelineno-fhmodal_dll_example-44"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="n">MapPath</span><span class="p">(</span><span class="s">"~\Custom\passbook\prueba.pkpass"</span><span class="p">)</span>
+</span><span id="__span-fhmodal_dll_example-45"><a id="__codelineno-fhmodal_dll_example-45" name="__codelineno-fhmodal_dll_example-45" href="#__codelineno-fhmodal_dll_example-45"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">dw</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">Utilities</span><span class="p">.</span><span class="n">Download</span><span class="w"> </span><span class="k">With</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-fhmodal_dll_example-46"><a id="__codelineno-fhmodal_dll_example-46" name="__codelineno-fhmodal_dll_example-46" href="#__codelineno-fhmodal_dll_example-46"></a><span class="w">                    </span><span class="p">.</span><span class="n">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">,</span>
+</span><span id="__span-fhmodal_dll_example-47"><a id="__codelineno-fhmodal_dll_example-47" name="__codelineno-fhmodal_dll_example-47" href="#__codelineno-fhmodal_dll_example-47"></a><span class="w">                    </span><span class="p">.</span><span class="n">DeleteAfterDownload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+</span><span id="__span-fhmodal_dll_example-48"><a id="__codelineno-fhmodal_dll_example-48" name="__codelineno-fhmodal_dll_example-48" href="#__codelineno-fhmodal_dll_example-48"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-fhmodal_dll_example-49"><a id="__codelineno-fhmodal_dll_example-49" name="__codelineno-fhmodal_dll_example-49" href="#__codelineno-fhmodal_dll_example-49"></a>
+</span><span id="__span-fhmodal_dll_example-50"><a id="__codelineno-fhmodal_dll_example-50" name="__codelineno-fhmodal_dll_example-50" href="#__codelineno-fhmodal_dll_example-50"></a><span class="w">            </span><span class="n">Ret</span><span class="p">.</span><span class="n">JSCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">"window.open('{0}')"</span><span class="p">,</span><span class="w"> </span><span class="n">Ret</span><span class="p">.</span><span class="n">ConfToken</span><span class="p">.</span><span class="n">ResolveUrl</span><span class="p">(</span><span class="n">dw</span><span class="p">.</span><span class="n">GetLink</span><span class="p">))</span>
+</span><span id="__span-fhmodal_dll_example-51"><a id="__codelineno-fhmodal_dll_example-51" name="__codelineno-fhmodal_dll_example-51" href="#__codelineno-fhmodal_dll_example-51"></a><span class="w">            </span><span class="n">Ret</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+</span><span id="__span-fhmodal_dll_example-52"><a id="__codelineno-fhmodal_dll_example-52" name="__codelineno-fhmodal_dll_example-52" href="#__codelineno-fhmodal_dll_example-52"></a><span class="w">            </span><span class="n">Ret</span><span class="p">.</span><span class="n">SuccessMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Passbook generated"</span>
+</span><span id="__span-fhmodal_dll_example-53"><a id="__codelineno-fhmodal_dll_example-53" name="__codelineno-fhmodal_dll_example-53" href="#__codelineno-fhmodal_dll_example-53"></a><span class="w">            </span><span class="k">Return</span><span class="w"> </span><span class="n">Ret</span><span class="p">.</span><span class="n">Success</span>
+</span><span id="__span-fhmodal_dll_example-54"><a id="__codelineno-fhmodal_dll_example-54" name="__codelineno-fhmodal_dll_example-54" href="#__codelineno-fhmodal_dll_example-54"></a>
+</span><span id="__span-fhmodal_dll_example-55"><a id="__codelineno-fhmodal_dll_example-55" name="__codelineno-fhmodal_dll_example-55" href="#__codelineno-fhmodal_dll_example-55"></a><span class="w">        </span><span class="k">Catch</span><span class="w"> </span><span class="n">ex</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">Exception</span>
+</span><span id="__span-fhmodal_dll_example-56"><a id="__codelineno-fhmodal_dll_example-56" name="__codelineno-fhmodal_dll_example-56" href="#__codelineno-fhmodal_dll_example-56"></a><span class="w">            </span><span class="n">Ret</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+</span><span id="__span-fhmodal_dll_example-57"><a id="__codelineno-fhmodal_dll_example-57" name="__codelineno-fhmodal_dll_example-57" href="#__codelineno-fhmodal_dll_example-57"></a><span class="w">            </span><span class="n">Ret</span><span class="p">.</span><span class="n">LastException</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ex</span>
+</span><span id="__span-fhmodal_dll_example-58"><a id="__codelineno-fhmodal_dll_example-58" name="__codelineno-fhmodal_dll_example-58" href="#__codelineno-fhmodal_dll_example-58"></a><span class="w">            </span><span class="k">Return</span><span class="w"> </span><span class="n">Ret</span><span class="p">.</span><span class="n">Success</span>
+</span><span id="__span-fhmodal_dll_example-59"><a id="__codelineno-fhmodal_dll_example-59" name="__codelineno-fhmodal_dll_example-59" href="#__codelineno-fhmodal_dll_example-59"></a><span class="w">        </span><span class="k">End</span><span class="w"> </span><span class="k">Try</span>
+</span><span id="__span-fhmodal_dll_example-60"><a id="__codelineno-fhmodal_dll_example-60" name="__codelineno-fhmodal_dll_example-60" href="#__codelineno-fhmodal_dll_example-60"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </span></code></pre></div>
 
 
@@ -3304,6 +3308,24 @@ Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")
   <a href="#crear-una-peticion-de-certificado-csr" class="md-nav__link">
     <span class="md-ellipsis">
       Crear una petición de certificado (CSR)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmar-la-csr-y-crear-el-certificado-passbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmar la CSR y crear el certificado Passbook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convertir-el-certificado-passcer-a-pem-y-luego-a-pfx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convertir el certificado pass.cer a PEM y luego a PFX
     </span>
   </a>
   

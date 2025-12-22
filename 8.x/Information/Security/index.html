@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -1379,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1735,7 +1737,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1799,12 +1801,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1822,12 +1824,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3086,7 +3088,7 @@
 
 <h1 class="flx-title-with-image" id="security">Security<a class="headerlink" href="#security" title="Permanent link">¶</a></h1>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FlexygoLogo.png" data-desc-position="bottom"><img alt="flexygo" class="flx-image-of-title" src="/docs_assets/images/FlexygoLogo.png"></a></p>
-<p><strong>flexygo</strong> includes 3 different security levels:</p>
+<p><strong>Flexygo</strong> includes 3 different security levels:</p>
 <ul>
 <li>Role security</li>
 <li>Faculty Security (overrides Role security)</li>
@@ -3096,7 +3098,11 @@
 <p><em>Example:</em><br>
 User John belongs to the sales role. In sales role we establish that each sales man can only see customers from his area. Maybe there are a couple of users that have to see other areas. We can create faculties for those areas and add them to the corresponding users.</p>
 <h2 id="role-security">Role Security<a class="headerlink" href="#role-security" title="Permanent link">¶</a></h2>
-<p><strong>flexygo</strong> includes five default roles, two main roles: <strong>Admin</strong> and <strong>All Users</strong>. The Admin Role gives full attributions to any member of the group. The All Users is a container for the rest of groups that enables us to assign permissions directly to all the child groups. Inside the All Users we will find the second level with the <strong>Registered</strong> and <strong>Not registered</strong> roles. Registered role will contain any new roles we create, including the default users role. Security always applies upwards that is if a lower group has security the higher group security is overwritten. The same applies if we set the security on a user level and not on a role level. The <strong>user security will always overwrite his role security</strong>.<br>
+<p><strong>Flexygo</strong> includes five default roles, two main roles: <strong>Admin</strong> and <strong>All Users</strong>. 
+The <strong>Admin</strong> Role gives full attributions to any member of the group. 
+The <strong>All Users</strong> is a container for the rest of groups that enables us to assign permissions directly to all the child groups. Inside the All Users we will find the second level with the <strong>Registered</strong> and <strong>Not registered</strong> roles. 
+<strong>Registered</strong> role will contain any new roles we create, including the default users role. </p>
+<p>Security <strong>always applies upwards</strong> that is if a lower group has security the higher group security is overwritten. The same applies if we set the security on a user level and not on a role level. The <strong>user security will always overwrite his role security</strong>.<br>
 To begin with the examples and more extensive explanations, we will set off dividing in to two parent groups (All Users and Admin).</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Security/Circles-graph.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Security/Circles-graph.png"></a></p>
 <h3 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">¶</a></h3>
@@ -3111,12 +3117,14 @@ To begin with the examples and more extensive explanations, we will set off divi
 <li>Processes</li>
 <li>Reports</li>
 </ul>
-<p>If we want to use unregistered access, we must make sure that our web.config contains a series of entries:</p>
-<ol>
-<li>Set authentication from Forms to None: <strong><authentication mode="None"></authentication></strong></li>
-<li>Comment the authorization deny block: <strong><authorization> <deny users="?"> </deny></authorization></strong></li>
-<li>Set <strong>AllowGuest</strong> setting to <strong>true</strong> in Admin Work Area <strong>&gt;</strong> Environment <strong>&gt;</strong> Settings</li>
-</ol>
+<p>If we want to use unregistered access, we must make sure that our <strong>web.config</strong> contains a series of entries:</p>
+<p>1.  Set authentication from Forms to None: </p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;authentication</span><span class="w"> </span><span class="na">mode=</span><span class="s">"None"</span><span class="nt">&gt;</span>
+</span></code></pre></div>
+<p>2.  Comment the authorization deny block:</p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;authorization&gt;</span><span class="w"> </span><span class="nt">&lt;deny</span><span class="w"> </span><span class="na">users=</span><span class="s">"?"</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/authorization&gt;</span><span class="w"> </span>
+</span></code></pre></div>
+<p>3.  Set <strong>AllowGuest</strong> setting to <strong>true</strong> in Admin Work Area <strong>&gt;</strong> Environment <strong>&gt;</strong> Settings</p>
 <table>
 <thead>
 <tr>

@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -679,6 +681,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documentacion-de-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentación de JavaScript
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -723,7 +734,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1328,12 +1339,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1494,7 +1505,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1563,7 +1574,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1707,7 +1718,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1748,12 +1759,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1771,12 +1782,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1845,7 +1856,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2384,7 +2395,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2499,7 +2510,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2522,7 +2533,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2833,7 +2844,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -2977,7 +2988,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3041,8 +3052,7 @@ Para hacerlo posible es necesario seguir algunos pasos.</p>
 <h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
 <ol>
 <li>
-<p>Una vez que hayas obtenido tu <strong>Google API Key</strong> siguiendo<br>
-<a href="/Connectors/GoogleAPIKey">las instrucciones en la ayuda de flexygo</a>, podrás empezar a configurar Google Places.</p>
+<p>Una vez que hayas obtenido tu <strong>Google API Key</strong> siguiendo <a href="/Connectors/GoogleAPIKey">las instrucciones en la ayuda de flexygo</a>, podrás empezar a configurar Google Places.</p>
 </li>
 <li>
 <p>Con este conector puedes transformar un simple <strong>textbox</strong> en un <strong>desplegable con autocompletado de direcciones</strong>, obteniendo cada parte de la dirección dividida en distintos campos.</p>
@@ -3053,7 +3063,7 @@ Para hacerlo posible es necesario seguir algunos pasos.</p>
 <li>Para añadir esta funcionalidad, debes invocar la siguiente función desde el evento <strong>AfterLoadJS</strong> del módulo.</li>
 </ol>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/GoogleAPIKey/jsafterload.png" data-desc-position="bottom"><img alt="AfterLoadJS" src="/docs_assets/images/GoogleAPIKey/jsafterload.png" title="AfterLoadJS"></a></p>
-<h4 id="documentacion-javascript">Documentación JavaScript<a class="headerlink" href="#documentacion-javascript" title="Permanent link">¶</a></h4>
+<h2 id="documentacion-de-javascript">Documentación de JavaScript<a class="headerlink" href="#documentacion-de-javascript" title="Permanent link">¶</a></h2>
 <p class="flx-warning-card">Puedes encontrar más información detallada sobre Google Autocomplete en<br>
 <a href="https://developers.google.com/maps/documentation/places/web-service/autocomplete">Google Maps Platform</a></p>
 <div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">flexygo</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">googlePlaces</span><span class="p">.</span><span class="nx">autocomplete</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">adressTextBox</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="o">:</span><span class="w"> </span><span class="nb">Function</span><span class="p">);</span>
@@ -3125,6 +3135,15 @@ Para hacerlo posible es necesario seguir algunos pasos.</p>
   <a href="#configuracion" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentacion-de-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentación de JavaScript
     </span>
   </a>
   

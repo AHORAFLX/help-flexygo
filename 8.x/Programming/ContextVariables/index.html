@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -1277,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1633,7 +1635,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1697,12 +1699,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1720,12 +1722,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3085,24 +3087,24 @@
 <h2 id="default-tokens">Default Tokens<a class="headerlink" href="#default-tokens" title="Permanent link">¶</a></h2>
 <p>All tokens must be referenced with curly brackets <strong>{{</strong> / <strong>}}</strong>. <strong>flexygo</strong> includes the following variables by default:</p>
 <ul>
-<li><strong>{{currentReference}}</strong>: Wildcard used for linking other system elements to the current user</li>
-<li><strong>{{currentSubreference}}</strong>: 2º Wildcard used for linking other system elements to the current user</li>
-<li><strong>{{currentRole}}</strong>: Current users role name</li>
-<li><strong>{{currentRoleId}}</strong>: Current users role Id</li>
-<li><strong>{{currentUserLogin}}</strong>: Current users login</li>
-<li><strong>{{currentUserId}}</strong>: Current users Id</li>
-<li><strong>{{currentUserFullName}}</strong>: Current users full name</li>
-<li><strong>{{currentUserCultureId}}</strong>: Current users culture Id</li>
-<li><strong>{{currentUserLang}}</strong>: Current users Language. First two digits of culture Id</li>
-<li><strong>{{currentUserEmail}}</strong>: Current users Email.</li>
-<li><strong>{{currentDate}}</strong>: Current Date.</li>
-<li><strong>{{currentTime}}</strong>: Current Time with minutes precision.</li>
-<li><strong>{{currentTimeSec}}</strong>: Current Time with seconds precision.</li>
-<li><strong>{{currentDateTime}}</strong>: Current Date and Time with minutes precision.</li>
-<li><strong>{{currentDateTimeSec}}</strong>: Current Date and Time with seconds precision.</li>
+<li><fh-copy class="link">{{currentReference}}</fh-copy>: Wildcard used for linking other system elements to the current user</li>
+<li><fh-copy class="link">{{currentSubreference}}</fh-copy>: 2º Wildcard used for linking other system elements to the current user</li>
+<li><fh-copy class="link">{{currentRole}}</fh-copy>: Current users role name</li>
+<li><fh-copy class="link">{{currentRoleId}}</fh-copy>: Current users role Id</li>
+<li><fh-copy class="link">{{currentUserLogin}}</fh-copy>: Current users login</li>
+<li><fh-copy class="link">{{currentUserId}}</fh-copy>: Current users Id</li>
+<li><fh-copy class="link">{{currentUserFullName}}</fh-copy>: Current users full name</li>
+<li><fh-copy class="link">{{currentUserCultureId}}</fh-copy>: Current users culture Id</li>
+<li><fh-copy class="link">{{currentUserLang}}</fh-copy>: Current users Language. First two digits of culture Id</li>
+<li><fh-copy class="link">{{currentUserEmail}}</fh-copy>: Current users Email.</li>
+<li><fh-copy class="link">{{currentDate}}</fh-copy>: Current Date.</li>
+<li><fh-copy class="link">{{currentTime}}</fh-copy>: Current Time with minutes precision.</li>
+<li><fh-copy class="link">{{currentTimeSec}}</fh-copy>: Current Time with seconds precision.</li>
+<li><fh-copy class="link">{{currentDateTime}}</fh-copy>: Current Date and Time with minutes precision.</li>
+<li><fh-copy class="link">{{currentDateTimeSec}}</fh-copy>: Current Date and Time with seconds precision.</li>
 </ul>
 <h2 id="generate-tokens">Generate Tokens<a class="headerlink" href="#generate-tokens" title="Permanent link">¶</a></h2>
-<p><strong>flexygo</strong> allows you to generate your own Tokens by using SQL sentences. We shall indicate the Connection string we want to use and wich SQL Sentence using any of the previously generated tokens.</p>
+<p><strong>Flexygo</strong> allows you to generate your own Tokens by using SQL sentences. We shall indicate the Connection string we want to use and wich SQL Sentence using any of the previously generated tokens.</p>
 <p>If I have an Employee Table in my data model with an Email and I want to obtain EmployeeID from employee table. We can create a new token called <strong>{{EmployeeId}}</strong>
 </p><div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">EmployeeId</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employees</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'{{currentUserEmail}}'</span>
 </span></code></pre></div><p></p>

@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -672,7 +674,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1370,12 +1372,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1536,7 +1538,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1605,7 +1607,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1749,7 +1751,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1790,12 +1792,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1813,12 +1815,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1887,7 +1889,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2426,7 +2428,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2541,7 +2543,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2564,7 +2566,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2875,7 +2877,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -3019,7 +3021,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3081,10 +3083,8 @@
 Si deseas desarrollar una integración con Office desde la plataforma <strong>flexygo</strong>, tienes dos opciones:</p>
 <h2 id="desarrollo-de-la-integracion">Desarrollo de la integración<a class="headerlink" href="#desarrollo-de-la-integracion" title="Permanent link">¶</a></h2>
 <h3 id="opcion-recomendada">Opción recomendada<a class="headerlink" href="#opcion-recomendada" title="Permanent link">¶</a></h3>
-<p>Registra tu aplicación usando el <strong>Azure portal</strong>:<br>
-https://docs.microsoft.com/en-us/graph/auth-register-app-v2<br>
-Otro ejemplo:<br>
-https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/</p>
+<p>Registra tu aplicación usando el <a href="https://docs.microsoft.com/en-us/graph/auth-register-app-v2">Azure portal</a>:<br>
+Otro <a href="https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/">ejemplo</a>.</p>
 <p>Además de registrar la aplicación en Azure, asegúrate de <strong>habilitar permisos de acceso a Contacts y Calendars</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Office365/Office365APIPermissions.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Office365/Office365APIPermissions.png" title="Image 1. Office 365 API Permissions"></a></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Office365/Office365AgregPermissions.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Office365/Office365AgregPermissions.png" title="Image 2. Office 365 API Agregate Permissions"></a></p>
@@ -3099,12 +3099,10 @@ Rellena los campos de configuración de Office con tu <strong>client id</strong>
 <p>En este ejemplo se obtiene una colección de contactos desde la carpeta de contactos por defecto del usuario autenticado.</p>
 <ol>
 <li>
-<p>Obtén y guarda el token necesario:<br>
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Get Office Token</flx-navbutton></p>
+<p>Obtén y guarda el token necesario: <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Conseguir token de Office</flx-navbutton></p>
 </li>
 <li>
-<p>Recupera los contactos:<br>
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts" showprogress="false">Get Office Contacts</flx-navbutton></p>
+<p>Recupera los contactos: <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts" showprogress="false">Conseguir contacto de Office</flx-navbutton></p>
 </li>
 </ol>
 <div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Response:
@@ -3114,16 +3112,14 @@ Rellena los campos de configuración de Office con tu <strong>client id</strong>
 <p>En este ejemplo se recupera una lista de eventos del calendario del usuario autenticado.</p>
 <ol>
 <li>
-<p>Obtén y guarda el token necesario:<br>
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'calendar'}" showprogress="false">Get Office Token</flx-navbutton></p>
+<p>Obtén y guarda el token necesario: <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'calendar'}" showprogress="false">Conseguir token de Office</flx-navbutton></p>
 </li>
 <li>
-<p>Recupera los eventos:<br>
-   <flx-navbutton class="link" type="execprocess" processname="GetOfficeCalendar" showprogress="false">Get Office Calendar</flx-navbutton></p>
+<p>Recupera los eventos: <flx-navbutton class="link" type="execprocess" processname="GetOfficeCalendar" showprogress="false">Conseguir contacto de Office</flx-navbutton></p>
 </li>
 </ol>
 <p>Response:</p>
-<p><fh-modal class="button" modal_id="fhmodal_office_events" modal_title="Office 365 Events">Insert, Update And Delete event</fh-modal></p>
+<p><fh-modal class="button" modal_id="fhmodal_office_events" modal_title="Office 365 Events">Insertar, actualizar y borrar evento</fh-modal></p>
 <div id="fhmodal_office_contacts" class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-fhmodal_office_contacts-1"><a id="__codelineno-fhmodal_office_contacts-1" name="__codelineno-fhmodal_office_contacts-1" href="#__codelineno-fhmodal_office_contacts-1"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.Objects</span>
 </span><span id="__span-fhmodal_office_contacts-2"><a id="__codelineno-fhmodal_office_contacts-2" name="__codelineno-fhmodal_office_contacts-2" href="#__codelineno-fhmodal_office_contacts-2"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.Processing.ProcessManager</span>
 </span><span id="__span-fhmodal_office_contacts-3"><a id="__codelineno-fhmodal_office_contacts-3" name="__codelineno-fhmodal_office_contacts-3" href="#__codelineno-fhmodal_office_contacts-3"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">RestSharp</span>

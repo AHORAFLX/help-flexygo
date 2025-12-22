@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -672,7 +674,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1355,12 +1357,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1521,7 +1523,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1590,7 +1592,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1734,7 +1736,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1775,12 +1777,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1798,12 +1800,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1872,7 +1874,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2411,7 +2413,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2526,7 +2528,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2549,7 +2551,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2860,7 +2862,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -3004,7 +3006,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3090,19 +3092,14 @@ Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nomb
 <h2 id="configurar-el-proceso-estandar-de-redsys">Configurar el proceso estándar de RedSys<a class="headerlink" href="#configurar-el-proceso-estandar-de-redsys" title="Permanent link">¶</a></h2>
 <p>Puedes usar el proceso estándar de pago y vincularlo directamente a un objeto:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/RedSys/RedSys_6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/RedSys/RedSys_6.png" title="Image 4. RedSys configuration"></a></p>
-<p>También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago<br>
-<fh-copy class="link">FLEXYGO.PaymentsProcess.PayRequest</fh-copy>.  </p>
-<p>Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.<br>
+<p>También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago (<fh-copy class="link">FLEXYGO.PaymentsProcess.PayRequest</fh-copy>(). Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.<br>
 Si no se especifica el campo de cantidad, el importe se obtendrá del campo indicado en la relación del objeto con RedSys.</p>
 <h2 id="log">Log<a class="headerlink" href="#log" title="Permanent link">¶</a></h2>
-<p>Todas las transacciones realizadas con RedSys quedan registradas en un log que indica su estado y la respuesta recibida.<br>
-<flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Logs" showprogress="false">Ir al Log de RedSys</flx-navbutton>.</p>
-<p class="flx-warning-card">Para conocer el significado de los códigos de respuesta, visita el siguiente<br>
-<a href="https://pagosonline.redsys.es/codigosRespuesta.html#codigo-dsresponse"><strong>enlace</strong></a>.</p>
+<p>Todas las transacciones realizadas con RedSys quedan registradas en un log que indica su estado y la respuesta recibida. <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Logs" showprogress="false">Ir al Log de RedSys</flx-navbutton>.</p>
+<p class="flx-warning-card">Para conocer el significado de los códigos de respuesta, visita el siguiente <a href="https://pagosonline.redsys.es/codigosRespuesta.html#codigo-dsresponse"><strong>enlace</strong></a>.</p>
 <h2 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">¶</a></h2>
 <p>RedSys dispone de un entorno de pruebas donde se puede verificar el correcto funcionamiento antes de la implantación real.<br>
-Para más información visita el siguiente<br>
-<a href="https://pagosonline.redsys.es/entornosPruebas.html"><strong>enlace</strong></a>.</p>
+Para más información visita el siguiente <a href="https://pagosonline.redsys.es/entornosPruebas.html"><strong>enlace</strong></a>.</p>
 
 
 

@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -672,7 +674,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1388,12 +1390,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1554,7 +1556,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1623,7 +1625,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1767,7 +1769,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1808,12 +1810,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1831,12 +1833,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1905,7 +1907,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2444,7 +2446,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2559,7 +2561,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2582,7 +2584,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2893,7 +2895,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -3037,7 +3039,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3097,7 +3099,7 @@
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FlexygoLogo.png" data-desc-position="bottom"><img alt="flexygo" class="flx-image-of-title" src="/docs_assets/images/FlexygoLogo.png"></a></p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <p>Configurar URLs amigables en <strong>flexygo</strong> es tan sencillo como acceder a la configuración del objeto y activar el interruptor de <em>Friendly URL</em>.<br>
-Es importante tener en cuenta que esta configuración se aplica únicamente al <strong>objeto</strong>, no a la <strong>colección</strong>, aunque una vez activada, las URLs amigables funcionan en ambas.</p>
+Es importante tener en cuenta que esta configuración se aplica únicamente al <strong>objeto</strong>, <strong>no a la colección</strong>, aunque una vez activada, las URLs amigables funcionan en ambas.</p>
 <p>Los objetos que no tengan el interruptor de Friendly URL activo <strong>no serán redirigidos</strong> cuando se acceda mediante una de estas URLs.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Information/FriendlyURLs.png" data-desc-position="bottom"><img alt="URLs amigables configuration" src="/docs_assets/images/Information/FriendlyURLs.png" title="Image 1. Reference and Subreference configuration"></a></p>
 <h2 id="url-structure">URL Structure<a class="headerlink" href="#url-structure" title="Permanent link">¶</a></h2>
@@ -3111,19 +3113,19 @@ Es importante tener en cuenta que esta configuración se aplica únicamente al <
 </thead>
 <tbody>
 <tr>
-<td>/list/:object</td>
+<td><fh-copy class="link">/list/:object</fh-copy></td>
 <td>/list/locations</td>
 </tr>
 <tr>
-<td>/list/:object/page/:pageName</td>
+<td><fh-copy class="link">/list/:object/page/:pageName</fh-copy></td>
 <td>/list/locations/page/my_list</td>
 </tr>
 <tr>
-<td>/list/:object?field1=value1&amp;field2=value2</td>
+<td><fh-copy class="link">/list/:object?field1=value1&amp;field2=value2</fh-copy></td>
 <td>/list/locations?userid=1&amp;accuracy&lt;20</td>
 </tr>
 <tr>
-<td>/list/:object/page/:pageName?field1=value1&amp;field2=value2</td>
+<td><fh-copy class="link">/list/:object/page/:pageName?field1=value1&amp;field2=value2</fh-copy></td>
 <td>/list/locations/page/my_list?userid=1&amp;accuracy&lt;20</td>
 </tr>
 </tbody>
@@ -3138,11 +3140,11 @@ Es importante tener en cuenta que esta configuración se aplica únicamente al <
 </thead>
 <tbody>
 <tr>
-<td>/view/:object/:primarykey</td>
+<td><fh-copy class="link">/view/:object/:primarykey</fh-copy></td>
 <td>/view/location/1</td>
 </tr>
 <tr>
-<td>/view/:object/:primarykey/page/:pageName</td>
+<td><fh-copy class="link">/view/:object/:primarykey/page/:pageName</fh-copy></td>
 <td>/view/location/1/page/my_view</td>
 </tr>
 </tbody>
@@ -3157,11 +3159,11 @@ Es importante tener en cuenta que esta configuración se aplica únicamente al <
 </thead>
 <tbody>
 <tr>
-<td>/edit/:object/:primarykey</td>
+<td><fh-copy class="link">/edit/:object/:primarykey</fh-copy></td>
 <td>/edit/location/1</td>
 </tr>
 <tr>
-<td>/edit/:object/:primarykey/page/:pageName</td>
+<td><fh-copy class="link">/edit/:object/:primarykey/page/:pageName</fh-copy></td>
 <td>/edit/location/1/page/my_edit</td>
 </tr>
 </tbody>
@@ -3176,11 +3178,11 @@ Es importante tener en cuenta que esta configuración se aplica únicamente al <
 </thead>
 <tbody>
 <tr>
-<td>/insert/:object</td>
+<td><fh-copy class="link">/insert/:object</fh-copy></td>
 <td>/insert/location</td>
 </tr>
 <tr>
-<td>/insert/:object/page/:pageName</td>
+<td><fh-copy class="link">/insert/:object/page/:pageName</fh-copy></td>
 <td>/insert/location/page/my_edit</td>
 </tr>
 </tbody>
@@ -3188,7 +3190,7 @@ Es importante tener en cuenta que esta configuración se aplica únicamente al <
 <h2 id="observations">Observations<a class="headerlink" href="#observations" title="Permanent link">¶</a></h2>
 <p>Si no se especifica una página, se navegará a la página genérica.</p>
 <p>La clave primaria se tomará de la que esté configurada como <strong>Unique Key</strong>.<br>
-Si no existe una Unique Key configurada, se utilizará el campo Key.<br>
+Si no existe una <strong>Unique Key</strong> configurada, se utilizará el campo Key.<br>
 Pero si el objeto contiene múltiples campos clave, se devolverá un error.</p>
 
 

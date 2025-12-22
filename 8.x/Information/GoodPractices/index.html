@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -1382,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1738,7 +1740,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1802,12 +1804,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1825,12 +1827,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3093,13 +3095,15 @@
 <h2 id="custom-folder">Custom folder<a class="headerlink" href="#custom-folder" title="Permanent link">¶</a></h2>
 <p>Creating custom folder it is a fundamental step in developing your <strong>flexygo</strong> project. In this folder you will place customized css, javascript files, images, documents, reports and etc. Put your custom folder named, for instance, exactly as your project, in <em>~/yourCustomFolder/</em></p>
 <h2 id="login">Login<a class="headerlink" href="#login" title="Permanent link">¶</a></h2>
-<p><strong>flexygo</strong> has a <strong>default login.css, which shouldn't be changed or moved</strong> from its default folder, because it will be overwritten the next time a version update takes place. <strong>Create a css folder in your custom folder</strong> and place a login.css file which will overwrite the original login.less file. This way you can change the class or id you want on your login screen. You can also create a js folder in the custom folder and add a login.js to add any client-side logic to your login form. In addition to this, you can customize the language of the login screen, modifying Login Language Setting in the Admin Work Area &gt; Enviroment &gt; Settings Section with 4 possible languages: <em>es-ES | ca-ES | fr-FR | de-DE</em></p>
+<p><strong>Flexygo</strong> has a <strong>default login.css, which shouldn't be changed or moved</strong> from its default folder, because it will be overwritten the next time a version update takes place. </p>
+<p><strong>Create a css folder in your custom folder</strong> and place a login.css file which will overwrite the original login.less file. This way you can change the class or id you want on your login screen. </p>
+<p>You can also create a js folder in the custom folder and add a login.js to add any client-side logic to your login form. In addition to this, you can customize the language of the login screen, modifying Login Language Setting in the <strong>Admin Work Area</strong> &gt; <strong>Enviroment</strong> &gt; <strong>Settings Section</strong> with 4 possible languages: <em>es-ES | ca-ES | fr-FR | de-DE</em></p>
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
 <h2 id="skin">Skin<a class="headerlink" href="#skin" title="Permanent link">¶</a></h2>
-<p><strong>flexygo</strong> uses <strong>less</strong> style sheet language, so most of the variables like colours or screen sizes can be changed directly on the <strong>flexygo</strong> view interface. You can add styles to overwrite or expand default <strong>flexygo</strong> skin in various places like:</p>
+<p><strong>Flexygo</strong> uses <strong>less</strong> style sheet language, so most of the variables like colours or screen sizes can be changed directly on the <strong>flexygo</strong> view interface. You can add styles to overwrite or expand default <strong>flexygo</strong> skin in various places like:</p>
 <ul>
 <li>A template header</li>
 <li>Interface custom style field</li>
@@ -3116,7 +3120,7 @@
 <p><strong>flexygo</strong> has several <strong>email templates</strong> used by the system (default, confirm, resetpass). In the mail templates section you can modify the subject and body of the messages.</p>
 <p class="flx-warning-card">It is important to note that in the case of <strong>confirmation -&gt; confirm</strong> and <strong>remember password -&gt; resetpass -&gt; emails</strong>, you must keep the <strong>{{Msg}}</strong> marker in the body of the message as it will be replaced by the link that will be sent to the user.</p>
 <h2 id="scripts">Scripts<a class="headerlink" href="#scripts" title="Permanent link">¶</a></h2>
-<p><strong>flexygo</strong> uses <strong>plugins</strong> to include web-components, jquery code or javascript code. You can add your own client-side code to expand <strong>flexygo</strong> in the following ways:</p>
+<p><strong>Flexygo</strong> uses <strong>plugins</strong> to include web-components, jquery code or javascript code. You can add your own client-side code to expand <strong>flexygo</strong> in the following ways:</p>
 <ul>
 <li>Add code to your modules</li>
 <li>Add code to your template header, footer or body</li>

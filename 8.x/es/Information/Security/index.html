@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -672,7 +674,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1379,12 +1381,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1545,7 +1547,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1614,7 +1616,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1758,7 +1760,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1799,12 +1801,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1822,12 +1824,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1896,7 +1898,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2435,7 +2437,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2550,7 +2552,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2573,7 +2575,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2884,7 +2886,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -3028,7 +3030,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3086,7 +3088,7 @@
 
 <h1 class="flx-title-with-image" id="security">Security<a class="headerlink" href="#security" title="Permanent link">¶</a></h1>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FlexygoLogo.png" data-desc-position="bottom"><img alt="flexygo" class="flx-image-of-title" src="/docs_assets/images/FlexygoLogo.png"></a></p>
-<p><strong>flexygo</strong> incluye 3 niveles de seguridad diferentes:</p>
+<p><strong>Flexygo</strong> incluye 3 niveles de seguridad diferentes:</p>
 <ul>
 <li>Seguridad por roles  </li>
 <li>Seguridad por facultades (sobrescribe la seguridad por roles)  </li>
@@ -3096,10 +3098,10 @@
 <p><em>Ejemplo:</em><br>
 El usuario John pertenece al rol de ventas. En el rol de ventas se establece que cada comercial solo puede ver clientes de su zona. Puede que haya algunos usuarios que necesiten ver otras zonas. Podemos crear facultades para esas zonas y asignarlas a los usuarios correspondientes.</p>
 <h2 id="role-security">Role Security<a class="headerlink" href="#role-security" title="Permanent link">¶</a></h2>
-<p><strong>flexygo</strong> incluye cinco roles por defecto, dos roles principales: <strong>Admin</strong> y <strong>All Users</strong>.<br>
-El rol Admin concede acceso total a cualquier miembro del grupo.<br>
-El rol All Users agrupa al resto de roles y permite asignar permisos directamente a todos los grupos hijos. Dentro de All Users encontramos un segundo nivel con los roles <strong>Registered</strong> y <strong>Not registered</strong>. El rol Registered contendrá todos los nuevos roles creados, incluido el rol de usuarios por defecto.</p>
-<p>La seguridad siempre se aplica hacia arriba: si un grupo inferior tiene seguridad definida, sobrescribe la del grupo superior.<br>
+<p><strong>Flexygo</strong> incluye cinco roles por defecto, dos roles principales: <strong>Admin</strong> y <strong>All Users</strong>.<br>
+El rol <strong>Admin</strong> concede acceso total a cualquier miembro del grupo.<br>
+El rol <strong>All Users</strong> agrupa al resto de roles y permite asignar permisos directamente a todos los grupos hijos. Dentro de All Users encontramos un segundo nivel con los roles <strong>Registered</strong> y <strong>Not registered</strong>. El rol <strong>Registered</strong> contendrá todos los nuevos roles creados, incluido el rol de usuarios por defecto.</p>
+<p><strong>La seguridad siempre se aplica hacia arriba</strong>: si un grupo inferior tiene seguridad definida, sobrescribe la del grupo superior.<br>
 Lo mismo ocurre si la seguridad se establece a nivel de usuario:<br>
 <strong>la seguridad del usuario siempre sobrescribe la del rol</strong>.</p>
 <p>Para comenzar con los ejemplos y explicaciones más extensas, dividiremos en dos grupos principales (All Users y Admin).</p>
@@ -3118,15 +3120,14 @@ También debemos establecer una página por defecto para la seguridad del invita
 <li>Processes  </li>
 <li>Reports  </li>
 </ul>
-<p>Si queremos permitir acceso no registrado, debemos asegurarnos de que el archivo <em>web.config</em> contiene:</p>
-<ol>
-<li>Cambiar autenticación de Forms a None:<br>
-<strong><authentication mode="None"></authentication></strong>  </li>
-<li>Comentar el bloque de denegación de autorización:<br>
-<strong><authorization> <deny users="?"> </deny></authorization></strong>  </li>
-<li>Establecer <strong>AllowGuest</strong> a <strong>true</strong> en<br>
-<em>Admin Work Area &gt; Environment &gt; Settings</em></li>
-</ol>
+<p>Si queremos permitir acceso no registrado, debemos asegurarnos de que el archivo <strong>web.config</strong> contiene:</p>
+<p>1. Cambiar autenticación de Forms a None:  </p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;authentication</span><span class="w"> </span><span class="na">mode=</span><span class="s">"None"</span><span class="nt">&gt;</span>
+</span></code></pre></div>
+<p>2. Comentar el bloque de denegación de autorización:  </p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;authorization&gt;</span><span class="w"> </span><span class="nt">&lt;deny</span><span class="w"> </span><span class="na">users=</span><span class="s">"?"</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/authorization&gt;</span><span class="w"> </span>
+</span></code></pre></div>
+<p>3. Establecer <strong>AllowGuest</strong> a <strong>true</strong> en  <em>Admin Work Area &gt; Environment &gt; Settings</em></p>
 <table>
 <thead>
 <tr>

@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -1355,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1711,7 +1713,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1775,12 +1777,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1798,12 +1800,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3079,10 +3081,10 @@
 </ul>
 <p>To generate Power BI setting click on <flx-navbutton class="link" type="execprocess" processname="pNet_PowerBIIntegration" showprogress="false">Generate Power BI settings</flx-navbutton></p>
 <h2 id="incorporating-power-bi-report">Incorporating Power BI report<a class="headerlink" href="#incorporating-power-bi-report" title="Permanent link">¶</a></h2>
-<p>Access to the Reports section and incorporate your Power BI report introducing th ReportId in the report path field.</p>
+<p>Access to the <strong>Reports</strong> section and incorporate your Power BI report introducing the <strong>ReportId</strong> in the report path field.</p>
 <h2 id="filtering-power-bi-from-flexygo-pages">Filtering Power BI from flexygo pages<a class="headerlink" href="#filtering-power-bi-from-flexygo-pages" title="Permanent link">¶</a></h2>
 <p>Microsoft only allows you to pass filters with embedded BI.</p>
-<p>To achieve this we must add a new Role to our BI document, imagine that we are going to pass the provider id. We create the provider role and associate the condition <em>[ProviderId] = value(username())</em></p>
+<p>To achieve this we must add a new <strong>Role</strong> to our BI document, imagine that we are going to pass the provider id. We create the provider role and associate the condition <em>[ProviderId] = value(username())</em></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/PowerBI/powerbi1.png" data-desc-position="bottom"><img alt="Power BI" src="/docs_assets/images/PowerBI/powerbi1.png" title="Image 1. Power BI"></a></p>
 <p>Now we must be able to pass the role and the username from our application, so that it automatically filters the field, for this we use the two fields that are in the report registration in flexygo:</p>
 <ul>
@@ -3093,7 +3095,7 @@
 <div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Provider'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">Role</span>
 </span></code></pre></div></li>
 </ul>
-<p class="flx-warning-card">To make it working, the report cannot be published directly, so you need the PowerBI Embedded, which is an Azure resource that is within the Azure Marketplace (Image 2).</p>
+<p class="flx-warning-card">To make it working, <strong>the report cannot be published directly</strong>, so you need the <strong>PowerBI Embedded</strong>, which is an Azure resource that is within the Azure Marketplace (Image 2).</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/PowerBI/powerbi2.png" data-desc-position="bottom"><img alt="Azure Marketplace" src="/docs_assets/images/PowerBI/powerbi2.png" title="Image 2. Azure Marketplace"></a></p>
 <h2 id="power-bi-web-component">Power BI web component<a class="headerlink" href="#power-bi-web-component" title="Permanent link">¶</a></h2>
 <p>Now you are ready to add a HTML module to your page and include the Power BI web component 

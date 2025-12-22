@@ -113,8 +113,8 @@ header.md-header {
       width: 125%;
 
       .md-search__form {
-        border-bottom: 1px solid #292929;
-        border-radius: 40px !important;
+        background-color: transparent;
+        border-bottom: 1px solid;
 
         &:has(.focus-visible) {
           border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
@@ -362,9 +362,6 @@ a.md-logo {
         width: 125%;
 
         .md-search__form {
-          border-bottom: 1px solid var(--flx-color-section);
-          border-radius: 40px !important;
-
           &:has(.focus-visible) {
             border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
 
@@ -429,8 +426,6 @@ a.md-logo {
 
       .md-search__inner {
         .md-search__form {
-          border-radius: 0 !important;
-
           .md-search__input {
             color: var(--md-default-fg-color);
           }

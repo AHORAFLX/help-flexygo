@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -741,7 +743,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1346,12 +1348,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1512,7 +1514,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1581,7 +1583,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1725,7 +1727,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1766,12 +1768,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1789,12 +1791,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1863,7 +1865,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2402,7 +2404,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2517,7 +2519,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2540,7 +2542,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2851,7 +2853,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -2995,7 +2997,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3064,12 +3066,10 @@ Permite varios métodos de autenticación, entre ellos:</p>
 <li>DNIe (Documento Nacional de Identidad electrónico)</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/clave/clave_preview.png" data-desc-position="bottom"><img alt="Cl@ve Authentication" src="/docs_assets/images/clave/clave_preview.png" title="Image 1. Cl@ve Authentication"></a></p>
-<p>Imagen 1. Autenticación Cl@ve</p>
 <h2 id="como-funciona">Cómo funciona<a class="headerlink" href="#como-funciona" title="Permanent link">¶</a></h2>
 <p>Para comenzar a utilizar este nuevo método de autenticación, el primer paso es <strong>registrarse como Proveedor de Servicios (SP)</strong> en la plataforma Cl@ve.<br>
 Este registro es obligatorio ya que solicitarás información sensible de los ciudadanos, y Cl@ve debe validar que cumples los requisitos necesarios para acceder y usar dichos datos.</p>
-<p>La documentación requerida se puede encontrar en el<br>
-<a href="https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip" title="Cl@ve Directory">Directorio de Cl@ve</a>.</p>
+<p>La documentación requerida se puede encontrar en el <a href="https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip" title="Cl@ve Directory">Directorio de Cl@ve</a>.</p>
 <p>Tras completar el registro como SP y definir el certificado electrónico para validar las solicitudes SAML (información incluida en la documentación indicada), puedes proceder a activar la autenticación mediante Cl@ve:</p>
 <p><flx-navbutton class="button" type="execprocess" processname="pNet_EnableClaveAuth" showprogress="false">
     Generar Integración Cl@ve
@@ -3078,8 +3078,7 @@ Este registro es obligatorio ya que solicitarás información sensible de los ci
 <p>Puedes habilitar el registro de nuevos usuarios en tu aplicación <strong>flexygo</strong> utilizando su cuenta Cl@ve.<br>
 Configura los siguientes parámetros en:</p>
 <p><strong>Admin Area → Environment → Settings → Security</strong></p>
-<p>o haciendo clic en:<br>
-<flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton></p>
+<p>o haciendo clic en: <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton></p>
 <p>Una vez que el usuario completa el registro mediante Cl@ve, se ejecuta el proceso <strong>NewUserFromClave</strong>, que crea un nuevo usuario aplicando los valores de perfil, rol y lenguaje por defecto.<br>
 Estos parámetros pueden ser modificados por el Administrador.</p>
 <table>

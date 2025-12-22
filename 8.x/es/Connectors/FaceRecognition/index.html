@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
@@ -344,7 +346,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Sign
+    Firma Abh
     
   </span>
   
@@ -390,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Abh Ticket
+    Ticket Abh
     
   </span>
   
@@ -465,7 +467,7 @@
   
   
   <span class="md-ellipsis">
-    AhoraERP
+    Integración con Ahora ERP
     
   </span>
   
@@ -723,7 +725,7 @@
   
   
   <span class="md-ellipsis">
-    Procesos de demostración de MailChimp
+    Procesos de ejemplo de MailChimp
     
   </span>
   
@@ -1328,12 +1330,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Document Manager &amp; Image Manager
+    Document Manager And Image Manager
     
   </span>
   
@@ -1494,7 +1496,7 @@
   
   
   <span class="md-ellipsis">
-    Planner
+    Planificador
     
   </span>
   
@@ -1563,7 +1565,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Línea de tiempo
     
   </span>
   
@@ -1707,7 +1709,7 @@
   
   
   <span class="md-ellipsis">
-    Diseñando la App offline de flexygo
+    Diseñar la App offline de flexygo
     
   </span>
   
@@ -1748,12 +1750,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Diferencias entre emulador y app
+    IA offline
     
   </span>
   
@@ -1771,12 +1773,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IA offline
+    Diferencias entre emulador y app
     
   </span>
   
@@ -1845,7 +1847,7 @@
   
   
   <span class="md-ellipsis">
-    Configuración de seguimiento
+    Configuración del seguimiento
     
   </span>
   
@@ -2384,7 +2386,7 @@
   
   
   <span class="md-ellipsis">
-    Tarea de script de base de datos
+    Trabajo de script de base de datos
     
   </span>
   
@@ -2499,7 +2501,7 @@
   
   
   <span class="md-ellipsis">
-    Frases de Notificación
+    Sentencia de Notificación
     
   </span>
   
@@ -2522,7 +2524,7 @@
   
   
   <span class="md-ellipsis">
-    Automatización de Pruebas
+    Automatización de tests
     
   </span>
   
@@ -2833,7 +2835,7 @@
   
   
   <span class="md-ellipsis">
-    Timeline
+    Cronología
     
   </span>
   
@@ -2977,7 +2979,7 @@
   
   
   <span class="md-ellipsis">
-    Esqueletos
+    Esqueletos de carga
     
   </span>
   
@@ -3036,10 +3038,7 @@
 <h1 id="reconocimiento-facial">Reconocimiento Facial<a class="headerlink" href="#reconocimiento-facial" title="Permanent link">¶</a></h1>
 <p>El reconocimiento facial es una forma de identificar o confirmar la identidad de una persona mediante su rostro. Estos sistemas pueden utilizarse para identificar personas en fotografías. <strong>flexygo</strong> incorpora la capacidad de identificar caras conocidas en una imagen y devolver el objeto relacionado.</p>
 <h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
-<p>Para habilitar esta función, debes <strong>descargar los modelos entrenados</strong> desde<br>
-https://nuget.flexygo.com/setup/models.zip<br>
-y extraerlos en tu directorio <strong>flexygo</strong>, por ejemplo:<br>
-<em>~/custom/models/</em></p>
+<p>Para habilitar esta función, debes <strong>descargar los modelos entrenados</strong> desde <a href="https://nuget.flexygo.com/setup/models.zip">https://nuget.flexygo.com/setup/models.zip</a> y extraerlos en tu directorio <strong>flexygo</strong>, por ejemplo: <em>~/custom/models/</em></p>
 <p class="flx-warning-card">Ten en cuenta que el reconocimiento facial requiere un <strong>servidor de 64 bits</strong>.</p>
 <ol>
 <li>
@@ -3055,8 +3054,7 @@ y extraerlos en tu directorio <strong>flexygo</strong>, por ejemplo:<br>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Recognition/Recognition_3.png" data-desc-position="bottom"><img alt="Face Recognition example" src="/docs_assets/images/Recognition/Recognition_3.png" title="Image 3. Face Recognition example"></a></p>
 </li>
 <li>
-<p>Después podrás probarlo usando el proceso de ejemplo <strong>Find Faces</strong> o programar tu propia<br>
-    <fh-modal class="link" modal_id="fhmodal_own_code" modal_title="Insert object function">función personalizada</fh-modal>:</p>
+<p>Después podrás probarlo usando el proceso de ejemplo <strong>Find Faces</strong> o programar tu propia <fh-modal class="link" modal_id="fhmodal_own_code" modal_title="Insert object function">función personalizada</fh-modal>:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Recognition/Recognition_6.png" data-desc-position="bottom"><img alt="Face Recognition example" src="/docs_assets/images/Recognition/Recognition_6.png" title="Image 4. Face Recognition example"></a></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Recognition/Recognition_4.png" data-desc-position="bottom"><img alt="Face Recognition example" src="/docs_assets/images/Recognition/Recognition_4.png" title="Image 5. Face Recognition example"></a></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Recognition/Recognition_5.png" data-desc-position="bottom"><img alt="Face Recognition example" src="/docs_assets/images/Recognition/Recognition_5.png" title="Image 6. Face Recognition example"></a></p>

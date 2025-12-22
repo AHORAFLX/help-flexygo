@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -1277,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Doc%26ImageManager/" class="md-nav__link">
+      <a href="../DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1771,7 +1773,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1835,12 +1837,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1858,12 +1860,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3128,16 +3130,16 @@
 Other example <a href="https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/">link</a>.</p>
 <h3 id="office-365-configuration">Office 365 configuration<a class="headerlink" href="#office-365-configuration" title="Permanent link">¶</a></h3>
 <p>Make sure IMAP/POP3/SMTP is enabled for your organization and mailbox.</p>
-<p>First log in to Microsoft 365 admin portal at https://admin.microsoft.com/ as an administrator, go to Org settings screen and find Modern authentication entry.</p>
+<p>First log in to Microsoft 365 admin portal at <a href="https://admin.microsoft.com/">https://admin.microsoft.com/</a> as an administrator, go to Org settings screen and find Modern authentication entry.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice4.png" title="Image 1. Show all settings"></a></p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice5.png" title="Image 2. Org settings"></a></p>
-<p>Check ‘Turn on modern authentication…‘ for OAuth flows and IMAP, POP3 and SMTP for App passwords flows</p>
+<p>Check <strong>Turn on modern authentication…</strong> for OAuth flows and <strong>IMAP</strong>, <strong>POP3</strong> and <strong>SMTP</strong> for App passwords flows</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice6.png" title="Image 3. Modern authentication"></a></p>
 <p>Then go to Users screen:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice7.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice7.png" title="Image 4. Users"></a></p>
 <p>Select an user and on the Mail tab click Manage email apps</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice8.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice8.png" title="Image 5. User config"></a></p>
-<p>Check IMAP, Pop and Authenticated SMTP to turn on the protocols for this account.</p>
+<p>Check <strong>IMAP</strong>, <strong>Pop</strong> and <strong>Authenticated SMTP</strong> to turn on the protocols for this account.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice9.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice9.png" title="Image 6. Manage email apps"></a></p>
 <p>Have in mind it takes 20-30 minutes for the changes to take effect.</p>
 <h3 id="azure-configuration">Azure configuration<a class="headerlink" href="#azure-configuration" title="Permanent link">¶</a></h3>
@@ -3160,7 +3162,7 @@ Other example <a href="https://www.re-mark-able.net/how-to-access-data-from-the-
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice2.png" title="Image 10. API permissions"></a> </p>
 <p>Create an app secret and remember its value.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice3.png" title="Image 11. Client secret"></a></p>
-<p>To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app client id, tenant id and genereted secret.</p>
+<p>To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app <strong>client id</strong>, <strong>tenant id</strong> and genereted <strong>secret</strong>.</p>
 <h2 id="google">Google<a class="headerlink" href="#google" title="Permanent link">¶</a></h2>
 <p>First you must login on <a href="https://console.cloud.google.com/">https://console.cloud.google.com/</a> and select an existing project or create a new one.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice12.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice12.png" title="Image 12. Projects"></a></p>
@@ -3172,9 +3174,9 @@ Other example <a href="https://www.re-mark-able.net/how-to-access-data-from-the-
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice19.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice19.png" title="Image 14. App information"></a></p>
 <p>After that apply the next scopes:</p>
 <ul>
-<li>https://mail.google.com/</li>
-<li>https://www.googleapis.com/auth/userinfo.profile</li>
-<li>https://www.googleapis.com/auth/userinfo.email</li>
+<li><fh-copy class="link">https://mail.google.com/</fh-copy></li>
+<li><fh-copy class="link">https://www.googleapis.com/auth/userinfo.profile</fh-copy></li>
+<li><fh-copy class="link">https://www.googleapis.com/auth/userinfo.email</fh-copy></li>
 </ul>
 <p>In the next step add the email users who will use the application.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice20.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice20.png" title="Image 15. Users"></a>

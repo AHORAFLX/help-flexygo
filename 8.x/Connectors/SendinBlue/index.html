@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/components/fh-modal.css">
     
+      <link rel="stylesheet" href="../../stylesheets/components/fh-copy.css">
+    
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/cols.css">
@@ -939,30 +941,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Transactional email">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-campaign-email" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Campaign email
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-campaign-email_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Campaign email
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1361,7 +1339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modules/Doc%26ImageManager/" class="md-nav__link">
+      <a href="../../Modules/DocAndImageManager/" class="md-nav__link">
         
   
   
@@ -1717,7 +1695,7 @@
   
   
   <span class="md-ellipsis">
-    DesignEnvironment
+    Design environment
     
   </span>
   
@@ -1781,12 +1759,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/Offline%26Emulatordifferences/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    App/Emulator differences
+    Offline AI
     
   </span>
   
@@ -1804,12 +1782,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Offline%20App/OfflineAI/" class="md-nav__link">
+      <a href="../../Offline%20App/OfflineAndEmulatordifferences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Offline AI
+    App/Emulator differences
     
   </span>
   
@@ -3076,13 +3054,11 @@
 <p>You can create campaigns using the functions provided by flexygo, for example :</p>
 <p><fh-modal class="button" modal_id="fhmodal_create_campaign_email" modal_title="Create Campaign email">Create Campaign email</fh-modal></p>
 <p>In the following example you can get all information of campaign emails. Get all</p>
-<p>Format json <a href="http://jsonviewer.stack.hu/">here</a>.</p>
-<p><strong>Response:</strong>       </p>
+<p>Format json <a href="http://jsonviewer.stack.hu/">here</a>.   </p>
 <h2 id="transactional-email">Transactional email<a class="headerlink" href="#transactional-email" title="Permanent link">¶</a></h2>
 <p>You can send transactional emails using the functions provided by flexygo, for example :</p>
 <p class="flx-warning-card">Transactional emails are used for all non-promotional emails: send them when a user has created an account, when they have made an order, when request a new password...</p>
 <p><fh-modal class="button" modal_id="fhmodal_create_transaction_email" modal_title="Create Transactional email">Create Transactional email</fh-modal></p>
-<h3 id="create-campaign-email">Create Campaign email<a class="headerlink" href="#create-campaign-email" title="Permanent link">¶</a></h3>
 <div id="fhmodal_create_campaign_email" class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-fhmodal_create_campaign_email-1"><a id="__codelineno-fhmodal_create_campaign_email-1" name="__codelineno-fhmodal_create_campaign_email-1" href="#__codelineno-fhmodal_create_campaign_email-1"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.SendinBlue</span>
 </span><span id="__span-fhmodal_create_campaign_email-2"><a id="__codelineno-fhmodal_create_campaign_email-2" name="__codelineno-fhmodal_create_campaign_email-2" href="#__codelineno-fhmodal_create_campaign_email-2"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.SendinBlueResourcesTypes</span>
 </span><span id="__span-fhmodal_create_campaign_email-3"><a id="__codelineno-fhmodal_create_campaign_email-3" name="__codelineno-fhmodal_create_campaign_email-3" href="#__codelineno-fhmodal_create_campaign_email-3"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.Objects</span>
@@ -3216,7 +3192,6 @@
 </span><span id="__span-fhmodal_create_campaign_email-131"><a id="__codelineno-fhmodal_create_campaign_email-131" name="__codelineno-fhmodal_create_campaign_email-131" href="#__codelineno-fhmodal_create_campaign_email-131"></a>
 </span><span id="__span-fhmodal_create_campaign_email-132"><a id="__codelineno-fhmodal_create_campaign_email-132" name="__codelineno-fhmodal_create_campaign_email-132" href="#__codelineno-fhmodal_create_campaign_email-132"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </span></code></pre></div>
-<h3 id="create-campaign-email_1">Create Campaign email<a class="headerlink" href="#create-campaign-email_1" title="Permanent link">¶</a></h3>
 <div id="fhmodal_create_transaction_email" class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-fhmodal_create_transaction_email-1"><a id="__codelineno-fhmodal_create_transaction_email-1" name="__codelineno-fhmodal_create_transaction_email-1" href="#__codelineno-fhmodal_create_transaction_email-1"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.SendinBlue</span>
 </span><span id="__span-fhmodal_create_transaction_email-2"><a id="__codelineno-fhmodal_create_transaction_email-2" name="__codelineno-fhmodal_create_transaction_email-2" href="#__codelineno-fhmodal_create_transaction_email-2"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.SendinBlueResourcesTypes</span>
 </span><span id="__span-fhmodal_create_transaction_email-3"><a id="__codelineno-fhmodal_create_transaction_email-3" name="__codelineno-fhmodal_create_transaction_email-3" href="#__codelineno-fhmodal_create_transaction_email-3"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">FLEXYGO.Objects</span>
@@ -3368,30 +3343,6 @@
       Transactional email
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Transactional email">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-campaign-email" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Campaign email
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-campaign-email_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Campaign email
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
