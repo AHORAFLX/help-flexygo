@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/code-highlighting.css">
+    
       <link rel="stylesheet" href="../../../../../docs_assets/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../../../docs_assets/fonts/flexygo/utils.css">
@@ -3129,8 +3131,6 @@
 <h2 id="procedimiento-almacenado-al-cargar-el-objeto-o-cambiar-la-propiedad">Procedimiento Almacenado al Cargar el Objeto o Cambiar la Propiedad<a class="headerlink" href="#procedimiento-almacenado-al-cargar-el-objeto-o-cambiar-la-propiedad" title="Permanent link">¶</a></h2>
 <p>Se puede asignar un Procedimiento Almacenado Personalizado a cada objeto o propiedad para que se ejecute cuando este sea creado o cambiado, para eso el Procedimiento recibirá un XML con cada valor de propiedad, aquí tienes un ejemplo de cómo usarlo:</p>
 <p><fh-modal class="button" modal_id="fhmodal_property_change" modal_title="Proceso almacenado al cargar un objeto o cambiar una propiedad">Ejemplo</fh-modal></p>
-<div id="fhmodal_" class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-fhmodal_-1"><a id="__codelineno-fhmodal_-1" name="__codelineno-fhmodal_-1" href="#__codelineno-fhmodal_-1"></a>
-</span></code></pre></div>
 <div id="fhmodal_object" class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-fhmodal_object-1"><a id="__codelineno-fhmodal_object-1" name="__codelineno-fhmodal_object-1" href="#__codelineno-fhmodal_object-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">pPers_LockClient</span><span class="p">]</span>
 </span><span id="__span-fhmodal_object-2"><a id="__codelineno-fhmodal_object-2" name="__codelineno-fhmodal_object-2" href="#__codelineno-fhmodal_object-2"></a>
 </span><span id="__span-fhmodal_object-3"><a id="__codelineno-fhmodal_object-3" name="__codelineno-fhmodal_object-3" href="#__codelineno-fhmodal_object-3"></a><span class="w">        </span><span class="o">@</span><span class="n">IdClient</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span>
