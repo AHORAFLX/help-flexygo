@@ -19,10 +19,21 @@
         display: block;
     }
 
-    pre {
-        background: var(--flx-color-background);
-        border-radius: 0 0 var(--flx-border-radius) var(--flx-border-radius);
-        padding: 10px;
+    /* Code blocks */
+    .highlight {
+        border-radius: calc(var(--flx-border-radius) * 2); /* So it does not show a bit of white border in dark mode */
+
+        pre {
+            background: var(--flx-color-background);
+            border-radius: 0 0 var(--flx-border-radius) var(--flx-border-radius);
+            padding: 10px;
+    
+            button.md-clipboard {
+                position: relative;
+                left: 98%;
+                width: 0;
+            }
+        }
     }
 }
 
