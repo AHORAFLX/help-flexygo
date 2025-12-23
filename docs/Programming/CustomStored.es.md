@@ -47,9 +47,6 @@ Se puede asignar un Procedimiento Almacenado Personalizado a cada objeto o propi
 
 <fh-modal class="button" modal_id="fhmodal_property_change" modal_title="Proceso almacenado al cargar un objeto o cambiar una propiedad">Ejemplo</fh-modal>
 
-```sql { #fhmodal_ }
-```
-
 ```sql { #fhmodal_object }
 CREATE PROCEDURE [dbo].[pPers_LockClient]
 

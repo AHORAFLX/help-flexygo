@@ -16,7 +16,7 @@ Configure return data process to synchronize device and data model.
 
 4. <fh-modal class="link" modal_id="fhmodal_debug_stored" modal_title="Debugging return Data Process">Debugging errors on stored</fh-modal>
     
-```vb.net { #fhmodal_stored }
+```sql { #fhmodal_stored }
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -87,7 +87,7 @@ END CATCH
 END
 ```
 
-```vb.net { #fhmodal_debug_stored}
+```sql { #fhmodal_debug_stored}
 -- Note: Executing on configuration database
 -- Getting specific syncronization
 select * from Offline_Apps

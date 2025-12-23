@@ -158,7 +158,7 @@ My text
 
 It will make your block have a yellow background with round borders and an info icon on the top left corner.
 
-### Warning cards
+### Info cards
 
 ```md
 My text
@@ -188,3 +188,12 @@ It will set at the right of the title the iamge you desire, normally used to sho
 This is a div class that must wrapp the iframes of youtube videos.
 
 This class needs to be used as a html block, that it will automatically be interpreted by markdown, because markdown does not contain iframes by itself.
+
+### Dark and light images
+
+```md
+![](/URL/DE/LA/IMAGEN.PNG#only-light "Tu_Descrip"){data-gallery="light"}
+![](/URL/DE/LA/IMAGEN.PNG#only-dark "Tu_Descrip"){data-gallery="dark"}
+```
+
+To use different images for light and dark mode you need to add to the URL #only-light (for light mode) and #only-dark (for dark mode). But you'll also need to add the attrbute data-gallery with it's mode like {data-gallery="dark"} to avoid them from appearing in the caroussel of pictures when clicked.
