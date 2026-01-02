@@ -1,4 +1,4 @@
-# Utils
+﻿# Utils
 
 Esta sección es una colección de funciones utilitarias que pueden utilizarse en varias partes de la aplicación. Contiene una amplia gama de funcionalidades, desde generar IDs únicos hasta manejar archivos, parsear JSON, traducir claves, ejecutar código dinámico y más.
 
@@ -6,7 +6,9 @@ Esta sección es una colección de funciones utilitarias que pueden utilizarse e
 
 ### GUID()
 
-> **GUID**(): `string`
+```ts { .no-language }
+GUID(): string
+```
 
 Genera un identificador único.
 
@@ -14,11 +16,14 @@ Genera un identificador único.
 
 `string`
 
+
 Nombre único.
 
 ### blobToBase64()
 
-> **blobToBase64**(`blob`): `Promise`\<`unknown`\>
+```ts { .no-language }
+blobToBase64(blob): Promise<unknown>
+```
 
 Convierte un Blob a una cadena Base64.
 
@@ -30,13 +35,16 @@ Convierte un Blob a una cadena Base64.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 Una promesa que se resuelve con la cadena Base64.
 
 ### b64toBlob()
 
-> **b64toBlob**(`b64Data`, `contentType`, `sliceSize`): `Blob`
+```ts { .no-language }
+b64toBlob(b64Data, contentType, sliceSize): Blob
+```
 
 Convierte una cadena Base64 a un Blob.
 
@@ -46,17 +54,20 @@ Convierte una cadena Base64 a un Blob.
 | --------- | ----- | ---------------- | ----------- |
 | `b64Data` | `any` | `undefined` | La cadena Base64 a convertir |
 | `contentType` | `string` | `''` | El tipo de contenido del blob resultante |
-| `sliceSize` | `number` | `512` | Tamaño del fragmento en bytes |
+| `sliceSize` | `number` | `512` | Tamaí±o del fragmento en bytes |
 
 #### Devuelve
 
 `Blob`
 
+
 El blob resultante.
 
 ### urlToB64()
 
-> **urlToB64**(`url`): `Promise`\<`unknown`\>
+```ts { .no-language }
+urlToB64(url): Promise<unknown>
+```
 
 Convierte una URL de imagen a una cadena Base64.
 
@@ -68,13 +79,16 @@ Convierte una URL de imagen a una cadena Base64.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 Una promesa que se resuelve con la cadena Base64.
 
 ### b64ToTempFile()
 
-> **b64ToTempFile**(`title`, `base64`): `Promise`\<`WriteFileResult`\>
+```ts { .no-language }
+b64ToTempFile(title, base64): Promise<WriteFileResult>
+```
 
 Guarda una cadena Base64 como un archivo temporal.
 
@@ -87,13 +101,16 @@ Guarda una cadena Base64 como un archivo temporal.
 
 #### Devuelve
 
-`Promise`\<`WriteFileResult`\>
+`Promise<WriteFileResult>`
+
 
 Una promesa que se resuelve con la URI del archivo creado.
 
 ### blobToTempFile()
 
-> **blobToTempFile**(`title`, `blob`): `Promise`\<`string`\>
+```ts { .no-language }
+blobToTempFile(title, blob): Promise<string>
+```
 
 Guarda un Blob como un archivo temporal.
 
@@ -106,13 +123,16 @@ Guarda un Blob como un archivo temporal.
 
 #### Devuelve
 
-`Promise`\<`string`\>
+`Promise<string>`
+
 
 La URI del archivo creado.
 
 ### urlToBlob()
 
-> **urlToBlob**(`url`): `Promise`\<`unknown`\>
+```ts { .no-language }
+urlToBlob(url): Promise<unknown>
+```
 
 Convierte una URL de imagen en un Blob.
 
@@ -124,13 +144,16 @@ Convierte una URL de imagen en un Blob.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 El Blob resultante.
 
 ### parseJSON()
 
-> **parseJSON**(`json`): `any`
+```ts { .no-language }
+parseJSON(json): any
+```
 
 Parsea una cadena JSON que puede contener claves sin comillas.
 
@@ -144,11 +167,14 @@ Parsea una cadena JSON que puede contener claves sin comillas.
 
 `any`
 
+
 El objeto resultante.
 
 ### getFirstRow()
 
-> **getFirstRow**(`objectName`): `Promise`\<`any`\>
+```ts { .no-language }
+getFirstRow(objectName): Promise<any>
+```
 
 Obtiene el filtro necesario para seleccionar la primera fila de un objeto.
 
@@ -160,13 +186,16 @@ Obtiene el filtro necesario para seleccionar la primera fila de un objeto.
 
 #### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
+
 
 Cadena de filtro necesaria para seleccionar la primera fila.
 
 ### getPrimaryKeysFilter()
 
-> **getPrimaryKeysFilter**(`object`, `row`): `string`
+```ts { .no-language }
+getPrimaryKeysFilter(object, row): string
+```
 
 Obtiene un filtro con las claves primarias y valores de una fila.
 
@@ -181,11 +210,14 @@ Obtiene un filtro con las claves primarias y valores de una fila.
 
 `string`
 
+
 Filtro con claves primarias y valores.
 
 ### currentDate()
 
-> **currentDate**(): `string`
+```ts { .no-language }
+currentDate(): string
+```
 
 Obtiene la fecha actual en formato `YYYY-MM-DD`.
 
@@ -193,11 +225,14 @@ Obtiene la fecha actual en formato `YYYY-MM-DD`.
 
 `string`
 
+
 Fecha actual.
 
 ### currentDateTime()
 
-> **currentDateTime**(): `string`
+```ts { .no-language }
+currentDateTime(): string
+```
 
 Obtiene la fecha y hora actual en formato `YYYY-MM-DDTHH:mm:ss`.
 
@@ -205,11 +240,14 @@ Obtiene la fecha y hora actual en formato `YYYY-MM-DDTHH:mm:ss`.
 
 `string`
 
+
 Fecha y hora actual.
 
 ### currentTime()
 
-> **currentTime**(): `string`
+```ts { .no-language }
+currentTime(): string
+```
 
 Obtiene la hora actual en formato `HH:mm`.
 
@@ -217,11 +255,14 @@ Obtiene la hora actual en formato `HH:mm`.
 
 `string`
 
+
 Hora actual.
 
 ### translate()
 
-> **translate**(`key`, `deviceLanguage`): `string`
+```ts { .no-language }
+translate(key, deviceLanguage): string
+```
 
 Traduce una clave a la cultura del usuario o del dispositivo.
 
@@ -236,11 +277,14 @@ Traduce una clave a la cultura del usuario o del dispositivo.
 
 `string`
 
+
 Traducción o la clave si no se encuentra.
 
 ### execDynamicCode()
 
-> **execDynamicCode**(`code`): `any`
+```ts { .no-language }
+execDynamicCode(code): any
+```
 
 Ejecuta una cadena como código JavaScript.
 
@@ -254,11 +298,14 @@ Ejecuta una cadena como código JavaScript.
 
 `any`
 
+
 Resultado del código.
 
 ### execAsyncFunction()
 
-> **execAsyncFunction**(`code`, `param_names`, `param_values`): `Promise`\<`any`\>
+```ts { .no-language }
+execAsyncFunction(code, param_names, param_values): Promise<any>
+```
 
 Ejecuta código JavaScript dentro de una función async.
 
@@ -272,13 +319,16 @@ Ejecuta código JavaScript dentro de una función async.
 
 #### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
+
 
 Resultado de la función.
 
 ### hexToRgbA()
 
-> **hexToRgbA**(`hex`, `opacity`): `string`
+```ts { .no-language }
+hexToRgbA(hex, opacity): string
+```
 
 Convierte un color hex a rgba.
 
@@ -287,17 +337,20 @@ Convierte un color hex a rgba.
 | Parámetro | Tipo | Descripción |
 | --------- | ----- | ----------- |
 | `hex` | `any` | Color hexadecimal |
-| `opacity` | `any` | Opacidad (0–1) |
+| `opacity` | `any` | Opacidad (0â€“1) |
 
 #### Devuelve
 
 `string`
 
+
 Color rgba.
 
 ### getB64MIME()
 
-> **getB64MIME**(`b64`): `string`
+```ts { .no-language }
+getB64MIME(b64): string
+```
 
 Obtiene el tipo MIME de un Base64.
 
@@ -311,11 +364,14 @@ Obtiene el tipo MIME de un Base64.
 
 `string`
 
+
 Tipo MIME.
 
 ### getMIMEtype()
 
-> **getMIMEtype**(`fileName`): `any`
+```ts { .no-language }
+getMIMEtype(fileName): any
+```
 
 Obtiene el tipo MIME según la extensión del archivo.
 
@@ -329,11 +385,14 @@ Obtiene el tipo MIME según la extensión del archivo.
 
 `any`
 
+
 Tipo MIME.
 
 ### createNotification()
 
-> **createNotification**(`options`): `void`
+```ts { .no-language }
+createNotification(options): void
+```
 
 Crea una notificación.
 
@@ -347,9 +406,12 @@ Crea una notificación.
 
 `void`
 
+
 ### createNotificationWithEvent()
 
-> **createNotificationWithEvent**(`options`, `callBack`): `void`
+```ts { .no-language }
+createNotificationWithEvent(options, callBack): void
+```
 
 Crea una notificación que ejecuta un callback cuando se realiza una acción.
 
@@ -364,9 +426,12 @@ Crea una notificación que ejecuta un callback cuando se realiza una acción.
 
 `void`
 
+
 ### openFile()
 
-> **openFile**(`uri`, `MIME`): `void`
+```ts { .no-language }
+openFile(uri, MIME): void
+```
 
 Muestra un modal para abrir un archivo.
 
@@ -381,9 +446,12 @@ Muestra un modal para abrir un archivo.
 
 `void`
 
+
 ### downloadByUrlNavigator()
 
-> **downloadByUrlNavigator**(`url`, `file_name`): `void`
+```ts { .no-language }
+downloadByUrlNavigator(url, file_name): void
+```
 
 Descarga un archivo desde una URL (solo navegador).
 
@@ -398,9 +466,12 @@ Descarga un archivo desde una URL (solo navegador).
 
 `void`
 
+
 ### downloadByUrlPhone()
 
-> **downloadByUrlPhone**(`url`, `file_name`): `Promise`\<`unknown`\>
+```ts { .no-language }
+downloadByUrlPhone(url, file_name): Promise<unknown>
+```
 
 Descarga un archivo desde una URL (solo teléfono).
 
@@ -413,13 +484,16 @@ Descarga un archivo desde una URL (solo teléfono).
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 URI del archivo descargado.
 
 ### downloadByB64Phone()
 
-> **downloadByB64Phone**(`b64`, `file_name`): `Promise`\<`unknown`\>
+```ts { .no-language }
+downloadByB64Phone(b64, file_name): Promise<unknown>
+```
 
 Descarga un archivo desde Base64 (solo teléfono).
 
@@ -432,13 +506,16 @@ Descarga un archivo desde Base64 (solo teléfono).
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 URI del archivo descargado.
 
 ### downloadByB64Navigator()
 
-> **downloadByB64Navigator**(`b64`, `fileName`): `void`
+```ts { .no-language }
+downloadByB64Navigator(b64, fileName): void
+```
 
 Descarga un archivo desde Base64 (solo navegador).
 
@@ -453,9 +530,12 @@ Descarga un archivo desde Base64 (solo navegador).
 
 `void`
 
+
 ### share()
 
-> **share**(`options`): `Promise`\<`void`\>
+```ts { .no-language }
+share(options): Promise<void>
+```
 
 Comparte un mensaje, archivo o URL usando el widget nativo.
 
@@ -467,23 +547,29 @@ Comparte un mensaje, archivo o URL usando el widget nativo.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ### getNextSevenDates()
 
-> **getNextSevenDates**(): `String`[]
+```ts { .no-language }
+getNextSevenDates(): String[]
+```
 
 Obtiene las próximas siete fechas en formato `YYYY/MM/DD`.
 
 #### Devuelve
 
-`String`[]
+`String[]`
+
 
 Array con fechas.
 
 ### getPing()
 
-> **getPing**(`timeout`): `Promise`\<`number`\>
+```ts { .no-language }
+getPing(timeout): Promise<number>
+```
 
 Hace ping al servidor y devuelve el tiempo en ms.
 
@@ -495,13 +581,16 @@ Hace ping al servidor y devuelve el tiempo en ms.
 
 #### Devuelve
 
-`Promise`\<`number`\>
+`Promise<number>`
+
 
 Tiempo en milisegundos.
 
 ### getTableFields()
 
-> **getTableFields**(`table_name`): `Promise`\<`string`[]\>
+```ts { .no-language }
+getTableFields(table_name): Promise<string[]>
+```
 
 Obtiene los campos de una tabla.
 
@@ -513,13 +602,16 @@ Obtiene los campos de una tabla.
 
 #### Devuelve
 
-`Promise`\<`string`[]\>
+`Promise<string[]>`
+
 
 Lista de campos.
 
 ### getTableFieldsConfig()
 
-> **getTableFieldsConfig**(`table_name`): `Promise`\<[`fieldConfig`](types.md#fieldconfig)[]\>
+```ts { .no-language }
+getTableFieldsConfig(table_name): Promise<[fieldConfig](types.md#fieldconfig)[]>
+```
 
 Obtiene la configuración de los campos de una tabla.
 
@@ -531,23 +623,29 @@ Obtiene la configuración de los campos de una tabla.
 
 #### Devuelve
 
-`Promise`\<[`fieldConfig`](types.md#fieldconfig)[]\>
+`Promise<[fieldConfig](types.md#fieldconfig)[]>`
+
 
 Array con FieldName y FieldType.
 
 ### sendErrorsLogs()
 
-> **sendErrorsLogs**(): `Promise`\<`void`\>
+```ts { .no-language }
+sendErrorsLogs(): Promise<void>
+```
 
-Envía un correo con los registros de error.
+Enví­a un correo con los registros de error.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ### getOSVersion()
 
-> **getOSVersion**(): `string`
+```ts { .no-language }
+getOSVersion(): string
+```
 
 Obtiene la versión del sistema operativo.
 
@@ -555,23 +653,29 @@ Obtiene la versión del sistema operativo.
 
 `string`
 
+
 La versión del SO o mensajes alternativos.
 
 ### hasChangesPending()
 
-> **hasChangesPending**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+hasChangesPending(): Promise<boolean>
+```
 
 Comprueba si hay cambios pendientes por sincronizar.
 
 #### Devuelve
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
+
 
 True si hay cambios, false si no.
 
 ### isSimilar()
 
-> **isSimilar**(`text_1`, `text_2`, `isUrl`): `boolean`
+```ts { .no-language }
+isSimilar(text_1, text_2, isUrl): boolean
+```
 
 Compara dos cadenas y devuelve si son similares.
 
@@ -587,11 +691,14 @@ Compara dos cadenas y devuelve si son similares.
 
 `boolean`
 
+
 True si son similares.
 
 ### showLoading()
 
-> **showLoading**(`message?`): `Promise`\<`HTMLIonLoadingElement`\>
+```ts { .no-language }
+showLoading(message?): Promise<HTMLIonLoadingElement>
+```
 
 Muestra un modal de carga.
 
@@ -603,30 +710,36 @@ Muestra un modal de carga.
 
 #### Devuelve
 
-`Promise`\<`HTMLIonLoadingElement`\>
+`Promise<HTMLIonLoadingElement>`
+
 
 ### splitArray()
 
-> **splitArray**(`array`, `split_size`): `any`[]
+```ts { .no-language }
+splitArray(array, split_size): any[]
+```
 
-Divide un array en partes más pequeñas.
+Divide un array en partes más pequeí±as.
 
 #### Parámetros
 
 | Parámetro | Tipo | Valor por defecto | Descripción |
 | --------- | ----- | ---------------- | ----------- |
 | `array` | `any`[] | `undefined` | Array a dividir |
-| `split_size` | `number` | `500` | Tamaño de cada parte |
+| `split_size` | `number` | `500` | Tamaí±o de cada parte |
 
 #### Devuelve
 
-`any`[]
+`any[]`
+
 
 Array de arrays.
 
 ### generateQR()
 
-> **generateQR**(`text`, `size`): `string`
+```ts { .no-language }
+generateQR(text, size): string
+```
 
 Genera un código QR y lo devuelve como Base64.
 
@@ -635,17 +748,20 @@ Genera un código QR y lo devuelve como Base64.
 | Parámetro | Tipo | Valor por defecto | Descripción |
 | --------- | ----- | ---------------- | ----------- |
 | `text` | `any` | `undefined` | Texto a codificar |
-| `size` | `number` | `400` | Tamaño en píxeles |
+| `size` | `number` | `400` | Tamaí±o en pí­xeles |
 
 #### Devuelve
 
 `string`
 
+
 Data URL del QR.
 
 ### showQR()
 
-> **showQR**(`text`): `Promise`\<`void`\>
+```ts { .no-language }
+showQR(text): Promise<void>
+```
 
 Muestra un código QR en un modal.
 
@@ -657,11 +773,14 @@ Muestra un código QR en un modal.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ### getCurrentTime()
 
-> **getCurrentTime**(`showSeconds`): `string`
+```ts { .no-language }
+getCurrentTime(showSeconds): string
+```
 
 Obtiene la hora actual en formato `HH:mm` o `HH:mm:ss`.
 
@@ -674,5 +793,6 @@ Obtiene la hora actual en formato `HH:mm` o `HH:mm:ss`.
 #### Devuelve
 
 `string`
+
 
 Hora actual.

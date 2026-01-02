@@ -1,4 +1,4 @@
-# Navegación online
+﻿# Navegación online
 
 La navegación online permite ir a las páginas online de **flexygo** incluidas en la app móvil.  
 Esta sección contiene un conjunto de funcionalidades para navegar en flexygo online: ir a home, listados, edición, vista, inserción, reports y URLs externas.
@@ -7,7 +7,9 @@ Esta sección contiene un conjunto de funcionalidades para navegar en flexygo on
 
 ### goHome()
 
-> **goHome**(): `void`
+```ts { .no-language }
+goHome(): void
+```
 
 Navega a la página de inicio.
 
@@ -15,11 +17,14 @@ Navega a la página de inicio.
 
 `void`
 
+
 ---
 
 ### goList()
 
-> **goList**(`objectName`, `navigateFun?`, `defaults?`, `objectWhere?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goList(objectName, navigateFun?, defaults?, objectWhere?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navega a la página de lista del objeto indicado.
 
@@ -27,23 +32,26 @@ Navega a la página de lista del objeto indicado.
 
 | Parámetro | Tipo | Valor por defecto | Descripción |
 |----------|--------|------------------|-------------|
-| `objectName` | `string` | — | Nombre del objeto a listar. |
+| `objectName` | `string` | â€” | Nombre del objeto a listar. |
 | `navigateFun?` | `string` | `'openpage'` | Función de navegación a usar. |
-| `defaults?` | `string` | — | Valores por defecto a pasar a la página. |
-| `objectWhere?` | `string` | — | Filtro WHERE. |
-| `filterValues?` | `string` | — | Valores de filtro adicionales. |
-| `pageName?` | `string` | — | Nombre de la página específica. |
-| `hideMenuBar?` | `boolean` | — | Ocultar la barra de menú. |
+| `defaults?` | `string` | â€” | Valores por defecto a pasar a la página. |
+| `objectWhere?` | `string` | â€” | Filtro WHERE. |
+| `filterValues?` | `string` | â€” | Valores de filtro adicionales. |
+| `pageName?` | `string` | â€” | Nombre de la página especí­fica. |
+| `hideMenuBar?` | `boolean` | â€” | Ocultar la barra de menú. |
 
 #### Devuelve
 
 `void`
 
+
 ---
 
 ### goEdit()
 
-> **goEdit**(`objectName`, `objectWhere`, `navigateFun?`, `defaults?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goEdit(objectName, objectWhere, navigateFun?, defaults?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navega a una página de edición del objeto indicado.
 
@@ -51,23 +59,26 @@ Navega a una página de edición del objeto indicado.
 
 | Parámetro | Tipo | Valor por defecto | Descripción |
 |----------|--------|------------------|-------------|
-| `objectName` | `string` | — | Nombre del objeto. |
-| `objectWhere` | `string` | — | WHERE para identificar el registro. |
+| `objectName` | `string` | â€” | Nombre del objeto. |
+| `objectWhere` | `string` | â€” | WHERE para identificar el registro. |
 | `navigateFun?` | `string` | `'openpage'` | Función de navegación. |
-| `defaults?` | `string` | — | Valores por defecto. |
-| `filterValues?` | `string` | — | Valores de filtro. |
-| `pageName?` | `string` | — | Nombre de la página. |
-| `hideMenuBar?` | `boolean` | — | Ocultar la barra de menú. |
+| `defaults?` | `string` | â€” | Valores por defecto. |
+| `filterValues?` | `string` | â€” | Valores de filtro. |
+| `pageName?` | `string` | â€” | Nombre de la página. |
+| `hideMenuBar?` | `boolean` | â€” | Ocultar la barra de menú. |
 
 #### Devuelve
 
 `void`
 
+
 ---
 
 ### goView()
 
-> **goView**(`objectName`, `objectWhere`, `navigateFun?`, `defaults?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goView(objectName, objectWhere, navigateFun?, defaults?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navega a una página de vista del objeto indicado.
 
@@ -75,13 +86,16 @@ Navega a una página de vista del objeto indicado.
 
 `void`
 
+
 *(Parámetros idénticos a goEdit, excepto que es para ver un registro.)*
 
 ---
 
 ### goInsert()
 
-> **goInsert**(`objectName`, `navigateFun?`, `defaults?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goInsert(objectName, navigateFun?, defaults?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navega a la página de inserción del objeto.
 
@@ -89,11 +103,14 @@ Navega a la página de inserción del objeto.
 
 `void`
 
+
 ---
 
 ### goReport()
 
-> **goReport**(`reportName`, `objectName`, `objectWhere`): `void`
+```ts { .no-language }
+goReport(reportName, objectName, objectWhere): void
+```
 
 Navega a una página de report del objeto indicado.
 
@@ -109,23 +126,29 @@ Navega a una página de report del objeto indicado.
 
 `void`
 
+
 ---
 
 ### goPage()
 
-> **goPage**(`pageTypeId`, `objectName`, `navigateFun?`, `defaults?`, `objectWhere?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `Promise`\<`void`\>
+```ts { .no-language }
+goPage(pageTypeId, objectName, navigateFun?, defaults?, objectWhere?, filterValues?, pageName?, hideMenuBar?): Promise<void>
+```
 
 Navegación genérica a cualquier tipo de página.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ---
 
 ### goExternalURL()
 
-> **goExternalURL**(`url`): `Promise`\<`void`\>
+```ts { .no-language }
+goExternalURL(url): Promise<void>
+```
 
 Navega a una URL externa a flexygo.
 
@@ -137,4 +160,5 @@ Navega a una URL externa a flexygo.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+

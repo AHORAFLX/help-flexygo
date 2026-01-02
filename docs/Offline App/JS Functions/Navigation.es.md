@@ -1,18 +1,20 @@
-# Navegación
+﻿# Navegación
 
 Esta sección recopila funciones relacionadas con la navegación que pueden usarse en distintas partes de la aplicación.  
 Incluye funcionalidades para navegar entre páginas, abrir modales y gestionar la navegación hacia atrás.
 
 Es importante distinguir entre las funciones `go` y `transfer`:
 
-- **go** → Navega a una nueva página *añadiéndola al historial*, permitiendo volver atrás.  
+- **go** → Navega a una nueva página *aí±adiéndola al historial*, permitiendo volver atrás.  
 - **transfer** → Navega a una nueva página *reemplazando la actual*, impidiendo volver atrás.
 
 ## Funciones
 
 ### goBack()
 
-> **goBack**(`current?`): `void`
+```ts { .no-language }
+goBack(current?): void
+```
 
 Gestiona la navegación hacia atrás.  
 Si hay un modal abierto, lo cierra; de lo contrario, retrocede en el historial del router.
@@ -27,11 +29,14 @@ Si hay un modal abierto, lo cierra; de lo contrario, retrocede en el historial d
 
 `void`
 
+
 ---
 
 ### closeModal()
 
-> **closeModal**(`current?`, `data?`): `void`
+```ts { .no-language }
+closeModal(current?, data?): void
+```
 
 Cierra el modal abierto.  
 Si se especifica un elemento, se cierra el modal asociado a dicho elemento.
@@ -47,11 +52,14 @@ Si se especifica un elemento, se cierra el modal asociado a dicho elemento.
 
 `void`
 
+
 ---
 
 ### goHome()
 
-> **goHome**(): `void`
+```ts { .no-language }
+goHome(): void
+```
 
 Navega a la página de inicio y reinicia el historial de navegación.
 
@@ -59,11 +67,14 @@ Navega a la página de inicio y reinicia el historial de navegación.
 
 `void`
 
+
 ---
 
 ### goSync()
 
-> **goSync**(): `void`
+```ts { .no-language }
+goSync(): void
+```
 
 Navega a la página de sincronización, reiniciando el historial.
 
@@ -71,11 +82,14 @@ Navega a la página de sincronización, reiniciando el historial.
 
 `void`
 
+
 ---
 
 ### goLogin()
 
-> **goLogin**(`force_login?`): `void`
+```ts { .no-language }
+goLogin(force_login?): void
+```
 
 Navega a la página de login, reiniciando el historial.
 
@@ -89,11 +103,14 @@ Navega a la página de login, reiniciando el historial.
 
 `void`
 
+
 ---
 
 ### goList()
 
-> **goList**(`object`, `pagename`, `filter?`, `defaults?`): `void`
+```ts { .no-language }
+goList(object, pagename, filter?, defaults?): void
+```
 
 Navega a la lista del objeto y página especificados.
 
@@ -110,11 +127,14 @@ Navega a la lista del objeto y página especificados.
 
 `void`
 
+
 ---
 
 ### goEdit()
 
-> **goEdit**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+goEdit(object, pagename, filter, defaults?): void
+```
 
 Navega a la página de edición del objeto especificado.
 
@@ -131,11 +151,14 @@ Navega a la página de edición del objeto especificado.
 
 `void`
 
+
 ---
 
 ### goView()
 
-> **goView**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+goView(object, pagename, filter, defaults?): void
+```
 
 Navega a la página de visualización del objeto especificado.
 
@@ -143,7 +166,9 @@ Navega a la página de visualización del objeto especificado.
 
 ### goInsert()
 
-> **goInsert**(`object`, `pagename`, `defaults?`): `void`
+```ts { .no-language }
+goInsert(object, pagename, defaults?): void
+```
 
 Navega a la página de inserción de un nuevo registro.
 
@@ -151,15 +176,19 @@ Navega a la página de inserción de un nuevo registro.
 
 ### goGallery()
 
-> **goGallery**(`object`, `objectid`, `defaults?`): `void`
+```ts { .no-language }
+goGallery(object, objectid, defaults?): void
+```
 
-Navega a la galería del objeto.
+Navega a la galerí­a del objeto.
 
 ---
 
 ### goDocuments()
 
-> **goDocuments**(`object`, `objectid`, `defaults?`): `void`
+```ts { .no-language }
+goDocuments(object, objectid, defaults?): void
+```
 
 Navega a los documentos del objeto.
 
@@ -167,7 +196,9 @@ Navega a los documentos del objeto.
 
 ### goAI()
 
-> **goAI**(`setting_id`, `first_message?`, `defaults?`, `is_first_message_by_mic?`): `void`
+```ts { .no-language }
+goAI(setting_id, first_message?, defaults?, is_first_message_by_mic?): void
+```
 
 Abre el asistente de IA con la configuración indicada.
 
@@ -175,7 +206,9 @@ Abre el asistente de IA con la configuración indicada.
 
 ### transferList()
 
-> **transferList**(`object`, `pagename`, `filter?`, `defaults?`): `void`
+```ts { .no-language }
+transferList(object, pagename, filter?, defaults?): void
+```
 
 Navega a la lista **sin permitir volver atrás**.
 
@@ -183,7 +216,9 @@ Navega a la lista **sin permitir volver atrás**.
 
 ### transferEdit()
 
-> **transferEdit**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+transferEdit(object, pagename, filter, defaults?): void
+```
 
 Igual que goEdit pero reemplazando la página actual.
 
@@ -191,7 +226,9 @@ Igual que goEdit pero reemplazando la página actual.
 
 ### transferView()
 
-> **transferView**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+transferView(object, pagename, filter, defaults?): void
+```
 
 Como goView pero sin historial.
 
@@ -199,7 +236,9 @@ Como goView pero sin historial.
 
 ### transferInsert()
 
-> **transferInsert**(`object`, `pagename`, `defaults?`): `void`
+```ts { .no-language }
+transferInsert(object, pagename, defaults?): void
+```
 
 Navega a insertar reemplazando la página actual.
 
@@ -207,15 +246,19 @@ Navega a insertar reemplazando la página actual.
 
 ### transferGallery()
 
-> **transferGallery**(`object`, `objectid`, `defaults?`): `void`
+```ts { .no-language }
+transferGallery(object, objectid, defaults?): void
+```
 
-Navega a galería sin permitir volver.
+Navega a galerí­a sin permitir volver.
 
 ---
 
 ### transferDocuments()
 
-> **transferDocuments**(`object`, `objectid`): `void`
+```ts { .no-language }
+transferDocuments(object, objectid): void
+```
 
 Navega a documentos sin permitir volver.
 
@@ -223,7 +266,9 @@ Navega a documentos sin permitir volver.
 
 ### modalList()
 
-> **modalList**(`object`, `pagename`, `filter?`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalList(object, pagename, filter?, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Abre un modal con una lista.
 
@@ -231,7 +276,9 @@ Abre un modal con una lista.
 
 ### modalEdit()
 
-> **modalEdit**(`object`, `pagename`, `filter`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalEdit(object, pagename, filter, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Abre un modal de edición.
 
@@ -239,7 +286,9 @@ Abre un modal de edición.
 
 ### modalView()
 
-> **modalView**(`object`, `pagename`, `filter`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalView(object, pagename, filter, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Abre un modal de visualización.
 
@@ -247,7 +296,9 @@ Abre un modal de visualización.
 
 ### modalInsert()
 
-> **modalInsert**(`object`, `pagename`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalInsert(object, pagename, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Abre un modal para insertar.
 
@@ -255,7 +306,9 @@ Abre un modal para insertar.
 
 ### goPage()
 
-> **goPage**(`type`, `object`, `pagename`, `filter`, `defaults`, `direction`): `void`
+```ts { .no-language }
+goPage(type, object, pagename, filter, defaults, direction): void
+```
 
 Función genérica de navegación (no recomendada salvo casos avanzados).
 
@@ -263,14 +316,18 @@ Función genérica de navegación (no recomendada salvo casos avanzados).
 
 ### goPageGallDoc()
 
-> **goPageGallDoc**(`type`, `object`, `objectid`, `defaults`, `direction`): `void`
+```ts { .no-language }
+goPageGallDoc(type, object, objectid, defaults, direction): void
+```
 
-Versión genérica para galería y documentos.
+Versión genérica para galerí­a y documentos.
 
 ---
 
 ### currentUrl()
 
-> **currentUrl**(): `string`
+```ts { .no-language }
+currentUrl(): string
+```
 
 Devuelve la URL actual del router.

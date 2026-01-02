@@ -1,4 +1,4 @@
-# Online navigation
+﻿# Online navigation
 
 Online navigation does go to the online flexygo pages of the flexygo that does contain the mobile app.
 This section contains a collection of functionalities for flexygo online navigation.
@@ -8,7 +8,9 @@ It includes methods to navigate to home, list, edit, view, insert pages, reports
 
 ### goHome()
 
-> **goHome**(): `void`
+```ts { .no-language }
+goHome(): void
+```
 
 Navigates to the home page.
 
@@ -20,7 +22,9 @@ Navigates to the home page.
 
 ### goList()
 
-> **goList**(`objectName`, `navigateFun?`, `defaults?`, `objectWhere?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goList(objectName, navigateFun?, defaults?, objectWhere?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navigates to a list page for a specified object.
 
@@ -44,7 +48,9 @@ Navigates to a list page for a specified object.
 
 ### goEdit()
 
-> **goEdit**(`objectName`, `objectWhere`, `navigateFun?`, `defaults?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goEdit(objectName, objectWhere, navigateFun?, defaults?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navigates to an edit page for a specified object.
 
@@ -68,7 +74,9 @@ Navigates to an edit page for a specified object.
 
 ### goView()
 
-> **goView**(`objectName`, `objectWhere`, `navigateFun?`, `defaults?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goView(objectName, objectWhere, navigateFun?, defaults?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navigates to a view page for a specified object.
 
@@ -92,7 +100,9 @@ Navigates to a view page for a specified object.
 
 ### goInsert()
 
-> **goInsert**(`objectName`, `navigateFun?`, `defaults?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `void`
+```ts { .no-language }
+goInsert(objectName, navigateFun?, defaults?, filterValues?, pageName?, hideMenuBar?): void
+```
 
 Navigates to an insert page for a specified object.
 
@@ -115,7 +125,9 @@ Navigates to an insert page for a specified object.
 
 ### goReport()
 
-> **goReport**(`reportName`, `objectName`, `objectWhere`): `void`
+```ts { .no-language }
+goReport(reportName, objectName, objectWhere): void
+```
 
 Navigates to a report page for a specified report and object.
 
@@ -135,7 +147,9 @@ Navigates to a report page for a specified report and object.
 
 ### goPage()
 
-> **goPage**(`pageTypeId`, `objectName`, `navigateFun?`, `defaults?`, `objectWhere?`, `filterValues?`, `pageName?`, `hideMenuBar?`): `Promise`\<`void`\>
+```ts { .no-language }
+goPage(pageTypeId, objectName, navigateFun?, defaults?, objectWhere?, filterValues?, pageName?, hideMenuBar?): Promise<void>
+```
 
 Navigates to a specified page type for a given object with various options.
 
@@ -154,13 +168,15 @@ Navigates to a specified page type for a given object with various options.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 ***
 
 ### goExternalURL()
 
-> **goExternalURL**(`url`): `Promise`\<`void`\>
+```ts { .no-language }
+goExternalURL(url): Promise<void>
+```
 
 Navigates to an URL that is external to flexygo.
 
@@ -172,4 +188,4 @@ Navigates to an URL that is external to flexygo.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`

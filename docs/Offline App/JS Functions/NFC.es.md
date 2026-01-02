@@ -1,4 +1,4 @@
-# NFC
+﻿# NFC
 
 Esta sección contiene un conjunto de funcionalidades relacionadas con operaciones NFC.  
 Incluye métodos para inicializar el lector NFC, comprobar si está activado, leer tags, detener la lectura, convertir bytes a texto y abrir los ajustes NFC del dispositivo.
@@ -7,13 +7,16 @@ Incluye métodos para inicializar el lector NFC, comprobar si está activado, le
 
 ### init()
 
-> **init**(): `Promise`\<`unknown`\>
+```ts { .no-language }
+init(): Promise<unknown>
+```
 
 Inicializa el lector NFC y muestra un modal solicitando al usuario escanear una etiqueta NFC.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 - Promesa que se resuelve cuando se lee una etiqueta NFC.
 
@@ -21,13 +24,16 @@ Inicializa el lector NFC y muestra un modal solicitando al usuario escanear una 
 
 ### isEnabled()
 
-> **isEnabled**(): `Promise`\<`any`\>
+```ts { .no-language }
+isEnabled(): Promise<any>
+```
 
 Comprueba si el NFC está activado en el dispositivo.
 
 #### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
+
 
 - Promesa que devuelve **true** si el NFC está activado, **false** en caso contrario.
 
@@ -35,7 +41,9 @@ Comprueba si el NFC está activado en el dispositivo.
 
 ### bytesToString()
 
-> **bytesToString**(`text`): `string`
+```ts { .no-language }
+bytesToString(text): string
+```
 
 Convierte un array de bytes en un string.
 
@@ -49,19 +57,23 @@ Convierte un array de bytes en un string.
 
 `string`
 
+
 - Cadena resultante de la conversión.
 
 ---
 
 ### showSettings()
 
-> **showSettings**(): `Promise`\<`any`\>
+```ts { .no-language }
+showSettings(): Promise<any>
+```
 
 Abre la pantalla de ajustes NFC del dispositivo.
 
 #### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
+
 
 - Promesa que se resuelve cuando los ajustes se han abierto.
 
@@ -69,10 +81,13 @@ Abre la pantalla de ajustes NFC del dispositivo.
 
 ### paintSetNFCModal()
 
-> **paintSetNFCModal**(): `Promise`\<`void`\>
+```ts { .no-language }
+paintSetNFCModal(): Promise<void>
+```
 
 Muestra el modal para activar NFC.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+

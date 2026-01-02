@@ -1,4 +1,4 @@
-# Forms
+﻿# Forms
 
 This section does only contain save functionality for forms.
 
@@ -6,7 +6,9 @@ This section does only contain save functionality for forms.
 
 ### save()
 
-> **save**(`btn`, `showMessage?`, `goBack?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+save(btn, showMessage?, goBack?): Promise<unknown>
+```
 
 Saves the form data.
 
@@ -20,10 +22,6 @@ Saves the form data.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - A promise that resolves to true if the save was successful.
-
-#### Method
-
-save

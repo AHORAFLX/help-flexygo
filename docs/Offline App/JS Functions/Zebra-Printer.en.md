@@ -1,4 +1,4 @@
-# Zebra Printer
+﻿# Zebra Printer
 
 This section contains a collection of functionalities for Zebra printer operations.
 It includes methods to show available printers, get available printers, print text, get printer status, and enable Bluetooth.
@@ -7,13 +7,15 @@ It includes methods to show available printers, get available printers, print te
 
 ### showAvailablePrinters()
 
-> **showAvailablePrinters**(): `Promise`\<`unknown`\>
+```ts { .no-language }
+showAvailablePrinters(): Promise<unknown>
+```
 
 Shows a modal with the list of available bluetooth printers and returns the mac address of the selected printer.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - A promise that resolves to the mac address of the selected printer.
 
@@ -21,13 +23,15 @@ Shows a modal with the list of available bluetooth printers and returns the mac 
 
 ### getAvailablePrinters()
 
-> **getAvailablePrinters**(): `Promise`\<`BluetoothDevices`[]\>
+```ts { .no-language }
+getAvailablePrinters(): Promise<BluetoothDevices[]>
+```
 
 Gets the list of available bluetooth printers.
 
 #### Returns
 
-`Promise`\<`BluetoothDevices`[]\>
+`Promise<BluetoothDevices[]>`
 
 - A promise that resolves to an array of available [bluetooth printers](https://github.com/Limbertfenixio/capacitor-ble-printer?tab=readme-ov-file#bluetoothdevices).
 
@@ -35,7 +39,9 @@ Gets the list of available bluetooth printers.
 
 ### print()
 
-> **print**(`mac_address`, `text`): `Promise`\<`any`\>
+```ts { .no-language }
+print(mac_address, text): Promise<any>
+```
 
 Prints text to a specified bluetooth printer.
 
@@ -48,7 +54,7 @@ Prints text to a specified bluetooth printer.
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 - A promise that resolves when the print job is sent.
 
@@ -56,7 +62,9 @@ Prints text to a specified bluetooth printer.
 
 ### getStatusOfPrinter()
 
-> **getStatusOfPrinter**(`mac_address`): `Promise`\<`string`\>
+```ts { .no-language }
+getStatusOfPrinter(mac_address): Promise<string>
+```
 
 Gets the status of a specified bluetooth printer.
 
@@ -68,7 +76,7 @@ Gets the status of a specified bluetooth printer.
 
 #### Returns
 
-`Promise`\<`string`\>
+`Promise<string>`
 
 - A promise that resolves to the status of the printer.
 
@@ -76,13 +84,15 @@ Gets the status of a specified bluetooth printer.
 
 ### enableBluetooth()
 
-> **enableBluetooth**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+enableBluetooth(): Promise<boolean>
+```
 
 Enables Bluetooth on the device if it is not already enabled.
 It also checks for necessary permissions and requests them if not granted.
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
 
 - A promise that resolves to true if Bluetooth is enabled and permissions are granted, otherwise false.

@@ -1,12 +1,14 @@
-# Cámara
+﻿# Cámara
 
-Funciones de cámara que permiten hacer fotos, acceder a imágenes de la galería y escanear códigos usando la cámara del dispositivo.
+Funciones de cámara que permiten hacer fotos, acceder a imágenes de la galerí­a y escanear códigos usando la cámara del dispositivo.
 
 ## Funciones
 
 ### scanCode()
 
-> **scanCode**(`options`): `Promise`\<`unknown`\>
+```ts { .no-language }
+scanCode(options): Promise<unknown>
+```
 
 Escanea códigos (diferentes tipos de códigos de barras y QR) utilizando la cámara del dispositivo.
 
@@ -18,7 +20,8 @@ Escanea códigos (diferentes tipos de códigos de barras y QR) utilizando la cá
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 - Devuelve un objeto con el formato del código, el texto y un boolean indicando si se canceló.
 
@@ -30,13 +33,16 @@ scanCode
 
 ### checkCameraPermission()
 
-> **checkCameraPermission**(): `Promise`\<`unknown`\>
+```ts { .no-language }
+checkCameraPermission(): Promise<unknown>
+```
 
 Comprueba los permisos de cámara antes de usarla.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 - Devuelve un boolean indicando si el permiso fue concedido.
 
@@ -44,7 +50,9 @@ Comprueba los permisos de cámara antes de usarla.
 
 ### stopScan()
 
-> **stopScan**(): `void`
+```ts { .no-language }
+stopScan(): void
+```
 
 Detiene el proceso de escaneo.
 
@@ -52,11 +60,14 @@ Detiene el proceso de escaneo.
 
 `void`
 
+
 ***
 
 ### toggleScannerTorch()
 
-> **toggleScannerTorch**(): `void`
+```ts { .no-language }
+toggleScannerTorch(): void
+```
 
 Activa o desactiva la linterna del dispositivo.
 
@@ -64,27 +75,31 @@ Activa o desactiva la linterna del dispositivo.
 
 `void`
 
+
 ***
 
 ### getPicture()
 
-> **getPicture**(`width`, `height`, `quality`, `typeCrop?`, `alternativeCam?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+getPicture(width, height, quality, typeCrop?, alternativeCam?): Promise<unknown>
+```
 
-Realiza una fotografía usando la app de cámara del dispositivo o una implementación alternativa para dispositivos antiguos.
+Realiza una fotografí­a usando la app de cámara del dispositivo o una implementación alternativa para dispositivos antiguos.
 
 #### Parámetros
 
 | Parámetro | Tipo | Valor por defecto | Descripción |
 | ------ | ------ | ------ | ------ |
-| `width` | `number` | `1000` | Anchura en píxeles de la imagen |
-| `height` | `number` | `1000` | Altura en píxeles de la imagen |
-| `quality` | `number` | `50` | Calidad de la imagen (0–100). Un valor menor reduce peso pero comprime más |
+| `width` | `number` | `1000` | Anchura en pí­xeles de la imagen |
+| `height` | `number` | `1000` | Altura en pí­xeles de la imagen |
+| `quality` | `number` | `50` | Calidad de la imagen (0â€“100). Un valor menor reduce peso pero comprime más |
 | `typeCrop?` | `any` | `undefined` | Tipo de recorte (obsoleto, no tiene efecto) |
 | `alternativeCam?` | `boolean` | `false` | Usa una cámara alternativa (solo si hay problemas en móviles muy antiguos) |
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 - Devuelve un string base64 con la imagen capturada.
 
@@ -92,21 +107,24 @@ Realiza una fotografía usando la app de cámara del dispositivo o una implement
 
 ### getGalleryPicture()
 
-> **getGalleryPicture**(`width`, `height`, `quality`): `Promise`\<`any`[]\>
+```ts { .no-language }
+getGalleryPicture(width, height, quality): Promise<any[]>
+```
 
-Solicita al usuario seleccionar imágenes desde la galería del dispositivo.
+Solicita al usuario seleccionar imágenes desde la galerí­a del dispositivo.
 
 #### Parámetros
 
 | Parámetro | Tipo | Valor por defecto | Descripción |
 | ------ | ------ | ------ | ------ |
-| `width` | `number` | `1000` | Anchura en píxeles |
-| `height` | `number` | `1000` | Altura en píxeles |
-| `quality` | `number` | `50` | Calidad de la imagen (0–100) |
+| `width` | `number` | `1000` | Anchura en pí­xeles |
+| `height` | `number` | `1000` | Altura en pí­xeles |
+| `quality` | `number` | `50` | Calidad de la imagen (0â€“100) |
 
 #### Devuelve
 
-`Promise`\<`any`[]\>
+`Promise<any[]>`
+
 
 - Devuelve un array de strings base64 de las imágenes seleccionadas.
 
@@ -114,9 +132,11 @@ Solicita al usuario seleccionar imágenes desde la galería del dispositivo.
 
 ### savePicture()
 
-> **savePicture**(`image`): `Promise`\<`any`\>
+```ts { .no-language }
+savePicture(image): Promise<any>
+```
 
-Guarda una imagen base64 en la base de datos local (tabla flxImages). *No se recomienda su uso salvo en casos muy específicos; normalmente debe usarse la configuración de flx-imagegallery.*
+Guarda una imagen base64 en la base de datos local (tabla flxImages). *No se recomienda su uso salvo en casos muy especí­ficos; normalmente debe usarse la configuración de flx-imagegallery.*
 
 #### Parámetros
 
@@ -126,6 +146,7 @@ Guarda una imagen base64 en la base de datos local (tabla flxImages). *No se rec
 
 #### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
+
 
 - Finaliza cuando la imagen ha sido guardada.

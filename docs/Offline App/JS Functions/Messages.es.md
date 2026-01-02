@@ -1,4 +1,4 @@
-# Mensages
+﻿# Mensages
 
 Esta sección recopila funciones relacionadas con mensajes que pueden utilizarse en distintas partes de la aplicación.  
 Incluye funcionalidades para mostrar errores, advertencias, mensajes de éxito, confirmaciones, prompts y alerts.
@@ -7,7 +7,9 @@ Incluye funcionalidades para mostrar errores, advertencias, mensajes de éxito, 
 
 ### showError()
 
-> **showError**(`err`, `auditable?`, `write_on_console?`): `Promise`\<`void`\>
+```ts { .no-language }
+showError(err, auditable?, write_on_console?): Promise<void>
+```
 
 Muestra un mensaje de error.  
 Si **auditable** es true (por defecto) y el error no es una excepción de campo requerido, se registrará en la base de datos local.
@@ -22,13 +24,16 @@ Si **auditable** es true (por defecto) y el error no es una excepción de campo 
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ---
 
 ### danger()
 
-> **danger**(`msg`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+danger(msg, moreInfo?): Promise<void>
+```
 
 Muestra un toast de tipo *peligro* (error).
 
@@ -41,13 +46,16 @@ Muestra un toast de tipo *peligro* (error).
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ---
 
 ### warning()
 
-> **warning**(`msg`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+warning(msg, moreInfo?): Promise<void>
+```
 
 Muestra un toast de advertencia.
 
@@ -60,13 +68,16 @@ Muestra un toast de advertencia.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ---
 
 ### success()
 
-> **success**(`msg`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+success(msg, moreInfo?): Promise<void>
+```
 
 Muestra un toast de éxito.
 
@@ -79,13 +90,16 @@ Muestra un toast de éxito.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ---
 
 ### generic()
 
-> **generic**(`msg`, `color`, `duration`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+generic(msg, color, duration, moreInfo?): Promise<void>
+```
 
 Muestra un toast genérico con configuración avanzada.
 
@@ -100,13 +114,16 @@ Muestra un toast genérico con configuración avanzada.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 ---
 
 ### confirm()
 
-> **confirm**(`header`, `message`, `css_class?`, `showCancelButton?`, `afterAlertPresent?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+confirm(header, message, css_class?, showCancelButton?, afterAlertPresent?): Promise<unknown>
+```
 
 Muestra un cuadro de confirmación.
 
@@ -122,14 +139,17 @@ Muestra un cuadro de confirmación.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>  
+`Promise<unknown>`
+
 *Resuelve si el usuario confirma, rechaza si cancela.*
 
 ---
 
 ### prompt()
 
-> **prompt**(`header`, `message?`, `default_value?`, `showCancelButton?`, `afterAlertPresent?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+prompt(header, message?, default_value?, showCancelButton?, afterAlertPresent?): Promise<unknown>
+```
 
 Muestra un cuadro de entrada con un único campo.
 
@@ -145,14 +165,17 @@ Muestra un cuadro de entrada con un único campo.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>  
+`Promise<unknown>`
+
 *Resuelve con la entrada del usuario o rechaza si cancela.*
 
 ---
 
 ### prompts()
 
-> **prompts**(`header`, `inputs`, `showCancelButton?`, `afterAlertPresent?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+prompts(header, inputs, showCancelButton?, afterAlertPresent?): Promise<unknown>
+```
 
 Muestra un cuadro de entrada con múltiples campos.
 
@@ -167,13 +190,16 @@ Muestra un cuadro de entrada con múltiples campos.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 ---
 
 ### alert()
 
-> **alert**(`header`, `message`): `HTMLIonAlertElement`
+```ts { .no-language }
+alert(header, message): HTMLIonAlertElement
+```
 
 Muestra un mensaje de alerta con un solo botón **OK**.
 
@@ -187,3 +213,4 @@ Muestra un mensaje de alerta con un solo botón **OK**.
 #### Devuelve
 
 `HTMLIonAlertElement`
+

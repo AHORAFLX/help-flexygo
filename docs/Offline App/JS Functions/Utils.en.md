@@ -1,4 +1,4 @@
-# Utils
+﻿# Utils
 
 This section is a collection of utility functions that can be used in various parts of the application. It contains a wide range of functionalities, 
 from generating unique IDs to handling files, parsing JSON, translating keys, executing dynamic code, and more.
@@ -7,7 +7,9 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 
 ### GUID()
 
-> **GUID**(): `string`
+```ts { .no-language }
+GUID(): string
+```
 
 Generates an unique id
 
@@ -21,7 +23,9 @@ unique name.
 
 ### blobToBase64()
 
-> **blobToBase64**(`blob`): `Promise`\<`unknown`\>
+```ts { .no-language }
+blobToBase64(blob): Promise<unknown>
+```
 
 Converts a Blob to a Base64 string
 
@@ -33,7 +37,7 @@ Converts a Blob to a Base64 string
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 A promise that resolves with the Base64 as a string
 
@@ -41,7 +45,9 @@ A promise that resolves with the Base64 as a string
 
 ### b64toBlob()
 
-> **b64toBlob**(`b64Data`, `contentType`, `sliceSize`): `Blob`
+```ts { .no-language }
+b64toBlob(b64Data, contentType, sliceSize): Blob
+```
 
 Converts a Base64 string to a Blob
 
@@ -63,7 +69,9 @@ The resulting blob
 
 ### urlToB64()
 
-> **urlToB64**(`url`): `Promise`\<`unknown`\>
+```ts { .no-language }
+urlToB64(url): Promise<unknown>
+```
 
 Converts an image URL to a Base64 string
 
@@ -75,7 +83,7 @@ Converts an image URL to a Base64 string
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 A promise that resolves with the Base64 as a string
 
@@ -83,7 +91,9 @@ A promise that resolves with the Base64 as a string
 
 ### b64ToTempFile()
 
-> **b64ToTempFile**(`title`, `base64`): `Promise`\<`WriteFileResult`\>
+```ts { .no-language }
+b64ToTempFile(title, base64): Promise<WriteFileResult>
+```
 
 Saves a Base64 string as a temporary file
 
@@ -96,7 +106,7 @@ Saves a Base64 string as a temporary file
 
 #### Returns
 
-`Promise`\<`WriteFileResult`\>
+`Promise<WriteFileResult>`
 
 A promise that resolves with WriteFileResult that contains the URI of the created file
 
@@ -104,7 +114,9 @@ A promise that resolves with WriteFileResult that contains the URI of the create
 
 ### blobToTempFile()
 
-> **blobToTempFile**(`title`, `blob`): `Promise`\<`string`\>
+```ts { .no-language }
+blobToTempFile(title, blob): Promise<string>
+```
 
 Saves a Blob as a temporary file
 
@@ -117,7 +129,7 @@ Saves a Blob as a temporary file
 
 #### Returns
 
-`Promise`\<`string`\>
+`Promise<string>`
 
 A promise that resolves with WriteFileResult that contains the URI of the created file
 
@@ -125,7 +137,9 @@ A promise that resolves with WriteFileResult that contains the URI of the create
 
 ### urlToBlob()
 
-> **urlToBlob**(`url`): `Promise`\<`unknown`\>
+```ts { .no-language }
+urlToBlob(url): Promise<unknown>
+```
 
 Converts an image URL to a Blob
 
@@ -137,7 +151,7 @@ Converts an image URL to a Blob
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 A promise that resolves with the Blob
 
@@ -145,7 +159,9 @@ A promise that resolves with the Blob
 
 ### parseJSON()
 
-> **parseJSON**(`json`): `any`
+```ts { .no-language }
+parseJSON(json): any
+```
 
 Parses a JSON string that may have unquoted keys
 
@@ -165,7 +181,9 @@ The resulting object
 
 ### getFirstRow()
 
-> **getFirstRow**(`objectName`): `Promise`\<`any`\>
+```ts { .no-language }
+getFirstRow(objectName): Promise<any>
+```
 
 Gets the filter needed to select the first row of an object
 
@@ -177,7 +195,7 @@ Gets the filter needed to select the first row of an object
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 A promise that resolves with a filter string of the needed to select the first row
 
@@ -185,7 +203,9 @@ A promise that resolves with a filter string of the needed to select the first r
 
 ### getPrimaryKeysFilter()
 
-> **getPrimaryKeysFilter**(`object`, `row`): `string`
+```ts { .no-language }
+getPrimaryKeysFilter(object, row): string
+```
 
 Gets a filter string with the primary keys and values of a row
 
@@ -206,7 +226,9 @@ A filter string with the primary keys and values of the row
 
 ### currentDate()
 
-> **currentDate**(): `string`
+```ts { .no-language }
+currentDate(): string
+```
 
 Gets the current date in 'YYYY-MM-DD' format
 
@@ -220,7 +242,9 @@ The current date in 'YYYY-MM-DD' format
 
 ### currentDateTime()
 
-> **currentDateTime**(): `string`
+```ts { .no-language }
+currentDateTime(): string
+```
 
 Gets the current date and time in 'YYYY-MM-DDTHH:mm:ss' format
 
@@ -234,7 +258,9 @@ The current date and time in 'YYYY-MM-DDTHH:mm:ss' format
 
 ### currentTime()
 
-> **currentTime**(): `string`
+```ts { .no-language }
+currentTime(): string
+```
 
 Gets the current time in 'HH:mm' format
 
@@ -248,7 +274,9 @@ The current time in 'HH:mm' format
 
 ### translate()
 
-> **translate**(`key`, `deviceLanguage`): `string`
+```ts { .no-language }
+translate(key, deviceLanguage): string
+```
 
 Translates a key to the current culture or the device one
 
@@ -269,7 +297,9 @@ The translated string or the key if not found
 
 ### execDynamicCode()
 
-> **execDynamicCode**(`code`): `any`
+```ts { .no-language }
+execDynamicCode(code): any
+```
 
 Executes an string as JavaScript code
 
@@ -285,15 +315,13 @@ Executes an string as JavaScript code
 
 The result of the executed code
 
-#### Method
-
-execDynamicCode
-
 ***
 
 ### execAsyncFunction()
 
-> **execAsyncFunction**(`code`, `param_names`, `param_values`): `Promise`\<`any`\>
+```ts { .no-language }
+execAsyncFunction(code, param_names, param_values): Promise<any>
+```
 
 Executes an string as JavaScript code inside a function, doing so async functions can get used
 
@@ -307,7 +335,7 @@ Executes an string as JavaScript code inside a function, doing so async function
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 A promise that resolves with the result of the function
 
@@ -315,7 +343,9 @@ A promise that resolves with the result of the function
 
 ### hexToRgbA()
 
-> **hexToRgbA**(`hex`, `opacity`): `string`
+```ts { .no-language }
+hexToRgbA(hex, opacity): string
+```
 
 Converts a hex color to an rgba one
 
@@ -336,7 +366,9 @@ The resulting rgba color (e.g. 'rgba(255,0,0,0.5)')
 
 ### getB64MIME()
 
-> **getB64MIME**(`b64`): `string`
+```ts { .no-language }
+getB64MIME(b64): string
+```
 
 Gets the MIME type of a Base64 string
 
@@ -356,7 +388,9 @@ The MIME type
 
 ### getMIMEtype()
 
-> **getMIMEtype**(`fileName`): `any`
+```ts { .no-language }
+getMIMEtype(fileName): any
+```
 
 Gets the MIME type of a file by its extension
 
@@ -376,7 +410,9 @@ The MIME type
 
 ### createNotification()
 
-> **createNotification**(`options`): `void`
+```ts { .no-language }
+createNotification(options): void
+```
 
 Creates a notification
 
@@ -394,7 +430,9 @@ Creates a notification
 
 ### createNotificationWithEvent()
 
-> **createNotificationWithEvent**(`options`, `callBack`): `void`
+```ts { .no-language }
+createNotificationWithEvent(options, callBack): void
+```
 
 Creates a notification that will trigger a callback when an [action is perfomed](https://capacitorjs.com/docs/apis/local-notifications#addlistenerlocalnotificationactionperformed-)
 
@@ -413,7 +451,9 @@ Creates a notification that will trigger a callback when an [action is perfomed]
 
 ### openFile()
 
-> **openFile**(`uri`, `MIME`): `void`
+```ts { .no-language }
+openFile(uri, MIME): void
+```
 
 Shows a modal to open a file
 
@@ -432,7 +472,9 @@ Shows a modal to open a file
 
 ### downloadByUrlNavigator()
 
-> **downloadByUrlNavigator**(`url`, `file_name`): `void`
+```ts { .no-language }
+downloadByUrlNavigator(url, file_name): void
+```
 
 Given an URL, downloads the file (only when running in a browser)
 
@@ -451,7 +493,9 @@ Given an URL, downloads the file (only when running in a browser)
 
 ### downloadByUrlPhone()
 
-> **downloadByUrlPhone**(`url`, `file_name`): `Promise`\<`unknown`\>
+```ts { .no-language }
+downloadByUrlPhone(url, file_name): Promise<unknown>
+```
 
 Given an URL, downloads the file (only when running in a phone)
 
@@ -464,7 +508,7 @@ Given an URL, downloads the file (only when running in a phone)
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 A promise that resolves with the URI of the downloaded file
 
@@ -472,7 +516,9 @@ A promise that resolves with the URI of the downloaded file
 
 ### downloadByB64Phone()
 
-> **downloadByB64Phone**(`b64`, `file_name`): `Promise`\<`unknown`\>
+```ts { .no-language }
+downloadByB64Phone(b64, file_name): Promise<unknown>
+```
 
 Given a Base64 string, downloads the file (only when running in a phone)
 
@@ -485,7 +531,7 @@ Given a Base64 string, downloads the file (only when running in a phone)
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 A promise that resolves with the URI of the downloaded file
 
@@ -493,7 +539,9 @@ A promise that resolves with the URI of the downloaded file
 
 ### downloadByB64Navigator()
 
-> **downloadByB64Navigator**(`b64`, `fileName`): `void`
+```ts { .no-language }
+downloadByB64Navigator(b64, fileName): void
+```
 
 Given a Base64 string, downloads the file (only when running in a browser)
 
@@ -512,7 +560,9 @@ Given a Base64 string, downloads the file (only when running in a browser)
 
 ### share()
 
-> **share**(`options`): `Promise`\<`void`\>
+```ts { .no-language }
+share(options): Promise<void>
+```
 
 Shares a message, file or URL using the native share widget
 
@@ -524,19 +574,21 @@ Shares a message, file or URL using the native share widget
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 ***
 
 ### getNextSevenDates()
 
-> **getNextSevenDates**(): `String`[]
+```ts { .no-language }
+getNextSevenDates(): String[]
+```
 
 Gets the next seven dates starting from today in 'YYYY/MM/DD' format
 
 #### Returns
 
-`String`[]
+`String[]`
 
 An array with the next seven dates in 'YYYY/MM/DD' format
 
@@ -544,7 +596,9 @@ An array with the next seven dates in 'YYYY/MM/DD' format
 
 ### getPing()
 
-> **getPing**(`timeout`): `Promise`\<`number`\>
+```ts { .no-language }
+getPing(timeout): Promise<number>
+```
 
 Pings the server and returns the time it took to reachin milliseconds
 
@@ -556,7 +610,7 @@ Pings the server and returns the time it took to reachin milliseconds
 
 #### Returns
 
-`Promise`\<`number`\>
+`Promise<number>`
 
 A promise that resolves with the time it took in milliseconds
 
@@ -564,7 +618,9 @@ A promise that resolves with the time it took in milliseconds
 
 ### getTableFields()
 
-> **getTableFields**(`table_name`): `Promise`\<`string`[]\>
+```ts { .no-language }
+getTableFields(table_name): Promise<string[]>
+```
 
 Gets the fields of a table
 
@@ -576,7 +632,7 @@ Gets the fields of a table
 
 #### Returns
 
-`Promise`\<`string`[]\>
+`Promise<string[]>`
 
 A promise that resolves with an array the table fields in string format
 
@@ -584,7 +640,9 @@ A promise that resolves with an array the table fields in string format
 
 ### getTableFieldsConfig()
 
-> **getTableFieldsConfig**(`table_name`): `Promise`\<[`fieldConfig`](types.md#fieldconfig)[]\>
+```ts { .no-language }
+getTableFieldsConfig(table_name): Promise<[fieldConfig](types.md#fieldconfig)[]>
+```
 
 Gets the configuration of the fields of a table
 
@@ -596,7 +654,7 @@ Gets the configuration of the fields of a table
 
 #### Returns
 
-`Promise`\<[`fieldConfig`](types.md#fieldconfig)[]\>
+`Promise<[fieldConfig](types.md#fieldconfig)[]>`
 
 A promise that resolves with an array the table fields with its FieldName and FieldType
 
@@ -604,19 +662,23 @@ A promise that resolves with an array the table fields with its FieldName and Fi
 
 ### sendErrorsLogs()
 
-> **sendErrorsLogs**(): `Promise`\<`void`\>
+```ts { .no-language }
+sendErrorsLogs(): Promise<void>
+```
 
 Sends an email with all the error logs
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 ***
 
 ### getOSVersion()
 
-> **getOSVersion**(): `string`
+```ts { .no-language }
+getOSVersion(): string
+```
 
 Gets the OS version
 
@@ -630,13 +692,15 @@ The OS version or 'Emulator' if not running in a device or 'OS unrecognized' if 
 
 ### hasChangesPending()
 
-> **hasChangesPending**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+hasChangesPending(): Promise<boolean>
+```
 
 Checks if there are any changes pending to be synced
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
 
 A promise that resolves with true if there are changes pending or false if not
 
@@ -644,7 +708,9 @@ A promise that resolves with true if there are changes pending or false if not
 
 ### isSimilar()
 
-> **isSimilar**(`text_1`, `text_2`, `isUrl`): `boolean`
+```ts { .no-language }
+isSimilar(text_1, text_2, isUrl): boolean
+```
 
 Compares two strings and returns true if they are similar (just ignoring leading and trailing spaces and case, and protocol if isUrl is true)
 
@@ -666,7 +732,9 @@ True if the strings are similar, false if not
 
 ### showLoading()
 
-> **showLoading**(`message?`): `Promise`\<`HTMLIonLoadingElement`\>
+```ts { .no-language }
+showLoading(message?): Promise<HTMLIonLoadingElement>
+```
 
 Shows a loading modal
 
@@ -678,7 +746,7 @@ Shows a loading modal
 
 #### Returns
 
-`Promise`\<`HTMLIonLoadingElement`\>
+`Promise<HTMLIonLoadingElement>`
 
 A promise that resolves with the loading element
 
@@ -686,7 +754,9 @@ A promise that resolves with the loading element
 
 ### splitArray()
 
-> **splitArray**(`array`, `split_size`): `any`[]
+```ts { .no-language }
+splitArray(array, split_size): any[]
+```
 
 Splits an array into smaller arrays of a given size
 
@@ -699,7 +769,7 @@ Splits an array into smaller arrays of a given size
 
 #### Returns
 
-`any`[]
+`any[]`
 
 An array of smaller arrays
 
@@ -707,7 +777,9 @@ An array of smaller arrays
 
 ### generateQR()
 
-> **generateQR**(`text`, `size`): `string`
+```ts { .no-language }
+generateQR(text, size): string
+```
 
 Creates a QR code and returns it as a base64
 
@@ -728,7 +800,9 @@ The data URL of the generated QR code
 
 ### showQR()
 
-> **showQR**(`text`): `Promise`\<`void`\>
+```ts { .no-language }
+showQR(text): Promise<void>
+```
 
 Shows a QR code in a modal
 
@@ -740,7 +814,7 @@ Shows a QR code in a modal
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 A promise that resolves when the modal is dismissed
 
@@ -748,7 +822,9 @@ A promise that resolves when the modal is dismissed
 
 ### getCurrentTime()
 
-> **getCurrentTime**(`showSeconds`): `string`
+```ts { .no-language }
+getCurrentTime(showSeconds): string
+```
 
 Gets the current time in 'HH:mm' format or 'HH:mm:ss' if showSeconds is true
 

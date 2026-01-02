@@ -1,4 +1,4 @@
-# Parser
+﻿# Parser
 
 This section contains a collection of functionalities for parsing and compiling templates.
 
@@ -6,7 +6,9 @@ This section contains a collection of functionalities for parsing and compiling 
 
 ### recursiveCompile()
 
-> **recursiveCompile**(`json`, `template`, `conf`, `contextFunctions?`, `lastTemplate?`, `AddTimeZone?`): `Promise`\<`string`\>
+```ts { .no-language }
+recursiveCompile(json, template, conf, contextFunctions?, lastTemplate?, AddTimeZone?): Promise<string>
+```
 
 Recursively compiles a template string by replacing markers with corresponding values from a JSON object and context vars.
 
@@ -23,7 +25,7 @@ Recursively compiles a template string by replacing markers with corresponding v
 
 #### Returns
 
-`Promise`\<`string`\>
+`Promise<string>`
 
 - A promise that resolves to the compiled template string.
 
@@ -31,7 +33,9 @@ Recursively compiles a template string by replacing markers with corresponding v
 
 ### compile()
 
-> **compile**(`json`, `template`, `files`, `contextFunctions?`, `AddTimeZone?`): `Promise`\<`string`\>
+```ts { .no-language }
+compile(json, template, files, contextFunctions?, AddTimeZone?): Promise<string>
+```
 
 Compiles a template string by replacing markers with corresponding values from a JSON object and context vars.
 
@@ -47,7 +51,7 @@ Compiles a template string by replacing markers with corresponding values from a
 
 #### Returns
 
-`Promise`\<`string`\>
+`Promise<string>`
 
 - A promise that resolves to the compiled template string.
 
@@ -55,7 +59,9 @@ Compiles a template string by replacing markers with corresponding values from a
 
 ### findTemplate()
 
-> **findTemplate**(`object`, `typeId`, `pageName`): [`PageConfig`](types.md#pageconfig)
+```ts { .no-language }
+findTemplate(object, typeId, pageName): [PageConfig](types.md#pageconfig)
+```
 
 Given an object, the template type and the pagename it returns the proper template.
 
@@ -69,7 +75,7 @@ Given an object, the template type and the pagename it returns the proper templa
 
 #### Returns
 
-[`PageConfig`](types.md#pageconfig)
+`[PageConfig](types.md#pageconfig)`
 
 - The matching page configuration or null if not found.
 
@@ -77,7 +83,9 @@ Given an object, the template type and the pagename it returns the proper templa
 
 ### replaceAll()
 
-> **replaceAll**(`text`, `text_to_find`, `replace_text`): `any`
+```ts { .no-language }
+replaceAll(text, text_to_find, replace_text): any
+```
 
 Replaces all occurrences of a substring within a string with a new substring.
 
@@ -99,7 +107,9 @@ Replaces all occurrences of a substring within a string with a new substring.
 
 ### escapeJsString()
 
-> **escapeJsString**(`str`): `string`
+```ts { .no-language }
+escapeJsString(str): string
+```
 
 Returns an escaped JS string
 
@@ -113,15 +123,13 @@ Returns an escaped JS string
 
 `string`
 
-#### Method
-
-escapeJsString
-
 ***
 
 ### escapeSqltring()
 
-> **escapeSqltring**(`str`): `string`
+```ts { .no-language }
+escapeSqltring(str): string
+```
 
 Returns an escaped SQL string
 
@@ -135,15 +143,13 @@ Returns an escaped SQL string
 
 `string`
 
-#### Method
-
-escapeSqlString
-
 ***
 
 ### splitParams()
 
-> **splitParams**(`pStr`): `any`[]
+```ts { .no-language }
+splitParams(pStr): any[]
+```
 
 Splits a parameter string into an array of parameters, considering nested arrays.
 
@@ -155,7 +161,7 @@ Splits a parameter string into an array of parameters, considering nested arrays
 
 #### Returns
 
-`any`[]
+`any[]`
 
 - An array of individual parameters.
 
@@ -163,7 +169,9 @@ Splits a parameter string into an array of parameters, considering nested arrays
 
 ### escapeHtmlString()
 
-> **escapeHtmlString**(`str`, `attr`): `string`
+```ts { .no-language }
+escapeHtmlString(str, attr): string
+```
 
 Returns an escapep HTML string
 
@@ -178,15 +186,13 @@ Returns an escapep HTML string
 
 `string`
 
-#### Method
-
-escapeHtmlString
-
 ***
 
 ### lowerKeys()
 
-> **lowerKeys**(`obj`, `recursive?`): `object`
+```ts { .no-language }
+lowerKeys(obj, recursive?): object
+```
 
 Transform object keys into lower case.
 
@@ -203,15 +209,13 @@ Transform object keys into lower case.
 
 transformed object.
 
-#### Method
-
-lowerKeys
-
 ***
 
 ### execDynamicCode()
 
-> **execDynamicCode**(`dynamicCode`): `any`
+```ts { .no-language }
+execDynamicCode(dynamicCode): any
+```
 
 Evaluates JavaScript code and executes it.
 
@@ -225,15 +229,13 @@ Evaluates JavaScript code and executes it.
 
 `any`
 
-#### Method
-
-execDynamicCode
-
 ***
 
 ### sortObject()
 
-> **sortObject**(`obj`, `property`, `property2?`): `any`[]
+```ts { .no-language }
+sortObject(obj, property, property2?): any[]
+```
 
 Sorts an object's array by specified properties.
 
@@ -247,10 +249,6 @@ Sorts an object's array by specified properties.
 
 #### Returns
 
-`any`[]
+`any[]`
 
 Ordered object.
-
-#### Method
-
-sortObject

@@ -1,124 +1,234 @@
-# Compilador de Plantillas
+# Parser
 
 Esta sección contiene un conjunto de funcionalidades para analizar y compilar plantillas.
 
-## **Funciones**
+## Funciones
 
-### **recursiveCompile() — compilación recursiva**
+### recursiveCompile()
 
-> **recursiveCompile**(`json`, `template`, `conf`, `contextFunctions?`, `lastTemplate?`, `AddTimeZone?`): `Promise<string>`
+```ts { .no-language }
+recursiveCompile(json, template, conf, contextFunctions?, lastTemplate?, AddTimeZone?): Promise<string>
+```
 
-Compila recursivamente una plantilla reemplazando las marcas por los valores correspondientes del JSON y de variables de contexto.
+Compila recursivamente una cadena de plantilla sustituyendo los marcadores por los valores correspondientes de un objeto JSON y variables de contexto.
 
-#### **Parámetros**
+#### Parámetros
 
-| Parámetro           | Tipo        | Valor por defecto | Descripción                                                                |
-| ------------------- | ----------- | ----------------- | -------------------------------------------------------------------------- |
-| `json`              | `any`       | `undefined`       | Objeto JSON con los valores a reemplazar en la plantilla.                  |
-| `template`          | `string`    | `undefined`       | Cadena de plantilla con marcadores a reemplazar.                           |
-| `conf`              | `ConfToken` | `undefined`       | Objeto de configuración con información del usuario y recursos.            |
-| `contextFunctions?` | `any`       | `undefined`       | Objeto opcional con funciones que pueden ser invocadas desde la plantilla. |
-| `lastTemplate?`     | `string`    | `undefined`       | Última plantilla procesada para evitar bucles infinitos.                   |
-| `AddTimeZone?`      | `boolean`   | `false`           | Indica si debe añadirse información de zona horaria al formatear fechas.   |
+| Parámetro           | Tipo                              | Valor por defecto | Descripción                                                                            |
+| ------------------- | --------------------------------- | ----------------- | -------------------------------------------------------------------------------------- |
+| `json`              | `any`                             | `undefined`       | El objeto JSON que contiene los valores para sustituir en la plantilla.                |
+| `template`          | `string`                          | `undefined`       | La cadena de plantilla que contiene los marcadores a sustituir.                        |
+| `conf`              | [`ConfToken`](types.md#conftoken) | `undefined`       | El objeto de configuración que contiene información del usuario y de los recursos.     |
+| `contextFunctions?` | `any`                             | `undefined`       | Objeto opcional que contiene funciones que pueden ser llamadas dentro de la plantilla. |
+| `lastTemplate?`     | `string`                          | `undefined`       | La última plantilla procesada para evitar recursión infinita.                          |
+| `AddTimeZone?`      | `boolean`                         | `false`           | Indica si se debe añadir información de zona horaria al formatear fechas.              |
 
-#### **Devuelve**
+#### Devuelve
 
-`Promise<string>` — Plantilla compilada.
+`Promise<string>`
 
-### **compile() — compilación simple**
+* Una promesa que se resuelve con la cadena de plantilla compilada.
 
-> **compile**(`json`, `template`, `files`, `contextFunctions?`, `AddTimeZone?`): `Promise<string>`
+### compile()
 
-Compila una plantilla reemplazando marcadores por valores del JSON y variables de contexto.
+```ts { .no-language }
+compile(json, template, files, contextFunctions?, AddTimeZone?): Promise<string>
+```
 
-#### **Parámetros**
+Compila una cadena de plantilla sustituyendo los marcadores por los valores correspondientes de un objeto JSON y variables de contexto.
 
-| Parámetro           | Tipo             | Descripción                                                |
-| ------------------- | ---------------- | ---------------------------------------------------------- |
-| `json`              | `any`            | Objeto JSON con los datos.                                 |
-| `template`          | `string`         | Plantilla que contiene marcadores.                         |
-| `files`             | `fileResource[]` | Recursos de archivo utilizables dentro de la plantilla.    |
-| `contextFunctions?` | `any`            | Funciones opcionales para ejecutar dentro de la plantilla. |
-| `AddTimeZone?`      | `boolean`        | Añadir zona horaria al formatear fechas.                   |
+#### Parámetros
 
-#### **Devuelve**
+| Parámetro           | Tipo                                      | Valor por defecto | Descripción                                                                            |
+| ------------------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------- |
+| `json`              | `any`                                     | `undefined`       | El objeto JSON que contiene los valores para sustituir en la plantilla.                |
+| `template`          | `string`                                  | `undefined`       | La cadena de plantilla que contiene los marcadores a sustituir.                        |
+| `files`             | [`fileResource`](types.md#fileresource)[] | `undefined`       | Un array de recursos de archivo que pueden usarse en la plantilla.                     |
+| `contextFunctions?` | `any`                                     | `undefined`       | Objeto opcional que contiene funciones que pueden ser llamadas dentro de la plantilla. |
+| `AddTimeZone?`      | `boolean`                                 | `false`           | Indica si se debe añadir información de zona horaria al formatear fechas.              |
 
-`Promise<string>` — Plantilla compilada.
+#### Devuelve
 
-### **findTemplate() — obtener plantilla**
+`Promise<string>`
 
-> **findTemplate**(`object`, `typeId`, `pageName`): `PageConfig`
+* Una promesa que se resuelve con la cadena de plantilla compilada.
 
-Retorna la plantilla adecuada según el tipo y nombre de página.
+### findTemplate()
 
-#### **Parámetros**
+```ts { .no-language }
+findTemplate(object, typeId, pageName): [PageConfig](types.md#pageconfig)
+```
 
-| Parámetro  | Tipo           | Descripción                                                    |
-| ---------- | -------------- | -------------------------------------------------------------- |
-| `object`   | `ObjectConfig` | Configuración del objeto con sus páginas disponibles.          |
-| `typeId`   | `string`       | Tipo de plantilla (ej. "edit", "list").                        |
-| `pageName` | `string`       | Nombre específico de la página (tiene prioridad sobre typeId). |
+Dado un objeto, el tipo de plantilla y el nombre de la página, devuelve la plantilla adecuada.
 
-#### **Devuelve**
+#### Parámetros
 
-`PageConfig` — Configuración de la página o null si no se encuentra.
+| Parámetro  | Tipo                                      | Descripción                                                                                    |
+| ---------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `object`   | [`ObjectConfig`](types.md#objectconfig-1) | La configuración del objeto que contiene las páginas disponibles.                              |
+| `typeId`   | `string`                                  | El tipo de plantilla a buscar (por ejemplo, `'edit'`, `'list'`).                               |
+| `pageName` | `string`                                  | El nombre específico de la página a buscar. Si se proporciona, tiene prioridad sobre `typeId`. |
 
-### **replaceAll() — reemplazar texto**
+#### Devuelve
 
-> **replaceAll**(`text`, `text_to_find`, `replace_text`)
+`[PageConfig](types.md#pageconfig)`
 
-Reemplaza todas las ocurrencias de un texto dentro de otro.
+* La configuración de la página coincidente o `null` si no se encuentra.
 
-#### **Parámetros**
+### replaceAll()
 
-| Parámetro      | Tipo  | Descripción         |
-| -------------- | ----- | ------------------- |
-| `text`         | `any` | Texto original.     |
-| `text_to_find` | `any` | Texto a buscar.     |
-| `replace_text` | `any` | Texto de reemplazo. |
+```ts { .no-language }
+replaceAll(text, text_to_find, replace_text): any
+```
 
-#### **Devuelve**
+Reemplaza todas las apariciones de una subcadena dentro de una cadena por una nueva subcadena.
 
-Texto modificado.
+#### Parámetros
 
-### **escapeJsString() — escapar cadena para JS**
+| Parámetro      | Tipo  | Descripción                                         |
+| -------------- | ----- | --------------------------------------------------- |
+| `text`         | `any` | La cadena original.                                 |
+| `text_to_find` | `any` | La subcadena a buscar dentro de la cadena original. |
+| `replace_text` | `any` | La subcadena por la que se reemplazará.             |
 
-> **escapeJsString**(`str`): `string`
+#### Devuelve
 
-Escapa una cadena para uso seguro en JavaScript.
+`any`
 
-### **escapeSqlString() — escapar cadena para SQL**
+* La cadena modificada con todas las apariciones reemplazadas.
 
-> **escapeSqlString**(`str`): `string`
+### escapeJsString()
 
-Escapa una cadena para uso seguro en SQL.
+```ts { .no-language }
+escapeJsString(str): string
+```
 
-### **splitParams() — separar parámetros**
+Devuelve una cadena JavaScript escapada.
 
-> **splitParams**(`pStr`): `any[]`
+#### Parámetros
 
-Divide una cadena de parámetros en un array, teniendo en cuenta arreglos anidados.
+| Parámetro | Tipo     | Descripción |
+| --------- | -------- | ----------- |
+| `str`     | `string` | Cadena      |
 
-### **escapeHtmlString() — escapar HTML**
+#### Devuelve
 
-> **escapeHtmlString**(`str`, `attr`): `string`
+`string`
 
-Escapa una cadena para uso seguro en HTML.
+### escapeSqltring()
 
-### **lowerKeys() — minificar claves**
+```ts { .no-language }
+escapeSqltring(str): string
+```
 
-> **lowerKeys**(`obj`, `recursive?`): `object`
+Devuelve una cadena SQL escapada.
 
-Convierte todas las claves de un objeto a minúsculas.
+#### Parámetros
 
-### **execDynamicCode() — ejecutar código dinámico**
+| Parámetro | Tipo     | Descripción      |
+| --------- | -------- | ---------------- |
+| `str`     | `string` | Cadena a escapar |
 
-> **execDynamicCode**(`dynamicCode`): `any`
+#### Devuelve
 
-Evalúa y ejecuta código JavaScript dinámico.
+`string`
 
-### **sortObject() — ordenar objetos**
+### splitParams()
 
-> **sortObject**(`obj`, `property`, `property2?`): `any[]`
+```ts { .no-language }
+splitParams(pStr): any[]
+```
 
-Ordena un array de objetos por una o dos propiedades.
+Divide una cadena de parámetros en un array de parámetros, teniendo en cuenta arrays anidados.
+
+#### Parámetros
+
+| Parámetro | Tipo  | Descripción                        |
+| --------- | ----- | ---------------------------------- |
+| `pStr`    | `any` | La cadena de parámetros a dividir. |
+
+#### Devuelve
+
+`any[]`
+
+* Un array de parámetros individuales.
+
+### escapeHtmlString()
+
+```ts { .no-language }
+escapeHtmlString(str, attr): string
+```
+
+Devuelve una cadena HTML escapada.
+
+#### Parámetros
+
+| Parámetro | Tipo      | Descripción                                    |
+| --------- | --------- | ---------------------------------------------- |
+| `str`     | `string`  | Cadena                                         |
+| `attr`    | `boolean` | Determina si los saltos de línea se sustituyen |
+
+#### Devuelve
+
+`string`
+
+### lowerKeys()
+
+```ts { .no-language }
+lowerKeys(obj, recursive?): object
+```
+
+Transforma las claves de un objeto a minúsculas.
+
+#### Parámetros
+
+| Parámetro    | Tipo      | Valor por defecto | Descripción                           |
+| ------------ | --------- | ----------------- | ------------------------------------- |
+| `obj`        | `any`     | `undefined`       | Objeto a transformar.                 |
+| `recursive?` | `boolean` | `false`           | Activa o desactiva el modo recursivo. |
+
+#### Devuelve
+
+`object`
+
+Objeto transformado.
+
+### execDynamicCode()
+
+```ts { .no-language }
+execDynamicCode(dynamicCode): any
+```
+
+Evalúa y ejecuta código JavaScript.
+
+#### Parámetros
+
+| Parámetro     | Tipo     | Descripción      |
+| ------------- | -------- | ---------------- |
+| `dynamicCode` | `string` | Código dinámico. |
+
+#### Devuelve
+
+`any`
+
+### sortObject()
+
+```ts { .no-language }
+sortObject(obj, property, property2?): any[]
+```
+
+Ordena el array de un objeto según las propiedades especificadas.
+
+#### Parámetros
+
+| Parámetro    | Tipo     | Descripción                      |
+| ------------ | -------- | -------------------------------- |
+| `obj`        | `any`    | Objeto a ordenar.                |
+| `property`   | `string` | Propiedad de ordenación.         |
+| `property2?` | `string` | Segunda propiedad de ordenación. |
+
+#### Devuelve
+
+`any[]`
+
+Objeto ordenado.

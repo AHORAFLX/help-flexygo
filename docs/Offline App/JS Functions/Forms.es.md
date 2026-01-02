@@ -1,4 +1,4 @@
-# Formularios (Forms)
+﻿# Formularios (Forms)
 
 Esta sección únicamente contiene la funcionalidad de guardado para formularios.
 
@@ -6,7 +6,9 @@ Esta sección únicamente contiene la funcionalidad de guardado para formularios
 
 ### save()
 
-> **save**(`btn`, `showMessage?`, `goBack?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+save(btn, showMessage?, goBack?): Promise<unknown>
+```
 
 Guarda la información del formulario.
 
@@ -20,7 +22,8 @@ Guarda la información del formulario.
 
 #### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
+
 
 - Una promesa que se resuelve en `true` si el guardado fue exitoso.
 

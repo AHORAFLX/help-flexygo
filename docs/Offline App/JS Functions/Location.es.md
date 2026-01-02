@@ -1,4 +1,4 @@
-# GPS
+﻿# GPS
 
 Esta sección recopila funciones relacionadas con el GPS que pueden utilizarse en distintas partes de la aplicación.  
 Incluye funcionalidades para solicitar permisos de GPS, activar el GPS y obtener las coordenadas actuales del dispositivo.
@@ -7,7 +7,9 @@ Incluye funcionalidades para solicitar permisos de GPS, activar el GPS y obtener
 
 ### getCoords()
 
-> **getCoords**(`timeout`, `maximum_age`): `Promise`\<`Position`\>
+```ts { .no-language }
+getCoords(timeout, maximum_age): Promise<Position>
+```
 
 Obtiene las coordenadas actuales del dispositivo.
 
@@ -20,7 +22,8 @@ Obtiene las coordenadas actuales del dispositivo.
 
 #### Devuelve
 
-`Promise`\<`Position`\>
+`Promise<Position>`
+
 
 Una promesa que se resuelve con la [posición](https://capacitorjs.com/docs/apis/geolocation#position) actual del dispositivo.
 
@@ -28,13 +31,16 @@ Una promesa que se resuelve con la [posición](https://capacitorjs.com/docs/apis
 
 ### requestGPSStatus()
 
-> **requestGPSStatus**(): `Promise`\<`any`\>
+```ts { .no-language }
+requestGPSStatus(): Promise<any>
+```
 
 Solicita permisos de GPS y devuelve el estado tras la interacción del usuario.
 
 #### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
+
 
 Posibles valores:  
 **GRANTED**, **DENIED**, **DENIED_ONCE**, **NOT_REQUESTED**, **DENIED_ALWAYS**, **RESTRICTED**, **GRANTED_WHEN_IN_USE**
@@ -43,14 +49,17 @@ Posibles valores:
 
 ### requestGPSPermission()
 
-> **requestGPSPermission**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+requestGPSPermission(): Promise<boolean>
+```
 
 Solicita permisos de GPS.  
 Si el usuario ha seleccionado “denegar siempre”, se le redirige a los ajustes de la aplicación.
 
 #### Devuelve
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
+
 
 `true` si el GPS ha sido concedido, `false` si no.
 
@@ -58,13 +67,16 @@ Si el usuario ha seleccionado “denegar siempre”, se le redirige a los ajuste
 
 ### requestGPSActivation()
 
-> **requestGPSActivation**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+requestGPSActivation(): Promise<boolean>
+```
 
 Solicita al usuario activar el GPS del dispositivo.
 
 #### Devuelve
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
+
 
 `true` si el GPS está activado, `false` si no lo está.
 
@@ -72,12 +84,15 @@ Solicita al usuario activar el GPS del dispositivo.
 
 ### isGPSOff()
 
-> **isGPSOff**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+isGPSOff(): Promise<boolean>
+```
 
 Comprueba si el GPS está apagado (no evalúa permisos, solo si está activo).
 
 #### Devuelve
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
+
 
 `true` si el GPS está apagado, `false` si está encendido.

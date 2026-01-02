@@ -1,4 +1,4 @@
-# Exportaciones (Exports)
+﻿# Exportaciones (Exports)
 
 Esta sección es una colección de funciones de exportación que pueden utilizarse en varias partes de la aplicación.
 Incluye funcionalidades para enviar correos electrónicos y generar PDFs.
@@ -7,9 +7,11 @@ Incluye funcionalidades para enviar correos electrónicos y generar PDFs.
 
 ### sendMail()
 
-> **sendMail**(`to`, `subject`, `body`, `ishtml?`, `cc?`, `bcc?`, `attachments?`): `Promise`\<`void`\>
+```ts { .no-language }
+sendMail(to, subject, body, ishtml?, cc?, bcc?, attachments?): Promise<void>
+```
 
-Envía un correo electrónico utilizando el sistema de correo predeterminado.
+Enví­a un correo electrónico utilizando el sistema de correo predeterminado.
 
 #### Parámetros
 
@@ -25,7 +27,8 @@ Envía un correo electrónico utilizando el sistema de correo predeterminado.
 
 #### Devuelve
 
-`Promise`\<`void`\>
+`Promise<void>`
+
 
 #### Método
 
@@ -35,7 +38,9 @@ sendMail
 
 ### createPDF()
 
-> **createPDF**(`html`, `filename`, `documentsize?`, `landscape?`, `share?`): `any`
+```ts { .no-language }
+createPDF(html, filename, documentsize?, landscape?, share?): any
+```
 
 Genera un archivo PDF a partir de un string HTML.
 
@@ -45,13 +50,14 @@ Genera un archivo PDF a partir de un string HTML.
 | --------- | ----- | ---------------- | ----------- |
 | `html` | `any` | `undefined` | Código HTML en formato string que se convertirá en PDF. |
 | `filename` | `string` | `'document.pdf'` | Nombre del archivo PDF. |
-| `documentsize?` | `string` | `'A4'` | Tamaño del documento PDF. Opciones: `A4`, `A3`, `A2`. |
+| `documentsize?` | `string` | `'A4'` | Tamaí±o del documento PDF. Opciones: `A4`, `A3`, `A2`. |
 | `landscape?` | `boolean` | `false` | Orientación horizontal (`true`) o vertical (`false`). |
 | `share?` | `boolean` | `true` | Si es `true`, abre la ventana de compartir del sistema operativo. Si es `false`, devuelve el PDF en base64. |
 
 #### Devuelve
 
 `any`
+
 
 - Si **share = false**, devuelve una promesa con el objeto PDF en base64.
 

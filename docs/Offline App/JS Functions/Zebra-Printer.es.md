@@ -7,31 +7,37 @@ Incluye métodos para mostrar impresoras disponibles, obtener impresoras disponi
 
 ### showAvailablePrinters()
 
-> **showAvailablePrinters**(): `Promise`\<`unknown`\>
+```ts { .no-language }
+showAvailablePrinters(): Promise<unknown>
+```
 
 Muestra un modal con la lista de impresoras bluetooth disponibles y devuelve la dirección MAC de la impresora seleccionada.
 
-#### Retorna
+#### Devuelve
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - Una promesa que se resuelve con la dirección MAC de la impresora seleccionada.
 
 ### getAvailablePrinters()
 
-> **getAvailablePrinters**(): `Promise`\<`BluetoothDevices`[]\>
+```ts { .no-language }
+getAvailablePrinters(): Promise<BluetoothDevices[]>
+```
 
 Obtiene la lista de impresoras bluetooth disponibles.
 
-#### Retorna
+#### Devuelve
 
-`Promise`\<`BluetoothDevices`[]\>
+`Promise<BluetoothDevices[]>`
 
 - Una promesa que se resuelve con un array de [impresoras bluetooth disponibles](https://github.com/Limbertfenixio/capacitor-ble-printer?tab=readme-ov-file#bluetoothdevices).
 
 ### print()
 
-> **print**(`mac_address`, `text`): `Promise`\<`any`\>
+```ts { .no-language }
+print(mac_address, text): Promise<any>
+```
 
 Imprime texto en una impresora bluetooth especificada.
 
@@ -42,15 +48,17 @@ Imprime texto en una impresora bluetooth especificada.
 | `mac_address` | `string` | La dirección MAC de la impresora bluetooth. |
 | `text` | `string` | El texto a imprimir en formato ZPL. |
 
-#### Retorna
+#### Devuelve
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 - Una promesa que se resuelve cuando el trabajo de impresión es enviado.
 
 ### getStatusOfPrinter()
 
-> **getStatusOfPrinter**(`mac_address`): `Promise`\<`string`\>
+```ts { .no-language }
+getStatusOfPrinter(mac_address): Promise<string>
+```
 
 Obtiene el estado de una impresora bluetooth especificada.
 
@@ -60,21 +68,23 @@ Obtiene el estado de una impresora bluetooth especificada.
 | --------- | ------ | ----------- |
 | `mac_address` | `string` | La dirección MAC de la impresora bluetooth. |
 
-#### Retorna
+#### Devuelve
 
-`Promise`\<`string`\>
+`Promise<string>`
 
 - Una promesa que se resuelve con el estado de la impresora.
 
 ### enableBluetooth()
 
-> **enableBluetooth**(): `Promise`\<`boolean`\>
+```ts { .no-language }
+enableBluetooth(): Promise<boolean>
+```
 
 Habilita el Bluetooth en el dispositivo si aún no está activado.  
 También comprueba los permisos necesarios y los solicita si no han sido concedidos.
 
-#### Retorna
+#### Devuelve
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
 
 - Una promesa que se resuelve en true si el Bluetooth está habilitado y los permisos han sido concedidos, o false en caso contrario.

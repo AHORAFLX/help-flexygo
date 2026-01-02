@@ -1,4 +1,4 @@
-# AI
+﻿# AI
 
 Currently flexygo's app does contain two possible AI capabilities, the AI assistants and text to speech.
 For using any of them we will use flexygo.ai.function_name
@@ -7,7 +7,9 @@ For using any of them we will use flexygo.ai.function_name
 
 ### startVoiceRecognition()
 
-> **startVoiceRecognition**(`setting_id`, `defaults`): `void`
+```ts { .no-language }
+startVoiceRecognition(setting_id, defaults): void
+```
 
 It opens a modal which will listen anything you say and after you end talking, or you press the mic button, it will open the desired assistant with you already
 having sent the message you said so the AI directly responds to it, reading out loud its response.
@@ -27,7 +29,9 @@ having sent the message you said so the AI directly responds to it, reading out 
 
 ### textToSpeech()
 
-> **textToSpeech**(`text`, `language?`, `volume?`, `speed?`): `Promise`\<`boolean`\>
+```ts { .no-language }
+textToSpeech(text, language?, volume?, speed?): Promise<boolean>
+```
 
 Any text that is sent will be read out loud by the app.
 
@@ -42,7 +46,7 @@ Any text that is sent will be read out loud by the app.
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise<boolean>`
 
 A promise that ends when the assistant ends speaking
 
@@ -50,13 +54,15 @@ A promise that ends when the assistant ends speaking
 
 ### stopTextToSpeech()
 
-> **stopTextToSpeech**(): `Promise`\<`void`\>
+```ts { .no-language }
+stopTextToSpeech(): Promise<void>
+```
 
 Stops the text to speech if there's any playing
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 A promise that ends when the assistant gets stopped
 
@@ -64,7 +70,9 @@ A promise that ends when the assistant gets stopped
 
 ### toggleTextToSpeech()
 
-> **toggleTextToSpeech**(`text`, `language?`, `volume?`, `speed?`): `Promise`\<`void`\> \| `Promise`\<`boolean`\>
+```ts { .no-language }
+toggleTextToSpeech(text, language?, volume?, speed?): Promise<void> | Promise<boolean>
+```
 
 Any text that is sent will be read out loud by the app unless if the assistant is already talking in which case it will stop it from speaking.
 
@@ -79,6 +87,6 @@ Any text that is sent will be read out loud by the app unless if the assistant i
 
 #### Returns
 
-`Promise`\<`void`\> \| `Promise`\<`boolean`\>
+`Promise<void> | Promise<boolean>`
 
 A promise that ends when one of the actions ends

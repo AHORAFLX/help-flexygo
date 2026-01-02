@@ -1,4 +1,4 @@
-# Navigation
+﻿# Navigation
 
 This section is a collection of navigation-related functions that can be used in various parts of the application.
 It contains functionalities for navigating between pages, opening modals, and handling back navigation.
@@ -11,7 +11,9 @@ It's important to note the differences between `go` and `transfer` functions:
 
 ### goBack()
 
-> **goBack**(`current?`): `void`
+```ts { .no-language }
+goBack(current?): void
+```
 
 Handles back navigation. If a modal is open, it closes the modal; otherwise, it navigates back in the router history.
 
@@ -29,7 +31,9 @@ Handles back navigation. If a modal is open, it closes the modal; otherwise, it 
 
 ### closeModal()
 
-> **closeModal**(`current?`, `data?`): `void`
+```ts { .no-language }
+closeModal(current?, data?): void
+```
 
 Closes the currently open modal. If a specific element is provided, it closes the modal associated with that element.
 
@@ -48,7 +52,9 @@ Closes the currently open modal. If a specific element is provided, it closes th
 
 ### goHome()
 
-> **goHome**(): `void`
+```ts { .no-language }
+goHome(): void
+```
 
 Navigates to the home page of the application, resetting the navigation stack.
 
@@ -60,7 +66,9 @@ Navigates to the home page of the application, resetting the navigation stack.
 
 ### goSync()
 
-> **goSync**(): `void`
+```ts { .no-language }
+goSync(): void
+```
 
 Navigates to the synchronization page of the application, resetting the navigation stack.
 
@@ -72,7 +80,9 @@ Navigates to the synchronization page of the application, resetting the navigati
 
 ### goLogin()
 
-> **goLogin**(`force_login?`): `void`
+```ts { .no-language }
+goLogin(force_login?): void
+```
 
 Navigates to the login page of the application, resetting the navigation stack.
 
@@ -90,7 +100,9 @@ Navigates to the login page of the application, resetting the navigation stack.
 
 ### goList()
 
-> **goList**(`object`, `pagename`, `filter?`, `defaults?`): `void`
+```ts { .no-language }
+goList(object, pagename, filter?, defaults?): void
+```
 
 Navigates to the list of the specified object and pagename
 
@@ -111,7 +123,9 @@ Navigates to the list of the specified object and pagename
 
 ### goEdit()
 
-> **goEdit**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+goEdit(object, pagename, filter, defaults?): void
+```
 
 Navigates to the edit page of the specified object and pagename
 
@@ -132,7 +146,9 @@ Navigates to the edit page of the specified object and pagename
 
 ### goView()
 
-> **goView**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+goView(object, pagename, filter, defaults?): void
+```
 
 Navigates to the view page of the specified object and pagename
 
@@ -153,7 +169,9 @@ Navigates to the view page of the specified object and pagename
 
 ### goInsert()
 
-> **goInsert**(`object`, `pagename`, `defaults?`): `void`
+```ts { .no-language }
+goInsert(object, pagename, defaults?): void
+```
 
 Navigates to the insert page of the specified object and pagename
 
@@ -173,7 +191,9 @@ Navigates to the insert page of the specified object and pagename
 
 ### goGallery()
 
-> **goGallery**(`object`, `objectid`, `defaults?`): `void`
+```ts { .no-language }
+goGallery(object, objectid, defaults?): void
+```
 
 Navigates to the gallery page of the specified object and objectid
 
@@ -193,7 +213,9 @@ Navigates to the gallery page of the specified object and objectid
 
 ### goDocuments()
 
-> **goDocuments**(`object`, `objectid`, `defaults?`): `void`
+```ts { .no-language }
+goDocuments(object, objectid, defaults?): void
+```
 
 Navigates to the documents page of the specified object and objectid
 
@@ -213,7 +235,9 @@ Navigates to the documents page of the specified object and objectid
 
 ### goAI()
 
-> **goAI**(`setting_id`, `first_message?`, `defaults?`, `is_first_message_by_mic?`): `void`
+```ts { .no-language }
+goAI(setting_id, first_message?, defaults?, is_first_message_by_mic?): void
+```
 
 Opens the AI modal with the specified settings
 
@@ -234,7 +258,9 @@ Opens the AI modal with the specified settings
 
 ### transferList()
 
-> **transferList**(`object`, `pagename`, `filter?`, `defaults?`): `void`
+```ts { .no-language }
+transferList(object, pagename, filter?, defaults?): void
+```
 
 Transfers to the list of the specified object and pagename, not allowing to go back to the previous page
 
@@ -255,7 +281,9 @@ Transfers to the list of the specified object and pagename, not allowing to go b
 
 ### transferEdit()
 
-> **transferEdit**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+transferEdit(object, pagename, filter, defaults?): void
+```
 
 Transfers to the edit page of the specified object and pagename, not allowing to go back to the previous page
 
@@ -276,7 +304,9 @@ Transfers to the edit page of the specified object and pagename, not allowing to
 
 ### transferView()
 
-> **transferView**(`object`, `pagename`, `filter`, `defaults?`): `void`
+```ts { .no-language }
+transferView(object, pagename, filter, defaults?): void
+```
 
 Transfers to the view page of the specified object and pagename, not allowing to go back to the previous page
 
@@ -297,7 +327,9 @@ Transfers to the view page of the specified object and pagename, not allowing to
 
 ### transferInsert()
 
-> **transferInsert**(`object`, `pagename`, `defaults?`): `void`
+```ts { .no-language }
+transferInsert(object, pagename, defaults?): void
+```
 
 Transfers to the insert page of the specified object and pagename, not allowing to go back to the previous page
 
@@ -317,7 +349,9 @@ Transfers to the insert page of the specified object and pagename, not allowing 
 
 ### transferGallery()
 
-> **transferGallery**(`object`, `objectid`, `defaults?`): `void`
+```ts { .no-language }
+transferGallery(object, objectid, defaults?): void
+```
 
 Transfers to the gallery page of the specified object and objectid, not allowing to go back to the previous page
 
@@ -337,7 +371,9 @@ Transfers to the gallery page of the specified object and objectid, not allowing
 
 ### transferDocuments()
 
-> **transferDocuments**(`object`, `objectid`): `void`
+```ts { .no-language }
+transferDocuments(object, objectid): void
+```
 
 Transfers to the documents page of the specified object and objectid, not allowing to go back to the previous page
 
@@ -356,7 +392,9 @@ Transfers to the documents page of the specified object and objectid, not allowi
 
 ### modalList()
 
-> **modalList**(`object`, `pagename`, `filter?`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalList(object, pagename, filter?, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Opens a modal with a list of the specified object and pagename
 
@@ -371,13 +409,15 @@ Opens a modal with a list of the specified object and pagename
 
 #### Returns
 
-`Promise`\<`OverlayEventDetail`\<`any`\>\>
+`Promise<OverlayEventDetail<any>>`
 
 ***
 
 ### modalEdit()
 
-> **modalEdit**(`object`, `pagename`, `filter`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalEdit(object, pagename, filter, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Opens a modal with the edit page of the specified object and pagename
 
@@ -392,13 +432,15 @@ Opens a modal with the edit page of the specified object and pagename
 
 #### Returns
 
-`Promise`\<`OverlayEventDetail`\<`any`\>\>
+`Promise<OverlayEventDetail<any>>`
 
 ***
 
 ### modalView()
 
-> **modalView**(`object`, `pagename`, `filter`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalView(object, pagename, filter, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Opens a modal with the view page of the specified object and pagename
 
@@ -413,13 +455,15 @@ Opens a modal with the view page of the specified object and pagename
 
 #### Returns
 
-`Promise`\<`OverlayEventDetail`\<`any`\>\>
+`Promise<OverlayEventDetail<any>>`
 
 ***
 
 ### modalInsert()
 
-> **modalInsert**(`object`, `pagename`, `defaults?`): `Promise`\<`OverlayEventDetail`\<`any`\>\>
+```ts { .no-language }
+modalInsert(object, pagename, defaults?): Promise<OverlayEventDetail<any>>
+```
 
 Opens a modal with the insert page of the specified object and pagename
 
@@ -433,13 +477,15 @@ Opens a modal with the insert page of the specified object and pagename
 
 #### Returns
 
-`Promise`\<`OverlayEventDetail`\<`any`\>\>
+`Promise<OverlayEventDetail<any>>`
 
 ***
 
 ### goPage()
 
-> **goPage**(`type`, `object`, `pagename`, `filter`, `defaults`, `direction`): `void`
+```ts { .no-language }
+goPage(type, object, pagename, filter, defaults, direction): void
+```
 
 The generic form of navigation (not recommended to be used directly, use the go or back functions instead)
 
@@ -462,7 +508,9 @@ The generic form of navigation (not recommended to be used directly, use the go 
 
 ### goPageGallDoc()
 
-> **goPageGallDoc**(`type`, `object`, `objectid`, `defaults`, `direction`): `void`
+```ts { .no-language }
+goPageGallDoc(type, object, objectid, defaults, direction): void
+```
 
 The generic form of navigation to gallery or documents
 
@@ -484,7 +532,9 @@ The generic form of navigation to gallery or documents
 
 ### currentUrl()
 
-> **currentUrl**(): `string`
+```ts { .no-language }
+currentUrl(): string
+```
 
 Returns the current URL of the router
 

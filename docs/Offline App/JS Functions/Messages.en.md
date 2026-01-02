@@ -1,4 +1,4 @@
-# Messages
+﻿# Messages
 
 This section is a collection of message-related functions that can be used in various parts of the application.
 It contains functionalities for displaying error messages, warnings, success messages, confirmations, prompts, and alerts.
@@ -7,7 +7,9 @@ It contains functionalities for displaying error messages, warnings, success mes
 
 ### showError()
 
-> **showError**(`err`, `auditable?`, `write_on_console?`): `Promise`\<`void`\>
+```ts { .no-language }
+showError(err, auditable?, write_on_console?): Promise<void>
+```
 
 Shows an error message. If auditable is true (default) and the message is not a required field exception, it will be logged in the local database.
 
@@ -21,7 +23,7 @@ Shows an error message. If auditable is true (default) and the message is not a 
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 - A promise that resolves when the error message has been displayed.
 
@@ -29,7 +31,9 @@ Shows an error message. If auditable is true (default) and the message is not a 
 
 ### danger()
 
-> **danger**(`msg`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+danger(msg, moreInfo?): Promise<void>
+```
 
 Shows a danger toast message.
 
@@ -42,7 +46,7 @@ Shows a danger toast message.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 - A promise that resolves when the toast message has been displayed.
 
@@ -50,7 +54,9 @@ Shows a danger toast message.
 
 ### warning()
 
-> **warning**(`msg`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+warning(msg, moreInfo?): Promise<void>
+```
 
 Shows a warning toast message.
 
@@ -63,7 +69,7 @@ Shows a warning toast message.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 - A promise that resolves when the toast message has been displayed.
 
@@ -71,7 +77,9 @@ Shows a warning toast message.
 
 ### success()
 
-> **success**(`msg`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+success(msg, moreInfo?): Promise<void>
+```
 
 Shows a success toast message.
 
@@ -84,7 +92,7 @@ Shows a success toast message.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 - A promise that resolves when the toast message has been displayed.
 
@@ -92,7 +100,9 @@ Shows a success toast message.
 
 ### generic()
 
-> **generic**(`msg`, `color`, `duration`, `moreInfo?`): `Promise`\<`void`\>
+```ts { .no-language }
+generic(msg, color, duration, moreInfo?): Promise<void>
+```
 
 Shows a generic toast message with a more advanced configuration than the predefined types (danger, warning, success).
 
@@ -107,7 +117,7 @@ Shows a generic toast message with a more advanced configuration than the predef
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`
 
 - A promise that resolves when the toast message has been displayed.
 
@@ -115,7 +125,9 @@ Shows a generic toast message with a more advanced configuration than the predef
 
 ### confirm()
 
-> **confirm**(`header`, `message`, `css_class?`, `showCancelButton?`, `afterAlertPresent?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+confirm(header, message, css_class?, showCancelButton?, afterAlertPresent?): Promise<unknown>
+```
 
 Displays a confirmation dialog with customizable options.
 
@@ -131,7 +143,7 @@ Displays a confirmation dialog with customizable options.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - A promise that resolves if the user confirms, and rejects if the user cancels.
 
@@ -139,7 +151,9 @@ Displays a confirmation dialog with customizable options.
 
 ### prompt()
 
-> **prompt**(`header`, `message?`, `default_value?`, `showCancelButton?`, `afterAlertPresent?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+prompt(header, message?, default_value?, showCancelButton?, afterAlertPresent?): Promise<unknown>
+```
 
 Displays a prompt dialog with a single input field.
 
@@ -155,7 +169,7 @@ Displays a prompt dialog with a single input field.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - A promise that resolves with the input data if the user confirms, and rejects if the user cancels.
 
@@ -163,7 +177,9 @@ Displays a prompt dialog with a single input field.
 
 ### prompts()
 
-> **prompts**(`header`, `inputs`, `showCancelButton?`, `afterAlertPresent?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+prompts(header, inputs, showCancelButton?, afterAlertPresent?): Promise<unknown>
+```
 
 Displays a prompt dialog with multiple input fields.
 
@@ -178,7 +194,7 @@ Displays a prompt dialog with multiple input fields.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - A promise that resolves with the input data if the user confirms, and rejects if the user cancels.
 
@@ -186,7 +202,9 @@ Displays a prompt dialog with multiple input fields.
 
 ### alert()
 
-> **alert**(`header`, `message`): `HTMLIonAlertElement`
+```ts { .no-language }
+alert(header, message): HTMLIonAlertElement
+```
 
 Displays an alert dialog with a single "Ok" button.
 

@@ -1,4 +1,4 @@
-# IA
+﻿# IA
 
 Actualmente la aplicación de flexygo contiene dos capacidades de IA: los asistentes de IA y la conversión de texto a voz (text-to-speech).  
 Para utilizar cualquiera de ellas emplearemos **flexygo.ai.function_name**.
@@ -7,7 +7,9 @@ Para utilizar cualquiera de ellas emplearemos **flexygo.ai.function_name**.
 
 ### startVoiceRecognition()
 
-> **startVoiceRecognition**(`setting_id`, `defaults`): `void`
+```ts { .no-language }
+startVoiceRecognition(setting_id, defaults): void
+```
 
 Abre un modal que escuchará todo lo que digas y, al terminar de hablar o pulsar el botón del micrófono, abrirá el asistente deseado enviando automáticamente el mensaje reconocido, para que la IA responda directamente leyéndolo en voz alta.
 
@@ -22,11 +24,14 @@ Abre un modal que escuchará todo lo que digas y, al terminar de hablar o pulsar
 
 `void`
 
+
 ***
 
 ### textToSpeech()
 
-> **textToSpeech**(`text`, `language?`, `volume?`, `speed?`): `Promise`\<`boolean`\>
+```ts { .no-language }
+textToSpeech(text, language?, volume?, speed?): Promise<boolean>
+```
 
 Cualquier texto enviado será leído en voz alta por la aplicación.
 
@@ -41,27 +46,33 @@ Cualquier texto enviado será leído en voz alta por la aplicación.
 
 #### Devuelve
 
-`Promise`\<`boolean`\>  
+`Promise<boolean>`
+
 Una promesa que finaliza cuando la IA termina de hablar.
 
 ***
 
 ### stopTextToSpeech()
 
-> **stopTextToSpeech**(): `Promise`\<`void`\>
+```ts { .no-language }
+stopTextToSpeech(): Promise<void>
+```
 
 Detiene la lectura de texto si se está reproduciendo.
 
 #### Devuelve
 
-`Promise`\<`void`\>  
+`Promise<void>`
+
 Una promesa que finaliza cuando la lectura se detiene.
 
 ***
 
 ### toggleTextToSpeech()
 
-> **toggleTextToSpeech**(`text`, `language?`, `volume?`, `speed?`): `Promise`\<`void`\> \| `Promise`\<`boolean`\>
+```ts { .no-language }
+toggleTextToSpeech(text, language?, volume?, speed?): Promise<void> | Promise<boolean>
+```
 
 Lee en voz alta el texto indicado, a menos que la IA ya esté hablando; en ese caso, la detiene.
 
@@ -76,5 +87,6 @@ Lee en voz alta el texto indicado, a menos que la IA ya esté hablando; en ese c
 
 #### Devuelve
 
-`Promise`\<`void`\> \| `Promise`\<`boolean`\>  
+`Promise<void> | Promise<boolean>`
+
 Finaliza cuando la acción solicitada (reproducir o detener) haya terminado.

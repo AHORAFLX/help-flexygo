@@ -1,4 +1,4 @@
-# Exports
+﻿# Exports
 
 This section is a collection of export functions that can be used in various parts of the application.
 It contains functionalities for sending emails and generating PDFs.
@@ -7,7 +7,9 @@ It contains functionalities for sending emails and generating PDFs.
 
 ### sendMail()
 
-> **sendMail**(`to`, `subject`, `body`, `ishtml?`, `cc?`, `bcc?`, `attachments?`): `Promise`\<`void`\>
+```ts { .no-language }
+sendMail(to, subject, body, ishtml?, cc?, bcc?, attachments?): Promise<void>
+```
 
 Sends email using the default mail system.
 
@@ -25,17 +27,15 @@ Sends email using the default mail system.
 
 #### Returns
 
-`Promise`\<`void`\>
-
-#### Method
-
-sendMail
+`Promise<void>`
 
 ***
 
 ### createPDF()
 
-> **createPDF**(`html`, `filename`, `documentsize?`, `landscape?`, `share?`): `any`
+```ts { .no-language }
+createPDF(html, filename, documentsize?, landscape?, share?): any
+```
 
 Generate pdf from an html string
 
@@ -54,7 +54,3 @@ Generate pdf from an html string
 `any`
 
 - if share = false returns promise with pdf base64 object.
-
-#### Method
-
-createPDF

@@ -1,4 +1,4 @@
-# NFC
+﻿# NFC
 
 This section contains a collection of functionalities for NFC operations.
 It includes methods to initialize NFC, check if it's enabled, read NFC tags, stop reading, convert bytes to string, and show NFC settings.
@@ -7,13 +7,15 @@ It includes methods to initialize NFC, check if it's enabled, read NFC tags, sto
 
 ### init()
 
-> **init**(): `Promise`\<`unknown`\>
+```ts { .no-language }
+init(): Promise<unknown>
+```
 
 Initializes the NFC reader and displays a modal to prompt the user to scan an NFC tag.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - A promise that resolves when an NFC tag is read.
 
@@ -21,13 +23,15 @@ Initializes the NFC reader and displays a modal to prompt the user to scan an NF
 
 ### isEnabled()
 
-> **isEnabled**(): `Promise`\<`any`\>
+```ts { .no-language }
+isEnabled(): Promise<any>
+```
 
 Checks if NFC is enabled on the device.
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 - A promise that resolves to true if NFC is enabled, false otherwise.
 
@@ -35,7 +39,9 @@ Checks if NFC is enabled on the device.
 
 ### bytesToString()
 
-> **bytesToString**(`text`): `string`
+```ts { .no-language }
+bytesToString(text): string
+```
 
 Converts an array of bytes to a string.
 
@@ -55,13 +61,15 @@ Converts an array of bytes to a string.
 
 ### showSettings()
 
-> **showSettings**(): `Promise`\<`any`\>
+```ts { .no-language }
+showSettings(): Promise<any>
+```
 
 Opens the NFC settings on the device.
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 - A promise that resolves when the settings are opened.
 
@@ -69,8 +77,10 @@ Opens the NFC settings on the device.
 
 ### paintSetNFCModal()
 
-> **paintSetNFCModal**(): `Promise`\<`void`\>
+```ts { .no-language }
+paintSetNFCModal(): Promise<void>
+```
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise<void>`

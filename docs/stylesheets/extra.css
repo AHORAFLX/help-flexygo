@@ -327,6 +327,17 @@ a.md-logo {
   .filename {
     border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
   }
+
+  /* When you need the scripting language header not to appear */
+  &.no-language {
+    .filename {
+      display: none;
+    }
+
+    pre > code {
+      border-radius: var(--flx-border-radius);
+    }
+  }
 }
 
 .md-clipboard {

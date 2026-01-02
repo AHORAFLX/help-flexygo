@@ -1,4 +1,4 @@
-# Camera
+﻿# Camera
 
 Camera functions that allow you to take pictures, access gallery images and scan codes using the device camera.
 
@@ -6,7 +6,9 @@ Camera functions that allow you to take pictures, access gallery images and scan
 
 ### scanCode()
 
-> **scanCode**(`options`): `Promise`\<`unknown`\>
+```ts { .no-language }
+scanCode(options): Promise<unknown>
+```
 
 Scan codes(different types of barcodes and QRs) using device camera
 
@@ -18,25 +20,23 @@ Scan codes(different types of barcodes and QRs) using device camera
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - returns a promise that resolves with an object containing the scanned code format, text, and a cancelled boolean
-
-#### Method
-
-scanCode
 
 ***
 
 ### checkCameraPermission()
 
-> **checkCameraPermission**(): `Promise`\<`unknown`\>
+```ts { .no-language }
+checkCameraPermission(): Promise<unknown>
+```
 
 Check for camera permissions before doing anything with it
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - returns a promise that resolves with a boolean indicating if the camera permission is granted
 
@@ -44,7 +44,9 @@ Check for camera permissions before doing anything with it
 
 ### stopScan()
 
-> **stopScan**(): `void`
+```ts { .no-language }
+stopScan(): void
+```
 
 Stops the scanning process
 
@@ -56,7 +58,9 @@ Stops the scanning process
 
 ### toggleScannerTorch()
 
-> **toggleScannerTorch**(): `void`
+```ts { .no-language }
+toggleScannerTorch(): void
+```
 
 Toggles the device torch (flashlight) on or off
 
@@ -68,7 +72,9 @@ Toggles the device torch (flashlight) on or off
 
 ### getPicture()
 
-> **getPicture**(`width`, `height`, `quality`, `typeCrop?`, `alternativeCam?`): `Promise`\<`unknown`\>
+```ts { .no-language }
+getPicture(width, height, quality, typeCrop?, alternativeCam?): Promise<unknown>
+```
 
 Take a picture using the device camera app or an alternative camera implementation for older devices
 
@@ -84,7 +90,7 @@ Take a picture using the device camera app or an alternative camera implementati
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise<unknown>`
 
 - returns a promise that resolves with the base64 string of the picture
 
@@ -92,7 +98,9 @@ Take a picture using the device camera app or an alternative camera implementati
 
 ### getGalleryPicture()
 
-> **getGalleryPicture**(`width`, `height`, `quality`): `Promise`\<`any`[]\>
+```ts { .no-language }
+getGalleryPicture(width, height, quality): Promise<any[]>
+```
 
 Asks the user for pictures from the device gallery
 
@@ -106,7 +114,7 @@ Asks the user for pictures from the device gallery
 
 #### Returns
 
-`Promise`\<`any`[]\>
+`Promise<any[]>`
 
 - returns a promise that resolves with an array of base64 strings of the selected pictures
 
@@ -114,7 +122,9 @@ Asks the user for pictures from the device gallery
 
 ### savePicture()
 
-> **savePicture**(`image`): `Promise`\<`any`\>
+```ts { .no-language }
+savePicture(image): Promise<any>
+```
 
 Saves a base64 image string to the local database flxImages table (it's use is not adivesed, you should use flx-imagegallery configuration in practically every case)
 
@@ -126,6 +136,6 @@ Saves a base64 image string to the local database flxImages table (it's use is n
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise<any>`
 
 - returns a promise that resolves when the image is saved
