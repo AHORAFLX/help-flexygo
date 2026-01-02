@@ -18,7 +18,7 @@ To use the format, we need three parameters. The first we will indicate the prop
 
 To add a style, we will first indicate your property, followed by the data type and finally need two parameters to complete the type Boolean (true value, false value).
 
-```json
+```js
 {{ Property | bool: value true, value false }}
 ```
 
@@ -37,7 +37,7 @@ It may be the case that one of the two values is empty, it will take the value b
 _Example:_
 
 ```html
-<i class = "flx-icon icon-eye {{CanView|bool:,txt-danger}}" </i>
+<i class = "flx-icon icon-eye {{CanView|bool:,txt-danger}}"></i>
 ```
 
 | If the value is false then... | If the value is true then... |
@@ -118,7 +118,7 @@ If we look at the example, we have set the property **Address** to show us the f
 
 **IsNull** type format sets new value when returned value is empty or null. If the value is not null, it will display the original value.
 
-```json
+```html
 <span> {{ Address|isnull: No address }} </span>
 ```
 
@@ -126,7 +126,7 @@ It also accepts an optional parameter if we need to change original value.
 
 _Example:_
 
-```json
+```html
 <span> {{ Address|isnull: No address, Address found }} </span>
 ```
 
@@ -134,7 +134,7 @@ _Example:_
 
 This type of format, allows us to insert a list of values, must meet one of them with the associated property. But when the property doesn't meet any of the values, the value from Else will be applied directly.
 
-```json
+```js
 {{ Property | switch: [value1:result1, value2:result2, value3:result3, else:result4] }}
 ```
 
@@ -148,7 +148,7 @@ _Example:_
 
 Type format **date** maintains the same syntax we've used so far, it also offers three possibilities of configuration.
 
-```json
+```js
 {{UpgradeDate|date:LL}}
 ```
 
@@ -176,13 +176,13 @@ moment().format(llll);			// Fri, Oct 17, 2025 10:08 AM
 
 ### From now
 
-```json
+```js
 {{DateValue|fromnow}}
 ```
 
 _Example:_
 
-```json
+```js
 {{DateValue|fromnow:LLL}}
 ```
 
@@ -192,13 +192,13 @@ If our property contained the first day of the year 2016.
 
 ### From the moment in which it made until now
 
-```json
+```js
 {{DateValue|tonow}}
 ```
 
 _Example:_
 
-```json
+```js
 {{DateValue|tonow:LLL}}
 ```
 
@@ -210,7 +210,7 @@ If our property contained the first day of the year 2016.
 
 We can translate template text using the following syntax:
 
-```json
+```js
 {{translate|Any text to translate}}
 ```
 
@@ -228,7 +228,7 @@ Format strings can be nested inside each other:
 
 _Example:_
 
-```json
+```js
 {{State|switch:[1:'{{Receive|bool:{{Cad|string:lower}},No}}',2:'Accept',3:'Complete',null:'Outstanding',else:'Closed']}}
 ```
 
@@ -315,7 +315,7 @@ When we have a form, we can indicate that number of characters we want to enter 
 ### Phone + Extension
 
 ```html
-<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text>
+<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone"></i></span></flx-text>
 ```
 
 ![Phone + Ext](/docs_assets/images/Formats/PhoneExtension.png "Phone + Ext")
@@ -323,7 +323,7 @@ When we have a form, we can indicate that number of characters we want to enter 
 ### Email
 
 ```html
-<flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web" </i></span></flx-text>
+<flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web"></i></span></flx-text>
 ```
 
 ![Email](/docs_assets/images/Formats/Email.png "Email")
@@ -368,6 +368,6 @@ This tags allows you to render a toolbar in a list or a wiew module, using the o
 
 Template:
 
-```json
+```js
 {{toolbar|systb-edit}}
 ```

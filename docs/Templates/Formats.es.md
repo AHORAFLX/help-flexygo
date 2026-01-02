@@ -18,7 +18,7 @@ Para utilizar el formato, necesitamos tres parámetros. El primero es la propied
 
 Para agregar un estilo, primero indicamos la propiedad, seguida por el tipo de dato y finalmente necesitamos dos parámetros para completar el tipo Booleano (valor verdadero, valor falso).
 
-```json
+```js
 {{ Property | bool: value true, value false }}
 ```
 
@@ -37,7 +37,7 @@ En el caso de que uno de los dos valores esté vacío, tomará el valor por defe
 _Ejemplo:_
 
 ```html
-<i class = "flx-icon icon-eye {{CanView|bool:,txt-danger}}" </i>
+<i class = "flx-icon icon-eye {{CanView|bool:,txt-danger}}"></i>
 ```
 
 | Si el valor es false entonces... | Si el valor es true entonces... |
@@ -120,7 +120,7 @@ En el ejemplo, hemos configurado la propiedad **Address** para mostrar los prime
 
 El formato de tipo **IsNull** establece un nuevo valor cuando el valor retornado está vacío o es null. Si el valor no es null, mostrará el valor original.
 
-```json
+```html
 <span> {{ Address|isnull: No address }} </span>
 ```
 
@@ -128,7 +128,7 @@ También acepta un parámetro opcional si necesitamos cambiar el valor original.
 
 _Ejemplo:_
 
-```json
+```html
 <span> {{ Address|isnull: No address, Address found }} </span>
 ```
 
@@ -136,7 +136,7 @@ _Ejemplo:_
 
 Este tipo de formato nos permite insertar una lista de valores, que deben coincidir con uno de ellos de la propiedad asociada. Si la propiedad no coincide con ninguno de los valores, se aplicará directamente el valor de Else.
 
-```json
+```js
 {{ Property | switch: [value1:result1, value2:result2, value3:result3, else:result4] }}
 ```
 
@@ -150,7 +150,7 @@ _Ejemplo:_
 
 El formato de tipo fecha mantiene la misma sintaxis que hemos utilizado hasta ahora, pero ofrece tres posibilidades de configuración.
 
-```json
+```js
 {{UpgradeDate|date:LL}}
 ```
 
@@ -178,13 +178,13 @@ moment().format(llll);			// Fri, Oct 17, 2025 10:08 AM
 
 ### Desde ahora
 
-```json
+```js
 {{DateValue|fromnow}}
 ```
 
 _Ejemplo:_
 
-```json
+```js
 {{DateValue|fromnow:LLL}}
 ```
 
@@ -194,13 +194,13 @@ Si nuestra propiedad contenía el primer día del año 2016.
 
 ### Desde el momento en que se realizó hasta ahora
 
-```json
+```js
 {{DateValue|tonow}}
 ```
 
 _Ejemplo:_
 
-```json
+```js
 {{DateValue|tonow:LLL}}
 ```
 
@@ -212,7 +212,7 @@ Si nuestra propiedad contenía el primer día del año 2016.
 
 Podemos traducir el texto de la plantilla utilizando la siguiente sintaxis: 
 
-```json
+```js
 {{translate|Any text to translate}}
 ```
 
@@ -230,7 +230,7 @@ Las cadenas de formato pueden estar anidadas dentro de otras:
 
 _Ejemplo:_
 
-```json
+```js
 {{State|switch:[1:'{{Receive|bool:{{Cad|string:lower}},No}}',2:'Accept',3:'Complete',null:'Outstanding',else:'Closed']}}
 ```
 
@@ -308,7 +308,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 ### Teléfono
 
 ```html
-<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "99-999-99-99"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text>
+<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "99-999-99-99"/><span class = "input-group-addon"><i class = "flx-icon icon-phone"></i></span></flx-text>
 ```
 
 ![Phone](/docs_assets/images/Formats/Phone.png "Phone")
@@ -316,7 +316,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 ### Teléfono + Ext
 
 ```html
-<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text>
+<flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone"></i></span></flx-text>
 ```
 
 ![Phone + Ext](/docs_assets/images/Formats/PhoneExtension.png "Phone + Ext")
@@ -324,7 +324,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 ### Correo Electrónico
 
 ```html
-<flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web" </i></span></flx-text>
+<flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web"></i></span></flx-text>
 ```
 
 ![Email](/docs_assets/images/Formats/Email.png "Email")
@@ -369,6 +369,6 @@ Este tag permite renderizar una barra de herramientas en una lista o módulo de 
 
 Plantilla:
 
-```json
+```js
 {{toolbar|systb-edit}}
 ```
