@@ -29,11 +29,6 @@ Enví­a un correo electrónico utilizando el sistema de correo predeterminado.
 
 `Promise<void>`
 
-
-#### Método
-
-sendMail
-
 ---
 
 ### createPDF()
@@ -60,7 +55,3 @@ Genera un archivo PDF a partir de un string HTML.
 
 
 - Si **share = false**, devuelve una promesa con el objeto PDF en base64.
-
-#### Método
-
-createPDF

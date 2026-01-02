@@ -25,10 +25,6 @@ Escanea códigos (diferentes tipos de códigos de barras y QR) utilizando la cá
 
 - Devuelve un objeto con el formato del código, el texto y un boolean indicando si se canceló.
 
-#### Método
-
-scanCode
-
 ***
 
 ### checkCameraPermission()

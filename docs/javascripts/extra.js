@@ -116,24 +116,14 @@ function _nav(url) {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        const copy_notification = document.createElement('div');
-        copy_notification.className = 'small-message';
-        copy_notification.innerText = translations[getLanguage()]['copied'];
+        const md_dialog = document.querySelector('.md-dialog');
+        md_dialog.querySelector('.md-dialog__inner').innerText = translations[getLanguage()]['copied'];
 
-        //We append it and animate its entrance
-        document.body.appendChild(copy_notification);
-        copy_notification.style.display = 'block';
-        copy_notification.style.right = `-${copy_notification.clientWidth}px`;
-        copy_notification.style.transition = "right .3s cubic-bezier(0, 0, 0.18, 0.92)"; //The transition is set after properly adjustin right position so it doesn't animate from 100% to its -width
-        copy_notification.style.right = "0";
+        md_dialog.classList.add('md-dialog--active');
 
         setTimeout(() => {
-            copy_notification.style.right = `-${copy_notification.clientWidth}px`;
-
-            setTimeout(() => {
-                document.body.removeChild(copy_notification);
-            }, 300);
-        }, 2000);
+            md_dialog.classList.remove('md-dialog--active');
+        }, 2300);
     }); 
 }
 
@@ -178,12 +168,12 @@ function toggleCollapsable(element) {
 
 const translations = {
     'en': {
-        'copied': 'Copied to clipboard!',  
+        'copied': 'Copied to clipboard',  
         'filter_charts': 'Filter charts',
         'unfilter_charts': 'Unfilter charts',
     },
     'es': {
-        'copied': '¡Copiado en el portapapeles!',
+        'copied': 'Copiado en el portapapeles',
         'filter_charts': 'Filtrar gráficos',
         'unfilter_charts': 'Quitar filtro de los gráficos',
     }

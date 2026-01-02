@@ -26,7 +26,3 @@ Guarda la información del formulario.
 
 
 - Una promesa que se resuelve en `true` si el guardado fue exitoso.
-
-#### Método
-
-save
