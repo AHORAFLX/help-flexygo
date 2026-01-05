@@ -189,7 +189,7 @@ dialog {
 [dir=ltr] .md-dialog {
     transform: translateY(0);
     bottom: 25px;
-    right: -200px;
+    right: -270px;
     opacity: 1;
     
     min-width: 0;
