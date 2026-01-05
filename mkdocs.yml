@@ -48,6 +48,8 @@ extra_javascript:
   - javascripts/components/fh-modal.js
   - javascripts/components/fh-copy.js
   - javascripts/components/fh-popover.js
+  - javascripts/cultures/es.js
+  - javascripts/cultures/en.js
 markdown_extensions:
   - toc:
       permalink: true

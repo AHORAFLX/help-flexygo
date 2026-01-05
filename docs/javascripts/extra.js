@@ -1,10 +1,12 @@
+const FH_CULTURES = new Object(); //The object with every culture translations
+const DEFAULT_LANGUAGE = 'en';
+const LANGUAGES = ['en', 'es'];
+
 let navigation_dialog;
 addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
 })
 
-const DEFAULT_LANGUAGE = 'en';
-const LANGUAGES = ['en', 'es'];
 
 function changeLanguage(new_language) {
     const base_path = getBasePath();
@@ -117,7 +119,7 @@ function _nav(url) {
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         const md_dialog = document.querySelector('.md-dialog');
-        md_dialog.querySelector('.md-dialog__inner').innerText = translations[getLanguage()]['copied'];
+        md_dialog.querySelector('.md-dialog__inner').innerText = translate('copied');
 
         md_dialog.classList.add('md-dialog--active');
 
@@ -144,7 +146,7 @@ function toggleGraphsFilter(button) {
             graph.classList.remove('filtered-graph');
             graph.classList.add('unfiltered-graph');
 
-            button.innerText = translations[getLanguage()]['filter_charts'];
+            button.innerText = translate('filter_charts');
         });
 
         return;
@@ -156,7 +158,7 @@ function toggleGraphsFilter(button) {
         graph.classList.remove('unfiltered-graph');
         graph.classList.add('filtered-graph');
 
-        button.innerText = translations[getLanguage()]['unfilter_charts'];
+        button.innerText = translate('unfilter_charts');
     });
 }
 
@@ -166,15 +168,7 @@ function toggleCollapsable(element) {
     element.classList.toggle('icon-rotate-90');
 }
 
-const translations = {
-    'en': {
-        'copied': 'Copied to clipboard',  
-        'filter_charts': 'Filter charts',
-        'unfilter_charts': 'Unfilter charts',
-    },
-    'es': {
-        'copied': 'Copiado en el portapapeles',
-        'filter_charts': 'Filtrar gráficos',
-        'unfilter_charts': 'Quitar filtro de los gráficos',
-    }
+function translate(key) {
+    const lang = getLanguage();
+    return FH_CULTURES[lang][key] || key;
 }

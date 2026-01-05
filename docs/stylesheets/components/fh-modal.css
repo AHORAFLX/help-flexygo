@@ -48,3 +48,9 @@
     z-index: 9999;
     backdrop-filter: blur(2px);
 }
+
+/*fh-modal[type="code"]::before {
+    content: "</>";
+    margin-right: 5px;
+}*/
+
