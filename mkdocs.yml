@@ -80,6 +80,17 @@ plugins:
         - locale: es
           name: Español
           build: true
+          nav_translations:
+            Ahora Bussiness Hub: Ahora Bussiness Hub
+            Connectors: Conectores
+            Information: Información
+            Modules: Módulos
+            Offline App: App Offline
+            JS Functions: Funciones JS
+            Programming: Programación
+            Reporting: Informes
+            Style: Estilos
+            Templates: Plantillas
   - glightbox:
       touchNavigation: true
       loop: false
