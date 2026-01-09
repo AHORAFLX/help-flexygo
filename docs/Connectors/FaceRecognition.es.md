@@ -4,7 +4,7 @@ El reconocimiento facial es una forma de identificar o confirmar la identidad de
 
 ## Configuración
 
-Para habilitar esta función, debes **descargar los modelos entrenados** desde [https://nuget.flexygo.com/setup/models.zip](https://nuget.flexygo.com/setup/models.zip) y extraerlos en tu directorio **flexygo**, por ejemplo: _~/custom/models/_
+Para habilitar esta función, debes **descargar los modelos entrenados** desde [https://docs.flexygo.com/setup/models.zip](https://docs.flexygo.com/setup/models.zip) y extraerlos en tu directorio **flexygo**, por ejemplo: _~/custom/models/_
 
 Ten en cuenta que el reconocimiento facial requiere un **servidor de 64 bits**.
 {: .flx-warning-card }

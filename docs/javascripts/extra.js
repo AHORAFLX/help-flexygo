@@ -5,6 +5,7 @@ const LANGUAGES = ['en', 'es'];
 let navigation_dialog;
 addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
+    navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
 })
 
 

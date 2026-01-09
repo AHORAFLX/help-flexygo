@@ -6,7 +6,7 @@ Test Automation are an important value when evaluating and verifying the correct
 
 **flexygo** allows us not only to have **flexygo**'s own tests, but also the possibility of including any test dll that we need for our products or solutions. It's as easy as to inform in the test section of the location of the new testing dll. From this moment onwards as soon as we execute a diagnosis of our solution, it will pass as many unit or integration test that are available in the different dll.
 
-You can find more information about testing with **flexygo** here [Test Unitario](https://nuget.flexygo.com/develop/readme.html#TestUnitario)
+You can find more information about testing with **flexygo** here [Test Unitario](https://docs.flexygo.com/develop/readme.html#TestUnitario)
 {: .flx-warning-card }
 
 ![Dll Test management](/docs_assets/images/Custom_DLL/testing2.png "Image 1. Dll Test management")

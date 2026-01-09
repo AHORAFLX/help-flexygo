@@ -6,7 +6,7 @@ La Automatización de Pruebas es un valor importante al evaluar y verificar el c
 
 Flexygo nos permite no solo tener las propias pruebas de flexygo, sino también la posibilidad de incluir cualquier dll de prueba que necesitemos para nuestros productos o soluciones. Es tan fácil como informar en la sección de pruebas la ubicación de la nueva dll de pruebas. A partir de este momento, tan pronto como ejecutemos un diagnóstico de nuestra solución, pasará tantas pruebas unitarias o de integración que estén disponibles en las diferentes dll. 
 
-Puedes encontrar más información sobre pruebas con flexygo aquí [Test Unitario](https://nuget.flexygo.com/develop/readme.html#TestUnitario).
+Puedes encontrar más información sobre pruebas con flexygo aquí [Test Unitario](https://docs.flexygo.com/develop/readme.html#TestUnitario).
 {: .flx-warning-card }
 
 ![Dll Test management](/docs_assets/images/Custom_DLL/testing2.png "Imagen 1. Gestión de Pruebas Dll")

@@ -15,13 +15,11 @@ theme:
   language: en
   features:
     - navigation.path
-    #- navigation.tabs # Top tabs (like Ionic)
     - navigation.expand # Expanded sections in sidebar
     - navigation.sections # Section headers in sidebar
     - navigation.instant # Instant page loading (SPA-like)
     - navigation.tracking # Track active section in sidebar
     - navigation.top # Track active section in sidebar
-    #- header.autohide # Auto-hide header on scroll down
     - search.highlight # Highlight search terms
     - search.suggest # Show search suggestions
     - content.code.copy  # Code copy button
@@ -102,3 +100,4 @@ plugins:
       draggable: false
       skip_classes:
         - not-zoomable
+        - flx-image-of-title

@@ -4,7 +4,7 @@ Facial recognition is a way of identifying or confirming an individual's identit
 
 ## Settings
 
-To enable this function, you need to [download trained models](https://nuget.flexygo.com/setup/models.zip) and extract them in your **flexygo** directory, for example: _~/custom/models/_
+To enable this function, you need to [download trained models](https://docs.flexygo.com/setup/models.zip) and extract them in your **flexygo** directory, for example: _~/custom/models/_
 
 You have to take into account that face recognition requires a 64 bits server.
 {: .flx-warning-card }
