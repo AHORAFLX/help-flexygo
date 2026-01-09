@@ -1,10 +1,13 @@
+const FH_CULTURES = new Object(); //The object with every culture translations
+const DEFAULT_LANGUAGE = 'en';
+const LANGUAGES = ['en', 'es'];
+
 let navigation_dialog;
 addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
+    navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
 })
 
-const DEFAULT_LANGUAGE = 'en';
-const LANGUAGES = ['en', 'es'];
 
 function changeLanguage(new_language) {
     const base_path = getBasePath();
@@ -116,24 +119,14 @@ function _nav(url) {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        const copy_notification = document.createElement('div');
-        copy_notification.className = 'small-message';
-        copy_notification.innerText = translations[getLanguage()]['copied'];
+        const md_dialog = document.querySelector('.md-dialog');
+        md_dialog.querySelector('.md-dialog__inner').innerText = translate('copied');
 
-        //We append it and animate its entrance
-        document.body.appendChild(copy_notification);
-        copy_notification.style.display = 'block';
-        copy_notification.style.right = `-${copy_notification.clientWidth}px`;
-        copy_notification.style.transition = "right .3s cubic-bezier(0, 0, 0.18, 0.92)"; //The transition is set after properly adjustin right position so it doesn't animate from 100% to its -width
-        copy_notification.style.right = "0";
+        md_dialog.classList.add('md-dialog--active');
 
         setTimeout(() => {
-            copy_notification.style.right = `-${copy_notification.clientWidth}px`;
-
-            setTimeout(() => {
-                document.body.removeChild(copy_notification);
-            }, 300);
-        }, 2000);
+            md_dialog.classList.remove('md-dialog--active');
+        }, 2300);
     }); 
 }
 
@@ -154,7 +147,7 @@ function toggleGraphsFilter(button) {
             graph.classList.remove('filtered-graph');
             graph.classList.add('unfiltered-graph');
 
-            button.innerText = translations[getLanguage()]['filter_charts'];
+            button.innerText = translate('filter_charts');
         });
 
         return;
@@ -166,7 +159,7 @@ function toggleGraphsFilter(button) {
         graph.classList.remove('unfiltered-graph');
         graph.classList.add('filtered-graph');
 
-        button.innerText = translations[getLanguage()]['unfilter_charts'];
+        button.innerText = translate('unfilter_charts');
     });
 }
 
@@ -176,15 +169,7 @@ function toggleCollapsable(element) {
     element.classList.toggle('icon-rotate-90');
 }
 
-const translations = {
-    'en': {
-        'copied': 'Copied to clipboard!',  
-        'filter_charts': 'Filter charts',
-        'unfilter_charts': 'Unfilter charts',
-    },
-    'es': {
-        'copied': '¡Copiado en el portapapeles!',
-        'filter_charts': 'Filtrar gráficos',
-        'unfilter_charts': 'Quitar filtro de los gráficos',
-    }
+function translate(key) {
+    const lang = getLanguage();
+    return FH_CULTURES[lang][key] || key;
 }

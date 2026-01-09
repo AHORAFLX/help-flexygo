@@ -19,10 +19,19 @@
         display: block;
     }
 
-    pre {
-        background: var(--flx-color-background);
-        border-radius: 0 0 var(--flx-border-radius) var(--flx-border-radius);
-        padding: 10px;
+    /* Code blocks */
+    .highlight {
+        pre {
+            background: var(--flx-color-background);
+            border-radius: 0 0 var(--flx-border-radius) var(--flx-border-radius);
+            padding: 10px;
+    
+            button.md-clipboard {
+                position: relative;
+                left: 98%;
+                width: 0;
+            }
+        }
     }
 }
 

@@ -17,6 +17,8 @@
 
         a {
             color: var(--md-typeset-color);
+            display: flow-root;
+            height: 100%;
         }
 
         a > * {
@@ -124,12 +126,17 @@
 }
 
 .md-typeset .flx-info-card {
-    background: #f0f8ff;
+    background-color: color-mix(in hsl, #d6ebfd, transparent 65%);
     margin-top: 0.6em;
     margin-bottom: 0.6em;
     padding: 0.4em 0.9em;
     border: 1px solid #c7e1f8;
     border-radius: 8px;
+}
+
+[data-md-color-scheme="darkmode"] .md-typeset .flx-info-card {
+    background-color: color-mix(in hsl, #2a3b50, transparent);
+    border-color:#3e3e3f;
 }
 
 /* Buttons */
@@ -185,18 +192,29 @@ dialog {
     }
 }
 
-/* Small message */
-.small-message {
-    display: none;
-    background: #1bb7b1;
-    position: fixed;
+/* Small Messages */
+[dir=ltr] .md-dialog {
+    transform: translateY(0);
     bottom: 25px;
-    right: -100%; /* We set -100% so we can diplay it and get its width */
-    z-index: 1;
-    color: white;
-    font-size: 18px;
+    right: -270px;
+    opacity: 1;
+    
+    min-width: 0;
+    border-radius: var(--flx-border-radius) 0 0 var(--flx-border-radius);
     padding: 10px 12px 10px 18px;
-    border-radius: 16px 0 0 16px;
+    
+    background-color: var(--flx-color);
+    transition: right .3s cubic-bezier(0, 0, 0.18, 0.92);
+
+    &.md-dialog--active {
+        right: 0px; 
+    }
+
+    .md-dialog__inner {
+        font-size: 18px;
+        color: var(--flx-color-text);
+        line-height: normal;
+    }
 }
 
 /* EXAMPLES DIRECTLY COMING FROM OLD HELP */

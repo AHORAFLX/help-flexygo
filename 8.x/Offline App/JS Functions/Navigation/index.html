@@ -3276,9 +3276,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 - <code>transfer</code> functions navigate to a new page but replace the current page in the navigation stack, preventing users from returning to the previous page.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="goback">goBack()<a class="headerlink" href="#goback" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goBack</strong>(<code>current?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">goBack</span><span class="p">(</span><span class="nx">current</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Handles back navigation. If a modal is open, it closes the modal; otherwise, it navigates back in the router history.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3301,9 +3300,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="closemodal">closeModal()<a class="headerlink" href="#closemodal" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>closeModal</strong>(<code>current?</code>, <code>data?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">closeModal</span><span class="p">(</span><span class="nx">current</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Closes the currently open modal. If a specific element is provided, it closes the modal associated with that element.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3331,25 +3329,22 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="gohome">goHome()<a class="headerlink" href="#gohome" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goHome</strong>(): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">goHome</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the home page of the application, resetting the navigation stack.</p>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
 <p><code>void</code></p>
 <hr>
 <h3 id="gosync">goSync()<a class="headerlink" href="#gosync" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goSync</strong>(): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">goSync</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the synchronization page of the application, resetting the navigation stack.</p>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
 <p><code>void</code></p>
 <hr>
 <h3 id="gologin">goLogin()<a class="headerlink" href="#gologin" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goLogin</strong>(<code>force_login?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">goLogin</span><span class="p">(</span><span class="nx">force_login</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the login page of the application, resetting the navigation stack.</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">¶</a></h4>
 <table>
@@ -3374,9 +3369,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="golist">goList()<a class="headerlink" href="#golist" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goList</strong>(<code>object</code>, <code>pagename</code>, <code>filter?</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">goList</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the list of the specified object and pagename</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">¶</a></h4>
 <table>
@@ -3414,9 +3408,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="goedit">goEdit()<a class="headerlink" href="#goedit" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goEdit</strong>(<code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">goEdit</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the edit page of the specified object and pagename</p>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">¶</a></h4>
 <table>
@@ -3454,9 +3447,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="goview">goView()<a class="headerlink" href="#goview" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goView</strong>(<code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">goView</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the view page of the specified object and pagename</p>
 <h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">¶</a></h4>
 <table>
@@ -3494,9 +3486,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="goinsert">goInsert()<a class="headerlink" href="#goinsert" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goInsert</strong>(<code>object</code>, <code>pagename</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">goInsert</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the insert page of the specified object and pagename</p>
 <h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">¶</a></h4>
 <table>
@@ -3529,9 +3520,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="gogallery">goGallery()<a class="headerlink" href="#gogallery" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goGallery</strong>(<code>object</code>, <code>objectid</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">goGallery</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">objectid</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the gallery page of the specified object and objectid</p>
 <h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">¶</a></h4>
 <table>
@@ -3564,9 +3554,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="godocuments">goDocuments()<a class="headerlink" href="#godocuments" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goDocuments</strong>(<code>object</code>, <code>objectid</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">goDocuments</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">objectid</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Navigates to the documents page of the specified object and objectid</p>
 <h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">¶</a></h4>
 <table>
@@ -3599,9 +3588,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="goai">goAI()<a class="headerlink" href="#goai" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goAI</strong>(<code>setting_id</code>, <code>first_message?</code>, <code>defaults?</code>, <code>is_first_message_by_mic?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">goAI</span><span class="p">(</span><span class="nx">setting_id</span><span class="p">,</span><span class="w"> </span><span class="nx">first_message</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">is_first_message_by_mic</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Opens the AI modal with the specified settings</p>
 <h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">¶</a></h4>
 <table>
@@ -3639,9 +3627,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="transferlist">transferList()<a class="headerlink" href="#transferlist" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>transferList</strong>(<code>object</code>, <code>pagename</code>, <code>filter?</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">transferList</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Transfers to the list of the specified object and pagename, not allowing to go back to the previous page</p>
 <h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">¶</a></h4>
 <table>
@@ -3679,9 +3666,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="transferedit">transferEdit()<a class="headerlink" href="#transferedit" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>transferEdit</strong>(<code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">transferEdit</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Transfers to the edit page of the specified object and pagename, not allowing to go back to the previous page</p>
 <h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">¶</a></h4>
 <table>
@@ -3719,9 +3705,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="transferview">transferView()<a class="headerlink" href="#transferview" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>transferView</strong>(<code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">transferView</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Transfers to the view page of the specified object and pagename, not allowing to go back to the previous page</p>
 <h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">¶</a></h4>
 <table>
@@ -3759,9 +3744,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="transferinsert">transferInsert()<a class="headerlink" href="#transferinsert" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>transferInsert</strong>(<code>object</code>, <code>pagename</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">transferInsert</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Transfers to the insert page of the specified object and pagename, not allowing to go back to the previous page</p>
 <h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">¶</a></h4>
 <table>
@@ -3794,9 +3778,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="transfergallery">transferGallery()<a class="headerlink" href="#transfergallery" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>transferGallery</strong>(<code>object</code>, <code>objectid</code>, <code>defaults?</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">transferGallery</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">objectid</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Transfers to the gallery page of the specified object and objectid, not allowing to go back to the previous page</p>
 <h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">¶</a></h4>
 <table>
@@ -3829,9 +3812,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="transferdocuments">transferDocuments()<a class="headerlink" href="#transferdocuments" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>transferDocuments</strong>(<code>object</code>, <code>objectid</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">transferDocuments</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">objectid</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Transfers to the documents page of the specified object and objectid, not allowing to go back to the previous page</p>
 <h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">¶</a></h4>
 <table>
@@ -3859,9 +3841,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="modallist">modalList()<a class="headerlink" href="#modallist" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>modalList</strong>(<code>object</code>, <code>pagename</code>, <code>filter?</code>, <code>defaults?</code>): <code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nx">modalList</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">OverlayEventDetail</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;&gt;</span>
+</span></code></pre></div>
 <p>Opens a modal with a list of the specified object and pagename</p>
 <h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">¶</a></h4>
 <table>
@@ -3896,12 +3877,11 @@ It contains functionalities for navigating between pages, opening modals, and ha
 </tbody>
 </table>
 <h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
+<p><code>Promise&lt;OverlayEventDetail&lt;any&gt;&gt;</code></p>
 <hr>
 <h3 id="modaledit">modalEdit()<a class="headerlink" href="#modaledit" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>modalEdit</strong>(<code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults?</code>): <code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">modalEdit</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">OverlayEventDetail</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;&gt;</span>
+</span></code></pre></div>
 <p>Opens a modal with the edit page of the specified object and pagename</p>
 <h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">¶</a></h4>
 <table>
@@ -3936,12 +3916,11 @@ It contains functionalities for navigating between pages, opening modals, and ha
 </tbody>
 </table>
 <h4 id="returns_19">Returns<a class="headerlink" href="#returns_19" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
+<p><code>Promise&lt;OverlayEventDetail&lt;any&gt;&gt;</code></p>
 <hr>
 <h3 id="modalview">modalView()<a class="headerlink" href="#modalview" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>modalView</strong>(<code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults?</code>): <code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">modalView</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">OverlayEventDetail</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;&gt;</span>
+</span></code></pre></div>
 <p>Opens a modal with the view page of the specified object and pagename</p>
 <h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">¶</a></h4>
 <table>
@@ -3976,12 +3955,11 @@ It contains functionalities for navigating between pages, opening modals, and ha
 </tbody>
 </table>
 <h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
+<p><code>Promise&lt;OverlayEventDetail&lt;any&gt;&gt;</code></p>
 <hr>
 <h3 id="modalinsert">modalInsert()<a class="headerlink" href="#modalinsert" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>modalInsert</strong>(<code>object</code>, <code>pagename</code>, <code>defaults?</code>): <code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">modalInsert</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">OverlayEventDetail</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;&gt;</span>
+</span></code></pre></div>
 <p>Opens a modal with the insert page of the specified object and pagename</p>
 <h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">¶</a></h4>
 <table>
@@ -4011,12 +3989,11 @@ It contains functionalities for navigating between pages, opening modals, and ha
 </tbody>
 </table>
 <h4 id="returns_21">Returns<a class="headerlink" href="#returns_21" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>OverlayEventDetail</code>\&lt;<code>any</code>&gt;&gt;</p>
+<p><code>Promise&lt;OverlayEventDetail&lt;any&gt;&gt;</code></p>
 <hr>
 <h3 id="gopage">goPage()<a class="headerlink" href="#gopage" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goPage</strong>(<code>type</code>, <code>object</code>, <code>pagename</code>, <code>filter</code>, <code>defaults</code>, <code>direction</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nx">goPage</span><span class="p">(</span><span class="kr">type</span><span class="p">,</span><span class="w"> </span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">pagename</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="p">,</span><span class="w"> </span><span class="nx">direction</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>The generic form of navigation (not recommended to be used directly, use the go or back functions instead)</p>
 <h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">¶</a></h4>
 <table>
@@ -4064,9 +4041,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="gopagegalldoc">goPageGallDoc()<a class="headerlink" href="#gopagegalldoc" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>goPageGallDoc</strong>(<code>type</code>, <code>object</code>, <code>objectid</code>, <code>defaults</code>, <code>direction</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nx">goPageGallDoc</span><span class="p">(</span><span class="kr">type</span><span class="p">,</span><span class="w"> </span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">objectid</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="p">,</span><span class="w"> </span><span class="nx">direction</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>The generic form of navigation to gallery or documents</p>
 <h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">¶</a></h4>
 <table>
@@ -4109,9 +4085,8 @@ It contains functionalities for navigating between pages, opening modals, and ha
 <p><code>void</code></p>
 <hr>
 <h3 id="currenturl">currentUrl()<a class="headerlink" href="#currenturl" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>currentUrl</strong>(): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nx">currentUrl</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Returns the current URL of the router</p>
 <h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
@@ -4436,6 +4411,10 @@ It contains functionalities for navigating between pages, opening modals, and ha
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

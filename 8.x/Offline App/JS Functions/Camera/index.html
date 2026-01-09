@@ -3110,9 +3110,8 @@
 <p>Camera functions that allow you to take pictures, access gallery images and scan codes using the device camera.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="scancode">scanCode()<a class="headerlink" href="#scancode" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>scanCode</strong>(<code>options</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">scanCode</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Scan codes(different types of barcodes and QRs) using device camera</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3132,44 +3131,38 @@
 </tbody>
 </table>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>returns a promise that resolves with an object containing the scanned code format, text, and a cancelled boolean</li>
 </ul>
-<h4 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h4>
-<p>scanCode</p>
 <hr>
 <h3 id="checkcamerapermission">checkCameraPermission()<a class="headerlink" href="#checkcamerapermission" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>checkCameraPermission</strong>(): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">checkCameraPermission</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Check for camera permissions before doing anything with it</p>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>returns a promise that resolves with a boolean indicating if the camera permission is granted</li>
 </ul>
 <hr>
 <h3 id="stopscan">stopScan()<a class="headerlink" href="#stopscan" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>stopScan</strong>(): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">stopScan</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Stops the scanning process</p>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
 <p><code>void</code></p>
 <hr>
 <h3 id="togglescannertorch">toggleScannerTorch()<a class="headerlink" href="#togglescannertorch" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>toggleScannerTorch</strong>(): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">toggleScannerTorch</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Toggles the device torch (flashlight) on or off</p>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
 <p><code>void</code></p>
 <hr>
 <h3 id="getpicture">getPicture()<a class="headerlink" href="#getpicture" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getPicture</strong>(<code>width</code>, <code>height</code>, <code>quality</code>, <code>typeCrop?</code>, <code>alternativeCam?</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">getPicture</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">,</span><span class="w"> </span><span class="nx">quality</span><span class="p">,</span><span class="w"> </span><span class="nx">typeCrop</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">alternativeCam</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Take a picture using the device camera app or an alternative camera implementation for older devices</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3215,15 +3208,14 @@
 </tbody>
 </table>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>returns a promise that resolves with the base64 string of the picture</li>
 </ul>
 <hr>
 <h3 id="getgallerypicture">getGalleryPicture()<a class="headerlink" href="#getgallerypicture" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getGalleryPicture</strong>(<code>width</code>, <code>height</code>, <code>quality</code>): <code>Promise</code>\&lt;<code>any</code>[]&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">getGalleryPicture</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">,</span><span class="w"> </span><span class="nx">quality</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="p">[]</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Asks the user for pictures from the device gallery</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">¶</a></h4>
 <table>
@@ -3257,15 +3249,14 @@
 </tbody>
 </table>
 <h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>[]&gt;</p>
+<p><code>Promise&lt;any[]&gt;</code></p>
 <ul>
 <li>returns a promise that resolves with an array of base64 strings of the selected pictures</li>
 </ul>
 <hr>
 <h3 id="savepicture">savePicture()<a class="headerlink" href="#savepicture" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>savePicture</strong>(<code>image</code>): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">savePicture</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Saves a base64 image string to the local database flxImages table (it's use is not adivesed, you should use flx-imagegallery configuration in practically every case)</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">¶</a></h4>
 <table>
@@ -3285,7 +3276,7 @@
 </tbody>
 </table>
 <h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <ul>
 <li>returns a promise that resolves when the image is saved</li>
 </ul>
@@ -3445,6 +3436,10 @@
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

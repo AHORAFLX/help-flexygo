@@ -3129,9 +3129,8 @@
 It contains functionalities for displaying error messages, warnings, success messages, confirmations, prompts, and alerts.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="showerror">showError()<a class="headerlink" href="#showerror" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>showError</strong>(<code>err</code>, <code>auditable?</code>, <code>write_on_console?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">showError</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">auditable</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">write_on_console</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows an error message. If auditable is true (default) and the message is not a required field exception, it will be logged in the local database.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3165,15 +3164,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <ul>
 <li>A promise that resolves when the error message has been displayed.</li>
 </ul>
 <hr>
 <h3 id="danger">danger()<a class="headerlink" href="#danger" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>danger</strong>(<code>msg</code>, <code>moreInfo?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">danger</span><span class="p">(</span><span class="nx">msg</span><span class="p">,</span><span class="w"> </span><span class="nx">moreInfo</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a danger toast message.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3198,15 +3196,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <ul>
 <li>A promise that resolves when the toast message has been displayed.</li>
 </ul>
 <hr>
 <h3 id="warning">warning()<a class="headerlink" href="#warning" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>warning</strong>(<code>msg</code>, <code>moreInfo?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">warning</span><span class="p">(</span><span class="nx">msg</span><span class="p">,</span><span class="w"> </span><span class="nx">moreInfo</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a warning toast message.</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">¶</a></h4>
 <table>
@@ -3231,15 +3228,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <ul>
 <li>A promise that resolves when the toast message has been displayed.</li>
 </ul>
 <hr>
 <h3 id="success">success()<a class="headerlink" href="#success" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>success</strong>(<code>msg</code>, <code>moreInfo?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">success</span><span class="p">(</span><span class="nx">msg</span><span class="p">,</span><span class="w"> </span><span class="nx">moreInfo</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a success toast message.</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">¶</a></h4>
 <table>
@@ -3264,15 +3260,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <ul>
 <li>A promise that resolves when the toast message has been displayed.</li>
 </ul>
 <hr>
 <h3 id="generic">generic()<a class="headerlink" href="#generic" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>generic</strong>(<code>msg</code>, <code>color</code>, <code>duration</code>, <code>moreInfo?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">generic</span><span class="p">(</span><span class="nx">msg</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="p">,</span><span class="w"> </span><span class="nx">duration</span><span class="p">,</span><span class="w"> </span><span class="nx">moreInfo</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a generic toast message with a more advanced configuration than the predefined types (danger, warning, success).</p>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">¶</a></h4>
 <table>
@@ -3307,15 +3302,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <ul>
 <li>A promise that resolves when the toast message has been displayed.</li>
 </ul>
 <hr>
 <h3 id="confirm">confirm()<a class="headerlink" href="#confirm" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>confirm</strong>(<code>header</code>, <code>message</code>, <code>css_class?</code>, <code>showCancelButton?</code>, <code>afterAlertPresent?</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">confirm</span><span class="p">(</span><span class="nx">header</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="nx">css_class</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">showCancelButton</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">afterAlertPresent</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Displays a confirmation dialog with customizable options.</p>
 <h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">¶</a></h4>
 <table>
@@ -3361,15 +3355,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>A promise that resolves if the user confirms, and rejects if the user cancels.</li>
 </ul>
 <hr>
 <h3 id="prompt">prompt()<a class="headerlink" href="#prompt" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>prompt</strong>(<code>header</code>, <code>message?</code>, <code>default_value?</code>, <code>showCancelButton?</code>, <code>afterAlertPresent?</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">prompt</span><span class="p">(</span><span class="nx">header</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">default_value</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">showCancelButton</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">afterAlertPresent</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Displays a prompt dialog with a single input field.</p>
 <h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">¶</a></h4>
 <table>
@@ -3415,15 +3408,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>A promise that resolves with the input data if the user confirms, and rejects if the user cancels.</li>
 </ul>
 <hr>
 <h3 id="prompts">prompts()<a class="headerlink" href="#prompts" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>prompts</strong>(<code>header</code>, <code>inputs</code>, <code>showCancelButton?</code>, <code>afterAlertPresent?</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">prompts</span><span class="p">(</span><span class="nx">header</span><span class="p">,</span><span class="w"> </span><span class="nx">inputs</span><span class="p">,</span><span class="w"> </span><span class="nx">showCancelButton</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">afterAlertPresent</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Displays a prompt dialog with multiple input fields.</p>
 <h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">¶</a></h4>
 <table>
@@ -3463,15 +3455,14 @@ It contains functionalities for displaying error messages, warnings, success mes
 </tbody>
 </table>
 <h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>A promise that resolves with the input data if the user confirms, and rejects if the user cancels.</li>
 </ul>
 <hr>
 <h3 id="alert">alert()<a class="headerlink" href="#alert" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>alert</strong>(<code>header</code>, <code>message</code>): <code>HTMLIonAlertElement</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">header</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">HTMLIonAlertElement</span>
+</span></code></pre></div>
 <p>Displays an alert dialog with a single "Ok" button.</p>
 <h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">¶</a></h4>
 <table>
@@ -3674,6 +3665,10 @@ It contains functionalities for displaying error messages, warnings, success mes
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

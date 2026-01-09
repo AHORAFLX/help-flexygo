@@ -3084,9 +3084,8 @@
 For using any of them we will use flexygo.ai.function_name</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="startvoicerecognition">startVoiceRecognition()<a class="headerlink" href="#startvoicerecognition" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>startVoiceRecognition</strong>(<code>setting_id</code>, <code>defaults</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">startVoiceRecognition</span><span class="p">(</span><span class="nx">setting_id</span><span class="p">,</span><span class="w"> </span><span class="nx">defaults</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>It opens a modal which will listen anything you say and after you end talking, or you press the mic button, it will open the desired assistant with you already
 having sent the message you said so the AI directly responds to it, reading out loud its response.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
@@ -3115,9 +3114,8 @@ having sent the message you said so the AI directly responds to it, reading out 
 <p><code>void</code></p>
 <hr>
 <h3 id="texttospeech">textToSpeech()<a class="headerlink" href="#texttospeech" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>textToSpeech</strong>(<code>text</code>, <code>language?</code>, <code>volume?</code>, <code>speed?</code>): <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">textToSpeech</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">language</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">volume</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">speed</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Any text that is sent will be read out loud by the app.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3152,22 +3150,20 @@ having sent the message you said so the AI directly responds to it, reading out 
 </tbody>
 </table>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
 <p>A promise that ends when the assistant ends speaking</p>
 <hr>
 <h3 id="stoptexttospeech">stopTextToSpeech()<a class="headerlink" href="#stoptexttospeech" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>stopTextToSpeech</strong>(): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">stopTextToSpeech</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Stops the text to speech if there's any playing</p>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <p>A promise that ends when the assistant gets stopped</p>
 <hr>
 <h3 id="toggletexttospeech">toggleTextToSpeech()<a class="headerlink" href="#toggletexttospeech" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>toggleTextToSpeech</strong>(<code>text</code>, <code>language?</code>, <code>volume?</code>, <code>speed?</code>): <code>Promise</code>\&lt;<code>void</code>&gt; | <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">toggleTextToSpeech</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">language</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">volume</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">speed</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Any text that is sent will be read out loud by the app unless if the assistant is already talking in which case it will stop it from speaking.</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">¶</a></h4>
 <table>
@@ -3202,7 +3198,7 @@ having sent the message you said so the AI directly responds to it, reading out 
 </tbody>
 </table>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt; | <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;void&gt; | Promise&lt;boolean&gt;</code></p>
 <p>A promise that ends when one of the actions ends</p>
 
 
@@ -3333,6 +3329,10 @@ having sent the message you said so the AI directly responds to it, reading out 
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

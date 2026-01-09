@@ -3408,18 +3408,16 @@
 from generating unique IDs to handling files, parsing JSON, translating keys, executing dynamic code, and more.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="guid">GUID()<a class="headerlink" href="#guid" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>GUID</strong>(): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">GUID</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Generates an unique id</p>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
 <p>unique name.</p>
 <hr>
 <h3 id="blobtobase64">blobToBase64()<a class="headerlink" href="#blobtobase64" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>blobToBase64</strong>(<code>blob</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">blobToBase64</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Converts a Blob to a Base64 string</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3439,13 +3437,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <p>A promise that resolves with the Base64 as a string</p>
 <hr>
 <h3 id="b64toblob">b64toBlob()<a class="headerlink" href="#b64toblob" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>b64toBlob</strong>(<code>b64Data</code>, <code>contentType</code>, <code>sliceSize</code>): <code>Blob</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">b64toBlob</span><span class="p">(</span><span class="nx">b64Data</span><span class="p">,</span><span class="w"> </span><span class="nx">contentType</span><span class="p">,</span><span class="w"> </span><span class="nx">sliceSize</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Blob</span>
+</span></code></pre></div>
 <p>Converts a Base64 string to a Blob</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3483,9 +3480,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The resulting blob</p>
 <hr>
 <h3 id="urltob64">urlToB64()<a class="headerlink" href="#urltob64" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>urlToB64</strong>(<code>url</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">urlToB64</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Converts an image URL to a Base64 string</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">¶</a></h4>
 <table>
@@ -3505,13 +3501,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <p>A promise that resolves with the Base64 as a string</p>
 <hr>
 <h3 id="b64totempfile">b64ToTempFile()<a class="headerlink" href="#b64totempfile" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>b64ToTempFile</strong>(<code>title</code>, <code>base64</code>): <code>Promise</code>\&lt;<code>WriteFileResult</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">b64ToTempFile</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">base64</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">WriteFileResult</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Saves a Base64 string as a temporary file</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">¶</a></h4>
 <table>
@@ -3536,13 +3531,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>WriteFileResult</code>&gt;</p>
+<p><code>Promise&lt;WriteFileResult&gt;</code></p>
 <p>A promise that resolves with WriteFileResult that contains the URI of the created file</p>
 <hr>
 <h3 id="blobtotempfile">blobToTempFile()<a class="headerlink" href="#blobtotempfile" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>blobToTempFile</strong>(<code>title</code>, <code>blob</code>): <code>Promise</code>\&lt;<code>string</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">blobToTempFile</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">blob</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Saves a Blob as a temporary file</p>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">¶</a></h4>
 <table>
@@ -3567,13 +3561,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>string</code>&gt;</p>
+<p><code>Promise&lt;string&gt;</code></p>
 <p>A promise that resolves with WriteFileResult that contains the URI of the created file</p>
 <hr>
 <h3 id="urltoblob">urlToBlob()<a class="headerlink" href="#urltoblob" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>urlToBlob</strong>(<code>url</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">urlToBlob</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Converts an image URL to a Blob</p>
 <h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">¶</a></h4>
 <table>
@@ -3593,13 +3586,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <p>A promise that resolves with the Blob</p>
 <hr>
 <h3 id="parsejson">parseJSON()<a class="headerlink" href="#parsejson" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>parseJSON</strong>(<code>json</code>): <code>any</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span>
+</span></code></pre></div>
 <p>Parses a JSON string that may have unquoted keys</p>
 <h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">¶</a></h4>
 <table>
@@ -3623,9 +3615,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The resulting object</p>
 <hr>
 <h3 id="getfirstrow">getFirstRow()<a class="headerlink" href="#getfirstrow" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getFirstRow</strong>(<code>objectName</code>): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">getFirstRow</span><span class="p">(</span><span class="nx">objectName</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Gets the filter needed to select the first row of an object</p>
 <h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">¶</a></h4>
 <table>
@@ -3645,13 +3636,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <p>A promise that resolves with a filter string of the needed to select the first row</p>
 <hr>
 <h3 id="getprimarykeysfilter">getPrimaryKeysFilter()<a class="headerlink" href="#getprimarykeysfilter" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getPrimaryKeysFilter</strong>(<code>object</code>, <code>row</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">getPrimaryKeysFilter</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">row</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets a filter string with the primary keys and values of a row</p>
 <h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">¶</a></h4>
 <table>
@@ -3680,36 +3670,32 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>A filter string with the primary keys and values of the row</p>
 <hr>
 <h3 id="currentdate">currentDate()<a class="headerlink" href="#currentdate" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>currentDate</strong>(): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">currentDate</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets the current date in 'YYYY-MM-DD' format</p>
 <h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
 <p>The current date in 'YYYY-MM-DD' format</p>
 <hr>
 <h3 id="currentdatetime">currentDateTime()<a class="headerlink" href="#currentdatetime" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>currentDateTime</strong>(): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">currentDateTime</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets the current date and time in 'YYYY-MM-DDTHH:mm:ss' format</p>
 <h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
 <p>The current date and time in 'YYYY-MM-DDTHH:mm:ss' format</p>
 <hr>
 <h3 id="currenttime">currentTime()<a class="headerlink" href="#currenttime" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>currentTime</strong>(): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">currentTime</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets the current time in 'HH:mm' format</p>
 <h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
 <p>The current time in 'HH:mm' format</p>
 <hr>
 <h3 id="translate">translate()<a class="headerlink" href="#translate" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>translate</strong>(<code>key</code>, <code>deviceLanguage</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">translate</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">deviceLanguage</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Translates a key to the current culture or the device one</p>
 <h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">¶</a></h4>
 <table>
@@ -3741,9 +3727,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The translated string or the key if not found</p>
 <hr>
 <h3 id="execdynamiccode">execDynamicCode()<a class="headerlink" href="#execdynamiccode" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>execDynamicCode</strong>(<code>code</code>): <code>any</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">execDynamicCode</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span>
+</span></code></pre></div>
 <p>Executes an string as JavaScript code</p>
 <h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">¶</a></h4>
 <table>
@@ -3765,13 +3750,10 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">¶</a></h4>
 <p><code>any</code></p>
 <p>The result of the executed code</p>
-<h4 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h4>
-<p>execDynamicCode</p>
 <hr>
 <h3 id="execasyncfunction">execAsyncFunction()<a class="headerlink" href="#execasyncfunction" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>execAsyncFunction</strong>(<code>code</code>, <code>param_names</code>, <code>param_values</code>): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">execAsyncFunction</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span><span class="w"> </span><span class="nx">param_names</span><span class="p">,</span><span class="w"> </span><span class="nx">param_values</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Executes an string as JavaScript code inside a function, doing so async functions can get used</p>
 <h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">¶</a></h4>
 <table>
@@ -3805,13 +3787,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <p>A promise that resolves with the result of the function</p>
 <hr>
 <h3 id="hextorgba">hexToRgbA()<a class="headerlink" href="#hextorgba" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>hexToRgbA</strong>(<code>hex</code>, <code>opacity</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">hexToRgbA</span><span class="p">(</span><span class="nx">hex</span><span class="p">,</span><span class="w"> </span><span class="nx">opacity</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Converts a hex color to an rgba one</p>
 <h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">¶</a></h4>
 <table>
@@ -3840,9 +3821,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The resulting rgba color (e.g. 'rgba(255,0,0,0.5)')</p>
 <hr>
 <h3 id="getb64mime">getB64MIME()<a class="headerlink" href="#getb64mime" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getB64MIME</strong>(<code>b64</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">getB64MIME</span><span class="p">(</span><span class="nx">b64</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets the MIME type of a Base64 string</p>
 <h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">¶</a></h4>
 <table>
@@ -3866,9 +3846,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The MIME type</p>
 <hr>
 <h3 id="getmimetype">getMIMEtype()<a class="headerlink" href="#getmimetype" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getMIMEtype</strong>(<code>fileName</code>): <code>any</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nx">getMIMEtype</span><span class="p">(</span><span class="nx">fileName</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span>
+</span></code></pre></div>
 <p>Gets the MIME type of a file by its extension</p>
 <h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">¶</a></h4>
 <table>
@@ -3892,9 +3871,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The MIME type</p>
 <hr>
 <h3 id="createnotification">createNotification()<a class="headerlink" href="#createnotification" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>createNotification</strong>(<code>options</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">createNotification</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Creates a notification</p>
 <h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">¶</a></h4>
 <table>
@@ -3917,9 +3895,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p><code>void</code></p>
 <hr>
 <h3 id="createnotificationwithevent">createNotificationWithEvent()<a class="headerlink" href="#createnotificationwithevent" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>createNotificationWithEvent</strong>(<code>options</code>, <code>callBack</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">createNotificationWithEvent</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="nx">callBack</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Creates a notification that will trigger a callback when an <a href="https://capacitorjs.com/docs/apis/local-notifications#addlistenerlocalnotificationactionperformed-">action is perfomed</a></p>
 <h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">¶</a></h4>
 <table>
@@ -3947,9 +3924,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p><code>void</code></p>
 <hr>
 <h3 id="openfile">openFile()<a class="headerlink" href="#openfile" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>openFile</strong>(<code>uri</code>, <code>MIME</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">openFile</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span><span class="w"> </span><span class="nx">MIME</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Shows a modal to open a file</p>
 <h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">¶</a></h4>
 <table>
@@ -3977,9 +3953,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p><code>void</code></p>
 <hr>
 <h3 id="downloadbyurlnavigator">downloadByUrlNavigator()<a class="headerlink" href="#downloadbyurlnavigator" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>downloadByUrlNavigator</strong>(<code>url</code>, <code>file_name</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nx">downloadByUrlNavigator</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">file_name</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Given an URL, downloads the file (only when running in a browser)</p>
 <h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">¶</a></h4>
 <table>
@@ -4007,9 +3982,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p><code>void</code></p>
 <hr>
 <h3 id="downloadbyurlphone">downloadByUrlPhone()<a class="headerlink" href="#downloadbyurlphone" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>downloadByUrlPhone</strong>(<code>url</code>, <code>file_name</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nx">downloadByUrlPhone</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">file_name</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Given an URL, downloads the file (only when running in a phone)</p>
 <h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">¶</a></h4>
 <table>
@@ -4034,13 +4008,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_23">Returns<a class="headerlink" href="#returns_23" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <p>A promise that resolves with the URI of the downloaded file</p>
 <hr>
 <h3 id="downloadbyb64phone">downloadByB64Phone()<a class="headerlink" href="#downloadbyb64phone" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>downloadByB64Phone</strong>(<code>b64</code>, <code>file_name</code>): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nx">downloadByB64Phone</span><span class="p">(</span><span class="nx">b64</span><span class="p">,</span><span class="w"> </span><span class="nx">file_name</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Given a Base64 string, downloads the file (only when running in a phone)</p>
 <h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">¶</a></h4>
 <table>
@@ -4065,13 +4038,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <p>A promise that resolves with the URI of the downloaded file</p>
 <hr>
 <h3 id="downloadbyb64navigator">downloadByB64Navigator()<a class="headerlink" href="#downloadbyb64navigator" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>downloadByB64Navigator</strong>(<code>b64</code>, <code>fileName</code>): <code>void</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nx">downloadByB64Navigator</span><span class="p">(</span><span class="nx">b64</span><span class="p">,</span><span class="w"> </span><span class="nx">fileName</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
+</span></code></pre></div>
 <p>Given a Base64 string, downloads the file (only when running in a browser)</p>
 <h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">¶</a></h4>
 <table>
@@ -4099,9 +4071,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p><code>void</code></p>
 <hr>
 <h3 id="share">share()<a class="headerlink" href="#share" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>share</strong>(<code>options</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nx">share</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shares a message, file or URL using the native share widget</p>
 <h4 id="parameters_22">Parameters<a class="headerlink" href="#parameters_22" title="Permanent link">¶</a></h4>
 <table>
@@ -4121,21 +4092,19 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_26">Returns<a class="headerlink" href="#returns_26" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <hr>
 <h3 id="getnextsevendates">getNextSevenDates()<a class="headerlink" href="#getnextsevendates" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getNextSevenDates</strong>(): <code>String</code>[]</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nx">getNextSevenDates</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">[]</span>
+</span></code></pre></div>
 <p>Gets the next seven dates starting from today in 'YYYY/MM/DD' format</p>
 <h4 id="returns_27">Returns<a class="headerlink" href="#returns_27" title="Permanent link">¶</a></h4>
-<p><code>String</code>[]</p>
+<p><code>String[]</code></p>
 <p>An array with the next seven dates in 'YYYY/MM/DD' format</p>
 <hr>
 <h3 id="getping">getPing()<a class="headerlink" href="#getping" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getPing</strong>(<code>timeout</code>): <code>Promise</code>\&lt;<code>number</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nx">getPing</span><span class="p">(</span><span class="nx">timeout</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Pings the server and returns the time it took to reachin milliseconds</p>
 <h4 id="parameters_23">Parameters<a class="headerlink" href="#parameters_23" title="Permanent link">¶</a></h4>
 <table>
@@ -4157,13 +4126,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_28">Returns<a class="headerlink" href="#returns_28" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>number</code>&gt;</p>
+<p><code>Promise&lt;number&gt;</code></p>
 <p>A promise that resolves with the time it took in milliseconds</p>
 <hr>
 <h3 id="gettablefields">getTableFields()<a class="headerlink" href="#gettablefields" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getTableFields</strong>(<code>table_name</code>): <code>Promise</code>\&lt;<code>string</code>[]&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nx">getTableFields</span><span class="p">(</span><span class="nx">table_name</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">[]</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Gets the fields of a table</p>
 <h4 id="parameters_24">Parameters<a class="headerlink" href="#parameters_24" title="Permanent link">¶</a></h4>
 <table>
@@ -4183,13 +4151,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_29">Returns<a class="headerlink" href="#returns_29" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>string</code>[]&gt;</p>
+<p><code>Promise&lt;string[]&gt;</code></p>
 <p>A promise that resolves with an array the table fields in string format</p>
 <hr>
 <h3 id="gettablefieldsconfig">getTableFieldsConfig()<a class="headerlink" href="#gettablefieldsconfig" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getTableFieldsConfig</strong>(<code>table_name</code>): <code>Promise</code>\&lt;<a href="types.md#fieldconfig"><code>fieldConfig</code></a>[]&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nx">getTableFieldsConfig</span><span class="p">(</span><span class="nx">table_name</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="p">[</span><span class="nx">fieldConfig</span><span class="p">](</span><span class="nx">types</span><span class="p">.</span><span class="nx">md</span><span class="n">#fieldconfig</span><span class="p">)[]</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Gets the configuration of the fields of a table</p>
 <h4 id="parameters_25">Parameters<a class="headerlink" href="#parameters_25" title="Permanent link">¶</a></h4>
 <table>
@@ -4209,39 +4176,35 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_30">Returns<a class="headerlink" href="#returns_30" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<a href="types.md#fieldconfig"><code>fieldConfig</code></a>[]&gt;</p>
+<p><code>Promise&lt;[fieldConfig](types.md#fieldconfig)[]&gt;</code></p>
 <p>A promise that resolves with an array the table fields with its FieldName and FieldType</p>
 <hr>
 <h3 id="senderrorslogs">sendErrorsLogs()<a class="headerlink" href="#senderrorslogs" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>sendErrorsLogs</strong>(): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nx">sendErrorsLogs</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Sends an email with all the error logs</p>
 <h4 id="returns_31">Returns<a class="headerlink" href="#returns_31" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <hr>
 <h3 id="getosversion">getOSVersion()<a class="headerlink" href="#getosversion" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getOSVersion</strong>(): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nx">getOSVersion</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets the OS version</p>
 <h4 id="returns_32">Returns<a class="headerlink" href="#returns_32" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
 <p>The OS version or 'Emulator' if not running in a device or 'OS unrecognized' if the OS is either Android, iOS or an emulator</p>
 <hr>
 <h3 id="haschangespending">hasChangesPending()<a class="headerlink" href="#haschangespending" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>hasChangesPending</strong>(): <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nx">hasChangesPending</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Checks if there are any changes pending to be synced</p>
 <h4 id="returns_33">Returns<a class="headerlink" href="#returns_33" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
 <p>A promise that resolves with true if there are changes pending or false if not</p>
 <hr>
 <h3 id="issimilar">isSimilar()<a class="headerlink" href="#issimilar" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>isSimilar</strong>(<code>text_1</code>, <code>text_2</code>, <code>isUrl</code>): <code>boolean</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nx">isSimilar</span><span class="p">(</span><span class="nx">text_1</span><span class="p">,</span><span class="w"> </span><span class="nx">text_2</span><span class="p">,</span><span class="w"> </span><span class="nx">isUrl</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span>
+</span></code></pre></div>
 <p>Compares two strings and returns true if they are similar (just ignoring leading and trailing spaces and case, and protocol if isUrl is true)</p>
 <h4 id="parameters_26">Parameters<a class="headerlink" href="#parameters_26" title="Permanent link">¶</a></h4>
 <table>
@@ -4279,9 +4242,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>True if the strings are similar, false if not</p>
 <hr>
 <h3 id="showloading">showLoading()<a class="headerlink" href="#showloading" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>showLoading</strong>(<code>message?</code>): <code>Promise</code>\&lt;<code>HTMLIonLoadingElement</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nx">showLoading</span><span class="p">(</span><span class="nx">message</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">HTMLIonLoadingElement</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a loading modal</p>
 <h4 id="parameters_27">Parameters<a class="headerlink" href="#parameters_27" title="Permanent link">¶</a></h4>
 <table>
@@ -4301,13 +4263,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_35">Returns<a class="headerlink" href="#returns_35" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>HTMLIonLoadingElement</code>&gt;</p>
+<p><code>Promise&lt;HTMLIonLoadingElement&gt;</code></p>
 <p>A promise that resolves with the loading element</p>
 <hr>
 <h3 id="splitarray">splitArray()<a class="headerlink" href="#splitarray" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>splitArray</strong>(<code>array</code>, <code>split_size</code>): <code>any</code>[]</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nx">splitArray</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span><span class="w"> </span><span class="nx">split_size</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">[]</span>
+</span></code></pre></div>
 <p>Splits an array into smaller arrays of a given size</p>
 <h4 id="parameters_28">Parameters<a class="headerlink" href="#parameters_28" title="Permanent link">¶</a></h4>
 <table>
@@ -4335,13 +4296,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_36">Returns<a class="headerlink" href="#returns_36" title="Permanent link">¶</a></h4>
-<p><code>any</code>[]</p>
+<p><code>any[]</code></p>
 <p>An array of smaller arrays</p>
 <hr>
 <h3 id="generateqr">generateQR()<a class="headerlink" href="#generateqr" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>generateQR</strong>(<code>text</code>, <code>size</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nx">generateQR</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Creates a QR code and returns it as a base64</p>
 <h4 id="parameters_29">Parameters<a class="headerlink" href="#parameters_29" title="Permanent link">¶</a></h4>
 <table>
@@ -4373,9 +4333,8 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 <p>The data URL of the generated QR code</p>
 <hr>
 <h3 id="showqr">showQR()<a class="headerlink" href="#showqr" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>showQR</strong>(<code>text</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nx">showQR</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a QR code in a modal</p>
 <h4 id="parameters_30">Parameters<a class="headerlink" href="#parameters_30" title="Permanent link">¶</a></h4>
 <table>
@@ -4395,13 +4354,12 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
 </tbody>
 </table>
 <h4 id="returns_38">Returns<a class="headerlink" href="#returns_38" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <p>A promise that resolves when the modal is dismissed</p>
 <hr>
 <h3 id="getcurrenttime">getCurrentTime()<a class="headerlink" href="#getcurrenttime" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getCurrentTime</strong>(<code>showSeconds</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nx">getCurrentTime</span><span class="p">(</span><span class="nx">showSeconds</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Gets the current time in 'HH:mm' format or 'HH:mm:ss' if showSeconds is true</p>
 <h4 id="parameters_31">Parameters<a class="headerlink" href="#parameters_31" title="Permanent link">¶</a></h4>
 <table>
@@ -4878,6 +4836,10 @@ from generating unique IDs to handling files, parsing JSON, translating keys, ex
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

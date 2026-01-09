@@ -3093,31 +3093,28 @@
 It includes methods to initialize NFC, check if it's enabled, read NFC tags, stop reading, convert bytes to string, and show NFC settings.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="init">init()<a class="headerlink" href="#init" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>init</strong>(): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">init</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Initializes the NFC reader and displays a modal to prompt the user to scan an NFC tag.</p>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>A promise that resolves when an NFC tag is read.</li>
 </ul>
 <hr>
 <h3 id="isenabled">isEnabled()<a class="headerlink" href="#isenabled" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>isEnabled</strong>(): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">isEnabled</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Checks if NFC is enabled on the device.</p>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <ul>
 <li>A promise that resolves to true if NFC is enabled, false otherwise.</li>
 </ul>
 <hr>
 <h3 id="bytestostring">bytesToString()<a class="headerlink" href="#bytestostring" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>bytesToString</strong>(<code>text</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">bytesToString</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Converts an array of bytes to a string.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3143,22 +3140,20 @@ It includes methods to initialize NFC, check if it's enabled, read NFC tags, sto
 </ul>
 <hr>
 <h3 id="showsettings">showSettings()<a class="headerlink" href="#showsettings" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>showSettings</strong>(): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">showSettings</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Opens the NFC settings on the device.</p>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <ul>
 <li>A promise that resolves when the settings are opened.</li>
 </ul>
 <hr>
 <h3 id="paintsetnfcmodal">paintSetNFCModal()<a class="headerlink" href="#paintsetnfcmodal" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>paintSetNFCModal</strong>(): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">paintSetNFCModal</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p><code>Promise&lt;void&gt;</code></p>
 
 
 
@@ -3297,6 +3292,10 @@ It includes methods to initialize NFC, check if it's enabled, read NFC tags, sto
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

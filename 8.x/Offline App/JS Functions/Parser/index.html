@@ -3146,9 +3146,8 @@
 <p>This section contains a collection of functionalities for parsing and compiling templates.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="recursivecompile">recursiveCompile()<a class="headerlink" href="#recursivecompile" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>recursiveCompile</strong>(<code>json</code>, <code>template</code>, <code>conf</code>, <code>contextFunctions?</code>, <code>lastTemplate?</code>, <code>AddTimeZone?</code>): <code>Promise</code>\&lt;<code>string</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">recursiveCompile</span><span class="p">(</span><span class="nx">json</span><span class="p">,</span><span class="w"> </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">conf</span><span class="p">,</span><span class="w"> </span><span class="nx">contextFunctions</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">lastTemplate</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">AddTimeZone</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Recursively compiles a template string by replacing markers with corresponding values from a JSON object and context vars.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3200,15 +3199,14 @@
 </tbody>
 </table>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>string</code>&gt;</p>
+<p><code>Promise&lt;string&gt;</code></p>
 <ul>
 <li>A promise that resolves to the compiled template string.</li>
 </ul>
 <hr>
 <h3 id="compile">compile()<a class="headerlink" href="#compile" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>compile</strong>(<code>json</code>, <code>template</code>, <code>files</code>, <code>contextFunctions?</code>, <code>AddTimeZone?</code>): <code>Promise</code>\&lt;<code>string</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">compile</span><span class="p">(</span><span class="nx">json</span><span class="p">,</span><span class="w"> </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">files</span><span class="p">,</span><span class="w"> </span><span class="nx">contextFunctions</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">AddTimeZone</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Compiles a template string by replacing markers with corresponding values from a JSON object and context vars.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3254,15 +3252,14 @@
 </tbody>
 </table>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>string</code>&gt;</p>
+<p><code>Promise&lt;string&gt;</code></p>
 <ul>
 <li>A promise that resolves to the compiled template string.</li>
 </ul>
 <hr>
 <h3 id="findtemplate">findTemplate()<a class="headerlink" href="#findtemplate" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>findTemplate</strong>(<code>object</code>, <code>typeId</code>, <code>pageName</code>): <a href="types.md#pageconfig"><code>PageConfig</code></a></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">findTemplate</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span><span class="w"> </span><span class="nx">typeId</span><span class="p">,</span><span class="w"> </span><span class="nx">pageName</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">PageConfig</span><span class="p">](</span><span class="nx">types</span><span class="p">.</span><span class="nx">md</span><span class="n">#pageconfig</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Given an object, the template type and the pagename it returns the proper template.</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">¶</a></h4>
 <table>
@@ -3292,15 +3289,14 @@
 </tbody>
 </table>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
-<p><a href="types.md#pageconfig"><code>PageConfig</code></a></p>
+<p><code>[PageConfig](types.md#pageconfig)</code></p>
 <ul>
 <li>The matching page configuration or null if not found.</li>
 </ul>
 <hr>
 <h3 id="replaceall">replaceAll()<a class="headerlink" href="#replaceall" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>replaceAll</strong>(<code>text</code>, <code>text_to_find</code>, <code>replace_text</code>): <code>any</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">replaceAll</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">text_to_find</span><span class="p">,</span><span class="w"> </span><span class="nx">replace_text</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span>
+</span></code></pre></div>
 <p>Replaces all occurrences of a substring within a string with a new substring.</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">¶</a></h4>
 <table>
@@ -3336,9 +3332,8 @@
 </ul>
 <hr>
 <h3 id="escapejsstring">escapeJsString()<a class="headerlink" href="#escapejsstring" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>escapeJsString</strong>(<code>str</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">escapeJsString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Returns an escaped JS string</p>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">¶</a></h4>
 <table>
@@ -3359,13 +3354,10 @@
 </table>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
-<h4 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h4>
-<p>escapeJsString</p>
 <hr>
 <h3 id="escapesqltring">escapeSqltring()<a class="headerlink" href="#escapesqltring" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>escapeSqltring</strong>(<code>str</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">escapeSqltring</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Returns an escaped SQL string</p>
 <h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">¶</a></h4>
 <table>
@@ -3386,13 +3378,10 @@
 </table>
 <h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
-<h4 id="method_1">Method<a class="headerlink" href="#method_1" title="Permanent link">¶</a></h4>
-<p>escapeSqlString</p>
 <hr>
 <h3 id="splitparams">splitParams()<a class="headerlink" href="#splitparams" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>splitParams</strong>(<code>pStr</code>): <code>any</code>[]</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">splitParams</span><span class="p">(</span><span class="nx">pStr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">[]</span>
+</span></code></pre></div>
 <p>Splits a parameter string into an array of parameters, considering nested arrays.</p>
 <h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">¶</a></h4>
 <table>
@@ -3412,15 +3401,14 @@
 </tbody>
 </table>
 <h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">¶</a></h4>
-<p><code>any</code>[]</p>
+<p><code>any[]</code></p>
 <ul>
 <li>An array of individual parameters.</li>
 </ul>
 <hr>
 <h3 id="escapehtmlstring">escapeHtmlString()<a class="headerlink" href="#escapehtmlstring" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>escapeHtmlString</strong>(<code>str</code>, <code>attr</code>): <code>string</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">escapeHtmlString</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+</span></code></pre></div>
 <p>Returns an escapep HTML string</p>
 <h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">¶</a></h4>
 <table>
@@ -3446,13 +3434,10 @@
 </table>
 <h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">¶</a></h4>
 <p><code>string</code></p>
-<h4 id="method_2">Method<a class="headerlink" href="#method_2" title="Permanent link">¶</a></h4>
-<p>escapeHtmlString</p>
 <hr>
 <h3 id="lowerkeys">lowerKeys()<a class="headerlink" href="#lowerkeys" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>lowerKeys</strong>(<code>obj</code>, <code>recursive?</code>): <code>object</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">lowerKeys</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">recursive</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span>
+</span></code></pre></div>
 <p>Transform object keys into lower case.</p>
 <h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">¶</a></h4>
 <table>
@@ -3482,13 +3467,10 @@
 <h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">¶</a></h4>
 <p><code>object</code></p>
 <p>transformed object.</p>
-<h4 id="method_3">Method<a class="headerlink" href="#method_3" title="Permanent link">¶</a></h4>
-<p>lowerKeys</p>
 <hr>
 <h3 id="execdynamiccode">execDynamicCode()<a class="headerlink" href="#execdynamiccode" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>execDynamicCode</strong>(<code>dynamicCode</code>): <code>any</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">execDynamicCode</span><span class="p">(</span><span class="nx">dynamicCode</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span>
+</span></code></pre></div>
 <p>Evaluates JavaScript code and executes it.</p>
 <h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">¶</a></h4>
 <table>
@@ -3509,13 +3491,10 @@
 </table>
 <h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">¶</a></h4>
 <p><code>any</code></p>
-<h4 id="method_4">Method<a class="headerlink" href="#method_4" title="Permanent link">¶</a></h4>
-<p>execDynamicCode</p>
 <hr>
 <h3 id="sortobject">sortObject()<a class="headerlink" href="#sortobject" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>sortObject</strong>(<code>obj</code>, <code>property</code>, <code>property2?</code>): <code>any</code>[]</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">sortObject</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">property</span><span class="p">,</span><span class="w"> </span><span class="nx">property2</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">[]</span>
+</span></code></pre></div>
 <p>Sorts an object's array by specified properties.</p>
 <h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">¶</a></h4>
 <table>
@@ -3545,10 +3524,8 @@
 </tbody>
 </table>
 <h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">¶</a></h4>
-<p><code>any</code>[]</p>
+<p><code>any[]</code></p>
 <p>Ordered object.</p>
-<h4 id="method_5">Method<a class="headerlink" href="#method_5" title="Permanent link">¶</a></h4>
-<p>sortObject</p>
 
 
 
@@ -3741,6 +3718,10 @@
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

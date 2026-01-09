@@ -3093,31 +3093,28 @@
 It includes methods to show available printers, get available printers, print text, get printer status, and enable Bluetooth.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="showavailableprinters">showAvailablePrinters()<a class="headerlink" href="#showavailableprinters" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>showAvailablePrinters</strong>(): <code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">showAvailablePrinters</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Shows a modal with the list of available bluetooth printers and returns the mac address of the selected printer.</p>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>unknown</code>&gt;</p>
+<p><code>Promise&lt;unknown&gt;</code></p>
 <ul>
 <li>A promise that resolves to the mac address of the selected printer.</li>
 </ul>
 <hr>
 <h3 id="getavailableprinters">getAvailablePrinters()<a class="headerlink" href="#getavailableprinters" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getAvailablePrinters</strong>(): <code>Promise</code>\&lt;<code>BluetoothDevices</code>[]&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">getAvailablePrinters</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">BluetoothDevices</span><span class="p">[]</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Gets the list of available bluetooth printers.</p>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>BluetoothDevices</code>[]&gt;</p>
+<p><code>Promise&lt;BluetoothDevices[]&gt;</code></p>
 <ul>
 <li>A promise that resolves to an array of available <a href="https://github.com/Limbertfenixio/capacitor-ble-printer?tab=readme-ov-file#bluetoothdevices">bluetooth printers</a>.</li>
 </ul>
 <hr>
 <h3 id="print">print()<a class="headerlink" href="#print" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>print</strong>(<code>mac_address</code>, <code>text</code>): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">print</span><span class="p">(</span><span class="nx">mac_address</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Prints text to a specified bluetooth printer.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3142,15 +3139,14 @@ It includes methods to show available printers, get available printers, print te
 </tbody>
 </table>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <ul>
 <li>A promise that resolves when the print job is sent.</li>
 </ul>
 <hr>
 <h3 id="getstatusofprinter">getStatusOfPrinter()<a class="headerlink" href="#getstatusofprinter" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getStatusOfPrinter</strong>(<code>mac_address</code>): <code>Promise</code>\&lt;<code>string</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">getStatusOfPrinter</span><span class="p">(</span><span class="nx">mac_address</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Gets the status of a specified bluetooth printer.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3170,19 +3166,18 @@ It includes methods to show available printers, get available printers, print te
 </tbody>
 </table>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>string</code>&gt;</p>
+<p><code>Promise&lt;string&gt;</code></p>
 <ul>
 <li>A promise that resolves to the status of the printer.</li>
 </ul>
 <hr>
 <h3 id="enablebluetooth">enableBluetooth()<a class="headerlink" href="#enablebluetooth" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>enableBluetooth</strong>(): <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">enableBluetooth</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Enables Bluetooth on the device if it is not already enabled.
 It also checks for necessary permissions and requests them if not granted.</p>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
 <ul>
 <li>A promise that resolves to true if Bluetooth is enabled and permissions are granted, otherwise false.</li>
 </ul>
@@ -3324,6 +3319,10 @@ It also checks for necessary permissions and requests them if not granted.</p>
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

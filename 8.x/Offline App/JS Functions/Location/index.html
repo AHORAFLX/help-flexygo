@@ -3093,9 +3093,8 @@
 It contains functionalities for requesting GPS permissions, activating GPS, and obtaining the current coordinates.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="getcoords">getCoords()<a class="headerlink" href="#getcoords" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>getCoords</strong>(<code>timeout</code>, <code>maximum_age</code>): <code>Promise</code>\&lt;<code>Position</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">getCoords</span><span class="p">(</span><span class="nx">timeout</span><span class="p">,</span><span class="w"> </span><span class="nx">maximum_age</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Position</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Gets the current coordinates of the device</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3123,43 +3122,39 @@ It contains functionalities for requesting GPS permissions, activating GPS, and 
 </tbody>
 </table>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>Position</code>&gt;</p>
+<p><code>Promise&lt;Position&gt;</code></p>
 <p>A promise that resolves with the current <a href="https://capacitorjs.com/docs/apis/geolocation#position">position</a> of the device</p>
 <hr>
 <h3 id="requestgpsstatus">requestGPSStatus()<a class="headerlink" href="#requestgpsstatus" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>requestGPSStatus</strong>(): <code>Promise</code>\&lt;<code>any</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">requestGPSStatus</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Requests gps permission and returns the status after the user has interacted with the message</p>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>any</code>&gt;</p>
+<p><code>Promise&lt;any&gt;</code></p>
 <p>Possible values: GRANTED, DENIED, DENIED_ONCE, NOT_REQUESTED, DENIED_ALWAYS, RESTRICTED, GRANTED_WHEN_IN_USE;</p>
 <hr>
 <h3 id="requestgpspermission">requestGPSPermission()<a class="headerlink" href="#requestgpspermission" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>requestGPSPermission</strong>(): <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">requestGPSPermission</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Requests gps permission and when user has denied always it will navigate to app settings</p>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
 <p>Promise with a result of true when gps is granted and false when it isn't</p>
 <hr>
 <h3 id="requestgpsactivation">requestGPSActivation()<a class="headerlink" href="#requestgpsactivation" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>requestGPSActivation</strong>(): <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">requestGPSActivation</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Asks user to activate gps</p>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
 <p>Promise with a result of true when gps is activated and false when it isn't</p>
 <hr>
 <h3 id="isgpsoff">isGPSOff()<a class="headerlink" href="#isgpsoff" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>isGPSOff</strong>(): <code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">isGPSOff</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Checks if the GPS is off, not the permissions but if the gps is active</p>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
 <p>Promise with a result of true when gps is off and false when it isn't</p>
 
 
@@ -3299,6 +3294,10 @@ It contains functionalities for requesting GPS permissions, activating GPS, and 
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">

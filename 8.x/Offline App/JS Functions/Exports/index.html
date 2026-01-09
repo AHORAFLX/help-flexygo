@@ -3066,9 +3066,8 @@
 It contains functionalities for sending emails and generating PDFs.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h2>
 <h3 id="sendmail">sendMail()<a class="headerlink" href="#sendmail" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>sendMail</strong>(<code>to</code>, <code>subject</code>, <code>body</code>, <code>ishtml?</code>, <code>cc?</code>, <code>bcc?</code>, <code>attachments?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">sendMail</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span><span class="w"> </span><span class="nx">subject</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">ishtml</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">cc</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">bcc</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">attachments</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span>
+</span></code></pre></div>
 <p>Sends email using the default mail system.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h4>
 <table>
@@ -3126,14 +3125,11 @@ It contains functionalities for sending emails and generating PDFs.</p>
 </tbody>
 </table>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">¶</a></h4>
-<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
-<h4 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h4>
-<p>sendMail</p>
+<p><code>Promise&lt;void&gt;</code></p>
 <hr>
 <h3 id="createpdf">createPDF()<a class="headerlink" href="#createpdf" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><strong>createPDF</strong>(<code>html</code>, <code>filename</code>, <code>documentsize?</code>, <code>landscape?</code>, <code>share?</code>): <code>any</code></p>
-</blockquote>
+<div class="language-ts no-language highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">createPDF</span><span class="p">(</span><span class="nx">html</span><span class="p">,</span><span class="w"> </span><span class="nx">filename</span><span class="p">,</span><span class="w"> </span><span class="nx">documentsize</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">landscape</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">share</span><span class="o">?</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span>
+</span></code></pre></div>
 <p>Generate pdf from an html string</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">¶</a></h4>
 <table>
@@ -3183,8 +3179,6 @@ It contains functionalities for sending emails and generating PDFs.</p>
 <ul>
 <li>if share = false returns promise with pdf base64 object.</li>
 </ul>
-<h4 id="method_1">Method<a class="headerlink" href="#method_1" title="Permanent link">¶</a></h4>
-<p>createPDF</p>
 
 
 
@@ -3296,6 +3290,10 @@ It contains functionalities for sending emails and generating PDFs.</p>
         <script src="../../../javascripts/components/fh-copy.js"></script>
       
         <script src="../../../javascripts/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
       
     
     <dialog id="navigation-dialog" closedby="any">
