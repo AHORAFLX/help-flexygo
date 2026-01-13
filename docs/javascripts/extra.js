@@ -173,3 +173,22 @@ function translate(key) {
     const lang = getLanguage();
     return FH_CULTURES[lang][key] || key;
 }
+
+
+function getElementsWithCertainText(starting_element, text) {
+    const walker = document.createTreeWalker(
+        starting_element,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+    
+    let node, matches = [];
+    while (node = walker.nextNode()) {
+        if (node.textContent.includes(text)) {
+            matches.push(node.parentElement);
+        }
+    }
+
+    return matches;
+}

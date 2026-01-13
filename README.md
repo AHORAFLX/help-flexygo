@@ -77,7 +77,7 @@ My paragraph <my-component its="attributes"></my-component> continue my paragrap
 
 When clicked it will copy the text written inside of it to the users clipboard and show a copied message.
 
-Normally you'll want to use it with a [link](#link-class), but you can use whatever class you want.
+If no class is added it will apply [link styles](#link-class), but you can use whatever class you want.
 
 ### Modal
 
@@ -86,9 +86,9 @@ Normally you'll want to use it with a [link](#link-class), but you can use whate
 
 ...
 
-    ``js { #fhnodal_Your_Id }
+    ```js { #fhnodal_Your_Id }
     console.log("test");
-    ``
+    ```
 ```
 
 When clicked it will show the desired block as a modal, it's normally used to show large block codes or images.
@@ -128,6 +128,24 @@ This is just a translation of the flx-navbutton from flexygo, that's why it star
 When clicked it will open in a new page that flexygo page, if help comes from a flexygo it will just open it in that flexygo if it's from the docs.flexygo.com page it will open a modal to writte you own flexygo URL.
 
 Normally you'll want to use it with a [button](#button) or [link](#link-class), but you can use whatever class you want.
+
+### Input that propagates it's text to other elements
+
+This is an input that when changed it will replace every elements text gotten by the class indicated in its selector attribute for its current value. It will also substitute parts of code blocks that has the selector class, but for it to replace a certain part you need to writte there fhnamepropagator.
+
+The input value will get saved in storage so if the user reloads or comes again it persists.
+
+This most likely will just be used for installation guide, but is documented so if it is ever needed we know how it works.
+
+```html
+<fh-namepropagator selector="my_own_class" placeholder="The_Initial_Text"></fh-namepropagator>
+
+That will get replaced by input value → <span class="my_own_class"></span> ← That will get replaced by input value
+
+    ```js { .my_own_class }
+    That will get replaced by input value → fhnamepropagator ← That will get replaced by input value
+    ```
+```
 
 ## Custom classes
 

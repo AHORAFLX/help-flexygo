@@ -13,7 +13,7 @@ To hire the service you can do it in any of the following ways:
 ## Enable Abh Sign
 
 <flx-navbutton class="button" type="openpage" pagetypeid="list" objectname="sysAbhSigns_Objects_Config" excludehist="false">
-    Add Abh Sign to your project 🦦
+    Add Abh Sign to your project
 </flx-navbutton>
 
 ## Configure Abh Sign

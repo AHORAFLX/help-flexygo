@@ -8,7 +8,7 @@ Después de haber configurado la IA en flexygo, usarla en la app es tan sencillo
 
 ## Usar un asistente
 
-Con <fh-copy class="link">flexygo.nav.goAI</fh-copy> te permitirá navegar al asistente IA que le indiques.
+Con <fh-copy>flexygo.nav.goAI</fh-copy> te permitirá navegar al asistente IA que le indiques.
 
 ### Parámetros
 
@@ -23,7 +23,7 @@ Con <fh-copy class="link">flexygo.nav.goAI</fh-copy> te permitirá navegar al as
 
 ## Empezar mediante reconocimiento de voz
 
-Puedes iniciar un asistente IA directamente con un mensaje enviado por el usuario usando el micrófono utilizando <fh-copy class="link">flexygo.ai.startVoiceRecognition</fh-copy>.
+Puedes iniciar un asistente IA directamente con un mensaje enviado por el usuario usando el micrófono utilizando <fh-copy>flexygo.ai.startVoiceRecognition</fh-copy>.
 
 El reconocimiento de voz se parará automaticamente tras detectar un breve silencio y tras ello navegará a al asistente con el mensaje que haya escuchado ya enviado. De todos modos si el usuario prefiere parar el reconocimiento antes de una pausa puede pulsar el icono del micrófono.
 
@@ -38,7 +38,7 @@ El reconocimiento de voz se parará automaticamente tras detectar un breve silen
 
 ## Texto a voz
 
-La app offline también admite convertir texto en un mensaje de voz mediante la función <fh-copy class="link">flexygo.ai.textToSpeech</fh-copy>:
+La app offline también admite convertir texto en un mensaje de voz mediante la función <fh-copy>flexygo.ai.textToSpeech</fh-copy>:
 
 Con esta función podrás hacer que la app lea al usuario el texto que le especifiques.
 

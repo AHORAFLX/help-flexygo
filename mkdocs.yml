@@ -33,6 +33,7 @@ extra_css:
   - stylesheets/404-error.css
   - stylesheets/components/fh-modal.css
   - stylesheets/components/fh-copy.css
+  - stylesheets/components/fh-namepropagator.css
   - stylesheets/flexygo-styles/main-flexygo-styles.css
   - stylesheets/flexygo-styles/cols.css
   - stylesheets/flexygo-styles/list-groups.css
@@ -46,6 +47,7 @@ extra_javascript:
   - javascripts/components/fh-modal.js
   - javascripts/components/fh-copy.js
   - javascripts/components/fh-popover.js
+  - javascripts/components/fh-namepropagator.js
   - javascripts/cultures/es.js
   - javascripts/cultures/en.js
 markdown_extensions:
@@ -82,6 +84,7 @@ plugins:
             Ahora Bussiness Hub: Ahora Bussiness Hub
             Connectors: Conectores
             Information: Información
+            Instalation: Instalación
             Modules: Módulos
             Offline App: App Offline
             JS Functions: Funciones JS

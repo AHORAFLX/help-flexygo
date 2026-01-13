@@ -37,7 +37,7 @@ Puedes usar el proceso estándar de pago y vincularlo directamente a un objeto:
 
 ![](/docs_assets/images/RedSys/RedSys_6.png "Image 4. RedSys configuration")
 
-También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago (<fh-copy class="link">FLEXYGO.PaymentsProcess.PayRequest</fh-copy>(). Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.  
+También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago (<fh-copy>FLEXYGO.PaymentsProcess.PayRequest</fh-copy>(). Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.  
 Si no se especifica el campo de cantidad, el importe se obtendrá del campo indicado en la relación del objeto con RedSys.
 
 ## Log

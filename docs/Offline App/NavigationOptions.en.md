@@ -273,7 +273,7 @@ flexygo.nav.modalInsert('Offline\_Action', '','{"EmployeeId":"{{currentReference
 
 ## Usefull tokens
 
-In the filter parameter you can use the <fh-copy class="link">{{objIdent|JS}}</fh-copy> token which allows you to autogenerate the object identity. You can reference previous uploaded resources using <fh-copy class="link">{{Filename.png|file}}</fh-copy> token.
+In the filter parameter you can use the <fh-copy>{{objIdent|JS}}</fh-copy> token which allows you to autogenerate the object identity. You can reference previous uploaded resources using <fh-copy>{{Filename.png|file}}</fh-copy> token.
 
 ## Online Navigation options
 

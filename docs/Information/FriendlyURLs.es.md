@@ -17,31 +17,31 @@ Los objetos que no tengan el interruptor de Friendly URL activo **no serán redi
 
 | Structure | Example |
 | --- | --- |
-| <fh-copy class="link">/list/:object</fh-copy> | /list/locations |
-| <fh-copy class="link">/list/:object/page/:pageName</fh-copy> | /list/locations/page/my_list |
-| <fh-copy class="link">/list/:object?field1=value1&field2=value2</fh-copy> | /list/locations?userid=1&accuracy<20 |
-| <fh-copy class="link">/list/:object/page/:pageName?field1=value1&field2=value2</fh-copy> | /list/locations/page/my_list?userid=1&accuracy<20 |
+| <fh-copy>/list/:object</fh-copy> | /list/locations |
+| <fh-copy>/list/:object/page/:pageName</fh-copy> | /list/locations/page/my_list |
+| <fh-copy>/list/:object?field1=value1&field2=value2</fh-copy> | /list/locations?userid=1&accuracy<20 |
+| <fh-copy>/list/:object/page/:pageName?field1=value1&field2=value2</fh-copy> | /list/locations/page/my_list?userid=1&accuracy<20 |
 
 ### View
 
 | Structure | Example |
 | --- | --- |
-| <fh-copy class="link">/view/:object/:primarykey</fh-copy> | /view/location/1 |
-| <fh-copy class="link">/view/:object/:primarykey/page/:pageName</fh-copy> | /view/location/1/page/my_view |
+| <fh-copy>/view/:object/:primarykey</fh-copy> | /view/location/1 |
+| <fh-copy>/view/:object/:primarykey/page/:pageName</fh-copy> | /view/location/1/page/my_view |
 
 ### Edit
 
 | Structure | Example |
 | --- | --- |
-| <fh-copy class="link">/edit/:object/:primarykey</fh-copy> | /edit/location/1 |
-| <fh-copy class="link">/edit/:object/:primarykey/page/:pageName</fh-copy> | /edit/location/1/page/my_edit |
+| <fh-copy>/edit/:object/:primarykey</fh-copy> | /edit/location/1 |
+| <fh-copy>/edit/:object/:primarykey/page/:pageName</fh-copy> | /edit/location/1/page/my_edit |
 
 ### Insert
 
 | Structure | Example |
 | --- | --- |
-| <fh-copy class="link">/insert/:object</fh-copy> | /insert/location |
-| <fh-copy class="link">/insert/:object/page/:pageName</fh-copy> | /insert/location/page/my_edit |
+| <fh-copy>/insert/:object</fh-copy> | /insert/location |
+| <fh-copy>/insert/:object/page/:pageName</fh-copy> | /insert/location/page/my_edit |
 
 ## Observations
 

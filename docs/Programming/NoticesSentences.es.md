@@ -42,7 +42,7 @@ FROM ...
 | --- | --- | --- |
 | **Title** | Título de la notificación | ✓ |
 | **Message** | El mensaje de la notificación, para el cual deberá usar marcado HTML | ✓ |
-| **MethodName** | Notificación <fh-copy class="link">App</fh-copy>, notificación <fh-copy class="link">Push</fh-copy>, <fh-copy class="link">PushMobile</fh-copy> solo para notificaciones en dispositivos móviles o <fh-copy class="link">Pushweb</fh-copy> solo para notificaciones en navegadores web | ✓ |
+| **MethodName** | Notificación <fh-copy>App</fh-copy>, notificación <fh-copy>Push</fh-copy>, <fh-copy>PushMobile</fh-copy> solo para notificaciones en dispositivos móviles o <fh-copy>Pushweb</fh-copy> solo para notificaciones en navegadores web | ✓ |
 | **ReminderTime** | Fecha y hora en la que se enviará la notificación | ✓ |
 | **ExpiryTime** | Fecha y hora en la que la notificación expirará | ✓ |
 | **AllUsers** | Enviar la notificación a todos los usuarios; si se establece en false, recuerde rellenar la sentencia de usuarios de la notificación | ✓ |

@@ -340,15 +340,15 @@ When we have a form, we can indicate that number of characters we want to enter 
 
 **flexygo** has a system to return files in an encrypted link, for this, the field of the view that returns the address of the document must have an alias that begins with one of the following formats:
 
-<fh-copy class="link">flxpathimage</fh-copy>: Flexygo image management.
+<fh-copy>flxpathimage</fh-copy>: Flexygo image management.
 
-<fh-copy class="link">flxpathdocument</fh-copy>: Flexygo document management.
+<fh-copy>flxpathdocument</fh-copy>: Flexygo document management.
 
-<fh-copy class="link">flxpath|ObjectName|PropertyName</fh-copy>: The property configuration of that object is read.
+<fh-copy>flxpath|ObjectName|PropertyName</fh-copy>: The property configuration of that object is read.
 
-<fh-copy class="link">flxpath</fh-copy>: Management of images or ERP documents, as long as the document path is complete.
+<fh-copy>flxpath</fh-copy>: Management of images or ERP documents, as long as the document path is complete.
 
-<fh-copy class="link">flxpathzoom</fh-copy>: Thumbnail image management, can include thumbnail size separated by _, if you do not specify a default size it will be 75x75 [width]x[height].
+<fh-copy>flxpathzoom</fh-copy>: Thumbnail image management, can include thumbnail size separated by _, if you do not specify a default size it will be 75x75 [width]x[height].
 
 View:
 

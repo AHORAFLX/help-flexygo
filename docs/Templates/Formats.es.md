@@ -341,15 +341,15 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 
 Flexygo tiene un sistema para devolver archivos en un enlace cifrado, para esto, el campo de la vista que devuelve la dirección del documento debe tener un alias que comience con uno de los siguientes formatos:
 
-<fh-copy class="link">flxpathimage</fh-copy>: Flexygo gestión de imágenes.
+<fh-copy>flxpathimage</fh-copy>: Flexygo gestión de imágenes.
 
-<fh-copy class="link">flxpathdocument</fh-copy>: Flexygo gestión de documentos.
+<fh-copy>flxpathdocument</fh-copy>: Flexygo gestión de documentos.
 
-<fh-copy class="link">flxpath|ObjectName|PropertyName</fh-copy>: La configuración de la propiedad de ese objeto es leída.
+<fh-copy>flxpath|ObjectName|PropertyName</fh-copy>: La configuración de la propiedad de ese objeto es leída.
 
-<fh-copy class="link">flxpath</fh-copy>: Gestión de imágenes o documentos ERP, siempre que la ruta del documento esté completa.
+<fh-copy>flxpath</fh-copy>: Gestión de imágenes o documentos ERP, siempre que la ruta del documento esté completa.
 
-<fh-copy class="link">flxpathzoom</fh-copy>: Gestión de imágenes en miniatura, puede incluir el tamaño de miniatura separado por _, si no se especifica un tamaño por defecto será 75x75 [ancho]x[alto].
+<fh-copy>flxpathzoom</fh-copy>: Gestión de imágenes en miniatura, puede incluir el tamaño de miniatura separado por _, si no se especifica un tamaño por defecto será 75x75 [ancho]x[alto].
 
 Vista:
 

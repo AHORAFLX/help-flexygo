@@ -90,9 +90,9 @@ Then you must fill your app information, domain, etc...
 
 After that apply the next scopes:
 
-*   <fh-copy class="link">https://mail.google.com/</fh-copy>
-*   <fh-copy class="link">https://www.googleapis.com/auth/userinfo.profile</fh-copy>
-*   <fh-copy class="link">https://www.googleapis.com/auth/userinfo.email</fh-copy>
+*   <fh-copy>https://mail.google.com/</fh-copy>
+*   <fh-copy>https://www.googleapis.com/auth/userinfo.profile</fh-copy>
+*   <fh-copy>https://www.googleapis.com/auth/userinfo.email</fh-copy>
 
 In the next step add the email users who will use the application.
 

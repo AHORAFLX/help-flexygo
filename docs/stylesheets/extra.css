@@ -318,6 +318,7 @@ a.md-logo {
 /* Code Blocks */
 .md-typeset code {
   border-radius: var(--flx-border-radius);
+  max-height: 500px;
 }
 
 .highlight:has(code) {

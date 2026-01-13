@@ -48,14 +48,14 @@ Cuando se carga un módulo de edición, la plantilla mostrada seguirá esta secu
 
 Las plantillas también pueden incluir cadenas específicas para mostrar diferentes tipos de botones:
 
-*   <fh-copy class="link">{{objectmenu}}</fh-copy>: Para mostrar el menú completo del objeto
-*   <fh-copy class="link">{{processmenu}}</fh-copy>: Para mostrar solo el menú de procesos del objeto
-*   <fh-copy class="link">{{reportmenu}}</fh-copy>: Para mostrar solo el menú de reportes del objeto
-*   <fh-copy class="link">{{deletebutton}}</fh-copy>: Para el botón de eliminar objeto
-*   <fh-copy class="link">{{viewbutton}}</fh-copy>: Para el botón de ver objeto
-*   <fh-copy class="link">{{editbutton}}</fh-copy>: Para el botón de editar objeto
-*   <fh-copy class="link">{{newbutton}}</fh-copy>: Para el botón de nuevo objeto
-*   <fh-copy class="link">{{bagbutton}}</fh-copy>: Para mostrar el botón de bolsa en los elementos de una colección (lista)
+*   <fh-copy>{{objectmenu}}</fh-copy>: Para mostrar el menú completo del objeto
+*   <fh-copy>{{processmenu}}</fh-copy>: Para mostrar solo el menú de procesos del objeto
+*   <fh-copy>{{reportmenu}}</fh-copy>: Para mostrar solo el menú de reportes del objeto
+*   <fh-copy>{{deletebutton}}</fh-copy>: Para el botón de eliminar objeto
+*   <fh-copy>{{viewbutton}}</fh-copy>: Para el botón de ver objeto
+*   <fh-copy>{{editbutton}}</fh-copy>: Para el botón de editar objeto
+*   <fh-copy>{{newbutton}}</fh-copy>: Para el botón de nuevo objeto
+*   <fh-copy>{{bagbutton}}</fh-copy>: Para mostrar el botón de bolsa en los elementos de una colección (lista)
 
 
 ## Grupos de plantillas

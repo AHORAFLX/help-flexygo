@@ -8,7 +8,7 @@ After configuring Flexygo AI, using it at an offline app is as easy as utilizing
 
 ## Using an assistant
 
-With <fh-copy class="link">flexygo.nav.goAI</fh-copy> this function you will be able of navigating to any configured Flexygo AI asstistant.
+With <fh-copy>flexygo.nav.goAI</fh-copy> this function you will be able of navigating to any configured Flexygo AI asstistant.
 
 ### Parameters
 
@@ -23,7 +23,7 @@ With <fh-copy class="link">flexygo.nav.goAI</fh-copy> this function you will be 
 
 ## Starting with voice reconition
 
-You can start an AI Assistant directly with a first message that the user asks with its mic using <fh-copy class="link">flexygo.ai.startVoiceRecognition</fh-copy>.
+You can start an AI Assistant directly with a first message that the user asks with its mic using <fh-copy>flexygo.ai.startVoiceRecognition</fh-copy>.
 
 The voice recognition will stop after a moment of silence, and it will automatically navigate to the chat with that message. But iff the user wants to stop it before it just needs to press the mic button.
 
@@ -38,7 +38,7 @@ The voice recognition will stop after a moment of silence, and it will automatic
 
 ## Text to speech
 
-Offline app also admits the possibility of turning text into audio. For that we've got the <fh-copy class="link">flexygo.ai.textToSpeech</fh-copy> function:
+Offline app also admits the possibility of turning text into audio. For that we've got the <fh-copy>flexygo.ai.textToSpeech</fh-copy> function:
 
 With this function the text that is given will be read directly to the user.
 

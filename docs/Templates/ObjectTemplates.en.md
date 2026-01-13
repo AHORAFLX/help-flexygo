@@ -48,14 +48,14 @@ When an Edit module is loaded the displayed template will follow this sequence:
 
 Templates can also include specific strings for displaying diferent types of buttons:
 
-*   <fh-copy class="link">{{objectmenu}}</fh-copy>: To display the complete object menu
-*   <fh-copy class="link">{{processmenu}}</fh-copy>: To display only the object process menu
-*   <fh-copy class="link">{{reportmenu}}</fh-copy>: To display only the object report menu
-*   <fh-copy class="link">{{deletebutton}}</fh-copy>: To the object delete button
-*   <fh-copy class="link">{{viewbutton}}</fh-copy>: To the object view button
-*   <fh-copy class="link">{{editbutton}}</fh-copy>: To the object edit button
-*   <fh-copy class="link">{{newbutton}}</fh-copy>: To the object new button
-*   <fh-copy class="link">{{bagbutton}}</fh-copy>: To display the bag button on the elements of a collection (list)
+*   <fh-copy>{{objectmenu}}</fh-copy>: To display the complete object menu
+*   <fh-copy>{{processmenu}}</fh-copy>: To display only the object process menu
+*   <fh-copy>{{reportmenu}}</fh-copy>: To display only the object report menu
+*   <fh-copy>{{deletebutton}}</fh-copy>: To the object delete button
+*   <fh-copy>{{viewbutton}}</fh-copy>: To the object view button
+*   <fh-copy>{{editbutton}}</fh-copy>: To the object edit button
+*   <fh-copy>{{newbutton}}</fh-copy>: To the object new button
+*   <fh-copy>{{bagbutton}}</fh-copy>: To display the bag button on the elements of a collection (list)
 
 ## Template Groups
 

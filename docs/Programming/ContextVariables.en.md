@@ -12,21 +12,21 @@ Whatch the following video about context variables.
 
 All tokens must be referenced with curly brackets **{{** / **}}**. **flexygo** includes the following variables by default:
 
-*   <fh-copy class="link">{{currentReference}}</fh-copy>: Wildcard used for linking other system elements to the current user
-*   <fh-copy class="link">{{currentSubreference}}</fh-copy>: 2º Wildcard used for linking other system elements to the current user
-*   <fh-copy class="link">{{currentRole}}</fh-copy>: Current users role name
-*   <fh-copy class="link">{{currentRoleId}}</fh-copy>: Current users role Id
-*   <fh-copy class="link">{{currentUserLogin}}</fh-copy>: Current users login
-*   <fh-copy class="link">{{currentUserId}}</fh-copy>: Current users Id
-*   <fh-copy class="link">{{currentUserFullName}}</fh-copy>: Current users full name
-*   <fh-copy class="link">{{currentUserCultureId}}</fh-copy>: Current users culture Id
-*   <fh-copy class="link">{{currentUserLang}}</fh-copy>: Current users Language. First two digits of culture Id
-*   <fh-copy class="link">{{currentUserEmail}}</fh-copy>: Current users Email.
-*   <fh-copy class="link">{{currentDate}}</fh-copy>: Current Date.
-*   <fh-copy class="link">{{currentTime}}</fh-copy>: Current Time with minutes precision.
-*   <fh-copy class="link">{{currentTimeSec}}</fh-copy>: Current Time with seconds precision.
-*   <fh-copy class="link">{{currentDateTime}}</fh-copy>: Current Date and Time with minutes precision.
-*   <fh-copy class="link">{{currentDateTimeSec}}</fh-copy>: Current Date and Time with seconds precision.
+*   <fh-copy>{{currentReference}}</fh-copy>: Wildcard used for linking other system elements to the current user
+*   <fh-copy>{{currentSubreference}}</fh-copy>: 2º Wildcard used for linking other system elements to the current user
+*   <fh-copy>{{currentRole}}</fh-copy>: Current users role name
+*   <fh-copy>{{currentRoleId}}</fh-copy>: Current users role Id
+*   <fh-copy>{{currentUserLogin}}</fh-copy>: Current users login
+*   <fh-copy>{{currentUserId}}</fh-copy>: Current users Id
+*   <fh-copy>{{currentUserFullName}}</fh-copy>: Current users full name
+*   <fh-copy>{{currentUserCultureId}}</fh-copy>: Current users culture Id
+*   <fh-copy>{{currentUserLang}}</fh-copy>: Current users Language. First two digits of culture Id
+*   <fh-copy>{{currentUserEmail}}</fh-copy>: Current users Email.
+*   <fh-copy>{{currentDate}}</fh-copy>: Current Date.
+*   <fh-copy>{{currentTime}}</fh-copy>: Current Time with minutes precision.
+*   <fh-copy>{{currentTimeSec}}</fh-copy>: Current Time with seconds precision.
+*   <fh-copy>{{currentDateTime}}</fh-copy>: Current Date and Time with minutes precision.
+*   <fh-copy>{{currentDateTimeSec}}</fh-copy>: Current Date and Time with seconds precision.
 
 ## Generate Tokens
 

@@ -42,7 +42,7 @@ FROM ...
 | --- | --- | --- |
 | **Title** | Notification Title | ✓ |
 | **Message** | The notification message which you'll need to use HTML Markup | ✓ |
-| **MethodName** | <fh-copy class="link">App</fh-copy> Notification, <fh-copy class="link">Push</fh-copy> notification, <fh-copy class="link">PushMobile</fh-copy> for mobile device notification only or <fh-copy class="link">Pushweb</fh-copy> for web browser notification only | ✓ |
+| **MethodName** | <fh-copy>App</fh-copy> Notification, <fh-copy>Push</fh-copy> notification, <fh-copy>PushMobile</fh-copy> for mobile device notification only or <fh-copy>Pushweb</fh-copy> for web browser notification only | ✓ |
 | **ReminderTime** | The date time in which the notice will be sent | ✓ |
 | **ExpiryTime** | The datetime in which the the notice will expire | ✓ |
 | **AllUsers** | Send the notification to all users, if set to false remeber to fill out notification user Sentence | ✓ |
