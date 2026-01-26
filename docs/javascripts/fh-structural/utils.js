@@ -6,15 +6,14 @@ let navigation_dialog;
 addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
     navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
-})
-
+});
 
 function changeLanguage(new_language) {
     const base_path = getBasePath();
     const [true_base_path, relative_path] = splitBase(base_path);
 
     // We divide the path into segments and get the first from it, so we can get the current language
-    const path_segments = relative_path.split('/').filter(Boolean);//Preguntar a Alex
+    const path_segments = relative_path.split('/').filter(Boolean);
     const fist_segment = path_segments[0] || '';
     const current_language = LANGUAGES.includes(fist_segment) ? fist_segment : DEFAULT_LANGUAGE;
 
@@ -119,15 +118,17 @@ function _nav(url) {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        const md_dialog = document.querySelector('.md-dialog');
-        md_dialog.querySelector('.md-dialog__inner').innerText = translate('copied');
-
-        md_dialog.classList.add('md-dialog--active');
-
-        setTimeout(() => {
-            md_dialog.classList.remove('md-dialog--active');
-        }, 2300);
+        showDialog(translate('copied'));
     }); 
+}
+
+function showDialog(text) {
+    const md_dialog = document.querySelector('.md-dialog');
+    md_dialog.querySelector('.md-dialog__inner').innerText = text;
+    md_dialog.classList.add('md-dialog--active');
+    setTimeout(() => {
+        md_dialog.classList.remove('md-dialog--active');
+    }, 2300);
 }
 
 function getLanguage() {
@@ -173,7 +174,6 @@ function translate(key) {
     const lang = getLanguage();
     return FH_CULTURES[lang][key] || key;
 }
-
 
 function getElementsWithCertainText(starting_element, text) {
     const walker = document.createTreeWalker(

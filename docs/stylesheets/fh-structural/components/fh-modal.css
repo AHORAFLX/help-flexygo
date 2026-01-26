@@ -8,8 +8,8 @@
     max-width: 90vw;
     max-height: 90vh;
     overflow: auto;
-    background-color: var(--flx-color-section);
-    border-radius: var(--flx-border-radius);
+    background-color: var(--fh-color-section);
+    border-radius: var(--fh-border-radius);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     padding: 20px;
 
@@ -22,9 +22,10 @@
     /* Code blocks */
     .highlight {
         pre {
-            background: var(--flx-color-background);
-            border-radius: 0 0 var(--flx-border-radius) var(--flx-border-radius);
+            background: var(--fh-color-background);
+            border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
             padding: 10px;
+            overflow-x: auto;
     
             button.md-clipboard {
                 position: relative;
@@ -32,6 +33,25 @@
                 width: 0;
             }
         }
+    }
+
+    /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--fh-identity-color-accent) transparent;
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--fh-identity-color-accent);
+        border-radius: 20px;
+        border: 3px solid transparent;
     }
 }
 
@@ -53,4 +73,3 @@
     content: "</>";
     margin-right: 5px;
 }*/
-

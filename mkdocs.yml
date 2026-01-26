@@ -3,6 +3,7 @@ theme:
   name: material
   custom_dir: ./overrides/
   logo: docs_assets/images/logos/fl.svg
+  favicon: docs_assets/images/logos/fl-favicon.ico
   palette:
     - scheme: default
       toggle:
@@ -28,28 +29,42 @@ extra:
   version:
     provider: mike
 extra_css:
-  - stylesheets/extra.css
-  - stylesheets/custom-components.css
-  - stylesheets/404-error.css
-  - stylesheets/components/fh-modal.css
-  - stylesheets/components/fh-copy.css
-  - stylesheets/components/fh-namepropagator.css
+   # Basic styles for every documentation project
+  ## Basic Structure
+  - stylesheets/custom-colors.css
+  - stylesheets/fh-structural/base.css
+  - stylesheets/fh-structural/code-highlighting.css
+  - stylesheets/fh-structural/css-class-components.css
+  - stylesheets/fh-structural/404-error.css
+  ## Basic components
+  - stylesheets/fh-structural/components/fh-modal.css
+  - stylesheets/fh-structural/components/fh-copy.css
+  - stylesheets/fh-structural/components/fh-namepropagator.css
+  ## Basic fonts and icons
+  - docs_assets/fh-structural/fonts/flags/flags.css
+
+  # Your project styles files here ↓
   - stylesheets/flexygo-styles/main-flexygo-styles.css
   - stylesheets/flexygo-styles/cols.css
   - stylesheets/flexygo-styles/list-groups.css
-  - stylesheets/code-highlighting.css
-  - docs_assets/fonts/flags/flags.css
   - docs_assets/fonts/flexygo/utils.css
   - docs_assets/fonts/flexygo/flexygo.css
 extra_javascript:
-  - javascripts/extra.js
-  - javascripts/components/flx-navbutton.js
-  - javascripts/components/fh-modal.js
-  - javascripts/components/fh-copy.js
-  - javascripts/components/fh-popover.js
-  - javascripts/components/fh-namepropagator.js
+  # Basic javascripts for every documentation project
+  ## Basic utilities
+  - javascripts/fh-structural/utils.js
+  ## Basic components
+  - javascripts/fh-structural/components/fh-modal.js
+  - javascripts/fh-structural/components/fh-copy.js
+  - javascripts/fh-structural/components/fh-popover.js
+  - javascripts/fh-structural/components/fh-namepropagator.js
+  - javascripts/fh-structural/components/flx-navbutton.js
+  ## Translation files
   - javascripts/cultures/es.js
   - javascripts/cultures/en.js
+
+  # Your project js files here ↓
+  - javascripts/extra.js
 markdown_extensions:
   - toc:
       permalink: true
@@ -57,15 +72,28 @@ markdown_extensions:
   - tables
   - admonition
   - footnotes
+  - abbr  # Abreviaciones con tooltips
+  - def_list  # Listas de definición
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
       auto_title: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys  # Marcado de teclado (++ctrl+c++)
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details  # Admonitions colapsables
   - attr_list
   - md_in_html
 plugins:
@@ -80,6 +108,7 @@ plugins:
         - locale: es
           name: Español
           build: true
+          # Here goes every menu translation for Spanish ↓
           nav_translations:
             Ahora Bussiness Hub: Ahora Bussiness Hub
             Connectors: Conectores
