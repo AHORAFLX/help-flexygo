@@ -1,6 +1,6 @@
 # Integración con Passbook { .flx-title-with-image }
 
-![Passbook](/docs_assets/images/Passbook/WalletIcon.png){ .flx-image-of-title }
+![Passbook](/docs_assets/images/Passbook/WalletIcon.png){ .fh-image-of-title }
 
 Passbook es el formato utilizado por tarjetas y cupones para integrarse en Apple Wallet.  
 **flexygo** permite ahora generar un passbook de forma sencilla.

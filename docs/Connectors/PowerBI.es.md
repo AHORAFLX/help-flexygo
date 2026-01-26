@@ -1,6 +1,6 @@
 # Integración con Power BI { .flx-title-with-image }
 
-![](/docs_assets/images/PowerBI/PowerBiLogo.png){ .flx-image-of-title }
+![](/docs_assets/images/PowerBI/PowerBiLogo.png){ .fh-image-of-title }
 
 Power BI es un servicio de análisis de datos de Microsoft que ofrece visualizaciones interactivas y capacidades de inteligencia empresarial (BI) con una interfaz lo suficientemente sencilla como para que los usuarios finales puedan crear sus propios informes y paneles.  
 **flexygo** permite utilizar Microsoft Power BI para incrustar informes dentro de tus páginas.

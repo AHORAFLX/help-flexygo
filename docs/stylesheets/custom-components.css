@@ -65,7 +65,7 @@
         margin: 20px 0;
     }
 
-    p:has(.flx-image-of-title) {
+    p:has(.fh-image-of-title) {
         display: flex;
         justify-content: flex-end;
 
@@ -148,6 +148,7 @@
     padding: 10px 15px;
     border-radius: 50px;
     border: 1px solid var(--flx-color-accent);
+    font-weight: 500;
 }
 
 /* Links */

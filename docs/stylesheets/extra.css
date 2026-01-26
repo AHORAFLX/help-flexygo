@@ -8,7 +8,7 @@
   --flx-table-border-color: var(--flx-color-border);
   --flx-sidebar-title-color: #141414;
   --flx-color-text: white; /* Text color to use for  background with flx-color*/
-  --flx-color-accent: #228781;
+  --flx-color-accent: #30d7cd;
 
   /* Material Theme Color Personalization */
   --md-primary-fg-color: var(--flx-color); /* Higlights */
@@ -206,7 +206,7 @@ main {
     min-width: 100dvw;
 
     /* Main content and Secondary sidebar direct container */
-    .flx-maincontainer {
+    .fh-maincontainer {
       display: flex;
       
       /* Main content module */
@@ -406,7 +406,7 @@ a.md-logo {
 
   /* Main content and Secondary sidebar */
   main {
-    .md-main__inner .flx-maincontainer {
+    .md-main__inner .fh-maincontainer {
       /* Main content*/
       .md-content {
         min-width: calc(75dvw - 80px);
@@ -448,7 +448,7 @@ a.md-logo {
   }
 
   /* Main content and Secondary sidebar */
-  main .md-main__inner .flx-maincontainer {
+  main .md-main__inner .fh-maincontainer {
     > .md-content {
       display: flex;
       flex-direction: column;

@@ -1,6 +1,6 @@
 # Integración con Flexygo { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 En caso de necesitar abrir páginas de aplicaciones **flexygo** externas desde tu **flexygo** actual, puedes conectar ambas apps utilizando el conector especialmente diseñado para permitir la integración entre dos aplicaciones **flexygo** diferentes.
 

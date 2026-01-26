@@ -1,6 +1,6 @@
 # Security { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 **Flexygo** incluye 3 niveles de seguridad diferentes:
 

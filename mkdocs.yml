@@ -103,4 +103,4 @@ plugins:
       draggable: false
       skip_classes:
         - not-zoomable
-        - flx-image-of-title
+        - fh-image-of-title

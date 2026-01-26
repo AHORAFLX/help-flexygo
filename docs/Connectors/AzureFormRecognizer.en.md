@@ -1,6 +1,6 @@
 # Azure Form Recognizer { .flx-title-with-image }
 
-![Azure Form Recognizer](/docs_assets/images/FormRecognizer/logo.png){ .flx-image-of-title }
+![Azure Form Recognizer](/docs_assets/images/FormRecognizer/logo.png){ .fh-image-of-title }
 
 Azure Form Recognizer is a cloud service that uses machine learning to analyze text and structured data from your documents. **flexygo** offers you the possibility to read documents through the Azure Form Recognizer service.
 

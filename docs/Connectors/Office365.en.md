@@ -1,6 +1,6 @@
 # Office 365 Integration { .flx-title-with-image }
 
-![Office 365](/docs_assets/images/Office365/Office365Logo.png){ .flx-image-of-title }
+![Office 365](/docs_assets/images/Office365/Office365Logo.png){ .fh-image-of-title }
 
 In order to make calls to Microsoft Graph, which is a RESTfull web API, that enables you to access Microsoft Cloud service resources, it is required to register your app and get authentication tokens for a user or service. If you want to develop an office integration from **flexygo** platform you have two options:
 

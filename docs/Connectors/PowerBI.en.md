@@ -1,6 +1,6 @@
 # Power BI Integration { .flx-title-with-image }
 
-![](/docs_assets/images/PowerBI/PowerBiLogo.png){ .flx-image-of-title }
+![](/docs_assets/images/PowerBI/PowerBiLogo.png){ .fh-image-of-title }
 
 Power BI is a Microsoft data analysis service aimed at providing interactive visualizations and business intelligence (BI) capabilities with an interface simple enough for end users to create their own reports themselves and panels. **flexygo** enables you to use Microsot Power BI to embed reports.
 

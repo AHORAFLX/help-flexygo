@@ -1,6 +1,6 @@
 # Integración con Ahora ERP { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .flx-image-of-title }
+![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 
 **Flexygo** facilita la integración con **Ahora ERP**. Para ello, pone a un solo clic una serie de procesos que simplifican el desarrollo de soluciones sobre la base de datos de Ahora ERP.
 

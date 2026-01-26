@@ -1,6 +1,6 @@
 # MailChimp Integration { .flx-title-with-image }
 
-![MailChimp](/docs_assets/images/MailChimp/MailChimpLogoBlack.png){ .flx-image-of-title }
+![MailChimp](/docs_assets/images/MailChimp/MailChimpLogoBlack.png){ .fh-image-of-title }
 
 MailChimp is a marketing automation platform that helps you share email and advertising campaigns with customers and other stakeholders.
 

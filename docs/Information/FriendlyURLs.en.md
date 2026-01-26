@@ -1,6 +1,6 @@
 # Friendly URLs { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 ## Configuration
 

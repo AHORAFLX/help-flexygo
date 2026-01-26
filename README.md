@@ -82,18 +82,18 @@ If no class is added it will apply [link styles](#link-class), but you can use w
 ### Modal
 
 ```html
-<fh-modal modal_id="fhnodal_Your_Id" modal_title="Your_Title">My text</fh-modal>
+<fh-modal modal_id="fhmodal_Your_Id" modal_title="Your_Title">My text</fh-modal>
 
 ...
 
-    ```js { #fhnodal_Your_Id }
+    ```js { #fhmodal_Your_Id }
     console.log("test");
     ```
 ```
 
 When clicked it will show the desired block as a modal, it's normally used to show large block codes or images.
 
-For this component to work properly you need to set the block you want to show as a modal an ID that starts with "fhmodal_" so it get's hidden by default with our styles and onle get's shown when clicked.
+For this component to work properly you need to set the block you want to show as a modal an ID that starts with "fhmodal_" so it get's hidden by default with our styles and only get's shown when clicked.
 
 Also to make page code more readable you should always set modal block at the end of the page.
 
@@ -190,7 +190,7 @@ It will make your block have a blue background with round borders.
 ```md
 # Paco { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .flx-image-of-title }
+![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 ```
 
 It will set at the right of the title the iamge you desire, normally used to show the logo of something.

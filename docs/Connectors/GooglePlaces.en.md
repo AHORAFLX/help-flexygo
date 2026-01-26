@@ -1,6 +1,6 @@
 # Google Places { .flx-title-with-image }
 
-![Google Places](/docs_assets/images/Google/GooglePlaces.png){ .flx-image-of-title }
+![Google Places](/docs_assets/images/Google/GooglePlaces.png){ .fh-image-of-title }
 
 Google Places integration provides a convenient UI for connecting to and querying Google Maps Platform APIs. It can be used to provide autocomplete functionality for text-based geographic searches by returning places such as businesses, addresses and points of interest. To make it possible you need to realize some steps.
 

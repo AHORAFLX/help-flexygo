@@ -1,6 +1,6 @@
 # RedSys Integration { .flx-title-with-image }
 
-![](/docs_assets/images/RedSys/RedSysLogo.png){ .flx-image-of-title }
+![](/docs_assets/images/RedSys/RedSysLogo.png){ .fh-image-of-title }
 
 Redsys is a secure virtual payment platform that you can apply to e-commerce to offer your customers/clients credit and debit card payments from different banks. **flexygo** has the ability to make payments through this platform.
 

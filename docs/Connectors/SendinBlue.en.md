@@ -1,6 +1,6 @@
 # SendinBlue Integration { .flx-title-with-image }
 
-![SendinBlue](/docs_assets/images/SendinBlue/SendinBlue_Logo.png){ .flx-image-of-title }
+![SendinBlue](/docs_assets/images/SendinBlue/SendinBlue_Logo.png){ .fh-image-of-title }
 
 SendinBlue is a marketing automation platform that helps you share email and advertising campaigns with customers and other stakeholders.
 

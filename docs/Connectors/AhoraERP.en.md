@@ -1,6 +1,6 @@
 # Ahora ERP Integration { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .flx-image-of-title }
+![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 
 **flexygo** facilitates integration with Ahora ERP. To enable this, it puts at a simple click of a button a series of processes that facilitate the development of solutions on the Ahora ERP DB.
 

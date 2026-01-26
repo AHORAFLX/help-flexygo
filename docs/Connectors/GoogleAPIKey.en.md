@@ -1,6 +1,6 @@
 # Google API Key { .flx-title-with-image }
 
-![Google](/docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .flx-image-of-title }
+![Google](/docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .fh-image-of-title }
 
 Google APIs are application programming interfaces (APIs) developed by Google which allow communication with Google Services and their integration to other services. Examples of these include Search, Gmail, Translate or Google Maps. **flexygo** invites you to use in your products the integration with Google. To enjoy the advantages of integration with Google, such as Google Maps and Google Places, you need to follow a series of steps.
 

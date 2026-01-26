@@ -1,6 +1,6 @@
 # Test Automation { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 Test Automation are an important value when evaluating and verifying the correct functioning of our applications. In fact tests are just small programs used to verify that the results of our application are correct or that no type of mal function is occurring. The test is not more than a piece of code that is compiled in a dll and can be executed either from the programmers IDE, an Integration Machine or by **flexygo** itself. 
 

@@ -1,6 +1,6 @@
 # Cl@ve Authentication { .flx-title-with-image }
 
-![Cl@ve](/docs_assets/images/clave/clave-icon.svg){ .flx-image-of-title }
+![Cl@ve](/docs_assets/images/clave/clave-icon.svg){ .fh-image-of-title }
 
 We are pleased to share an exciting update to our **flexygo** web application: the introduction of Cl@ve as an authentication method. This addition aims to streamline user access, bolster security, and significantly enhance the overall user experience
 

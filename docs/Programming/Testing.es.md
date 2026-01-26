@@ -1,6 +1,6 @@
 # Automatización de tests { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 La Automatización de Pruebas es un valor importante al evaluar y verificar el correcto funcionamiento de nuestras aplicaciones. De hecho, las pruebas son solo pequeños programas usados para verificar que los resultados de nuestra aplicación son correctos o que no ocurre ningún tipo de mal funcionamiento. La prueba no es más que un pedazo de código que se compila en una dll y puede ser ejecutado ya sea desde el IDE del programador, una Máquina de Integración o por flexygo mismo.
 

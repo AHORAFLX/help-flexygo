@@ -1,6 +1,6 @@
 # ChatGPT integration { .flx-title-with-image }
 
-![openAI](/docs_assets/images/openAI/chatgpt-icon.svg){ .flx-image-of-title }
+![openAI](/docs_assets/images/openAI/chatgpt-icon.svg){ .fh-image-of-title }
 
 **flexygo** aims to adapt to emerging technologies, and that is why we found the integration of ChatGPT through the openAI API as a good starting point.
 

@@ -1,6 +1,6 @@
 # Integración con ChatGPT { .flx-title-with-image }
 
-![openAI](/docs_assets/images/openAI/chatgpt-icon.svg){ .flx-image-of-title }
+![openAI](/docs_assets/images/openAI/chatgpt-icon.svg){ .fh-image-of-title }
 
 **Flexygo** busca adaptarse a las tecnologías emergentes y por ello incorpora la integración de ChatGPT a través de la API de OpenAI.
 

@@ -1,6 +1,6 @@
 # Flexygo Integration { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .flx-image-of-title }
+![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 In case you need to launch pages of external **flexygo** applications from this **flexygo**, you can connect both apps using the connector especially developed to make possible integration betweet two different **flexygo**.
 
