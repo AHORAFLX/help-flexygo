@@ -7,7 +7,7 @@ Primary Colors (The ones from who the rest of the theme is built, but you could 
   --fh-color-background: #e9ecef; /* Bacground color for the <main> (the background that's bellow the 3 main blocks) */
   --fh-color-border: #cfd4d9; /* Border color */
   --fh-color-text: white; /* Text color to use for  background with fh-identity-color*/
-  --fh-identity-color-accent: #30d7cd; /* Used in borders of buttons or on dark mode to make visible links <a>*/
+  --fh-identity-color-accent: #2db7b0; /* Used in borders of buttons or on dark mode to make visible links <a>*/
 
   /* Material Theme Color Personalization */
   --md-default-fg-color: #555e68; /* Color for <body> (most of the texts) */
