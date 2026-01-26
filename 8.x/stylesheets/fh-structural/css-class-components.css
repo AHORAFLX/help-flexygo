@@ -11,9 +11,9 @@
     li.flx-home-card {
         min-height: 182px;
         max-height: 182px;
-        border: var(--flx-border);
-        border-radius: var(--flx-border-radius);
-        border-color: var(--flx-table-border-color);
+        border: var(--fh-border);
+        border-radius: var(--fh-border-radius);
+        border-color: var(--fh-color-border);
 
         a {
             color: var(--md-typeset-color);
@@ -34,7 +34,7 @@
             padding: 10px;
             margin-top: 10px;
 
-            border: var(--flx-border);
+            border: var(--fh-border);
             border-radius: 50%;
 
             i {
@@ -49,11 +49,11 @@
 
     li.flx-home-card:hover {
         box-shadow: var(--flx-home-card-shadow);
-        border-color: var(--flx-color);
+        border-color: var(--md-typeset-a-color);
 
         .flx-home-card-icon {
-            color: var(--flx-color);
-            border-color: var(--flx-color);
+            color: var(--md-typeset-a-color);
+            border-color: var(--md-typeset-a-color);
         }
     }
 }
@@ -65,7 +65,7 @@
         margin: 20px 0;
     }
 
-    p:has(.flx-image-of-title) {
+    p:has(.fh-image-of-title) {
         display: flex;
         justify-content: flex-end;
 
@@ -96,7 +96,7 @@
 }
 
 /* Warning cards */
-.md-typeset .flx-warning-card {
+.md-typeset .fh-warning-card {
     background: #fdf3cf;
     margin-top: 0.6em;
     margin-bottom: 0.6em;
@@ -140,27 +140,40 @@
 }
 
 /* Buttons */
-.button, .md-typeset a.button {
+.button, .md-typeset a.button, .md-typeset .md-button {
     display: inline-block;
     cursor: pointer;
-    background-color: var(--flx-color);
-    color: var(--flx-color-text);
+    background-color: var(--md-default-bg-color);
+    color: var(--fh-identity-color);
     padding: 10px 15px;
     border-radius: 50px;
-    border: 1px solid var(--flx-color-accent);
+    border: .1rem solid var(--fh-identity-color);
+    font-weight: 500;
+    transition: color 125ms, background-color 125ms, border-color 125ms;
+
+    &.md-button--primary {
+        background-color: var(--fh-identity-color);
+        color: var(--fh-color-text);
+        border: .1rem solid var(--fh-identity-color);
+    }
+
+    &:hover {
+        background-color: var(--fh-identity-color);
+        color: var(--fh-color-text);
+    }
 }
 
 /* Links */
-.link {
-    color: var(--flx-color);
+.link, fh-copy:not([class]) {
+    color: var(--fh-identity-color-accent);
     cursor: pointer;
 }
 
 /* Modals */
 dialog {
     padding: 30px 50px;
-    border-radius: var(--flx-border-radius);
-    border: 1px solid var(--flx-color);
+    border-radius: var(--fh-border-radius);
+    border: 1px solid var(--fh-identity-color);
 
     p.input-group {
         display: flex;
@@ -185,7 +198,7 @@ dialog {
 
         button {
             color: white;
-            background: var(--flx-color);
+            background: var(--fh-identity-color);
             padding: 10px 20px;
             border-radius: 20px;
         }
@@ -200,10 +213,10 @@ dialog {
     opacity: 1;
     
     min-width: 0;
-    border-radius: var(--flx-border-radius) 0 0 var(--flx-border-radius);
+    border-radius: var(--fh-border-radius) 0 0 var(--fh-border-radius);
     padding: 10px 12px 10px 18px;
     
-    background-color: var(--flx-color);
+    background-color: var(--fh-identity-color);
     transition: right .3s cubic-bezier(0, 0, 0.18, 0.92);
 
     &.md-dialog--active {
@@ -212,7 +225,7 @@ dialog {
 
     .md-dialog__inner {
         font-size: 18px;
-        color: var(--flx-color-text);
+        color: var(--fh-color-text);
         line-height: normal;
     }
 }

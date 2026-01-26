@@ -1,31 +1,11 @@
+/* Global variables */
 :root  > * {
-  /* Custom Colors */
-  --flx-color: #2db7b0;
-  --flx-color-background: #e9ecef;
-  --flx-color-background-grad: #f5f6f7;
-  --flx-color-section: #f5f7f8;
-  --flx-color-border: #cfd4d9;
-  --flx-table-border-color: var(--flx-color-border);
-  --flx-sidebar-title-color: #141414;
-  --flx-color-text: white; /* Text color to use for  background with flx-color*/
-  --flx-color-accent: #228781;
-
-  /* Material Theme Color Personalization */
-  --md-primary-fg-color: var(--flx-color); /* Higlights */
-  --md-accent-fg-color: var(--flx-color); /* Higlights */
-  --md-typeset-a-color: var(--flx-color); /* Links Texts */
-  --md-default-fg-color: #555e68; /* Text */
-  --md-default-fg-color--light: black; /* Titles */
-  --md-default-fg-color--bold: #03060b;; /* Titles */
-  --md-default-fg-color--light--rgb: 85, 94, 104;  /* Code Block Copy Button */
-  --md-code-bg-color: var(--flx-color-background); /* Code blocks */
-  --md-code-fg-color: black; /* Code blocks */
-  --md-default-bg-color: var(--flx-color-background); /* Input background */
+  /* Font */
   --md-text-font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
   
   /* Borders */
-  --flx-border-radius: 16px;
-  --flx-border: 1px solid var(--flx-color-border);
+  --fh-border-radius: 16px;
+  --fh-border: 1px solid var(--fh-color-border);
   
   /* Main Sidebar*/
   --flx-main-sidebar-width: 19dvw;
@@ -35,39 +15,21 @@
   --flx-main-content-margin: 2rem;
 
   /* Images */
-  --flx-main-background: url(/docs_assets/images/backgrounds/light-background.svg);
+  --flx-main-background: url(/docs_assets/fh-structural/images/backgrounds/light-background.svg);
 
   /* Box Shadw */
   --flx-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
 }
 
-[data-md-color-scheme=darkmode] img[src$="#gh-light-mode-only"], [data-md-color-scheme=darkmode] img[src$="#only-light"] {
-    display: none;
+/* Dark mode variables */
+[data-md-color-scheme="darkmode"] {
+  /* Images */
+  --flx-main-background: url(/docs_assets/fh-structural/images/backgrounds/dark-background.svg);
 }
 
-/* Dark Mode Colors */
-[data-md-color-scheme="darkmode"] {
-  /* Custom Colors */
-  --flx-color: #2db7b0;
-  --flx-color-background: #333333;
-  --flx-color-background-grad: #191919;
-  --flx-color-section: #292929;
-  --flx-color-border: #3a3a3a;
-  --flx-table-border-color: var(--md-default-fg-color--light);
-  --flx-sidebar-title-color: #f3f3f3;
-
-  /* Material Theme Color Personalization */
-  --md-primary-fg-color: var(--flx-color); /* Higlights */
-  --md-accent-fg-color: var(--flx-color); /* Higlights */
-  --md-typeset-a-color: var(--flx-color); /* Higlights */
-  --md-typeset-color: #d7dde2; /* Text */
-  --md-default-fg-color--bold: white; /* Titles */
-  --md-default-fg-color--light: white; /* Titles */
-  --md-default-fg-color--light--rgb: 168, 168, 168;  /* Code Block Copy Button */
-  --md-code-fg-color: white; /* Code blocks */
-
-  /* Images */
-  --flx-main-background: url(/docs_assets/images/backgrounds/dark-background.svg);
+/* Hiding images that are only for light mode in dark mode */
+[data-md-color-scheme=darkmode] img[src$="#gh-light-mode-only"], [data-md-color-scheme=darkmode] img[src$="#only-light"] {
+    display: none;
 }
 
 html:has(dialog[open]) {
@@ -117,11 +79,11 @@ header.md-header {
         border-bottom: 1px solid;
 
         &:has(.focus-visible) {
-          border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
+          border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0 !important;
 
           .md-search__input {
             background-color: var(--md-default-bg-color);
-            border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
+            border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
           }
         }
       }
@@ -129,25 +91,25 @@ header.md-header {
   }
 
   .md-search__output {
-    border-radius: 0 0 var(--flx-border-radius) var(--flx-border-radius);
+    border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
   }
 
   /* Language Selector PopUp */
   .md-select__inner {
-    border-radius: var(--flx-border-radius);
-    border: var(--flx-border);
-    background-color: var(--flx-color-background);
+    border-radius: var(--fh-border-radius);
+    border: var(--fh-border);
+    background-color: var(--fh-color-background);
     color: var(--md-typeset-color);
 
     &:after {
-      border-bottom-color: var(--flx-color-background);
+      border-bottom-color: var(--fh-color-background);
     }
   }
 }
 
 /* Header with search bar focused */
 [data-md-toggle="search"]:checked ~ header.md-header .md-search__inner .md-search__form {
-  border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
+  border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0 !important;
 }
 
 /* Main Sidebar */
@@ -164,7 +126,7 @@ header.md-header {
     align-items: center;
 
     width: var(--flx-main-sidebar-width);
-    background-color: var(--flx-color);
+    background-color: var(--fh-identity-color);
 
     /* Centering and spacing logo and docs text */
     a {
@@ -179,9 +141,9 @@ header.md-header {
     width: var(--flx-main-sidebar-width);
     margin: 0;
 
-    background: var(--flx-color-section);
+    background: var(--fh-color-section);
     padding: var(--flx-main-sidebar-padding);
-    border: var(--flx-border);
+    border: var(--fh-border);
     box-shadow: var(--flx-module-boxshadow);
   }
 
@@ -198,7 +160,7 @@ header.md-header {
 
 /* Main content and Secondary sidebar */
 main {
-  background-color: var(--flx-color-background);
+  background-color: var(--fh-color-background);
   background-image: var(--flx-main-background);
 
   .md-main__inner {
@@ -206,7 +168,7 @@ main {
     min-width: 100dvw;
 
     /* Main content and Secondary sidebar direct container */
-    .flx-maincontainer {
+    .fh-maincontainer {
       display: flex;
       
       /* Main content module */
@@ -215,10 +177,10 @@ main {
         display: flex;
         justify-content: center;
 
-        background: var(--flx-color-section);
+        background: var(--fh-color-section);
         padding: 20px;
-        border-radius:  var(--flx-border-radius);
-        border: var(--flx-border);
+        border-radius:  var(--fh-border-radius);
+        border: var(--fh-border);
         margin: 0 var(--flx-main-content-margin) 12px var(--flx-main-content-margin);
         box-shadow: var(--flx-module-boxshadow);
         
@@ -228,6 +190,7 @@ main {
 
         article {
           max-width: 630px;
+          width: 630px;
         }
       }
       
@@ -241,10 +204,10 @@ main {
 
         /* Module style */
         .md-sidebar__scrollwrap {
-          background: var(--flx-color-section);
+          background: var(--fh-color-section);
           padding: 20px;
-          border-radius:  var(--flx-border-radius);
-          border: var(--flx-border);
+          border-radius:  var(--fh-border-radius);
+          border: var(--fh-border);
           box-shadow: var(--flx-module-boxshadow);
 
           height: calc(100dvh - 85px) !important;
@@ -252,7 +215,7 @@ main {
 
         /* Removes a material stlye */
         .md-nav--secondary .md-nav__title {
-          background: var(--flx-color-section);
+          background: var(--fh-color-section);
           box-shadow: none;
           font-weight: 500;
         }
@@ -275,7 +238,7 @@ main {
   }
 
   /* Centered Images */
-  p:has(> img) {
+  p:has(> img:not(.twemoji,.fh-image-of-title)) {
     display: flex;
     justify-content: center;
   }
@@ -288,17 +251,17 @@ main {
 
 /* Tables */
 .md-typeset table:not([class]) {
-  background-color: var(--flx-color-section);
-  border-radius: var(--flx-border-radius);
-  border-color: var(--flx-table-border-color);
+  background-color: var(--fh-color-section);
+  border-radius: var(--fh-border-radius);
+  border-color: var(--fh-color-border);
 
   td {
-    border-color: var(--flx-table-border-color);
+    border-color: var(--fh-color-border);
   }
 }
 
 .md-content img {
-  border-radius: var(--flx-border-radius);
+  border-radius: var(--fh-border-radius);
 }
 
 /* Logo that just appears on middle and small size */
@@ -317,15 +280,17 @@ a.md-logo {
 
 /* Code Blocks */
 .md-typeset code {
-  border-radius: var(--flx-border-radius);
+  border-radius: var(--fh-border-radius);
+  max-height: 500px;
 }
 
 .highlight:has(code) {
-  border-radius: calc(var(--flx-border-radius) * 2); /* So it does not show a bit of white border in dark mode */
+  border-radius: calc(var(--fh-border-radius) * 2); /* So it does not show a bit of white border in dark mode */
   background-color: var(--md-code-bg-color);
+  max-width: 100%;
 
   .filename {
-    border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
+    border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
   }
 
   /* When you need the scripting language header not to appear */
@@ -335,18 +300,14 @@ a.md-logo {
     }
 
     pre > code {
-      border-radius: var(--flx-border-radius);
+      border-radius: var(--fh-border-radius);
     }
   }
 }
 
-.md-clipboard {
-  color: rgba(var(--md-default-fg-color--light--rgb), 0.5);
-}
-
 /* Copied to clipboard dialog */
 .md-dialog {
-  border-radius: var(--flx-border-radius);
+  border-radius: var(--fh-border-radius);
 }
 
 /* This fixes table of content titles higlighting the title above the one clicked intead of the clicked */
@@ -375,11 +336,11 @@ a.md-logo {
 
         .md-search__form {
           &:has(.focus-visible) {
-            border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0 !important;
+            border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0 !important;
 
             .md-search__input {
               background-color: var(--md-default-bg-color);
-              border-radius: var(--flx-border-radius) var(--flx-border-radius) 0 0;
+              border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
             }
           }
         }
@@ -405,7 +366,7 @@ a.md-logo {
 
   /* Main content and Secondary sidebar */
   main {
-    .md-main__inner .flx-maincontainer {
+    .md-main__inner .fh-maincontainer {
       /* Main content*/
       .md-content {
         min-width: calc(75dvw - 80px);
@@ -447,7 +408,7 @@ a.md-logo {
   }
 
   /* Main content and Secondary sidebar */
-  main .md-main__inner .flx-maincontainer {
+  main .md-main__inner .fh-maincontainer {
     > .md-content {
       display: flex;
       flex-direction: column;
@@ -469,7 +430,6 @@ a.md-logo {
 
 @media screen and (min-width: 76.25em) {
   .md-nav__item--section>.md-nav__link[for] {
-    color: var(--flx-sidebar-title-color);
     font-weight: 500;
   }
 }
@@ -514,4 +474,39 @@ html[lang="es"] .md-search-result__item:not(:has(a[href*="/es/"])) {
 
 html[lang="en"] .md-search-result__item:has(a[href*="/es/"]) {
   display: none;
+}
+
+/* Smaller Screen Size */
+@media screen and (max-width: 44.9844em) {
+    /* Codeblocks get multiple styles that make docs look worse in this sizes */
+    main .md-main__inner .fh-maincontainer .md-content article {
+        max-width: 100%;
+    }
+
+    .md-content__inner > .highlight {
+        margin: 0;
+        
+        > .filename {
+            border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
+        }
+
+        .md-content__inner > .highlight > pre > code {
+            border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
+        }
+    }
+}
+
+/* Dialog for flexygo url opening */
+#navigation-dialog {
+  color: var(--md-typeset-color);
+  background-color: var(--fh-color-section);
+  border: var(--fh-border);
+
+  input {
+    background-color: var(--fh-color-section);
+  }
+
+  &::backdrop {
+    backdrop-filter: blur(2px);
+  }
 }

@@ -153,4 +153,8 @@ pygmentize -S dark-modern -f html -a .highlight > dark-modern.css
     .highlight .vi { color: #7FD0FD } /* Name.Variable.Instance */
     .highlight .vm { color: #7FD0FD } /* Name.Variable.Magic */
     .highlight .il { color: #B6CEA9 } /* Literal.Number.Integer.Long */
+    .highlight .gh { color: #FFFFFF } /* Generic.Heading */
+    .highlight .gu { color: #FFFFFF } /* Generic.Subheading */
+    .highlight .ge { color: #FFFFFF } /* Generic.Emph */
+    .highlight .gs { color: #FFFFFF } /* Generic.Strong */
 }
