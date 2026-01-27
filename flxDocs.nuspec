@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>flxDocs</id>
+    <version>1.0.0.1</version>
+    <title>Flexygo Docs</title>
+    <authors>Ahora Freeware</authors>
+    <owners>Ahora Freeware</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Flexygo Docs</description>
+    <copyright>Copyright © 2020 Ahora Freeware</copyright>
+    <projectUrl>http://flexygo.es</projectUrl>
+    <iconUrl>https://nuget.flexygo.com/isotipo.png</iconUrl>
+    <releaseNotes/>
+  </metadata>
+  <files>
+    <file src="docs\**\*.*" target="content\docs\" />
+	<file src="docs_assets\**\*.*" target="content\docs_assets\" />
+  </files>
+</package>
