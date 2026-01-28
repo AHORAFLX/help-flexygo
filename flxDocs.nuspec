@@ -16,6 +16,5 @@
   </metadata>
   <files>
     <file src="docs\**\*.*" target="content\docs\" />
-	<file src="docs_assets\**\*.*" target="content\docs_assets\" />
   </files>
 </package>
