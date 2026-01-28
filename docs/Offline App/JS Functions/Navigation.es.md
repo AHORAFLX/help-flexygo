@@ -30,8 +30,6 @@ Si hay un modal abierto, lo cierra; de lo contrario, retrocede en el historial d
 `void`
 
 
----
-
 ### closeModal()
 
 ```ts { .no-language }
@@ -53,8 +51,6 @@ Si se especifica un elemento, se cierra el modal asociado a dicho elemento.
 `void`
 
 
----
-
 ### goHome()
 
 ```ts { .no-language }
@@ -68,8 +64,6 @@ Navega a la página de inicio y reinicia el historial de navegación.
 `void`
 
 
----
-
 ### goSync()
 
 ```ts { .no-language }
@@ -82,8 +76,6 @@ Navega a la página de sincronización, reiniciando el historial.
 
 `void`
 
-
----
 
 ### goLogin()
 
@@ -103,8 +95,6 @@ Navega a la página de login, reiniciando el historial.
 
 `void`
 
-
----
 
 ### goList()
 
@@ -128,8 +118,6 @@ Navega a la lista del objeto y página especificados.
 `void`
 
 
----
-
 ### goEdit()
 
 ```ts { .no-language }
@@ -152,8 +140,6 @@ Navega a la página de edición del objeto especificado.
 `void`
 
 
----
-
 ### goView()
 
 ```ts { .no-language }
@@ -161,8 +147,6 @@ goView(object, pagename, filter, defaults?): void
 ```
 
 Navega a la página de visualización del objeto especificado.
-
----
 
 ### goInsert()
 
@@ -172,8 +156,6 @@ goInsert(object, pagename, defaults?): void
 
 Navega a la página de inserción de un nuevo registro.
 
----
-
 ### goGallery()
 
 ```ts { .no-language }
@@ -181,8 +163,6 @@ goGallery(object, objectid, defaults?): void
 ```
 
 Navega a la galerí­a del objeto.
-
----
 
 ### goDocuments()
 
@@ -192,8 +172,6 @@ goDocuments(object, objectid, defaults?): void
 
 Navega a los documentos del objeto.
 
----
-
 ### goAI()
 
 ```ts { .no-language }
@@ -201,8 +179,6 @@ goAI(setting_id, first_message?, defaults?, is_first_message_by_mic?): void
 ```
 
 Abre el asistente de IA con la configuración indicada.
-
----
 
 ### transferList()
 
@@ -212,8 +188,6 @@ transferList(object, pagename, filter?, defaults?): void
 
 Navega a la lista **sin permitir volver atrás**.
 
----
-
 ### transferEdit()
 
 ```ts { .no-language }
@@ -221,8 +195,6 @@ transferEdit(object, pagename, filter, defaults?): void
 ```
 
 Igual que goEdit pero reemplazando la página actual.
-
----
 
 ### transferView()
 
@@ -232,8 +204,6 @@ transferView(object, pagename, filter, defaults?): void
 
 Como goView pero sin historial.
 
----
-
 ### transferInsert()
 
 ```ts { .no-language }
@@ -241,8 +211,6 @@ transferInsert(object, pagename, defaults?): void
 ```
 
 Navega a insertar reemplazando la página actual.
-
----
 
 ### transferGallery()
 
@@ -252,8 +220,6 @@ transferGallery(object, objectid, defaults?): void
 
 Navega a galerí­a sin permitir volver.
 
----
-
 ### transferDocuments()
 
 ```ts { .no-language }
@@ -261,8 +227,6 @@ transferDocuments(object, objectid): void
 ```
 
 Navega a documentos sin permitir volver.
-
----
 
 ### modalList()
 
@@ -272,8 +236,6 @@ modalList(object, pagename, filter?, defaults?): Promise<OverlayEventDetail<any>
 
 Abre un modal con una lista.
 
----
-
 ### modalEdit()
 
 ```ts { .no-language }
@@ -281,8 +243,6 @@ modalEdit(object, pagename, filter, defaults?): Promise<OverlayEventDetail<any>>
 ```
 
 Abre un modal de edición.
-
----
 
 ### modalView()
 
@@ -292,8 +252,6 @@ modalView(object, pagename, filter, defaults?): Promise<OverlayEventDetail<any>>
 
 Abre un modal de visualización.
 
----
-
 ### modalInsert()
 
 ```ts { .no-language }
@@ -301,8 +259,6 @@ modalInsert(object, pagename, defaults?): Promise<OverlayEventDetail<any>>
 ```
 
 Abre un modal para insertar.
-
----
 
 ### goPage()
 
@@ -312,8 +268,6 @@ goPage(type, object, pagename, filter, defaults, direction): void
 
 Función genérica de navegación (no recomendada salvo casos avanzados).
 
----
-
 ### goPageGallDoc()
 
 ```ts { .no-language }
@@ -321,8 +275,6 @@ goPageGallDoc(type, object, objectid, defaults, direction): void
 ```
 
 Versión genérica para galerí­a y documentos.
-
----
 
 ### currentUrl()
 

@@ -20,8 +20,6 @@ Inicializa el lector NFC y muestra un modal solicitando al usuario escanear una 
 
 - Promesa que se resuelve cuando se lee una etiqueta NFC.
 
----
-
 ### isEnabled()
 
 ```ts { .no-language }
@@ -36,8 +34,6 @@ Comprueba si el NFC está activado en el dispositivo.
 
 
 - Promesa que devuelve **true** si el NFC está activado, **false** en caso contrario.
-
----
 
 ### bytesToString()
 
@@ -60,8 +56,6 @@ Convierte un array de bytes en un string.
 
 - Cadena resultante de la conversión.
 
----
-
 ### showSettings()
 
 ```ts { .no-language }
@@ -76,8 +70,6 @@ Abre la pantalla de ajustes NFC del dispositivo.
 
 
 - Promesa que se resuelve cuando los ajustes se han abierto.
-
----
 
 ### paintSetNFCModal()
 

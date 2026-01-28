@@ -438,6 +438,12 @@ a.md-logo {
   display: none;
 }
 
+/* We do this so the right menu works properly */
+.hidden-title { 
+  visibility: hidden;
+  height: 1px;
+}
+
 .clickable {
   cursor: pointer;
 }

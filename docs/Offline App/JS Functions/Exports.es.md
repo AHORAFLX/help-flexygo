@@ -29,8 +29,6 @@ Enví­a un correo electrónico utilizando el sistema de correo predeterminado.
 
 `Promise<void>`
 
----
-
 ### createPDF()
 
 ```ts { .no-language }

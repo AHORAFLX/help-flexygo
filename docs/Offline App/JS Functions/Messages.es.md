@@ -27,8 +27,6 @@ Si **auditable** es true (por defecto) y el error no es una excepción de campo 
 `Promise<void>`
 
 
----
-
 ### danger()
 
 ```ts { .no-language }
@@ -48,8 +46,6 @@ Muestra un toast de tipo *peligro* (error).
 
 `Promise<void>`
 
-
----
 
 ### warning()
 
@@ -71,8 +67,6 @@ Muestra un toast de advertencia.
 `Promise<void>`
 
 
----
-
 ### success()
 
 ```ts { .no-language }
@@ -92,8 +86,6 @@ Muestra un toast de éxito.
 
 `Promise<void>`
 
-
----
 
 ### generic()
 
@@ -116,8 +108,6 @@ Muestra un toast genérico con configuración avanzada.
 
 `Promise<void>`
 
-
----
 
 ### confirm()
 
@@ -143,8 +133,6 @@ Muestra un cuadro de confirmación.
 
 *Resuelve si el usuario confirma, rechaza si cancela.*
 
----
-
 ### prompt()
 
 ```ts { .no-language }
@@ -169,8 +157,6 @@ Muestra un cuadro de entrada con un único campo.
 
 *Resuelve con la entrada del usuario o rechaza si cancela.*
 
----
-
 ### prompts()
 
 ```ts { .no-language }
@@ -192,8 +178,6 @@ Muestra un cuadro de entrada con múltiples campos.
 
 `Promise<unknown>`
 
-
----
 
 ### alert()
 

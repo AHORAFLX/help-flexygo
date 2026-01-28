@@ -121,6 +121,7 @@ plugins:
             Reporting: Informes
             Style: Estilos
             Templates: Plantillas
+            Training: Formación
   - glightbox:
       touchNavigation: true
       loop: false

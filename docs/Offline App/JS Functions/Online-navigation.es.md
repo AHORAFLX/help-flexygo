@@ -18,8 +18,6 @@ Navega a la página de inicio.
 `void`
 
 
----
-
 ### goList()
 
 ```ts { .no-language }
@@ -44,8 +42,6 @@ Navega a la página de lista del objeto indicado.
 
 `void`
 
-
----
 
 ### goEdit()
 
@@ -72,8 +68,6 @@ Navega a una página de edición del objeto indicado.
 `void`
 
 
----
-
 ### goView()
 
 ```ts { .no-language }
@@ -89,8 +83,6 @@ Navega a una página de vista del objeto indicado.
 
 *(Parámetros idénticos a goEdit, excepto que es para ver un registro.)*
 
----
-
 ### goInsert()
 
 ```ts { .no-language }
@@ -103,8 +95,6 @@ Navega a la página de inserción del objeto.
 
 `void`
 
-
----
 
 ### goReport()
 
@@ -127,8 +117,6 @@ Navega a una página de report del objeto indicado.
 `void`
 
 
----
-
 ### goPage()
 
 ```ts { .no-language }
@@ -141,8 +129,6 @@ Navegación genérica a cualquier tipo de página.
 
 `Promise<void>`
 
-
----
 
 ### goExternalURL()
 

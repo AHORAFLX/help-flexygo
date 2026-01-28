@@ -27,8 +27,6 @@ Obtiene las coordenadas actuales del dispositivo.
 
 Una promesa que se resuelve con la [posición](https://capacitorjs.com/docs/apis/geolocation#position) actual del dispositivo.
 
----
-
 ### requestGPSStatus()
 
 ```ts { .no-language }
@@ -44,8 +42,6 @@ Solicita permisos de GPS y devuelve el estado tras la interacción del usuario.
 
 Posibles valores:  
 **GRANTED**, **DENIED**, **DENIED_ONCE**, **NOT_REQUESTED**, **DENIED_ALWAYS**, **RESTRICTED**, **GRANTED_WHEN_IN_USE**
-
----
 
 ### requestGPSPermission()
 
@@ -63,8 +59,6 @@ Si el usuario ha seleccionado “denegar siempre”, se le redirige a los ajuste
 
 `true` si el GPS ha sido concedido, `false` si no.
 
----
-
 ### requestGPSActivation()
 
 ```ts { .no-language }
@@ -79,8 +73,6 @@ Solicita al usuario activar el GPS del dispositivo.
 
 
 `true` si el GPS está activado, `false` si no lo está.
-
----
 
 ### isGPSOff()
 
