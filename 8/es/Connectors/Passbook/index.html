@@ -3404,7 +3404,7 @@
 
 
 <h1 class="flx-title-with-image" id="integracion-con-passbook">Integración con Passbook<a class="headerlink" href="#integracion-con-passbook" title="Permanent link">¶</a></h1>
-<p><img alt="Passbook" class="fh-image-of-title" src="/docs_assets/images/Passbook/WalletIcon.png"></p>
+<p><img alt="Passbook" class="fh-image-of-title" src="../../../docs_assets/images/Passbook/WalletIcon.png"></p>
 <p>Passbook es el formato utilizado por tarjetas y cupones para integrarse en Apple Wallet.<br>
 <strong>flexygo</strong> permite ahora generar un passbook de forma sencilla.</p>
 <p>A continuación explicaremos cómo generar e instalar los certificados obligatorios para poder generar el passbook correctamente.<br>
@@ -3412,16 +3412,16 @@ El primer requisito es disponer de una cuenta de desarrollador de Apple.</p>
 <h2 id="apple-wwdr">Apple WWDR<a class="headerlink" href="#apple-wwdr" title="Permanent link">¶</a></h2>
 <p>Para obtener el primer certificado solo tenemos que ir a <a href="https://www.apple.com/certificateauthority/">https://www.apple.com/certificateauthority/</a> y descargar <a href="https://www.apple.com/certificateauthority/AppleWWDRCAG4.cer">Worldwide Developer Relations - G4 (Expiring 12/10/2030 00:00:00 UTC)</a>, que es el que funciona actualmente.</p>
 <p>Instalamos el certificado y seleccionamos el almacén <strong>“Intermediate Certification Authorities”</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook1.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook1.png" title="Image 1. Certificate store"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook1.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook1.png" title="Image 1. Certificate store"></a></p>
 <h2 id="crear-pass-type-id">Crear Pass Type ID<a class="headerlink" href="#crear-pass-type-id" title="Permanent link">¶</a></h2>
 <p>Accede a <a href="https://developer.apple.com/">https://developer.apple.com/</a> e inicia sesión con una cuenta de desarrollador.<br>
 Una vez dentro, entra en <strong>Account</strong> y accede al menú de la izquierda <strong>Certificates, IDs &amp; Profiles</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/imagesPassbook/passbook2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/imagesPassbook/passbook2.png" title="Image 2. Developer panel"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook3.png" title="Image 2. Developer panel"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/imagesPassbook/passbook2.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/imagesPassbook/passbook2.png" title="Image 2. Developer panel"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook3.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook3.png" title="Image 2. Developer panel"></a></p>
 <p>Añadimos un nuevo <strong>Identifier</strong> y elegimos el tipo <strong>Pass Type IDs</strong>, rellenando la información.<br>
 Es recomendable que el identificador mantenga la estructura <code>pass.com.x</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook4.png" title="Image 3. Pass Type IDs"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook5.png" title="Image 3. Pass Type IDs"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook4.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook4.png" title="Image 3. Pass Type IDs"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook5.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook5.png" title="Image 3. Pass Type IDs"></a></p>
 <h2 id="crear-una-peticion-de-certificado-csr">Crear una petición de certificado (CSR)<a class="headerlink" href="#crear-una-peticion-de-certificado-csr" title="Permanent link">¶</a></h2>
 <p>Si no tenemos <strong>OpenSSL</strong> instalado, podemos descargarlo e instalarlo desde aquí: <a href="https://wiki.openssl.org/index.php/Binaries">OpenSSL</a>.</p>
 <p>Una vez instalado, abrimos la consola con permisos de administrador, nos situamos en la ruta donde queremos generar los ficheros y ejecutamos el comando:</p>
@@ -3435,13 +3435,13 @@ Es recomendable que el identificador mantenga la estructura <code>pass.com.x</co
 </ul>
 <h2 id="firmar-la-csr-y-crear-el-certificado-passbook">Firmar la CSR y crear el certificado Passbook<a class="headerlink" href="#firmar-la-csr-y-crear-el-certificado-passbook" title="Permanent link">¶</a></h2>
 <p>Volvemos al portal de desarrolladores y, desde el menú de certificados, pulsamos <strong>+</strong> para crear un nuevo <strong>Pass Type Id Certificate</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook6.png" title="Image 4. Passbook certificate"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook6.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook6.png" title="Image 4. Passbook certificate"></a></p>
 <p>A continuación, rellenamos el nombre del certificado y elegimos el identificador que hemos creado previamente; aparecerá como opción desplegable.
 Si nos fijamos en el valor del desplegable, coincide con <strong>TeamID.IdentifierPassTypeID</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook7.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook7.png" title="Image 5. Passbook certificate"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook7.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook7.png" title="Image 5. Passbook certificate"></a></p>
 <p>En el siguiente paso debemos seleccionar el archivo CSR que generamos antes (<code>passbook.csr</code>), lo subimos y continuamos.
 Se mostrará una ventana de resumen con el certificado recién generado, su fecha de caducidad, nombre, tipo, etc.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook8.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook8.png" title="Image 6. Certificate request"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook8.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook8.png" title="Image 6. Certificate request"></a></p>
 <h2 id="convertir-el-certificado-passcer-a-pem-y-luego-a-pfx">Convertir el certificado pass.cer a PEM y luego a PFX<a class="headerlink" href="#convertir-el-certificado-passcer-a-pem-y-luego-a-pfx" title="Permanent link">¶</a></h2>
 <p>Primero, colocamos el archivo <code>.cer</code> descargado desde la web de Apple en la misma carpeta que <code>passbook.key</code> y <code>passbook.csr</code>.</p>
 <p>Después abrimos la consola de OpenSSL, navegamos hasta esa carpeta y ejecutamos:</p>
@@ -3457,8 +3457,8 @@ Una vez introducida, se generará el archivo <code>passbook.pfx</code>, que debe
 <p>Botón derecho, <strong>All Tasks → Import</strong>, siguiente, y al examinar el archivo cambiamos el filtro de extensión para buscar <code>.pfx</code> y seleccionamos el fichero generado.</p>
 <p>En el siguiente paso introducimos la contraseña de la clave privada, marcamos la opción de exportable e incluimos todas las propiedades extendidas.
 Lo añadimos al almacén <strong>Personal</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook9.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook9.png" title="Image 7. Import PFX certificate"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook10.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook10.png" title="Image 7. Import PFX certificate"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook9.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook9.png" title="Image 7. Import PFX certificate"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook10.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook10.png" title="Image 7. Import PFX certificate"></a></p>
 <p>Con esto tendremos instalados los certificados necesarios para poder generar Passbook desde <strong>flexygo</strong>.
 Es importante que tanto el archivo <code>passbook.pfx</code> como <code>AppleWWDRCAG4.cer</code> estén en una carpeta accesible para la aplicación.</p>
 <p>También es importante que, desde la consola, una vez importado el certificado en el almacén Personal, hagamos:</p>
@@ -3466,10 +3466,10 @@ Es importante que tanto el archivo <code>passbook.pfx</code> como <code>AppleWWD
 <li>Botón derecho → All Tasks → Manage Private Keys</li>
 <li>Añadimos <strong>IIS_IUSRS</strong> y le damos permisos.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook11.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook11.png" title="Image 8. Certificate management"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Passbook/passbook11.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/Passbook/passbook11.png" title="Image 8. Certificate management"></a></p>
 <p>Es necesario también tener configurado el <strong>impersonate</strong>, ya que la generación del passbook hace uso de él.</p>
 <p>Si, aun habiendo dado permisos a <strong>IIS_IUSRS</strong> y usando un usuario de impersonation con permisos elevados, sigue dando error de permisos al generar el passbook, será necesario modificar la identidad del Application Pool a <strong>LocalSystem</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook12.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook12.png" title="Image 8. IIS configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Passbook/passbook12.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/Passbook/passbook12.png" title="Image 8. IIS configuration"></a></p>
 <h2 id="configuracion-en-flexygo">Configuración en flexygo<a class="headerlink" href="#configuracion-en-flexygo" title="Permanent link">¶</a></h2>
 <p>Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en <strong>flexygo</strong>:</p>
 <ul>
@@ -3483,8 +3483,8 @@ Es importante que tanto el archivo <code>passbook.pfx</code> como <code>AppleWWD
 <h2 id="ejemplo-de-uso-desde-dll">Ejemplo de uso desde DLL<a class="headerlink" href="#ejemplo-de-uso-desde-dll" title="Permanent link">¶</a></h2>
 <p><fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">Ejemplo de DLL</fh-modal></p>
 <h2 id="ejemplo-de-diseno-y-layout">Ejemplo de diseño y layout<a class="headerlink" href="#ejemplo-de-diseno-y-layout" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook14.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook14.png" title="Image 10. Layout example"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Passbook/passbook13.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Passbook/passbook13.png" title="Image 11. Passbook example"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Passbook/passbook14.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/Passbook/passbook14.png" title="Image 10. Layout example"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Passbook/passbook13.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/Passbook/passbook13.png" title="Image 11. Passbook example"></a></p>
 <div id="fhmodal_dll_example" class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-fhmodal_dll_example-1"><a id="__codelineno-fhmodal_dll_example-1" name="__codelineno-fhmodal_dll_example-1" href="#__codelineno-fhmodal_dll_example-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Shared</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">generatePassbook</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">Entity</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">EntityObject</span><span class="p">,</span><span class="w"> </span><span class="k">ByRef</span><span class="w"> </span><span class="n">Ret</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">ProcessHelper</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span>
 </span><span id="__span-fhmodal_dll_example-2"><a id="__codelineno-fhmodal_dll_example-2" name="__codelineno-fhmodal_dll_example-2" href="#__codelineno-fhmodal_dll_example-2"></a><span class="w">        </span><span class="k">Try</span>
 </span><span id="__span-fhmodal_dll_example-3"><a id="__codelineno-fhmodal_dll_example-3" name="__codelineno-fhmodal_dll_example-3" href="#__codelineno-fhmodal_dll_example-3"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">aPrimaryField</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="p">(</span><span class="k">Of</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">))</span>

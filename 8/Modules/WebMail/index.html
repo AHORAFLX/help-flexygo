@@ -3427,24 +3427,24 @@ Other example <a href="https://www.re-mark-able.net/how-to-access-data-from-the-
 <h3 id="office-365-configuration">Office 365 configuration<a class="headerlink" href="#office-365-configuration" title="Permanent link">¶</a></h3>
 <p>Make sure IMAP/POP3/SMTP is enabled for your organization and mailbox.</p>
 <p>First log in to Microsoft 365 admin portal at <a href="https://admin.microsoft.com/">https://admin.microsoft.com/</a> as an administrator, go to Org settings screen and find Modern authentication entry.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice4.png" title="Image 1. Show all settings"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice5.png" title="Image 2. Org settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice4.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice4.png" title="Image 1. Show all settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice5.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice5.png" title="Image 2. Org settings"></a></p>
 <p>Check <strong>Turn on modern authentication…</strong> for OAuth flows and <strong>IMAP</strong>, <strong>POP3</strong> and <strong>SMTP</strong> for App passwords flows</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice6.png" title="Image 3. Modern authentication"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice6.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice6.png" title="Image 3. Modern authentication"></a></p>
 <p>Then go to Users screen:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice7.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice7.png" title="Image 4. Users"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice7.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice7.png" title="Image 4. Users"></a></p>
 <p>Select an user and on the Mail tab click Manage email apps</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice8.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice8.png" title="Image 5. User config"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice8.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice8.png" title="Image 5. User config"></a></p>
 <p>Check <strong>IMAP</strong>, <strong>Pop</strong> and <strong>Authenticated SMTP</strong> to turn on the protocols for this account.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice9.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice9.png" title="Image 6. Manage email apps"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice9.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice9.png" title="Image 6. Manage email apps"></a></p>
 <p>Have in mind it takes 20-30 minutes for the changes to take effect.</p>
 <h3 id="azure-configuration">Azure configuration<a class="headerlink" href="#azure-configuration" title="Permanent link">¶</a></h3>
 <p>In your Active Directory, make sure Enable Security defaults is set to No.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice10.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice10.png" title="Image 7. Security defaults"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice10.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice10.png" title="Image 7. Security defaults"></a></p>
 <p>Make sure there are no Conditional Access | Policies defined in your AD</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice11.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice11.png" title="Image 8. Policies"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice11.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice11.png" title="Image 8. Policies"></a></p>
 <p>Once you have registered your app the first thing we will do is inform the base URL of your app + /Webhooks/MailToken.aspx as your redirect URl's.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice1.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice1.png" title="Image 9. Redirect URL"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice1.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice1.png" title="Image 9. Redirect URL"></a></p>
 <p>Then you need to apply correct API permissions and grant the admin consent for your domain. In the API permissions / Add a permission wizard, select Microsoft Graph and then Delegated permissions to find the following permission scopes listed:</p>
 <ul>
 <li>offline_access</li>
@@ -3455,19 +3455,19 @@ Other example <a href="https://www.re-mark-able.net/how-to-access-data-from-the-
 <li>User.Read</li>
 </ul>
 <p>Remember to Grant admin consent.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice2.png" title="Image 10. API permissions"></a> </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice2.png" title="Image 10. API permissions"></a> </p>
 <p>Create an app secret and remember its value.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice3.png" title="Image 11. Client secret"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice3.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice3.png" title="Image 11. Client secret"></a></p>
 <p>To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':1}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app <strong>client id</strong>, <strong>tenant id</strong> and genereted <strong>secret</strong>.</p>
 <h2 id="google">Google<a class="headerlink" href="#google" title="Permanent link">¶</a></h2>
 <p>First you must login on <a href="https://console.cloud.google.com/">https://console.cloud.google.com/</a> and select an existing project or create a new one.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice12.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice12.png" title="Image 12. Projects"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice12.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice12.png" title="Image 12. Projects"></a></p>
 <p>After this you have to search in the API Library section, the Gmail API and activate it</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice13.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice13.png" title="Image 1. Gmail API"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice13.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice13.png" title="Image 1. Gmail API"></a></p>
 <p>Before creating the OAuth credentials we have to configure the consent screen, the first thing is to select if it will be for internal use (only for the organization) or external. Depending on the use that is going to be given.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice18.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice18.png" title="Image 13. Consent screen"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice18.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice18.png" title="Image 13. Consent screen"></a></p>
 <p>Then you must fill your app information, domain, etc...</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice19.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice19.png" title="Image 14. App information"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice19.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice19.png" title="Image 14. App information"></a></p>
 <p>After that apply the next scopes:</p>
 <ul>
 <li><fh-copy>https://mail.google.com/</fh-copy></li>
@@ -3475,30 +3475,30 @@ Other example <a href="https://www.re-mark-able.net/how-to-access-data-from-the-
 <li><fh-copy>https://www.googleapis.com/auth/userinfo.email</fh-copy></li>
 </ul>
 <p>In the next step add the email users who will use the application.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice20.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice20.png" title="Image 15. Users"></a>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice20.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice20.png" title="Image 15. Users"></a>
 Once it is configured you have to add credentials to use OAuth flow.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice14.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice14.png" title="Image 16. Credentials"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice14.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice14.png" title="Image 16. Credentials"></a></p>
 <p>In the first step you have to choose the type of application, in our case web application.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice15.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice15.png" title="Image 17. Application type"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice15.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice15.png" title="Image 17. Application type"></a></p>
 <p>Then give a name and add an authorized redirect URls, remember that the valid structure is the base URL of your app + /Webhooks/MailToken.aspx</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice16.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice16.png" title="Image 18. Credentials 2"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice16.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice16.png" title="Image 18. Credentials 2"></a></p>
 <p>Once you have registered the credentials you can download a JSON file which has all the data you will need to configure in the application like ClientID, ClientSecret, etc...</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/MailOffice17.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/MailOffice17.png" title="Image 19. Client ID"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/MailOffice17.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/MailOffice17.png" title="Image 19. Client ID"></a></p>
 <p>To finish fill <flx-navbutton class="link" type="openpage" pagetypeid="edit" objectname="SysMail_Account_Endpoint" defaults="{'AccountTypeId':2}" showprogress="false">mail account endpoint setting fields</flx-navbutton> with your app client id, tenant id and genereted secret.</p>
 <h2 id="new-setting-for-application-path">New setting for application path<a class="headerlink" href="#new-setting-for-application-path" title="Permanent link">¶</a></h2>
 <p>To avoid problems when automatically taking the url of the application when authorizing the webmail, we have created <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-system')" showprogress="false">a new setting</flx-navbutton> so that the value of the URL can be assigned manually by the user.</p>
 <h2 id="webmail-module">Webmail module<a class="headerlink" href="#webmail-module" title="Permanent link">¶</a></h2>
 <p>This module allows you to add a web mail to your <strong>flexygo</strong> projects.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/mail.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/mail.png" title="Image 20. Web Mail"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ModulesConf/mail.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/ModulesConf/mail.png" title="Image 20. Web Mail"></a></p>
 <h2 id="add-webmail-icon-to-your-toolbar">Add Webmail icon to your toolbar<a class="headerlink" href="#add-webmail-icon-to-your-toolbar" title="Permanent link">¶</a></h2>
 <p>Icon already exists, but it's disabled by default. You can enable it as Admin on the top toolbar</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/Mail2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/Mail2.png" title="Image 21. Webmail icon"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ModulesConf/Mail2.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/ModulesConf/Mail2.png" title="Image 21. Webmail icon"></a></p>
 <p>or by clicking on the following link: <flx-navbutton class="link" type="execprocess" processname="EnableMailSettings" targetid="popup" excludehist="false" showprogress="false">Enable Mail Options</flx-navbutton>. After clicking on the link, exit and re-login to the system.</p>
 <h2 id="establish-connection-with-mail-server">Establish connection with mail server<a class="headerlink" href="#establish-connection-with-mail-server" title="Permanent link">¶</a></h2>
 <p>To enable Webmail, you need to establish mail server settings. Use the mail settings icon to open settings.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/Mail6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/Mail6.png" title="Image 22. Webmail settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/Mail6.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/Mail6.png" title="Image 22. Webmail settings"></a></p>
 <p>Set configuration of your mail account. Bellow you'll see the detailed explication.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/Mail3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/Mail3.png" title="Image 23. Webmail settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ModulesConf/Mail3.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/ModulesConf/Mail3.png" title="Image 23. Webmail settings"></a></p>
 <ul>
 <li><strong>SMTP Host:</strong> SMTP host</li>
 <li><strong>PopImap Host:</strong> IMAP host</li>
@@ -3513,9 +3513,9 @@ Once it is configured you have to add credentials to use OAuth flow.</p>
 </ul>
 <h2 id="linking-mails-to-your-objects">Linking mails to your objects<a class="headerlink" href="#linking-mails-to-your-objects" title="Permanent link">¶</a></h2>
 <p>You can save mails locally and link them to objects exactly the same as with document or image management. To do this just load any object form and as admin click on the right hand side bar.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/Mail5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/Mail5.png" title="Image 24. Webmail settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ModulesConf/Mail5.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/ModulesConf/Mail5.png" title="Image 24. Webmail settings"></a></p>
 <p>Click on mail settings and fill out the form.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/Mail4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/Mail4.png" title="Image 25. Web Mail"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ModulesConf/Mail4.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/ModulesConf/Mail4.png" title="Image 25. Web Mail"></a></p>
 <ul>
 <li><strong>Object Name:</strong> Object to link e-mails to</li>
 <li><strong>Object Primary Key:</strong> Object primery key or object Id</li>

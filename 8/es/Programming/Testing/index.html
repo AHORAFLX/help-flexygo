@@ -3356,11 +3356,11 @@
 
 
 <h1 class="flx-title-with-image" id="automatizacion-de-tests">Automatización de tests<a class="headerlink" href="#automatizacion-de-tests" title="Permanent link">¶</a></h1>
-<p><img alt="flexygo" class="fh-image-of-title" src="/docs_assets/images/FlexygoLogo.png"></p>
+<p><img alt="flexygo" class="fh-image-of-title" src="../../../docs_assets/images/FlexygoLogo.png"></p>
 <p>La Automatización de Pruebas es un valor importante al evaluar y verificar el correcto funcionamiento de nuestras aplicaciones. De hecho, las pruebas son solo pequeños programas usados para verificar que los resultados de nuestra aplicación son correctos o que no ocurre ningún tipo de mal funcionamiento. La prueba no es más que un pedazo de código que se compila en una dll y puede ser ejecutado ya sea desde el IDE del programador, una Máquina de Integración o por flexygo mismo.</p>
 <p>Flexygo nos permite no solo tener las propias pruebas de flexygo, sino también la posibilidad de incluir cualquier dll de prueba que necesitemos para nuestros productos o soluciones. Es tan fácil como informar en la sección de pruebas la ubicación de la nueva dll de pruebas. A partir de este momento, tan pronto como ejecutemos un diagnóstico de nuestra solución, pasará tantas pruebas unitarias o de integración que estén disponibles en las diferentes dll. </p>
 <p class="flx-warning-card">Puedes encontrar más información sobre pruebas con flexygo aquí <a href="https://docs.flexygo.com/develop/readme.html#TestUnitario">Test Unitario</a>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/testing2.png" data-desc-position="bottom"><img alt="Dll Test management" src="/docs_assets/images/Custom_DLL/testing2.png" title="Imagen 1. Gestión de Pruebas Dll"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Custom_DLL/testing2.png" data-desc-position="bottom"><img alt="Dll Test management" src="../docs_assets/images/Custom_DLL/testing2.png" title="Imagen 1. Gestión de Pruebas Dll"></a></p>
 <h2 id="ejemplo-de-test">Ejemplo de test<a class="headerlink" href="#ejemplo-de-test" title="Permanent link">¶</a></h2>
 <p>En el ejemplo vemos una prueba que recorre todas las definiciones de nodos de la aplicación y verifica que se cargan correctamente. El nodo tiene una característica que, si debería fallar durante la carga, cambia su título a <strong>Error de Nodo</strong>, por lo que su mal funcionamiento es muy fácil de detectar.</p>
 <h3 id="ejemplo-de-codificacion-de-tset">Ejemplo de codificación de tset<a class="headerlink" href="#ejemplo-de-codificacion-de-tset" title="Permanent link">¶</a></h3>
@@ -3406,7 +3406,7 @@
 </span></code></pre></div>
 <h2 id="excluir-tests-de-flexygo">Excluir tests de flexygo<a class="headerlink" href="#excluir-tests-de-flexygo" title="Permanent link">¶</a></h2>
 <p>Si hay pruebas en una dll que no queremos que flexygo ejecute, podemos etiquetarlas con un atributo testCategory e informar a flexygo qué pruebas no deben ser utilizadas usando los atributos de exclusión. En el siguiente ejemplo, si no queremos ejecutar esta prueba, debemos configurar los atributos de exclusión de flexygo como <strong>attributes = ExcludeClient</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/testing1.png" data-desc-position="bottom"><img alt="Exclude dll Tests " src="/docs_assets/images/Custom_DLL/testing1.png" title="Image 2. Exclude dll Tests"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Custom_DLL/testing1.png" data-desc-position="bottom"><img alt="Exclude dll Tests " src="../docs_assets/images/Custom_DLL/testing1.png" title="Image 2. Exclude dll Tests"></a></p>
 <div class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">''' &lt;summary&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c">''' Prueba si hay traducciones faltantes para culturas activas y originId 0</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c">''' &lt;/summary&gt;</span>
