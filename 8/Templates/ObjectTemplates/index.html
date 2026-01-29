@@ -3367,7 +3367,7 @@
 
 <h1 id="object-templates">Object Templates<a class="headerlink" href="#object-templates" title="Permanent link">¶</a></h1>
 <p>Flexygo modules like lists or views normally include a change template button . This button allows us to switch different forms of displaying the module allowing each user to establish which view is best for him setting this one such as default template. Each view for each module is memorized just by selecting it.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ObjectsTemplates/Toolbar.png" data-desc-position="bottom"><img alt="template" src="../../docs_assets/images/ObjectsTemplates/Toolbar.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ObjectsTemplates/Toolbar.png" data-desc-position="bottom"><img alt="template" src="/docs_assets/images/ObjectsTemplates/Toolbar.png"></a></p>
 <h2 id="list-templates">List Templates<a class="headerlink" href="#list-templates" title="Permanent link">¶</a></h2>
 <p>The List module template button displays elements in the following way:</p>
 <ol>
@@ -3419,11 +3419,11 @@
 </ul>
 <h2 id="template-groups">Template Groups<a class="headerlink" href="#template-groups" title="Permanent link">¶</a></h2>
 <p>Sometimes you need to nest templates for a more complex display:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ObjectsTemplates/Groups.png" data-desc-position="bottom"><img alt="template" src="../../docs_assets/images/ObjectsTemplates/Groups.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ObjectsTemplates/Groups.png" data-desc-position="bottom"><img alt="template" src="/docs_assets/images/ObjectsTemplates/Groups.png"></a></p>
 <p>You can achieve this by using as many template groups as you may need. For the sample above we used:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ObjectsTemplates/Groups-examples.png" data-desc-position="bottom"><img alt="template" src="../../docs_assets/images/ObjectsTemplates/Groups-examples.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ObjectsTemplates/Groups-examples.png" data-desc-position="bottom"><img alt="template" src="/docs_assets/images/ObjectsTemplates/Groups-examples.png"></a></p>
 <p>After creating the groups you can include the following markup in your template header.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ObjectsTemplates/Groups-config.png" data-desc-position="bottom"><img alt="template" src="../docs_assets/images/ObjectsTemplates/Groups-config.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ObjectsTemplates/Groups-config.png" data-desc-position="bottom"><img alt="template" src="/docs_assets/images/ObjectsTemplates/Groups-config.png"></a></p>
 
 
 
@@ -3558,24 +3558,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

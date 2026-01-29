@@ -3391,14 +3391,14 @@
 
 <h1 id="design-environment">Design environment<a class="headerlink" href="#design-environment" title="Permanent link">¶</a></h1>
 <p>Once the application is saved, we will familiarize ourselves with the design environment of the application.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/offline/Environment.png" data-desc-position="bottom"><img alt="Face Recognition settings" src="../../docs_assets/images/offline/Environment.png" title="Image 1. Environment"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/Environment.png" data-desc-position="bottom"><img alt="Face Recognition settings" src="/docs_assets/images/offline/Environment.png" title="Image 1. Environment"></a></p>
 <p>This environment is basically divided into 6 areas we will explain bellow.</p>
 <h2 id="work-areas">Work areas<a class="headerlink" href="#work-areas" title="Permanent link">¶</a></h2>
 <h3 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">¶</a></h3>
 <p>To create and design the menus that will appear on the device.</p>
 <h3 id="app-additional-info">App additional info<a class="headerlink" href="#app-additional-info" title="Permanent link">¶</a></h3>
 <p>From this section we can modify the basic data of the App, modify and design the home page and incorporate other resources like:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/offline/buttons.png" data-desc-position="bottom"><img alt="Face Recognition settings" src="../docs_assets/images/offline/buttons.png" title="Image 2. Buttons"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/buttons.png" data-desc-position="bottom"><img alt="Face Recognition settings" src="/docs_assets/images/offline/buttons.png" title="Image 2. Buttons"></a></p>
 <ul>
 <li>Design the home page</li>
 <li>Add JavaScript code</li>
@@ -3414,7 +3414,7 @@
 <p>Extend object information using complex data views</p>
 <h3 id="emulator">Emulator<a class="headerlink" href="#emulator" title="Permanent link">¶</a></h3>
 <p>From this section we can emulate the display and operation of the application, and experiment what the result will be on IOS or Android devices.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/offline/Environment2.png" data-desc-position="bottom"><img alt="Face Recognition settings" src="../../docs_assets/images/offline/Environment2.png" title="Image 3. Environment"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/Environment2.png" data-desc-position="bottom"><img alt="Face Recognition settings" src="/docs_assets/images/offline/Environment2.png" title="Image 3. Environment"></a></p>
 
 
 
@@ -3573,24 +3573,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

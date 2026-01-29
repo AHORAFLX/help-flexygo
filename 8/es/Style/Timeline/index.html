@@ -3331,8 +3331,8 @@
 
 <h1 id="cronologia">Cronología<a class="headerlink" href="#cronologia" title="Permanent link">¶</a></h1>
 <p>La cronología es un conjunto de clases css que permite al usuario tener una vista cronológica, ya que la cronología ofrece una mejor estructura de las noticias relevantes o de mayor interés, como por ejemplo, las acciones realizadas a lo largo del día de cada empleado. Para mostrar una cronología correctamente, es necesario indicar un <strong>&lt;entry&gt;</strong> y un <strong>&lt;/body&gt;</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/TimelineStyle/Timeline.png#only-light" data-desc-position="bottom" data-gallery="light"><img alt="Timeline" data-gallery="light" src="../../../docs_assets/images/TimelineStyle/Timeline.png#only-light" title="Timeline"></a>
-<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark" data-desc-position="bottom" data-gallery="dark"><img alt="Timeline" data-gallery="dark" src="../../../docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark" title="Timeline"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/TimelineStyle/Timeline.png#only-light" data-desc-position="bottom" data-gallery="light"><img alt="Timeline" data-gallery="light" src="/docs_assets/images/TimelineStyle/Timeline.png#only-light" title="Timeline"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark" data-desc-position="bottom" data-gallery="dark"><img alt="Timeline" data-gallery="dark" src="/docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark" title="Timeline"></a></p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"timeline"</span><span class="p">&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"entry"</span><span class="p">&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"title"</span><span class="p">&gt;</span>
@@ -3368,8 +3368,8 @@
 </span></code></pre></div>
 <h2 id="cronologia-en-tarjetas">Cronología en Tarjetas<a class="headerlink" href="#cronologia-en-tarjetas" title="Permanent link">¶</a></h2>
 <p>La cronología de tarjetas es un conjunto de clases css que permite al usuario tener una vista cronológica responsiva, ya que la cronología ofrece una mejor estructura de las noticias relevantes o de mayor interés, como por ejemplo, acciones realizadas a lo largo del día de cada empleado.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/TimelineStyle/CardTimeline.png#only-light" data-desc-position="bottom" data-gallery="light"><img alt="Card timeline" data-gallery="light" src="../../../docs_assets/images/TimelineStyle/CardTimeline.png#only-light" title="Card timeline"></a>
-<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark" data-desc-position="bottom" data-gallery="dark"><img alt="Card timeline" data-gallery="dark" src="../../../docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark" title="Card timeline"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/TimelineStyle/CardTimeline.png#only-light" data-desc-position="bottom" data-gallery="light"><img alt="Card timeline" data-gallery="light" src="/docs_assets/images/TimelineStyle/CardTimeline.png#only-light" title="Card timeline"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark" data-desc-position="bottom" data-gallery="dark"><img alt="Card timeline" data-gallery="dark" src="/docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark" title="Card timeline"></a></p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"appointment-timeline-group"</span><span class="p">&gt;</span>7 June 2018<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"appointment-timeline"</span><span class="p">&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"col-3 col-s-1 appointment-timeline-height"</span><span class="p">&gt;</span>
@@ -3489,24 +3489,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

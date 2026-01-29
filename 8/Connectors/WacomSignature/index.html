@@ -3339,7 +3339,7 @@
 
 
 <h1 class="flx-title-with-image" id="wacom-sdk-integration">Wacom SDK Integration<a class="headerlink" href="#wacom-sdk-integration" title="Permanent link">¶</a></h1>
-<p><img alt="Wacom" class="fh-image-of-title" src="../../docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg"></p>
+<p><img alt="Wacom" class="fh-image-of-title" src="/docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg"></p>
 <p><strong>flexygo</strong> has successfully incorporated the capability to sign with STU tablets in a seamless and user-friendly manner.</p>
 <p>This guide provides detailed, step-by-step instructions on how to install and set up the required SDK and services to enable signature capture using Wacom Signature Controls. </p>
 <p>Furthermore, it explores the various customizable values that can be configured to adapt the signature capture experience according to your specific needs.</p>
@@ -3356,7 +3356,7 @@
 <ol>
 <li>
 <p>Define a property with <strong>Wacom Signature</strong> type:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Wacom/first_ss.png" data-desc-position="bottom"><img alt="Adding a property of Wacom Signature Type" src="../../docs_assets/images/Wacom/first_ss.png" title="Image 1. Using a Wacom Signature property"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Wacom/first_ss.png" data-desc-position="bottom"><img alt="Adding a property of Wacom Signature Type" src="/docs_assets/images/Wacom/first_ss.png" title="Image 1. Using a Wacom Signature property"></a></p>
 </li>
 <li>
 <p>Set Options: You can customize some features of the <strong>Wacom Signature control</strong> in the <strong>Options</strong> field located at the end of the property configuration form  </p>
@@ -3379,12 +3379,12 @@
 <li><strong>titleText</strong>: You can specify a text to be shown here...</li>
 <li><strong>titleProperty</strong>: You can specify a PropertyName into this property to his value here...</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Wacom/title_demostration.png" data-desc-position="bottom"><img alt="Title demostration" src="../../docs_assets/images/Wacom/title_demostration.png" title="Image 2. Title demostration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Wacom/title_demostration.png" data-desc-position="bottom"><img alt="Title demostration" src="/docs_assets/images/Wacom/title_demostration.png" title="Image 2. Title demostration"></a></p>
 <ul>
 <li><strong>nameText</strong>: You can specify a text to be shown here...</li>
 <li><strong>nameProperty</strong>: You can specify a PropertyName into this property to his value here...</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Wacom/name_demostration.png" data-desc-position="bottom"><img alt="Name demostration" src="../../docs_assets/images/Wacom/name_demostration.png" title="Image 3. Name demostration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Wacom/name_demostration.png" data-desc-position="bottom"><img alt="Name demostration" src="/docs_assets/images/Wacom/name_demostration.png" title="Image 3. Name demostration"></a></p>
 <ul>
 <li>
 <p><strong>style</strong>: Within this property, you can define 2 properties <strong>(They only affect upon saving, not in the preview)</strong></p>
@@ -3394,7 +3394,7 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Wacom/style_demostration.png" data-desc-position="bottom"><img alt="Style demostration" src="../../docs_assets/images/Wacom/style_demostration.png" title="Image 4. Style demostration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Wacom/style_demostration.png" data-desc-position="bottom"><img alt="Style demostration" src="/docs_assets/images/Wacom/style_demostration.png" title="Image 4. Style demostration"></a></p>
 
 
 
@@ -3502,24 +3502,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

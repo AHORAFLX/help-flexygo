@@ -3378,7 +3378,7 @@
     Add Abh Sign to your project
 </flx-navbutton></p>
 <h2 id="configure-abh-sign">Configure Abh Sign<a class="headerlink" href="#configure-abh-sign" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AbhSign/AbhSignSettings.png" data-desc-position="bottom"><img alt="Abh Sign configuration" src="../../docs_assets/images/AbhSign/AbhSignSettings.png" title="Abh Sign configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AbhSign/AbhSignSettings.png" data-desc-position="bottom"><img alt="Abh Sign configuration" src="/docs_assets/images/AbhSign/AbhSignSettings.png" title="Abh Sign configuration"></a></p>
 <p><strong>Object Name:</strong> Object we want to enable Abh Sign.</p>
 <p><strong>Type:</strong> Signature mode that we want to enable.</p>
 <ul>
@@ -3393,17 +3393,17 @@
 <p class="flx-warning-card">For more information consult on <a href="https://help.flexygo.com/">https://help.flexygo.com/</a></p>
 <h2 id="configure-reports">Configure Reports<a class="headerlink" href="#configure-reports" title="Permanent link">¶</a></h2>
 <p>Once configured, a module is enabled to configure the reports that we want to be able to send.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AbhSign/AbhSignReports.png" data-desc-position="bottom"><img alt="Abh Sign reports configuration" src="../../docs_assets/images/AbhSign/AbhSignReports.png" title="Abh Sign reports configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AbhSign/AbhSignReports.png" data-desc-position="bottom"><img alt="Abh Sign reports configuration" src="/docs_assets/images/AbhSign/AbhSignReports.png" title="Abh Sign reports configuration"></a></p>
 <p><strong>Type:</strong> Enable configuration by report or document management.</p>
 <p><strong>Report:</strong> Report that we want to enable, the reports associated with the configured object appear.</p>
 <p><strong>Document Category:</strong> Category (Id) that we want to enable, the documents associated with the configured object that have that category appear (If the category is empty, the configuration applies to all).</p>
 <p><strong>After Process:</strong> Process that we want to execute once we recover the signed document. (You can add the DocGuid parameter to receive the inserted document or any property of the object)</p>
 <p>To choose where we want to sign in the document, there is an assistant that is enabled with a button on the toolbar in which we can upload an example document and draw where we want to sign.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AbhSign/SelectSign.png" data-desc-position="bottom"><img alt="Signing assistant" src="../../docs_assets/images/AbhSign/SelectSign.png" title="Signing assistant"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AbhSign/SelectSign.png" data-desc-position="bottom"><img alt="Signing assistant" src="/docs_assets/images/AbhSign/SelectSign.png" title="Signing assistant"></a></p>
 <h2 id="processes">Processes<a class="headerlink" href="#processes" title="Permanent link">¶</a></h2>
 <p>In the configured object, a process called "Send signed report" or "Send signed document" is enabled, in which you select a report or document from those configured and an email is sent for a person to sign it.</p>
 <p>A cron job is enabled in the system that every 30 minutes checks if any of the documents sent has been signed and, if so, collects it and inserts it into document management. Execute after process if configured.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AbhSign/AbhSignOperation.png" data-desc-position="bottom"><img alt="Abh Sign operation" src="../../docs_assets/images/AbhSign/AbhSignOperation.png" title="Abh Sign operation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AbhSign/AbhSignOperation.png" data-desc-position="bottom"><img alt="Abh Sign operation" src="/docs_assets/images/AbhSign/AbhSignOperation.png" title="Abh Sign operation"></a></p>
 
 
 
@@ -3538,24 +3538,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

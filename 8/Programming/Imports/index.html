@@ -3381,24 +3381,24 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Imports/setting.png" data-desc-position="bottom"><img alt="Import settings" src="../../docs_assets/images/Imports/setting.png" title="Image 1. Create Import Setting"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/setting.png" data-desc-position="bottom"><img alt="Import settings" src="/docs_assets/images/Imports/setting.png" title="Image 1. Create Import Setting"></a></p>
 <h2 id="excel">Excel<a class="headerlink" href="#excel" title="Permanent link">¶</a></h2>
 <p>The format that Excel-type files must follow is as shown in the following image.</p>
 <p>The first row must be the names of the columns, they cannot be empty, they cannot contain special characters, spaces, the letter ñ. In any case the system will replace any character not accepted.</p>
 <p>More than one sheet can be added as in the example, the name of the sheets follows the same criteria as the columns.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Imports/excel.png" data-desc-position="bottom"><img alt="Excel example" src="../../docs_assets/images/Imports/excel.png" title="Image 2. Excel example"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/excel.png" data-desc-position="bottom"><img alt="Excel example" src="/docs_assets/images/Imports/excel.png" title="Image 2. Excel example"></a></p>
 <h2 id="process-example">Process example<a class="headerlink" href="#process-example" title="Permanent link">¶</a></h2>
 <ol>
 <li>Add it to <strong>flexygo</strong> process repository at <strong>Admin Work Area</strong> &gt; <strong>Logic and Rules</strong> &gt; <strong>DB Stored Procedures or Server Dll</strong>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Imports/process.png" data-desc-position="bottom"><img alt="Create Process" src="../../docs_assets/images/Imports/process.png" title="Image 3. Create Process"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/process.png" data-desc-position="bottom"><img alt="Create Process" src="/docs_assets/images/Imports/process.png" title="Image 3. Create Process"></a></p>
 <p><fh-modal class="button" modal_id="fhmodal_stored" modal_title="Stored example">Stored example</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll example">Dll example</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_json" modal_title="Json example">Json value example</fh-modal></p>
 <h2 id="execute-import">Execute import<a class="headerlink" href="#execute-import" title="Permanent link">¶</a></h2>
 <p>To execute the import it is found in the upper menu Tools-&gt;Import.</p>
 <p>In the process window a button appears to download the template of the file that has been previously placed in the creation of the setting.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Imports/process_window.png" data-desc-position="bottom"><img alt="Process window" src="../../docs_assets/images/Imports/process_window.png" title="Image 4. Process window"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/process_window.png" data-desc-position="bottom"><img alt="Process window" src="/docs_assets/images/Imports/process_window.png" title="Image 4. Process window"></a></p>
 <div id="fhmodal_stored" class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-fhmodal_stored-1"><a id="__codelineno-fhmodal_stored-1" name="__codelineno-fhmodal_stored-1" href="#__codelineno-fhmodal_stored-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">pImportacion</span><span class="p">]</span>
 </span><span id="__span-fhmodal_stored-2"><a id="__codelineno-fhmodal_stored-2" name="__codelineno-fhmodal_stored-2" href="#__codelineno-fhmodal_stored-2"></a><span class="o">@</span><span class="n">JSONVALUE</span><span class="w"> </span><span class="n">nvarchar</span><span class="p">(</span><span class="k">max</span><span class="p">)</span>
 </span><span id="__span-fhmodal_stored-3"><a id="__codelineno-fhmodal_stored-3" name="__codelineno-fhmodal_stored-3" href="#__codelineno-fhmodal_stored-3"></a><span class="k">as</span>
@@ -3663,24 +3663,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

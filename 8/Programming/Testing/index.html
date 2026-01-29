@@ -3354,11 +3354,11 @@
 
 
 <h1 class="flx-title-with-image" id="test-automation">Test Automation<a class="headerlink" href="#test-automation" title="Permanent link">¶</a></h1>
-<p><img alt="flexygo" class="fh-image-of-title" src="../../docs_assets/images/FlexygoLogo.png"></p>
+<p><img alt="flexygo" class="fh-image-of-title" src="/docs_assets/images/FlexygoLogo.png"></p>
 <p>Test Automation are an important value when evaluating and verifying the correct functioning of our applications. In fact tests are just small programs used to verify that the results of our application are correct or that no type of mal function is occurring. The test is not more than a piece of code that is compiled in a dll and can be executed either from the programmers IDE, an Integration Machine or by <strong>flexygo</strong> itself. </p>
 <p><strong>flexygo</strong> allows us not only to have <strong>flexygo</strong>'s own tests, but also the possibility of including any test dll that we need for our products or solutions. It's as easy as to inform in the test section of the location of the new testing dll. From this moment onwards as soon as we execute a diagnosis of our solution, it will pass as many unit or integration test that are available in the different dll.</p>
 <p class="flx-warning-card">You can find more information about testing with <strong>flexygo</strong> here <a href="https://docs.flexygo.com/develop/readme.html#TestUnitario">Test Unitario</a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Custom_DLL/testing2.png" data-desc-position="bottom"><img alt="Dll Test management" src="../docs_assets/images/Custom_DLL/testing2.png" title="Image 1. Dll Test management"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/testing2.png" data-desc-position="bottom"><img alt="Dll Test management" src="/docs_assets/images/Custom_DLL/testing2.png" title="Image 1. Dll Test management"></a></p>
 <h2 id="test-example">Test Example<a class="headerlink" href="#test-example" title="Permanent link">¶</a></h2>
 <p>In the example we see a test that runs through all the application nodes definition and checks that they load correctly. The node has a feature that if it should fail during the load it changes its title to <strong>Node Error</strong> so its malfunction is very easy to detect.</p>
 <h3 id="test-coding-example">Test coding Example<a class="headerlink" href="#test-coding-example" title="Permanent link">¶</a></h3>
@@ -3404,7 +3404,7 @@
 </span></code></pre></div>
 <h2 id="exclude-tests-from-flexygo">Exclude tests from flexygo<a class="headerlink" href="#exclude-tests-from-flexygo" title="Permanent link">¶</a></h2>
 <p>If there are test in a dll that we do not want <strong>flexygo</strong> to run, we can tag them with a testCategory attribute and inform <strong>flexygo</strong> of which test should not be used by using the exclude attributes. In te following sample if we don't want to execute this test we should set <strong>flexygo</strong> exlude <strong>attributes = ExcludeClient</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/Custom_DLL/testing1.png" data-desc-position="bottom"><img alt="Exclude dll Tests " src="../docs_assets/images/Custom_DLL/testing1.png" title="Image 2. Exclude dll Tests"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/testing1.png" data-desc-position="bottom"><img alt="Exclude dll Tests " src="/docs_assets/images/Custom_DLL/testing1.png" title="Image 2. Exclude dll Tests"></a></p>
 <div class="language-vbnet highlight"><span class="filename">VB.net</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">''' &lt;summary&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c">''' Tests if there are missing translations for active cultures and originId 0</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c">''' &lt;/summary&gt;</span>
@@ -3571,24 +3571,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

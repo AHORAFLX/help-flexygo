@@ -3390,11 +3390,11 @@
 
 
 <h1 class="flx-title-with-image" id="friendly-urls">Friendly URLs<a class="headerlink" href="#friendly-urls" title="Permanent link">¶</a></h1>
-<p><img alt="flexygo" class="fh-image-of-title" src="../../docs_assets/images/FlexygoLogo.png"></p>
+<p><img alt="flexygo" class="fh-image-of-title" src="/docs_assets/images/FlexygoLogo.png"></p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <p>Configuring Friendly URLs in <strong>flexygo</strong> is as easy as accessing the object configuration and turning the Friendly URL switch on. It's important to know that this configuration is only setted on the <strong>object</strong> and <strong>not in the collection</strong>, but once is configured on the first friendly URLs will be active on both.</p>
 <p>Objects with no Friendly URL switch active will <strong>not get redirected</strong> when using one of this URLs.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Information/FriendlyURLs.png" data-desc-position="bottom"><img alt="Friendly URLs configuration" src="../../docs_assets/images/Information/FriendlyURLs.png" title="Image 1. Reference and Subreference configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Information/FriendlyURLs.png" data-desc-position="bottom"><img alt="Friendly URLs configuration" src="/docs_assets/images/Information/FriendlyURLs.png" title="Image 1. Reference and Subreference configuration"></a></p>
 <h2 id="url-structure">URL Structure<a class="headerlink" href="#url-structure" title="Permanent link">¶</a></h2>
 <h3 id="list">List<a class="headerlink" href="#list" title="Permanent link">¶</a></h3>
 <table>
@@ -3641,24 +3641,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

@@ -3390,7 +3390,7 @@
 <li>Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.</li>
 </ol>
 <p><strong>Example:</strong></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WebComponent/SQLFeedGrid.png" data-desc-position="bottom"><img alt="SQL Feed in grid mode" src="../../docs_assets/images/WebComponent/SQLFeedGrid.png" title="SQL Feed in grid mode"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/WebComponent/SQLFeedGrid.png" data-desc-position="bottom"><img alt="SQL Feed in grid mode" src="/docs_assets/images/WebComponent/SQLFeedGrid.png" title="SQL Feed in grid mode"></a></p>
 <h3 id="view-mode">View mode<a class="headerlink" href="#view-mode" title="Permanent link">¶</a></h3>
 <ol>
 <li>Add your SQL sentence to the module: 
@@ -3401,7 +3401,7 @@
 <li>Add a relation to the calling object. This sentence will be parsed against the main calling object or a system default token can be used. Just use curly brackets {{object property o token name}} to parse the content.</li>
 </ol>
 <p><strong>Example:</strong></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WebComponent/SQLFeedView.png" data-desc-position="bottom"><img alt="SQL Feed in view mode" src="../../docs_assets/images/WebComponent/SQLFeedView.png" title="SQL Feed in view mode"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/WebComponent/SQLFeedView.png" data-desc-position="bottom"><img alt="SQL Feed in view mode" src="/docs_assets/images/WebComponent/SQLFeedView.png" title="SQL Feed in view mode"></a></p>
 <h2 id="rss-module">RSS Module<a class="headerlink" href="#rss-module" title="Permanent link">¶</a></h2>
 <p>Convert any external RSS provider in to your own formated news feed with what ever XSL transformation file you want. If you don't want to deal with complex XSL language just use the pre built in Rss.xsl file wich allows you to display news in a simple format.</p>
 <ol>
@@ -3559,24 +3559,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

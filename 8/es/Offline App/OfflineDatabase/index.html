@@ -3343,27 +3343,27 @@
 <ol>
 <li>
 <p>Desde las migraciones de bases de datos de aplicaciones offline a webassembly, se ha añadido un nuevo menú a las opciones avanzadas en el menú de sincronización, desde donde se puede ejecutar SQL. (Este menú solo está disponible en el escritorio)</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/DatabaseMenuNav.png" data-desc-position="bottom"><img alt="Menu" src="../../../docs_assets/images/offline/DatabaseMenuNav.png" title="Image 1. Database Menu Navigation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/DatabaseMenuNav.png" data-desc-position="bottom"><img alt="Menu" src="/docs_assets/images/offline/DatabaseMenuNav.png" title="Image 1. Database Menu Navigation"></a></p>
 </li>
 <li>
 <p>Una vez que ingreses a este menú, podrás ejecutar tus propios selects, desde la entrada superior o ver cualquier tabla haciendo clic en el ícono de la derecha junto a la entrada.</p>
 <p class="flx-info-card">Consejo: Si alguna vez deseas reutilizar un select, puedes hacerlo utilizando las teclas de flecha arriba y abajo.</p>
 <p class="flx-info-card">Consejo 2: Cuando se deba hacer un select complejo, puedes usar "shift + enter" para añadir otra línea y así hacer que la entrada sea más grande sin ejecutar la sentencia select. Y si tienes un select complejo de otro lugar, al pegarlo, la entrada crecerá automáticamente según el tamaño del select.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/DatabaseMenu.png" data-desc-position="bottom"><img alt="Menu" src="../../../docs_assets/images/offline/DatabaseMenu.png" title="Image 2. Database Menu"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/DatabaseMenu.png" data-desc-position="bottom"><img alt="Menu" src="/docs_assets/images/offline/DatabaseMenu.png" title="Image 2. Database Menu"></a></p>
 </li>
 <li>
 <p>Cuando haces clic en la entrada de tablas, se mostrarán todas las tablas en la base de datos actual. Desde allí, si seleccionas cualquiera de estas, se cargarán todos los registros en una tabla como puedes ver en la cuarta imagen.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/ShowTablesBtn.png" data-desc-position="bottom"><img alt="Menu" src="../../../docs_assets/images/offline/ShowTablesBtn.png" title="Image 3. Show Tables button"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/ShowTable.png" data-desc-position="bottom"><img alt="Menu" src="../../../docs_assets/images/offline/ShowTable.png" title="Image 4. Show Table"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/ShowTablesBtn.png" data-desc-position="bottom"><img alt="Menu" src="/docs_assets/images/offline/ShowTablesBtn.png" title="Image 3. Show Tables button"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/ShowTable.png" data-desc-position="bottom"><img alt="Menu" src="/docs_assets/images/offline/ShowTable.png" title="Image 4. Show Table"></a></p>
 </li>
 </ol>
 <h2 id="profiler-de-base-de-datos">Profiler de Base de Datos<a class="headerlink" href="#profiler-de-base-de-datos" title="Permanent link">¶</a></h2>
 <p>Desde la versión 6.11, la aplicación tiene un <strong>profiler de base de datos</strong> que permite registrar todas las sentencias SQL que se ejecutan en segundo plano (como por ejemplo las dependencias).</p>
 <p>Para usarlo, solo necesitarás conocer las funciones <strong>flexygo.sql.initProfiler</strong> y <strong>flexygo.sql.stopProfiler</strong>. En futuras actualizaciones, se añadirá un botón visual de play y stop en la pantalla de la base de datos.</p>
 <p>Cuando se ejecuta <strong>flexygo.sql.initProfiler</strong>, todas las SQL ejecutadas y sus resultados comenzarán a ser registradas, por lo que cuando ejecutes <strong>flexygo.sql.stopProfiler</strong>, todas ellas se registrarán en la consola.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/InitStopProfiler.png" data-desc-position="bottom"><img alt="Menu" src="../../../docs_assets/images/offline/InitStopProfiler.png" title="Image 5. Initiate and stop profiler"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/InitStopProfiler.png" data-desc-position="bottom"><img alt="Menu" src="/docs_assets/images/offline/InitStopProfiler.png" title="Image 5. Initiate and stop profiler"></a></p>
 <p>Si alguna vez deseas buscar una sentencia en particular, lo que puede ser difícil en ediciones grandes con muchas dependencias, puedes usar la función <strong>flexygo.sql.filterProfiler</strong> que filtrará los datos que le pases. Por defecto, no distingue entre mayúsculas y minúsculas, pero si lo prefieres, puedes pasarle el tercer parámetro con el valor true.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/FilterProfiler.png" data-desc-position="bottom"><img alt="Menu" src="../../../docs_assets/images/offline/FilterProfiler.png" title="Image 6. Filter profiler"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/FilterProfiler.png" data-desc-position="bottom"><img alt="Menu" src="/docs_assets/images/offline/FilterProfiler.png" title="Image 6. Filter profiler"></a></p>
 
 
 
@@ -3471,24 +3471,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

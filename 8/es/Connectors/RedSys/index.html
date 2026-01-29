@@ -3357,7 +3357,7 @@
 
 
 <h1 class="flx-title-with-image" id="integracion-con-redsys">Integración con RedSys<a class="headerlink" href="#integracion-con-redsys" title="Permanent link">¶</a></h1>
-<p><img alt="" class="fh-image-of-title" src="../../../docs_assets/images/RedSys/RedSysLogo.png"></p>
+<p><img alt="" class="fh-image-of-title" src="/docs_assets/images/RedSys/RedSysLogo.png"></p>
 <p>RedSys es una plataforma segura de pagos virtuales que puedes aplicar en tu e-commerce para ofrecer a tus clientes pagos con tarjeta de crédito y débito de distintos bancos.<br>
 <strong>flexygo</strong> tiene la capacidad de realizar pagos a través de esta plataforma.</p>
 <h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
@@ -3367,14 +3367,14 @@
 <li>Configurar los <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Settings" showprogress="false">ajustes de RedSys</flx-navbutton>.</li>
 <li>Configurar un proceso que se ejecutará cuando se realice el pago. Puede ser un proceso <em>Stored</em> o un proceso <em>DLL</em>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_2.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_2.png" title="Image 1. RedSys configuration"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_3.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_3.png" title="Image 2. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/RedSys/RedSys_2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/RedSys/RedSys_2.png" title="Image 1. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/RedSys/RedSys_3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/RedSys/RedSys_3.png" title="Image 2. RedSys configuration"></a></p>
 <p>El proceso puede recibir como parámetros los campos del objeto enviado o el parámetro de respuesta.<br>
 Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nombre <strong>ResponseCode</strong>.</p>
 <ol>
 <li>Después, abre la configuración de RedSys y crea una nueva relación de objeto:</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_1.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_1.png" title="Image 3. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/RedSys/RedSys_1.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/RedSys/RedSys_1.png" title="Image 3. RedSys configuration"></a></p>
 <ul>
 <li><strong>Object Name:</strong> Nombre del objeto a relacionar con RedSys  </li>
 <li><strong>Process Name:</strong> Proceso que se ejecutará al realizar el pago  </li>
@@ -3385,7 +3385,7 @@ Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nomb
 </ul>
 <h2 id="configurar-el-proceso-estandar-de-redsys">Configurar el proceso estándar de RedSys<a class="headerlink" href="#configurar-el-proceso-estandar-de-redsys" title="Permanent link">¶</a></h2>
 <p>Puedes usar el proceso estándar de pago y vincularlo directamente a un objeto:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_6.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_6.png" title="Image 4. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/RedSys/RedSys_6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/RedSys/RedSys_6.png" title="Image 4. RedSys configuration"></a></p>
 <p>También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago (<fh-copy>FLEXYGO.PaymentsProcess.PayRequest</fh-copy>(). Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.<br>
 Si no se especifica el campo de cantidad, el importe se obtendrá del campo indicado en la relación del objeto con RedSys.</p>
 <h2 id="log">Log<a class="headerlink" href="#log" title="Permanent link">¶</a></h2>
@@ -3519,24 +3519,65 @@ Para más información visita el siguiente <a href="https://pagosonline.redsys.e
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>

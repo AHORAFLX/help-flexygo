@@ -3390,7 +3390,7 @@
 <li>Agrega una relación al objeto que llama. Esta sentencia será analizada contra el objeto principal que llama o se puede usar un token predeterminado del sistema. Solo usa llaves {{propiedad de objeto o nombre de token}} para analizar el contenido. </li>
 </ol>
 <p><strong>Ejemplo:</strong></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WebComponent/SQLFeedGrid.png" data-desc-position="bottom"><img alt="SQL Feed en modo cuadrícula" src="../../../docs_assets/images/WebComponent/SQLFeedGrid.png" title="SQL Feed en modo cuadrícula"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/WebComponent/SQLFeedGrid.png" data-desc-position="bottom"><img alt="SQL Feed en modo cuadrícula" src="/docs_assets/images/WebComponent/SQLFeedGrid.png" title="SQL Feed en modo cuadrícula"></a></p>
 <h3 id="modo-vista">Modo vista<a class="headerlink" href="#modo-vista" title="Permanent link">¶</a></h3>
 <ol>
 <li>Agrega tu sentencia SQL al módulo: 
@@ -3401,7 +3401,7 @@
 <li>Agrega una relación al objeto que llama. Esta sentencia será analizada contra el objeto principal que llama o se puede usar un token predeterminado del sistema. Solo usa llaves {{propiedad de objeto o nombre de token}} para analizar el contenido. </li>
 </ol>
 <p><strong>Ejemplo:</strong></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WebComponent/SQLFeedView.png" data-desc-position="bottom"><img alt="SQL Feed en modo vista" src="../../../docs_assets/images/WebComponent/SQLFeedView.png" title="SQL Feed en modo vista"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/WebComponent/SQLFeedView.png" data-desc-position="bottom"><img alt="SQL Feed en modo vista" src="/docs_assets/images/WebComponent/SQLFeedView.png" title="SQL Feed en modo vista"></a></p>
 <h2 id="modulo-rss">Módulo RSS<a class="headerlink" href="#modulo-rss" title="Permanent link">¶</a></h2>
 <p>Convierte cualquier proveedor de RSS externo en tu propio feed de noticias formateado con cualquier archivo de transformación XSL que desees. Si no quieres lidiar con el lenguaje XSL complejo, simplemente utiliza el archivo preconstruido Rss.xsl que te permite mostrar noticias en un formato simple.</p>
 <ol>
@@ -3559,24 +3559,65 @@
       
         <script>
           (function(){
+            /*
+              Purpose: Fix image `src` paths that reference `docs_assets` so they load
+              correctly when the site is served under a subpath (for example `/docs`).
+
+              This version:
+              - Runs on DOMContentLoaded (safe for dev + build)
+              - Observes the DOM for added images (SPA/navigation)
+              - Skips absolute URLs
+            */
+
+            function fixImages(){
+              try{
+                var cfgEl = document.getElementById('__config');
+                if(!cfgEl) return; // config missing — nothing we can do
+                var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+                var base = cfg.base || '/';
+                if(!base) base = '/';
+                var baseNorm = base.endsWith('/') ? base : base + '/';
+
+                document.querySelectorAll('img').forEach(function(img){
+                  var s = img.getAttribute('src');
+                  if(!s) return;
+                  if (/^(https?:)?\/\//.test(s)) return; // don't rewrite external images
+                  var idx = s.indexOf('docs_assets');
+                  if(idx !== -1){
+                    var rel = s.substring(idx);
+                    var newSrc = baseNorm + rel;
+                    if(img.src !== newSrc) img.src = newSrc;
+                  }
+                });
+              }catch(e){
+                console.warn('fix-images-base error', e);
+              }
+            }
+
+            // Run on load/interaction
+            if (document.readyState === 'complete' || document.readyState === 'interactive'){
+              fixImages();
+            } else {
+              document.addEventListener('DOMContentLoaded', fixImages);
+            }
+
+            // Observe DOM changes and fix images added later (SPA behavior / live-reload)
             try{
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return;
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx);
-                  img.src = baseNorm + rel;
-                }
+              var mo = new MutationObserver(function(mutations){
+                var shouldRun = false;
+                mutations.forEach(function(m){
+                  if(!m.addedNodes) return;
+                  m.addedNodes.forEach(function(node){
+                    if(node.nodeType !== 1) return;
+                    if(node.tagName === 'IMG') shouldRun = true;
+                    else if(node.querySelector && node.querySelector('img')) shouldRun = true;
+                  });
+                });
+                if(shouldRun) fixImages();
               });
+              mo.observe(document.body || document.documentElement, {childList:true, subtree:true});
             }catch(e){
-              console.warn('fix-images-base error', e);
+              // MutationObserver not available — not critical
             }
           })();
         </script>
