@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/es/Programming/Events/">
+      
       
         <link rel="prev" href="../DatabaseScriptJobs/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../FormValidators/">
       
       
-      <link rel="icon" href="../../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3463,50 +3465,6 @@
       
         <script src="../../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

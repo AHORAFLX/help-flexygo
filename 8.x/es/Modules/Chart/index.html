@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/es/Modules/Chart/">
+      
       
         <link rel="prev" href="../../Installation/CreatingWebComponent/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../ChartII/">
       
       
-      <link rel="icon" href="../../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3469,7 +3471,7 @@
 
 <h1 id="chart">Chart<a class="headerlink" href="#chart" title="Permanent link">¶</a></h1>
 <p><strong>Easy Pie</strong>, <strong>Easy Info</strong>, <strong>Easy Line</strong> y <strong>Sparklines</strong> son algunos de los componentes web que puedes usar para crear gráficos. Combinados en un módulo HTML, puedes obtener resultados similares a los siguientes:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/Main.png" data-desc-position="bottom"><img alt="Sample charts" src="/docs_assets/images/Charts/Main.png" title="Sample charts"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/Main.png" data-desc-position="bottom"><img alt="Sample charts" src="../../../docs_assets/images/Charts/Main.png" title="Sample charts"></a></p>
 <h2 id="easy-line">Easy Line<a class="headerlink" href="#easy-line" title="Permanent link">¶</a></h2>
 <p>Puedes añadir un easy line simplemente agregando el componente web <strong>flx-easyline</strong>.</p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">flx-easyline</span> <span class="na">color</span><span class="o">=</span><span class="s">"#4f9fcf"</span> <span class="na">size</span><span class="o">=</span><span class="s">"s"</span> <span class="na">value</span><span class="o">=</span><span class="s">"40"</span> <span class="na">label</span><span class="o">=</span><span class="s">"Small"</span> <span class="na">symbol</span><span class="o">=</span><span class="s">"%"</span> <span class="na">hideValue</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-easyline</span><span class="p">&gt;</span>
@@ -3483,7 +3485,7 @@
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">flx-easyline</span> <span class="na">color</span><span class="o">=</span><span class="s">"#ee9e1f"</span> <span class="na">value</span><span class="o">=</span><span class="s">"64"</span> <span class="na">label</span><span class="o">=</span><span class="s">"Auto Rounded"</span> <span class="na">symbol</span><span class="o">=</span><span class="s">"%"</span> <span class="na">rounded</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-easyline</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>Usa cualquiera de los tres tamaños predefinidos: small, medium o large. También puedes dejar el tamaño vacío y el componente se ajustará automáticamente.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/EasyLine.png" data-desc-position="bottom"><img alt="Easy line charts" src="/docs_assets/images/Charts/EasyLine.png" title="Easy line charts"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/EasyLine.png" data-desc-position="bottom"><img alt="Easy line charts" src="../../../docs_assets/images/Charts/EasyLine.png" title="Easy line charts"></a></p>
 <h3 id="opciones">Opciones<a class="headerlink" href="#opciones" title="Permanent link">¶</a></h3>
 <ol>
 <li>Añade tu sentencia SQL al módulo</li>
@@ -3509,7 +3511,7 @@
 </span></code></pre></div>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">flx-timeline-progressbar</span> <span class="na">color</span><span class="o">=</span><span class="s">"#ee9e1f"</span> <span class="na">percentage</span><span class="o">=</span><span class="s">"87"</span><span class="p">&gt;</span>Custom template<span class="p">&lt;/</span><span class="nt">flx-timeline-progressbar</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/Timeline.png" data-desc-position="bottom"><img alt="Timeline charts" src="/docs_assets/images/Charts/Timeline.png" title="Timeline charts"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/Timeline.png" data-desc-position="bottom"><img alt="Timeline charts" src="../../../docs_assets/images/Charts/Timeline.png" title="Timeline charts"></a></p>
 <h3 id="opciones_1">Opciones<a class="headerlink" href="#opciones_1" title="Permanent link">¶</a></h3>
 <p>Indica los parámetros del Timeline Progress Bar:</p>
 <div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">color</span><span class="o">=</span><span class="s2">"red"</span><span class="w"> </span><span class="nx">percentage</span><span class="o">=</span><span class="s2">"75"</span>
@@ -3528,7 +3530,7 @@
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">flx-easypie</span> <span class="na">color</span><span class="o">=</span><span class="s">"red"</span> <span class="na">size</span><span class="o">=</span><span class="s">"l"</span> <span class="na">value</span><span class="o">=</span><span class="s">"59"</span> <span class="na">label</span><span class="o">=</span><span class="s">"Large"</span> <span class="na">symbol</span><span class="o">=</span><span class="s">"%"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-easypie</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>Usa cualquiera de los tres tamaños: small, medium o large.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/Pies.png" data-desc-position="bottom"><img alt="Pie charts" src="/docs_assets/images/Charts/Pies.png" title="Pie charts"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/Pies.png" data-desc-position="bottom"><img alt="Pie charts" src="../../../docs_assets/images/Charts/Pies.png" title="Pie charts"></a></p>
 <h3 id="opciones_2">Opciones<a class="headerlink" href="#opciones_2" title="Permanent link">¶</a></h3>
 <ol>
 <li>Añade tu sentencia SQL al módulo</li>
@@ -3561,7 +3563,7 @@
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">&lt;</span><span class="nt">flx-easyinfo</span> <span class="na">color</span><span class="o">=</span><span class="s">"red"</span> <span class="na">iconclass</span><span class="o">=</span><span class="s">"flx-icon icon-lock"</span> <span class="na">size</span><span class="o">=</span><span class="s">"l"</span> <span class="na">value</span><span class="o">=</span><span class="s">"1250"</span> <span class="na">label</span><span class="o">=</span><span class="s">"Large"</span> <span class="na">symbol</span><span class="o">=</span><span class="s">"' + convert(nvarchar(max),NCHAR(36)) + N'"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-easyinfo</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>Usa cualquiera de los tres tamaños predefinidos.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/Info.png" data-desc-position="bottom"><img alt="Easy info charts" src="/docs_assets/images/Charts/Info.png" title="Easy info charts"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/Info.png" data-desc-position="bottom"><img alt="Easy info charts" src="../../../docs_assets/images/Charts/Info.png" title="Easy info charts"></a></p>
 <h3 id="opciones_3">Opciones<a class="headerlink" href="#opciones_3" title="Permanent link">¶</a></h3>
 <ol>
 <li>Añade tu sentencia SQL</li>
@@ -3596,11 +3598,11 @@
 </span></code></pre></div>
 <p>Puedes usar cualquiera de los tres tamaños: small, medium o large, en cualquiera de los tipos (bar, line, discrete, pie, bullet o box).</p>
 <h3 id="small">Small<a class="headerlink" href="#small" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/SparkLine.png" data-desc-position="bottom"><img alt="SparkLine charts" class="sparkline-small" src="/docs_assets/images/Charts/SparkLine.png" title="SparkLine charts small"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/SparkLine.png" data-desc-position="bottom"><img alt="SparkLine charts" class="sparkline-small" src="../../../docs_assets/images/Charts/SparkLine.png" title="SparkLine charts small"></a></p>
 <h3 id="medium">Medium<a class="headerlink" href="#medium" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/SparkLine.png" data-desc-position="bottom"><img alt="SparkLine charts" class="sparkline-medium" src="/docs_assets/images/Charts/SparkLine.png" title="SparkLine charts medium"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/SparkLine.png" data-desc-position="bottom"><img alt="SparkLine charts" class="sparkline-medium" src="../../../docs_assets/images/Charts/SparkLine.png" title="SparkLine charts medium"></a></p>
 <h3 id="large">Large<a class="headerlink" href="#large" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Charts/SparkLine.png" data-desc-position="bottom"><img alt="SparkLine charts" class="sparkline-large" src="/docs_assets/images/Charts/SparkLine.png" title="SparkLine charts large"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Charts/SparkLine.png" data-desc-position="bottom"><img alt="SparkLine charts" class="sparkline-large" src="../../../docs_assets/images/Charts/SparkLine.png" title="SparkLine charts large"></a></p>
 <h3 id="opciones_4">Opciones<a class="headerlink" href="#opciones_4" title="Permanent link">¶</a></h3>
 <ol>
 <li>Añade tu sentencia SQL</li>
@@ -3846,50 +3848,6 @@
       
         <script src="../../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

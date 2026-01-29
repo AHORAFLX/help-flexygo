@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Programming/CustomStored/">
+      
       
         <link rel="prev" href="../CustomDLL/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../DatabaseScriptJobs/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3388,14 +3390,14 @@
 </li>
 <li>
 <p>Add it to <strong>flexygo</strong> stored procedure repository at Admin Work Area &gt; Logic and Rules &gt; DB Stored Procedures.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/ObjectStored.png" data-desc-position="bottom"><img alt="Stored Procedure Repository" src="/docs_assets/images/Custom_DLL/ObjectStored.png" title="Image 1. Stored Procedure Repository"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Custom_DLL/ObjectStored.PNG" data-desc-position="bottom"><img alt="Stored Procedure Repository" src="../../docs_assets/images/Custom_DLL/ObjectStored.PNG" title="Image 1. Stored Procedure Repository"></a></p>
 </li>
 <li>
 <p>If stored has parameters insert it automatically using <strong>Generate parameters</strong> menu.</p>
 </li>
 <li>
 <p>Add relation to object in Admin Work Area &gt; Object management &gt; Logic.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/RelatedObjectStored.png" data-desc-position="bottom"><img alt="Stored and Object Relation" src="/docs_assets/images/Custom_DLL/RelatedObjectStored.png" title="Image 2. Stored and Object Relation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Custom_DLL/RelatedObjectStored.PNG" data-desc-position="bottom"><img alt="Stored and Object Relation" src="../../docs_assets/images/Custom_DLL/RelatedObjectStored.PNG" title="Image 2. Stored and Object Relation"></a></p>
 </li>
 </ol>
 <h2 id="collection-stored-procedure">Collection Stored Procedure<a class="headerlink" href="#collection-stored-procedure" title="Permanent link">¶</a></h2>
@@ -3403,21 +3405,21 @@
 <ol>
 <li>
 <p>Set <strong>Unique Identifier Field</strong> in object configuration to allow collection process.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/UniqueIdentifier.png" data-desc-position="bottom"><img alt="Set Unique Identifier Field" src="/docs_assets/images/Custom_DLL/UniqueIdentifier.png" title="Image 3. Set Unique Identifier Field"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Custom_DLL/UniqueIdentifier.PNG" data-desc-position="bottom"><img alt="Set Unique Identifier Field" src="../../docs_assets/images/Custom_DLL/UniqueIdentifier.PNG" title="Image 3. Set Unique Identifier Field"></a></p>
 </li>
 <li>
 <p>Code stored procedure in database. Append a param with name <strong>@sysCollectionSentence</strong> and type <strong>nvarchar(max)</strong> to recive an SQL with selected items. <fh-modal class="link" modal_id="fhmodal_collection" modal_title="Collection Stored Procedure">Example</fh-modal></p>
 </li>
 <li>
 <p>Add it to <strong>flexygo</strong> stored procedure repository at Admin Work Area &gt; Logic and Rules &gt; DB Stored Procedures.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/CollectionStored.png" data-desc-position="bottom"><img alt="Stored Procedure Repository" src="/docs_assets/images/Custom_DLL/CollectionStored.png" title="Image 4. Stored Procedure Repository"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Custom_DLL/CollectionStored.PNG" data-desc-position="bottom"><img alt="Stored Procedure Repository" src="../../docs_assets/images/Custom_DLL/CollectionStored.PNG" title="Image 4. Stored Procedure Repository"></a></p>
 </li>
 <li>
 <p>If stored has parameters insert it automatically using <strong>Generate parameters</strong> menu.</p>
 </li>
 <li>
 <p>Add relation to collection in Admin Work Area &gt; Object management &gt; Logic. If process only can be executed with selected items, please set switch to true, otherwise process will be executed with all items filtered in current screen.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Custom_DLL/RelatedCollectionStored.png" data-desc-position="bottom"><img alt="Stored and Collection Relation" src="/docs_assets/images/Custom_DLL/RelatedCollectionStored.png" title="Image 5. Stored and Collection Relation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Custom_DLL/RelatedCollectionStored.PNG" data-desc-position="bottom"><img alt="Stored and Collection Relation" src="../../docs_assets/images/Custom_DLL/RelatedCollectionStored.PNG" title="Image 5. Stored and Collection Relation"></a></p>
 </li>
 </ol>
 <h2 id="custom-stored-on-object-load-or-property-change">Custom Stored on Object Load Or Property Change<a class="headerlink" href="#custom-stored-on-object-load-or-property-change" title="Permanent link">¶</a></h2>
@@ -3732,50 +3734,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

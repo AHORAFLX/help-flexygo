@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/es/Programming/Imports/">
+      
       
         <link rel="prev" href="../FormValidators/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../LinkedServers/">
       
       
-      <link rel="icon" href="../../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3377,24 +3379,24 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/setting.png" data-desc-position="bottom"><img alt="Import settings" src="/docs_assets/images/Imports/setting.png" title="Image 1. Create Import Setting"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/setting.png" data-desc-position="bottom"><img alt="Import settings" src="../../../docs_assets/images/Imports/setting.png" title="Image 1. Create Import Setting"></a></p>
 <h2 id="excel">Excel<a class="headerlink" href="#excel" title="Permanent link">¶</a></h2>
 <p>El formato que deben seguir los archivos tipo Excel es como se muestra en la siguiente imagen.</p>
 <p>La primera fila debe ser los nombres de las columnas, no pueden estar vacías, no pueden contener caracteres especiales, espacios ni la letra ñ. En cualquier caso, el sistema reemplazará cualquier carácter no aceptado.</p>
 <p>Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas sigue los mismos criterios que las columnas.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/excel.png" data-desc-position="bottom"><img alt="Excel example" src="/docs_assets/images/Imports/excel.png" title="Image 2. Excel example"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/excel.png" data-desc-position="bottom"><img alt="Excel example" src="../../../docs_assets/images/Imports/excel.png" title="Image 2. Excel example"></a></p>
 <h2 id="ejemplo-de-proceso">Ejemplo de Proceso<a class="headerlink" href="#ejemplo-de-proceso" title="Permanent link">¶</a></h2>
 <ol>
 <li>Agregarlo al repositorio de procesos de flexygo en <strong>Área de Trabajo de Administración</strong> &gt; <strong>Lógica y Reglas</strong> &gt; <strong>Procedimientos Almacenados de DB o Dll de Servidor</strong>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/process.png" data-desc-position="bottom"><img alt="Create Process" src="/docs_assets/images/Imports/process.png" title="Image 3. Create Process"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/process.png" data-desc-position="bottom"><img alt="Create Process" src="../../../docs_assets/images/Imports/process.png" title="Image 3. Create Process"></a></p>
 <p><fh-modal class="button" modal_id="fhmodal_stored" modal_title="Proceso almacenado">Ejemplo Almacenado</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll">Ejemplo DLL</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_json" modal_title="Json">Ejemplo de valor Json</fh-modal></p>
 <h2 id="ejecutar-importacion">Ejecutar importación<a class="headerlink" href="#ejecutar-importacion" title="Permanent link">¶</a></h2>
 <p>Para ejecutar la importación se encuentra en el menú superior Herramientas-&gt;Importar.</p>
 <p>En la ventana del proceso aparece un botón para descargar la plantilla del archivo que se ha colocado previamente en la creación de la configuración.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/process_window.png" data-desc-position="bottom"><img alt="Process window" src="/docs_assets/images/Imports/process_window.png" title="Image 4. Process window"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/process_window.png" data-desc-position="bottom"><img alt="Process window" src="../../../docs_assets/images/Imports/process_window.png" title="Image 4. Process window"></a></p>
 <div id="fhmodal_stored" class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-fhmodal_stored-1"><a id="__codelineno-fhmodal_stored-1" name="__codelineno-fhmodal_stored-1" href="#__codelineno-fhmodal_stored-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">pImportacion</span><span class="p">]</span>
 </span><span id="__span-fhmodal_stored-2"><a id="__codelineno-fhmodal_stored-2" name="__codelineno-fhmodal_stored-2" href="#__codelineno-fhmodal_stored-2"></a><span class="o">@</span><span class="n">JSONVALUE</span><span class="w"> </span><span class="n">nvarchar</span><span class="p">(</span><span class="k">max</span><span class="p">)</span>
 </span><span id="__span-fhmodal_stored-3"><a id="__codelineno-fhmodal_stored-3" name="__codelineno-fhmodal_stored-3" href="#__codelineno-fhmodal_stored-3"></a><span class="k">as</span>
@@ -3657,50 +3659,6 @@
       
         <script src="../../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

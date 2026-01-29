@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Connectors/ClaveAuthentication/">
+      
       
         <link rel="prev" href="../AzureFormRecognizer/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../FaceRecognition/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3348,11 +3350,11 @@
 
 
 <h1 class="flx-title-with-image" id="clve-authentication">Cl@ve Authentication<a class="headerlink" href="#clve-authentication" title="Permanent link">¶</a></h1>
-<p><img alt="Cl@ve" class="fh-image-of-title" src="/docs_assets/images/clave/clave-icon.svg"></p>
+<p><img alt="Cl@ve" class="fh-image-of-title" src="../../docs_assets/images/Clave/clave-icon.svg"></p>
 <p>We are pleased to share an exciting update to our <strong>flexygo</strong> web application: the introduction of Cl@ve as an authentication method. This addition aims to streamline user access, bolster security, and significantly enhance the overall user experience</p>
 <h2 id="what-is-clve">What is Cl@ve?<a class="headerlink" href="#what-is-clve" title="Permanent link">¶</a></h2>
 <p>Cl@ve stands for "Identificación Electrónica para las Administraciones Públicas" (Electronic Identification for Public Administrations) and serves as a single gateway for citizens to authenticate themselves across various governmental platforms. It supports multiple authentication methods, including Cl@ve PIN, Cl@ve Permanente, electronic certificates, and DNIe (Electronic National Identity Document).</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/clave/clave_preview.png" data-desc-position="bottom"><img alt="Cl@ve Authentication" src="/docs_assets/images/clave/clave_preview.png" title="Image 1. Cl@ve Authentication"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Clave/clave_preview.png" data-desc-position="bottom"><img alt="Cl@ve Authentication" src="../../docs_assets/images/Clave/clave_preview.png" title="Image 1. Cl@ve Authentication"></a></p>
 <h2 id="how-it-works">How it Works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h2>
 <p>To begin using this new authentication method, the first step is to register as a Service Provider (SP) with Cl@ve. This registration is essential because it involves requesting sensitive citizen information, and Cl@ve must validate that you meet the necessary requirements to access and use this data. You can find the required documentation in the <a href="https://docs.flexygo.com/readme/utils/Solicitud_alta_SP.zip" title="Cl@ve Directory">Cl@ve Directory</a>.</p>
 <p>Following the successful registration as an SP with Cl@ve and the definition of the electronic certificate to validate SAML requests (information available in the provided documentation), we can proceed with the activation of Cl@ve authentication:</p>
@@ -3502,50 +3504,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

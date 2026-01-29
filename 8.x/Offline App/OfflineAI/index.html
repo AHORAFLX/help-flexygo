@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Offline%20App/OfflineAI/">
+      
       
         <link rel="prev" href="../NavigationOptions/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../OfflineAndEmulatordifferences/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3439,7 +3441,7 @@
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/GoAi.png" data-desc-position="bottom"><img alt="Go AI" src="/docs_assets/images/offline/GoAi.png" title="Image 1. Go AI"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/offline/GoAI.png" data-desc-position="bottom"><img alt="Go AI" src="../../docs_assets/images/offline/GoAI.png" title="Image 1. Go AI"></a></p>
 <h2 id="starting-with-voice-reconition">Starting with voice reconition<a class="headerlink" href="#starting-with-voice-reconition" title="Permanent link">¶</a></h2>
 <p>You can start an AI Assistant directly with a first message that the user asks with its mic using <fh-copy>flexygo.ai.startVoiceRecognition</fh-copy>.</p>
 <p>The voice recognition will stop after a moment of silence, and it will automatically navigate to the chat with that message. But iff the user wants to stop it before it just needs to press the mic button.</p>
@@ -3465,7 +3467,7 @@
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/VoiceRecognition.png" data-desc-position="bottom"><img alt="Voice Recognition" src="/docs_assets/images/offline/VoiceRecognition.png" title="Image 2. Voice Recognition"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/offline/VoiceRecognition.png" data-desc-position="bottom"><img alt="Voice Recognition" src="../../docs_assets/images/offline/VoiceRecognition.png" title="Image 2. Voice Recognition"></a></p>
 <h2 id="text-to-speech">Text to speech<a class="headerlink" href="#text-to-speech" title="Permanent link">¶</a></h2>
 <p>Offline app also admits the possibility of turning text into audio. For that we've got the <fh-copy>flexygo.ai.textToSpeech</fh-copy> function:</p>
 <p>With this function the text that is given will be read directly to the user.</p>
@@ -3669,50 +3671,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

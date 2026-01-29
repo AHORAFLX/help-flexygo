@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Offline%20App/OfflineAndEmulatordifferences/">
+      
       
         <link rel="prev" href="../OfflineAI/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../OfflineDatabase/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3351,7 +3353,7 @@
 <h2 id="getting-sql-data-on-js">Getting SQL data on JS<a class="headerlink" href="#getting-sql-data-on-js" title="Permanent link">¶</a></h2>
 <p>When getting SQL data from js functions its a common mistake to try using directly the rows property from the returned object, but this way it will only work on the emulator. To get rows data from js functions we have the <strong>flexygo.sql.getRow</strong> and <strong>flexygo.sql.getRows</strong> methods, which will be the ones in charge of the retrieval of this information.</p>
 <p><strong>flexygo.sql.getRow</strong> is normally the preferable method, unless you need to use most of the sql results, in which case it would be better to use the <strong>flexygo.sql.getRows</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/EmulatorPhoneSQL.png" data-desc-position="bottom"><img alt="Object View" src="/docs_assets/images/offline/EmulatorPhoneSQL.png" title="Emulator/Phone SQL differences"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/offline/EmulatorPhoneSQL.png" data-desc-position="bottom"><img alt="Object View" src="../../docs_assets/images/offline/EmulatorPhoneSQL.png" title="Emulator/Phone SQL differences"></a></p>
 <h2 id="image-gallery-methods">Image gallery methods<a class="headerlink" href="#image-gallery-methods" title="Permanent link">¶</a></h2>
 <p>Image gallery on emulator will only show the getPicture button, which will upload a default image. While on the phone three buttons will appear the <strong>getPicture</strong> (it takes a camera picture), the <strong>getGalleryPicture</strong> (gets a picture directly from the phone gallery) and the <strong>getPicture</strong> with multiple setting active (takes camera pictures until camera gets cancelled).</p>
 <h2 id="tracking">Tracking<a class="headerlink" href="#tracking" title="Permanent link">¶</a></h2>
@@ -3470,50 +3472,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

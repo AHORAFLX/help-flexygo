@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Information/MFA/">
+      
       
         <link rel="prev" href="../GoodPractices/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../MailAccountsSettings/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3357,16 +3359,16 @@
 <p>Furthermore, at flexygo we understand that not all users require the same level of security. Therefore, we have incorporated the ability to define which <strong>roles or users</strong> will have two-step verification enabled. This allows for accurate and efficient management of application security.</p>
 <h2 id="how-to-configure-it">How to configure it?<a class="headerlink" href="#how-to-configure-it" title="Permanent link">¶</a></h2>
 <p>First of all we have 2 new settings:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/MFA/mfa_settings.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/MFA/mfa_settings.png" title="Image 1. MFA Settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/MFA/mfa_settings.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/MFA/mfa_settings.png" title="Image 1. MFA Settings"></a></p>
 <ul>
 <li><strong>MFA_cookie_duration</strong>: In this section you can define the number of days that the "Trust this device?</li>
 <li><strong>MFA_Type</strong>: In this section the administrator can define which type of MFA will be used.</li>
 </ul>
 <p>After configuring these parameters as we see fit, we can define at user or role level to whom to activate MFA.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/MFA/mfa_user.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/MFA/mfa_user.png" title="Image 2. MFA in user"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/MFA/mfa_role.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/MFA/mfa_role.png" title="Image 3. MFA in role"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/MFA/mfa_user.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/MFA/mfa_user.png" title="Image 2. MFA in user"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/MFA/mfa_role.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/MFA/mfa_role.png" title="Image 3. MFA in role"></a></p>
 <p>Finally, if we try to log in with the user that has the MFA active, we will see the following screen to enter our security code</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/MFA/mfa_screen.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/MFA/mfa_screen.png" title="Image 4. MFA Screen"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/MFA/mfa_screen.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/MFA/mfa_screen.png" title="Image 4. MFA Screen"></a></p>
 
 
 
@@ -3481,50 +3483,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

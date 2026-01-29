@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/es/Programming/FormValidators/">
+      
       
         <link rel="prev" href="../Events/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../Imports/">
       
       
-      <link rel="icon" href="../../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3398,20 +3400,20 @@
 <p>El tipo de control elegido al diseñar la pantalla de edición puede tener sus propias validaciones que impiden al usuario ingresar valores incorrectos, un campo numérico evitará que el usuario ingrese otros caracteres que no sean numéricos, un campo de tipo fecha solo permitirá fechas correctas, un campo de tipo correo validará que el texto corresponda a una cuenta de correo válida, un campo de tipo texto solo admitirá el número máximo de caracteres establecido en la definición de la base de datos.</p>
 <p><em>Ejemplos:</em></p>
 <p>El control de fecha nos impedirá ingresar un mes 13, o un día 32:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Validation-example.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Validation-example.png" title="Image 1. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Validation-example.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Validation-example.png" title="Image 1. Example of validation"></a></p>
 <p>En el caso de un campo de texto limitado a 4 caracteres, impedirá que el usuario añada más caracteres.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Character-limit.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Character-limit.png" title="Image 2. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Character-limit.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Character-limit.png" title="Image 2. Example of validation"></a></p>
 <h2 id="basado-en-propiedades-de-control">Basado en propiedades de control<a class="headerlink" href="#basado-en-propiedades-de-control" title="Permanent link">¶</a></h2>
 <h3 id="campo-requerido">Campo Requerido<a class="headerlink" href="#campo-requerido" title="Permanent link">¶</a></h3>
 <p>Esta validación se puede especificar tanto a nivel de base de datos al diseñar nuestras tablas y campos como a nivel de diseño de formularios.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Is-required.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Is-required.png" title="Image 3. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Is-required.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Is-required.png" title="Image 3. Example of validation"></a></p>
 <ul>
 <li><strong>Es Requerido</strong>: Con esta opción será obligatorio que el usuario complete el campo.</li>
 <li><strong>Mensaje de Requerido</strong>: Podemos personalizar el mensaje de validación que aparecerá en el formulario cuando el usuario intente guardar y no haya completado la información requerida.</li>
 </ul>
 <h3 id="valores-minimos-y-maximos">Valores mínimos y máximos<a class="headerlink" href="#valores-minimos-y-maximos" title="Permanent link">¶</a></h3>
 <p>Esta validación se puede utilizar para campos numéricos.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Maximum-value.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Maximum-value.png" title="Image 4. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Maximum-value.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Maximum-value.png" title="Image 4. Example of validation"></a></p>
 <ul>
 <li><strong>Max Value</strong>: In numerical fields we can set a maximum value.</li>
 <li><strong>Max Value Message</strong>: Personalized message that will indicate the user that the value exceeds maximum allowed.</li>
@@ -3420,18 +3422,18 @@
 </ul>
 <h3 id="expresion-regular">Expresión Regular<a class="headerlink" href="#expresion-regular" title="Permanent link">¶</a></h3>
 <p>Podemos establecer una validación del contenido del campo a través de expresiones regulares.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Regular-expression.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Regular-expression.png" title="Image 5. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Regular-expression.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Regular-expression.png" title="Image 5. Example of validation"></a></p>
 <ul>
 <li><strong>Expresión regular</strong>: Expresión regular que verificará el contenido del campo.</li>
 <li><strong>Texto</strong>: Mensaje personalizado para indicar al usuario que el valor ingresado no cumple con las condiciones de la expresión regular.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Regular-example.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Regular-example.png" title="Image 6. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Regular-example.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Regular-example.png" title="Image 6. Example of validation"></a></p>
 <h2 id="validador-de-sentencias-sql">Validador de sentencias SQL<a class="headerlink" href="#validador-de-sentencias-sql" title="Permanent link">¶</a></h2>
 <p>Expresión SQL que debe devolver necesariamente 0 o 1. Si devolvemos 0, indicaremos que el valor no es admitido y si indicamos 1, el valor es admitido.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Sql.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Sql.png" title="Image 7. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Sql.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Sql.png" title="Image 7. Example of validation"></a></p>
 <p>Podemos construir la sentencia SQL utilizando contextVars y propiedades del propio objeto, ya que la plataforma las analizará antes de ejecutar la sentencia. A través de estas frases (tan simples o complejas como necesitemos) notificaremos al usuario que la información no cumple con los criterios definidos. Por otro lado, optimizaremos nuestros procesos, ya que estamos evitando ejecuciones de inserción/actualización o la ejecución de storeds o triggers que devuelven un error o incluso generan bloqueos o transacciones innecesarias.</p>
 <p><em>Ejemplo:</em></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/FormValidators/Sql-example.png" data-desc-position="bottom"><img alt="Example" src="/docs_assets/images/FormValidators/Sql-example.png" title="Image 8. Example of validation"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FormValidators/Sql-example.png" data-desc-position="bottom"><img alt="Example" src="../../../docs_assets/images/FormValidators/Sql-example.png" title="Image 8. Example of validation"></a></p>
 
 
 
@@ -3588,50 +3590,6 @@
       
         <script src="../../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

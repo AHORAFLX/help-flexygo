@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Connectors/AzureADIntegration/">
+      
       
         <link rel="prev" href="../AhoraERP/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../AzureFormRecognizer/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3401,15 +3403,15 @@
 </ol>
 <p class="flx-warning-card">Make sure you have neccesary permitions to create and manage applications.</p>
 <h3 id="tenant-id-client-id">Tenant Id, Client Id<a class="headerlink" href="#tenant-id-client-id" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AzureAdIntegration/ClientTenant.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/AzureAdIntegration/ClientTenant.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AzureAdIntegration/ClientTenant.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/AzureAdIntegration/ClientTenant.png"></a></p>
 <h3 id="client-secret-id">Client Secret Id<a class="headerlink" href="#client-secret-id" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AzureAdIntegration/ClientSecret.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/AzureAdIntegration/ClientSecret.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AzureAdIntegration/ClientSecret.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/AzureAdIntegration/ClientSecret.png"></a></p>
 <h2 id="platform-configurations">Platform configurations<a class="headerlink" href="#platform-configurations" title="Permanent link">¶</a></h2>
 <p>For the correct functionality of Azure AD Integration additional configuration is required: redirect URL, logout URL. Also you can decide if you want to restrict use of your application to accounts in your organizational directory only (single tenant) or accounts in any organizational directorty (multitenant). <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/single-and-multi-tenant-apps">More info</a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AzureAdIntegration/URL.png" data-desc-position="bottom"><img alt="Redirect URL, logout URL" src="/docs_assets/images/AzureAdIntegration/URL.png" title="Image 1. Redirect URL, logout URL"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AzureAdIntegration/URL.png" data-desc-position="bottom"><img alt="Redirect URL, logout URL" src="../../docs_assets/images/AzureAdIntegration/URL.png" title="Image 1. Redirect URL, logout URL"></a></p>
 <h2 id="users-assignment">Users assignment<a class="headerlink" href="#users-assignment" title="Permanent link">¶</a></h2>
 <p>In the case you want to restrict user's access to your <strong>flexygo</strong> application, you can switch the <strong>assignment required</strong> option to <strong>yes</strong>: then users must first be assigned this application before being able to access it. To assign users, enter to Enterprise applications -&gt; choose your <strong>flexygo</strong> app -&gt; Users and groups</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/AzureAdIntegration/Users.png" data-desc-position="bottom"><img alt="Users" src="/docs_assets/images/AzureAdIntegration/Users.png" title="Image 2. Users"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/AzureAdIntegration/Users.png" data-desc-position="bottom"><img alt="Users" src="../../docs_assets/images/AzureAdIntegration/Users.png" title="Image 2. Users"></a></p>
 <h2 id="run-process">Run process<a class="headerlink" href="#run-process" title="Permanent link">¶</a></h2>
 <p>Once you have obtained all required keys and established redirect and logout URLs, you can run the following process:</p>
 <p><flx-navbutton class="button" type="execprocess" processname="pNet_AzureIntegration" showprogress="false">
@@ -3600,50 +3602,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

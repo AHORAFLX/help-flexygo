@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/Trackingconfiguration/">
+      
       
         <link rel="prev" href="../ReturnDataProcess/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../UsefulTokens/">
       
       
-      <link rel="icon" href="../../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3385,12 +3387,12 @@
 <p>Antes de empezar, es importante configurar los dispositivos para permitir que la aplicación rastree la posición de los usuarios mientras está cerrada. Para esto, la aplicación solicitará automáticamente permisos a los usuarios con el seguimiento habilitado, pero la mayoría de los dispositivos necesitarán configuración adicional dependiendo de su marca, por lo que deberías seguir los pasos de <a href="https://dontkillmyapp.com/">dontkillmyapp</a>.</p>
 <h2 id="menu-de-configuracion-de-seguimiento">Menú de configuración de seguimiento<a class="headerlink" href="#menu-de-configuracion-de-seguimiento" title="Permanent link">¶</a></h2>
 <p>Se ha añadido un nuevo botón de seguimiento al menú de creación de aplicaciones, que te llevará al menú de configuración de seguimiento, donde podrás configurar y visualizar cada ajuste de seguimiento:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/TrackingButton.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/TrackingButton.png" title="Image 1. Set tracking"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/TrackingButton.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/TrackingButton.png" title="Image 1. Set tracking"></a></p>
 <p>En este nuevo menú podrás ver esta información en los siguientes módulos:</p>
 <p>Últimas ubicaciones: Muestra la última ubicación conocida de cada usuario, y cuando se hace clic en el marcador, podrás ver cuándo se tomó esa ubicación y el teléfono y correo electrónico del usuario.</p>
 <p>Horario de seguimiento: Muestra cada horario de seguimiento establecido y permite crear más y editar los que ya existen.</p>
 <p>Información de seguimiento del usuario: Muestra cada usuario y su información de configuración de seguimiento (radio e imprecisión) dividida entre usuarios con seguimiento activo y aquellos que no lo tienen. A la derecha de cada usuario habrá un icono que muestra si hay un calendario asignado a él (icono azul) o si no (icono rojo). Si se hace clic, navegarás a esa vista de calendario, o si no tiene calendario, a la creación de un nuevo horario para ese usuario. Por último, si haces clic en el icono verde de mapa (que solo aparece en usuarios configurados correctamente), verás la ruta de ese usuario.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/TrackingCnfMenu.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/TrackingCnfMenu.png" title="Image 2. Set tracking"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/TrackingCnfMenu.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/TrackingCnfMenu.png" title="Image 2. Set tracking"></a></p>
 <h2 id="configurar-el-seguimiento-del-usuario">Configurar el seguimiento del usuario<a class="headerlink" href="#configurar-el-seguimiento-del-usuario" title="Permanent link">¶</a></h2>
 <p>El seguimiento se activa individualmente en cada creación o edición de usuario.</p>
 <p>Allí necesitas activar el interruptor de seguimiento y configurar las siguientes propiedades:</p>
@@ -3399,16 +3401,16 @@
 <p>Cuanto más pequeño sea el parámetro de radio, más datos obtendrá la base de datos, por lo que se recomienda no configurarlo por debajo de 20 para evitar registrar demasiados logs en la base de datos.</p>
 <h3 id="maxima-imprecision">Máxima imprecisión<a class="headerlink" href="#maxima-imprecision" title="Permanent link">¶</a></h3>
 <p>La máxima imprecisión se utiliza para enviar al servidor solo aquellas coordenadas de las que la aplicación sabe que la distancia entre las coordenadas obtenidas y la verdadera posición del usuario es menor que este valor. Este valor es importante para evitar obtener información incorrecta, por lo que se recomienda que el valor no sea inferior a 45.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/SetTracking.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/SetTracking.png" title="Image 3. Set tracking"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/SetTracking.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/SetTracking.png" title="Image 3. Set tracking"></a></p>
 <p>Cuando estos parámetros están configurados y guardados, la aplicación podrá rastrear cada posición todo el tiempo desde la primera iniciación de la aplicación del usuario. Pero esta no es la forma en que esta funcionalidad está destinada a ser utilizada, por eso necesitarás establecer horarios para que la funcionalidad funcione durante las horas laborales indicadas. Para ello, tenemos el objeto Horario de Seguimiento, que se puede ver y crear desde el menú de configuración de seguimiento. Cuando creas uno, solo necesitas seleccionar a quién se aplicará (usuario individual o un rol), establecer un título para que lo identifiques, establecer un horario diario y establecer la vista (que el objeto debe ser sysUsers) que debe contener una columna con cada día festivo del usuario; puede ser tan simple como se muestra en estas dos imágenes.</p>
 <p>Una vez que tengas todo esto configurado, la funcionalidad estará completamente operativa.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/SelectTrackingSchedules.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/SelectTrackingSchedules.png" title="Image 5. Set schedules"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/SetHolidaysView.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/SetHolidaysView.png" title="Image 5. Set holidays"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/SelectTrackingSchedules.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/SelectTrackingSchedules.png" title="Image 5. Set schedules"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/SetHolidaysView.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/SetHolidaysView.png" title="Image 5. Set holidays"></a></p>
 <h2 id="configurar-proceso-de-limpieza-de-datos">Configurar proceso de limpieza de datos<a class="headerlink" href="#configurar-proceso-de-limpieza-de-datos" title="Permanent link">¶</a></h2>
 <p>De forma predeterminada, flexygo tiene un Cronjob llamado ClearLocations que eliminará cada semana los registros de ubicaciones más antiguos de 7 días, que deberás habilitar.</p>
 <p>Este trabajo también se puede editar para que se active en un intervalo de tiempo diferente y puedes modificar su parámetro de días para eliminar registros más antiguos que ese valor.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/SelectTrackingProcess.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/SelectTrackingProcess.png" title="Image 6. Select clear locations process"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/offline/ConfigureClearLocations.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/offline/ConfigureClearLocations.png" title="Image 7. Configure clear locations process"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/SelectTrackingProcess.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/SelectTrackingProcess.png" title="Image 6. Select clear locations process"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/offline/ConfigureClearLocations.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/offline/ConfigureClearLocations.png" title="Image 7. Configure clear locations process"></a></p>
 
 
 
@@ -3556,50 +3558,6 @@
       
         <script src="../../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/es/Connectors/PowerBI/">
+      
       
         <link rel="prev" href="../Passbook/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../PushNotifications/">
       
       
-      <link rel="icon" href="../../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../../" title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3357,7 +3359,7 @@
 
 
 <h1 class="flx-title-with-image" id="integracion-con-power-bi">Integración con Power BI<a class="headerlink" href="#integracion-con-power-bi" title="Permanent link">¶</a></h1>
-<p><img alt="" class="fh-image-of-title" src="/docs_assets/images/PowerBI/PowerBiLogo.png"></p>
+<p><img alt="" class="fh-image-of-title" src="../../../docs_assets/images/PowerBI/PowerBiLogo.png"></p>
 <p>Power BI es un servicio de análisis de datos de Microsoft que ofrece visualizaciones interactivas y capacidades de inteligencia empresarial (BI) con una interfaz lo suficientemente sencilla como para que los usuarios finales puedan crear sus propios informes y paneles.<br>
 <strong>flexygo</strong> permite utilizar Microsoft Power BI para incrustar informes dentro de tus páginas.</p>
 <h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
@@ -3384,7 +3386,7 @@ Después, debes completar cada parámetro:</p>
 <p>Para lograrlo, debemos añadir un nuevo <strong>Role</strong> al documento BI.<br>
 Imaginemos que vamos a pasar el <em>ProviderId</em>.<br>
 Creamos el rol "Provider" y asociamos la condición: <code>[ProviderId] = value(username())</code></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/PowerBI/powerbi1.png" data-desc-position="bottom"><img alt="Power BI" src="/docs_assets/images/PowerBI/powerbi1.png" title="Image 1. Power BI"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/PowerBI/powerbi1.png" data-desc-position="bottom"><img alt="Power BI" src="../../../docs_assets/images/PowerBI/powerbi1.png" title="Image 1. Power BI"></a></p>
 <p>Luego, debemos indicar el role y el username desde nuestra aplicación para que el filtro se aplique automáticamente.<br>
 Para ello se utilizan dos campos de configuración en el registro del informe dentro de flexygo:</p>
 <ul>
@@ -3399,7 +3401,7 @@ Para ello se utilizan dos campos de configuración en el registro del informe de
 </span></code></pre></div>
 <p class="flx-warning-card">Para que esto funcione, <strong>el informe no puede publicarse directamente</strong>.
 Es necesario usar <strong>PowerBI Embedded</strong>, un recurso de Azure disponible en Azure Marketplace (Imagen 2).</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/PowerBI/powerbi2.png" data-desc-position="bottom"><img alt="Azure Marketplace" src="/docs_assets/images/PowerBI/powerbi2.png" title="Image 2. Azure Marketplace"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/PowerBI/powerbi2.png" data-desc-position="bottom"><img alt="Azure Marketplace" src="../../../docs_assets/images/PowerBI/powerbi2.png" title="Image 2. Azure Marketplace"></a></p>
 <h2 id="componente-web-de-power-bi">Componente web de Power BI<a class="headerlink" href="#componente-web-de-power-bi" title="Permanent link">¶</a></h2>
 <p>Una vez configurado todo, ya puedes añadir un módulo HTML a tu página e incluir el componente web de Power BI:</p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">flx-powerbi</span> <span class="na">reportname</span><span class="o">=</span><span class="s">"your report name"</span><span class="p">&gt;&lt;/</span><span class="nt">flx-powerbi</span><span class="p">&gt;</span>
@@ -3527,50 +3529,6 @@ Es necesario usar <strong>PowerBI Embedded</strong>, un recurso de Azure disponi
       
         <script src="../../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">

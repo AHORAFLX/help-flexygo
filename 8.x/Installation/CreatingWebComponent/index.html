@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.flexygo.com/new/8.x/Installation/CreatingWebComponent/">
+      
       
         <link rel="prev" href="../CreatingUnitaryTest/">
       
@@ -12,7 +14,7 @@
         <link rel="next" href="../../Modules/Chart/">
       
       
-      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <link rel="icon" href="../../docs_assets/images/logos/fl-favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -59,7 +61,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/fh-structural/components/fh-namepropagator.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+      <link rel="stylesheet" href="../../docs_assets/fh-structural/fonts/flags/flags.css">
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/main-flexygo-styles.css">
     
@@ -67,9 +69,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/flexygo-styles/list-groups.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/utils.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/utils.css">
     
-      <link rel="stylesheet" href="../../../docs_assets/fonts/flexygo/flexygo.css">
+      <link rel="stylesheet" href="../../docs_assets/fonts/flexygo/flexygo.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -129,7 +131,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
       Docs
     </a>
@@ -258,7 +260,7 @@
                 <div class="flx-sidebarheader">
                   <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
                     
-  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+  <img src="../../docs_assets/images/logos/fl.svg" alt="logo">
 
                     Docs
                   </a>
@@ -3444,12 +3446,12 @@
 <p><fh-namepropagator selector="propagated-projectname" placeholder="AhoraFlexy"></fh-namepropagator></p>
 <h2 id="2-typescript">2. TypeScript<a class="headerlink" href="#2-typescript" title="Permanent link">¶</a></h2>
 <p>We will install the TypeScript 5.0.4 NuGet package, as shown in the screenshot (right-click on the main project &gt; Manage NuGet Packages):</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/2_1.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/2_1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/2_1.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/2_1.png"></a></p>
 <p>Once installed, we will check that the TypeScript configuration of the project matches the one shown in the image (to access the configuration, right-click on the main project &gt; Properties &gt; TypeScript Build):</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/2_2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/2_2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/2_2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/2_2.png"></a></p>
 <h2 id="3-structure-the-project">3. Structure the project<a class="headerlink" href="#3-structure-the-project" title="Permanent link">¶</a></h2>
 <p>Within the project, we will create a folder called <strong>ahoraflexy</strong> to host our project components, and inside it we will generate the structure <strong>controllers</strong>, <strong>plugins</strong>, and <strong>wc</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/3.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/3.png"></a></p>
 <h2 id="4-create-the-webcomponent">4. Create the WebComponent<a class="headerlink" href="#4-create-the-webcomponent" title="Permanent link">¶</a></h2>
 <p>We will add a TS file named <strong>afl-carousel</strong> to our <strong>wc</strong> folder with the following code:</p>
 <div class="language-ts highlight"><span class="filename">TypeScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/**</span>
@@ -3583,8 +3585,8 @@
 </span></code></pre></div>
 <h2 id="6-create-a-new-module">6. Create a new module<a class="headerlink" href="#6-create-a-new-module" title="Permanent link">¶</a></h2>
 <p>We create a new module and include it on the home page.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/6_2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/6_2.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/6_2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/6_2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/6_2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/6_2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/6_2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/6_2.png"></a></p>
 <h2 id="7-prepare-the-databases">7. Prepare the databases<a class="headerlink" href="#7-prepare-the-databases" title="Permanent link">¶</a></h2>
 <p>We create a table to store the image records.</p>
 <p>We add a <strong>Carousel.sql</strong> file in the <strong>dbo/tables</strong> folder of our data model:</p>
@@ -3704,11 +3706,11 @@
 </span></code></pre></div>
 <h2 id="11-test-after-clearing-cache">11. Test after clearing cache<a class="headerlink" href="#11-test-after-clearing-cache" title="Permanent link">¶</a></h2>
 <p>We reload the cache and the page; the result should be as follows:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/11.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/11.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/11.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/11.png"></a></p>
 <h2 id="12-add-data-scripts">12. Add data scripts<a class="headerlink" href="#12-add-data-scripts" title="Permanent link">¶</a></h2>
 <p>We generate the product configuration scripts.</p>
 <p>We delete all files from the <strong>scripts/data</strong> folder of our configuration database.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/12_1.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/12_1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/12_1.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/12_1.png"></a></p>
 <p>If this is the first time working with this database, enable <strong>cmd_shell</strong> by executing the following command:</p>
 <div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">-- To allow advanced options to be changed.</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">EXEC</span><span class="w"> </span><span class="n">sp_configure</span><span class="w"> </span><span class="s1">'show advanced options'</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -3724,14 +3726,14 @@
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="k">GO</span>
 </span></code></pre></div>
 <p>We check the permissions of the <strong>scripts/data</strong> folder:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/12_2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/12_2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/12_2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/12_2.png"></a></p>
 <p>We execute the following script in the database to generate the static data:</p>
 <div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">zscript</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'C:\temp\AhoraFlexy\AhoraFlexyBD\scripts\data'</span>
 </span></code></pre></div>
 <p>We include the new files that have appeared, set their <strong>Build Action</strong> property to <strong>None</strong>, and reference them in the <strong>scripts/Script.PostDeployment.sql</strong> file:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/12_3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/12_3.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/12_4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/12_4.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingWebComponent/12_5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingWebComponent/12_5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/12_3.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/12_3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/12_4.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/12_4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingWebComponent/12_5.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingWebComponent/12_5.png"></a></p>
 <h2 id="13-publish-databases">13. Publish databases<a class="headerlink" href="#13-publish-databases" title="Permanent link">¶</a></h2>
 <p>We publish the database and make sure everything is still working correctly.</p>
 
@@ -3938,50 +3940,6 @@
       
         <script src="../../javascripts/extra.js"></script>
       
-        <script>
-          (function(){
-            /*
-              Purpose: Fix image `src` paths that reference `docs_assets` so they load
-              correctly when the site is served under a subpath (for example `/docs`).
-
-              Notes:
-              - We avoid adding a global <base> tag because that changes resolution
-                for ALL relative assets (CSS/JS) and breaks styles/scripts.
-              - This script only rewrites image `src` attributes and leaves other
-                assets untouched.
-            */
-            try{
-              // Read the MkDocs-injected JSON config to get the site's base path.
-              var cfgEl = document.getElementById('__config');
-              if(!cfgEl) return; // nothing to do if config isn't present
-              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
-              var base = cfg.base || '/';
-              if(!base) base = '/';
-
-              // Normalize to ensure the base ends with a slash.
-              var baseNorm = base.endsWith('/') ? base : base + '/';
-
-              // Iterate images and rewrite only those that reference `docs_assets`.
-              document.querySelectorAll('img').forEach(function(img){
-                var s = img.getAttribute('src');
-                if(!s) return;
-
-                // Skip absolute URLs (http(s)://) and protocol-relative URLs (//).
-                if (/^(https?:)?\/\//.test(s)) return;
-
-                // If the src contains 'docs_assets', build a new src that prefixes the base.
-                var idx = s.indexOf('docs_assets');
-                if(idx !== -1){
-                  var rel = s.substring(idx); // keep everything from 'docs_assets' onward
-                  img.src = baseNorm + rel;
-                }
-              });
-            }catch(e){
-              // Keep page functional even if this fixer fails; provide a console hint.
-              console.warn('fix-images-base error', e);
-            }
-          })();
-        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">
