@@ -3359,7 +3359,7 @@
 
 
 <h1 class="flx-title-with-image" id="integracion-con-redsys">Integración con RedSys<a class="headerlink" href="#integracion-con-redsys" title="Permanent link">¶</a></h1>
-<p><img alt="" class="fh-image-of-title" src="../../docs_assets/images/RedSys/RedSysLogo.png"></p>
+<p><img alt="" class="fh-image-of-title" src="../../../docs_assets/images/RedSys/RedSysLogo.png"></p>
 <p>RedSys es una plataforma segura de pagos virtuales que puedes aplicar en tu e-commerce para ofrecer a tus clientes pagos con tarjeta de crédito y débito de distintos bancos.<br>
 <strong>flexygo</strong> tiene la capacidad de realizar pagos a través de esta plataforma.</p>
 <h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
@@ -3369,14 +3369,14 @@
 <li>Configurar los <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="RedSys_Settings" showprogress="false">ajustes de RedSys</flx-navbutton>.</li>
 <li>Configurar un proceso que se ejecutará cuando se realice el pago. Puede ser un proceso <em>Stored</em> o un proceso <em>DLL</em>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_2.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_2.png" title="Image 1. RedSys configuration"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_3.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_3.png" title="Image 2. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/RedSys/RedSys_2.PNG" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/RedSys/RedSys_2.PNG" title="Image 1. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/RedSys/RedSys_3.PNG" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/RedSys/RedSys_3.PNG" title="Image 2. RedSys configuration"></a></p>
 <p>El proceso puede recibir como parámetros los campos del objeto enviado o el parámetro de respuesta.<br>
 Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nombre <strong>ResponseCode</strong>.</p>
 <ol>
 <li>Después, abre la configuración de RedSys y crea una nueva relación de objeto:</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_1.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_1.png" title="Image 3. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/RedSys/RedSys_1.PNG" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/RedSys/RedSys_1.PNG" title="Image 3. RedSys configuration"></a></p>
 <ul>
 <li><strong>Object Name:</strong> Nombre del objeto a relacionar con RedSys  </li>
 <li><strong>Process Name:</strong> Proceso que se ejecutará al realizar el pago  </li>
@@ -3387,7 +3387,7 @@ Para recibir la respuesta, debes incluir en tu proceso un parámetro con el nomb
 </ul>
 <h2 id="configurar-el-proceso-estandar-de-redsys">Configurar el proceso estándar de RedSys<a class="headerlink" href="#configurar-el-proceso-estandar-de-redsys" title="Permanent link">¶</a></h2>
 <p>Puedes usar el proceso estándar de pago y vincularlo directamente a un objeto:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/RedSys/RedSys_6.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/RedSys/RedSys_6.png" title="Image 4. RedSys configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/RedSys/RedSys_6.PNG" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/RedSys/RedSys_6.PNG" title="Image 4. RedSys configuration"></a></p>
 <p>También puedes generar un nuevo proceso DLL y llamar al proceso estándar de pago (<fh-copy>FLEXYGO.PaymentsProcess.PayRequest</fh-copy>(). Este proceso recibe el objeto como parámetro y, de forma opcional, un campo de cantidad.<br>
 Si no se especifica el campo de cantidad, el importe se obtendrá del campo indicado en la relación del objeto con RedSys.</p>
 <h2 id="log">Log<a class="headerlink" href="#log" title="Permanent link">¶</a></h2>
