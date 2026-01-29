@@ -1,6 +1,6 @@
 # Security { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
+![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 **Flexygo** includes 3 different security levels:
 
@@ -23,7 +23,7 @@ The **All Users** is a container for the rest of groups that enables us to assig
 Security **always applies upwards** that is if a lower group has security the higher group security is overwritten. The same applies if we set the security on a user level and not on a role level. The **user security will always overwrite his role security**.  
 To begin with the examples and more extensive explanations, we will set off dividing in to two parent groups (All Users and Admin).
 
-![](/docs_assets/images/Security/Circles-graph.png)
+![](../docs_assets/images/Security/Circles-graph.png)
 
 ### Admin
 

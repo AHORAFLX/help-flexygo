@@ -12,13 +12,13 @@ Mira el video sobre cómo crear un procedimiento almacenado en el entorno de fle
 
 2.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB.
     
-    ![Stored Procedure Repository](/docs_assets/images/Custom_DLL/ObjectStored.png "Image 1. Stored Procedure Repository")
+    ![Stored Procedure Repository](../docs_assets/images/Custom_DLL/ObjectStored.PNG "Image 1. Stored Procedure Repository")
     
 3.  Si el procedimiento tiene parámetros, insértalos automáticamente usando el menú **Generar parámetros**.
 
 4.  Agrega relación al objeto en Área de Trabajo del Administrador > Gestión de objetos > Lógica.
     
-    ![Stored and Object Relation](/docs_assets/images/Custom_DLL/RelatedObjectStored.png "Image 2. Stored and Object Relation")
+    ![Stored and Object Relation](../docs_assets/images/Custom_DLL/RelatedObjectStored.PNG "Image 2. Stored and Object Relation")
     
 
 ##  Procedimiento Almacenado de Colección
@@ -27,19 +27,19 @@ Mira el video sobre cómo crear un procedimiento almacenado en el entorno de fle
 
 1.  Establecer **Campo Identificador Único** en la configuración del objeto para permitir el proceso de colección. 
     
-    ![Set Unique Identifier Field](/docs_assets/images/Custom_DLL/UniqueIdentifier.png "Image 3. Set Unique Identifier Field")
+    ![Set Unique Identifier Field](../docs_assets/images/Custom_DLL/UniqueIdentifier.PNG "Image 3. Set Unique Identifier Field")
     
 2.  Codificar el procedimiento almacenado en la base de datos. Agrega un parámetro con el nombre @sysCollectionSentence y tipo nvarchar(max) para recibir un SQL con los elementos seleccionados. <fh-modal class="link" modal_id="fhmodal_collection" modal_title="Collection Stored Procedure">Ejemplo</fh-modal>
 
 3.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB. 
     
-    ![Stored Procedure Repository](/docs_assets/images/Custom_DLL/CollectionStored.png "Image 4. Stored Procedure Repository")
+    ![Stored Procedure Repository](../docs_assets/images/Custom_DLL/CollectionStored.PNG "Image 4. Stored Procedure Repository")
     
 4.  Si el procedimiento tiene parámetros, insértalos automáticamente usando el menú **Generar parámetros**.
 
 5.  Agrega relación a la colección en Área de Trabajo del Administrador > Gestión de objetos > Lógica. Si el proceso solo puede ejecutarse con los elementos seleccionados, por favor establece el interruptor en verdadero, de lo contrario el proceso se ejecutará con todos los elementos filtrados en la pantalla actual. 
     
-    ![Stored and Collection Relation](/docs_assets/images/Custom_DLL/RelatedCollectionStored.png "Image 5. Stored and Collection Relation")
+    ![Stored and Collection Relation](../docs_assets/images/Custom_DLL/RelatedCollectionStored.PNG "Image 5. Stored and Collection Relation")
 
 ## Procedimiento Almacenado al Cargar el Objeto o Cambiar la Propiedad
 

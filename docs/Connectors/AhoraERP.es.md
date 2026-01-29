@@ -1,6 +1,6 @@
 # Integración con Ahora ERP { .flx-title-with-image }
 
-![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
+![Ahora ERP](../docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 
 **Flexygo** facilita la integración con **Ahora ERP**. Para ello, pone a un solo clic una serie de procesos que simplifican el desarrollo de soluciones sobre la base de datos de Ahora ERP.
 
@@ -10,7 +10,7 @@
    (ubicado en *Admin Work Area > Security > Users*)  
    de modo que dispongan de desplegables de la tabla **employee** y la tabla **delegation** respectivamente.
     
-    ![Reference and Subreference configuration](/docs_assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
+    ![Reference and Subreference configuration](../docs_assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
     
 2. Activa los objetos especiales para gestionar **Imágenes de Ahora ERP** en lugar de la gestión estándar de imágenes de **flexygo**.  
 3. Activa los objetos especiales para gestionar **Documentos de Ahora ERP** en lugar de la gestión estándar de documentos de **flexygo**.  

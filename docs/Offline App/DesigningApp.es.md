@@ -24,53 +24,53 @@ Puedes crear nuevos objetos desde cero o basarte en objetos existentes.
 En la sección de objetos pulsaremos el botón + (Crear nuevo objeto).  
 Después accederemos al asistente de objetos offline, donde solo asignaremos un nombre, descripción e icono para el objeto y la colección, además del nombre de la tabla o vista en la que se basará. Pulsa el botón Guardar y Continuar para ir al segundo paso.
 
-![New Object](/docs_assets/images/offline/NewObject.png "Image 1. New Object")  
-![New Object](/docs_assets/images/offline/NewObject2.png "Image 2. New Object")
+![New Object](../docs_assets/images/offline/NewObject.png "Image 1. New Object")  
+![New Object](../docs_assets/images/offline/NewObject2.png "Image 2. New Object")
 
 ### Añadir propiedades
 
 Ahora puedes usar el asistente de objetos.
 
-![Wizzard](/docs_assets/images/offline/Wizzard1.png "Image 3. Wizzard")
+![Wizzard](../docs_assets/images/offline/Wizzard1.png "Image 3. Wizzard")
 
 A continuación crearemos y configuraremos cada una de las propiedades del objeto.
 
-![Wizzard](/docs_assets/images/offline/Wizzard2.png "Image 4. Wizzard")
+![Wizzard](../docs_assets/images/offline/Wizzard2.png "Image 4. Wizzard")
 
 Configuración de propiedades.
 
-![Wizzard](/docs_assets/images/offline/Wizzard3.png "Image 5. Wizzard")
+![Wizzard](../docs_assets/images/offline/Wizzard3.png "Image 5. Wizzard")
 
 A diferencia del entorno **flexygo**, en el entorno offline, cuando las propiedades son del tipo combo o dbcombo, tendremos la opción de añadir un objeto o una vista en lugar de establecer una sentencia SQL.
 
-![Wizzard](/docs_assets/images/offline/PropertyCombo.png "Image 6. Property Combo")
+![Wizzard](../docs_assets/images/offline/PropertyCombo.png "Image 6. Property Combo")
 
 ## Ampliar el modelo de datos mediante vistas de objeto
 
 Las vistas de objeto se utilizan para combos desplegables o para ampliar la información que se muestra en las listas de objetos o páginas de vista. Todas estas vistas se crearán como tablas y se enviarán al dispositivo móvil. Solo necesitas rellenar la información principal, la sentencia SQL y guardar.
 
-![Object View](/docs_assets/images/offline/ObjectView.png "Image 7. Object View")
+![Object View](../docs_assets/images/offline/ObjectView.png "Image 7. Object View")
 
 Puedes consultar el esquema de base de datos generado en cualquier momento utilizando el botón de esquema.
 
-![Schema](/docs_assets/images/offline/schema.png "Image 8. Schema")
+![Schema](../docs_assets/images/offline/schema.png "Image 8. Schema")
 
 ## Páginas de objeto
 
 Cabe destacar que la plataforma de desarrollo creará automáticamente las páginas de vista y lista para cada objeto que creemos mediante el asistente. Por lo tanto, podemos usar las plantillas iniciales y rediseñarlas a nuestro gusto, además de añadir nuevas.
 
-![Object Pages](/docs_assets/images/offline/ObjectPages.png "Image 9. Object Pages")
+![Object Pages](../docs_assets/images/offline/ObjectPages.png "Image 9. Object Pages")
 
 Tenemos la opción de editar plantillas existentes o crear nuevas. Solo debemos rellenar las secciones de descripción (nombre, tipo, título), las secciones HTML (cabecera, cuerpo, pie, vacío) y la sentencia SQL en caso de necesitar información adicional a la ofrecida por el propio objeto con sus propiedades.
 
-![Object Pages Edit](/docs_assets/images/offline/ObjectPagesEdit.png "Image 9. Object Pages Edit")
+![Object Pages Edit](../docs_assets/images/offline/ObjectPagesEdit.png "Image 9. Object Pages Edit")
 
 ## Menús de la App
 
 Son los accesos directos a los objetos que vamos a ofrecer en el dispositivo. En la sección de menús tendremos el botón para añadir nuevos menús, además de la posibilidad de editar los existentes. Al crear nuevos menús, en cuanto pulsemos el botón de añadir, se generará un menú genérico que deberemos modificar con la opción Editar.
 
-![Menu](/docs_assets/images/offline/MenuMenu1.png "Image 10. Menu")  
-![Menu](/docs_assets/images/offline/MenuMenu2.png "Image 11. Menu")
+![Menu](../docs_assets/images/offline/MenuMenu1.png "Image 10. Menu")  
+![Menu](../docs_assets/images/offline/MenuMenu2.png "Image 11. Menu")
 
 ## Pasos adicionales
 
@@ -78,7 +78,7 @@ Son los accesos directos a los objetos que vamos a ofrecer en el dispositivo. En
 
 Acceso y diseño de la HomePage de AppOffline.
 
-![Home Page](/docs_assets/images/offline/HomePage.png "Image 12. Home Page")
+![Home Page](../docs_assets/images/offline/HomePage.png "Image 12. Home Page")
 
 ## Añadir JavaScript adicional
 
@@ -86,7 +86,7 @@ Podemos ampliar la funcionalidad creando nuestras propias funciones JS o utiliza
 
 ### Funciones JavaScript propias
 
-![JavaScript function](/docs_assets/images/offline/JS.png "Image 13. JavaScript function")
+![JavaScript function](../docs_assets/images/offline/Js.PNG "Image 13. JavaScript function")
 
 ### Uso de funciones nativas de **flexygo**
 
@@ -94,18 +94,18 @@ Podemos utilizar cualquiera de las funciones nativas integradas en **flexygo**. 
 
 En modo dispositivo > F12 -> Consola > Flexygo + Intro, accedemos a las funciones autodocumentadas:
 
-![Native Functions](/docs_assets/images/offline/NativeFunctions.png "Image 14. Native Functions")
+![Native Functions](../docs_assets/images/offline/Nativefunctions.png "Image 14. Native Functions")
 
 ## Añadir estilos adicionales
 
-![Styles](/docs_assets/images/offline/styles.png "Image 15. Styles")
+![Styles](../docs_assets/images/offline/Styles.PNG "Image 15. Styles")
 
 ## Añadir recursos adicionales
 
-![Files](/docs_assets/images/offline/files.png "Image 16. Files")
+![Files](../docs_assets/images/offline/Files.PNG "Image 16. Files")
 
 ## Añadir un logo
 
 Puedes establecer el logo de la pantalla de inicio de sesión de la app en la configuración miscelánea de flexygo, como se muestra en la imagen.
 
-![Logo](/docs_assets/images/offline/AddLogo.png "Image 17. Logo")
+![Logo](../docs_assets/images/offline/AddLogo.png "Image 17. Logo")

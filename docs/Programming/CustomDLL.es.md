@@ -31,7 +31,7 @@ En algunos casos, es necesario programar funcionalidades que flexygo no tiene. P
 5.   Compilar la DLL personalizada y agregarla a la carpeta ~/custom/bin
 6.   Configurar su proceso dentro de flexygo, visualizar imagen (Imagen 1.) 
     
-![Custom DLL configuration example](/docs_assets/images/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
+![Custom DLL configuration example](../docs_assets/images/Custom_DLL/Custom_DLL.png "Image 1. Custom DLL configuration example")
     
 
 ## C# Personalizado
@@ -40,7 +40,7 @@ Los procesos de C# embebidos sirven para el mismo propósito que los procesos de
 
 Las referencias a bibliotecas y el código del proceso se insertan directamente en el formulario de flexygo (Imagen 2.)
 
-![Custom C# Process in flexygo](/docs_assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
+![Custom C# Process in flexygo](../docs_assets/images/Custom_DLL/CSharpProcess.png "Image 2. Custom C# Process in flexygo")
 
 Cuando guardas tu proceso C# en flexygo, se compila para verificar si hay errores.
 

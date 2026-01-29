@@ -18,7 +18,7 @@ Las importaciones nos permiten transferir información desde archivos al sistema
     *  Deshabilitado: Cuando la importación falla, el archivo importado se almacena en ~/custom/imports/{{ImportId}}.
 
 
-![Import settings](/docs_assets/images/Imports/setting.png "Image 1. Create Import Setting")
+![Import settings](../docs_assets/images/Imports/setting.png "Image 1. Create Import Setting")
 
 ## Excel
 
@@ -28,13 +28,13 @@ La primera fila debe ser los nombres de las columnas, no pueden estar vacías, n
 
 Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas sigue los mismos criterios que las columnas.
 
-![Excel example](/docs_assets/images/Imports/excel.png "Image 2. Excel example")
+![Excel example](../docs_assets/images/Imports/excel.png "Image 2. Excel example")
 
 ## Ejemplo de Proceso
 
 1.  Agregarlo al repositorio de procesos de flexygo en **Área de Trabajo de Administración** > **Lógica y Reglas** > **Procedimientos Almacenados de DB o Dll de Servidor**.
     
-![Create Process](/docs_assets/images/Imports/process.png "Image 3. Create Process")
+![Create Process](../docs_assets/images/Imports/process.png "Image 3. Create Process")
     
 <fh-modal class="button" modal_id="fhmodal_stored" modal_title="Proceso almacenado">Ejemplo Almacenado</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll">Ejemplo DLL</fh-modal>
@@ -46,7 +46,7 @@ Para ejecutar la importación se encuentra en el menú superior Herramientas->Im
 
 En la ventana del proceso aparece un botón para descargar la plantilla del archivo que se ha colocado previamente en la creación de la configuración.
 
-![Process window](/docs_assets/images/Imports/process_window.png "Image 4. Process window")
+![Process window](../docs_assets/images/Imports/process_window.png "Image 4. Process window")
 
 ```sql { #fhmodal_stored }
 CREATE PROCEDURE [dbo].[pImportacion]

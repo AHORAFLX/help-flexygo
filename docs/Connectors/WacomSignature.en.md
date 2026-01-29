@@ -1,5 +1,5 @@
 # Wacom SDK Integration { .flx-title-with-image }
-![Wacom](/docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .fh-image-of-title }
+![Wacom](../docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .fh-image-of-title }
 
 **flexygo** has successfully incorporated the capability to sign with STU tablets in a seamless and user-friendly manner.
 
@@ -18,7 +18,7 @@ Furthermore, it explores the various customizable values that can be configured 
 
 1.  Define a property with **Wacom Signature** type:
     
-    ![Adding a property of Wacom Signature Type](/docs_assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
+    ![Adding a property of Wacom Signature Type](../docs_assets/images/Wacom/first_ss.png "Image 1. Using a Wacom Signature property")
     
 2.  Set Options: You can customize some features of the **Wacom Signature control** in the **Options** field located at the end of the property configuration form  
     
@@ -40,16 +40,16 @@ Furthermore, it explores the various customizable values that can be configured 
 *   **titleText**: You can specify a text to be shown here...
 *   **titleProperty**: You can specify a PropertyName into this property to his value here...
 
-![Title demostration](/docs_assets/images/Wacom/title_demostration.png "Image 2. Title demostration")
+![Title demostration](../docs_assets/images/Wacom/title_demostration.png "Image 2. Title demostration")
 
 *   **nameText**: You can specify a text to be shown here...
 *   **nameProperty**: You can specify a PropertyName into this property to his value here...
 
-![Name demostration](/docs_assets/images/Wacom/name_demostration.png "Image 3. Name demostration")
+![Name demostration](../docs_assets/images/Wacom/name_demostration.png "Image 3. Name demostration")
 
 *   **style**: Within this property, you can define 2 properties **(They only affect upon saving, not in the preview)**
     
     *   **inkColor**: You can define the ink color of the signature
     *   **backgroundColor**: You can define the background of the image genarated with the signature
         
-![Style demostration](/docs_assets/images/Wacom/style_demostration.png "Image 4. Style demostration")
+![Style demostration](../docs_assets/images/Wacom/style_demostration.png "Image 4. Style demostration")

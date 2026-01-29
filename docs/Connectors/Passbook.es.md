@@ -1,6 +1,6 @@
 # Integración con Passbook { .flx-title-with-image }
 
-![Passbook](/docs_assets/images/Passbook/WalletIcon.png){ .fh-image-of-title }
+![Passbook](../docs_assets/images/Passbook/WalletIcon.png){ .fh-image-of-title }
 
 Passbook es el formato utilizado por tarjetas y cupones para integrarse en Apple Wallet.  
 **flexygo** permite ahora generar un passbook de forma sencilla.
@@ -14,23 +14,23 @@ Para obtener el primer certificado solo tenemos que ir a [https://www.apple.com/
 
 Instalamos el certificado y seleccionamos el almacén **“Intermediate Certification Authorities”**.
 
-![](/docs_assets/images/Passbook/passbook1.png "Image 1. Certificate store")
+![](../docs_assets/images/Passbook/passbook1.png "Image 1. Certificate store")
 
 ## Crear Pass Type ID
 
 Accede a [https://developer.apple.com/](https://developer.apple.com/) e inicia sesión con una cuenta de desarrollador.  
 Una vez dentro, entra en **Account** y accede al menú de la izquierda **Certificates, IDs & Profiles**.
 
-![](/docs_assets/images/imagesPassbook/passbook2.png "Image 2. Developer panel")
+![](../docs_assets/images/imagesPassbook/passbook2.png "Image 2. Developer panel")
 
-![](/docs_assets/images/Passbook/passbook3.png "Image 2. Developer panel")
+![](../docs_assets/images/Passbook/passbook3.png "Image 2. Developer panel")
 
 Añadimos un nuevo **Identifier** y elegimos el tipo **Pass Type IDs**, rellenando la información.  
 Es recomendable que el identificador mantenga la estructura `pass.com.x`.
 
-![](/docs_assets/images/Passbook/passbook4.png "Image 3. Pass Type IDs")
+![](../docs_assets/images/Passbook/passbook4.png "Image 3. Pass Type IDs")
 
-![](/docs_assets/images/Passbook/passbook5.png "Image 3. Pass Type IDs")
+![](../docs_assets/images/Passbook/passbook5.png "Image 3. Pass Type IDs")
 
 ## Crear una petición de certificado (CSR)
 
@@ -53,17 +53,17 @@ Al terminar de rellenar la información, se habrán generado dos ficheros en la 
 
 Volvemos al portal de desarrolladores y, desde el menú de certificados, pulsamos **+** para crear un nuevo **Pass Type Id Certificate**.
 
-![](/docs_assets/images/Passbook/passbook6.png "Image 4. Passbook certificate")
+![](../docs_assets/images/Passbook/passbook6.png "Image 4. Passbook certificate")
 
 A continuación, rellenamos el nombre del certificado y elegimos el identificador que hemos creado previamente; aparecerá como opción desplegable.
 Si nos fijamos en el valor del desplegable, coincide con **TeamID.IdentifierPassTypeID**.
 
-![](/docs_assets/images/Passbook/passbook7.png "Image 5. Passbook certificate")
+![](../docs_assets/images/Passbook/passbook7.png "Image 5. Passbook certificate")
 
 En el siguiente paso debemos seleccionar el archivo CSR que generamos antes (`passbook.csr`), lo subimos y continuamos.
 Se mostrará una ventana de resumen con el certificado recién generado, su fecha de caducidad, nombre, tipo, etc.
 
-![](/docs_assets/images/Passbook/passbook8.png "Image 6. Certificate request")
+![](../docs_assets/images/Passbook/passbook8.png "Image 6. Certificate request")
 
 ## Convertir el certificado pass.cer a PEM y luego a PFX
 
@@ -92,9 +92,9 @@ Botón derecho, **All Tasks → Import**, siguiente, y al examinar el archivo ca
 En el siguiente paso introducimos la contraseña de la clave privada, marcamos la opción de exportable e incluimos todas las propiedades extendidas.
 Lo añadimos al almacén **Personal**.
 
-![](/docs_assets/images/Passbook/passbook9.png "Image 7. Import PFX certificate")
+![](../docs_assets/images/Passbook/passbook9.png "Image 7. Import PFX certificate")
 
-![](/docs_assets/images/Passbook/passbook10.png "Image 7. Import PFX certificate")
+![](../docs_assets/images/Passbook/passbook10.png "Image 7. Import PFX certificate")
 
 Con esto tendremos instalados los certificados necesarios para poder generar Passbook desde **flexygo**.
 Es importante que tanto el archivo `passbook.pfx` como `AppleWWDRCAG4.cer` estén en una carpeta accesible para la aplicación.
@@ -104,13 +104,13 @@ También es importante que, desde la consola, una vez importado el certificado e
 * Botón derecho → All Tasks → Manage Private Keys
 * Añadimos **IIS_IUSRS** y le damos permisos.
 
-![](/docs_assets/images/Passbook/passbook11.png "Image 8. Certificate management")
+![](../docs_assets/images/Passbook/passbook11.png "Image 8. Certificate management")
 
 Es necesario también tener configurado el **impersonate**, ya que la generación del passbook hace uso de él.
 
 Si, aun habiendo dado permisos a **IIS_IUSRS** y usando un usuario de impersonation con permisos elevados, sigue dando error de permisos al generar el passbook, será necesario modificar la identidad del Application Pool a **LocalSystem**.
 
-![](/docs_assets/images/Passbook/passbook12.png "Image 8. IIS configuration")
+![](../docs_assets/images/Passbook/passbook12.PNG "Image 8. IIS configuration")
 
 ## Configuración en flexygo
 
@@ -129,9 +129,9 @@ Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en
 
 ## Ejemplo de diseño y layout
 
-![](/docs_assets/images/Passbook/passbook14.png "Image 10. Layout example")
+![](../docs_assets/images/Passbook/passbook14.PNG "Image 10. Layout example")
 
-![](/docs_assets/images/Passbook/passbook13.png "Image 11. Passbook example")
+![](../docs_assets/images/Passbook/passbook13.PNG "Image 11. Passbook example")
 
 ```vbnet { #fhmodal_dll_example }
 Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean

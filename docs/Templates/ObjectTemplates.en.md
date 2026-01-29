@@ -2,7 +2,7 @@
 
 Flexygo modules like lists or views normally include a change template button . This button allows us to switch different forms of displaying the module allowing each user to establish which view is best for him setting this one such as default template. Each view for each module is memorized just by selecting it.
 
-![template](/docs_assets/images/ObjectsTemplates/Toolbar.png)
+![template](../docs_assets/images/ObjectsTemplates/Toolbar.png)
 
 ## List Templates
 
@@ -61,12 +61,12 @@ Templates can also include specific strings for displaying diferent types of but
 
 Sometimes you need to nest templates for a more complex display:
 
-![template](/docs_assets/images/ObjectsTemplates/Groups.png)
+![template](../docs_assets/images/ObjectsTemplates/Groups.png)
 
 You can achieve this by using as many template groups as you may need. For the sample above we used:
 
-![template](/docs_assets/images/ObjectsTemplates/Groups-examples.png)
+![template](../docs_assets/images/ObjectsTemplates/Groups-examples.png)
 
 After creating the groups you can include the following markup in your template header.
 
-![template](/docs_assets/images/ObjectsTemplates/Groups-config.png)
+![template](../docs_assets/images/ObjectsTemplates/groups-config.png)

@@ -4,7 +4,7 @@
 
 ## Elementos de formulario por defecto
 
-![](/docs_assets/images/Controls/Default.png "Por defecto")
+![](../docs_assets/images/Controls/Default.PNG "Por defecto")
 ```html
 <flx-text type="text" name="mytext" placeholder="Campo de texto" required requiredmessage="Debe introducir un texto válido"></flx-text>
 ````
@@ -27,7 +27,7 @@
 
 ## Números y fechas
 
-![](/docs_assets/images/Controls/NumbersAndDates.png "Números y fechas")
+![](../docs_assets/images/Controls/NumbersAndDates.PNG "Números y fechas")
 
 ```html
 <flx-text type="date" name="date" placeholder="Campo de fecha" required requiredmessage="Debe introducir una fecha válida"></flx-text>
@@ -51,7 +51,7 @@
 
 ## Campos especiales
 
-![](/docs_assets/images/Controls/Special.png "Especiales")
+![](../docs_assets/images/Controls/Special.PNG "Especiales")
 
 ```html
 <flx-text type="tel" iconclass="flx-icon icon-phone" name="telephone" placeholder="Número de teléfono" required requiredmessage="Debe introducir un teléfono"></flx-text>
@@ -79,7 +79,7 @@
 
 ## Editores de código
 
-![](/docs_assets/images/Controls/Code.png "Código")
+![](../docs_assets/images/Controls/Code.PNG "Código")
 
 Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlcode, javacode o sqlcode. El flx-code se ajusta al tamaño del div que lo contiene.
 
@@ -89,7 +89,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Casillas de verificación y botones de opción
 
-![](/docs_assets/images/Controls/Checkbox.png "Casillas de verificación")
+![](../docs_assets/images/Controls/Checkbox.PNG "Casillas de verificación")
 
 ```html
 <label class="control-label txt-outstanding">Checkbox 1</label><br>
@@ -109,7 +109,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 <flx-check name="check3" checked></flx-check>
 ```
 
-![](/docs_assets/images/Controls/Radio.png "Botones de opción")
+![](../docs_assets/images/Controls/Radio.PNG "Botones de opción")
 
 ```html
 <flx-radio name="radio1" class="txt-outstanding">
@@ -127,7 +127,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 </flx-radio>
 ```
 
-![](/docs_assets/images/Controls/MultiSelectRadio.png "Radio multiselección")
+![](../docs_assets/images/Controls/MultiSelectRadio.png "Radio multiselección")
 
 ```html
 <flx-radio name="radio1" class="txt-warning" multiple separator=";" value="1;2">
@@ -147,7 +147,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Checkbox anulable (tres estados)
 
-![](/docs_assets/images/Controls/Nullable.png "Checkbox anulable")
+![](../docs_assets/images/Controls/Nullable.PNG "Checkbox anulable")
 
 ```html
 <label class="control-label txt-outstanding">Checkbox anulable</label><br>
@@ -156,7 +156,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Interruptores
 
-![](/docs_assets/images/Controls/Switch.png "Interruptores")
+![](../docs_assets/images/Controls/Switch.PNG "Interruptores")
 
 ```html
 <flx-switch></flx-switch>
@@ -174,7 +174,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Selector de base de datos (DB Select)
 
-![](/docs_assets/images/Controls/DBSelect.png "Selector BD")
+![](../docs_assets/images/Controls/DBSelect.PNG "Selector BD")
 
 ```html
 <flx-dbcombo ObjectName="sysObject" PlaceHolder="Seleccionar icono" iconclass="flx-icon icon-object" ViewName="iconsView" SQLValueField="IconName" SQLDisplayField="IconName" additionalWhere="" required requiredmessage="Debe introducir un teléfono"></flx-dbcombo>
@@ -211,7 +211,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Multiselección de base de datos (DB Multi Select)
 
-![](/docs_assets/images/Controls/DBMultiSelect.png "DB MultiSelect")
+![](../docs_assets/images/Controls/DBMultiSelect.PNG "DB MultiSelect")
 
 ```html
 <flx-multicombo ObjectName="sysObject" additionalWhere="" PlaceHolder="Seleccionar icono" iconclass="flx-icon icon-icons" ViewName="iconsView" SQLValueField="IconName" SQLDisplayField="IconName" required requiredmessage="Debe introducir un email válido">
@@ -223,7 +223,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Selección múltiple
 
-![](/docs_assets/images/Controls/MultiSelect.png "Selección múltiple")
+![](../docs_assets/images/Controls/MultiSelect.PNG "Selección múltiple")
 
 ```html
 <flx-combo name="m-1" multiple separator=";" required requiredmessage="Debe introducir un texto válido" value="Ámsterdam;Baltimore">
@@ -235,7 +235,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Etiquetas
 
-![](/docs_assets/images/Controls/Tags.png "Etiquetas")
+![](../docs_assets/images/Controls/Tags.PNG "Etiquetas")
 
 ```html
 <flx-tag name="tag-1" separator=";" required requiredmessage="Debe introducir un texto válido" value="Framework;Flexygo;Freeware"></flx-tag>
@@ -255,7 +255,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Estados de entrada
 
-![](/docs_assets/images/Controls/InputStates.png "Estados de entrada")
+![](../docs_assets/images/Controls/InputStates.PNG "Estados de entrada")
 
 ```html
 <flx-text type="text" iconclass="flx-icon icon-warning" name="warning" placeholder=".has-warning" required requiredmessage="Debe introducir un texto"></flx-text>
@@ -271,7 +271,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Tamaños de entrada
 
-![](/docs_assets/images/Controls/InputSizes.png "Tamaños de entrada")
+![](../docs_assets/images/Controls/InputSizes.PNG "Tamaños de entrada")
 
 ```html
 <flx-text class="size-xs" type="text" name="mytext" placeholder=".size-xs" required requiredmessage="Debe introducir un texto válido"></flx-text>
@@ -285,7 +285,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Editor HTML
 
-![](/docs_assets/images/Controls/HTMLEditor.png "Editor HTML")
+![](../docs_assets/images/Controls/HTMLEditor.PNG "Editor HTML")
 
 El módulo Editor HTML utiliza el componente web flx-htmledit. Puede añadir su Editor HTML referenciando el módulo Editor HTML.
 
@@ -295,7 +295,7 @@ El módulo Editor HTML utiliza el componente web flx-htmledit. Puede añadir su 
 
 ## Imagen
 
-![](/docs_assets/images/Controls/Image.png "Imagen")
+![](../docs_assets/images/Controls/Image.PNG "Imagen")
 
 ```html
 <flx-image TypeMode="file" rootpath="~/ruta/"></flx-image>
@@ -307,7 +307,7 @@ El módulo Editor HTML utiliza el componente web flx-htmledit. Puede añadir su 
 
 ## Subida de archivos
 
-![](/docs_assets/images/Controls/Upload.png "Subida")
+![](../docs_assets/images/Controls/Upload.PNG "Subida")
 
 ```html
 <flx-upload Type="file" rootpath="~/ruta/"></flx-upload>
@@ -322,8 +322,8 @@ Uso de dependencias para cambiar el tipo de control de una propiedad dependiente
 
 * **Establecer control personalizado según los valores de la propiedad padre**: Primero elegirá los valores para los cuales cambiará la propiedad dependiente y, en el combo, seleccionará el control personalizado correspondiente.
 
-![](/docs_assets/images/Controls/CustomContDepValues.png "Tamaños de entrada")
+![](../docs_assets/images/Controls/CustomContDepValues.png "Tamaños de entrada")
 
 * **Establecer el control personalizado mediante una sentencia SQL**: En este caso, será la sentencia SQL la que establezca el control personalizado de la propiedad dependiente. La sentencia SQL debe devolver el nombre del control personalizado.
 
-![](/docs_assets/images/Controls/CustomContDepSelect.png "Tamaños de entrada")
+![](../docs_assets/images/Controls/CustomContDepSelect.png "Tamaños de entrada")

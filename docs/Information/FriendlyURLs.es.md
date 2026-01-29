@@ -1,6 +1,6 @@
 # URLs amigables { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
+![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 ## Configuration
 
@@ -9,7 +9,7 @@ Es importante tener en cuenta que esta configuración se aplica únicamente al *
 
 Los objetos que no tengan el interruptor de Friendly URL activo **no serán redirigidos** cuando se acceda mediante una de estas URLs.
 
-![URLs amigables configuration](/docs_assets/images/Information/FriendlyURLs.png "Image 1. Reference and Subreference configuration")
+![URLs amigables configuration](../docs_assets/images/Information/FriendlyURLs.png "Image 1. Reference and Subreference configuration")
 
 ## URL Structure
 

@@ -1,6 +1,6 @@
 # Integración con Power BI { .flx-title-with-image }
 
-![](/docs_assets/images/PowerBI/PowerBiLogo.png){ .fh-image-of-title }
+![](../docs_assets/images/PowerBI/PowerBiLogo.png){ .fh-image-of-title }
 
 Power BI es un servicio de análisis de datos de Microsoft que ofrece visualizaciones interactivas y capacidades de inteligencia empresarial (BI) con una interfaz lo suficientemente sencilla como para que los usuarios finales puedan crear sus propios informes y paneles.  
 **flexygo** permite utilizar Microsoft Power BI para incrustar informes dentro de tus páginas.
@@ -36,7 +36,7 @@ Para lograrlo, debemos añadir un nuevo **Role** al documento BI.
 Imaginemos que vamos a pasar el *ProviderId*.  
 Creamos el rol "Provider" y asociamos la condición: `[ProviderId] = value(username())`
 
-![Power BI](/docs_assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
+![Power BI](../docs_assets/images/PowerBI/powerbi1.png "Image 1. Power BI")
 
 Luego, debemos indicar el role y el username desde nuestra aplicación para que el filtro se aplique automáticamente.  
 Para ello se utilizan dos campos de configuración en el registro del informe dentro de flexygo:
@@ -57,7 +57,7 @@ Para que esto funcione, **el informe no puede publicarse directamente**.
 Es necesario usar **PowerBI Embedded**, un recurso de Azure disponible en Azure Marketplace (Imagen 2).
 {: .flx-warning-card }
 
-![Azure Marketplace](/docs_assets/images/PowerBI/powerbi2.png "Image 2. Azure Marketplace")
+![Azure Marketplace](../docs_assets/images/PowerBI/powerbi2.png "Image 2. Azure Marketplace")
 
 ## Componente web de Power BI
 

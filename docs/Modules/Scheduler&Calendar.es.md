@@ -2,11 +2,11 @@
 
 Consulta cómo utilizar el componente web Scheduler y Calendar. Con Scheduler y Calendar es posible usar la misma configuración y obtener distintas visualizaciones.
 
-![](/docs_assets/images/Scheduller/Calendar_2.jpg "Imagen 1. Calendario")
+![](../docs_assets/images/Scheduller/Calendar_2.jpg "Imagen 1. Calendario")
 
 ## Configuración de Scheduler y Calendar
 
-![](/docs_assets/images/Scheduller/Scheduller_conf.png "Imagen 2. Configuración del Calendario")
+![](../docs_assets/images/Scheduller/Scheduller_conf.PNG "Imagen 2. Configuración del Calendario")
 
 | DESCRIPCIÓN | ¿QUÉ SIGNIFICAN LOS PARÁMETROS? |
 | --- | --- |
@@ -29,7 +29,7 @@ Consulta cómo utilizar el componente web Scheduler y Calendar. Con Scheduler y 
 
 ## Cómo asociar objetos a un calendario ya creado
 
-![](/docs_assets/images/Scheduller/Scheduller_conf_objt.PNG "Imagen 2. Configuración del Objeto del Scheduler")
+![](../docs_assets/images/Scheduller/Scheduller_conf_objt.PNG "Imagen 2. Configuración del Objeto del Scheduler")
 
 | DESCRIPCIÓN | ¿QUÉ SIGNIFICAN LOS PARÁMETROS? |
 | --- | --- |
@@ -63,6 +63,6 @@ Este parámetro puede usar los valores por defecto de la página.
 Ejemplo : initialDate='20240110' El formato de la fecha indicada debe ser **YYYYMMDD**
 {: .flx-warning-card }
 
-![](/docs_assets/images/Scheduller/Scheduller_ModParam.PNG "Imagen 3. Configuración del Scheduler")
+![](../docs_assets/images/Scheduller/Scheduller_ModParam.png "Imagen 3. Configuración del Scheduler")
 
-![](/docs_assets/images/Scheduller/ViewObjt_Action.PNG)
+![](../docs_assets/images/Scheduller/ViewObjt_Action.PNG)

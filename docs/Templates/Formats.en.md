@@ -310,7 +310,7 @@ When we have a form, we can indicate that number of characters we want to enter 
 <flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "99-999-99-99"/><span class = "input-group-addon"><i class = "flx-icon icon-phone" </i></span></flx-text>
 ```
 
-![Phone](/docs_assets/images/Formats/Phone.png "Phone")
+![Phone](../docs_assets/images/Formats/Phone.png "Phone")
 
 ### Phone + Extension
 
@@ -318,7 +318,7 @@ When we have a form, we can indicate that number of characters we want to enter 
 <flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone"></i></span></flx-text>
 ```
 
-![Phone + Ext](/docs_assets/images/Formats/PhoneExtension.png "Phone + Ext")
+![Phone + Ext](../docs_assets/images/Formats/PhoneExtension.png "Phone + Ext")
 
 ### Email
 
@@ -326,7 +326,7 @@ When we have a form, we can indicate that number of characters we want to enter 
 <flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web"></i></span></flx-text>
 ```
 
-![Email](/docs_assets/images/Formats/Email.png "Email")
+![Email](../docs_assets/images/Formats/Email.png "Email")
 
 ### Product key
 
@@ -334,7 +334,7 @@ When we have a form, we can indicate that number of characters we want to enter 
 <flx-text name = "productKey" placeholder = "flx Key Field" iconclass = "flx-icon icon-key" Mask = "a*-999-a999"/>
 ```
 
-![ProductKey](/docs_assets/images/Formats/ProductKey.png "Product Key")
+![ProductKey](../docs_assets/images/Formats/ProductKey.png "Product Key")
 
 ## File Linking
 

@@ -19,7 +19,7 @@ With <fh-copy>flexygo.nav.goAI</fh-copy> this function you will be able of navig
 | defaults? | string | The defaults for the assistant to parse in its system prompt |
 | is_first_message_by_mic? | bool | This is an internal parameter that should not be altered |
 
-![Go AI](/docs_assets/images/offline/GoAi.png "Image 1. Go AI")
+![Go AI](../docs_assets/images/offline/GoAI.png "Image 1. Go AI")
 
 ## Starting with voice reconition
 
@@ -34,7 +34,7 @@ The voice recognition will stop after a moment of silence, and it will automatic
 | setting_id | string | Thee assitant Id of the one you want to navigate to |
 | defaults? | string | The defaults for the assistant to parse in its system prompt |
 
-![Voice Recognition](/docs_assets/images/offline/VoiceRecognition.png "Image 2. Voice Recognition")
+![Voice Recognition](../docs_assets/images/offline/VoiceRecognition.png "Image 2. Voice Recognition")
 
 ## Text to speech
 

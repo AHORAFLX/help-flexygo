@@ -14,24 +14,24 @@ Publicaremos el proyecto principal en una carpeta publish dentro de cualquier di
 
 Una vez publicado copiaremos a esta carpeta Publish la carpeta Scripts que se ubica en el proyecto principal si la tuviera.
   
-![](/docs_assets/images/Installation/CreatingNugetPackages/2.png)
+![](../docs_assets/images/Installation/CreatingNugetPackages/2.png)
 
 ## 3. Publicación <span class="propagated-projectname"></span>BD
 Publicaremos el proyecto de BBDD de configuración y copiaremos el dacpac resultante en la carpeta **publish\\db**
 
-![](/docs_assets/images/Installation/CreatingNugetPackages/3.png)
+![](../docs_assets/images/Installation/CreatingNugetPackages/3.png)
 
 ## 4. Utilidades NuGet
 
 Descargar el fichero [nuget.zip](./readme/utils/nuget.zip) y extraer al mismo nivel que la carpeta publish (según el ejemplo c:\\Temp)
 
-![](/docs_assets/images/Installation/CreatingNugetPackages/4.png)
+![](../docs_assets/images/Installation/CreatingNugetPackages/4.png)
 
 ## 5. Fichero config.nuspec
 
 Editar el fichero **config.nuspec** para adaptar los valores a nuestro proyecto.
 
-![](/docs_assets/images/Installation/CreatingNugetPackages/5.png)
+![](../docs_assets/images/Installation/CreatingNugetPackages/5.png)
 
 ## 6. Generar paquete NuGet
 
@@ -41,11 +41,11 @@ Abriremos una ventana de comandos y ejecutaremos la siguiente instrucción:
 nuget pack config.nuspec
 ```
 
-![](/docs_assets/images/Installation/CreatingNugetPackages/6.png)
+![](../docs_assets/images/Installation/CreatingNugetPackages/6.png)
 
 ## 7. Instalación
 
 Copiaremos el fichero nupkg a una carpeta junto al instalable del [flexygo](https://docs.flexygo.com/Setup/FlexyGoInstaller.zip), este nos detectará que existe un paquete distinto a flexygo y nos preguntará si deseamos instalarlo en su lugar.  
 Tras ello seguiremos los pasos habituales y si todo ha funcionado correctamente tendremos nuestro producto instalado.
 
-![](/docs_assets/images/Installation/CreatingNugetPackages/7.png)
+![](../docs_assets/images/Installation/CreatingNugetPackages/7.png)

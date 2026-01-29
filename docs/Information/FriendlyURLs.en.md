@@ -1,6 +1,6 @@
 # Friendly URLs { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
+![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 ## Configuration
 
@@ -8,7 +8,7 @@ Configuring Friendly URLs in **flexygo** is as easy as accessing the object conf
 
 Objects with no Friendly URL switch active will **not get redirected** when using one of this URLs.
 
-![Friendly URLs configuration](/docs_assets/images/Information/FriendlyURLs.png "Image 1. Reference and Subreference configuration")
+![Friendly URLs configuration](../docs_assets/images/Information/FriendlyURLs.png "Image 1. Reference and Subreference configuration")
 
 ## URL Structure
 

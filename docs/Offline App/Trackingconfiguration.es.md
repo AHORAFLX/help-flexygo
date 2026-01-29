@@ -8,7 +8,7 @@ Antes de empezar, es importante configurar los dispositivos para permitir que la
 
 Se ha añadido un nuevo botón de seguimiento al menú de creación de aplicaciones, que te llevará al menú de configuración de seguimiento, donde podrás configurar y visualizar cada ajuste de seguimiento:
 
-![](/docs_assets/images/offline/TrackingButton.png "Image 1. Set tracking")
+![](../docs_assets/images/offline/TrackingButton.png "Image 1. Set tracking")
 
 En este nuevo menú podrás ver esta información en los siguientes módulos:
 
@@ -18,7 +18,7 @@ Horario de seguimiento: Muestra cada horario de seguimiento establecido y permit
 
 Información de seguimiento del usuario: Muestra cada usuario y su información de configuración de seguimiento (radio e imprecisión) dividida entre usuarios con seguimiento activo y aquellos que no lo tienen. A la derecha de cada usuario habrá un icono que muestra si hay un calendario asignado a él (icono azul) o si no (icono rojo). Si se hace clic, navegarás a esa vista de calendario, o si no tiene calendario, a la creación de un nuevo horario para ese usuario. Por último, si haces clic en el icono verde de mapa (que solo aparece en usuarios configurados correctamente), verás la ruta de ese usuario.
 
-![](/docs_assets/images/offline/TrackingCnfMenu.png "Image 2. Set tracking")
+![](../docs_assets/images/offline/TrackingCnfMenu.png "Image 2. Set tracking")
 
 ## Configurar el seguimiento del usuario
 
@@ -36,15 +36,15 @@ Cuanto más pequeño sea el parámetro de radio, más datos obtendrá la base de
 
 La máxima imprecisión se utiliza para enviar al servidor solo aquellas coordenadas de las que la aplicación sabe que la distancia entre las coordenadas obtenidas y la verdadera posición del usuario es menor que este valor. Este valor es importante para evitar obtener información incorrecta, por lo que se recomienda que el valor no sea inferior a 45.
 
-![](/docs_assets/images/offline/SetTracking.png "Image 3. Set tracking")
+![](../docs_assets/images/offline/SetTracking.png "Image 3. Set tracking")
 
 Cuando estos parámetros están configurados y guardados, la aplicación podrá rastrear cada posición todo el tiempo desde la primera iniciación de la aplicación del usuario. Pero esta no es la forma en que esta funcionalidad está destinada a ser utilizada, por eso necesitarás establecer horarios para que la funcionalidad funcione durante las horas laborales indicadas. Para ello, tenemos el objeto Horario de Seguimiento, que se puede ver y crear desde el menú de configuración de seguimiento. Cuando creas uno, solo necesitas seleccionar a quién se aplicará (usuario individual o un rol), establecer un título para que lo identifiques, establecer un horario diario y establecer la vista (que el objeto debe ser sysUsers) que debe contener una columna con cada día festivo del usuario; puede ser tan simple como se muestra en estas dos imágenes.
 
 Una vez que tengas todo esto configurado, la funcionalidad estará completamente operativa.
 
-![](/docs_assets/images/offline/SelectTrackingSchedules.png "Image 5. Set schedules")
+![](../docs_assets/images/offline/SelectTrackingSchedules.png "Image 5. Set schedules")
 
-![](/docs_assets/images/offline/SetHolidaysView.png "Image 5. Set holidays")
+![](../docs_assets/images/offline/SetHolidaysView.png "Image 5. Set holidays")
 
 ## Configurar proceso de limpieza de datos
 
@@ -52,6 +52,6 @@ De forma predeterminada, flexygo tiene un Cronjob llamado ClearLocations que eli
 
 Este trabajo también se puede editar para que se active en un intervalo de tiempo diferente y puedes modificar su parámetro de días para eliminar registros más antiguos que ese valor.
 
-![](/docs_assets/images/offline/SelectTrackingProcess.png "Image 6. Select clear locations process")
+![](../docs_assets/images/offline/SelectTrackingProcess.png "Image 6. Select clear locations process")
 
-![](/docs_assets/images/offline/ConfigureClearLocations.png "Image 7. Configure clear locations process")
+![](../docs_assets/images/offline/ConfigureClearLocations.png "Image 7. Configure clear locations process")

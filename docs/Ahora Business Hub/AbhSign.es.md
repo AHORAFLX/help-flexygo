@@ -19,7 +19,7 @@ Puedes contratar el servicio de cualquiera de las siguientes formas:
 
 ## Configurar Firma Abh
 
-![Firma Abh configuration](/docs_assets/images/AbhSign/AbhSignSettings.png "Firma Abh configuration")
+![Firma Abh configuration](../docs_assets/images/AbhSign/AbhSignSettings.png "Firma Abh configuration")
 
 **Nombre objeto:** Objeto al que queremos habilitar Firma Abh.
 
@@ -48,7 +48,7 @@ Puedes contratar el servicio de cualquiera de las siguientes formas:
 
 Una vez configurado, se habilita un módulo para seleccionar los informes que queremos enviar a firmar.
 
-![Firma Abh reports configuration](/docs_assets/images/AbhSign/AbhSignReports.png "Firma Abh reports configuration")
+![Firma Abh reports configuration](../docs_assets/images/AbhSign/AbhSignReports.png "Firma Abh reports configuration")
 
 **Tipo:** Permite configurar por informe o por gestión documental.
 
@@ -63,7 +63,7 @@ Si la categoría está vacía, la configuración aplica a todos los documentos d
 Para indicar **dónde se debe firmar en el documento**, existe un asistente disponible en la barra de herramientas.  
 Permite cargar un PDF de ejemplo y dibujar la posición de la firma.
 
-![Signing assistant](/docs_assets/images/AbhSign/SelectSign.png "Signing assistant")
+![Signing assistant](../docs_assets/images/AbhSign/SelectSign.png "Signing assistant")
 
 ## Procesos
 
@@ -75,4 +75,4 @@ Además, se añade un **cron job cada 30 minutos** que:
 2. Si lo está, lo recoge y lo inserta en la gestión documental.  
 3. Ejecuta el *After Process* si existe.
 
-![Firma Abh operation](/docs_assets/images/AbhSign/AbhSignOperation.png "Firma Abh operation")
+![Firma Abh operation](../docs_assets/images/AbhSign/AbhSignOperation.png "Firma Abh operation")

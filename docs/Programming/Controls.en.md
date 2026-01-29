@@ -4,7 +4,7 @@
 
 ## Default Form Elements
 
-![](/docs_assets/images/Controls/Default.png "Defaults")
+![](../docs_assets/images/Controls/Default.PNG "Defaults")
 ```html
 <flx-text type="text" name="mytext" placeholder="Text Field" required requiredmessage="You must enter a valid text"></flx-text>
 ```
@@ -27,7 +27,7 @@
 
 ## Numbers an Dates
 
-![](/docs_assets/images/Controls/NumbersAndDates.png "Numbers and dates")
+![](../docs_assets/images/Controls/NumbersAndDates.PNG "Numbers and dates")
 
 ```html
 <flx-text type="date" name="date" placeholder="Date Field" required requiredmessage="You must enter a valid date"></flx-text>
@@ -51,7 +51,7 @@
 
 ## Special fields
 
-![](/docs_assets/images/Controls/Special.png "Special")
+![](../docs_assets/images/Controls/Special.PNG "Special")
 
 
 ```html
@@ -80,7 +80,7 @@
 
 ## Code Editors
 
-![](/docs_assets/images/Controls/Code.png "Code")
+![](../docs_assets/images/Controls/Code.PNG "Code")
 
 Use the flx-code editor in any of these three established types htmlcode, javacode or sqlcode. The flx-code ajusts to div size containing it.
 
@@ -90,7 +90,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Checkbox & Radio buttons
 
-![](/docs_assets/images/Controls/Checkbox.png "Checkboxes")
+![](../docs_assets/images/Controls/Checkbox.PNG "Checkboxes")
 
 ```html
 <label class="control-label txt-outstanding" >Checkbox 1</label><br>
@@ -110,7 +110,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 <flx-check name="check3" checked></flx-check>
 ```
 
-![](/docs_assets/images/Controls/Radio.png "Radio buttons")
+![](../docs_assets/images/Controls/Radio.PNG "Radio buttons")
 
 ```html
 <flx-radio name="radio1" class="txt-outstanding" >
@@ -128,7 +128,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 </flx-radio>
 ```
 
-![](/docs_assets/images/Controls/MultiSelectRadio.png "Multi select radio")
+![](../docs_assets/images/Controls/MultiSelectRadio.png "Multi select radio")
 
 ```html
 <flx-radio name="radio1" class="txt-warning" multiple separator=";" value="1;2">
@@ -148,7 +148,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Nullable Checkbox (Three State)
 
-![](/docs_assets/images/Controls/Nullable.png "Nullable Checkbox")
+![](../docs_assets/images/Controls/Nullable.PNG "Nullable Checkbox")
 
 ```html
 <label class="control-label txt-outstanding" >Nullable Checkbox</label><br>
@@ -157,7 +157,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Switches
 
-![](/docs_assets/images/Controls/Switch.png "Switches")
+![](../docs_assets/images/Controls/Switch.PNG "Switches")
 
 ```html
 <flx-switch></flx-switch>
@@ -175,7 +175,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## DB Select
 
-![](/docs_assets/images/Controls/DBSelect.png "DB Select")
+![](../docs_assets/images/Controls/DBSelect.PNG "DB Select")
 
 ```html
 <flx-dbcombo ObjectName="sysObject"  PlaceHolder="Select icon" iconclass="flx-icon icon-object" ViewName="iconsView" SQLValueField="IconName" SQLDisplayField="IconName" additionalWhere="" required requiredmessage="You must enter a telphone"></flx-dbcombo>
@@ -212,7 +212,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## DB Multi Select
 
-![](/docs_assets/images/Controls/DBMultiSelect.png "DBMultiSelect")
+![](../docs_assets/images/Controls/DBMultiSelect.PNG "DBMultiSelect")
 
 ```html
 <flx-multicombo ObjectName="sysObject" additionalWhere=""  PlaceHolder="Select icon" iconclass="flx-icon icon-icons" ViewName="iconsView" SQLValueField="IconName" SQLDisplayField="IconName" required requiredmessage="You must enter a valid email">
@@ -224,7 +224,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Multiple Select
 
-![](/docs_assets/images/Controls/MultiSelect.png "MultiSelect")
+![](../docs_assets/images/Controls/MultiSelect.PNG "MultiSelect")
 
 ```html
 <flx-combo name="m-1"  multiple separator=";" required requiredmessage="You must enter a valid text" value="Amsterdam;Baltimore" >
@@ -236,7 +236,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Tags
 
-![](/docs_assets/images/Controls/Tags.png "Tags")
+![](../docs_assets/images/Controls/Tags.PNG "Tags")
 
 ```html
 <flx-tag name="tag-1"  separator=";" required requiredmessage="You must enter a valid text" value="Framework;Flexygo;Freeware" ></flx-tag>
@@ -256,7 +256,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Input States
 
-![](/docs_assets/images/Controls/InputStates.png "Input States")
+![](../docs_assets/images/Controls/InputStates.PNG "Input States")
 
 ```html
 <flx-text type="text" iconclass="flx-icon icon-warning" name="warning" placeholder=".has-warning" required requiredmessage="You must enter a text"></flx-text>
@@ -272,7 +272,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Input sizes
 
-![](/docs_assets/images/Controls/InputSizes.png "Input Sizes")
+![](../docs_assets/images/Controls/InputSizes.PNG "Input Sizes")
 
 
 ```html
@@ -296,7 +296,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 ```
 ## Select sizes
 
-![](/docs_assets/images/Controls/SelectSizes.png "Select Sizes")
+![](../docs_assets/images/Controls/SelectSizes.PNG "Select Sizes")
 
 ```html
 <flx-combo class="size-xs has-warning" iconclass="flx-icon icon-web" name="select-s" required requiredmessage="You must enter a valid text">
@@ -353,7 +353,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## Append buttons to controls sizes
 
-![](/docs_assets/images/Controls/AppendButtons.png "Append buttons to controls sizes")
+![](../docs_assets/images/Controls/AppendButtons.PNG "Append buttons to controls sizes")
 
 ```html
 <flx-text class="size-xs" type="text" HelpId="DD80AE68-552A-4E39-A081-1C13F0F939EF"  name="mytext" placeholder=".size-xs" required requiredmessage="You must enter a valid text"></flx-text>
@@ -385,7 +385,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## HTML Editor
 
-![](/docs_assets/images/Controls/HTMLEditor.png "HTML Editor")
+![](../docs_assets/images/Controls/HTMLEditor.PNG "HTML Editor")
 
 HTML Editor module use the flx-htmledit web component. You can add your HTML Editor by referencing HTML Editor module.
 
@@ -395,7 +395,7 @@ HTML Editor module use the flx-htmledit web component. You can add your HTML Edi
 
 ## Image
 
-![](/docs_assets/images/Controls/Image.png "Image")
+![](../docs_assets/images/Controls/Image.PNG "Image")
 
 ```html
 <flx-image TypeMode="file" rootpath="~/path/"></flx-image>
@@ -408,7 +408,7 @@ HTML Editor module use the flx-htmledit web component. You can add your HTML Edi
 
 ## Upload
 
-![](/docs_assets/images/Controls/Upload.png "Upload")
+![](../docs_assets/images/Controls/Upload.PNG "Upload")
 
 ```html
 <flx-upload Type="file" rootpath="~/path/"></flx-upload>
@@ -424,8 +424,8 @@ Using dependencies for changing type of control of dependent property. You can u
 
 * **Set custom control based on parent property values**: You will first choose the values for which the dependent property will change and in the combo choose the corresponding custom control.
 
-![](/docs_assets/images/Controls/CustomContDepValues.png "Input Sizes")
+![](../docs_assets/images/Controls/CustomContDepValues.png "Input Sizes")
 
 * **Set the custom control via sql statement**: In this case, it will be the sql statement that will establish the custom control of the dependent property. The sql statement must return the name of the custom control.
 
-![](/docs_assets/images/Controls/CustomContDepSelect.png "Input Sizes")
+![](../docs_assets/images/Controls/CustomContDepSelect.png "Input Sizes")

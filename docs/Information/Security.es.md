@@ -1,6 +1,6 @@
 # Security { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
+![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 **Flexygo** incluye 3 niveles de seguridad diferentes:
 
@@ -25,7 +25,7 @@ Lo mismo ocurre si la seguridad se establece a nivel de usuario:
 
 Para comenzar con los ejemplos y explicaciones más extensas, dividiremos en dos grupos principales (All Users y Admin).
 
-![](/docs_assets/images/Security/Circles-graph.png)
+![](../docs_assets/images/Security/Circles-graph.png)
 
 ### Admin
 

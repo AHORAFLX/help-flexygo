@@ -7,7 +7,7 @@ Echa un vistazo a los cursos que ya tenemos:
 
 ## Flexygo low code
 
-![Udemy](/docs_assets/images/Courses/LowCode.png)
+![Udemy](../docs_assets/images/Courses/LowCode.png)
 
 Sumérgete en el mundo del low-code con **Flexygo** y prepárate para las herramientas de desarrollo del futuro.
 
@@ -20,7 +20,7 @@ En este curso, adquirirás conocimientos básicos de **Flexygo**. Al finalizar, 
 
 ## Flexygo low code – Aplicaciones Offline
 
-![Udemy](/docs_assets/images/Courses/Offline.png)
+![Udemy](../docs_assets/images/Courses/Offline.png)
 
 Desarrolla tus propias aplicaciones offline para smartphones y tablets (iOS y Android).
 
@@ -33,7 +33,7 @@ Durante el curso crearemos una app utilizando un caso práctico de principio a f
 
 ## Flexygo high code
 
-![Udemy](/docs_assets/images/Courses/highcode.png)
+![Udemy](../docs_assets/images/Courses/highcode.png)
 
 Rompe los límites del low-code y lleva tu proyecto Flexygo al siguiente nivel. Con Flexygo, todo es posible.
 
@@ -46,7 +46,7 @@ Durante el curso aprenderemos a desarrollar una aplicación Flexygo utilizando e
 
 ## Flexygo AI Lowcode
 
-![Udemy](/docs_assets/images/Courses/AILowCode.png)
+![Udemy](../docs_assets/images/Courses/AILowCode.png)
 
 Aprende a integrar inteligencia artificial conversacional en tus aplicaciones sin necesidad de programar.
 

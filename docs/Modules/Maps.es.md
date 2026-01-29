@@ -2,7 +2,7 @@
 
 Google Maps es un servicio desarrollado por Google con el cual puedes encontrar la ubicación exacta de ciudades, negocios o atracciones en Internet. Para implementar Google Maps en tu flexygo proyecto, necesitas obtener una clave de API de Google. Una vez que tengas la clave, deberías agregarla a la configuración de flexygo (Imagen 1).
 
-![](/docs_assets/images/ModulesConf/ApiKey.png "Image 1. API Keys")
+![](../docs_assets/images/ModulesConf/APIKey.png "Image 1. API Keys")
 
 Consulta cómo obtener la clave de API de Google en la [ayuda de flexygo ](/Connectors/GoogleAPIKey).
 {: .flx-warning-card }
@@ -19,7 +19,7 @@ O puedes agregar directamente el componente web flx-map.
 </flx-map> 
 ```
 
-![Standard map](/docs_assets/images/Maps/Main.png "Standard map")
+![Standard map](../docs_assets/images/Maps/Main.png "Standard map")
 
 ## Opciones del Módulo
 
@@ -35,7 +35,7 @@ O puedes agregar directamente el componente web flx-map.
 
 ## Ejemplo de Agrupación de Marcadores
 
-![Marker cluster map](/docs_assets/images/Maps/Cluster.png "Marker cluster map")
+![Marker cluster map](../docs_assets/images/Maps/Cluster.png "Marker cluster map")
 
 ## Rutas
 
@@ -51,7 +51,7 @@ Si deseas agregar información al hacer clic en uno de los puntos de la ruta, ne
 </flx-map>
 ```
 
-![Routes map](/docs_assets/images/Maps/Routes.png "Routes map")
+![Routes map](../docs_assets/images/Maps/Routes.png "Routes map")
 
 ### Personalizar el Estilo de la Ruta
 
@@ -73,7 +73,7 @@ Las rutas se pueden personalizar utilizando estas propiedades:
 </flx-map>
 ```
 
-![Routes styled red arrows map](/docs_assets/images/Maps/RouteStyledRed.png "Routes styled red arrows map")
+![Routes styled red arrows map](../docs_assets/images/Maps/RouteStyledRed.png "Routes styled red arrows map")
 
 ```html
 <flx-map cluster="false" width="auto" height="400" route="true" arrow="true" dotted="false" linecolor="rgb(114,137,218)" linewidht="5">
@@ -84,7 +84,7 @@ Las rutas se pueden personalizar utilizando estas propiedades:
 </flx-map>
 ```
 
-![Routes styled blue arrows map](/docs_assets/images/Maps/RouteStyledBlue.png "Routes styled blue arrows map")
+![Routes styled blue arrows map](../docs_assets/images/Maps/RouteStyledBlue.png "Routes styled blue arrows map")
 
 ### Agregar Múltiples Rutas en un Mapa
 
@@ -106,7 +106,7 @@ Con el parámetro **grupo** podrás dividir los marcadores en diferentes rutas, 
 </flx-map>
 ```
 
-![Multiple routes map](/docs_assets/images/Maps/MultipleRoutes.png "Multiple routes map")
+![Multiple routes map](../docs_assets/images/Maps/MultipleRoutes.png "Multiple routes map")
 
 ## Agregar polígonos en Google Maps
 
@@ -121,7 +121,7 @@ Con el parámetro **coords** podrás agregar marcadores con polígonos en lugar 
 </flx-map>
 ```
 
-![Polygons map](/docs_assets/images/Maps/Polygons.png "Polygons map")
+![Polygons map](../docs_assets/images/Maps/Polygons.png "Polygons map")
 
 ## Agregar círculos en Google Maps
 
@@ -134,29 +134,29 @@ Con el parámetro **radius** y **radiuscolor** podrás agregar marcadores con c�
 </flx-map>
 ```
 
-![Circles map](/docs_assets/images/Maps/Circles.png "Circles map")
+![Circles map](../docs_assets/images/Maps/Circles.png "Circles map")
 
 ## Skins Personalizados
 
 El mapa por defecto usará una apariencia clara u oscura dependiendo del modo del usuario. Pero con la propiedad de color puedes establecer un tema que se mantendrá igual para todos.
 
 ### Claro
-![Light map](/docs_assets/images/Maps/Light.png "Light map")
+![Light map](../docs_assets/images/Maps/Light.png "Light map")
 
 ### Oscuro
-![Dark map](/docs_assets/images/Maps/Dark.png "Dark map")
+![Dark map](../docs_assets/images/Maps/Dark.png "Dark map")
 
 ### Retro
-![Retro map](/docs_assets/images/Maps/Retro.png "Retro map")
+![Retro map](../docs_assets/images/Maps/Retro.png "Retro map")
 
 ### Plata
-![Silver map](/docs_assets/images/Maps/Silver.png "Silver map")
+![Silver map](../docs_assets/images/Maps/Silver.png "Silver map")
 
 ### Noche
-![Night map](/docs_assets/images/Maps/Night.png "Night map")
+![Night map](../docs_assets/images/Maps/Night.png "Night map")
 
 ### Berenjena
-![Aubergine map](/docs_assets/images/Maps/Aubergine.png "Aubergine map")
+![Aubergine map](../docs_assets/images/Maps/Aubergine.png "Aubergine map")
 
 Mira los siguientes videos en nuestro canal de YouTube relacionados con el Módulo de Mapas.
 

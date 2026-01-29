@@ -2,8 +2,8 @@
 
 Timeline is a set of css classes that allows the user to have a chronological view, since the Timeline offers a better structure of the relevant news or of greater interest, such as for example, actions carried out throughout the day of each employee. In order to display a timeline correctly, it is necessary to indicate an **<entry\>** and a **</body\>**.
 
-![Timeline](/docs_assets/images/TimelineStyle/Timeline.png#only-light "Timeline"){data-gallery="light"}
-![Timeline](/docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark "Timeline"){data-gallery="dark"}
+![Timeline](../docs_assets/images/TimelineStyle/Timeline.png#only-light "Timeline"){data-gallery="light"}
+![Timeline](../docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark "Timeline"){data-gallery="dark"}
 
 ```html
 <div class="timeline">
@@ -44,8 +44,8 @@ Timeline is a set of css classes that allows the user to have a chronological vi
 
 Card Timeline is a set of css classes that allows the user to have a chronological responsive view, since the Timeline offers a better structure of the relevant news or of greater interest, such as for example, actions carried out throughout the day of each employee.
 
-![Card timeline](/docs_assets/images/TimelineStyle/CardTimeline.png#only-light "Card timeline"){data-gallery="light"}
-![Card timeline](/docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark "Card timeline"){data-gallery="dark"}
+![Card timeline](../docs_assets/images/TimelineStyle/CardTimeline.png#only-light "Card timeline"){data-gallery="light"}
+![Card timeline](../docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark "Card timeline"){data-gallery="dark"}
 
 ```html
 <div class="appointment-timeline-group">7 June 2018</div>

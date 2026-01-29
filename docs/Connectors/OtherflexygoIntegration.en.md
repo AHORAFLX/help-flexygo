@@ -1,6 +1,6 @@
 # Flexygo Integration { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
+![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 In case you need to launch pages of external **flexygo** applications from this **flexygo**, you can connect both apps using the connector especially developed to make possible integration betweet two different **flexygo**.
 
@@ -9,14 +9,14 @@ In case you need to launch pages of external **flexygo** applications from this 
 1.  First of all, you need to register the external app that you want to open using this configuration window: <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysFlexygoConnectors" showprogress="false">connect flexygo application</flx-navbutton>.
     **App name** is the project name of your second **flexygo** (2) application and **external url** is the second **flexygo** url (2).
     
-    ![Connected flexygo](/docs_assets/images/FlexygoConnector/ConnectedFlexygo.PNG "Image 1. Connected flexygo")
+    ![Connected flexygo](../docs_assets/images/FlexygoConnector/ConnectedFlexygo.PNG "Image 1. Connected flexygo")
     
 2.  In your external **flexygo** application (not in this), you must authroize this app:
     
     *   Open your external app and go to **Admin Work Area > Security > WebAPI** and press **Authorized Apps** button.
     *   Create new authorized app using current project name as App ID. **App ID** is project name of your first **flexygo** (1) application and **return token url** is web token url of previous step on your first **flexygo** (1).
     
-    ![Authorized Apps](/docs_assets/images/FlexygoConnector/AuthorizedApps.PNG "Image 2. Authorized Apps")
+    ![Authorized Apps](../docs_assets/images/FlexygoConnector/AuthorizedApps.PNG "Image 2. Authorized Apps")
     
 
 ## Flexygo integration navigation

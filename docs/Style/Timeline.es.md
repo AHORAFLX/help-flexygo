@@ -2,8 +2,8 @@
 
 La cronología es un conjunto de clases css que permite al usuario tener una vista cronológica, ya que la cronología ofrece una mejor estructura de las noticias relevantes o de mayor interés, como por ejemplo, las acciones realizadas a lo largo del día de cada empleado. Para mostrar una cronología correctamente, es necesario indicar un **<entry\>** y un **</body\>**.
 
-![Timeline](/docs_assets/images/TimelineStyle/Timeline.png#only-light "Timeline"){data-gallery="light"}
-![Timeline](/docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark "Timeline"){data-gallery="dark"}
+![Timeline](../docs_assets/images/TimelineStyle/Timeline.png#only-light "Timeline"){data-gallery="light"}
+![Timeline](../docs_assets/images/TimelineStyle/Timeline_dark.png#only-dark "Timeline"){data-gallery="dark"}
 
 ```html
 <div class="timeline">
@@ -44,8 +44,8 @@ La cronología es un conjunto de clases css que permite al usuario tener una vis
 
 La cronología de tarjetas es un conjunto de clases css que permite al usuario tener una vista cronológica responsiva, ya que la cronología ofrece una mejor estructura de las noticias relevantes o de mayor interés, como por ejemplo, acciones realizadas a lo largo del día de cada empleado.
 
-![Card timeline](/docs_assets/images/TimelineStyle/CardTimeline.png#only-light "Card timeline"){data-gallery="light"}
-![Card timeline](/docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark "Card timeline"){data-gallery="dark"}
+![Card timeline](../docs_assets/images/TimelineStyle/CardTimeline.png#only-light "Card timeline"){data-gallery="light"}
+![Card timeline](../docs_assets/images/TimelineStyle/CardTimeline_dark.png#only-dark "Card timeline"){data-gallery="dark"}
 
 ```html
 <div class="appointment-timeline-group">7 June 2018</div>

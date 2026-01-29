@@ -10,9 +10,9 @@ Put the product name here so that names are updated automatically and you only h
 
 Add a new project named <fh-copy><span class="propagated-projectname"></span>UnitTest</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/2_1.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/2_1.png)
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/2_2.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/2_2.png)
 
 ## 3. Add references
 
@@ -20,17 +20,17 @@ Add the required references.
 
 Add **System.Web** from the assemblies, and the rest from the Flexygo NuGet package.
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/3.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/3.png)
 
 ## 4. Configure
 
 Add the required configuration data.
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/4_1.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/4_1.png)
 
 If Visual Studio adds a namespace to the connection string name, remove it.
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/4_2.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/4_2.png)
 
 ## 5. Add the code
 
@@ -141,4 +141,4 @@ End Class
 
 Open the **Test Explorer** and run the tests to verify that everything is OK.
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/6.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/6.png)

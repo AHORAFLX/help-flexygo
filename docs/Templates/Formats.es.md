@@ -311,7 +311,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 <flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "99-999-99-99"/><span class = "input-group-addon"><i class = "flx-icon icon-phone"></i></span></flx-text>
 ```
 
-![Phone](/docs_assets/images/Formats/Phone.png "Phone")
+![Phone](../docs_assets/images/Formats/Phone.png "Phone")
 
 ### Teléfono + Ext
 
@@ -319,7 +319,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 <flx-text placeholder = "flx Telephone Field" name = "phone" iconclass = "flx-icon icon-phone" required = "" Mask = "(999) 999-9999? x99999"/><span class = "input-group-addon"><i class = "flx-icon icon-phone"></i></span></flx-text>
 ```
 
-![Phone + Ext](/docs_assets/images/Formats/PhoneExtension.png "Phone + Ext")
+![Phone + Ext](../docs_assets/images/Formats/PhoneExtension.png "Phone + Ext")
 
 ### Correo Electrónico
 
@@ -327,7 +327,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 <flx-text placeholder = "flx Email Field" name = "email" iconclass = "flx-icon icon-web" required = "" Mask = "*******@aaaaaaa.aaa"/><span class = "input-group-addon"><i class = "flx-icon icon-web"></i></span></flx-text>
 ```
 
-![Email](/docs_assets/images/Formats/Email.png "Email")
+![Email](../docs_assets/images/Formats/Email.png "Email")
 
 ### Clave del Producto
 
@@ -335,7 +335,7 @@ Cuando tenemos un formulario, podemos indicar la cantidad de caracteres que quer
 <flx-text name = "productKey" placeholder = "flx Key Field" iconclass = "flx-icon icon-key" Mask = "a*-999-a999"/>
 ```
 
-![ProductKey](/docs_assets/images/Formats/ProductKey.png "Product Key")
+![ProductKey](../docs_assets/images/Formats/ProductKey.png "Product Key")
 
 ## Vinculación de Archivos
 

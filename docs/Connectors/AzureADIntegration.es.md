@@ -18,11 +18,11 @@ Asegúrate de tener los permisos necesarios para crear y gestionar aplicaciones.
 
 ### Tenant Id y Client Id
 
-![](/docs_assets/images/AzureAdIntegration/ClientTenant.png)
+![](../docs_assets/images/AzureAdIntegration/ClientTenant.png)
 
 ### Client Secret Id
 
-![](/docs_assets/images/AzureAdIntegration/ClientSecret.png)
+![](../docs_assets/images/AzureAdIntegration/ClientSecret.png)
 
 ## Configuración de plataforma
 
@@ -30,7 +30,7 @@ Para el correcto funcionamiento de la integración con Azure AD se requiere conf
 También puedes decidir si quieres restringir el uso de tu aplicación a cuentas de tu propio directorio organizacional (*single tenant*) o permitir cuentas de cualquier directorio organizacional (*multitenant*).  
 [Más información](https://docs.microsoft.com/en-us/azure/active-directory/develop/single-and-multi-tenant-apps)
 
-![Redirect URL, logout URL](/docs_assets/images/AzureAdIntegration/URL.png "Image 1. Redirect URL, logout URL")
+![Redirect URL, logout URL](../docs_assets/images/AzureAdIntegration/URL.png "Image 1. Redirect URL, logout URL")
 
 ## Asignación de usuarios
 
@@ -40,7 +40,7 @@ Cuando está activa, los usuarios deben ser asignados previamente a la aplicaci�
 Para asignar usuarios:  
 *Enterprise applications* → selecciona tu aplicación **flexygo** → *Users and groups*
 
-![Users](/docs_assets/images/AzureAdIntegration/Users.png "Image 2. Users")
+![Users](../docs_assets/images/AzureAdIntegration/Users.png "Image 2. Users")
 
 ## Ejecutar proceso
 

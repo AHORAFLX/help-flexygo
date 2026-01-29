@@ -12,17 +12,17 @@ Put the product name here so that names are automatically updated and you only n
 
 We will install the TypeScript 5.0.4 NuGet package, as shown in the screenshot (right-click on the main project > Manage NuGet Packages):
 
-![](/docs_assets/images/Installation/CreatingWebComponent/2_1.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/2_1.png)
 
 Once installed, we will check that the TypeScript configuration of the project matches the one shown in the image (to access the configuration, right-click on the main project > Properties > TypeScript Build):
 
-![](/docs_assets/images/Installation/CreatingWebComponent/2_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/2_2.png)
 
 ## 3. Structure the project
 
 Within the project, we will create a folder called **ahoraflexy** to host our project components, and inside it we will generate the structure **controllers**, **plugins**, and **wc**.
 
-![](/docs_assets/images/Installation/CreatingWebComponent/3.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/3.png)
 
 ## 4. Create the WebComponent
 
@@ -167,9 +167,9 @@ values ('afl-carousel','Carousel','fighter-jet','','afl-carousel',1,1)
 
 We create a new module and include it on the home page.
 
-![](/docs_assets/images/Installation/CreatingWebComponent/6_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/6_2.png)
 
-![](/docs_assets/images/Installation/CreatingWebComponent/6_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/6_2.png)
 
 ## 7. Prepare the databases
 
@@ -313,7 +313,7 @@ loadData(): void {
 
 We reload the cache and the page; the result should be as follows:
 
-![](/docs_assets/images/Installation/CreatingWebComponent/11.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/11.png)
 
 ## 12. Add data scripts
 
@@ -321,7 +321,7 @@ We generate the product configuration scripts.
 
 We delete all files from the **scripts/data** folder of our configuration database.
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_1.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_1.png)
 
 If this is the first time working with this database, enable **cmd_shell** by executing the following command:
 
@@ -342,7 +342,7 @@ GO
 
 We check the permissions of the **scripts/data** folder:
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_2.png)
 
 We execute the following script in the database to generate the static data:
 
@@ -352,11 +352,11 @@ zscript 1, 'C:\temp\AhoraFlexy\AhoraFlexyBD\scripts\data'
 
 We include the new files that have appeared, set their **Build Action** property to **None**, and reference them in the **scripts/Script.PostDeployment.sql** file:
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_3.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_3.png)
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_4.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_4.png)
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_5.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_5.png)
 
 ## 13. Publish databases
 

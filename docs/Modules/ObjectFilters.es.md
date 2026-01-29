@@ -10,34 +10,34 @@ Para generar un nuevo filtro correctamente, el primer paso es asignar un nombre,
 
 Aquí tienes un ejemplo de creación de un filtro en modo propiedades.
 
-![](/docs_assets/images/Filters/newFilter_1.jpg "Imagen 1. Nueva búsqueda (1/2)")
+![](../docs_assets/images/Filters/newFilter_1.JPG "Imagen 1. Nueva búsqueda (1/2)")
 
-![](/docs_assets/images/Filters/newFilter_2.jpg "Imagen 2. Nueva búsqueda (2/2)")
+![](../docs_assets/images/Filters/newFilter_2.JPG "Imagen 2. Nueva búsqueda (2/2)")
 
 ## Modificación de búsquedas
 
 También es posible modificar el nombre de la búsqueda, añadir o eliminar propiedades. Para ello, al hacer clic en el icono de filtros y después en "settings", accederemos a la correspondiente ventana de gestión de filtros.  
 Es importante indicar en el primer desplegable la búsqueda que deseas editar. Desde esta pantalla el usuario puede generar nuevas búsquedas, modificar nombres, añadir propiedades y eliminarlas.
 
-![](/docs_assets/images/Filters/editFilter.jpg "Imagen 3. Gestión de filtros")
+![](../docs_assets/images/Filters/editFilter.jpg "Imagen 3. Gestión de filtros")
 
 ## Filtros por propiedades
 
 En las siguientes capturas puedes ver el número de registros devueltos por la búsqueda. Primero, se puede observar (Imagen 4) el uso del apellido como propiedad de búsqueda y los resultados obtenidos.  
 En la siguiente captura (Imagen 5), se incluyen las propiedades “Apellido” y “Nombre”, lo que provoca un cambio en el número de resultados devueltos. Finalmente, cabe indicar que los filtros de búsqueda pueden realizarse con múltiples propiedades simultáneamente.
 
-![](/docs_assets/images/Filters/editFilter.jpg "Imagen 4. Resultados de búsqueda por propiedad")
+![](../docs_assets/images/Filters/editFilter.jpg "Imagen 4. Resultados de búsqueda por propiedad")
 
-![](/docs_assets/images/Filters/propertyFilters_2.jpg "Imagen 5. Resultados de búsqueda con dos propiedades a la vez")
+![](../docs_assets/images/Filters/propertyFilters_2.JPG "Imagen 5. Resultados de búsqueda con dos propiedades a la vez")
 
 ## Filtros de texto
 
 El filtro de **texto** funciona del mismo modo, solo que disponemos únicamente de un cuadro de texto que mostrará los campos sobre los que se realizará la búsqueda utilizando una condición *like*, todos al mismo tiempo.  
 En la siguiente imagen (Imagen 7) puedes ver que, a partir del texto escrito, intentará encontrar coincidencias *like* en todas las columnas indicadas para la búsqueda.
 
-![](/docs_assets/images/Filters/textFilters.jpg "Imagen 6. Cómo se muestran los filtros de texto")
+![](../docs_assets/images/Filters/textFilters.jpg "Imagen 6. Cómo se muestran los filtros de texto")
 
-![](/docs_assets/images/Filters/textFilters_2.jpg "Imagen 7. Resultados de búsqueda tipo texto")
+![](../docs_assets/images/Filters/textFilters_2.jpg "Imagen 7. Resultados de búsqueda tipo texto")
 
 Para más información, mira el siguiente vídeo.
 

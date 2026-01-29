@@ -10,7 +10,7 @@ Abh Sms es una integración de **Ahora Business Hub** que permite a **flexygo** 
 
 ## Configurar Abh Sms
 
-![Abh Sms configuration](/docs_assets/images/AbhSms/AbhSmsSettings.png "Abh Sms configuration")
+![Abh Sms configuration](../docs_assets/images/AbhSms/AbhSmsSettings.png "Abh Sms configuration")
 
 **Integration:** Nombre de la integración que vamos a configurar, en este caso *Ahora Business Hub – SMS*.
 

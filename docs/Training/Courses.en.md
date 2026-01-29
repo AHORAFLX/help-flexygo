@@ -7,7 +7,7 @@ Check out the courses we already have:
 
 ## Flexygo low code
 
-![Udemy](/docs_assets/images/Courses/LowCode.png)
+![Udemy](../docs_assets/images/Courses/LowCode.png)
 
 Dive into low-code with **Flexygo** and get ready for the development tools of the future.
 
@@ -20,7 +20,7 @@ In this course, you will gain basic knowledge of **Flexygo**. At the end of the 
 
 ## Flexygo low code – Offline Apps
 
-![Udemy](/docs_assets/images/Courses/Offline.png)
+![Udemy](../docs_assets/images/Courses/Offline.png)
 
 Develop your own offline applications for smartphones and tablets (iOS and Android).
 
@@ -33,7 +33,7 @@ During the course we will create an app using a practical case from beginning to
 
 ## Flexygo high code
 
-![Udemy](/docs_assets/images/Courses/highcode.png)
+![Udemy](../docs_assets/images/Courses/highcode.png)
 
 Push the boundaries of low-code and take your Flexygo project to the next level. With Flexygo, anything is possible.
 
@@ -46,7 +46,7 @@ During the course we will learn to develop a Flexygo application using the Visua
 
 ## Flexygo AI Lowcode
 
-![Udemy](/docs_assets/images/Courses/AILowCode.png)
+![Udemy](../docs_assets/images/Courses/AILowCode.png)
 
 Learn to integrate conversational artificial intelligence into your applications without programming.
 

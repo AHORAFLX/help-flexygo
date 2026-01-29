@@ -32,11 +32,11 @@ If chart type is line, there are additional attributes to modify style:
 
 ### Line Border Dashed Chart
 
-![Line Border Dashed Chart](/docs_assets/images/Charts/LineBorder.png "Line Border Dashed Chart"){ .unfiltered-graph }
+![Line Border Dashed Chart](../docs_assets/images/Charts/LineBorder.png "Line Border Dashed Chart"){ .unfiltered-graph }
 
 ### Line Fill Chart
 
-![Line Fill Chart](/docs_assets/images/Charts/LineFill.png "Line Fill Chart"){ .unfiltered-graph }
+![Line Fill Chart](../docs_assets/images/Charts/LineFill.png "Line Fill Chart"){ .unfiltered-graph }
 
 There is also a filtering option you can use just by clicking the following button:
 
@@ -58,7 +58,7 @@ There are several types of charts you can use.
 <flx-chart name="sample1" modulename="sysmod-chart-default" type="line" width="200" height="200"></flx-chart>
 ```
 
-![Line Chart](/docs_assets/images/Charts/Line.png "Line Chart")
+![Line Chart](../docs_assets/images/Charts/Line.png "Line Chart")
 
 ### Bubble Chart
 
@@ -66,7 +66,7 @@ There are several types of charts you can use.
 <flx-chart name="sample2" modulename="sysmod-chart-default" type="bubble" width="200" height="200"></flx-chart>
 ```
 
-![Bubble Chart](/docs_assets/images/Charts/Bubble.png "Bubble Chart")
+![Bubble Chart](../docs_assets/images/Charts/Bubble.png "Bubble Chart")
 
 ### Doughnut Chart
 
@@ -74,7 +74,7 @@ There are several types of charts you can use.
 <flx-chart name="sample3" modulename="sysmod-chart-default" type="doughnut" width="200" height="200"></flx-chart>
 ```
 
-![Doughnut Chart](/docs_assets/images/Charts/Doughnut.png "Doughnut Chart")
+![Doughnut Chart](../docs_assets/images/Charts/Doughnut.png "Doughnut Chart")
 
 ### Radar chart
 
@@ -82,7 +82,7 @@ There are several types of charts you can use.
 <flx-chart name="sample4" modulename="sysmod-chart-default" type="radar" width="200" height="200"></flx-chart>
 ```
 
-![Radar Chart](/docs_assets/images/Charts/Radar.png "Radar Chart")
+![Radar Chart](../docs_assets/images/Charts/Radar.png "Radar Chart")
 
 ### PolarArea chart
 
@@ -90,7 +90,7 @@ There are several types of charts you can use.
 <flx-chart name="sample5" modulename="sysmod-chart-default" type="polarArea" width="200" height="200"></flx-chart>
 ```
 
-![Polar area Chart](/docs_assets/images/Charts/PolarArea.png "Polar area Chart")
+![Polar area Chart](../docs_assets/images/Charts/PolarArea.png "Polar area Chart")
 
 ### Bar chart
 
@@ -98,7 +98,7 @@ There are several types of charts you can use.
 <flx-chart name="sample6" modulename="sysmod-chart-default" type="bar" width="200" height="200"></flx-chart>
 ```
 
-![Bar Chart](/docs_assets/images/Charts/Bar.png "Bar Chart")
+![Bar Chart](../docs_assets/images/Charts/Bar.png "Bar Chart")
 
 ### Pie chart
 
@@ -106,7 +106,7 @@ There are several types of charts you can use.
 <flx-chart name="sample7" modulename="sysmod-chart-default" type="pie" width="200" height="200"></flx-chart>
 ```
 
-![Pie Chart](/docs_assets/images/Charts/Pie.png "Pie Chart")
+![Pie Chart](../docs_assets/images/Charts/Pie.png "Pie Chart")
 
 ### Mixed chart
 
@@ -114,7 +114,7 @@ There are several types of charts you can use.
 <flx-chart name="sample8" modulename="sysmod-chart-default-mixed" type="mixed" width="200" height="200"></flx-chart>
 ```
 
-![Mixed Chart](/docs_assets/images/Charts/MixedChart.png "Mixed Chart")
+![Mixed Chart](../docs_assets/images/Charts/MixedChart.png "Mixed Chart")
 
 ## Chart settings
 
@@ -122,19 +122,19 @@ There are several types of charts you can use.
 
 Now we can define a style of animation for each chart setting and its duration. If duration is set to 0, animations are disabled. [More information about animations](https://easings.net/)
 
-![](/docs_assets/images/Charts/Animations.png "Image 1. Animations Chart Configuration")
+![](../docs_assets/images/Charts/Animations.PNG "Image 1. Animations Chart Configuration")
 
 ### Mixed chart configuration
 
 When configuring a new mixed chart, you have to define n sql statements separated by **;**. Then we must define what type of graph is going to be each dataset and the name that we are going to give it.
 
-![](/docs_assets/images/Charts/Mixed.png "Image 2. Mixed Chart Configuration")
+![](../docs_assets/images/Charts/Mixed.PNG "Image 2. Mixed Chart Configuration")
 
 ### Line chart style
 
 New style options to line chart.
 
-![](/docs_assets/images/Charts/LineStyle.png "Image 3. Line Chart Style")
+![](../docs_assets/images/Charts/LineStyle.PNG "Image 3. Line Chart Style")
 
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/wbAhtiqgcnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>

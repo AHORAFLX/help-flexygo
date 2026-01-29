@@ -12,18 +12,18 @@ Pon aquí el nombre de producto, para que así los nombres te aparezcan actualiz
 
 Instalaremos el nuget de TypeScript 5.0.4, tal y como se ve en la captura (click derecho en el proyecto principal > Administrar paquetes NuGet):
 
-![](/docs_assets/images/Installation/CreatingWebComponent/2_1.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/2_1.png)
 
 Una vez instalado revisaremos que la configuración de typescript del proyecto se ajuste a la de la imagen (para acceder a la configuración, click derecho en el proyecto principal > Propiedades > Compilación de TypeScript):
 
-![](/docs_assets/images/Installation/CreatingWebComponent/2_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/2_2.png)
 
 ## 3. Estrucutrar el proyecto
 
 Crearemos dentro del proyecto una carpeta a la que llamaremos ahoraflexy para albergar nuestros componentes del proyecto y dentro generaremos la estrucutra "controllers", "plugins" y "wc"
 
   
-![](/docs_assets/images/Installation/CreatingWebComponent/3.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/3.png)
 
 ## 4. Crear Webcomponent
 
@@ -173,9 +173,9 @@ values ('afl-carousel','Carousel','fighter-jet','','afl-carousel',1,1)
 
 Creamos un nuevo módulo y lo incluimos en la página de inicio.
 
-![](/docs_assets/images/Installation/CreatingWebComponent/6_2.png)  
+![](../docs_assets/images/Installation/CreatingWebComponent/6_2.png)  
   
-![](/docs_assets/images/Installation/CreatingWebComponent/6_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/6_2.png)
 
 ## 7. Preparar las BBDDs
 
@@ -326,7 +326,7 @@ loadData(): void {
 
 Recargamos la caché y la página, el resultado debería ser este:
 
-![](/docs_assets/images/Installation/CreatingWebComponent/11.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/11.png)
 
 ## 12. Añadir scripts de datos
 
@@ -334,7 +334,7 @@ Generamos los scripts de configuración de producto:
 
 Borramos todos los ficheros de la carpeta **scripts/data** de nuestra BBDD de configuración.
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_1.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_1.png)
 
 Si es la primera vez que trabajamos con esta BBDD activar el **cmd_shell** ejecutando el siguiente comando:
 
@@ -355,7 +355,7 @@ GO
 
 Revisamos permisos de la carpeta scripts/data:
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_2.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_2.png)
   
 
 Ejecutamos el siguiente script en la BBDD para generar los datos estáticos:
@@ -366,11 +366,11 @@ zscript 1, 'C:\temp\AhoraFlexy\AhoraFlexyBD\scripts\data'
 
 Incluimos los nuevos ficheros que hayan aparecido, asignamos la **opción de compilación** de sus propiedades a **Ninguno** y los referenciamos en el fichero **scripts/Script.PostDeployment.sql**:
 
-![](/docs_assets/images/Installation/CreatingWebComponent/12_3.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_3.png)
   
-![](/docs_assets/images/Installation/CreatingWebComponent/12_4.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_4.png)
   
-![](/docs_assets/images/Installation/CreatingWebComponent/12_5.png)
+![](../docs_assets/images/Installation/CreatingWebComponent/12_5.png)
 
 ## 13. Publicar BBDDs
 

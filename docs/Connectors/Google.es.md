@@ -1,6 +1,6 @@
 # Integración con Google { .flx-title-with-image }
 
-![Google](/docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .fh-image-of-title }
+![Google](../docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .fh-image-of-title }
 
 Para realizar llamadas a la API de Google, que es una API RESTful, que te permite acceder a los recursos de servicio de Google Cloud, es necesario registrar tu aplicación y obtener tokens de autenticación para un usuario o servicio.
 

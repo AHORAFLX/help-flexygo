@@ -11,41 +11,41 @@ Todas las propiedades están documentadas.
 
 ### Configuración
 
-![](/docs_assets/images/Timeline/Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
+![](../docs_assets/images/Timeline/Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
 
 ### Resultado
 
-![](/docs_assets/images/Timeline/Timeline_Basic_Result.png "Image 2. Timeline basic result")
+![](../docs_assets/images/Timeline/Timeline_Basic_Result.png "Image 2. Timeline basic result")
 
 ## Ejemplo básico con grupos
 
 ### Configuración
 
-![](/docs_assets/images/Timeline/Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
+![](../docs_assets/images/Timeline/Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
 
 ### Resultado
 
-![](/docs_assets/images/Timeline/Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
+![](../docs_assets/images/Timeline/Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
 
 ## Ejemplo avanzado
 
 ### Configuración
 
-![](/docs_assets/images/Timeline/Timeline_Advanced_Configuracion.png "Image 5. Advanced")
+![](../docs_assets/images/Timeline/Timeline_Advanced_Configuracion.png "Image 5. Advanced")
 
 ### Resultado
 
-![](/docs_assets/images/Timeline/Timeline_Advanced_Result.png "Image 6. Advanced result")
+![](../docs_assets/images/Timeline/Timeline_Advanced_Result.png "Image 6. Advanced result")
 
 ## Ejemplo avanzado con grupos
 
 ### Configuración
 
-![](/docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
+![](../docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
 
 ### Resultado
 
-![](/docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
+![](../docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
 
 Consulta el vídeo sobre cómo configurar Timeline:
 <div class="video-wrapper">

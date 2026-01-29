@@ -1,4 +1,5 @@
 site_name: Docs
+site_url: https://docs.flexygo.com/new/
 theme:
   name: material
   custom_dir: ./overrides/

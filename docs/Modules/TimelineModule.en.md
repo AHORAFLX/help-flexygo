@@ -11,41 +11,41 @@ All properties are documented.
 
 ### Configuration
 
-![](/docs_assets/images/Timeline/Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
+![](../docs_assets/images/Timeline/Timeline_Basic_Configuration.png "Image 1. Timeline Basic Configuration")
 
 ### Result
 
-![](/docs_assets/images/Timeline/Timeline_Basic_Result.png "Image 2. Timeline basic result")
+![](../docs_assets/images/Timeline/Timeline_Basic_Result.png "Image 2. Timeline basic result")
 
 ## Basic with groups example
 
 ### Configuration
 
-![](/docs_assets/images/Timeline/Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
+![](../docs_assets/images/Timeline/Timeline_BasicWithGroups_configuration.png "Image 3. Basic timeline with groups")
 
 ### Result
 
-![](/docs_assets/images/Timeline/Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
+![](../docs_assets/images/Timeline/Timeline_BasicWithGroups_Result.png "Image 4. Basic timeline with groups result")
 
 ## Advanced example
 
 ### Configuration
 
-![](/docs_assets/images/Timeline/Timeline_Advanced_Configuracion.png "Image 5. Advanced")
+![](../docs_assets/images/Timeline/Timeline_Advanced_Configuracion.png "Image 5. Advanced")
 
 ### Result
 
-![](/docs_assets/images/Timeline/Timeline_Advanced_Result.png "Image 6. Advanced result")
+![](../docs_assets/images/Timeline/Timeline_Advanced_Result.png "Image 6. Advanced result")
 
 ## Advanced With Groups Example
 
 ### Configuration
 
-![](/docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
+![](../docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Configuration.png "Image 7. Timeline Advanced With Groups Configuration")
 
 ### Result
 
-![](/docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
+![](../docs_assets/images/Timeline/Timeline_AdvancedWithGroups_Result.png "Image 8. Timeline Advanced With Groups Result")
 
 Check out the video about how to configurate timeline.
 <div class="video-wrapper">

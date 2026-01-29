@@ -2,7 +2,7 @@
 
 In this article we will explain how to configurate and use the funnel module. The funnel is commonly uses in marketing to shows the way a potential customer goes from becoming aware of your brand to purchasing a good or service.
 
-![](/docs_assets/images/Funnel/Funnel_1.png "Image 1. Funnel")
+![](../docs_assets/images/Funnel/Funnel_1.png "Image 1. Funnel")
 
 ## Module Options
 

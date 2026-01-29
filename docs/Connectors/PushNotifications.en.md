@@ -11,7 +11,7 @@ It is mandatory for using push notifications in your web browser to have a domai
 
 2\. Once you have obtained your key, fill out your Push API Key settings.
 
-![](/docs_assets/images/Push/Push_1.png "Image 1. API Key settings")
+![](../docs_assets/images/Push/Push_1.PNG "Image 1. API Key settings")
 
 3\. Fill out your notices table or notice object, selecting the type of notification you would like to enable. There are some different types of push notification:
 
@@ -20,7 +20,7 @@ It is mandatory for using push notifications in your web browser to have a domai
 *   **pushmobile** for push notifications only on mobile devices with a **flexygo** app installed.
 *   **pushweb** for push notifications only in web browser running **flexygo** (it's mandatory https domain certificate).
 
-![](/docs_assets/images/Push/Push_2.png "Image 2. API Key setting")
+![](../docs_assets/images/Push/Push_2.PNG "Image 2. API Key setting")
 
 ## Using notices sentences
 

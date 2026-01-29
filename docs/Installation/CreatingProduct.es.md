@@ -15,7 +15,7 @@ Para descargar la plantilla de flexygo para VisualStudio 2022 dispones de la sig
   
 O puedes ir a Herramientas → Extensiones y actualizaciones → En línea → y buscar Flexygo
 
-![](/docs_assets/images/Installation/CreatingProduct/2.png)
+![](../docs_assets/images/Installation/CreatingProduct/2.png)
 
 ## 3. Crear el proyecto
 
@@ -23,25 +23,25 @@ Creamos un nuevo proyecto de tipo **Flexygo Main Project** utilizando el nombre 
   
 Si estás en visual studio 2019, dejaremos desmarcada la opción "Colocar la solución y el proyecto en el mismo directorio"  
   
-![](/docs_assets/images/Installation/CreatingProduct/3.png)
+![](../docs_assets/images/Installation/CreatingProduct/3.png)
 
 ## 4. Agregar proyecto de tipo DLL
 
 Agregaremos un nuevo proyecto de tipo **Flexygo Custom DLL** en la carpeta de la solución y lo llamaremos <fh-copy><span class="propagated-projectname"></span>_Processes</fh-copy>
   
-![](/docs_assets/images/Installation/CreatingProduct/4.png)
+![](../docs_assets/images/Installation/CreatingProduct/4.png)
 
 ## 5. Agregar proyecto de BBDD Config
 
 Agregaremos un nuevo proyecto de tipo **SQL Server > Flexygo Config Model BBDD** en la carpeta de la solución y lo llamaremos <fh-copy><span class="propagated-projectname"></span>BD</fh-copy>
   
-![](/docs_assets/images/Installation/CreatingProduct/5.png)
+![](../docs_assets/images/Installation/CreatingProduct/5.png)
 
 ## 6. Agregar proyecto de BBDD Config
 
 Agregaremos un nuevo proyecto de tipo **SQL Server > Flexygo Data Model BBDD** en la carpeta de la solución y lo llamaremos <fh-copy><span class="propagated-projectname"></span>_DataBD</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingProduct/6.png)
+![](../docs_assets/images/Installation/CreatingProduct/6.png)
 
 ## 7. Añadir repositorios NuGet de flexygo
 
@@ -49,7 +49,7 @@ Iremos al administrador de paquetes NuGet del proyecto principal (botón derecho
 
 *   Flexygo [https://nuget.ahorabh.com/v3/index.json](https://nuget.ahorabh.com/v3/index.json)
 
-![](/docs_assets/images/Installation/CreatingProduct/7.png)
+![](../docs_assets/images/Installation/CreatingProduct/7.png)
 
 ## 8. Restaurar paquetes NuGet
 
@@ -76,17 +76,17 @@ En el proyecto principal: quitaremos la referencia a **flxCustomProcesses** y en
 En el proyecto <fh-copy><span class="propagated-projectname"></span>BD</fh-copy> quitaremos las dos referencias y las volveremos a agregar:
 
 *   **FlexygoDB** desde el dacpac incluido en la carpeta **db** del proyecto principal con las siguiente configuración:  
-    ![](/docs_assets/images/Installation/CreatingProduct/12_1.png)
+    ![](../docs_assets/images/Installation/CreatingProduct/12_1.png)
       
     
 *   Y **Master** como referencia a la BBDD del sistema:  
-    ![](/docs_assets/images/Installation/CreatingProduct/12_2.png)
+    ![](../docs_assets/images/Installation/CreatingProduct/12_2.png)
 
 ## 13. Corregir dependencias
 
 Corregiremos las dependencias fallidas del proyecto por las incluidas en el la carpeta **packages\Flexygo.x.x.xx.xx\lib\net46** de nuestra solución.
 
-![](/docs_assets/images/Installation/CreatingProduct/13.png)
+![](../docs_assets/images/Installation/CreatingProduct/13.png)
 
 ## 14. Corregir el script de compilación de BBDD
 
@@ -96,7 +96,7 @@ En las propiedades del proyecto <fh-copy><span class="propagated-projectname"></
 powershell -ExecutionPolicy Unrestricted -Command "& '$(SolutionDir)fhnamepropagator\db\mergeSSDTScripts.ps1' '$(SolutionDir)' '$(ProjectName)' '$(OutputPath)' '$(TargetPath)'
 ```
   
-![](/docs_assets/images/Installation/CreatingProduct/14.png)
+![](../docs_assets/images/Installation/CreatingProduct/14.png)
 
 ## 15. Definir nombre de ensamblado y espacio de nombres.
 
@@ -107,7 +107,7 @@ Sustituir **flxDB_processes** por <fh-copy><span class="propagated-projectname">
 Sustituir **flx** por <fh-copy><span class="propagated-projectname"></span></fh-copy>
 Sustituir **flxDB** por <fh-copy><span class="propagated-projectname"></span>BD</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingProduct/15.png)
+![](../docs_assets/images/Installation/CreatingProduct/15.png)
 
 ## 16. Typescript
 

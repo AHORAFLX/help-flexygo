@@ -4,7 +4,7 @@ Kanban es un método de gestión de proyectos que ayuda a los equipos a visualiz
 
 En flexygo hay un ejemplo de kanban disponible; <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Board" objectwhere="([Kanban_Boards].[BoardName] = 'Flexygo_Task_List')" showprogress="false">haz clic aquí</flx-navbutton> para navegar a él, y aquí está su <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Setting" objectwhere="KanbanSettingsName='sysFlexygo_Kanban'" showprogress="false">configuración</flx-navbutton>.
 
-![](/docs_assets/images/ModulesConf/kanban2.png "Image 1. Kanban")
+![](../docs_assets/images/ModulesConf/kanban2.png "Image 1. Kanban")
 
 ## Configuración
 
@@ -14,7 +14,7 @@ La configuración de Kanban se divide en cinco grupos:
 
 Se utiliza para definir los ajustes básicos del tablero kanban.
 
-![](/docs_assets/images/ModulesConf/kanbanSettings1.png "Image 1. Kanban Settings")
+![](../docs_assets/images/ModulesConf/KanbanSettings1.png "Image 1. Kanban Settings")
 
 * **Settings Name:** El nombre que quieres usar para identificar esta configuración kanban.
 * **Board Object Name:** El objeto principal del kanban, que será útil para parsear algunos valores en las siguientes propiedades, como puede verse en la imagen.
@@ -25,7 +25,7 @@ Se utiliza para definir los ajustes básicos del tablero kanban.
 
 Aquí se pueden establecer las vistas de columnas que se utilizarán como configuración de columnas.
 
-![](/docs_assets/images/ModulesConf/kanbanSettings2.png "Image 2. Kanban Settings")
+![](../docs_assets/images/ModulesConf/KanbanSettings2.png "Image 2. Kanban Settings")
 
 * **Column View Name:** Debe ser la vista utilizada para pintar la información de la columna y debe contener al menos las dos primeras propiedades de columna.
 * **Column Description Field:** La descripción que aparecerá en la parte superior de la columna.
@@ -37,7 +37,7 @@ Aquí se pueden establecer las vistas de columnas que se utilizarán como config
 
 Aquí se establece el objeto y las vistas que se utilizarán como configuración de las tarjetas.
 
-![](/docs_assets/images/ModulesConf/kanbanSettings3.png "Image 3. Kanban Settings")
+![](../docs_assets/images/ModulesConf/KanbanSettings3.png "Image 3. Kanban Settings")
 
 * **Card Object Name:** El objeto que se usará como tarjetas.
 * **Card View Name:** La vista utilizada para pintar la información de la tarjeta; debe contener al menos las tres primeras propiedades de tarjeta.
@@ -50,7 +50,7 @@ Aquí se establece el objeto y las vistas que se utilizarán como configuración
 
 Usado para establecer la configuración del área de archivo que aparece al mover una tarjeta.
 
-![](/docs_assets/images/ModulesConf/kanbanSettings4.png "Image 4. Kanban Settings")
+![](../docs_assets/images/ModulesConf/KanbanSettings4.png "Image 4. Kanban Settings")
 
 * **Archived State Id:** Determina cuál será el id asignado a la columna mencionada previamente en la configuración de tarjeta.
 * **Archived Text:** Un breve texto que aparecerá en el área de archivo.
@@ -61,7 +61,7 @@ Usado para establecer la configuración del área de archivo que aparece al move
 
 Usado para definir qué ocurre cuando se disparan los diferentes eventos.
 
-![](/docs_assets/images/ModulesConf/kanbanSettings5.png "Image 5. Kanban Settings")
+![](../docs_assets/images/ModulesConf/KanbanSettings5.png "Image 5. Kanban Settings")
 
 * **On card click:** Proceso que se ejecuta al hacer clic en una tarjeta.
 * **On Change Column:** Proceso que se ejecuta cuando una tarjeta cambia de columna.
@@ -71,7 +71,7 @@ Usado para definir qué ocurre cuando se disparan los diferentes eventos.
 
 Solo arrastra el módulo a tu página desde el gestor de módulos y completa el siguiente formulario.
 
-![](/docs_assets/images/ModulesConf/kanbanConf.png "Image 6. Kanban Settings")
+![](../docs_assets/images/ModulesConf/kanbanConf.png "Image 6. Kanban Settings")
 
 * **Id:** Identifica el módulo.
 * **Type:** Tipo de módulo, en este caso Kanban.

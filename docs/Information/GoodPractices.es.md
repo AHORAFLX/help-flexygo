@@ -1,6 +1,6 @@
 # Buenas prácticas  { .flx-title-with-image }
 
-![flexygo](/docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
+![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 
 Sigue estos sencillos consejos para extender o personalizar tu entorno **flexygo** y crear un proyecto de alta calidad.
 

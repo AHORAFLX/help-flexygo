@@ -15,7 +15,7 @@ To download the Flexygo template for Visual Studio 2022, use the following URL:
 
 Or go to **Tools → Extensions and Updates → Online** and search for *Flexygo*.
 
-![](/docs_assets/images/Installation/CreatingProduct/2.png)
+![](../docs_assets/images/Installation/CreatingProduct/2.png)
 
 ## 3. Create the project
 
@@ -23,25 +23,25 @@ Create a new project of type **Flexygo Main Project** using the name defined for
 
 If you are using Visual Studio 2019, leave the option *“Place solution and project in the same directory”* unchecked.
 
-![](/docs_assets/images/Installation/CreatingProduct/3.png)
+![](../docs_assets/images/Installation/CreatingProduct/3.png)
 
 ## 4. Add a DLL project
 
 Add a new project of type **Flexygo Custom DLL** in the solution folder and name it <fh-copy><span class="propagated-projectname"></span>_Processes</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingProduct/4.png)
+![](../docs_assets/images/Installation/CreatingProduct/4.png)
 
 ## 5. Add a BBDD Config project
 
 Add a new project of type **SQL Server > Flexygo Config Model BBDD** in the solution folder and name it <fh-copy><span class="propagated-projectname"></span>BD</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingProduct/5.png)
+![](../docs_assets/images/Installation/CreatingProduct/5.png)
 
 ## 6. Add a BBDD Data project
 
 Add a new project of type **SQL Server > Flexygo Data Model BBDD** in the solution folder and name it <fh-copy><span class="propagated-projectname"></span>_DataBD</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingProduct/6.png)
+![](../docs_assets/images/Installation/CreatingProduct/6.png)
 
 ## 7. Add Flexygo NuGet repositories
 
@@ -49,7 +49,7 @@ Open the NuGet Package Manager of the main project (right-click on the project �
 
 * Flexygo [https://nuget.ahorabh.com/v3/index.json](https://nuget.ahorabh.com/v3/index.json)
 
-![](/docs_assets/images/Installation/CreatingProduct/7.png)
+![](../docs_assets/images/Installation/CreatingProduct/7.png)
 
 ## 8. Restore NuGet packages
 
@@ -78,17 +78,17 @@ In the project <fh-copy><span class="propagated-projectname"></span>BD</fh-copy>
 remove both references and add them again:
 
 * **FlexygoDB** from the DACPAC included in the **db** folder of the main project with the following configuration:
-  ![](/docs_assets/images/Installation/CreatingProduct/12_1.png)
+  ![](../docs_assets/images/Installation/CreatingProduct/12_1.png)
 
 * **Master** as a reference to the system database:
-  ![](/docs_assets/images/Installation/CreatingProduct/12_2.png)
+  ![](../docs_assets/images/Installation/CreatingProduct/12_2.png)
 
 ## 13. Fix dependencies
 
 Fix the failed project dependencies by using those included in the
 **packages\Flexygo.x.x.xx.xx\lib\net46** folder of the solution.
 
-![](/docs_assets/images/Installation/CreatingProduct/13.png)
+![](../docs_assets/images/Installation/CreatingProduct/13.png)
 
 ## 14. Fix the BBDD build script
 
@@ -97,7 +97,7 @@ go to **Build Events** and change the product name in the existing command from 
 
 powershell -ExecutionPolicy Unrestricted -Command "& '$(SolutionDir)fhnamepropagator\db\mergeSSDTScripts.ps1' '$(SolutionDir)' '$(ProjectName)' '$(OutputPath)' '$(TargetPath)'
 
-![](/docs_assets/images/Installation/CreatingProduct/14.png)
+![](../docs_assets/images/Installation/CreatingProduct/14.png)
 
 ## 15. Define assembly name and namespace
 
@@ -111,7 +111,7 @@ Replace **flx** with <fh-copy><span class="propagated-projectname"></span></fh-c
 
 Replace **flxDB** with <fh-copy><span class="propagated-projectname"></span>BD</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingProduct/15.png)
+![](../docs_assets/images/Installation/CreatingProduct/15.png)
 
 ## 16. TypeScript
 

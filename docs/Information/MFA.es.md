@@ -19,17 +19,17 @@ En flexygo entendemos que no todos los usuarios requieren el mismo nivel de segu
 
 En primer lugar, tenemos 2 nuevos ajustes:
 
-![](/docs_assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
+![](../docs_assets/images/MFA/mfa_settings.png "Image 1. MFA Settings")
 
 * **MFA_cookie_duration**: En esta sección puedes definir el número de días durante los cuales estará activo el mensaje "¿Confiar en este dispositivo?".
 * **MFA_Type**: En esta sección el administrador puede definir qué tipo de MFA se utilizará.
 
 Después de configurar estos parámetros como consideremos oportuno, podemos definir a nivel de usuario o rol a quién activar el MFA.
 
-![](/docs_assets/images/MFA/mfa_user.png "Image 2. MFA in user")
+![](../docs_assets/images/MFA/mfa_user.png "Image 2. MFA in user")
 
-![](/docs_assets/images/MFA/mfa_role.png "Image 3. MFA in role")
+![](../docs_assets/images/MFA/mfa_role.png "Image 3. MFA in role")
 
 Finalmente, si intentamos iniciar sesión con un usuario que tenga MFA activo, veremos la siguiente pantalla para introducir nuestro código de seguridad:
 
-![](/docs_assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")
+![](../docs_assets/images/MFA/mfa_screen.png "Image 4. MFA Screen")

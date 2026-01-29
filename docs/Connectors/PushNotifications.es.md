@@ -12,7 +12,7 @@ Para utilizar notificaciones push en el navegador **es obligatorio disponer de u
 
 2\. Una vez tengas tu clave, complétala en los ajustes de **Push API Key**:
 
-![](/docs_assets/images/Push/Push_1.png "Image 1. API Key settings")
+![](../docs_assets/images/Push/Push_1.PNG "Image 1. API Key settings")
 
 3\. Completa tu tabla de notificaciones o tu objeto de notificación, seleccionando el tipo de notificación que deseas habilitar. Existen distintos tipos de notificaciones push:
 
@@ -21,7 +21,7 @@ Para utilizar notificaciones push en el navegador **es obligatorio disponer de u
 * **pushmobile**: notificaciones push enviadas solo a dispositivos móviles con la app de **flexygo** instalada.  
 * **pushweb**: notificaciones push enviadas únicamente al navegador web (requiere certificado HTTPS obligatorio).
 
-![](/docs_assets/images/Push/Push_2.png "Image 2. API Key setting")
+![](../docs_assets/images/Push/Push_2.PNG "Image 2. API Key setting")
 
 ## Uso de sentencias de notificación
 

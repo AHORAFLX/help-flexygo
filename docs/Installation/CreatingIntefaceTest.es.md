@@ -14,7 +14,7 @@ Pon aquí el nombre de producto, para que así los nombres te aparezcan actualiz
 
 Agregamos un nuevo proyecto <fh-copy><span class="propagated-projectname"></span>InterfaceTest</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/2.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/2.png)
 
 ## 3. Abrir grabador de test
 
@@ -27,31 +27,31 @@ _Si es la primera vez que lo ejecutamos, nos dará un error de permisos y debere
 ./bin/Debug/net6.0/playwright.ps1 codegen http://localhost/Sample\_Project
 ```
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/3.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/3.png)
 
 ## 4. Seguir el asistente 
 
 Se nos abrirá un asistente que generará el código automáticamente según vamos navegando por nuestra aplicación:
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/4.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/4.png)
 
 ## 5. Pegar código autogenerado
 
 Copiaremos y pegaremos el código autogenerado que nos interese a la clase en el espacio asignado a tal fin.
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/5.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/5.png)
 
 ## 6. Configurar parámetros
 
 Configuraremos los parametros por defecto en el fichero **appsettings.json** o los especificos de nuestro pc en **appsettings.local.json** .
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/6.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/6.png)
 
 ## 7. Ejecutar pruebas
 
 Abrimos el explorador de pruebas y ejecutamos las pruebas para comprobar que todo está OK.
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/7.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/7.png)
 
 ## 8. Abrir yraza
 
@@ -61,4 +61,4 @@ Podemos abrir la traza del test usando el siguiente comando.
 ./bin/Debug/net6.0/playwright.ps1 show-trace ./Sample\_Project\_InterfaceTest/bin/Debug/net6.0/tracing/SaveObject.zip
 ```
 
-![](/docs_assets/images/Installation/CreatingIntefaceTest/8.png)
+![](../docs_assets/images/Installation/CreatingIntefaceTest/8.png)

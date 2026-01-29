@@ -28,7 +28,7 @@ SELECT Top 3 \* FROM objects
 
 **Ejemplo:**
 
-![SQL Feed en modo cuadrícula](/docs_assets/images/WebComponent/SQLFeedGrid.png "SQL Feed en modo cuadrícula")
+![SQL Feed en modo cuadrícula](../docs_assets/images/WebComponent/SQLFeedGrid.png "SQL Feed en modo cuadrícula")
 
 ### Modo vista
 
@@ -42,7 +42,7 @@ SELECT Top 1 \* FROM objects
 
 **Ejemplo:**
 
-![SQL Feed en modo vista](/docs_assets/images/WebComponent/SQLFeedView.png "SQL Feed en modo vista")
+![SQL Feed en modo vista](../docs_assets/images/WebComponent/SQLFeedView.png "SQL Feed en modo vista")
 
 ## Módulo RSS
 

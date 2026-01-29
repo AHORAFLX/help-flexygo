@@ -2,7 +2,7 @@
 
 **Easy Pie**, **Easy Info**, **Easy Line** y **Sparklines** son algunos de los componentes web que puedes usar para crear gráficos. Combinados en un módulo HTML, puedes obtener resultados similares a los siguientes:
 
-![Sample charts](/docs_assets/images/Charts/Main.png "Sample charts")
+![Sample charts](../docs_assets/images/Charts/Main.png "Sample charts")
 
 ## Easy Line
 
@@ -30,7 +30,7 @@ Puedes añadir un easy line simplemente agregando el componente web **flx-easyli
 
 Usa cualquiera de los tres tamaños predefinidos: small, medium o large. También puedes dejar el tamaño vacío y el componente se ajustará automáticamente.
 
-![Easy line charts](/docs_assets/images/Charts/EasyLine.png "Easy line charts")
+![Easy line charts](../docs_assets/images/Charts/EasyLine.png "Easy line charts")
 
 ### Opciones
 
@@ -76,7 +76,7 @@ Este componente se usa principalmente en Timeline, pero también puedes añadirl
 <flx-timeline-progressbar color="#ee9e1f" percentage="87">Custom template</flx-timeline-progressbar>
 ```
 
-![Timeline charts](/docs_assets/images/Charts/Timeline.png "Timeline charts")
+![Timeline charts](../docs_assets/images/Charts/Timeline.png "Timeline charts")
 
 ### Opciones
 
@@ -114,7 +114,7 @@ O añadiendo directamente el componente web:
 
 Usa cualquiera de los tres tamaños: small, medium o large.
 
-![Pie charts](/docs_assets/images/Charts/Pies.png "Pie charts")
+![Pie charts](../docs_assets/images/Charts/Pies.png "Pie charts")
 
 ### Opciones
 
@@ -172,7 +172,7 @@ O añadiendo directamente el componente:
 
 Usa cualquiera de los tres tamaños predefinidos.
 
-![Easy info charts](/docs_assets/images/Charts/Info.png "Easy info charts")
+![Easy info charts](../docs_assets/images/Charts/Info.png "Easy info charts")
 
 ### Opciones
 
@@ -236,15 +236,15 @@ Puedes usar cualquiera de los tres tamaños: small, medium o large, en cualquier
 
 ### Small
 
-![SparkLine charts](/docs_assets/images/Charts/SparkLine.png "SparkLine charts small"){ .sparkline-small }
+![SparkLine charts](../docs_assets/images/Charts/SparkLine.png "SparkLine charts small"){ .sparkline-small }
 
 ### Medium
 
-![SparkLine charts](/docs_assets/images/Charts/SparkLine.png "SparkLine charts medium"){ .sparkline-medium }
+![SparkLine charts](../docs_assets/images/Charts/SparkLine.png "SparkLine charts medium"){ .sparkline-medium }
 
 ### Large
 
-![SparkLine charts](/docs_assets/images/Charts/SparkLine.png "SparkLine charts large"){ .sparkline-large }
+![SparkLine charts](../docs_assets/images/Charts/SparkLine.png "SparkLine charts large"){ .sparkline-large }
 
 ### Opciones
 

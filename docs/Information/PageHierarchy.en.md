@@ -4,7 +4,7 @@
 
 ## Layouts
 
-![Layouts](/docs_assets/images/Information/Layouts.png "Layouts")
+![Layouts](../docs_assets/images/Information/Layouts.png "Layouts")
 
 Click <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="SysLayouts">here</flx-navbutton> to go to layouts list.
 
@@ -47,32 +47,32 @@ There are several pre built module containers that can be used with your modules
 
 ### Default
 
-![](/docs_assets/images/PageHierarchy/Default.png)
+![](../docs_assets/images/PageHierarchy/Default.png)
 
 ### Default with roundBorders CSS Class
 
-![](/docs_assets/images/PageHierarchy/Default-round.png)
+![](../docs_assets/images/PageHierarchy/Default-round.png)
 
 ### Clean
 
-![](/docs_assets/images/PageHierarchy/Clean.png)
+![](../docs_assets/images/PageHierarchy/Clean.png)
 
 ### Clean with roundBorders CSS Class
 
-![](/docs_assets/images/PageHierarchy/Clean-round.png)
+![](../docs_assets/images/PageHierarchy/Clean-round.png)
 
 ### No Header
 
-![](/docs_assets/images/PageHierarchy/No-header.png)
+![](../docs_assets/images/PageHierarchy/No-header.png)
 
 ### No Header with roundBorders CSS Class
 
-![](/docs_assets/images/PageHierarchy/No-header-round.png)
+![](../docs_assets/images/PageHierarchy/No-header-round.png)
 
 ### Empty
 
-![](/docs_assets/images/PageHierarchy/Empty.png)
+![](../docs_assets/images/PageHierarchy/Empty.png)
 
 ### None
 
-![](/docs_assets/images/PageHierarchy/None.png)
+![](../docs_assets/images/PageHierarchy/None.png)

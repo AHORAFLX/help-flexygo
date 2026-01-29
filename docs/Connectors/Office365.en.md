@@ -1,6 +1,6 @@
 # Office 365 Integration { .flx-title-with-image }
 
-![Office 365](/docs_assets/images/Office365/Office365Logo.png){ .fh-image-of-title }
+![Office 365](../docs_assets/images/Office365/Office365Logo.png){ .fh-image-of-title }
 
 In order to make calls to Microsoft Graph, which is a RESTfull web API, that enables you to access Microsoft Cloud service resources, it is required to register your app and get authentication tokens for a user or service. If you want to develop an office integration from **flexygo** platform you have two options:
 
@@ -12,13 +12,13 @@ Register your app using the [Azure portal](https://docs.microsoft.com/en-us/grap
 Other example [link](https://www.re-mark-able.net/how-to-access-data-from-the-beta-channel-of-graph-api/).  
 In addition to registering the application in Azure make sure to enable access permissions to Contacts and Calendars.
 
-![](/docs_assets/images/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
+![](../docs_assets/images/Office365/Office365APIPermissions.png "Image 1. Office 365 API Permissions")
 
-![](/docs_assets/images/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
+![](../docs_assets/images/Office365/Office365AgregPermissions.png "Image 2. Office 365 API Agregate Permissions")
 
-![](/docs_assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
+![](../docs_assets/images/Office365/Office365CalPermissions.png "Image 3. Office 365 API Calendars Permissions")
 
-![](/docs_assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
+![](../docs_assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
 
 Inform the base URL of your app + `/Webhooks/OfficeToken.aspx` as your redirect URl's. Fill office setting fields with your app **client id**, **tenant id** and genereted **secret**.
 

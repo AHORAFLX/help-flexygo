@@ -10,9 +10,9 @@ Pon aquí el nombre de producto, para que así los nombres te aparezcan actualiz
 
 Agregamos un nuevo proyecto llamado <fh-copy><span class="propagated-projectname"></span>UnitTest</fh-copy>
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/2_1.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/2_1.png)
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/2_2.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/2_2.png)
 
 ## 3. Agregar referencias
 
@@ -20,17 +20,17 @@ Agregaremos las referencias necesarias
 
 System.web la agregaremos de los ensamblados y el resto del paquete nuget de flexygo
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/3.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/3.png)
 
 ## 4. Configurar
 
 Añadiremos los datos de configuración necesarios
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/4_1.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/4_1.png)
 
 Si Visual Studio nos añade un espacio de nombres en el nombre de la cadena de conexión lo elimiaremos.
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/4_2.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/4_2.png)
 
 ## 5. Añadir el código
 
@@ -141,4 +141,4 @@ End Class
 
 Abrimos el **explorador de pruebas** y ejecutamos las pruebas para comprobar que todo está OK.
 
-![](/docs_assets/images/Installation/CreatingUnitaryTest/6.png)
+![](../docs_assets/images/Installation/CreatingUnitaryTest/6.png)
