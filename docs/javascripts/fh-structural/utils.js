@@ -1,5 +1,4 @@
 const FH_CULTURES = new Object(); //The object with every culture translations
-const DEFAULT_LANGUAGE = 'en';
 const LANGUAGES = ['en', 'es'];
 
 let navigation_dialog;

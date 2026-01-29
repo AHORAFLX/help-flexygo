@@ -14,7 +14,7 @@ theme:
       toggle:
         icon: octicons/sun-16
         name: Switch to light mode
-  language: en
+  language: es
   features:
     - navigation.path
     - navigation.expand # Expanded sections in sidebar
@@ -61,6 +61,7 @@ extra_javascript:
   - javascripts/fh-structural/components/fh-namepropagator.js
   - javascripts/fh-structural/components/flx-navbutton.js
   ## Translation files
+  - javascripts/cultures/default_language.js
   - javascripts/cultures/es.js
   - javascripts/cultures/en.js
 
@@ -103,10 +104,10 @@ plugins:
       docs_structure: suffix
       languages:
         - locale: en
-          default: true
           name: English
           build: true
         - locale: es
+          default: true
           name: Español
           build: true
           # Here goes every menu translation for Spanish ↓
