@@ -21,9 +21,6 @@
       
     
     
-      
-        <base href="../../..">
-      
       <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
@@ -3626,6 +3623,29 @@ Este parámetro puede usar los valores por defecto de la página.</p>
       
         <script src="../../../javascripts/extra.js"></script>
       
+        <script>
+          (function(){
+            try{
+              var cfgEl = document.getElementById('__config');
+              if(!cfgEl) return;
+              var cfg = JSON.parse(cfgEl.textContent || cfgEl.innerText || '{}');
+              var base = cfg.base || '/';
+              if(!base) base = '/';
+              var baseNorm = base.endsWith('/') ? base : base + '/';
+              document.querySelectorAll('img').forEach(function(img){
+                var s = img.getAttribute('src');
+                if(!s) return;
+                var idx = s.indexOf('docs_assets');
+                if(idx !== -1){
+                  var rel = s.substring(idx);
+                  img.src = baseNorm + rel;
+                }
+              });
+            }catch(e){
+              console.warn('fix-images-base error', e);
+            }
+          })();
+        </script>
     
     <dialog id="navigation-dialog" closedby="any">
       <p class="input-group">
