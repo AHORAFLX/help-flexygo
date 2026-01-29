@@ -3377,24 +3377,24 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/setting.png" data-desc-position="bottom"><img alt="Import settings" src="/docs_assets/images/Imports/setting.png" title="Image 1. Create Import Setting"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/setting.png" data-desc-position="bottom"><img alt="Import settings" src="../../../docs_assets/images/Imports/setting.png" title="Image 1. Create Import Setting"></a></p>
 <h2 id="excel">Excel<a class="headerlink" href="#excel" title="Permanent link">¶</a></h2>
 <p>El formato que deben seguir los archivos tipo Excel es como se muestra en la siguiente imagen.</p>
 <p>La primera fila debe ser los nombres de las columnas, no pueden estar vacías, no pueden contener caracteres especiales, espacios ni la letra ñ. En cualquier caso, el sistema reemplazará cualquier carácter no aceptado.</p>
 <p>Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas sigue los mismos criterios que las columnas.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/excel.png" data-desc-position="bottom"><img alt="Excel example" src="/docs_assets/images/Imports/excel.png" title="Image 2. Excel example"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/excel.png" data-desc-position="bottom"><img alt="Excel example" src="../../../docs_assets/images/Imports/excel.png" title="Image 2. Excel example"></a></p>
 <h2 id="ejemplo-de-proceso">Ejemplo de Proceso<a class="headerlink" href="#ejemplo-de-proceso" title="Permanent link">¶</a></h2>
 <ol>
 <li>Agregarlo al repositorio de procesos de flexygo en <strong>Área de Trabajo de Administración</strong> &gt; <strong>Lógica y Reglas</strong> &gt; <strong>Procedimientos Almacenados de DB o Dll de Servidor</strong>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/process.png" data-desc-position="bottom"><img alt="Create Process" src="/docs_assets/images/Imports/process.png" title="Image 3. Create Process"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/process.png" data-desc-position="bottom"><img alt="Create Process" src="../../../docs_assets/images/Imports/process.png" title="Image 3. Create Process"></a></p>
 <p><fh-modal class="button" modal_id="fhmodal_stored" modal_title="Proceso almacenado">Ejemplo Almacenado</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_dll" modal_title="Dll">Ejemplo DLL</fh-modal>
 <fh-modal class="button" modal_id="fhmodal_json" modal_title="Json">Ejemplo de valor Json</fh-modal></p>
 <h2 id="ejecutar-importacion">Ejecutar importación<a class="headerlink" href="#ejecutar-importacion" title="Permanent link">¶</a></h2>
 <p>Para ejecutar la importación se encuentra en el menú superior Herramientas-&gt;Importar.</p>
 <p>En la ventana del proceso aparece un botón para descargar la plantilla del archivo que se ha colocado previamente en la creación de la configuración.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Imports/process_window.png" data-desc-position="bottom"><img alt="Process window" src="/docs_assets/images/Imports/process_window.png" title="Image 4. Process window"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Imports/process_window.png" data-desc-position="bottom"><img alt="Process window" src="../../../docs_assets/images/Imports/process_window.png" title="Image 4. Process window"></a></p>
 <div id="fhmodal_stored" class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-fhmodal_stored-1"><a id="__codelineno-fhmodal_stored-1" name="__codelineno-fhmodal_stored-1" href="#__codelineno-fhmodal_stored-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">pImportacion</span><span class="p">]</span>
 </span><span id="__span-fhmodal_stored-2"><a id="__codelineno-fhmodal_stored-2" name="__codelineno-fhmodal_stored-2" href="#__codelineno-fhmodal_stored-2"></a><span class="o">@</span><span class="n">JSONVALUE</span><span class="w"> </span><span class="n">nvarchar</span><span class="p">(</span><span class="k">max</span><span class="p">)</span>
 </span><span id="__span-fhmodal_stored-3"><a id="__codelineno-fhmodal_stored-3" name="__codelineno-fhmodal_stored-3" href="#__codelineno-fhmodal_stored-3"></a><span class="k">as</span>

@@ -3507,7 +3507,7 @@
 <h2 id="document-manager">Document Manager<a class="headerlink" href="#document-manager" title="Permanent link">¶</a></h2>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h3>
 <p>First of all, you need to enable document manager before staring to use it by following some simple steps. From any object page (view or edit) go to the right-hand side toolbox and click on document settings.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocumentBar.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocumentBar.png" title="Image 1. Document Bar"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocumentBar.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocumentBar.png" title="Image 1. Document Bar"></a></p>
 <p>Fill out the following form.</p>
 <ul>
 <li><strong>Type</strong>: Select flexygo standard</li>
@@ -3518,20 +3518,20 @@
 <li><strong>Category Filter</strong>: From the list of categories select which ones to use with that object</li>
 <li><strong>Permisions</strong>: Select which options should be available for documents on the current object</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocSettings.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocSettings.png" title="Image 2. Document Settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocSettings.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocSettings.png" title="Image 2. Document Settings"></a></p>
 <p>Now from the object relations process menu you can access to any document related to your object.</p>
 <h3 id="viewing-documents">Viewing documents<a class="headerlink" href="#viewing-documents" title="Permanent link">¶</a></h3>
 <p>There are different options to show document manager. We will explain some of them.</p>
 <h3 id="adding-a-link-to-documents">Adding a link to documents<a class="headerlink" href="#adding-a-link-to-documents" title="Permanent link">¶</a></h3>
 <p>You can use easy info objects to obtain something like this:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocLinks.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocLinks.png" title="Image 3. Document Links"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocLinks.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocLinks.png" title="Image 3. Document Links"></a></p>
 <p>Add an onclick event to open generic document manager page with the document manager module.</p>
 <div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">flexygo</span><span class="p">.</span><span class="nx">nav</span><span class="p">.</span><span class="nx">openPage</span><span class="p">(</span><span class="s1">'list'</span><span class="p">,</span><span class="s1">'Documents_Object'</span><span class="p">,</span><span class="s1">'Documents_Objects.ObjectId = \'{{MyobjectId}}\' And Documents_Objects.ObjectName = \'MyObjectName\''</span><span class="p">,</span><span class="s1">'\'ObjectId\':{{MyobjectId}},\'ObjectName\':\'MyObjectName\''</span><span class="p">,</span><span class="s1">'popup1024x678'</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">))</span><span class="err">"</span>
 </span></code></pre></div>
 <h3 id="adding-a-document-manager-module">Adding a document manager module<a class="headerlink" href="#adding-a-document-manager-module" title="Permanent link">¶</a></h3>
 <p>With this module you can upload documents to the selected object. To add this module you must fill in the following fields of the configuration form:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocManager.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocManager.png" title="Image 4. Document Manager"></a></p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocManagerConf.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocManagerConf.png" title="Image 5. Document Manager Configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocManager.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocManager.png" title="Image 4. Document Manager"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocManagerConf.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocManagerConf.png" title="Image 5. Document Manager Configuration"></a></p>
 <p>For the correct configuration of this module it is necessary to fill in the following fields:</p>
 <ul>
 <li><strong>Id:</strong> Identify the module</li>
@@ -3544,13 +3544,13 @@
 </ul>
 <h3 id="adding-a-document-viewer-module">Adding a Document Viewer module<a class="headerlink" href="#adding-a-document-viewer-module" title="Permanent link">¶</a></h3>
 <p>This module has the same features tha? the document manager, but there is no option to upload documents and already uploaded documents can't be modified or deleted.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocManagerViewer.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocManagerViewer.png" title="Image 6. Document Manager Viewer"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocManagerViewer.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocManagerViewer.png" title="Image 6. Document Manager Viewer"></a></p>
 <h2 id="all-documents-in-the-system">All documents in the system<a class="headerlink" href="#all-documents-in-the-system" title="Permanent link">¶</a></h2>
 <p>You also have the access to see all documents in your flexygo project. Go to the Admin Work Area &gt; Reporting &gt; Documemt Viewer.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocumentManager.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocumentManager.png" title="Image 7. Document Manager"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocumentManager.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocumentManager.png" title="Image 7. Document Manager"></a></p>
 <h2 id="document-classification-manager">Document Classification Manager<a class="headerlink" href="#document-classification-manager" title="Permanent link">¶</a></h2>
 <p>This module enables you to access to every category of your documents. When you click on one category it will open a document manager page, with only the documents of the category selected.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocumentClassificationManager.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocumentClassificationManager.png" title="Image 8. Document Classification Manage"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocumentClassificationManager.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocumentClassificationManager.png" title="Image 8. Document Classification Manage"></a></p>
 <h3 id="adding-a-link-to-open-the-classification-manager">Adding a link to open the Classification Manager<a class="headerlink" href="#adding-a-link-to-open-the-classification-manager" title="Permanent link">¶</a></h3>
 <p>Onclik event to open generic document classsification manager.</p>
 <div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">flexygo</span><span class="p">.</span><span class="nx">nav</span><span class="p">.</span><span class="nx">openPageName</span><span class="p">(</span><span class="s1">'syspage-documents-classification'</span><span class="p">,</span><span class="s1">'sysDocumentsCategories'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">'{\'ObjectId\':\'{{MyobjectId}}\',\'ObjectName\':\'{{MyObjectName}}\'}'</span><span class="p">,</span><span class="s1">'popup1024x678'</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">))</span>
@@ -3561,9 +3561,9 @@
 <h2 id="image-manager">Image Manager<a class="headerlink" href="#image-manager" title="Permanent link">¶</a></h2>
 <h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">¶</a></h3>
 <p>From any object form (view or edit) go to the right-hand side toolbox and click on image manager.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/ImageBar.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/ImageBar.png" title="Image 9. Image Bar"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/ImageBar.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/ImageBar.png" title="Image 9. Image Bar"></a></p>
 <p>Fill out the following form and you are ready to go.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/ImageSettings.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/ImageSettings.png" title="Image 10. Image Settings"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/ImageSettings.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/ImageSettings.png" title="Image 10. Image Settings"></a></p>
 <p>Now from the object relations process menu you can access any image related to your object.</p>
 <ul>
 <li><strong>Type</strong>: Select flexygo Standard</li>
@@ -3575,15 +3575,15 @@
 <p>There are basicaly three options:</p>
 <h3 id="adding-a-link-to-the-images">Adding a link to the images<a class="headerlink" href="#adding-a-link-to-the-images" title="Permanent link">¶</a></h3>
 <p>You can use easy info objects to obtain something like this:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/DocLinks.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/DocLinks.png" title="Image 11. Image Links"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/DocLinks.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/DocLinks.png" title="Image 11. Image Links"></a></p>
 <p>Basically add an onclik event to open generic image manager page with the image manager module.</p>
 <div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">flexygo</span><span class="p">.</span><span class="nx">nav</span><span class="p">.</span><span class="nx">openPage</span><span class="p">(</span><span class="s1">'list'</span><span class="p">,</span><span class="s1">'sysObjectImages'</span><span class="p">,</span><span class="s1">'Objects_Images.ObjectId = \'{{MyobjectId}}\' And Objects_Images.ObjectName = \'MyObjectName\''</span><span class="p">,</span><span class="s1">'{\'ObjectId\':{{MyobjectId}},\'ObjectName\':\'MyObjectName\'}'</span><span class="p">,</span><span class="s1">'popup1024x678'</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="err">"</span><span class="p">);</span>
 </span></code></pre></div>
 <h3 id="adding-an-image-manager-module">Adding an image manager module<a class="headerlink" href="#adding-an-image-manager-module" title="Permanent link">¶</a></h3>
 <p>With this module you can upload images to the selected object.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/ImageManager.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/ImageManager.png" title="Image 12. Image Manager"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../docs_assets/images/ModulesConf/ImageManager.png" data-desc-position="bottom"><img alt="" src="../docs_assets/images/ModulesConf/ImageManager.png" title="Image 12. Image Manager"></a></p>
 <p>To add this module you must fill in the following fields on the configuration form:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/imageManagerConf.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/imageManagerConf.png" title="Image 13. Image Manager Configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/imageManagerConf.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/imageManagerConf.png" title="Image 13. Image Manager Configuration"></a></p>
 <p>For the correct configuration of this module it is necessary to fill in the following fields:</p>
 <ul>
 <li><strong>Id:</strong> Identify the module</li>
@@ -3596,10 +3596,10 @@
 </ul>
 <h3 id="adding-an-image-viewer-module">Adding an Image Viewer module<a class="headerlink" href="#adding-an-image-viewer-module" title="Permanent link">¶</a></h3>
 <p>The actual Image manager module is also used as a viewer. it has its own presentation mode:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/ImageViewer.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/ImageViewer.png" title="Image 14. Image Manager Configuration"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/ImageViewer.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/ImageViewer.png" title="Image 14. Image Manager Configuration"></a></p>
 <h2 id="image-classification-manager">Image Classification Manager<a class="headerlink" href="#image-classification-manager" title="Permanent link">¶</a></h2>
 <p>This module enables you to access to every category of your images. When you click on one category it will open a image manager page, with only the images of the category selected.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/ModulesConf/ImageClassificationManager.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/ModulesConf/ImageClassificationManager.png" title="Image 15. Image Classification Manage"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/ImageClassificationManager.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/ImageClassificationManager.png" title="Image 15. Image Classification Manage"></a></p>
 <h3 id="adding-a-link-to-the-image-classification-manager">Adding a link to the Image Classification Manager<a class="headerlink" href="#adding-a-link-to-the-image-classification-manager" title="Permanent link">¶</a></h3>
 <p>Onclik event to open generic document classsification manager.</p>
 <div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">flexygo</span><span class="p">.</span><span class="nx">nav</span><span class="p">.</span><span class="nx">openPageName</span><span class="p">(</span><span class="s1">'syspage-images-classification'</span><span class="p">,</span><span class="s1">'sysObjectImagesClassifications'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">'{\'ObjectId\':\'{{MyobjectId}}\',\'ObjectName\':\'{{MyObjectName}}\'}'</span><span class="p">,</span><span class="s1">'popup1024x678'</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">))</span>

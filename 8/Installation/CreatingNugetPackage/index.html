@@ -3391,25 +3391,25 @@
 <h2 id="2-publish">2. Publish <span class="propagated-projectname"></span><a class="headerlink" href="#2-publish" title="Permanent link">¶</a></h2>
 <p>We will publish the main project to a <strong>publish</strong> folder inside any directory external to the project. Example: <code>C:\Temp\Publish</code></p>
 <p>Once published, we will copy into this <strong>Publish</strong> folder the <strong>Scripts</strong> folder located in the main project, if it exists.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingNugetPackages/2.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingNugetPackages/2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingNugetPackages/2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingNugetPackages/2.png"></a></p>
 <h2 id="3-publish-bd">3. Publish <span class="propagated-projectname"></span>BD<a class="headerlink" href="#3-publish-bd" title="Permanent link">¶</a></h2>
 <p>We will publish the configuration database project and copy the resulting <strong>dacpac</strong> into the <strong>publish\db</strong> folder.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingNugetPackages/3.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingNugetPackages/3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingNugetPackages/3.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingNugetPackages/3.png"></a></p>
 <h2 id="4-nuget-utilities">4. NuGet utilities<a class="headerlink" href="#4-nuget-utilities" title="Permanent link">¶</a></h2>
 <p>Download the file <a href="./readme/utils/nuget.zip">nuget.zip</a> and extract it at the same level as the <strong>publish</strong> folder (according to the example, <code>C:\Temp</code>).</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingNugetPackages/4.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingNugetPackages/4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingNugetPackages/4.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingNugetPackages/4.png"></a></p>
 <h2 id="5-confignuspec-file">5. config.nuspec file<a class="headerlink" href="#5-confignuspec-file" title="Permanent link">¶</a></h2>
 <p>Edit the <strong>config.nuspec</strong> file to adapt the values to your project.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingNugetPackages/5.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingNugetPackages/5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingNugetPackages/5.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingNugetPackages/5.png"></a></p>
 <h2 id="6-generate-the-nuget-package">6. Generate the NuGet package<a class="headerlink" href="#6-generate-the-nuget-package" title="Permanent link">¶</a></h2>
 <p>Open a command prompt and run the following command:</p>
 <div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">nuget</span> <span class="n">pack</span> <span class="n">config</span><span class="p">.</span><span class="n">nuspec</span>
 </span></code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingNugetPackages/6.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingNugetPackages/6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingNugetPackages/6.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingNugetPackages/6.png"></a></p>
 <h2 id="7-installation">7. Installation<a class="headerlink" href="#7-installation" title="Permanent link">¶</a></h2>
 <p>Copy the <strong>nupkg</strong> file to a folder together with the <a href="https://docs.flexygo.com/Setup/FlexyGoInstaller.zip">flexygo</a> installer. The installer will detect that there is a package different from flexygo and will ask whether you want to install it instead. 
 After that, follow the usual steps, and if everything has worked correctly, your product will be installed.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/docs_assets/images/Installation/CreatingNugetPackages/7.png" data-desc-position="bottom"><img alt="" src="/docs_assets/images/Installation/CreatingNugetPackages/7.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/Installation/CreatingNugetPackages/7.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/Installation/CreatingNugetPackages/7.png"></a></p>
 
 
 
