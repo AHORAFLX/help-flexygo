@@ -1,1445 +1,1445 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>None./</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Ahora%20Business%20Hub/AbhSign/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneAhora%20Business%20Hub/AbhSign/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Ahora%20Business%20Hub/AbhSign/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Ahora%20Business%20Hub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneAhora%20Business%20Hub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Ahora%20Business%20Hub/AbhSign/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Ahora%20Business%20Hub/AbhSms/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneAhora%20Business%20Hub/AbhSms/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Ahora%20Business%20Hub/AbhSms/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Ahora%20Business%20Hub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneAhora%20Business%20Hub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Ahora%20Business%20Hub/AbhSms/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Ahora%20Business%20Hub/AbhTicket/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneAhora%20Business%20Hub/AbhTicket/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Ahora%20Business%20Hub/AbhTicket/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Ahora%20Business%20Hub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneAhora%20Business%20Hub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Ahora%20Business%20Hub/AbhTicket/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/AhoraERP/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/AhoraERP/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/AhoraERP/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AhoraERP/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/AzureADIntegration/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/AzureADIntegration/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/AzureADIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureADIntegration/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/AzureFormRecognizer/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/AzureFormRecognizer/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/AzureFormRecognizer/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureFormRecognizer/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/ClaveAuthentication/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/ClaveAuthentication/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/ClaveAuthentication/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/ClaveAuthentication/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/FaceRecognition/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/FaceRecognition/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/FaceRecognition/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/FaceRecognition/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/Google/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/Google/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/Google/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Google/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/GoogleAPIKey/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/GoogleAPIKey/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/GoogleAPIKey/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GoogleAPIKey/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/GooglePlaces/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/GooglePlaces/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/GooglePlaces/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GooglePlaces/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/MailChimp/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/MailChimp/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/MailChimp/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimp/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/MailChimpProcesses/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/MailChimpProcesses/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/MailChimpProcesses/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimpProcesses/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/Office365/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/Office365/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/Office365/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Office365/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/OpenAI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/OpenAI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/OpenAI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OpenAI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/OtherflexygoIntegration/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/OtherflexygoIntegration/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/OtherflexygoIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OtherflexygoIntegration/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/Passbook/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/Passbook/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/Passbook/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Passbook/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/PowerBI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/PowerBI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/PowerBI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PowerBI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/PushNotifications/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/PushNotifications/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/PushNotifications/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PushNotifications/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/RedSys/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/RedSys/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/RedSys/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/RedSys/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/Scales/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/Scales/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/Scales/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Scales/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/SendinBlue/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/SendinBlue/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/SendinBlue/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/SendinBlue/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Connectors/WacomSignature/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneConnectors/WacomSignature/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Connectors/WacomSignature/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Connectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/WacomSignature/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/Addons/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/Addons/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/Addons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Addons/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/FriendlyURLs/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/FriendlyURLs/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/FriendlyURLs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/FriendlyURLs/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/GoodPractices/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/GoodPractices/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/GoodPractices/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/GoodPractices/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/MFA/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/MFA/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/MFA/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MFA/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/MailAccountsSettings/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/MailAccountsSettings/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/MailAccountsSettings/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MailAccountsSettings/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/Navigator/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/Navigator/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/Navigator/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Navigator/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/PageHierarchy/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/PageHierarchy/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/PageHierarchy/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/PageHierarchy/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Information/Security/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInformation/Security/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Information/Security/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Information/Security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Security/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Installation/1HowToInstall/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInstallation/1HowToInstall/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Installation/1HowToInstall/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Installation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/1HowToInstall/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Installation/CreatingIntefaceTest/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInstallation/CreatingIntefaceTest/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Installation/CreatingIntefaceTest/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Installation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingIntefaceTest/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Installation/CreatingNugetPackage/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInstallation/CreatingNugetPackage/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Installation/CreatingNugetPackage/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Installation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingNugetPackage/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Installation/CreatingProduct/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInstallation/CreatingProduct/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Installation/CreatingProduct/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Installation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingProduct/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Installation/CreatingUnitaryTest/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInstallation/CreatingUnitaryTest/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Installation/CreatingUnitaryTest/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Installation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingUnitaryTest/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Installation/CreatingWebComponent/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneInstallation/CreatingWebComponent/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Installation/CreatingWebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Installation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingWebComponent/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Chart/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Chart/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Chart/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chart/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/ChartII/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/ChartII/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/ChartII/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ChartII/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Chatter/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Chatter/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Chatter/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chatter/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/DocAndImageManager/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/DocAndImageManager/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/DocAndImageManager/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/DocAndImageManager/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Funnel/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Funnel/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Funnel/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Funnel/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Kanban/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Kanban/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Kanban/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Kanban/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Maps/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Maps/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Maps/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Maps/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/ModuleManagement/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/ModuleManagement/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/ModuleManagement/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ModuleManagement/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Modules/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Modules/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Modules/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Modules/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/ObjectFilters/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/ObjectFilters/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/ObjectFilters/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ObjectFilters/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/PlannerModule/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/PlannerModule/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/PlannerModule/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/PlannerModule/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Popover/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Popover/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Popover/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Popover/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/Scheduler%26Calendar/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/Scheduler%26Calendar/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/Scheduler%26Calendar/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/Scheduler%26Calendar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Scheduler%26Calendar/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Scheduler%26Calendar/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/TimelineModule/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/TimelineModule/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/TimelineModule/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/TimelineModule/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Modules/WebMail/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneModules/WebMail/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Modules/WebMail/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Modules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/WebMail/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/AccessandDescription/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/AccessandDescription/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/AccessandDescription/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/AccessandDescription/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/DesignEnvironment/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/DesignEnvironment/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/DesignEnvironment/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/DesignEnvironment/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/DesigningApp/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/DesigningApp/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/DesigningApp/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/DesigningApp/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/NavigationOptions/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/NavigationOptions/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/NavigationOptions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/NavigationOptions/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/OfflineAI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/OfflineAI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/OfflineAI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/OfflineAI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/OfflineAndEmulatordifferences/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/OfflineAndEmulatordifferences/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/OfflineAndEmulatordifferences/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/OfflineAndEmulatordifferences/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/OfflineDatabase/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/OfflineDatabase/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/OfflineDatabase/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/OfflineDatabase/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/ReturnDataProcess/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/ReturnDataProcess/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/ReturnDataProcess/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/ReturnDataProcess/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/Trackingconfiguration/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/Trackingconfiguration/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/Trackingconfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/Trackingconfiguration/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/UsefulTokens/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/UsefulTokens/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/UsefulTokens/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/UsefulTokens/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/AI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/AI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/AI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/AI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Camera/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Camera/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Camera/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Camera/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Exports/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Exports/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Exports/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Exports/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Forms/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Forms/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Forms/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Forms/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Location/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Location/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Location/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Location/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Messages/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Messages/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Messages/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Messages/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/NFC/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/NFC/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/NFC/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/NFC/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Navigation/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Navigation/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Navigation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Navigation/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Online-navigation/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Online-navigation/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Online-navigation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Online-navigation/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Parser/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Parser/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Parser/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Parser/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Utils/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Utils/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Utils/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Utils/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Zebra-Printer/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneOffline%20App/JS%20Functions/Zebra-Printer/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Offline%20App/JS%20Functions/Zebra-Printer/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Offline%20App/JS%20Functions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Zebra-Printer/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/CommonFunctions/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/CommonFunctions/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/CommonFunctions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CommonFunctions/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/ContextVariables/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/ContextVariables/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/ContextVariables/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/ContextVariables/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/Controls/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/Controls/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/Controls/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Controls/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/CustomDLL/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/CustomDLL/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/CustomDLL/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomDLL/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/CustomStored/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/CustomStored/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/CustomStored/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomStored/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/DatabaseScriptJobs/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/DatabaseScriptJobs/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/DatabaseScriptJobs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/DatabaseScriptJobs/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/Events/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/Events/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/Events/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Events/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/FormValidators/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/FormValidators/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/FormValidators/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/FormValidators/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/Imports/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/Imports/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/Imports/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Imports/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/LinkedServers/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/LinkedServers/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/LinkedServers/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/LinkedServers/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/NoticesSentences/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/NoticesSentences/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/NoticesSentences/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/NoticesSentences/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/Testing/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/Testing/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/Testing/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Testing/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/UpdateTypes/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/UpdateTypes/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/UpdateTypes/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/UpdateTypes/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/WebAPI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/WebAPI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/WebAPI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebAPI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Programming/WebComponent/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneProgramming/WebComponent/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Programming/WebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Programming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebComponent/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Reporting/Newsandversionnotes/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneReporting/Newsandversionnotes/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Reporting/Newsandversionnotes/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Reporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneReporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Reporting/Newsandversionnotes/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Style/CSSAndTypography/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneStyle/CSSAndTypography/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Style/CSSAndTypography/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Style/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/CSSAndTypography/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Style/FlagIcons/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneStyle/FlagIcons/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Style/FlagIcons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Style/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/FlagIcons/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Style/GridOptions/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneStyle/GridOptions/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Style/GridOptions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Style/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/GridOptions/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Style/Icon/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneStyle/Icon/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Style/Icon/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Style/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Icon/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Style/Timeline/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneStyle/Timeline/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Style/Timeline/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Style/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Timeline/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Templates/Formats/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTemplates/Formats/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Templates/Formats/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Templates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Formats/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Templates/NavigationButton/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTemplates/NavigationButton/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Templates/NavigationButton/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Templates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/NavigationButton/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Templates/ObjectTemplates/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTemplates/ObjectTemplates/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Templates/ObjectTemplates/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Templates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/ObjectTemplates/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Templates/Skeletons/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTemplates/Skeletons/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Templates/Skeletons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Templates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Skeletons/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Templates/Targets/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTemplates/Targets/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Templates/Targets/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Templates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Targets/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Training/Courses/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTraining/Courses/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Training/Courses/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/Courses/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/Training/VideoTutorials/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>NoneTraining/VideoTutorials/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x/Training/VideoTutorials/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.xes/Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/VideoTutorials/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.x"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="None"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Ahora%20Business%20Hub/AbhSign/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Ahora%20Business%20Hub/AbhSign/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Ahora%20Business%20Hub/AbhSign/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xAhora%20Business%20Hub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Ahora%20Business%20Hub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneAhora%20Business%20Hub/AbhSign/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Ahora%20Business%20Hub/AbhSms/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Ahora%20Business%20Hub/AbhSms/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Ahora%20Business%20Hub/AbhSms/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xAhora%20Business%20Hub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Ahora%20Business%20Hub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneAhora%20Business%20Hub/AbhSms/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Ahora%20Business%20Hub/AbhTicket/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Ahora%20Business%20Hub/AbhTicket/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Ahora%20Business%20Hub/AbhTicket/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xAhora%20Business%20Hub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Ahora%20Business%20Hub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneAhora%20Business%20Hub/AbhTicket/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/AhoraERP/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/AhoraERP/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/AhoraERP/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AhoraERP/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/AzureADIntegration/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/AzureADIntegration/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/AzureADIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureADIntegration/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/AzureFormRecognizer/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/AzureFormRecognizer/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/AzureFormRecognizer/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureFormRecognizer/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/ClaveAuthentication/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/ClaveAuthentication/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/ClaveAuthentication/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/ClaveAuthentication/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/FaceRecognition/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/FaceRecognition/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/FaceRecognition/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/FaceRecognition/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/Google/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/Google/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/Google/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Google/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/GoogleAPIKey/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/GoogleAPIKey/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/GoogleAPIKey/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GoogleAPIKey/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/GooglePlaces/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/GooglePlaces/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/GooglePlaces/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GooglePlaces/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/MailChimp/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/MailChimp/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/MailChimp/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimp/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/MailChimpProcesses/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/MailChimpProcesses/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/MailChimpProcesses/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimpProcesses/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/Office365/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/Office365/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/Office365/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Office365/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/OpenAI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/OpenAI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/OpenAI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OpenAI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/OtherflexygoIntegration/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/OtherflexygoIntegration/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/OtherflexygoIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OtherflexygoIntegration/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/Passbook/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/Passbook/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/Passbook/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Passbook/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/PowerBI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/PowerBI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/PowerBI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PowerBI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/PushNotifications/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/PushNotifications/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/PushNotifications/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PushNotifications/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/RedSys/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/RedSys/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/RedSys/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/RedSys/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/Scales/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/Scales/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/Scales/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Scales/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/SendinBlue/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/SendinBlue/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/SendinBlue/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/SendinBlue/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Connectors/WacomSignature/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Connectors/WacomSignature/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Connectors/WacomSignature/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xConnectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/WacomSignature/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/Addons/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/Addons/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/Addons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Addons/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/FriendlyURLs/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/FriendlyURLs/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/FriendlyURLs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/FriendlyURLs/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/GoodPractices/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/GoodPractices/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/GoodPractices/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/GoodPractices/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/MFA/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/MFA/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/MFA/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MFA/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/MailAccountsSettings/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/MailAccountsSettings/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/MailAccountsSettings/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MailAccountsSettings/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/Navigator/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/Navigator/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/Navigator/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Navigator/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/PageHierarchy/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/PageHierarchy/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/PageHierarchy/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/PageHierarchy/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Information/Security/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Information/Security/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Information/Security/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInformation/Security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Security/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Installation/1HowToInstall/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Installation/1HowToInstall/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Installation/1HowToInstall/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInstallation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/1HowToInstall/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Installation/CreatingIntefaceTest/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Installation/CreatingIntefaceTest/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Installation/CreatingIntefaceTest/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInstallation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingIntefaceTest/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Installation/CreatingNugetPackage/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Installation/CreatingNugetPackage/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Installation/CreatingNugetPackage/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInstallation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingNugetPackage/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Installation/CreatingProduct/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Installation/CreatingProduct/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Installation/CreatingProduct/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInstallation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingProduct/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Installation/CreatingUnitaryTest/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Installation/CreatingUnitaryTest/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Installation/CreatingUnitaryTest/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInstallation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingUnitaryTest/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Installation/CreatingWebComponent/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Installation/CreatingWebComponent/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Installation/CreatingWebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xInstallation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingWebComponent/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Chart/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Chart/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Chart/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chart/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/ChartII/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/ChartII/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/ChartII/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ChartII/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Chatter/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Chatter/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Chatter/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chatter/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/DocAndImageManager/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/DocAndImageManager/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/DocAndImageManager/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/DocAndImageManager/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Funnel/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Funnel/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Funnel/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Funnel/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Kanban/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Kanban/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Kanban/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Kanban/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Maps/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Maps/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Maps/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Maps/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/ModuleManagement/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/ModuleManagement/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/ModuleManagement/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ModuleManagement/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Modules/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Modules/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Modules/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Modules/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/ObjectFilters/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/ObjectFilters/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/ObjectFilters/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ObjectFilters/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/PlannerModule/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/PlannerModule/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/PlannerModule/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/PlannerModule/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Popover/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Popover/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Popover/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Popover/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/Scheduler%26Calendar/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/Scheduler%26Calendar/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/Scheduler%26Calendar/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/Scheduler%26Calendar/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Scheduler%26Calendar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Scheduler%26Calendar/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/TimelineModule/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/TimelineModule/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/TimelineModule/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/TimelineModule/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Modules/WebMail/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Modules/WebMail/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Modules/WebMail/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xModules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/WebMail/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/AccessandDescription/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/AccessandDescription/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/AccessandDescription/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/AccessandDescription/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/DesignEnvironment/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/DesignEnvironment/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/DesignEnvironment/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/DesignEnvironment/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/DesigningApp/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/DesigningApp/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/DesigningApp/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/DesigningApp/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/NavigationOptions/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/NavigationOptions/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/NavigationOptions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/NavigationOptions/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/OfflineAI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/OfflineAI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/OfflineAI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/OfflineAI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/OfflineAndEmulatordifferences/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/OfflineAndEmulatordifferences/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/OfflineAndEmulatordifferences/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/OfflineAndEmulatordifferences/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/OfflineDatabase/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/OfflineDatabase/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/OfflineDatabase/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/OfflineDatabase/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/ReturnDataProcess/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/ReturnDataProcess/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/ReturnDataProcess/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/ReturnDataProcess/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/Trackingconfiguration/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/Trackingconfiguration/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/Trackingconfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/Trackingconfiguration/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/UsefulTokens/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/UsefulTokens/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/UsefulTokens/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/UsefulTokens/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/AI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/AI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/AI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/AI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Camera/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Camera/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Camera/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Camera/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Exports/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Exports/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Exports/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Exports/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Forms/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Forms/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Forms/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Forms/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Location/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Location/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Location/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Location/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Messages/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Messages/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Messages/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Messages/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/NFC/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/NFC/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/NFC/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/NFC/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Navigation/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Navigation/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Navigation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Navigation/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Online-navigation/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Online-navigation/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Online-navigation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Online-navigation/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Parser/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Parser/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Parser/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Parser/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Utils/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Utils/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Utils/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Utils/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Zebra-Printer/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Offline%20App/JS%20Functions/Zebra-Printer/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Offline%20App/JS%20Functions/Zebra-Printer/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xOffline%20App/JS%20Functions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Offline%20App/JS%20Functions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneOffline%20App/JS%20Functions/Zebra-Printer/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/CommonFunctions/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/CommonFunctions/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/CommonFunctions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CommonFunctions/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/ContextVariables/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/ContextVariables/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/ContextVariables/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/ContextVariables/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/Controls/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/Controls/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/Controls/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Controls/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/CustomDLL/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/CustomDLL/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/CustomDLL/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomDLL/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/CustomStored/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/CustomStored/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/CustomStored/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomStored/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/DatabaseScriptJobs/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/DatabaseScriptJobs/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/DatabaseScriptJobs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/DatabaseScriptJobs/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/Events/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/Events/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/Events/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Events/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/FormValidators/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/FormValidators/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/FormValidators/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/FormValidators/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/Imports/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/Imports/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/Imports/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Imports/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/LinkedServers/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/LinkedServers/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/LinkedServers/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/LinkedServers/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/NoticesSentences/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/NoticesSentences/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/NoticesSentences/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/NoticesSentences/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/Testing/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/Testing/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/Testing/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Testing/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/UpdateTypes/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/UpdateTypes/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/UpdateTypes/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/UpdateTypes/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/WebAPI/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/WebAPI/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/WebAPI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebAPI/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Programming/WebComponent/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Programming/WebComponent/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Programming/WebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xProgramming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebComponent/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Reporting/Newsandversionnotes/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Reporting/Newsandversionnotes/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Reporting/Newsandversionnotes/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xReporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Reporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneReporting/Newsandversionnotes/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Style/CSSAndTypography/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Style/CSSAndTypography/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Style/CSSAndTypography/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xStyle/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/CSSAndTypography/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Style/FlagIcons/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Style/FlagIcons/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Style/FlagIcons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xStyle/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/FlagIcons/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Style/GridOptions/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Style/GridOptions/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Style/GridOptions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xStyle/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/GridOptions/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Style/Icon/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Style/Icon/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Style/Icon/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xStyle/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Icon/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Style/Timeline/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Style/Timeline/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Style/Timeline/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xStyle/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Timeline/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Templates/Formats/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Templates/Formats/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Templates/Formats/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTemplates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Formats/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Templates/NavigationButton/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Templates/NavigationButton/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Templates/NavigationButton/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTemplates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/NavigationButton/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Templates/ObjectTemplates/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Templates/ObjectTemplates/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Templates/ObjectTemplates/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTemplates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/ObjectTemplates/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Templates/Skeletons/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Templates/Skeletons/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Templates/Skeletons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTemplates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Skeletons/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Templates/Targets/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Templates/Targets/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Templates/Targets/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTemplates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Targets/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Training/Courses/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Training/Courses/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Training/Courses/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTraining/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/Courses/"/>
     </url>
     <url>
-        <loc>https://docs.flexygo.com/new/8.x/es/Training/VideoTutorials/</loc>
-        <lastmod>2026-01-29</lastmod>
+        <loc>Noneen/Training/VideoTutorials/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.flexygo.com/new/8.x/es/Training/VideoTutorials/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.flexygo.com/new/8.xTraining/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/VideoTutorials/"/>
     </url>
 </urlset>
