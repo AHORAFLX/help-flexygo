@@ -38,8 +38,26 @@ class FlxNavButton extends HTMLElement {
         opener:"realMain"
       };
       
+      if (isAFlexy() && isOnIframe()) {
+          this.navigateInsideFlexy();
+          return;
+      }
+
       navigateToFlexy(navigation_json, ev.ctrlKey || ev.metaKey);
     });
+  }
+
+  navigateInsideFlexy() {
+    //We create a temporary flx-navbutton outside the iframe with every attibute copied and click it
+    const btn = window.parent.document.createElement("flx-navbutton");
+
+    for (const key in this.attributes) {
+      btn.setAttribute(key, this.getAttribute(key));
+    }
+
+    window.parent.document.body.appendChild(btn);
+    btn.click();
+    window.parent.document.body.removeChild(btn);
   }
 }
 
