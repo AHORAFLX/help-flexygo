@@ -8,7 +8,7 @@ What is MFA and why is it important? MFA adds an additional layer of security by
 
 With flexygo MFA, **administrators** have the freedom to choose between two verification methods: **email and SMS**. This allows them to select the option that best suits their organization's needs and resources.
 
-Remember that to use **MFA by SMS** you must have [Abh SMS integration](/Ahora%20Business%20Hub/AbhSms).
+Remember that to use **MFA by SMS** you must have [Abh SMS integration](/AhoraBusinessHub/AbhSms).
 {: .flx-warning-card }
 
 ## Granular control

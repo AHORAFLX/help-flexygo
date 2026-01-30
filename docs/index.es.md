@@ -69,16 +69,16 @@ Flexygo también ofrece la posibilidad de crear tus propios [informes](./Reporti
 
 ## Aplicación Offline
 
-Flexygo también ofrece la posibilidad de crear una [aplicación móvil](./Offline%20App/AccessandDescription) independiente a la que se puede acceder sin conexión, permitiendo continuar trabajando incluso en lugares remotos con baja conectividad.
+Flexygo también ofrece la posibilidad de crear una [aplicación móvil](./OfflineApp/AccessandDescription) independiente a la que se puede acceder sin conexión, permitiendo continuar trabajando incluso en lugares remotos con baja conectividad.
 
 ### Tecnologías
 
-La [aplicación Offline](./Offline%20App/AccessandDescription) de Flexygo utiliza [Ionic](https://ionicframework.com/docs/v4/components) como base, junto con [Capacitor](https://capacitorjs.com/docs) y [Stencil](https://stenciljs.com/). También utiliza [SQLite](https://sqlite.org/) como sistema de almacenamiento de los datos que se sincronizan con tu proyecto Flexygo.
+La [aplicación Offline](./OfflineApp/AccessandDescription) de Flexygo utiliza [Ionic](https://ionicframework.com/docs/v4/components) como base, junto con [Capacitor](https://capacitorjs.com/docs) y [Stencil](https://stenciljs.com/). También utiliza [SQLite](https://sqlite.org/) como sistema de almacenamiento de los datos que se sincronizan con tu proyecto Flexygo.
 
 ### Desarrollo
 
-El desarrollo de la [aplicación Offline](./Offline%20App/AccessandDescription) de Flexygo requiere un mayor conocimiento de programación, ya que las páginas deben construirse utilizando HTML, CSS, JS e Ionic.
+El desarrollo de la [aplicación Offline](./OfflineApp/AccessandDescription) de Flexygo requiere un mayor conocimiento de programación, ya que las páginas deben construirse utilizando HTML, CSS, JS e Ionic.
 
 ### Seguimiento
 
-La [aplicación Offline](./Offline%20App/AccessandDescription) de Flexygo dispone de funcionalidad de [seguimiento](./Offline%20App/Trackingconfiguration), que permite obtener los datos exactos de localización de los dispositivos configurados incluso cuando la aplicación está cerrada. Puede configurarse para realizar el seguimiento únicamente durante determinados periodos de tiempo.
+La [aplicación Offline](./OfflineApp/AccessandDescription) de Flexygo dispone de funcionalidad de [seguimiento](./OfflineApp/Trackingconfiguration), que permite obtener los datos exactos de localización de los dispositivos configurados incluso cuando la aplicación está cerrada. Puede configurarse para realizar el seguimiento únicamente durante determinados periodos de tiempo.

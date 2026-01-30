@@ -8,7 +8,7 @@ Implementación del sistema de **Autenticación Multifactor (MFA)**.
 
 Con flexygo MFA, los **administradores** pueden elegir entre dos métodos de verificación: **email y SMS**. Esto permite seleccionar la opción que mejor se adapte a las necesidades y recursos de la organización.
 
-Recuerda que para usar **MFA por SMS** debes tener configurada la [integración de Abh SMS](/Ahora%20Business%20Hub/AbhSms).
+Recuerda que para usar **MFA por SMS** debes tener configurada la [integración de Abh SMS](/AhoraBusinessHub/AbhSms).
 {: .flx-warning-card }
 
 ## Control granular
