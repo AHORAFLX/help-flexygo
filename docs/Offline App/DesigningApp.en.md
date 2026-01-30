@@ -52,9 +52,9 @@ Object views are used for combo dropdowns or to extend the information that is d
 
 ![Object View](../docs_assets/images/offline/ObjectView.png "Image 7. Object View")
 
-You can check the generated database schemaat any time just by using the schea button.
+You can check the generated database schemaat any time just by using the schema button.
 
-![Schema](../docs_assets/images/offline/schema.png "Image 8. Schema")
+![Schema](../docs_assets/images/offline/schema.PNG "Image 8. Schema")
 
 ## Object Pages
 

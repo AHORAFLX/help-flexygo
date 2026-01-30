@@ -21,7 +21,7 @@ Instalamos el certificado y seleccionamos el almacén **“Intermediate Certific
 Accede a [https://developer.apple.com/](https://developer.apple.com/) e inicia sesión con una cuenta de desarrollador.  
 Una vez dentro, entra en **Account** y accede al menú de la izquierda **Certificates, IDs & Profiles**.
 
-![](../docs_assets/images/imagesPassbook/passbook2.png "Image 2. Developer panel")
+![](../docs_assets/images/Passbook/passbook2.png "Image 2. Developer panel")
 
 ![](../docs_assets/images/Passbook/passbook3.png "Image 2. Developer panel")
 

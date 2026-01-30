@@ -1,5 +1,4 @@
 site_name: Docs
-site_url: https://docs.flexygo.com/new/
 theme:
   name: material
   custom_dir: ./overrides/
@@ -66,7 +65,7 @@ extra_javascript:
   - javascripts/cultures/en.js
 
   # Your project js files here ↓
-  - javascripts/extra.js
+
 markdown_extensions:
   - toc:
       permalink: true

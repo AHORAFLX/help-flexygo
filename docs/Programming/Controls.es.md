@@ -127,7 +127,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 </flx-radio>
 ```
 
-![](../docs_assets/images/Controls/MultiSelectRadio.png "Radio multiselección")
+![](../docs_assets/images/Controls/MultiSelectRadio.PNG "Radio multiselección")
 
 ```html
 <flx-radio name="radio1" class="txt-warning" multiple separator=";" value="1;2">
@@ -211,7 +211,7 @@ Utilice el editor flx-code en cualquiera de estos tres tipos establecidos: htmlc
 
 ## Multiselección de base de datos (DB Multi Select)
 
-![](../docs_assets/images/Controls/DBMultiSelect.PNG "DB MultiSelect")
+![](../docs_assets/images/Controls/DBMulti.PNG "DB MultiSelect")
 
 ```html
 <flx-multicombo ObjectName="sysObject" additionalWhere="" PlaceHolder="Seleccionar icono" iconclass="flx-icon icon-icons" ViewName="iconsView" SQLValueField="IconName" SQLDisplayField="IconName" required requiredmessage="Debe introducir un email válido">

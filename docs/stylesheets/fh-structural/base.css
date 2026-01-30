@@ -15,7 +15,7 @@
   --flx-main-content-margin: 2rem;
 
   /* Images */
-  --flx-main-background: url(/docs_assets/fh-structural/images/backgrounds/light-background.svg);
+  --flx-main-background: url(../../docs_assets/fh-structural/images/backgrounds/light-background.svg);
 
   /* Box Shadw */
   --flx-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
@@ -24,7 +24,7 @@
 /* Dark mode variables */
 [data-md-color-scheme="darkmode"] {
   /* Images */
-  --flx-main-background: url(/docs_assets/fh-structural/images/backgrounds/dark-background.svg);
+  --flx-main-background: url(../../docs_assets/fh-structural/images/backgrounds/dark-background.svg);
 }
 
 /* Hiding images that are only for light mode in dark mode */

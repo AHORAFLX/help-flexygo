@@ -53,7 +53,7 @@ Las vistas de objeto se utilizan para combos desplegables o para ampliar la info
 
 Puedes consultar el esquema de base de datos generado en cualquier momento utilizando el botón de esquema.
 
-![Schema](../docs_assets/images/offline/schema.png "Image 8. Schema")
+![Schema](../docs_assets/images/offline/schema.PNG "Image 8. Schema")
 
 ## Páginas de objeto
 

@@ -128,7 +128,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 </flx-radio>
 ```
 
-![](../docs_assets/images/Controls/MultiSelectRadio.png "Multi select radio")
+![](../docs_assets/images/Controls/MultiSelectRadio.PNG "Multi select radio")
 
 ```html
 <flx-radio name="radio1" class="txt-warning" multiple separator=";" value="1;2">
@@ -212,7 +212,7 @@ Use the flx-code editor in any of these three established types htmlcode, javaco
 
 ## DB Multi Select
 
-![](../docs_assets/images/Controls/DBMultiSelect.PNG "DBMultiSelect")
+![](../docs_assets/images/Controls/DBMulti.PNG "DBMultiSelect")
 
 ```html
 <flx-multicombo ObjectName="sysObject" additionalWhere=""  PlaceHolder="Select icon" iconclass="flx-icon icon-icons" ViewName="iconsView" SQLValueField="IconName" SQLDisplayField="IconName" required requiredmessage="You must enter a valid email">

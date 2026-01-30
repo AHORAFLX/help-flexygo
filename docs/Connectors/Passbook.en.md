@@ -18,7 +18,7 @@ We install the certificate and select the store "**intermediate certification au
 
 Go to [https://developer.apple.com/](https://developer.apple.com/) and sign in with a development account. Once inside we enter **Account** and we will see the following web, we access the menu on the left **Certificates, IDs & Profiles**.
 
-![](../docs_assets/images/imagesPassbook/passbook2.png "Image 2. Developer panel")
+![](../docs_assets/images/Passbook/passbook2.png "Image 2. Developer panel")
 
 ![](../docs_assets/images/Passbook/passbook3.png "Image 2. Developer panel")
 
