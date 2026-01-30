@@ -474,11 +474,11 @@ i[data-toggle="collapse"] {
 }
 
 /* Ocultar otros idiomas en la barra de búsqueda */
-html[lang="es"] .md-search-result__item:not(:has(a[href*="/es/"])) {
+html[lang="en"] .md-search-result__item:not(:has(a[href*="/en/"])) {
   display: none;
 }
 
-html[lang="en"] .md-search-result__item:has(a[href*="/es/"]) {
+html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
   display: none;
 }
 
