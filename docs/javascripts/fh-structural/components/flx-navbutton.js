@@ -51,8 +51,9 @@ class FlxNavButton extends HTMLElement {
     //We create a temporary flx-navbutton outside the iframe with every attibute copied and click it
     const btn = window.parent.document.createElement("flx-navbutton");
 
-    for (const key in this.attributes) {
-      btn.setAttribute(key, this.getAttribute(key));
+    for (let i=0; i < this.attributes.length; i++) {
+      const attribute = this.attributes[i];
+      btn.setAttribute(attribute.name, attribute.value);
     }
 
     window.parent.document.body.appendChild(btn);
