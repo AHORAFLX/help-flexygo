@@ -144,7 +144,7 @@ header.md-header {
     background: var(--fh-color-section);
     padding: var(--flx-main-sidebar-padding);
     border: var(--fh-border);
-    box-shadow: var(--flx-module-boxshadow);
+    box-shadow: 0 8px 19px 0 rgb(0 0 0 / 37%); /* Uses a different box shadow for it to only be shown on the right */
   }
 
   /* Making nav nodes have an small margin left */
@@ -426,8 +426,8 @@ a.md-logo {
       align-content: center;
       flex-wrap: wrap;
       
-      min-width: calc(100dvw - 80px);
-      max-width: calc(100dvw - 80px);
+      margin: 30px 0 0 0;
+      min-width: 100dvw;
     }
   }
 }
@@ -505,22 +505,22 @@ html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
 
 /* Smaller Screen Size */
 @media screen and (max-width: 44.9844em) {
-    /* Codeblocks get multiple styles that make docs look worse in this sizes */
-    main .md-main__inner .fh-maincontainer .md-content article {
-        max-width: 100%;
-    }
+  /* Codeblocks get multiple styles that make docs look worse in this sizes */
+  main .md-main__inner .fh-maincontainer .md-content article {
+      max-width: 100%;
+  }
 
-    .md-content__inner > .highlight {
-        margin: 0;
-        
-        > .filename {
-            border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
-        }
+  .md-content__inner > .highlight {
+      margin: 0;
+      
+      > .filename {
+          border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
+      }
 
-        .md-content__inner > .highlight > pre > code {
-            border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
-        }
-    }
+      .md-content__inner > .highlight > pre > code {
+          border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
+      }
+  }
 }
 
 /* Dialog for flexygo url opening */

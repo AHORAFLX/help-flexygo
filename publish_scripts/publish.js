@@ -11,7 +11,7 @@ const version = `${versionArg}.x`;
 const { execSync } = require("child_process");
 
 try {
-  execSync(`mike deploy ${version} latest`, { stdio: "inherit" });
+  execSync(`mike deploy --update-aliases ${version} latest`, { stdio: "inherit" });
   execSync(`mike set-default ${version}`, { stdio: "inherit" });
 } catch (err) {
   process.exit(1);

@@ -109,6 +109,7 @@ plugins:
             AhoraBusinessHub: Ahora Business Hub
             OfflineApp: Offline App
             JSFunctions: JS Functions
+            1Training: Training
         - locale: es
           default: true
           name: Español
@@ -126,7 +127,7 @@ plugins:
             Reporting: Informes
             Style: Estilos
             Templates: Plantillas
-            Training: Formación
+            1Training: Formación
   - glightbox:
       touchNavigation: true
       loop: false
