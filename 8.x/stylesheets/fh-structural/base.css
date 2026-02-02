@@ -315,6 +315,13 @@ a.md-logo {
   scroll-margin-top: 2.3rem; /* Adds an offset above an element when scrolled to, preventing it from being hidden behind fixed headers  */
 }
 
+/* Styles to apply when docs are in an iframe */
+.in-iframe {
+  .md-version {
+    display: none;
+  }
+}
+
 /* Medium Screen Size */
 @media screen and (max-width: 76.2344em) {
   /* Header */

@@ -6,9 +6,9 @@ addEventListener("DOMContentLoaded", () => {
     navigation_dialog = document.getElementById('navigation-dialog');
     navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
 
-    // We check if we are inside an iframe (is loaded on flexygo) and hide the version selector
+    // We check if we are inside an iframe (is loaded on flexygo) and add a class to the document so we can style accordingly
     if (isOnIframe()) {
-        document.querySelector('.md-version').style.display = 'none';
+        document.documentElement.classList.add('in-iframe');
     }
 });
 
