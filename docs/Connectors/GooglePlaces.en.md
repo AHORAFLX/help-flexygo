@@ -6,7 +6,7 @@ Google Places integration provides a convenient UI for connecting to and queryin
 
 ## Settings
 
-1.  Once you've obtained Google API Key by following [some steps in flexygo help](/Connectors/GoogleAPIKey), you can start configurating Google Places.
+1.  Once you've obtained Google API Key by following [some steps in flexygo help](GoogleAPIKey.md), you can start configurating Google Places.
 2.  With this connector you can transform a simple textbox into a autocomplete address dropdown and get sliced each part on distinct fields.
     
 ![Autocomplete Preview](../docs_assets/images/GoogleAPIKey/autocomplete_preview.png "Autocomplete Preview")

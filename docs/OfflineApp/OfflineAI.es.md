@@ -2,7 +2,7 @@
 
 ## Assistentes IA
 
-Antes de nada se debe saber que para que funcione la IA en las aplicaciones offline hace falta primero configurar [IA de Flexygo](/Connectors/OpenAI).
+Antes de nada se debe saber que para que funcione la IA en las aplicaciones offline hace falta primero configurar [IA de Flexygo](../Connectors/OpenAI.md).
 
 Después de haber configurado la IA en flexygo, usarla en la app es tan sencillo como utilizar cualquiera de estas dos funciones:
 

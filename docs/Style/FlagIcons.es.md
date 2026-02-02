@@ -1,6 +1,6 @@
 # Íconos de Banderas
 
-Más información sobre flexygo íconos [aquí](/Style/Icon).
+Más información sobre flexygo íconos [aquí](Icon.md).
 { .flx-warning-card }
 
 <div class="no-wrap">

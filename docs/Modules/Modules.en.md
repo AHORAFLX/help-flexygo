@@ -2,7 +2,7 @@
 
 **Flexygo** modules have been specially designed to facilitate the creation of various utilities that will be useful for your project. Modules can help us to add additional information to existen pages, for instance, using Popover you can show additional information; organizate your team work with Kanban module; represent location with Maps.
 
-Before you'll start to configure selected modules, it's essential to read the article about [Module Management](/Modules/ModuleManagement)
+Before you'll start to configure selected modules, it's essential to read the article about [Module Management](ModuleManagement.md)
 {: .flx-warning-card }
 
 In this chapter we will shortly explain all **flexygo** modules, for more information you'll be able to redirect to the special article with detailed module information.
@@ -58,7 +58,7 @@ The following module allows us to display a calendar. It provides its users with
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Calendar and Scheduler](/Modules/Scheduler&Calendar)
+[Manual Calendar and Scheduler](Scheduler&Calendar.md)
 
 [Video Scheduller](https://youtu.be/lKKMce5PsrA)
 </div>
@@ -72,9 +72,9 @@ A chart is a graphical representation for data visualization, in which "the data
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Chart](/Modules/Chart)
+[Manual Chart](Chart.md)
 
-[Manual Chart II](/Modules/ChartII)
+[Manual Chart II](ChartII.md)
 
 [Video Chart](https://youtu.be/Nj8si7aUPe4)
 </div>
@@ -88,7 +88,7 @@ Thanks to this module, you can upload documents and pictures that will be linked
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Document & Image Manager](/Modules/Chart)
+[Manual Document & Image Manager](Chart.md)
 
 [Video Document and Image Manager](https://youtu.be/qNQOoO1TcyA)
 
@@ -106,7 +106,7 @@ Chatter is a type of module, which allows us to create object related conversati
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Chatter](/Modules/Chatter)
+[Manual Chatter](Chatter.md)
 </div>
 
 ## Easy Pie, Easy Info, Easy Line and Sparklines
@@ -120,7 +120,7 @@ Check out additional help to see how to set it up
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Easy Pie/Line/Info](/Modules/ChartII)
+[Manual Easy Pie/Line/Info](ChartII.md)
 </div>
 
 ## Edit Object List
@@ -183,7 +183,7 @@ For the correct configuration of this module it is necessary to fill in the foll
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Funnel](/Modules/Funnel)
+[Manual Funnel](Funnel.md)
 </div>
 
 ## HTML Module
@@ -223,7 +223,7 @@ Kanban is one of the simplest frameworks used as it allows project managers to e
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Kanban](/Modules/Kanban)
+[Manual Kanban](Kanban.md)
 
 [Video Kanban](https://youtu.be/AidJrIHQHZc)
 </div>
@@ -237,7 +237,7 @@ Timeline module is a visual tool that outlines a sequence of events for a specif
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Timeline](/Modules/Timeline)
+[Manual Timeline](Timeline.md)
 
 [Video Timeline](https://youtu.be/_bVe_MLU5r0)
 </div>
@@ -290,7 +290,7 @@ For the correct configuration of this module it is necessary to fill in the foll
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Maps](/Modules/Maps)
+[Manual Maps](Maps.md)
 
 [Video Maps on dashboard](https://youtu.be/2CDScKLUVjw)
 
@@ -306,7 +306,7 @@ With this module you can visualize your emails from your mail server. you can al
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Mail](/Modules/Mail)
+[Manual Mail](Mail.md)
 </div>
 
 ## Nav Panel
@@ -427,7 +427,7 @@ For the correct configuration of this module it is necessary to fill in the foll
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Update Types](/Programming/UpdateTypes)
+[Update Types](../Programming/UpdateTypes.md)
 </div>
 
 ## Object Reports

@@ -1,4 +1,4 @@
-site_name: Docs
+site_name: Flexygo Docs
 theme:
   name: material
   custom_dir: ./overrides/

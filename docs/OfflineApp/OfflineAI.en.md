@@ -2,7 +2,7 @@
 
 ## AI Assistants
 
-Before anything you've gotta know that for the offline ai to work you must first configure the [Flexygo AI](/Connectors/OpenAI).
+Before anything you've gotta know that for the offline ai to work you must first configure the [Flexygo AI](../Connectors/OpenAI.md).
 
 After configuring Flexygo AI, using it at an offline app is as easy as utilizing one of this two functions:
 

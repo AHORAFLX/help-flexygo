@@ -170,7 +170,7 @@ FROM ...
 
 ### Sms Sentence
 
-You need to know that to be able to use it, it is necessary to enable the integration, for more information see the help of [abh sms](/AhoraBusinessHub/AbhSms).
+You need to know that to be able to use it, it is necessary to enable the integration, for more information see the help of [abh sms](../AhoraBusinessHub/AbhSms.md).
 Use Sms Sentence to select which fields will be placed in the Sms\_Outbox Table.
 
 ```sql

@@ -24,4 +24,4 @@ It is mandatory for using push notifications in your web browser to have a domai
 
 ## Using notices sentences
 
-You can also use the notice sentences to automatize the generation of notices based on database information an conditions. For more info checkout: [Notice sentences](/Programming/NoticesSentences)
+You can also use the notice sentences to automatize the generation of notices based on database information an conditions. For more info checkout: [Notice sentences](../Programming/NoticesSentences.md)

@@ -4,7 +4,7 @@ Google Maps es un servicio desarrollado por Google con el cual puedes encontrar 
 
 ![](../docs_assets/images/ModulesConf/APIKey.png "Image 1. API Keys")
 
-Consulta cómo obtener la clave de API de Google en la [ayuda de flexygo ](/Connectors/GoogleAPIKey).
+Consulta cómo obtener la clave de API de Google en la [ayuda de flexygo ](../Connectors/GoogleAPIKey.md).
 {: .flx-warning-card }
 
 Agregar un mapa de Google es muy simple. Necesitarás hacer referencia a un módulo de mapa.

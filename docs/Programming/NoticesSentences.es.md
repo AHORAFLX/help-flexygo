@@ -171,7 +171,7 @@ FROM ...
 
 ### Sentencia de Sms
 
-(Para poder usarlo, es necesario habilitar la integración, para más información consulta la ayuda de [abh sms](/AhoraBusinessHub/AbhSms).)
+(Para poder usarlo, es necesario habilitar la integración, para más información consulta la ayuda de [abh sms](../AhoraBusinessHub/AbhSms.md).)
 
 Utiliza la Sentencia de Sms para seleccionar qué campos se colocarán en la Tabla Sms_Outbox.
 

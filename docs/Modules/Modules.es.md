@@ -2,7 +2,7 @@
 
 Los módulos de **flexygo** han sido diseñados específicamente para facilitar la creación de diversas utilidades que serán útiles para tu proyecto. Los módulos pueden ayudarnos a añadir información adicional a páginas existentes; por ejemplo, usando Popover puedes mostrar información adicional, organizar el trabajo en equipo con el módulo Kanban o representar ubicaciones con Maps.
 
-Antes de empezar a configurar los módulos seleccionados, es esencial leer el artículo sobre [Gestión de Módulos](/Modules/ModuleManagement)
+Antes de empezar a configurar los módulos seleccionados, es esencial leer el artículo sobre [Gestión de Módulos](ModuleManagement.md)
 {: .flx-warning-card }
 
 En este capítulo explicaremos brevemente todos los módulos de **flexygo**; para obtener más información, podrás dirigirte a los artículos específicos con información detallada de cada módulo.
@@ -52,7 +52,7 @@ Este módulo permite mostrar un calendario. Facilita al usuario la planificació
 <div class="flx-info-card" markdown="1">
 Consulta ayuda adicional para configurar el módulo:
 
-[Manual Calendar and Scheduler](/Modules/Scheduler&Calendar)
+[Manual Calendar and Scheduler](Scheduler&Calendar.md)
 
 [Vídeo Scheduler](https://youtu.be/lKKMce5PsrA)
 </div>
@@ -66,9 +66,9 @@ Un gráfico es una representación visual de datos, donde la información se mue
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Chart](/Modules/Chart)
+[Manual Chart](Chart.md)
 
-[Manual Chart II](/Modules/ChartII)
+[Manual Chart II](ChartII.md)
 
 [Vídeo Chart](https://youtu.be/Nj8si7aUPe4)
 </div>
@@ -82,7 +82,7 @@ Este módulo permite subir documentos e imágenes vinculados a un objeto. Poster
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Document & Image Manager](/Modules/Chart)
+[Manual Document & Image Manager](Chart.md)
 
 [Vídeo Document and Image Manager](https://youtu.be/qNQOoO1TcyA)
 
@@ -100,7 +100,7 @@ Chatter es un módulo que permite crear conversaciones relacionadas con un objet
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Chatter](/Modules/Chatter)
+[Manual Chatter](Chatter.md)
 </div>
 
 ## Easy Pie, Easy Info, Easy Line y Sparklines
@@ -112,7 +112,7 @@ Estos componentes permiten realizar gráficos sencillos. Combinados en un módul
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Easy Pie/Line/Info](/Modules/ChartII)
+[Manual Easy Pie/Line/Info](ChartII.md)
 </div>
 
 ## Lista de objetos editable
@@ -168,7 +168,7 @@ El embudo se usa comúnmente en marketing para mostrar el recorrido del cliente 
 
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:  
-[Manual Funnel](/Modules/Funnel)
+[Manual Funnel](Funnel.md)
 </div>
 
 ## Módulo HTML
@@ -198,7 +198,7 @@ Kanban es un framework visual que permite gestionar tareas eficientemente median
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Kanban](/Modules/Kanban)
+[Manual Kanban](Kanban.md)
 
 [Vídeo Kanban](https://youtu.be/AidJrIHQHZc)
 </div>
@@ -212,7 +212,7 @@ El módulo Timeline es una herramienta visual que representa una secuencia de ev
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Timeline](/Modules/Timeline)
+[Manual Timeline](Timeline.md)
 
 [Vídeo Timeline](https://youtu.be/_bVe_MLU5r0)
 </div>
@@ -257,7 +257,7 @@ Permite visualizar un mapa de Google con la dirección deseada.
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Maps](/Modules/Maps)
+[Manual Maps](Maps.md)
 
 [Video Maps on dashboard](https://youtu.be/2CDScKLUVjw)
 
@@ -273,7 +273,7 @@ Permite visualizar tus correos del servidor de correo y vincularlos a objetos.
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Mail](/Modules/Mail)
+[Manual Mail](Mail.md)
 </div>
 
 ## Panel de navegación
@@ -374,7 +374,7 @@ Permite visualizar los procesos relacionados a un objeto.
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Update Types](/Programming/UpdateTypes)
+[Update Types](../Programming/UpdateTypes.md)
 </div>
 
 ## Informes de objeto

@@ -1,6 +1,6 @@
 # Flag Icons
 
-More information about flexygo icons [here](/Style/Icon).
+More information about flexygo icons [here](Icon.md).
 { .flx-warning-card }
 
 <div class="no-wrap">

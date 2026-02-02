@@ -26,4 +26,4 @@ Para utilizar notificaciones push en el navegador **es obligatorio disponer de u
 ## Uso de sentencias de notificación
 
 También puedes utilizar **sentencias de notificación** para automatizar la generación de avisos basados en información y condiciones de la base de datos.  
-Para más información consulta: [Notice sentences](/Programming/NoticesSentences)
+Para más información consulta: [Notice sentences](../Programming/NoticesSentences.md)

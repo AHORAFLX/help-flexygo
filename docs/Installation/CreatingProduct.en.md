@@ -115,7 +115,7 @@ Replace **flxDB** with <fh-copy><span class="propagated-projectname"></span>BD</
 
 ## 16. TypeScript
 
-Install [TypeScript](/Instalation/CreatingWebComponent#typescript)
+Install [TypeScript](CreatingWebComponent.md#typescript)
 
 ## 17. Publishing
 
