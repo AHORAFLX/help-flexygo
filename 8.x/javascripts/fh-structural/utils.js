@@ -5,6 +5,11 @@ let navigation_dialog;
 addEventListener("DOMContentLoaded", () => { 
     navigation_dialog = document.getElementById('navigation-dialog');
     navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
+
+    // We check if we are inside an iframe (is loaded on flexygo) and hide the version selector
+    if (isOnIframe()) {
+        document.querySelector('.md-version').style.display = 'none';
+    }
 });
 
 function changeLanguage(new_language) {

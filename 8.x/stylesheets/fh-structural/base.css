@@ -328,7 +328,7 @@ a.md-logo {
       align-items: center;
     }
     
-    .md-version__current {
+    .md-version {
       margin-left: 5.4rem;
     }
 
@@ -495,12 +495,6 @@ html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
   transform: none !important;
   opacity: 1 !important;
 }
-
-.md-header__topic:last-child {
-  display: none;
-}
-
-
 
 /* Smaller Screen Size */
 @media screen and (max-width: 44.9844em) {
