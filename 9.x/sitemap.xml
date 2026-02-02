@@ -8,6 +8,20 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
+        <loc>None1Training/Courses/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="None1Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/Courses/"/>
+    </url>
+    <url>
+        <loc>None1Training/VideoTutorials/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="None1Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/VideoTutorials/"/>
+    </url>
+    <url>
         <loc>NoneAhoraBusinessHub/AbhSign/</loc>
         <lastmod>2026-02-02</lastmod>
         <changefreq>daily</changefreq>
@@ -708,25 +722,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Targets/"/>
     </url>
     <url>
-        <loc>NoneTraining/Courses/</loc>
-        <lastmod>2026-02-02</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/Courses/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/Courses/"/>
-    </url>
-    <url>
-        <loc>NoneTraining/VideoTutorials/</loc>
-        <lastmod>2026-02-02</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/VideoTutorials/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/VideoTutorials/"/>
-    </url>
-    <url>
         <loc>Noneen/</loc>
         <lastmod>2026-02-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
         <xhtml:link rel="alternate" hreflang="es" href="None"/>
+    </url>
+    <url>
+        <loc>Noneen/1Training/Courses/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="None1Training/Courses/"/>
+    </url>
+    <url>
+        <loc>Noneen/1Training/VideoTutorials/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="None1Training/VideoTutorials/"/>
     </url>
     <url>
         <loc>Noneen/AhoraBusinessHub/AbhSign/</loc>
@@ -1427,19 +1441,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Targets/"/>
         <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Targets/"/>
-    </url>
-    <url>
-        <loc>Noneen/Training/Courses/</loc>
-        <lastmod>2026-02-02</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/Courses/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/Courses/"/>
-    </url>
-    <url>
-        <loc>Noneen/Training/VideoTutorials/</loc>
-        <lastmod>2026-02-02</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Training/VideoTutorials/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTraining/VideoTutorials/"/>
     </url>
 </urlset>

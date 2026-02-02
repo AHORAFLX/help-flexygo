@@ -96,12 +96,10 @@ function navigateToFlexy(json, ctrlKey_pressed) {
 }
 
 function isAFlexy() {
-    const current_url = new URL(window.location.href);
-    if (current_url.pathname.startsWith('/docs/')) {
-        return true;
-    }
-
-    return false;
+    const is_mkdocs = (window.location.hostname === 'localhost' || 
+                        window.location.hostname === '127.0.0.1') &&
+                        window.location.port === '8000';
+    return !is_mkdocs && !window.location.href.includes('ayuda.ahora.es');
 }
 
 function _nav(url) {
