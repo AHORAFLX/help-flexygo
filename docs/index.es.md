@@ -1,3 +1,7 @@
+---
+title: Introducción a Flexygo
+---
+
 # Introducción a Flexygo
 
 Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida gracias a su interfaz fácil de usar. Puedes construir prácticamente cualquier cosa con poco o ningún conocimiento de HTML, CSS, JS o C#. No obstante, si en algún momento necesitas desarrollar aplicaciones más complejas, tendrás acceso completo a todas estas tecnologías para poder crear exactamente la idea que tienes en mente.
