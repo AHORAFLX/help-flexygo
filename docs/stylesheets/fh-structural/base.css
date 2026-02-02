@@ -315,6 +315,13 @@ a.md-logo {
   scroll-margin-top: 2.3rem; /* Adds an offset above an element when scrolled to, preventing it from being hidden behind fixed headers  */
 }
 
+/* Styles to apply when docs are in an iframe */
+.in-iframe {
+  .md-version {
+    display: none;
+  }
+}
+
 /* Medium Screen Size */
 @media screen and (max-width: 76.2344em) {
   /* Header */
@@ -328,6 +335,10 @@ a.md-logo {
       align-items: center;
     }
     
+    .md-version {
+      margin-left: 5.4rem;
+    }
+
     .md-search {
       left: calc(50dvw);
 
@@ -480,6 +491,16 @@ html[lang="en"] .md-search-result__item:not(:has(a[href*="/en/"])) {
 
 html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
   display: none;
+}
+
+/* No ocultar selector de versión al scrollear */
+.md-header__title {
+  transform: none !important;
+}
+
+.md-header__topic:first-child {
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 /* Smaller Screen Size */

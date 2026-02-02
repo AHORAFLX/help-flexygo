@@ -29,7 +29,7 @@ extra:
   version:
     provider: mike
 extra_css:
-   # Basic styles for every documentation project
+  # Basic styles for every documentation project
   ## Basic Structure
   - stylesheets/custom-colors.css
   - stylesheets/fh-structural/base.css
