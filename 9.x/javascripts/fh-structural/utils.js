@@ -104,7 +104,12 @@ function isAFlexy() {
 
 function _nav(url) {
     if (!url) {
-        url = getBasePath() + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        let base_path = getBasePath();
+        //We remove /docs from the path if we are in flexygo to get the correct base path
+        if (isAFlexy()) {
+            base_path = base_path.replace('/docs', '');
+        }
+        url += base_path + '/Index#' + btoa(JSON.stringify(current_navigation_url));
     } else {
         if (!url.endsWith('/')) {
             url += '/';
