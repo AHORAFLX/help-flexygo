@@ -112,6 +112,11 @@ header.md-header {
   border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0 !important;
 }
 
+[data-md-toggle=search]:checked~header.md-header .md-search .md-search__inner .md-search__form {
+  background-color: var(--md-default-bg-color);
+  border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
+}
+
 /* Main Sidebar */
 .flx-sidebar {
   top: 0 !important; /* Top on the material theme is set on the style */
@@ -316,7 +321,7 @@ a.md-logo {
 }
 
 /* Styles to apply when docs are in an iframe */
-.in-iframe {
+.in-flexygo {
   .md-version {
     display: none;
   }
