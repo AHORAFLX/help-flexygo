@@ -1,1445 +1,1445 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>http://localhost:9999/test/9.x/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="None"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/"/>
     </url>
     <url>
-        <loc>None1Training/Courses/</loc>
+        <loc>http://localhost:9999/test/9.x/1Training/Courses/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="None1Training/Courses/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/1Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/1Training/Courses/"/>
     </url>
     <url>
-        <loc>None1Training/VideoTutorials/</loc>
+        <loc>http://localhost:9999/test/9.x/1Training/VideoTutorials/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="None1Training/VideoTutorials/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/1Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/1Training/VideoTutorials/"/>
     </url>
     <url>
-        <loc>NoneAhoraBusinessHub/AbhSign/</loc>
+        <loc>http://localhost:9999/test/9.x/AhoraBusinessHub/AbhSign/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAhoraBusinessHub/AbhSign/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/AhoraBusinessHub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/AhoraBusinessHub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/AhoraBusinessHub/AbhSign/"/>
     </url>
     <url>
-        <loc>NoneAhoraBusinessHub/AbhSms/</loc>
+        <loc>http://localhost:9999/test/9.x/AhoraBusinessHub/AbhSms/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAhoraBusinessHub/AbhSms/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/AhoraBusinessHub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/AhoraBusinessHub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/AhoraBusinessHub/AbhSms/"/>
     </url>
     <url>
-        <loc>NoneAhoraBusinessHub/AbhTicket/</loc>
+        <loc>http://localhost:9999/test/9.x/AhoraBusinessHub/AbhTicket/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAhoraBusinessHub/AbhTicket/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/AhoraBusinessHub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/AhoraBusinessHub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/AhoraBusinessHub/AbhTicket/"/>
     </url>
     <url>
-        <loc>NoneConnectors/AhoraERP/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/AhoraERP/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AhoraERP/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/AhoraERP/"/>
     </url>
     <url>
-        <loc>NoneConnectors/AzureADIntegration/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/AzureADIntegration/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureADIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/AzureADIntegration/"/>
     </url>
     <url>
-        <loc>NoneConnectors/AzureFormRecognizer/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/AzureFormRecognizer/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureFormRecognizer/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/AzureFormRecognizer/"/>
     </url>
     <url>
-        <loc>NoneConnectors/ClaveAuthentication/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/ClaveAuthentication/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/ClaveAuthentication/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/ClaveAuthentication/"/>
     </url>
     <url>
-        <loc>NoneConnectors/FaceRecognition/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/FaceRecognition/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/FaceRecognition/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/FaceRecognition/"/>
     </url>
     <url>
-        <loc>NoneConnectors/Google/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/Google/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Google/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/Google/"/>
     </url>
     <url>
-        <loc>NoneConnectors/GoogleAPIKey/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/GoogleAPIKey/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GoogleAPIKey/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/GoogleAPIKey/"/>
     </url>
     <url>
-        <loc>NoneConnectors/GooglePlaces/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/GooglePlaces/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GooglePlaces/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/GooglePlaces/"/>
     </url>
     <url>
-        <loc>NoneConnectors/MailChimp/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/MailChimp/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimp/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/MailChimp/"/>
     </url>
     <url>
-        <loc>NoneConnectors/MailChimpProcesses/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/MailChimpProcesses/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimpProcesses/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/MailChimpProcesses/"/>
     </url>
     <url>
-        <loc>NoneConnectors/Office365/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/Office365/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Office365/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/Office365/"/>
     </url>
     <url>
-        <loc>NoneConnectors/OpenAI/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/OpenAI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OpenAI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/OpenAI/"/>
     </url>
     <url>
-        <loc>NoneConnectors/OtherflexygoIntegration/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/OtherflexygoIntegration/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OtherflexygoIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/OtherflexygoIntegration/"/>
     </url>
     <url>
-        <loc>NoneConnectors/Passbook/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/Passbook/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Passbook/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/Passbook/"/>
     </url>
     <url>
-        <loc>NoneConnectors/PowerBI/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/PowerBI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PowerBI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/PowerBI/"/>
     </url>
     <url>
-        <loc>NoneConnectors/PushNotifications/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/PushNotifications/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PushNotifications/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/PushNotifications/"/>
     </url>
     <url>
-        <loc>NoneConnectors/RedSys/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/RedSys/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/RedSys/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/RedSys/"/>
     </url>
     <url>
-        <loc>NoneConnectors/Scales/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/Scales/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Scales/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/Scales/"/>
     </url>
     <url>
-        <loc>NoneConnectors/SendinBlue/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/SendinBlue/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/SendinBlue/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/SendinBlue/"/>
     </url>
     <url>
-        <loc>NoneConnectors/WacomSignature/</loc>
+        <loc>http://localhost:9999/test/9.x/Connectors/WacomSignature/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/WacomSignature/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Connectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Connectors/WacomSignature/"/>
     </url>
     <url>
-        <loc>NoneInformation/Addons/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/Addons/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Addons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/Addons/"/>
     </url>
     <url>
-        <loc>NoneInformation/FriendlyURLs/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/FriendlyURLs/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/FriendlyURLs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/FriendlyURLs/"/>
     </url>
     <url>
-        <loc>NoneInformation/GoodPractices/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/GoodPractices/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/GoodPractices/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/GoodPractices/"/>
     </url>
     <url>
-        <loc>NoneInformation/MFA/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/MFA/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MFA/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/MFA/"/>
     </url>
     <url>
-        <loc>NoneInformation/MailAccountsSettings/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/MailAccountsSettings/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MailAccountsSettings/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/MailAccountsSettings/"/>
     </url>
     <url>
-        <loc>NoneInformation/Navigator/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/Navigator/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Navigator/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/Navigator/"/>
     </url>
     <url>
-        <loc>NoneInformation/PageHierarchy/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/PageHierarchy/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/PageHierarchy/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/PageHierarchy/"/>
     </url>
     <url>
-        <loc>NoneInformation/Security/</loc>
+        <loc>http://localhost:9999/test/9.x/Information/Security/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Security/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Information/Security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Information/Security/"/>
     </url>
     <url>
-        <loc>NoneInstallation/1HowToInstall/</loc>
+        <loc>http://localhost:9999/test/9.x/Installation/1HowToInstall/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/1HowToInstall/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Installation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Installation/1HowToInstall/"/>
     </url>
     <url>
-        <loc>NoneInstallation/CreatingIntefaceTest/</loc>
+        <loc>http://localhost:9999/test/9.x/Installation/CreatingIntefaceTest/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingIntefaceTest/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Installation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Installation/CreatingIntefaceTest/"/>
     </url>
     <url>
-        <loc>NoneInstallation/CreatingNugetPackage/</loc>
+        <loc>http://localhost:9999/test/9.x/Installation/CreatingNugetPackage/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingNugetPackage/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Installation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Installation/CreatingNugetPackage/"/>
     </url>
     <url>
-        <loc>NoneInstallation/CreatingProduct/</loc>
+        <loc>http://localhost:9999/test/9.x/Installation/CreatingProduct/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingProduct/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Installation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Installation/CreatingProduct/"/>
     </url>
     <url>
-        <loc>NoneInstallation/CreatingUnitaryTest/</loc>
+        <loc>http://localhost:9999/test/9.x/Installation/CreatingUnitaryTest/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingUnitaryTest/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Installation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Installation/CreatingUnitaryTest/"/>
     </url>
     <url>
-        <loc>NoneInstallation/CreatingWebComponent/</loc>
+        <loc>http://localhost:9999/test/9.x/Installation/CreatingWebComponent/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingWebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Installation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Installation/CreatingWebComponent/"/>
     </url>
     <url>
-        <loc>NoneModules/Chart/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Chart/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chart/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Chart/"/>
     </url>
     <url>
-        <loc>NoneModules/ChartII/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/ChartII/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ChartII/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/ChartII/"/>
     </url>
     <url>
-        <loc>NoneModules/Chatter/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Chatter/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chatter/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Chatter/"/>
     </url>
     <url>
-        <loc>NoneModules/DocAndImageManager/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/DocAndImageManager/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/DocAndImageManager/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/DocAndImageManager/"/>
     </url>
     <url>
-        <loc>NoneModules/Funnel/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Funnel/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Funnel/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Funnel/"/>
     </url>
     <url>
-        <loc>NoneModules/Kanban/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Kanban/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Kanban/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Kanban/"/>
     </url>
     <url>
-        <loc>NoneModules/Maps/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Maps/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Maps/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Maps/"/>
     </url>
     <url>
-        <loc>NoneModules/ModuleManagement/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/ModuleManagement/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ModuleManagement/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/ModuleManagement/"/>
     </url>
     <url>
-        <loc>NoneModules/Modules/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Modules/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Modules/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Modules/"/>
     </url>
     <url>
-        <loc>NoneModules/ObjectFilters/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/ObjectFilters/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ObjectFilters/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/ObjectFilters/"/>
     </url>
     <url>
-        <loc>NoneModules/PlannerModule/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/PlannerModule/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/PlannerModule/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/PlannerModule/"/>
     </url>
     <url>
-        <loc>NoneModules/Popover/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/Popover/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Popover/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/Popover/"/>
     </url>
     <url>
-        <loc>NoneModules/SchedulerCalendar/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/SchedulerCalendar/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/SchedulerCalendar/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/SchedulerCalendar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/SchedulerCalendar/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/SchedulerCalendar/"/>
     </url>
     <url>
-        <loc>NoneModules/TimelineModule/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/TimelineModule/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/TimelineModule/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/TimelineModule/"/>
     </url>
     <url>
-        <loc>NoneModules/WebMail/</loc>
+        <loc>http://localhost:9999/test/9.x/Modules/WebMail/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/WebMail/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Modules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Modules/WebMail/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/AccessandDescription/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/AccessandDescription/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/AccessandDescription/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/AccessandDescription/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/DesignEnvironment/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/DesignEnvironment/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/DesignEnvironment/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/DesignEnvironment/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/DesigningApp/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/DesigningApp/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/DesigningApp/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/DesigningApp/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/NavigationOptions/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/NavigationOptions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/NavigationOptions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/NavigationOptions/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/OfflineAI/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/OfflineAI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/OfflineAI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/OfflineAI/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/OfflineAndEmulatordifferences/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/OfflineAndEmulatordifferences/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/OfflineAndEmulatordifferences/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/OfflineAndEmulatordifferences/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/OfflineDatabase/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/OfflineDatabase/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/OfflineDatabase/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/OfflineDatabase/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/ReturnDataProcess/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/ReturnDataProcess/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/ReturnDataProcess/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/ReturnDataProcess/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/Trackingconfiguration/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/Trackingconfiguration/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/Trackingconfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/Trackingconfiguration/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/UsefulTokens/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/UsefulTokens/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/UsefulTokens/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/UsefulTokens/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/AI/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/AI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/AI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/AI/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Camera/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Camera/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Camera/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Camera/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Exports/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Exports/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Exports/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Exports/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Forms/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Forms/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Forms/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Forms/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Location/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Location/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Location/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Location/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Messages/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Messages/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Messages/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Messages/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/NFC/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/NFC/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/NFC/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/NFC/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Navigation/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Navigation/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Navigation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Navigation/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Online-navigation/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Online-navigation/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Online-navigation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Online-navigation/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Parser/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Parser/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Parser/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Parser/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Utils/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Utils/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Utils/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Utils/"/>
     </url>
     <url>
-        <loc>NoneOfflineApp/JSFunctions/Zebra-Printer/</loc>
+        <loc>http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Zebra-Printer/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Zebra-Printer/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/OfflineApp/JSFunctions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/OfflineApp/JSFunctions/Zebra-Printer/"/>
     </url>
     <url>
-        <loc>NoneProgramming/CommonFunctions/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/CommonFunctions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CommonFunctions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/CommonFunctions/"/>
     </url>
     <url>
-        <loc>NoneProgramming/ContextVariables/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/ContextVariables/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/ContextVariables/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/ContextVariables/"/>
     </url>
     <url>
-        <loc>NoneProgramming/Controls/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/Controls/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Controls/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/Controls/"/>
     </url>
     <url>
-        <loc>NoneProgramming/CustomDLL/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/CustomDLL/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomDLL/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/CustomDLL/"/>
     </url>
     <url>
-        <loc>NoneProgramming/CustomStored/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/CustomStored/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomStored/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/CustomStored/"/>
     </url>
     <url>
-        <loc>NoneProgramming/DatabaseScriptJobs/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/DatabaseScriptJobs/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/DatabaseScriptJobs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/DatabaseScriptJobs/"/>
     </url>
     <url>
-        <loc>NoneProgramming/Events/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/Events/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Events/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/Events/"/>
     </url>
     <url>
-        <loc>NoneProgramming/FormValidators/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/FormValidators/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/FormValidators/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/FormValidators/"/>
     </url>
     <url>
-        <loc>NoneProgramming/Imports/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/Imports/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Imports/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/Imports/"/>
     </url>
     <url>
-        <loc>NoneProgramming/LinkedServers/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/LinkedServers/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/LinkedServers/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/LinkedServers/"/>
     </url>
     <url>
-        <loc>NoneProgramming/NoticesSentences/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/NoticesSentences/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/NoticesSentences/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/NoticesSentences/"/>
     </url>
     <url>
-        <loc>NoneProgramming/Testing/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/Testing/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Testing/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/Testing/"/>
     </url>
     <url>
-        <loc>NoneProgramming/UpdateTypes/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/UpdateTypes/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/UpdateTypes/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/UpdateTypes/"/>
     </url>
     <url>
-        <loc>NoneProgramming/WebAPI/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/WebAPI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebAPI/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/WebAPI/"/>
     </url>
     <url>
-        <loc>NoneProgramming/WebComponent/</loc>
+        <loc>http://localhost:9999/test/9.x/Programming/WebComponent/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Programming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Programming/WebComponent/"/>
     </url>
     <url>
-        <loc>NoneReporting/Newsandversionnotes/</loc>
+        <loc>http://localhost:9999/test/9.x/Reporting/Newsandversionnotes/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneReporting/Newsandversionnotes/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Reporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Reporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Reporting/Newsandversionnotes/"/>
     </url>
     <url>
-        <loc>NoneStyle/CSSAndTypography/</loc>
+        <loc>http://localhost:9999/test/9.x/Style/CSSAndTypography/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/CSSAndTypography/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Style/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Style/CSSAndTypography/"/>
     </url>
     <url>
-        <loc>NoneStyle/FlagIcons/</loc>
+        <loc>http://localhost:9999/test/9.x/Style/FlagIcons/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/FlagIcons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Style/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Style/FlagIcons/"/>
     </url>
     <url>
-        <loc>NoneStyle/GridOptions/</loc>
+        <loc>http://localhost:9999/test/9.x/Style/GridOptions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/GridOptions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Style/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Style/GridOptions/"/>
     </url>
     <url>
-        <loc>NoneStyle/Icon/</loc>
+        <loc>http://localhost:9999/test/9.x/Style/Icon/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Icon/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Style/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Style/Icon/"/>
     </url>
     <url>
-        <loc>NoneStyle/Timeline/</loc>
+        <loc>http://localhost:9999/test/9.x/Style/Timeline/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Timeline/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Style/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Style/Timeline/"/>
     </url>
     <url>
-        <loc>NoneTemplates/Formats/</loc>
+        <loc>http://localhost:9999/test/9.x/Templates/Formats/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Formats/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Templates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Templates/Formats/"/>
     </url>
     <url>
-        <loc>NoneTemplates/NavigationButton/</loc>
+        <loc>http://localhost:9999/test/9.x/Templates/NavigationButton/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/NavigationButton/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Templates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Templates/NavigationButton/"/>
     </url>
     <url>
-        <loc>NoneTemplates/ObjectTemplates/</loc>
+        <loc>http://localhost:9999/test/9.x/Templates/ObjectTemplates/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/ObjectTemplates/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Templates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Templates/ObjectTemplates/"/>
     </url>
     <url>
-        <loc>NoneTemplates/Skeletons/</loc>
+        <loc>http://localhost:9999/test/9.x/Templates/Skeletons/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Skeletons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Templates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Templates/Skeletons/"/>
     </url>
     <url>
-        <loc>NoneTemplates/Targets/</loc>
+        <loc>http://localhost:9999/test/9.x/Templates/Targets/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Targets/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x/Templates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.xen/Templates/Targets/"/>
     </url>
     <url>
-        <loc>Noneen/</loc>
+        <loc>http://localhost:9999/test/9.x/en/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x"/>
     </url>
     <url>
-        <loc>Noneen/1Training/Courses/</loc>
+        <loc>http://localhost:9999/test/9.x/en/1Training/Courses/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/Courses/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="None1Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/1Training/Courses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x1Training/Courses/"/>
     </url>
     <url>
-        <loc>Noneen/1Training/VideoTutorials/</loc>
+        <loc>http://localhost:9999/test/9.x/en/1Training/VideoTutorials/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/VideoTutorials/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="None1Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/1Training/VideoTutorials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.x1Training/VideoTutorials/"/>
     </url>
     <url>
-        <loc>Noneen/AhoraBusinessHub/AbhSign/</loc>
+        <loc>http://localhost:9999/test/9.x/en/AhoraBusinessHub/AbhSign/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/AhoraBusinessHub/AbhSign/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAhoraBusinessHub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/AhoraBusinessHub/AbhSign/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xAhoraBusinessHub/AbhSign/"/>
     </url>
     <url>
-        <loc>Noneen/AhoraBusinessHub/AbhSms/</loc>
+        <loc>http://localhost:9999/test/9.x/en/AhoraBusinessHub/AbhSms/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/AhoraBusinessHub/AbhSms/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAhoraBusinessHub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/AhoraBusinessHub/AbhSms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xAhoraBusinessHub/AbhSms/"/>
     </url>
     <url>
-        <loc>Noneen/AhoraBusinessHub/AbhTicket/</loc>
+        <loc>http://localhost:9999/test/9.x/en/AhoraBusinessHub/AbhTicket/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/AhoraBusinessHub/AbhTicket/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAhoraBusinessHub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/AhoraBusinessHub/AbhTicket/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xAhoraBusinessHub/AbhTicket/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/AhoraERP/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/AhoraERP/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AhoraERP/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/AhoraERP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/AhoraERP/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/AzureADIntegration/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/AzureADIntegration/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureADIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/AzureADIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/AzureADIntegration/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/AzureFormRecognizer/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/AzureFormRecognizer/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/AzureFormRecognizer/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/AzureFormRecognizer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/AzureFormRecognizer/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/ClaveAuthentication/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/ClaveAuthentication/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/ClaveAuthentication/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/ClaveAuthentication/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/ClaveAuthentication/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/FaceRecognition/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/FaceRecognition/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/FaceRecognition/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/FaceRecognition/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/FaceRecognition/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/Google/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/Google/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Google/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/Google/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/Google/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/GoogleAPIKey/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/GoogleAPIKey/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GoogleAPIKey/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/GoogleAPIKey/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/GoogleAPIKey/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/GooglePlaces/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/GooglePlaces/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/GooglePlaces/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/GooglePlaces/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/GooglePlaces/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/MailChimp/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/MailChimp/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimp/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/MailChimp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/MailChimp/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/MailChimpProcesses/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/MailChimpProcesses/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/MailChimpProcesses/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/MailChimpProcesses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/MailChimpProcesses/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/Office365/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/Office365/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Office365/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/Office365/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/Office365/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/OpenAI/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/OpenAI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OpenAI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/OpenAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/OpenAI/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/OtherflexygoIntegration/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/OtherflexygoIntegration/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/OtherflexygoIntegration/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/OtherflexygoIntegration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/OtherflexygoIntegration/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/Passbook/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/Passbook/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Passbook/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/Passbook/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/Passbook/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/PowerBI/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/PowerBI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PowerBI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/PowerBI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/PowerBI/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/PushNotifications/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/PushNotifications/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/PushNotifications/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/PushNotifications/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/PushNotifications/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/RedSys/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/RedSys/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/RedSys/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/RedSys/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/RedSys/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/Scales/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/Scales/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/Scales/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/Scales/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/Scales/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/SendinBlue/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/SendinBlue/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/SendinBlue/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/SendinBlue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/SendinBlue/"/>
     </url>
     <url>
-        <loc>Noneen/Connectors/WacomSignature/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Connectors/WacomSignature/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/WacomSignature/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Connectors/WacomSignature/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xConnectors/WacomSignature/"/>
     </url>
     <url>
-        <loc>Noneen/Information/Addons/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/Addons/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Addons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/Addons/"/>
     </url>
     <url>
-        <loc>Noneen/Information/FriendlyURLs/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/FriendlyURLs/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/FriendlyURLs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/FriendlyURLs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/FriendlyURLs/"/>
     </url>
     <url>
-        <loc>Noneen/Information/GoodPractices/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/GoodPractices/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/GoodPractices/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/GoodPractices/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/GoodPractices/"/>
     </url>
     <url>
-        <loc>Noneen/Information/MFA/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/MFA/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MFA/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/MFA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/MFA/"/>
     </url>
     <url>
-        <loc>Noneen/Information/MailAccountsSettings/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/MailAccountsSettings/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/MailAccountsSettings/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/MailAccountsSettings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/MailAccountsSettings/"/>
     </url>
     <url>
-        <loc>Noneen/Information/Navigator/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/Navigator/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Navigator/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/Navigator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/Navigator/"/>
     </url>
     <url>
-        <loc>Noneen/Information/PageHierarchy/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/PageHierarchy/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/PageHierarchy/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/PageHierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/PageHierarchy/"/>
     </url>
     <url>
-        <loc>Noneen/Information/Security/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Information/Security/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Security/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Information/Security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInformation/Security/"/>
     </url>
     <url>
-        <loc>Noneen/Installation/1HowToInstall/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Installation/1HowToInstall/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/1HowToInstall/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Installation/1HowToInstall/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInstallation/1HowToInstall/"/>
     </url>
     <url>
-        <loc>Noneen/Installation/CreatingIntefaceTest/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Installation/CreatingIntefaceTest/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingIntefaceTest/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Installation/CreatingIntefaceTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInstallation/CreatingIntefaceTest/"/>
     </url>
     <url>
-        <loc>Noneen/Installation/CreatingNugetPackage/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Installation/CreatingNugetPackage/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingNugetPackage/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Installation/CreatingNugetPackage/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInstallation/CreatingNugetPackage/"/>
     </url>
     <url>
-        <loc>Noneen/Installation/CreatingProduct/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Installation/CreatingProduct/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingProduct/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Installation/CreatingProduct/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInstallation/CreatingProduct/"/>
     </url>
     <url>
-        <loc>Noneen/Installation/CreatingUnitaryTest/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Installation/CreatingUnitaryTest/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingUnitaryTest/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Installation/CreatingUnitaryTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInstallation/CreatingUnitaryTest/"/>
     </url>
     <url>
-        <loc>Noneen/Installation/CreatingWebComponent/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Installation/CreatingWebComponent/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Installation/CreatingWebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneInstallation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Installation/CreatingWebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xInstallation/CreatingWebComponent/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Chart/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Chart/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chart/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Chart/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Chart/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/ChartII/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/ChartII/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ChartII/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/ChartII/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/ChartII/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Chatter/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Chatter/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Chatter/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Chatter/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Chatter/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/DocAndImageManager/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/DocAndImageManager/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/DocAndImageManager/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/DocAndImageManager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/DocAndImageManager/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Funnel/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Funnel/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Funnel/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Funnel/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Funnel/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Kanban/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Kanban/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Kanban/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Kanban/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Kanban/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Maps/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Maps/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Maps/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Maps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Maps/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/ModuleManagement/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/ModuleManagement/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ModuleManagement/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/ModuleManagement/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/ModuleManagement/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Modules/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Modules/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Modules/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Modules/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/ObjectFilters/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/ObjectFilters/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/ObjectFilters/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/ObjectFilters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/ObjectFilters/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/PlannerModule/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/PlannerModule/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/PlannerModule/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/PlannerModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/PlannerModule/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/Popover/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/Popover/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/Popover/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/Popover/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/Popover/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/SchedulerCalendar/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/SchedulerCalendar/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/SchedulerCalendar/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/SchedulerCalendar/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/SchedulerCalendar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/SchedulerCalendar/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/TimelineModule/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/TimelineModule/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/TimelineModule/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/TimelineModule/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/TimelineModule/"/>
     </url>
     <url>
-        <loc>Noneen/Modules/WebMail/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Modules/WebMail/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Modules/WebMail/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneModules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Modules/WebMail/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xModules/WebMail/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/AccessandDescription/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/AccessandDescription/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/AccessandDescription/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/AccessandDescription/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/AccessandDescription/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/DesignEnvironment/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/DesignEnvironment/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/DesignEnvironment/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/DesignEnvironment/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/DesignEnvironment/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/DesigningApp/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/DesigningApp/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/DesigningApp/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/DesigningApp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/DesigningApp/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/NavigationOptions/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/NavigationOptions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/NavigationOptions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/NavigationOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/NavigationOptions/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/OfflineAI/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/OfflineAI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/OfflineAI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/OfflineAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/OfflineAI/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/OfflineAndEmulatordifferences/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/OfflineAndEmulatordifferences/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/OfflineAndEmulatordifferences/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/OfflineAndEmulatordifferences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/OfflineAndEmulatordifferences/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/OfflineDatabase/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/OfflineDatabase/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/OfflineDatabase/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/OfflineDatabase/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/OfflineDatabase/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/ReturnDataProcess/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/ReturnDataProcess/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/ReturnDataProcess/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/ReturnDataProcess/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/ReturnDataProcess/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/Trackingconfiguration/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/Trackingconfiguration/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/Trackingconfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/Trackingconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/Trackingconfiguration/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/UsefulTokens/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/UsefulTokens/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/UsefulTokens/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/UsefulTokens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/UsefulTokens/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/AI/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/AI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/AI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/AI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/AI/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Camera/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Camera/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Camera/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Camera/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Camera/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Exports/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Exports/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Exports/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Exports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Exports/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Forms/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Forms/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Forms/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Forms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Forms/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Location/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Location/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Location/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Location/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Location/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Messages/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Messages/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Messages/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Messages/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Messages/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/NFC/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/NFC/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/NFC/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/NFC/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/NFC/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Navigation/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Navigation/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Navigation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Navigation/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Online-navigation/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Online-navigation/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Online-navigation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Online-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Online-navigation/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Parser/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Parser/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Parser/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Parser/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Parser/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Utils/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Utils/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Utils/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Utils/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Utils/"/>
     </url>
     <url>
-        <loc>Noneen/OfflineApp/JSFunctions/Zebra-Printer/</loc>
+        <loc>http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Zebra-Printer/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/OfflineApp/JSFunctions/Zebra-Printer/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneOfflineApp/JSFunctions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/OfflineApp/JSFunctions/Zebra-Printer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xOfflineApp/JSFunctions/Zebra-Printer/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/CommonFunctions/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/CommonFunctions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CommonFunctions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/CommonFunctions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/CommonFunctions/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/ContextVariables/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/ContextVariables/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/ContextVariables/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/ContextVariables/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/ContextVariables/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/Controls/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/Controls/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Controls/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/Controls/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/Controls/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/CustomDLL/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/CustomDLL/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomDLL/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/CustomDLL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/CustomDLL/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/CustomStored/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/CustomStored/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/CustomStored/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/CustomStored/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/CustomStored/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/DatabaseScriptJobs/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/DatabaseScriptJobs/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/DatabaseScriptJobs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/DatabaseScriptJobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/DatabaseScriptJobs/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/Events/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/Events/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Events/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/Events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/Events/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/FormValidators/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/FormValidators/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/FormValidators/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/FormValidators/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/FormValidators/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/Imports/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/Imports/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Imports/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/Imports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/Imports/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/LinkedServers/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/LinkedServers/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/LinkedServers/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/LinkedServers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/LinkedServers/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/NoticesSentences/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/NoticesSentences/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/NoticesSentences/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/NoticesSentences/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/NoticesSentences/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/Testing/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/Testing/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/Testing/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/Testing/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/Testing/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/UpdateTypes/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/UpdateTypes/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/UpdateTypes/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/UpdateTypes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/UpdateTypes/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/WebAPI/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/WebAPI/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebAPI/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/WebAPI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/WebAPI/"/>
     </url>
     <url>
-        <loc>Noneen/Programming/WebComponent/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Programming/WebComponent/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Programming/WebComponent/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneProgramming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Programming/WebComponent/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xProgramming/WebComponent/"/>
     </url>
     <url>
-        <loc>Noneen/Reporting/Newsandversionnotes/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Reporting/Newsandversionnotes/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Reporting/Newsandversionnotes/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneReporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Reporting/Newsandversionnotes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xReporting/Newsandversionnotes/"/>
     </url>
     <url>
-        <loc>Noneen/Style/CSSAndTypography/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Style/CSSAndTypography/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/CSSAndTypography/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Style/CSSAndTypography/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xStyle/CSSAndTypography/"/>
     </url>
     <url>
-        <loc>Noneen/Style/FlagIcons/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Style/FlagIcons/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/FlagIcons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Style/FlagIcons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xStyle/FlagIcons/"/>
     </url>
     <url>
-        <loc>Noneen/Style/GridOptions/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Style/GridOptions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/GridOptions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Style/GridOptions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xStyle/GridOptions/"/>
     </url>
     <url>
-        <loc>Noneen/Style/Icon/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Style/Icon/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Icon/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Style/Icon/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xStyle/Icon/"/>
     </url>
     <url>
-        <loc>Noneen/Style/Timeline/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Style/Timeline/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Style/Timeline/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneStyle/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Style/Timeline/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xStyle/Timeline/"/>
     </url>
     <url>
-        <loc>Noneen/Templates/Formats/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Templates/Formats/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Formats/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Templates/Formats/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xTemplates/Formats/"/>
     </url>
     <url>
-        <loc>Noneen/Templates/NavigationButton/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Templates/NavigationButton/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/NavigationButton/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Templates/NavigationButton/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xTemplates/NavigationButton/"/>
     </url>
     <url>
-        <loc>Noneen/Templates/ObjectTemplates/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Templates/ObjectTemplates/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/ObjectTemplates/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Templates/ObjectTemplates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xTemplates/ObjectTemplates/"/>
     </url>
     <url>
-        <loc>Noneen/Templates/Skeletons/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Templates/Skeletons/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Skeletons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Templates/Skeletons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xTemplates/Skeletons/"/>
     </url>
     <url>
-        <loc>Noneen/Templates/Targets/</loc>
+        <loc>http://localhost:9999/test/9.x/en/Templates/Targets/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Templates/Targets/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneTemplates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://localhost:9999/test/9.x/en/Templates/Targets/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://localhost:9999/test/9.xTemplates/Targets/"/>
     </url>
 </urlset>
