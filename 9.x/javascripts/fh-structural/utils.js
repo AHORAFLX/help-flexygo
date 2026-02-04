@@ -104,12 +104,13 @@ function isAFlexy() {
 
 function _nav(url) {
     if (!url) {
-        let base_path = getBasePath();
         //We remove /docs from the path if we are in flexygo to get the correct base path
         if (isAFlexy()) {
-            base_path = base_path.replace('/docs', '');
+            url = window.location.href;
+            url = url.slice(0, url.indexOf('/docs')) + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        } else {
+            url += getBasePath() + '/Index#' + btoa(JSON.stringify(current_navigation_url));
         }
-        url += base_path + '/Index#' + btoa(JSON.stringify(current_navigation_url));
     } else {
         if (!url.endsWith('/')) {
             url += '/';
