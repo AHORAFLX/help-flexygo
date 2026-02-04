@@ -8,23 +8,23 @@
   --fh-border: 1px solid var(--fh-color-border);
   
   /* Main Sidebar*/
-  --flx-main-sidebar-width: 19dvw;
-  --flx-main-sidebar-padding: 20px;
+  --fh-main-sidebar-width: 19dvw;
+  --fh-main-sidebar-padding: 20px;
 
   /* Main content */
-  --flx-main-content-margin: 2rem;
+  --fh-main-content-margin: 2rem;
 
   /* Images */
-  --flx-main-background: url(../../docs_assets/fh-structural/images/backgrounds/light-background.svg);
+  --fh-main-background: url(../../docs_assets/fh-structural/images/backgrounds/light-background.svg);
 
   /* Box Shadw */
-  --flx-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+  --fh-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
 }
 
 /* Dark mode variables */
 [data-md-color-scheme="darkmode"] {
   /* Images */
-  --flx-main-background: url(../../docs_assets/fh-structural/images/backgrounds/dark-background.svg);
+  --fh-main-background: url(../../docs_assets/fh-structural/images/backgrounds/dark-background.svg);
 }
 
 /* Hiding images that are only for light mode in dark mode */
@@ -41,8 +41,8 @@ header.md-header {
   box-shadow: none;
   position: fixed;
   
-  width: calc(100dvw - var(--flx-main-sidebar-width));
-  left: var(--flx-main-sidebar-width);
+  width: calc(100dvw - var(--fh-main-sidebar-width));
+  left: var(--fh-main-sidebar-width);
 
   /* Logo that just appears on middle and small size */
   a.md-logo {
@@ -68,7 +68,7 @@ header.md-header {
   /* Search input */
   .md-search {
     position: absolute;
-    left: calc(50dvw - var(--flx-main-sidebar-width));
+    left: calc(50dvw - var(--fh-main-sidebar-width));
     transform: translatex(-50%);
 
     .md-search__overlay {
@@ -132,19 +132,19 @@ header.md-header {
 }
 
 /* Main Sidebar */
-.flx-sidebar {
+.fh-sidebar {
   top: 0 !important; /* Top on the material theme is set on the style */
   padding: 0;
   width: fit-content;
-  max-width: var(--flx-main-sidebar-width);
-  min-width: var(--flx-main-sidebar-width);
+  max-width: var(--fh-main-sidebar-width);
+  min-width: var(--fh-main-sidebar-width);
   
   /* Logo and docs text */
-  .flx-sidebarheader {
+  .fh-sidebarheader {
     display: flex;
     align-items: center;
 
-    width: var(--flx-main-sidebar-width);
+    width: var(--fh-main-sidebar-width);
     background-color: var(--fh-identity-color);
 
     /* Centering and spacing logo and docs text */
@@ -157,11 +157,11 @@ header.md-header {
   /* Module style */
   .md-sidebar__scrollwrap {
     height: calc(100dvh - 53px) !important; /* Height in the material theme is set on the style | 53px = Header height*/
-    width: var(--flx-main-sidebar-width);
+    width: var(--fh-main-sidebar-width);
     margin: 0;
 
     background: var(--fh-color-section);
-    padding: var(--flx-main-sidebar-padding);
+    padding: var(--fh-main-sidebar-padding);
     border: var(--fh-border);
     box-shadow: 0 8px 19px 0 rgb(0 0 0 / 37%); /* Uses a different box shadow for it to only be shown on the right */
   }
@@ -180,7 +180,7 @@ header.md-header {
 /* Main content and Secondary sidebar */
 main {
   background-color: var(--fh-color-background);
-  background-image: var(--flx-main-background);
+  background-image: var(--fh-main-background);
 
   .md-main__inner {
     margin: 0;
@@ -200,8 +200,8 @@ main {
         padding: 20px;
         border-radius:  var(--fh-border-radius);
         border: var(--fh-border);
-        margin: 0 var(--flx-main-content-margin) 12px var(--flx-main-content-margin);
-        box-shadow: var(--flx-module-boxshadow);
+        margin: 0 var(--fh-main-content-margin) 12px var(--fh-main-content-margin);
+        box-shadow: var(--fh-module-boxshadow);
         
         max-width: calc(60dvw - 80px);
         min-width: calc(60dvw - 80px);
@@ -214,7 +214,7 @@ main {
       }
       
       /* Secondary Sidebar */
-      .flx-rightsidebar {
+      .fh-rightsidebar {
         max-width: calc(20dvw - 3rem);
         min-width: calc(20dvw - 3rem);
         margin-right: 3rem;
@@ -227,7 +227,7 @@ main {
           padding: 20px;
           border-radius:  var(--fh-border-radius);
           border: var(--fh-border);
-          box-shadow: var(--flx-module-boxshadow);
+          box-shadow: var(--fh-module-boxshadow);
 
           height: calc(100dvh - 85px) !important;
         }
@@ -379,8 +379,8 @@ a.md-logo {
   }
 
   /* Main Sidebar */
-  .flx-sidebar {
-    .flx-sidebarheader {
+  .fh-sidebar {
+    .fh-sidebarheader {
       display: none;
     }
 
@@ -391,7 +391,7 @@ a.md-logo {
 
   /* Sidebar opened */
   [data-md-toggle=drawer]:checked~.md-container .md-sidebar {
-    --flx-main-sidebar-width: 80dvw;
+    --fh-main-sidebar-width: 80dvw;
   }
 
   /* Main content and Secondary sidebar */
@@ -409,7 +409,7 @@ a.md-logo {
       }
 
       /* Secondary sidebar */
-      .flx-rightsidebar {
+      .fh-rightsidebar {
         top: 47px !important;
 
         min-width: 20dvw;
@@ -453,7 +453,7 @@ a.md-logo {
 
 /* Not big screens */
 @media screen and (min-width: 60em) {
-  .flx-sidebar .md-sidebar__scrollwrap {
+  .fh-sidebar .md-sidebar__scrollwrap {
     height: calc(100dvh - 48px) !important;
   }
 }

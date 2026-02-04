@@ -12,7 +12,7 @@ main.error-404 {
         padding: 20px 40px;
 
         background-color: var(--fh-color-section);
-        box-shadow: var(--flx-module-boxshadow);
+        box-shadow: var(--fh-module-boxshadow);
 
         border-radius: var(--fh-border-radius);
 

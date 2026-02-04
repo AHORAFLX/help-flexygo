@@ -156,8 +156,8 @@
               {% if page.meta and page.meta.hide %}
                 {% set hidden = "hidden" if "navigation" in page.meta.hide %}
               {% endif %}
-              <div class="flx-sidebar md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
-                <div class="flx-sidebarheader">
+              <div class="fh-sidebar md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
+                <div class="fh-sidebarheader">
                   <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
                     {% include "partials/logo.html" %}
                     Docs
@@ -184,7 +184,7 @@
                 {% if page.meta and page.meta.hide %}
                   {% set hidden = "hidden" if "toc" in page.meta.hide %}
                 {% endif %}
-                <div class="flx-rightsidebar md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" {{ hidden }}>
+                <div class="fh-rightsidebar md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" {{ hidden }}>
                   <div class="md-sidebar__scrollwrap">
                     <div class="md-sidebar__inner">
                       {% include "partials/toc.html" %}
