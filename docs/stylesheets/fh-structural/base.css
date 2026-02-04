@@ -237,6 +237,9 @@ main {
           background: var(--fh-color-section);
           box-shadow: none;
           font-weight: 500;
+          
+          padding-top: 20px;
+          top: -20px;
         }
       }
     }
