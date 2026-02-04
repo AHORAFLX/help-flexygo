@@ -8,7 +8,7 @@ addEventListener("DOMContentLoaded", () => {
 
     // We check if we are on flexygo and add a class to the document so we can style accordingly
     if (isAFlexy()) {
-        document.documentElement.classList.add('in-iframe');
+        document.documentElement.classList.add('in-flexygo');
     }
 });
 
@@ -104,7 +104,12 @@ function isAFlexy() {
 
 function _nav(url) {
     if (!url) {
-        url = '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        let base_path = getBasePath();
+        //We remove /docs from the path if we are in flexygo to get the correct base path
+        if (isAFlexy()) {
+            base_path = base_path.replace('/docs', '');
+        }
+        url += base_path + '/Index#' + btoa(JSON.stringify(current_navigation_url));
     } else {
         if (!url.endsWith('/')) {
             url += '/';
