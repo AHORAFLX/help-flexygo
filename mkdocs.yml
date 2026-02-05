@@ -42,13 +42,13 @@ extra_css:
   - stylesheets/fh-structural/components/fh-namepropagator.css
   ## Basic fonts and icons
   - docs_assets/fh-structural/fonts/flags/flags.css
+  - docs_assets/fh-structural/fonts/flexygo/utils.css
+  - docs_assets/fh-structural/fonts/flexygo/flexygo-icons.css
 
   # Your project styles files here ↓
   - stylesheets/flexygo-styles/main-flexygo-styles.css
   - stylesheets/flexygo-styles/cols.css
   - stylesheets/flexygo-styles/list-groups.css
-  - docs_assets/fonts/flexygo/utils.css
-  - docs_assets/fonts/flexygo/flexygo.css
 extra_javascript:
   # Basic javascripts for every documentation project
   ## Basic utilities
