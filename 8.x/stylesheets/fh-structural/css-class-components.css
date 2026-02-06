@@ -1,14 +1,14 @@
 /* Home Cards */
 :root  > * {
-    --flx-home-card-shadow: 0px 1px 2px #0208140f, 0px 2px 8px #02081414;
+    --fh-home-card-shadow: 0px 1px 2px #0208140f, 0px 2px 8px #02081414;
 }
 
-.md-typeset ul.flx-home-cards {
+.md-typeset ul.fh-home-cards {
     display: grid;
     grid-template-columns: auto auto;
     list-style: none;
 
-    li.flx-home-card {
+    li.fh-home-card {
         min-height: 182px;
         max-height: 182px;
         border: var(--fh-border);
@@ -25,7 +25,7 @@
             margin-left: 8px;
         }
 
-        .flx-home-card-icon {
+        .fh-home-card-icon {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,16 +42,16 @@
             }   
         }
 
-        .flx-small-text {
+        .fh-small-text {
             font-size: 14px;
         }
     }
 
-    li.flx-home-card:hover {
-        box-shadow: var(--flx-home-card-shadow);
+    li.fh-home-card:hover {
+        box-shadow: var(--fh-home-card-shadow);
         border-color: var(--md-typeset-a-color);
 
-        .flx-home-card-icon {
+        .fh-home-card-icon {
             color: var(--md-typeset-a-color);
             border-color: var(--md-typeset-a-color);
         }
@@ -60,7 +60,7 @@
 
 /* Title with Image */
 .md-typeset {
-    h1.flx-title-with-image {
+    h1.fh-title-with-image {
         position: absolute;
         margin: 20px 0;
     }
@@ -125,7 +125,7 @@
     }
 }
 
-.md-typeset .flx-info-card {
+.md-typeset .fh-info-card {
     background-color: color-mix(in hsl, #d6ebfd, transparent 65%);
     margin-top: 0.6em;
     margin-bottom: 0.6em;
@@ -134,7 +134,7 @@
     border-radius: 8px;
 }
 
-[data-md-color-scheme="darkmode"] .md-typeset .flx-info-card {
+[data-md-color-scheme="darkmode"] .md-typeset .fh-info-card {
     background-color: color-mix(in hsl, #2a3b50, transparent);
     border-color:#3e3e3f;
 }

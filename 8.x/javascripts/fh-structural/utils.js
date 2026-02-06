@@ -6,10 +6,26 @@ addEventListener("DOMContentLoaded", () => {
     navigation_dialog = document.getElementById('navigation-dialog');
     navigation_dialog.querySelector('label').innerText = translate('flexygo_URL_modal_title');
 
-    // We check if we are inside an iframe (is loaded on flexygo) and add a class to the document so we can style accordingly
-    if (isOnIframe()) {
-        document.documentElement.classList.add('in-iframe');
+    // We check if we are on flexygo and add a class to the document so we can style accordingly
+    if (isAFlexy()) {
+        document.documentElement.classList.add('in-flexygo');
     }
+
+    // Restore language preference if coming from version switch
+    try {
+        const savedLanguage = localStorage.getItem('flexygo-docs-language-preference');
+        if (savedLanguage) {
+            const base_path = getBasePath();
+            const [, relative_path] = splitBase(base_path);
+            const path_segments = relative_path.split('/').filter(Boolean);
+            const first_segment = path_segments[0] || '';
+            const current_language = LANGUAGES.includes(first_segment) ? first_segment : DEFAULT_LANGUAGE;
+            
+            if (savedLanguage !== current_language) {
+                changeLanguage(savedLanguage);
+            }
+        }
+    } catch (e) {}
 });
 
 function changeLanguage(new_language) {
@@ -25,6 +41,11 @@ function changeLanguage(new_language) {
     if (new_language === current_language || (new_language === '' && current_language === DEFAULT_LANGUAGE)) {
         return;
     }
+
+    // Save the language preference for version switches
+    try {
+        localStorage.setItem('flexygo-docs-language-preference', new_language || DEFAULT_LANGUAGE);
+    } catch (e) {}
 
     // Build new relative path segments without the locale segment (if present)
     const path_segments_no_language = LANGUAGES.includes(fist_segment) ? path_segments.slice(1) : path_segments;
@@ -96,17 +117,21 @@ function navigateToFlexy(json, ctrlKey_pressed) {
 }
 
 function isAFlexy() {
-    const current_url = new URL(window.location.href);
-    if (current_url.pathname.startsWith('/docs/')) {
-        return true;
-    }
-
-    return false;
+    const is_mkdocs = (window.location.hostname === 'localhost' || 
+                        window.location.hostname === '127.0.0.1') &&
+                        window.location.port === '8000';
+    return !is_mkdocs && !window.location.href.includes('ayuda.ahora.es');
 }
 
 function _nav(url) {
     if (!url) {
-        url = '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        //We remove /docs from the path if we are in flexygo to get the correct base path
+        if (isAFlexy()) {
+            url = window.location.href;
+            url = url.slice(0, url.indexOf('/docs')) + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        } else {
+            url += getBasePath() + '/Index#' + btoa(JSON.stringify(current_navigation_url));
+        }
     } else {
         if (!url.endsWith('/')) {
             url += '/';
