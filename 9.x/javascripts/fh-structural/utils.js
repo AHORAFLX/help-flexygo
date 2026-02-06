@@ -10,6 +10,22 @@ addEventListener("DOMContentLoaded", () => {
     if (isAFlexy()) {
         document.documentElement.classList.add('in-flexygo');
     }
+
+    // Restore language preference if coming from version switch
+    try {
+        const savedLanguage = localStorage.getItem('flexygo-docs-language-preference');
+        if (savedLanguage) {
+            const base_path = getBasePath();
+            const [, relative_path] = splitBase(base_path);
+            const path_segments = relative_path.split('/').filter(Boolean);
+            const first_segment = path_segments[0] || '';
+            const current_language = LANGUAGES.includes(first_segment) ? first_segment : DEFAULT_LANGUAGE;
+            
+            if (savedLanguage !== current_language) {
+                changeLanguage(savedLanguage);
+            }
+        }
+    } catch (e) {}
 });
 
 function changeLanguage(new_language) {
@@ -25,6 +41,11 @@ function changeLanguage(new_language) {
     if (new_language === current_language || (new_language === '' && current_language === DEFAULT_LANGUAGE)) {
         return;
     }
+
+    // Save the language preference for version switches
+    try {
+        localStorage.setItem('flexygo-docs-language-preference', new_language || DEFAULT_LANGUAGE);
+    } catch (e) {}
 
     // Build new relative path segments without the locale segment (if present)
     const path_segments_no_language = LANGUAGES.includes(fist_segment) ? path_segments.slice(1) : path_segments;
