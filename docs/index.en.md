@@ -2,37 +2,37 @@
 
 Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to use interface, you can build anything with little to no knowdlege about HTML, CSS, JS or C#. But if you ever want to develop more complex applications you'll have access to all of them so you can create the exact idea you had in mind.
 
-<ul class="flx-home-cards">
-    <li class="flx-home-card">
+<ul class="fh-home-cards">
+    <li class="fh-home-card">
         <a href="./Modules/Modules">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-modules"></i>
             </span>
             <p><b>Modules</b></p>
             <p class="flx-small-text">Get to know every flexygo module</p>
         </a>
     </li>
-    <li class="flx-home-card">
+    <li class="fh-home-card">
         <a href="./Programming/Controls">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-vcard"></i>
             </span>
             <p><b>Form Controls</b></p>
             <p class="flx-small-text">Discover every flexygo custom controls</p>
         </a>
     </li>
-    <li class="flx-home-card">
+    <li class="fh-home-card">
         <a href="./Information/GoodPractices">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-select-1"></i>
             </span>
             <p><b>Good practices</b></p>
             <p class="flx-small-text">Remind yourself of good practices when developing with flexygo</p>
         </a>
     </li>
-    <li class="flx-home-card">
+    <li class="fh-home-card">
         <a href="./Offline App/AccessandDescription">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-mobile"></i>
             </span>
             <p><b>Offline App</b></p>

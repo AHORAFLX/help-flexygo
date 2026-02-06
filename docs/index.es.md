@@ -6,37 +6,37 @@ title: Introducción a Flexygo
 
 Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida gracias a su interfaz fácil de usar. Puedes construir prácticamente cualquier cosa con poco o ningún conocimiento de HTML, CSS, JS o C#. No obstante, si en algún momento necesitas desarrollar aplicaciones más complejas, tendrás acceso completo a todas estas tecnologías para poder crear exactamente la idea que tienes en mente.
 
-<ul class="flx-home-cards">
-    <li class="flx-home-card">
+<ul class="fh-home-cards">
+    <li class="fh-home-card">
         <a href="./Modules/Modules">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-modules"></i>
             </span>
             <p><b>Módulos</b></p>
             <p class="flx-small-text">Conoce todos los módulos de Flexygo</p>
         </a>
     </li>
-    <li class="flx-home-card">
+    <li class="fh-home-card">
         <a href="./Programming/Controls">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-vcard"></i>
             </span>
             <p><b>Controles de formulario</b></p>
             <p class="flx-small-text">Descubre todos los controles personalizados de Flexygo</p>
         </a>
     </li>
-    <li class="flx-home-card">
+    <li class="fh-home-card">
         <a href="./Information/GoodPractices">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-select-1"></i>
             </span>
             <p><b>Buenas prácticas</b></p>
             <p class="flx-small-text">Recuerda las buenas prácticas al desarrollar con Flexygo</p>
         </a>
     </li>
-    <li class="flx-home-card">
+    <li class="fh-home-card">
         <a href="./Offline App/AccessandDescription">
-            <span class="flx-home-card-icon">
+            <span class="fh-home-card-icon">
                 <i class="flx-icon icon-mobile"></i>
             </span>
             <p><b>Aplicación Offline</b></p>
