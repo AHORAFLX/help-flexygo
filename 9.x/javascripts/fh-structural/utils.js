@@ -16,9 +16,6 @@ addEventListener("DOMContentLoaded", () => {
 
     // Restore palette preference from previous session/version
     restorePalettePreference();
-
-    // Intercept version selector clicks to save preferences
-    interceptVersionChanges();
 });
 
 function changeLanguage(new_language) {
