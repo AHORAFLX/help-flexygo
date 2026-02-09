@@ -9,7 +9,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
                 <i class="flx-icon icon-modules"></i>
             </span>
             <p><b>Modules</b></p>
-            <p class="flx-small-text">Get to know every flexygo module</p>
+            <p class="fh-small-text">Get to know every flexygo module</p>
         </a>
     </li>
     <li class="fh-home-card">
@@ -18,7 +18,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
                 <i class="flx-icon icon-vcard"></i>
             </span>
             <p><b>Form Controls</b></p>
-            <p class="flx-small-text">Discover every flexygo custom controls</p>
+            <p class="fh-small-text">Discover every flexygo custom controls</p>
         </a>
     </li>
     <li class="fh-home-card">
@@ -27,16 +27,16 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
                 <i class="flx-icon icon-select-1"></i>
             </span>
             <p><b>Good practices</b></p>
-            <p class="flx-small-text">Remind yourself of good practices when developing with flexygo</p>
+            <p class="fh-small-text">Remind yourself of good practices when developing with flexygo</p>
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./Offline App/AccessandDescription">
+        <a href="./OfflineApp/AccessandDescription">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-mobile"></i>
             </span>
             <p><b>Offline App</b></p>
-            <p class="flx-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
+            <p class="fh-small-text">Learn to build an app to work with your Flexygo data even in low connectivity locations</p>
         </a>
     </li>
 </ul>

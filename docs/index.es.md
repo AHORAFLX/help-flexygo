@@ -13,7 +13,7 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
                 <i class="flx-icon icon-modules"></i>
             </span>
             <p><b>Módulos</b></p>
-            <p class="flx-small-text">Conoce todos los módulos de Flexygo</p>
+            <p class="fh-small-text">Conoce todos los módulos de Flexygo</p>
         </a>
     </li>
     <li class="fh-home-card">
@@ -22,7 +22,7 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
                 <i class="flx-icon icon-vcard"></i>
             </span>
             <p><b>Controles de formulario</b></p>
-            <p class="flx-small-text">Descubre todos los controles personalizados de Flexygo</p>
+            <p class="fh-small-text">Descubre todos los controles personalizados de Flexygo</p>
         </a>
     </li>
     <li class="fh-home-card">
@@ -31,16 +31,16 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
                 <i class="flx-icon icon-select-1"></i>
             </span>
             <p><b>Buenas prácticas</b></p>
-            <p class="flx-small-text">Recuerda las buenas prácticas al desarrollar con Flexygo</p>
+            <p class="fh-small-text">Recuerda las buenas prácticas al desarrollar con Flexygo</p>
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./Offline App/AccessandDescription">
+        <a href="./OfflineApp/AccessandDescription">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-mobile"></i>
             </span>
             <p><b>Aplicación Offline</b></p>
-            <p class="flx-small-text">Aprende a crear una app para trabajar con tus datos de Flexygo incluso en ubicaciones con baja conectividad</p>
+            <p class="fh-small-text">Aprende a crear una app para trabajar con tus datos de Flexygo incluso en ubicaciones con baja conectividad</p>
         </a>
     </li>
 </ul>
