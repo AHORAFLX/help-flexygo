@@ -7,7 +7,7 @@ First of all you'll need to install [python](https://www.python.org/downloads/) 
 Once you've got python installed you will need to install mkdocs material and its dependencies with this command:
 
 ```shell
-py -m pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-glightbox pymdown-extensions
+py -m pip install -r requirements.txt
 ```
 
 With this you've got everything needed for it to run.
