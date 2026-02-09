@@ -10,12 +10,6 @@ addEventListener("DOMContentLoaded", () => {
     if (isAFlexy()) {
         document.documentElement.classList.add('in-flexygo');
     }
-
-    // Restore language preference from previous session/version
-    restoreLanguagePreference();
-
-    // Restore palette preference from previous session/version
-    restorePalettePreference();
 });
 
 function changeLanguage(new_language) {
@@ -31,9 +25,6 @@ function changeLanguage(new_language) {
     if (new_language === current_language || (new_language === '' && current_language === DEFAULT_LANGUAGE)) {
         return;
     }
-
-    // Save language preference when user changes it
-    saveLanguagePreference(new_language || DEFAULT_LANGUAGE);
 
     // Build new relative path segments without the locale segment (if present)
     const path_segments_no_language = LANGUAGES.includes(fist_segment) ? path_segments.slice(1) : path_segments;
@@ -207,93 +198,6 @@ function getElementsWithCertainText(starting_element, text) {
     }
 
     return matches;
-}
-
-// Save current language preference to localStorage
-function saveLanguagePreference(language) {
-    try {
-        localStorage.setItem('flexygo-docs-language', language);
-    } catch (e) {}
-}
-
-// Save current palette preference to localStorage
-function savePalettePreference() {
-    try {
-        const palette = document.querySelector('[data-md-color-scheme]');
-        if (palette) {
-            const scheme = palette.getAttribute('data-md-color-scheme');
-            localStorage.setItem('flexygo-docs-palette', scheme);
-        }
-    } catch (e) {}
-}
-
-// Restore language preference and redirect if needed
-function restoreLanguagePreference() {
-    try {
-        const savedLanguage = localStorage.getItem('flexygo-docs-language');
-        if (!savedLanguage) return;
-
-        const base_path = getBasePath();
-        const [, relative_path] = splitBase(base_path);
-        const path_segments = relative_path.split('/').filter(Boolean);
-        const first_segment = path_segments[0] || '';
-        const current_language = LANGUAGES.includes(first_segment) ? first_segment : DEFAULT_LANGUAGE;
-
-        // If saved language differs from current, redirect
-        if (savedLanguage !== current_language) {
-            changeLanguage(savedLanguage);
-        }
-    } catch (e) {}
-}
-
-// Restore palette preference
-function restorePalettePreference() {
-    try {
-        const savedScheme = localStorage.getItem('flexygo-docs-palette');
-        if (!savedScheme) return;
-
-        const currentPalette = document.querySelector('[data-md-color-scheme]');
-        if (currentPalette && currentPalette.getAttribute('data-md-color-scheme') !== savedScheme) {
-            // Find the palette toggle button for the saved scheme
-            const paletteInput = document.querySelector(`input[data-md-color-scheme="${savedScheme}"]`);
-            if (paletteInput && !paletteInput.checked) {
-                paletteInput.click();
-            }
-        }
-    } catch (e) {}
-}
-
-// Intercept mike version selector to save preferences before navigation
-function interceptVersionChanges() {
-    // Observer watches for version selector to appear (mike adds it dynamically)
-    const observer = new MutationObserver(() => {
-        const versionSelector = document.querySelector('.md-version');
-        if (versionSelector && !versionSelector.dataset.intercepted) {
-            versionSelector.dataset.intercepted = 'true';
-            
-            // Add click listeners to all version links
-            const versionLinks = versionSelector.querySelectorAll('a');
-            versionLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    // Save current language before version switch
-                    const base_path = getBasePath();
-                    const [, relative_path] = splitBase(base_path);
-                    const path_segments = relative_path.split('/').filter(Boolean);
-                    const first_segment = path_segments[0] || '';
-                    const current_language = LANGUAGES.includes(first_segment) ? first_segment : DEFAULT_LANGUAGE;
-                    saveLanguagePreference(current_language);
-                    
-                    // Save current palette before version switch
-                    savePalettePreference();
-                });
-            });
-        }
-    });
-
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
 }
 
 function isOnIframe() {
