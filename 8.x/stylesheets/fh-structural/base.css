@@ -144,6 +144,8 @@ header.md-header {
     display: flex;
     align-items: center;
 
+    height: 48px;
+
     width: var(--fh-main-sidebar-width);
     background-color: var(--fh-identity-color);
 
@@ -546,6 +548,19 @@ html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
       .md-content__inner > .highlight > pre > code {
           border-radius: 0 0 var(--fh-border-radius) var(--fh-border-radius);
       }
+  }
+}
+
+/* Greater Screen Sizes */
+@media screen and (min-width: 100em) {
+  .fh-sidebar  .fh-sidebarheader {
+    height: 53px;
+  }
+}
+
+@media screen and (min-width: 125em) {
+  .fh-sidebar  .fh-sidebarheader {
+    height: 58px;
   }
 }
 
