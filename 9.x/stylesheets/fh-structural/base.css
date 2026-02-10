@@ -358,7 +358,11 @@ a.md-logo {
     }
     
     .md-version {
-      margin-left: 5.4rem;
+      margin-left: 55px;
+    }
+
+    .md-header__button {
+      margin: 0;
     }
 
     .md-search {
