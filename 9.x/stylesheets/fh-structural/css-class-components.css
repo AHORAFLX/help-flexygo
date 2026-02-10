@@ -17,8 +17,10 @@
 
         a {
             color: var(--md-typeset-color);
-            display: flow-root;
+
             height: 100%;
+            overflow: hidden;
+            display: grid;
         }
 
         a > * {
@@ -30,6 +32,7 @@
             justify-content: center;
             align-items: center;
             width: fit-content;
+            height: fit-content;
 
             padding: 10px;
             margin-top: 10px;
