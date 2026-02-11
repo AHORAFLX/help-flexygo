@@ -225,6 +225,7 @@ function restorePaletteFromStorage() {
     if (current_palette) {
         localStorage.setItem('fh-palette', 'default');
     } else {
-        document.querySelectorAll(`[data-md-component="palette"] [title="Switch to ${current_palette} mode"]`).click();
+        const palette_button = document.querySelector(`[data-md-component="palette"] [title="Switch to ${current_palette} mode"]`);
+        palette_button?.click();
     }
 }
