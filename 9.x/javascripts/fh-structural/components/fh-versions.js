@@ -10,14 +10,14 @@ class FhVersions extends HTMLElement {
     async render() {
         await this.getVersions();
 
-        if (this.versions.length === 0) {
+        if (this.versions.length <= 1) {
             this.style.display = 'none';
             return;
         }
 
         //We add the current version as a non-clickable element (the only one that will be visible when not hovering or clicking)
         const current_version_element = document.createElement('div');
-        current_version_element.classList.add('fh-version-current');
+        current_version_element.classList.add('fh-versions-current');
         current_version_element.textContent = this.currentVersion;
         this.appendChild(current_version_element);
 
