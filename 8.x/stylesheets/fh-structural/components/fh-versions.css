@@ -14,7 +14,7 @@ fh-versions {
         }
     }
 
-    .fh-version-current {
+    .fh-versions-current {
         display: flex;
         align-items: center;
 
