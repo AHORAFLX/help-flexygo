@@ -223,9 +223,9 @@ function splitAtLastOccurrence(text, character) {
 function restorePaletteFromStorage() {
     const current_palette = localStorage.getItem('fh-palette');
     if (current_palette) {
-        localStorage.setItem('fh-palette', 'default');
-    } else {
         const palette_button = document.querySelector(`[data-md-component="palette"] [title="Switch to ${current_palette} mode"]`);
         palette_button?.click();
+    } else {
+        localStorage.setItem('fh-palette', 'default');
     }
 }
