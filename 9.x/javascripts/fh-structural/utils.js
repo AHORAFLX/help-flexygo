@@ -203,3 +203,8 @@ function getElementsWithCertainText(starting_element, text) {
 function isOnIframe() {
     return window.location !== window.parent.location;
 }
+
+function splitAtLastOccurrence(text, character) {
+    const index = text.lastIndexOf(character);
+    return [text.substring(0, index), text.substring(index + 1)];
+}

@@ -17,8 +17,10 @@
   /* Images */
   --fh-main-background: url(../../docs_assets/fh-structural/images/backgrounds/light-background.svg);
 
-  /* Box Shadw */
-  --fh-module-boxshadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+  /* Box Shadow */
+  --fh-module-boxshadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  --header-height: 48px;
 }
 
 /* Dark mode variables */
@@ -144,7 +146,7 @@ header.md-header {
     display: flex;
     align-items: center;
 
-    height: 48px;
+    height: var(--header-height);
 
     width: var(--fh-main-sidebar-width);
     background-color: var(--fh-identity-color);
@@ -158,7 +160,7 @@ header.md-header {
   /* Nav section */
   /* Module style */
   .md-sidebar__scrollwrap {
-    height: calc(100dvh - 53px) !important; /* Height in the material theme is set on the style | 53px = Header height*/
+    height: calc(100dvh - var(--header-height)) !important; /* Height in the material theme is set on the style | 53px = Header height*/
     width: var(--fh-main-sidebar-width);
     margin: 0;
 
@@ -341,7 +343,7 @@ a.md-logo {
 
 /* Styles to apply when docs are in an iframe */
 .in-flexygo {
-  .md-version {
+  fh-versions {
     display: none;
   }
 }
@@ -553,14 +555,14 @@ html[lang="es"] .md-search-result__item:has(a[href*="/en/"]) {
 
 /* Greater Screen Sizes */
 @media screen and (min-width: 100em) {
-  .fh-sidebar  .fh-sidebarheader {
-    height: 53px;
+  :root > * {
+    --header-height: 53px;
   }
 }
 
 @media screen and (min-width: 125em) {
-  .fh-sidebar  .fh-sidebarheader {
-    height: 58px;
+  :root > * {
+    --header-height: 58px;
   }
 }
 
