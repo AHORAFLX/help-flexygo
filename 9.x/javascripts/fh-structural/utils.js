@@ -18,7 +18,7 @@ addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('input[name="__palette"]').forEach(input => {
         input.addEventListener('change', (e) => {
             const palette = e.target.getAttribute('data-md-color-scheme');
-            localStorage.setItem(this.storage_name, palette === 'default' ? 'light' : 'dark');
+            localStorage.setItem('fh-palette', palette === 'default' ? 'light' : 'dark');
         });
     });
 });
