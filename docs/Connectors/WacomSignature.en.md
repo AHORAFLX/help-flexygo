@@ -1,4 +1,4 @@
-# Wacom SDK Integration { .flx-title-with-image }
+# Wacom SDK Integration { .fh-title-with-image }
 ![Wacom](../docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .fh-image-of-title }
 
 **flexygo** has successfully incorporated the capability to sign with STU tablets in a seamless and user-friendly manner.

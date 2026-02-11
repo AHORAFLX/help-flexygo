@@ -1,4 +1,4 @@
-# Passbook integration { .flx-title-with-image }
+# Passbook integration { .fh-title-with-image }
 
 ![Passbook](../docs_assets/images/Passbook/WalletIcon.png){ .fh-image-of-title }
 

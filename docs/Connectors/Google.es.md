@@ -1,4 +1,4 @@
-# Integración con Google { .flx-title-with-image }
+# Integración con Google { .fh-title-with-image }
 
 ![Google](../docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .fh-image-of-title }
 

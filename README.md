@@ -188,7 +188,7 @@ It will make your block have a blue background with round borders.
 ### Title with images
 
 ```md
-# Paco { .flx-title-with-image }
+# Paco { .fh-title-with-image }
 
 ![Ahora ERP](/docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 ```

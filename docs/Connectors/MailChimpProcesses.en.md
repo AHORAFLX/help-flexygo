@@ -1,4 +1,4 @@
-# MailChimp Demo Processes { .flx-title-with-image }
+# MailChimp Demo Processes { .fh-title-with-image }
 
 ![MailChimp](../docs_assets/images/MailChimp/MailchimpLogoBlack.png){ .fh-image-of-title }
 

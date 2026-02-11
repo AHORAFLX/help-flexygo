@@ -1,4 +1,4 @@
-# Integración con Ahora ERP { .flx-title-with-image }
+# Integración con Ahora ERP { .fh-title-with-image }
 
 ![Ahora ERP](../docs_assets/images/AhoraERP/ahora.svg){ .fh-image-of-title }
 

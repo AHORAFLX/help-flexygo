@@ -1,4 +1,4 @@
-# Integración con Power BI { .flx-title-with-image }
+# Integración con Power BI { .fh-title-with-image }
 
 ![](../docs_assets/images/PowerBI/PowerBiLogo.png){ .fh-image-of-title }
 

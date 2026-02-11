@@ -1,4 +1,4 @@
-# RedSys Integration { .flx-title-with-image }
+# RedSys Integration { .fh-title-with-image }
 
 ![](../docs_assets/images/RedSys/RedSysLogo.png){ .fh-image-of-title }
 

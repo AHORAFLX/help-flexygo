@@ -1,4 +1,4 @@
-# Integración con SendinBlue { .flx-title-with-image }
+# Integración con SendinBlue { .fh-title-with-image }
 
 ![SendinBlue](../docs_assets/images/SendinBlue/SendinBlue_Logo.png){ .fh-image-of-title }
 

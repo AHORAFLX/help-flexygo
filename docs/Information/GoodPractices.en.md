@@ -1,4 +1,4 @@
-# Good practices  { .flx-title-with-image }
+# Good practices  { .fh-title-with-image }
 
 ![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 

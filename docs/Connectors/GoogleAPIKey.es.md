@@ -1,4 +1,4 @@
-# Google API Key { .flx-title-with-image }
+# Google API Key { .fh-title-with-image }
 
 ![Google](../docs_assets/images/GoogleAPIKey/GoogleLogo.png){ .fh-image-of-title }
 

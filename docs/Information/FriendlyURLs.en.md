@@ -1,4 +1,4 @@
-# Friendly URLs { .flx-title-with-image }
+# Friendly URLs { .fh-title-with-image }
 
 ![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 

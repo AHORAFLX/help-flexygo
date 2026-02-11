@@ -1,4 +1,4 @@
-# Autenticación Cl@ve { .flx-title-with-image }
+# Autenticación Cl@ve { .fh-title-with-image }
 
 ![Cl@ve](../docs_assets/images/Clave/clave-icon.svg){ .fh-image-of-title }
 

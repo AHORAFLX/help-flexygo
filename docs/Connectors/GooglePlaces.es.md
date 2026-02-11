@@ -1,4 +1,4 @@
-# Google Places { .flx-title-with-image }
+# Google Places { .fh-title-with-image }
 
 ![Google Places](../docs_assets/images/Google/GooglePlaces.png){ .fh-image-of-title }
 

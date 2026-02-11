@@ -1,4 +1,4 @@
-# Integración con Wacom SDK { .flx-title-with-image }
+# Integración con Wacom SDK { .fh-title-with-image }
 ![Wacom](../docs_assets/images/Wacom/Wacom_Logo_WhiteType.svg){ .fh-image-of-title }
 
 **Flexygo** ha incorporado con éxito la capacidad de firmar con tabletas STU de forma fluida y sencilla. 

@@ -1,4 +1,4 @@
-# Azure Form Recognizer { .flx-title-with-image }
+# Azure Form Recognizer { .fh-title-with-image }
 
 ![Azure Form Recognizer](../docs_assets/images/FormRecognizer/logo.png){ .fh-image-of-title }
 

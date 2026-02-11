@@ -10,6 +10,17 @@ addEventListener("DOMContentLoaded", () => {
     if (isAFlexy()) {
         document.documentElement.classList.add('in-flexygo');
     }
+
+    //We restore the palette from local storage, so it persists even on version change
+    restorePaletteFromStorage();
+
+    //We listen for changes on the palette selector to update the palette in local storage
+    document.querySelectorAll('input[name="__palette"]').forEach(input => {
+        input.addEventListener('change', (e) => {
+            const palette = e.target.getAttribute('data-md-color-scheme');
+            localStorage.setItem('fh-palette', palette === 'default' ? 'light' : 'dark');
+        });
+    });
 });
 
 function changeLanguage(new_language) {
@@ -202,4 +213,19 @@ function getElementsWithCertainText(starting_element, text) {
 
 function isOnIframe() {
     return window.location !== window.parent.location;
+}
+
+function splitAtLastOccurrence(text, character) {
+    const index = text.lastIndexOf(character);
+    return [text.substring(0, index), text.substring(index + 1)];
+}
+
+function restorePaletteFromStorage() {
+    const current_palette = localStorage.getItem('fh-palette');
+    if (current_palette) {
+        const palette_button = document.querySelector(`[data-md-component="palette"] [title="Switch to ${current_palette} mode"]`);
+        palette_button?.click();
+    } else {
+        localStorage.setItem('fh-palette', 'default');
+    }
 }

@@ -1,4 +1,4 @@
-# Flexygo Integration { .flx-title-with-image }
+# Flexygo Integration { .fh-title-with-image }
 
 ![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 

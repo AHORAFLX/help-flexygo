@@ -1,4 +1,4 @@
-# Test Automation { .flx-title-with-image }
+# Test Automation { .fh-title-with-image }
 
 ![flexygo](../docs_assets/images/FlexygoLogo.png){ .fh-image-of-title }
 

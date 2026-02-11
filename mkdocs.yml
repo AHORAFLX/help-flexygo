@@ -40,6 +40,7 @@ extra_css:
   - stylesheets/fh-structural/components/fh-modal.css
   - stylesheets/fh-structural/components/fh-copy.css
   - stylesheets/fh-structural/components/fh-namepropagator.css
+  - stylesheets/fh-structural/components/fh-versions.css
   ## Basic fonts and icons
   - docs_assets/fh-structural/fonts/flags/flags.css
   - docs_assets/fh-structural/fonts/flexygo/utils.css
@@ -58,6 +59,7 @@ extra_javascript:
   - javascripts/fh-structural/components/fh-copy.js
   - javascripts/fh-structural/components/fh-popover.js
   - javascripts/fh-structural/components/fh-namepropagator.js
+  - javascripts/fh-structural/components/fh-versions.js
   - javascripts/fh-structural/components/flx-navbutton.js
   ## Translation files
   - javascripts/cultures/default_language.js

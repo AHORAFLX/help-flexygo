@@ -1,4 +1,4 @@
-# Integración con Office 365 { .flx-title-with-image }
+# Integración con Office 365 { .fh-title-with-image }
 
 ![Office 365](../docs_assets/images/Office365/Office365Logo.png){ .fh-image-of-title }
 

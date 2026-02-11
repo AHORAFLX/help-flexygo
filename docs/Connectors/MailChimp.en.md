@@ -1,4 +1,4 @@
-# MailChimp Integration { .flx-title-with-image }
+# MailChimp Integration { .fh-title-with-image }
 
 ![MailChimp](../docs_assets/images/MailChimp/MailchimpLogoBlack.png){ .fh-image-of-title }
 

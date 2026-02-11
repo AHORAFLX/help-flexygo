@@ -1,4 +1,4 @@
-# ChatGPT integration { .flx-title-with-image }
+# ChatGPT integration { .fh-title-with-image }
 
 ![openAI](../docs_assets/images/openAI/chatgpt-icon.svg){ .fh-image-of-title }
 

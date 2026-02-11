@@ -1,4 +1,4 @@
-# Procesos de ejemplo de MailChimp  { .flx-title-with-image }
+# Procesos de ejemplo de MailChimp  { .fh-title-with-image }
 
 ![MailChimp](../docs_assets/images/MailChimp/MailchimpLogoBlack.png){ .fh-image-of-title }
 
