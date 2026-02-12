@@ -259,13 +259,13 @@ Algunos aceptan variables, así que se deberan rellenar siempre antes de enviarl
 
 **Recibir mensajes**:
 
-```
+```plaintext { .no-language }
 WhastsApp -> Endpoint Webhook -> Flexygo
 ```
 
 **Enviar mensajes**:
 
-```
+```plaintext { .no-language }
 Flexygo -> WhatsApp Cloud API -> WhatsApp
 ```
 
@@ -312,7 +312,7 @@ Si en algún momento dejas de poder recibir/enviar mensajes comprueba lo siguien
 
 * Haz una petición GET a esta URL para comprobar el estado de tu cuenta. Si se indica algún fallo, deberás solucionarlo.
 
-```
+```plaintext { .no-language }
 https://graph.facebook.com/v24.0/{{ID de la cuenta}}?fields=health_status
 ``` 
 > Reemplaza **[ID de la cuenta](./#id-de-la-cuenta-e-id-del-telefono)** con el valor correspondiente.

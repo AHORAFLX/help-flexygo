@@ -258,11 +258,15 @@ Some accept variables, which must always be completed before sending.
 
 **Receiving messages**:
 
-    WhatsApp -> Webhook Endpoint -> Flexygo
+```plaintext { .no-language }
+WhastsApp -> Endpoint Webhook -> Flexygo
+```
 
 **Sending messages**:
 
-    Flexygo -> WhatsApp Cloud API -> WhatsApp
+```plaintext { .no-language }
+Flexygo -> WhatsApp Cloud API -> WhatsApp
+```
 
 ---
 
@@ -308,7 +312,7 @@ If at any point you are unable to receive/send messages, check the following:
 
 -   Make a GET request to the following URL to check your account status. If any issue is indicated, it must be resolved.
 
-```
+```plaintext { .no-language }
 https://graph.facebook.com/v24.0/{{Account ID}}?fields=health_status
 ```
 > Replace **[Account ID](./#account-id-and-phone-id)** with the appropriate value.
