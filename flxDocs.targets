@@ -1,0 +1,22 @@
+<Project>
+  <Target Name="CopyFlxDocs" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <!-- Source location in the NuGet package -->
+      <FlxDocsSource>$(MSBuildThisFileDirectory)..\contentFiles\any\any</FlxDocsSource>
+      
+      <!-- Determine destination: wwwroot for newer projects, project root for older -->
+      <FlxDocsDestination Condition="Exists('$(MSBuildProjectDirectory)\wwwroot')">$(MSBuildProjectDirectory)\wwwroot</FlxDocsDestination>
+      <FlxDocsDestination Condition="!Exists('$(MSBuildProjectDirectory)\wwwroot')">$(MSBuildProjectDirectory)</FlxDocsDestination>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <FlxDocsFiles Include="$(FlxDocsSource)\**\*.*" />
+    </ItemGroup>
+    
+    <Message Text="FlxDocs: Copying to $(FlxDocsDestination)" Importance="high" />
+    
+    <Copy SourceFiles="@(FlxDocsFiles)" 
+          DestinationFolder="$(FlxDocsDestination)\%(RecursiveDir)" 
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>
