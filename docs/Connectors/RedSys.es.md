@@ -50,4 +50,4 @@ Para conocer el significado de los códigos de respuesta, visita el siguiente [*
 ## Pruebas
 
 RedSys dispone de un entorno de pruebas donde se puede verificar el correcto funcionamiento antes de la implantación real.  
-Para más información visita el siguiente [**enlace**](https://pagosonline.redsys.es/entornosPruebas.html).
+Para más información visita el siguiente [**enlace**](https://pagosonline.redsys.es/desarrolladores-inicio/integrate-con-nosotros/tarjetas-y-entornos-de-prueba/).

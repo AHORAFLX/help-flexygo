@@ -46,4 +46,4 @@ To know the meaning of the response codes, visit the following [**link**](https:
 
 ## Tests
 
-RedSys has a test environment where the correct functioning of the system can be verified before making the implementation in the real environment. For more information visit the following [**link**](https://pagosonline.redsys.es/entornosPruebas.html).
+RedSys has a test environment where the correct functioning of the system can be verified before making the implementation in the real environment. For more information visit the following [**link**](https://pagosonline.redsys.es/desarrolladores-inicio/integrate-con-nosotros/tarjetas-y-entornos-de-prueba/).
