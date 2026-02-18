@@ -10,7 +10,7 @@ Siguiendo estos pasos, podrás integrarla con **Flexygo**, añadir contactos, en
 
 ## Requisitos previos
 
-Localiza e **instala el Addon de WhatsApp** desde el marketplace ubicado dentro de Flexygo.
+Localiza e **instala el Addon de WhatsApp** desde el <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> ubicado dentro de Flexygo.
 
 Antes de poder usarlo necesitarás crear:
 
@@ -38,8 +38,7 @@ Escríbelos en el apartado de Información Básica dentro de la **Configuración
 
 ![Configuración de WhatsApp Business](../docs_assets/images/WhatsApp/whatsapp_conf.png)
 
-> Debes proporcionar una URL para las **Políticas de privacidad** y para
-> los **Términos de servicio**.
+> Debes proporcionar una URL para las **Políticas de privacidad** y para los **Términos de servicio**.
 
 ---
 
@@ -52,7 +51,7 @@ Verifica que estas opciones estén activadas y que tengas una **URI de redirecci
 ![Configuración OAuth de WhatsApp Business](../docs_assets/images/WhatsApp/whatsapp_oauth_conf.png)
 
 > El URI de redirección debe ser:
-> **Tu dominio** + `/Webhooks/WhatsAppToken`
+> **Tu dominio** + `/custom/FlxWhatsapp/Webhooks/WhatsAppToken`
 
 ---
 
@@ -107,8 +106,8 @@ Dejarlo vacío supondrá:
 
 Token necesario para enviar mensajes.
 
+* **Recomendado** → Generar un **Identificador de Acceso del Sistema** desde [Meta Business Suite](https://business.facebook.com/latest/settings){:target="_blank"}, lo puedes hacer en el apartado Usuarios del sistema.
 * Token generado por OAuth → dura 1 hora.
-* Recomendado → Generar un **Identificador de Acceso del Sistema** desde [Meta Business Suite](https://business.facebook.com/latest/settings){:target="_blank"}, lo puedes hacer en el apartado Usuarios del sistema.
 
 ![Token de Acceso](../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png)
 
@@ -157,6 +156,20 @@ Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser **el mi
 Tener esta opción activada **rechaza todas las peticiones** que se hagan al endpoint de Webhooks y **solo acepta las que vengan de los servidores de Meta**.
 
 Por defecto está activada, y solo conviene desactivarla para poder enviar peticiones de prueba a nuestro endpoint.
+
+---
+
+## Efectos de la Integración
+
+Una vez rellenes las <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuraciones de WhatsApp Business</flx-navbutton> en Flexygo, **refresques cache** y recarges la página, se activará la integración entre WhatsApp Business y Flexygo. Esto activará lo siguiente:
+
+* Aparecerá un **botón con el icono de WhatsApp** en la barra de navegación superior. Al clicarle te llevará directamente a <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> <a>la página de WhatsApp de Flexygo</a> </flx-navbutton>.
+
+* Se activará la tarea de Cron `CheckNewWhatsAppMessages`, que como su nombre indica, cada minuto **comprobará si hay nuevos mensajes** y en caso de haberlos saltará una notificación.
+
+* Se activará la tarea de Cron `WhatsAppActivateInactiveConversations` que cada día buscará aquellas conversaciones cuyo **último mensaje tiene más de 24 horas**, tienen un **asistente de IA asignado** y se encuentran en modo manual. Esta tarea las pasará a modo automático.
+
+* Se recomienda activar la tarea de Cron `RefreshWhatsAppAccessToken`, para no tener que preocuparse de generar nuevos tokens. Revisa la duración de tu [Token de Acceso](./#token-de-acceso), y modifica cada cuanto se ejecutará para satisfacer tu caso concreto. Por ejemplo, si el token dura 60 días, ejecútalo cada 59 días ya que si llega a expirar, la actualización no funcionará.
 
 ---
 
@@ -235,8 +248,8 @@ Se envían desde el botón de adjuntar archivos, se permiten estas extensiones:
 
 #### Mensajes sin cuerpo
 
-Son aquellos que no contienen un array de elementos, simplemente rellenas sus campos necesarios y los puedes enviar.
-También tienes la opción de **crear el mensaje como objeto** para así poder reutilizarlo fácilmente en otras ocasiones.
+Son aquellos que no contienen un array de elementos, simplemente rellenas sus campos necesarios y los puedes enviar. 
+También tienes la opción de **crear el mensaje como objeto** para así poder reutilizarlo fácilmente en otras ocasiones. 
 (Texto, URLs, Ubicación, Solicitud de Ubicación y Contacto).
 
 #### Mensajes con cuerpo
@@ -281,20 +294,6 @@ Flexygo -> WhatsApp Cloud API -> WhatsApp
 * Para iniciar una conversación manualmente, **solo se pueden enviar plantillas**.
 * Si han pasado más de 24 horas desde el último mensaje del usuario, **solo se pueden enviar plantillas** hasta que nos conteste.
 * El envío y recibo de mensajes está sujeto a los [precios de Meta para WhatsApp Business](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing){:target="_blank"}.
-
----
-
-## Efectos de la Integración
-
-Una vez rellenes las <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuraciones de WhatsApp Business</flx-navbutton> en Flexygo, **refresques cache** y recarges la página, se activará la integración entre WhatsApp Business y Flexygo. Esto activará lo siguente:
-
-* Aparecerá un **botón con el icono de WhatsApp** en la barra de navegación superior. Al clicarle te llevará directamente a <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> <a>la página de WhatsApp de Flexygo</a> </flx-navbutton>.
-
-* Se activará la tarea de Cron `CheckNewWhatsAppMessages`, que como su nombre indica, cada minuto **comprobará si hay nuevos mensajes** y en caso de haberlos saltará una notificación.
-
-* Se activará la tarea de Cron `WhatsAppActivateInactiveConversations` que cada día buscará aquellas conversaciones cuyo **último mensaje tiene más de 24 horas**, tienen un **asistente de IA asignado** y se encuentran en modo manual. Esta tarea las pasará a modo automático.
-
-* Se recomienda activar la tarea de Cron `RefreshWhatsAppAccessToken`, para no tener que preocuparse de generar nuevos tokens. Revisa la duración de tu [Token de Acceso](./#token-de-acceso), y modifica cada cuanto se ejecutará para satisfacer tu caso concreto. Por ejemplo, si el token dura 60 días, ejecútalo cada 59 días ya que si llega a expirar, la actualización no funcionará.
 
 ---
 

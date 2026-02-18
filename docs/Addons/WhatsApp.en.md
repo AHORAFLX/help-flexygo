@@ -10,30 +10,25 @@ By following these steps, you will be able to integrate it with **Flexygo**, add
 
 ## Prerequisites
 
-Find and **install the WhatsApp addon** from the marketplace located inside Flexygo.
+Find and **install the WhatsApp addon** from the <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> located inside Flexygo.
 
 Before being able to use it, you will need to create:
 
--   A **Facebook Developer Account**.
--   A **WhatsApp Business Application**.
--   A **Business Portfolio** for your company.
+* A **Facebook Developer Account**.
+* A **WhatsApp Business Application**.
+* A **Business Portfolio** for your company.
 
 In the prerequisites section and in the first step of the [official documentation](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites){:target="\_blank"} they explain in detail how to complete this process.
 
-> While configuring and developing, we **recommend** keeping the
-> application in development mode (a mode in which messages cannot be
-> sent) and using the test number provided by WhatsApp.
+> While configuring and developing, we **recommend** keeping the application in development mode (a mode in which messages cannot be sent) and using the test number provided by WhatsApp.
 
-> Once the configuration is complete, you can switch to **production
-> mode**, verify your business, add your phone number, and start using
-> WhatsApp Business from FlexyGo.
+> Once the configuration is complete, you can switch to **production mode**, verify your business, add your phone number, and start using WhatsApp Business from FlexyGo.
 
 ---
 
 ## Application Configuration
 
-Once you have completed the prerequisites, continue with the following
-steps:
+Once you have completed the prerequisites, continue with the following steps:
 
 ### 1. Add Domains
 
@@ -55,7 +50,8 @@ Make sure these options are enabled and that you configure a **Redirect URI**:
 
 ![WhatsApp Business OAuth Configuration](../docs_assets/images/WhatsApp/whatsapp_oauth_conf.png)
 
-> The Redirect URI must be: **Your domain** + `/Webhooks/WhatsAppToken`
+> The Redirect URI must be: 
+> **Your domain** + `/custom/FlxWhatsapp/Webhooks/WhatsAppToken`
 
 ---
 
@@ -65,9 +61,8 @@ Add the **Webhooks** product to your application.
 
 Complete the following fields:
 
--   Callback URL: **Your domain** + `/api/WhatsApp/Webhook`
--   Verification Token: Enter a password that we will use later.
-    (Explained in the next section)
+* Callback URL: **Your domain** + `/api/WhatsApp/Webhook`
+* Verification Token: Enter a password that we will use later. (Explained in the next section)
 
 ![Webhook Configuration](../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png)
 
@@ -87,21 +82,23 @@ Open the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagen
 
 (Identified as `WhatsApp_DefaultAnswerUser`)
 
-Filling this field determines which **user will be assigned by default** to contacts created from now on. Leaving it empty means:
+Filling this field determines which **user will be assigned by default** to contacts created from now on.
+Leaving it empty means:
 
-1.  The system will search for the first **user with the same phone number** as the contact.
-2.  If found, that user will be assigned.
-3.  If not found, the guest user will be assigned.
+1. The system will search for the first **user with the same phone number** as the contact.
+2. If found, that user will be assigned.
+3. If not found, the guest user will be assigned.
 
 ### Default AI Assistant
 
 (Identified as `WhatsApp_DefaultAssistantAI`)
 
-Filling this field determines which **AI assistant will be assigned by default** to contacts created from now on. Leaving it empty means:
+Filling this field determines which **AI assistant will be assigned by default** to contacts created from now on. 
+Leaving it empty means:
 
-1.  The system will search for the **default assistant of the assigned user's role**.
-2.  If found, it will be assigned.
-3.  If not found, the AI will not be able to respond to this contact.
+1. The system will search for the **default assistant of the assigned user's role**.
+2. If found, it will be assigned.
+3. If not found, the AI will not be able to respond to this contact.
 
 ### Access Token
 
@@ -109,8 +106,8 @@ Filling this field determines which **AI assistant will be assigned by default**
 
 Token required to send messages.
 
--   OAuth-generated token → lasts 1 hour.
--   Recommended → Generate a **System User Access Token** from [Meta Business Suite](https://business.facebook.com/latest/settings){:target="\_blank"}, in the System Users section.
+* **Recommended** → Generate a **System User Access Token** from [Meta Business Suite](https://business.facebook.com/latest/settings){:target="\_blank"}, in the System Users section.
+* OAuth-generated token → lasts 1 hour.
 
 ![Access Token](../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png)
 
@@ -159,6 +156,20 @@ Required to verify your Webhook endpoint with WhatsApp. It must be **the same va
 When enabled, this option **rejects all requests** made to the Webhooks endpoint and **only accepts those coming from Meta servers**.
 
 It is enabled by default and should only be disabled to send test requests to your endpoint.
+
+---
+
+## Integration Effects
+
+Once you complete the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">WhatsApp Business configuration</flx-navbutton> in Flexygo, **refresh the cache** and reload the page. The integration between WhatsApp Business and Flexygo will be activated. This will trigger the following:
+
+* A **WhatsApp icon button** will appear in the top navigation bar. Clicking it will take you directly to <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false">the WhatsApp page in Flexygo</flx-navbutton>.
+
+* The Cron task `CheckNewWhatsAppMessages` will be activated. Every minute it will **check for new messages** and notify if there are any.
+
+* The Cron task `WhatsAppActivateInactiveConversations` will be activated. Each day it will look for conversations whose **last message is older than 24 hours**, have an **AI assistant assigned**, and are in manual mode. These will be switched to automatic mode.
+
+* It is recommended to enable the Cron task `RefreshWhatsAppAccessToken` so you don't need to manually generate new tokens. Check the duration of your [Access Token](./#access-token), and adjust the execution frequency accordingly. For example, if the token lasts 60 days, run it every 59 days, because if it expires, the refresh will not work.
 
 ---
 
@@ -237,12 +248,15 @@ Sent using the attach files button. The following extensions are allowed:
 
 #### Messages Without Body
 
-Messages that do not contain an array of elements. You simply fill in the required fields and send them. You also have the option to **create the message as an object** so it can be reused easily. (Text, URLs, Location, Location Request, and Contact).
+Messages that do not contain an array of elements. You simply fill in the required fields and send them. 
+You also have the option to **create the message as an object** so it can be reused easily. 
+(Text, URLs, Location, Location Request, and Contact).
 
 #### Messages With Body
 
-Messages that **DO** contain an array of elements. In addition to filling in required fields, you must add one or more elements to their
-body. For this type of message, it is **mandatory to create it as an object before sending**. (Lists and Reply Buttons)
+Messages that **DO** contain an array of elements. In addition to filling in required fields, you must add one or more elements to their body. 
+For this type of message, it is **mandatory to create it as an object before sending**. 
+(Lists and Reply Buttons)
 
 #### Templates
 
@@ -283,26 +297,11 @@ Flexygo -> WhatsApp Cloud API -> WhatsApp
 
 ---
 
-## Integration Effects
-
-Once you complete the
-<flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">WhatsApp Business configuration</flx-navbutton> in Flexygo, **refresh the cache** and reload the page. The integration between WhatsApp Business and Flexygo will be activated. This will trigger the following:
-
--   A **WhatsApp icon button** will appear in the top navigation bar. Clicking it will take you directly to <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false">the WhatsApp page in Flexygo</flx-navbutton>.
-
--   The Cron task `CheckNewWhatsAppMessages` will be activated. Every minute it will **check for new messages** and notify if there are any.
-
--   The Cron task `WhatsAppActivateInactiveConversations` will be activated. Each day it will look for conversations whose **last message is older than 24 hours**, have an **AI assistant assigned**, and are in manual mode. These will be switched to automatic mode.
-
--   It is recommended to enable the Cron task `RefreshWhatsAppAccessToken` so you don't need to manually generate new tokens. Check the duration of your [Access Token](./#access-token), and adjust the execution frequency accordingly. For example, if the token lasts 60 days, run it every 59 days, because if it expires, the refresh will not work.
-
----
-
 ## Security Considerations
 
--   Never share or expose any token, ID, or secret.
--   Keep **Signature Verification** enabled in the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true"> Flexygo configuration </flx-navbutton> when not testing.
--   Carefully review which sensitive information and processes AI assistants can access before assigning them to a conversation.
+* Never share or expose any token, ID, or secret.
+* Keep **Signature Verification** enabled in the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true"> Flexygo configuration </flx-navbutton> when not testing.
+* Carefully review which sensitive information and processes AI assistants can access before assigning them to a conversation.
 
 ---
 
