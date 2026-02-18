@@ -1,4 +1,4 @@
-# WhatsApp Addon
+# WhatsApp {.fh-title-with-image}
 
 ![WhatsApp](../docs_assets/images/WhatsApp/WhatsApp.png){.fh-image-of-title}
 
