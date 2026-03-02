@@ -56,6 +56,8 @@ class FlxNavButton extends HTMLElement {
       btn.setAttribute(attribute.name, attribute.value);
     }
 
+    btn.setAttribute("targetid", "sliderightx90%");
+
     window.parent.document.body.appendChild(btn);
     btn.click();
     window.parent.document.body.removeChild(btn);
