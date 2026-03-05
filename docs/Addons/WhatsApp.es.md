@@ -14,6 +14,7 @@ Localiza e **instala el Addon de WhatsApp** desde el <flx-navbutton class="link"
 
 Antes de poder usarlo necesitarás crear:
 
+* Un **dominio seguro https**.
 * Una **cuenta de desarrollador de Facebook**.
 * Una **aplicación de WhatsApp Business**.
 * Un **Portafolio Empresarial** de tu empresa.
@@ -42,26 +43,13 @@ Escríbelos en el apartado de Información Básica dentro de la **Configuración
 
 ---
 
-### 2. Facebook Login for Business
+### 2. Endpoint de Webhooks
 
-Añade el producto **Facebook Login for Business** a tu aplicación.
-
-Verifica que estas opciones estén activadas y que tengas una **URI de redirección**:
-
-![Configuración OAuth de WhatsApp Business](../docs_assets/images/WhatsApp/whatsapp_oauth_conf.png)
-
-> El URI de redirección debe ser:
-> **Tu dominio** + `/custom/FlxWhatsapp/Webhooks/WhatsAppToken`
-
----
-
-### 3. Endpoint de Webhooks
-
-Añade el producto **Webhooks** a tu aplicación.
+Añade el producto **Webhooks** a tu aplicación y configura el endpoint para **Whatsapp Business Account**.
 
 Rellena los campos:
 
-* URL de callback: **Tu dominio** + `/api/WhatsApp/Webhook`
+* URL de callback: **Tu dominio** + `/webhook/guest/FlxWhatsapp`
 * ID de verificación: Introduce una contraseña que usaremos más adelante. (Lo vemos en el siguiente punto)
 
 ![Configuración del Webhook](../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png)
@@ -82,7 +70,7 @@ Abre las <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagen
 
 (Identificado como `WhatsApp_DefaultAnswerUser`)
 
-Rellenar este campo determinará que **usuario se le asignará por defecto** con los contactos que sean creados de ahora en adelante.
+Rellenar este campo determinará que **usuario se le asignará por defecto** con los contactos que sean creados de ahora en adelante. Se utiliza para determinar el idioma para los mensajes del sistema y la ejecución de la IA.
 Dejarlo vacío supondrá:
 
 1. Se buscará el primer **usuario que tenga el mismo número** que el contacto.
@@ -106,8 +94,7 @@ Dejarlo vacío supondrá:
 
 Token necesario para enviar mensajes.
 
-* **Recomendado** → Generar un **Identificador de Acceso del Sistema** desde [Meta Business Suite](https://business.facebook.com/latest/settings){:target="_blank"}, lo puedes hacer en el apartado Usuarios del sistema.
-* Token generado por OAuth → dura 1 hora.
+* Generar un **Identificador de Acceso del Sistema** desde [Meta Business Suite](https://business.facebook.com/latest/settings){:target="_blank"}, lo puedes hacer en el apartado Usuarios del sistema.
 
 ![Token de Acceso](../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png)
 
@@ -145,7 +132,7 @@ Necesarios para enviar mensajes. En tu aplicación, dentro de **Productos** > **
 
 (Identificado como `WhatsAppVerificationId`)
 
-Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser **el mismo que indicaste en el [Apartado de Webhooks](./#3-endpoint-de-webhooks)**.
+Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser **el mismo que indicaste en el [Apartado de Webhooks](./#2-endpoint-de-webhooks)**.
 
 ---
 
@@ -165,11 +152,13 @@ Una vez rellenes las <flx-navbutton class="link" type="openpagename" pagetypeid=
 
 * Aparecerá un **botón con el icono de WhatsApp** en la barra de navegación superior. Al clicarle te llevará directamente a <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> <a>la página de WhatsApp de Flexygo</a> </flx-navbutton>.
 
-* Se activará la tarea de Cron `CheckNewWhatsAppMessages`, que como su nombre indica, cada minuto **comprobará si hay nuevos mensajes** y en caso de haberlos saltará una notificación.
-
 * Se activará la tarea de Cron `WhatsAppActivateInactiveConversations` que cada día buscará aquellas conversaciones cuyo **último mensaje tiene más de 24 horas**, tienen un **asistente de IA asignado** y se encuentran en modo manual. Esta tarea las pasará a modo automático.
 
 * Se recomienda activar la tarea de Cron `RefreshWhatsAppAccessToken`, para no tener que preocuparse de generar nuevos tokens. Revisa la duración de tu [Token de Acceso](./#token-de-acceso), y modifica cada cuanto se ejecutará para satisfacer tu caso concreto. Por ejemplo, si el token dura 60 días, ejecútalo cada 59 días ya que si llega a expirar, la actualización no funcionará.
+
+* Se activará la tarea de Cron `WhatsApp_ClearLogs`, encargada de eliminar los registros antiguos de la tabla con el objetivo de liberar memoria. El período de retención predeterminado es de 60 días, aunque puede modificarse mediante la configuración `ClearWhatsAppLogDays`.
+
+* Se activará la tarea de Cron `WhatsApp_ClearMessages`, encargada de eliminar los mensajes antiguos de la tabla con el objetivo de liberar memoria. El período de retención predeterminado es de 60 días, aunque puede modificarse mediante la configuración `ClearWhatsAppMessageDays`.
 
 ---
 
@@ -207,11 +196,7 @@ Hay 2 formas de que crear un nuevo contacto.
 1. **Recibir un mensaje de un número nuevo**, en cuyo caso automáticamente se creará un contacto con ese número.
 2. **Manualmente**, en cuyo caso deberás indicar un número, un nombre y una plantilla de mensaje (Esto se debe a que WhatsApp Business solo permite iniciar una conversación enviando un plantilla aprobada).
 
-Una vez creado, puedes archivar la conversación **deslizando hacia la derecha**:
-
-![Archivar conversación](../docs_assets/images/WhatsApp/whatsapp_conversation_archive.png)
-
-Y editar el contacto **deslizando hacia la izquierda**:
+Una vez creado, puedes archivar la conversación o editar el contacto: 
 
 ![Editar conversación](../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png)
 
@@ -289,7 +274,8 @@ Flexygo -> WhatsApp Cloud API -> WhatsApp
 * Cuando se manda un mensaje manualmente, la conversación se **cambia siempre** a modo manual.
 * Los asistentes de IA dentro del ámbito de WhatsApp:
     - Reciben automáticamente la capacidad de **generar los tipos de mensajes soportados**.
-    - Pueden detectar cuando el usuario prefiere hablar con un humano y **auto-desactivarse**.
+    - Pueden detectar cuando el usuario prefiere hablar con un humano y **auto-desactivarse**. Se envía una notificación avisando cuando el usuario prefiere hablar con un humano.
+    ![Aviso](../docs_assets/images/WhatsApp/whatsapp_human.png)
 * Al archivar una conversación, la conversación se **cambia siempre** a modo automático y se activa su asistente de IA (si tiene).
 * Para iniciar una conversación manualmente, **solo se pueden enviar plantillas**.
 * Si han pasado más de 24 horas desde el último mensaje del usuario, **solo se pueden enviar plantillas** hasta que nos conteste.
@@ -312,7 +298,7 @@ Si en algún momento dejas de poder recibir/enviar mensajes comprueba lo siguien
 * Haz una petición GET a esta URL para comprobar el estado de tu cuenta. Si se indica algún fallo, deberás solucionarlo.
 
 ```plaintext { .no-language }
-https://graph.facebook.com/v24.0/{{ID de la cuenta}}?fields=health_status
+https://graph.facebook.com/v25.0/{{ID de la cuenta}}?fields=health_status
 ``` 
 > Reemplaza **[ID de la cuenta](./#id-de-la-cuenta-e-id-del-telefono)** con el valor correspondiente.
 

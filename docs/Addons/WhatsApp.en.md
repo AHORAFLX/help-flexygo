@@ -14,6 +14,7 @@ Find and **install the WhatsApp addon** from the <flx-navbutton class="link" typ
 
 Before being able to use it, you will need to create:
 
+* A **secure https domain**.
 * A **Facebook Developer Account**.
 * A **WhatsApp Business Application**.
 * A **Business Portfolio** for your company.
@@ -42,26 +43,13 @@ Enter them in the Basic Information section within the **Application Settings** 
 
 ---
 
-### 2. Facebook Login for Business
+### 2. Webhooks Endpoint
 
-Add the **Facebook Login for Business** product to your application.
-
-Make sure these options are enabled and that you configure a **Redirect URI**:
-
-![WhatsApp Business OAuth Configuration](../docs_assets/images/WhatsApp/whatsapp_oauth_conf.png)
-
-> The Redirect URI must be: 
-> **Your domain** + `/custom/FlxWhatsapp/Webhooks/WhatsAppToken`
-
----
-
-### 3. Webhooks Endpoint
-
-Add the **Webhooks** product to your application.
+Add the **Webhooks** product to your application and configure the endpoint for **WhatsApp Business Account**.
 
 Complete the following fields:
 
-* Callback URL: **Your domain** + `/api/WhatsApp/Webhook`
+* Callback URL: **Your domain** + `/webhook/guest/FlxWhatsapp`
 * Verification Token: Enter a password that we will use later. (Explained in the next section)
 
 ![Webhook Configuration](../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png)
@@ -82,7 +70,7 @@ Open the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagen
 
 (Identified as `WhatsApp_DefaultAnswerUser`)
 
-Filling this field determines which **user will be assigned by default** to contacts created from now on.
+Filling this field determines which **user will be assigned by default** to contacts created from now on. It is used to determine the language for system messages and AI execution.
 Leaving it empty means:
 
 1. The system will search for the first **user with the same phone number** as the contact.
@@ -106,8 +94,7 @@ Leaving it empty means:
 
 Token required to send messages.
 
-* **Recommended** → Generate a **System User Access Token** from [Meta Business Suite](https://business.facebook.com/latest/settings){:target="\_blank"}, in the System Users section.
-* OAuth-generated token → lasts 1 hour.
+* Generate a **System User Access Token** from [Meta Business Suite](https://business.facebook.com/latest/settings){:target="\_blank"}, in the System Users section.
 
 ![Access Token](../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png)
 
@@ -145,7 +132,7 @@ Required to send messages. In your application, go to **Products** \> **WhatsApp
 
 (Identified as `WhatsAppVerificationId`)
 
-Required to verify your Webhook endpoint with WhatsApp. It must be **the same value you entered in the Webhooks section**.
+Required to verify your Webhook endpoint with WhatsApp. It must be **the same value you entered in the [Webhooks section](./#2-endpoint-de-webhooks)**.
 
 ---
 
@@ -165,11 +152,13 @@ Once you complete the <flx-navbutton class="link" type="openpagename" pagetypeid
 
 * A **WhatsApp icon button** will appear in the top navigation bar. Clicking it will take you directly to <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false">the WhatsApp page in Flexygo</flx-navbutton>.
 
-* The Cron task `CheckNewWhatsAppMessages` will be activated. Every minute it will **check for new messages** and notify if there are any.
-
 * The Cron task `WhatsAppActivateInactiveConversations` will be activated. Each day it will look for conversations whose **last message is older than 24 hours**, have an **AI assistant assigned**, and are in manual mode. These will be switched to automatic mode.
 
 * It is recommended to enable the Cron task `RefreshWhatsAppAccessToken` so you don't need to manually generate new tokens. Check the duration of your [Access Token](./#access-token), and adjust the execution frequency accordingly. For example, if the token lasts 60 days, run it every 59 days, because if it expires, the refresh will not work.
+
+* The `WhatsApp_ClearLogs` cron job will be activated to delete old logs from the table and free up memory. The default retention period is 60 days, but this can be changed using the `ClearWhatsAppLogDays` setting.
+
+* The `WhatsApp_ClearMessages` cron job will be activated to delete old messages from the table and free up memory. The default retention period is 60 days, but this can be changed using the `ClearWhatsAppMessageDays` setting.
 
 ---
 
@@ -207,11 +196,7 @@ There are 2 ways to create a new contact:
 1.  **Receive a message from a new number**, in which case a contact will automatically be created with that number.
 2.  **Manually**, in which case you must specify a number, a name, and a message template (because WhatsApp Business only allows starting a conversation by sending an approved template).
 
-Once created, you can archive the conversation **by swiping right**:
-
-![Archive Conversation](../docs_assets/images/WhatsApp/whatsapp_conversation_archive.png)
-
-And edit the contact **by swiping left**:
+Once created, you can archive the conversation or edit the contact:
 
 ![Edit Conversation](../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png)
 
@@ -289,7 +274,8 @@ Flexygo -> WhatsApp Cloud API -> WhatsApp
 -   When a message is sent manually, the conversation is **always switched** to manual mode.
 -   AI assistants within the WhatsApp scope:
     -   Automatically gain the ability to **generate supported message types**.
-    -   Can detect when the user prefers to speak with a human and **auto-disable themselves**.
+    -   Can detect when the user prefers to speak with a human and **auto-disable themselves**. A notification is sent when the user prefers to speak with a human.
+    ![Notice](../docs_assets/images/WhatsApp/whatsapp_human.png)
 -   When archiving a conversation, it is **always switched** to automatic mode and its AI assistant is activated (if assigned).
 -   To manually start a conversation, **only templates can be sent**.
 -   If more than 24 hours have passed since the user's last message, **only templates can be sent** until they reply.
@@ -312,7 +298,7 @@ If at any point you are unable to receive/send messages, check the following:
 -   Make a GET request to the following URL to check your account status. If any issue is indicated, it must be resolved.
 
 ```plaintext { .no-language }
-https://graph.facebook.com/v24.0/{{Account ID}}?fields=health_status
+https://graph.facebook.com/v25.0/{{Account ID}}?fields=health_status
 ```
 > Replace **[Account ID](./#account-id-and-phone-id)** with the appropriate value.
 
