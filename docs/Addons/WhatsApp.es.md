@@ -6,30 +6,27 @@
 
 Siguiendo estos pasos, podrás integrarla con **Flexygo**, añadir contactos, enviar y recibir mensajes e incluso **automatizar las conversaciones con agentes de IA**.
 
----
-
 ## Requisitos previos
 
-Localiza e **instala el Addon de WhatsApp** desde el <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> ubicado dentro de Flexygo.
+Localiza e **instala el addon de WhatsApp** desde el <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> dentro de Flexygo.
 
 Antes de poder usarlo necesitarás crear:
 
-* Un **dominio seguro https**.
+* Un **dominio HTTPS seguro**.
 * Una **cuenta de desarrollador de Facebook**.
 * Una **aplicación de WhatsApp Business**.
 * Un **Portafolio Empresarial** de tu empresa.
 
-En el apartado de requisitos previos y en el primer paso de la [ayuda oficial](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites){:target="_blank"} explican como se realiza este proceso en detalle.
+En la sección de requisitos previos y en el primer paso de la [documentación oficial](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites){:target="_blank"} se explica este proceso en detalle.
 
-> Miestras se configura y desarrolla **recomendamos** tener la aplicación en modo desarrolo (modo en el que no se pueden enviar mensajes) y usar el número de prueba que nos brinda WhatsApp.
+!!! info "En desarrollo"
+    Durante la configuración y el desarrollo, **recomendamos** mantener la aplicación en modo desarrollo (modo en el que no se pueden enviar mensajes) y usar el número de prueba que proporciona WhatsApp.
 
-> Una vez completemos las configuraciones, podemos cambiar a **modo producción**, verificar nuestro negocio, añadir nuestro teléfono y comenzar a usar WhatsApp Business desde FlexyGo.
+    Una vez completada la configuración, puedes pasar a **modo producción**, verificar tu negocio, añadir tu número de teléfono y empezar a usar WhatsApp Business desde FlexyGo.
 
----
+## Configuración de la aplicación
 
-## Configuraciones de la aplicación
-
-Una vez tengas los requisitos previos, continúa con estos pasos:
+Una vez cumplidos los requisitos previos, continúa con los siguientes pasos:
 
 ### 1. Añadir dominios
 
@@ -39,39 +36,38 @@ Escríbelos en el apartado de Información Básica dentro de la **Configuración
 
 ![Configuración de WhatsApp Business](../docs_assets/images/WhatsApp/whatsapp_conf.png)
 
-> Debes proporcionar una URL para las **Políticas de privacidad** y para los **Términos de servicio**.
-
----
+!!! warning "Política de privacidad"
+    Debes proporcionar una URL para la **Política de privacidad** y los **Términos del servicio**.
 
 ### 2. Endpoint de Webhooks
 
 Añade el producto **Webhooks** a tu aplicación y configura el endpoint para **Whatsapp Business Account**.
 
-Rellena los campos:
+Completa los siguientes campos:
 
 * URL de callback: **Tu dominio** + `/webhook/guest/FlxWhatsapp`
 * ID de verificación: Introduce una contraseña que usaremos más adelante. (Lo vemos en el siguiente punto)
 
 ![Configuración del Webhook](../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png)
 
-Verifica que estás suscrito a los campos de **mensajes**.
+Asegúrate de estar suscrito al campo **messages**.
 
 ![Campos del Webhook](../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png)
 
-> Antes de darle a Verificar y Guardar, **completa la Configuración de Flexygo** y cuando lo tengas le podrás dar.
+!!! info "Configuración en Flexygo"
+    Antes de hacer clic en Verificar y guardar, **completa primero la configuración en Flexygo** y, cuando esté lista, vuelve para verificar.
 
----
-
-## Configuración en Flexygo 
+## Configuración en Flexygo
 
 Abre las <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuraciones de WhatsApp Business</flx-navbutton> en Flexygo y rellena los campos:
 
-### Usuario por defecto 
+### Usuario por defecto
 
 (Identificado como `WhatsApp_DefaultAnswerUser`)
 
-Rellenar este campo determinará que **usuario se le asignará por defecto** con los contactos que sean creados de ahora en adelante. Se utiliza para determinar el idioma para los mensajes del sistema y la ejecución de la IA.
-Dejarlo vacío supondrá:
+Completar este campo determina qué **usuario se asignará por defecto** a los contactos que se creen a partir de ahora. Se usa para determinar el idioma de los mensajes del sistema y la ejecución de la IA.
+
+Si lo dejas vacío:
 
 1. Se buscará el primer **usuario que tenga el mismo número** que el contacto.
 2. Si se encuentra, se le asignará ese.
@@ -98,17 +94,13 @@ Token necesario para enviar mensajes.
 
 ![Token de Acceso](../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png)
 
----
-
 ### ID de la Aplicación
 
 (Identificado como `WhatsAppAccountId`)
 
-Necesario para refrescar el token mediante OAuth. 
+Necesario para refrescar el token mediante OAuth.
 
----
-
-### Secreto del Cliente
+### Client Secret
 
 (Identificado como `WhatsAppClientSecret`)
 
@@ -116,25 +108,19 @@ Necesario para verificar la firma de los webhooks. Este y el anterior, puedes en
 
 ![ApplicationId y Client Secret](../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png)
 
----
-
 ### ID de la Cuenta e ID del Teléfono
 
-(Identificado como `WhatsAppApplicationId` y `WhatsAppPhoneId`)
+(Identificados como `WhatsAppApplicationId` y `WhatsAppPhoneId`)
 
-Necesarios para enviar mensajes. En tu aplicación, dentro de **Productos** > **WhatsApp** > **Tests de la API**.  
+Necesarios para enviar mensajes. En tu aplicación, ve a **Products** > **WhatsApp** > **API Setup**.
 
 ![Phone ID](../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png)
-
----
 
 ### ID de Verificación
 
 (Identificado como `WhatsAppVerificationId`)
 
 Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser **el mismo que indicaste en el [Apartado de Webhooks](./#2-endpoint-de-webhooks)**.
-
----
 
 ### Verificación de la firma
 
@@ -143,8 +129,6 @@ Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser **el mi
 Tener esta opción activada **rechaza todas las peticiones** que se hagan al endpoint de Webhooks y **solo acepta las que vengan de los servidores de Meta**.
 
 Por defecto está activada, y solo conviene desactivarla para poder enviar peticiones de prueba a nuestro endpoint.
-
----
 
 ## Efectos de la Integración
 
@@ -160,8 +144,6 @@ Una vez rellenes las <flx-navbutton class="link" type="openpagename" pagetypeid=
 
 * Se activará la tarea de Cron `WhatsApp_ClearMessages`, encargada de eliminar los mensajes antiguos de la tabla con el objetivo de liberar memoria. El período de retención predeterminado es de 60 días, aunque puede modificarse mediante la configuración `ClearWhatsAppMessageDays`.
 
----
-
 ## Uso básico
 
 Una vez configurado, puedes enviar y recibir mensajes desde <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> <a>la página de WhatsApp de Flexygo</a> </flx-navbutton>.
@@ -175,9 +157,7 @@ Una vez configurado, puedes enviar y recibir mensajes desde <flx-navbutton class
 5. **Caja de texto para escribir mensajes**.
 6. **Opciones de envío**. Contiene los botones para adjuntar archivos, enviar mensajes de texto y otros tipos de mensajes.
 
----
-
-### Modo automático y manual
+## Modo automático y manual
 
 Una conversación puede estar en 2 modos: **automático** o **manual**. Se puede cambiar una conversación de un modo a otro en cualquier momento desde el **botón de alternancia** que disponen en el listado de conversaciones. 
 
@@ -187,9 +167,7 @@ Una conversación puede estar en 2 modos: **automático** o **manual**. Se puede
     1. Si tiene un asistente de IA **asignado** y **activado**, responderá la IA a cada mensaje que nos llegue de ese contacto.
     2. Si no lo tiene, recibirá mensajes predefinidos pidiendole que espere hasta que le responda alguien. (Se usará el idioma del usuario asignado).
 
----
-
-### Contactos / Conversaciones
+## Contactos / Conversaciones
 
 Hay 2 formas de que crear un nuevo contacto.
 
@@ -200,27 +178,11 @@ Una vez creado, puedes archivar la conversación o editar el contacto:
 
 ![Editar conversación](../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png)
 
----
+## Tipos de mensajes
 
-### Envío de mensajes
+WhatsApp admite varios tipos de mensajes, agrupados por patrón de uso. Podemos dividirlos en 4 tipos:
 
-WhatsApp soporta una gran variedad de tipos de mensajes:
-
--   Plantillas
--   Texto
--   Imágenes
--   Documentos
--   Audios
--   Videos
--   URLs de llamada a la acción
--   Listas
--   Ubicaciones
--   Botones de respuesta
--   Contactos
-
-Podemos dividirlos en 4 tipos:
-
-#### Archivos
+### Archivos
 
 Se envían desde el botón de adjuntar archivos, se permiten estas extensiones:
 
@@ -231,19 +193,19 @@ Se envían desde el botón de adjuntar archivos, se permiten estas extensiones:
 | Audio    | .aac, .amr, .mp3, .mp4, .ogg        |
 | Video    | .3gp, .mp4                          |
 
-#### Mensajes sin cuerpo
+### Mensajes sin cuerpo
 
 Son aquellos que no contienen un array de elementos, simplemente rellenas sus campos necesarios y los puedes enviar. 
 También tienes la opción de **crear el mensaje como objeto** para así poder reutilizarlo fácilmente en otras ocasiones. 
 (Texto, URLs, Ubicación, Solicitud de Ubicación y Contacto).
 
-#### Mensajes con cuerpo
+### Mensajes con cuerpo
 
 Son aquellos que **SÍ** contienen un array de elementos, además de rellenar sus campos necesarios necesitas añadir uno o más elementos a su cuerpo.
 Para este tipo de mensajes, es **obligatorio crear el mensaje como objeto siempre** antes de enviarlo.
 (Listados y Botones de respuesta)
 
-#### Plantillas
+### Plantillas
 
 Son mensajes predefinidos que deben ser creados desde [Meta Business Suite](https://business.facebook.com/latest/settings){:target="_blank"} y aprobados por Meta.
 
@@ -251,25 +213,25 @@ Algunos aceptan variables, así que se deberan rellenar siempre antes de enviarl
 
 ![Botones de mensajes](../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png)
 
----
-
-### Flujo Básico
+## Flujo básico
 
 **Recibir mensajes**:
 
-```plaintext { .no-language }
-WhastsApp -> Endpoint Webhook -> Flexygo
+```mermaid
+flowchart LR
+    A[WhatsApp] --> B[Endpoint Webhook]
+    B --> C[Flexygo]
 ```
 
 **Enviar mensajes**:
 
-```plaintext { .no-language }
-Flexygo -> WhatsApp Cloud API -> WhatsApp
+```mermaid
+flowchart LR
+    A[Flexygo] --> B[WhatsApp Cloud API]
+    B --> C[WhatsApp]
 ```
 
----
-
-### Reglas y Limitaciones
+## Reglas y Limitaciones
 
 * Cuando se manda un mensaje manualmente, la conversación se **cambia siempre** a modo manual.
 * Los asistentes de IA dentro del ámbito de WhatsApp:
@@ -281,15 +243,11 @@ Flexygo -> WhatsApp Cloud API -> WhatsApp
 * Si han pasado más de 24 horas desde el último mensaje del usuario, **solo se pueden enviar plantillas** hasta que nos conteste.
 * El envío y recibo de mensajes está sujeto a los [precios de Meta para WhatsApp Business](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing){:target="_blank"}.
 
----
-
 ## Consideraciones de Seguridad
 
 * Nunca compartas ni dejes visible ningún token, ID o secreto.
 * Recuerda tener activada la **Verificación de firma** en la <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuración de Flexygo</flx-navbutton> cuando no estés haciendo pruebas.
 * Revisa concienzudamente a que información sensible y a que procesos tienen acceso los asistentes de IA antes de asignarlos a una conversación.
-
----
 
 ## Solución de problemas
 
@@ -297,24 +255,26 @@ Si en algún momento dejas de poder recibir/enviar mensajes comprueba lo siguien
 
 * Haz una petición GET a esta URL para comprobar el estado de tu cuenta. Si se indica algún fallo, deberás solucionarlo.
 
-```plaintext { .no-language }
-https://graph.facebook.com/v25.0/{{ID de la cuenta}}?fields=health_status
-``` 
-> Reemplaza **[ID de la cuenta](./#id-de-la-cuenta-e-id-del-telefono)** con el valor correspondiente.
+<fh-copy>https://graph.facebook.com/v25.0/{{ID de la cuenta}}?fields=health_status</fh-copy>
+
+!!! warning "Tu ID de cuenta"
+    Reemplaza **[ID de la cuenta](#configuracion-en-flexygo)** por el valor correspondiente.
 
 * Comprueba en [tu aplicación de WhatsApp Business](https://developers.facebook.com/apps){:target="_blank"} dentro de **Productos** > **WhatsApp** > **Tests de la API** > **7. Consulta los eventos del webhook** que webhooks le están llegando a la plataforma en lo que respecta a nuestra actividad.
 
 ![Consulta de eventos de webhook](../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png)
 
-Los errores más comunes son los siguientes:
+Causas comunes de fallos en envío/recepción:
 
-* Token expirado
-* Webhook no verificado
-* ID incorrecto
-* Firma inválida
-* Número no aprobado
-* Negocio no verificado
-* La cuenta ha sido bloqueada
+| Error | Comprobación rápida |
+|---|---|
+| Token expirado | Regenera el token o ejecuta la tarea de Cron de refresco de token. |
+| Webhook no verificado | Verifica que la callback URL y el token de verificación coinciden con tu configuración. |
+| ID incorrecto | Confirma los valores de Account ID y Phone ID en la configuración. |
+| Firma inválida | Revisa el Client Secret y mantén activada la verificación de firma. |
+| Número no aprobado | Asegúrate de que el número emisor está aprobado en Meta. |
+| Negocio no verificado | Completa la verificación de negocio en Meta Business Suite. |
+| Cuenta bloqueada | Revisa el estado de salud de la cuenta y posibles restricciones en Meta. |
 
 Recuerda que siempre puedes contactar con el [soporte oficial de WhatsApp Business](https://developers.facebook.com/documentation/business-messaging/whatsapp/support){:target="_blank"}.
 

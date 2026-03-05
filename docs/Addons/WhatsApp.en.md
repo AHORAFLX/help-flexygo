@@ -6,26 +6,23 @@
 
 By following these steps, you will be able to integrate it with **Flexygo**, add contacts, send and receive messages, and even **automate conversations with AI agents**.
 
----
-
 ## Prerequisites
 
 Find and **install the WhatsApp addon** from the <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> located inside Flexygo.
 
 Before being able to use it, you will need to create:
 
-* A **secure https domain**.
+* A **secure HTTPS domain**.
 * A **Facebook Developer Account**.
 * A **WhatsApp Business Application**.
 * A **Business Portfolio** for your company.
 
 In the prerequisites section and in the first step of the [official documentation](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites){:target="\_blank"} they explain in detail how to complete this process.
 
-> While configuring and developing, we **recommend** keeping the application in development mode (a mode in which messages cannot be sent) and using the test number provided by WhatsApp.
+!!! info "On development"
+    While configuring and developing, we **recommend** keeping the application in development mode (a mode in which messages cannot be sent) and using the test number provided by WhatsApp.
 
-> Once the configuration is complete, you can switch to **production mode**, verify your business, add your phone number, and start using WhatsApp Business from FlexyGo.
-
----
+    Once the configuration is complete, you can switch to **production mode**, verify your business, add your phone number, and start using WhatsApp Business from FlexyGo.
 
 ## Application Configuration
 
@@ -39,9 +36,8 @@ Enter them in the Basic Information section within the **Application Settings** 
 
 ![WhatsApp Business Configuration](../docs_assets/images/WhatsApp/whatsapp_conf.png)
 
-> You must provide a URL for the **Privacy Policy** and the **Terms of Service**.
-
----
+!!! warning "Privacy policy"
+    You must provide a URL for the **Privacy Policy** and the **Terms of Service**.
 
 ### 2. Webhooks Endpoint
 
@@ -58,9 +54,8 @@ Make sure you are subscribed to the **messages** field.
 
 ![Webhook Fields](../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png)
 
-> Before clicking Verify and Save, **complete the Flexygo configuration first**, and once finished you can verify it.
-
----
+!!! info "Flexygo configuration"
+    Before clicking Verify and Save, **complete the Flexygo configuration first**, and once finished you can verify it.
 
 ## Flexygo Configuration
 
@@ -98,15 +93,11 @@ Token required to send messages.
 
 ![Access Token](../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png)
 
----
-
 ### Application ID
 
 (Identified as `WhatsAppAccountId`)
 
 Required to refresh the token via OAuth.
-
----
 
 ### Client Secret
 
@@ -116,8 +107,6 @@ Required to verify webhook signatures. This and the previous value can be found 
 
 ![ApplicationId and Client Secret](../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png)
 
----
-
 ### Account ID and Phone ID
 
 (Identified as `WhatsAppApplicationId` and `WhatsAppPhoneId`)
@@ -126,15 +115,11 @@ Required to send messages. In your application, go to **Products** \> **WhatsApp
 
 ![Phone ID](../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png)
 
----
-
 ### Verification Token
 
 (Identified as `WhatsAppVerificationId`)
 
-Required to verify your Webhook endpoint with WhatsApp. It must be **the same value you entered in the [Webhooks section](./#2-endpoint-de-webhooks)**.
-
----
+Required to verify your Webhook endpoint with WhatsApp. It must be **the same value you entered in the [Webhooks section](#2-webhooks-endpoint)**.
 
 ### Signature Verification
 
@@ -143,8 +128,6 @@ Required to verify your Webhook endpoint with WhatsApp. It must be **the same va
 When enabled, this option **rejects all requests** made to the Webhooks endpoint and **only accepts those coming from Meta servers**.
 
 It is enabled by default and should only be disabled to send test requests to your endpoint.
-
----
 
 ## Integration Effects
 
@@ -160,8 +143,6 @@ Once you complete the <flx-navbutton class="link" type="openpagename" pagetypeid
 
 * The `WhatsApp_ClearMessages` cron job will be activated to delete old messages from the table and free up memory. The default retention period is 60 days, but this can be changed using the `ClearWhatsAppMessageDays` setting.
 
----
-
 ## Basic Usage
 
 Once configured, you can send and receive messages from <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> WhatsApp page in Flexygo</flx-navbutton>.
@@ -175,9 +156,7 @@ Once configured, you can send and receive messages from <flx-navbutton class="li
 5.  **Text box** to write messages.
 6.  **Sending options**. Includes buttons to attach files, send text messages, and other message types.
 
----
-
-### Automatic and Manual Mode
+## Automatic and Manual Mode
 
 A conversation can be in two modes: **automatic** or **manual**. You can switch between modes at any time using the **toggle button** in the conversation list.
 
@@ -187,9 +166,7 @@ A conversation can be in two modes: **automatic** or **manual**. You can switch 
     1.  If an AI assistant is **assigned** and **enabled**, it will respond to each incoming message.
     2.  If not, predefined messages will be sent asking the user to wait until someone responds. (The assigned user's language will be used.)
 
----
-
-### Contacts / Conversations
+## Contacts / Conversations
 
 There are 2 ways to create a new contact:
 
@@ -200,27 +177,11 @@ Once created, you can archive the conversation or edit the contact:
 
 ![Edit Conversation](../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png)
 
----
+## Message Types
 
-### Sending Messages
+WhatsApp supports multiple message types, grouped below by usage pattern. We can divide them into 4 types:
 
-WhatsApp supports a wide variety of message types:
-
--   Templates
--   Text
--   Images
--   Documents
--   Audio
--   Videos
--   Call-to-action URLs
--   Lists
--   Locations
--   Reply Buttons
--   Contacts
-
-We can divide them into 4 types:
-
-#### Files
+### Files
 
 Sent using the attach files button. The following extensions are allowed:
 
@@ -231,19 +192,19 @@ Sent using the attach files button. The following extensions are allowed:
 | Audio    | .aac, .amr, .mp3, .mp4, .ogg        |
 | Video    | .3gp, .mp4                          |
 
-#### Messages Without Body
+### Messages Without Body
 
-Messages that do not contain an array of elements. You simply fill in the required fields and send them. 
+Messages that do **not** contain an array of elements. You simply fill in the required fields and send them. 
 You also have the option to **create the message as an object** so it can be reused easily. 
 (Text, URLs, Location, Location Request, and Contact).
 
-#### Messages With Body
+### Messages With Body
 
-Messages that **DO** contain an array of elements. In addition to filling in required fields, you must add one or more elements to their body. 
+Messages that **do** contain an array of elements. In addition to filling in required fields, you must add one or more elements to their body. 
 For this type of message, it is **mandatory to create it as an object before sending**. 
 (Lists and Reply Buttons)
 
-#### Templates
+### Templates
 
 Predefined messages that must be created in [Meta Business Suite](https://business.facebook.com/latest/settings){:target="\_blank"} and approved by Meta.
 
@@ -251,25 +212,25 @@ Some accept variables, which must always be completed before sending.
 
 ![Message Buttons](../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png)
 
----
-
-### Basic Flow
+## Basic Flow
 
 **Receiving messages**:
 
-```plaintext { .no-language }
-WhastsApp -> Endpoint Webhook -> Flexygo
+```mermaid
+flowchart LR
+    A[WhatsApp] --> B[Endpoint Webhook]
+    B --> C[Flexygo]
 ```
 
 **Sending messages**:
 
-```plaintext { .no-language }
-Flexygo -> WhatsApp Cloud API -> WhatsApp
+```mermaid
+flowchart LR
+    A[Flexygo] --> B[WhatsApp Cloud API]
+    B --> C[WhatsApp]
 ```
 
----
-
-### Rules and Limitations
+## Rules and Limitations
 
 -   When a message is sent manually, the conversation is **always switched** to manual mode.
 -   AI assistants within the WhatsApp scope:
@@ -281,15 +242,11 @@ Flexygo -> WhatsApp Cloud API -> WhatsApp
 -   If more than 24 hours have passed since the user's last message, **only templates can be sent** until they reply.
 -   Sending and receiving messages is subject to [Meta's WhatsApp Business pricing](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing){:target="\_blank"}.
 
----
-
 ## Security Considerations
 
 * Never share or expose any token, ID, or secret.
 * Keep **Signature Verification** enabled in the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true"> Flexygo configuration </flx-navbutton> when not testing.
 * Carefully review which sensitive information and processes AI assistants can access before assigning them to a conversation.
-
----
 
 ## Troubleshooting
 
@@ -297,24 +254,26 @@ If at any point you are unable to receive/send messages, check the following:
 
 -   Make a GET request to the following URL to check your account status. If any issue is indicated, it must be resolved.
 
-```plaintext { .no-language }
-https://graph.facebook.com/v25.0/{{Account ID}}?fields=health_status
-```
-> Replace **[Account ID](./#account-id-and-phone-id)** with the appropriate value.
+<fh-copy>https://graph.facebook.com/v25.0/{{Account ID}}?fields=health_status</fh-copy>
+
+!!! warning "Your Account ID"
+    Replace **[Account ID](#flexygo-configuration)** with the appropriate value.
 
 -   Check in [your WhatsApp Business application](https://developers.facebook.com/apps){:target="\_blank"} under **Products** \> **WhatsApp** \> **API Setup** \> **Webhook Events** which webhook events are being received related to your activity.
 
 ![Webhook Events Check](../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png)
 
-The most common errors are:
+Common causes of send/receive failures:
 
--   Expired token
--   Webhook not verified
--   Incorrect ID
--   Invalid signature
--   Number not approved
--   Business not verified
--   Account blocked
+| Error | Quick check |
+|---|---|
+| Expired token | Regenerate the token or run the token refresh Cron task. |
+| Webhook not verified | Verify callback URL and verification token match your configuration. |
+| Incorrect ID | Confirm Account ID and Phone ID values in settings. |
+| Invalid signature | Check Client Secret and keep signature verification enabled. |
+| Number not approved | Ensure the sender number is approved in Meta. |
+| Business not verified | Complete business verification in Meta Business Suite. |
+| Account blocked | Review account health status and restrictions in Meta. |
 
 Remember that you can always contact [official WhatsApp Business support](https://developers.facebook.com/documentation/business-messaging/whatsapp/support){:target="\_blank"}.
 
