@@ -1,4 +1,4 @@
-# Addons
+# Información
 
 Un addon es una función adicional de la herramienta que se puede instalar por separado y utilizar en diferentes aplicaciones.
 
