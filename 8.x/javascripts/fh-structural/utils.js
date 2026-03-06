@@ -220,6 +220,15 @@ function splitAtLastOccurrence(text, character) {
     return [text.substring(0, index), text.substring(index + 1)];
 }
 
+async function urlExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch {
+        return false;
+    }
+}
+
 function restorePaletteFromStorage() {
     const current_palette = localStorage.getItem('fh-palette');
     if (current_palette) {
