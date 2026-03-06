@@ -674,10 +674,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Basic Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#automatic-and-manual-mode" class="md-nav__link">
     <span class="md-ellipsis">
       Automatic and Manual Mode
@@ -685,8 +684,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#contacts-conversations" class="md-nav__link">
     <span class="md-ellipsis">
       Contacts / Conversations
@@ -694,29 +693,48 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#message-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Types">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sending-messages" class="md-nav__link">
+  <a href="#files" class="md-nav__link">
     <span class="md-ellipsis">
-      Sending Messages
+      Files
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#basic-flow" class="md-nav__link">
+  <a href="#messages-without-body" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Flow
+      Messages Without Body
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rules-and-limitations" class="md-nav__link">
+  <a href="#messages-with-body" class="md-nav__link">
     <span class="md-ellipsis">
-      Rules and Limitations
+      Messages With Body
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates
     </span>
   </a>
   
@@ -724,6 +742,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules and Limitations
+    </span>
+  </a>
   
 </li>
       
@@ -3627,32 +3663,32 @@
 <p><img alt="WhatsApp" class="fh-image-of-title" src="../../../docs_assets/images/WhatsApp/WhatsApp.png"></p>
 <p><a href="https://business.whatsapp.com/products/business-app" target="_blank">WhatsApp Business</a> (Cloud API) is an official Meta tool that allows you to integrate WhatsApp messaging into your business solutions.</p>
 <p>By following these steps, you will be able to integrate it with <strong>Flexygo</strong>, add contacts, send and receive messages, and even <strong>automate conversations with AI agents</strong>.</p>
-<hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>Find and <strong>install the WhatsApp addon</strong> from the <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> located inside Flexygo.</p>
 <p>Before being able to use it, you will need to create:</p>
 <ul>
-<li>A <strong>secure https domain</strong>.</li>
-<li>A <strong>Facebook Developer Account</strong>.</li>
-<li>A <strong>WhatsApp Business Application</strong>.</li>
-<li>A <strong>Business Portfolio</strong> for your company.</li>
+<li>Purchase the <strong>FlxWhatsapp</strong> license module through the ABH portal.</li>
+<li>A <strong>secure HTTPS domain</strong>.</li>
+<li>A <strong>developer account on Meta</strong>.</li>
+<li>An <strong>application on Meta with the WhatsApp Business product added</strong>.</li>
+<li>A <strong>business portfolio</strong> for your company on Meta.</li>
 </ul>
 <p>In the prerequisites section and in the first step of the <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites" target="_blank">official documentation</a> they explain in detail how to complete this process.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">On development</p>
 <p>While configuring and developing, we <strong>recommend</strong> keeping the application in development mode (a mode in which messages cannot be sent) and using the test number provided by WhatsApp.</p>
 <p>Once the configuration is complete, you can switch to <strong>production mode</strong>, verify your business, add your phone number, and start using WhatsApp Business from FlexyGo.</p>
-</blockquote>
-<hr>
+</div>
 <h2 id="application-configuration">Application Configuration<a class="headerlink" href="#application-configuration" title="Permanent link">¶</a></h2>
 <p>Once you have completed the prerequisites, continue with the following steps:</p>
 <h3 id="1-add-domains">1. Add Domains<a class="headerlink" href="#1-add-domains" title="Permanent link">¶</a></h3>
 <p>First, add your <strong>domains</strong> in the application configuration.</p>
 <p>Enter them in the Basic Information section within the <strong>Application Settings</strong> of <a href="https://developers.facebook.com/apps" target="_blank">your WhatsApp Business application</a>:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_conf.png" data-desc-position="bottom"><img alt="WhatsApp Business Configuration" src="../../../docs_assets/images/WhatsApp/whatsapp_conf.png"></a></p>
-<blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Privacy policy</p>
 <p>You must provide a URL for the <strong>Privacy Policy</strong> and the <strong>Terms of Service</strong>.</p>
-</blockquote>
-<hr>
+</div>
 <h3 id="2-webhooks-endpoint">2. Webhooks Endpoint<a class="headerlink" href="#2-webhooks-endpoint" title="Permanent link">¶</a></h3>
 <p>Add the <strong>Webhooks</strong> product to your application and configure the endpoint for <strong>WhatsApp Business Account</strong>.</p>
 <p>Complete the following fields:</p>
@@ -3663,10 +3699,10 @@
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png" data-desc-position="bottom"><img alt="Webhook Configuration" src="../../../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png"></a></p>
 <p>Make sure you are subscribed to the <strong>messages</strong> field.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png" data-desc-position="bottom"><img alt="Webhook Fields" src="../../../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png"></a></p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Flexygo configuration</p>
 <p>Before clicking Verify and Save, <strong>complete the Flexygo configuration first</strong>, and once finished you can verify it.</p>
-</blockquote>
-<hr>
+</div>
 <h2 id="flexygo-configuration">Flexygo Configuration<a class="headerlink" href="#flexygo-configuration" title="Permanent link">¶</a></h2>
 <p>Open the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">WhatsApp Business settings</flx-navbutton> in Flexygo and complete the following fields:</p>
 <h3 id="default-user">Default User<a class="headerlink" href="#default-user" title="Permanent link">¶</a></h3>
@@ -3694,30 +3730,24 @@ Leaving it empty means:</p>
 <li>Generate a <strong>System User Access Token</strong> from <a href="https://business.facebook.com/latest/settings" target="_blank">Meta Business Suite</a>, in the System Users section.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png" data-desc-position="bottom"><img alt="Access Token" src="../../../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png"></a></p>
-<hr>
 <h3 id="application-id">Application ID<a class="headerlink" href="#application-id" title="Permanent link">¶</a></h3>
 <p>(Identified as <code>WhatsAppAccountId</code>)</p>
 <p>Required to refresh the token via OAuth.</p>
-<hr>
 <h3 id="client-secret">Client Secret<a class="headerlink" href="#client-secret" title="Permanent link">¶</a></h3>
 <p>(Identified as <code>WhatsAppClientSecret</code>)</p>
 <p>Required to verify webhook signatures. This and the previous value can be found in the Basic Information section within the <strong>Application Settings</strong> of <a href="https://developers.facebook.com/apps" target="_blank">your WhatsApp Business application</a>:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png" data-desc-position="bottom"><img alt="ApplicationId and Client Secret" src="../../../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png"></a></p>
-<hr>
 <h3 id="account-id-and-phone-id">Account ID and Phone ID<a class="headerlink" href="#account-id-and-phone-id" title="Permanent link">¶</a></h3>
 <p>(Identified as <code>WhatsAppApplicationId</code> and <code>WhatsAppPhoneId</code>)</p>
 <p>Required to send messages. In your application, go to <strong>Products</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>API Setup</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png" data-desc-position="bottom"><img alt="Phone ID" src="../../../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png"></a></p>
-<hr>
 <h3 id="verification-token">Verification Token<a class="headerlink" href="#verification-token" title="Permanent link">¶</a></h3>
 <p>(Identified as <code>WhatsAppVerificationId</code>)</p>
-<p>Required to verify your Webhook endpoint with WhatsApp. It must be <strong>the same value you entered in the <a href="./#2-endpoint-de-webhooks">Webhooks section</a></strong>.</p>
-<hr>
+<p>Required to verify your Webhook endpoint with WhatsApp. It must be <strong>the same value you entered in the <a href="#2-webhooks-endpoint">Webhooks section</a></strong>.</p>
 <h3 id="signature-verification">Signature Verification<a class="headerlink" href="#signature-verification" title="Permanent link">¶</a></h3>
 <p>(Identified as <code>WhatsAppVerifySignature</code>)</p>
 <p>When enabled, this option <strong>rejects all requests</strong> made to the Webhooks endpoint and <strong>only accepts those coming from Meta servers</strong>.</p>
 <p>It is enabled by default and should only be disabled to send test requests to your endpoint.</p>
-<hr>
 <h2 id="integration-effects">Integration Effects<a class="headerlink" href="#integration-effects" title="Permanent link">¶</a></h2>
 <p>Once you complete the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">WhatsApp Business configuration</flx-navbutton> in Flexygo, <strong>refresh the cache</strong> and reload the page. The integration between WhatsApp Business and Flexygo will be activated. This will trigger the following:</p>
 <ul>
@@ -3737,7 +3767,6 @@ Leaving it empty means:</p>
 <p>The <code>WhatsApp_ClearMessages</code> cron job will be activated to delete old messages from the table and free up memory. The default retention period is 60 days, but this can be changed using the <code>ClearWhatsAppMessageDays</code> setting.</p>
 </li>
 </ul>
-<hr>
 <h2 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Permanent link">¶</a></h2>
 <p>Once configured, you can send and receive messages from <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> WhatsApp page in Flexygo</flx-navbutton>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_flexygo_page.png" data-desc-position="bottom"><img alt="WhatsApp Page" src="../../../docs_assets/images/WhatsApp/whatsapp_flexygo_page.png"></a></p>
@@ -3749,8 +3778,7 @@ Leaving it empty means:</p>
 <li><strong>Text box</strong> to write messages.</li>
 <li><strong>Sending options</strong>. Includes buttons to attach files, send text messages, and other message types.</li>
 </ol>
-<hr>
-<h3 id="automatic-and-manual-mode">Automatic and Manual Mode<a class="headerlink" href="#automatic-and-manual-mode" title="Permanent link">¶</a></h3>
+<h2 id="automatic-and-manual-mode">Automatic and Manual Mode<a class="headerlink" href="#automatic-and-manual-mode" title="Permanent link">¶</a></h2>
 <p>A conversation can be in two modes: <strong>automatic</strong> or <strong>manual</strong>. You can switch between modes at any time using the <strong>toggle button</strong> in the conversation list.</p>
 <ul>
 <li>In manual mode: Messages can only be sent from the interface.</li>
@@ -3762,8 +3790,7 @@ Leaving it empty means:</p>
 </ol>
 </li>
 </ul>
-<hr>
-<h3 id="contacts-conversations">Contacts / Conversations<a class="headerlink" href="#contacts-conversations" title="Permanent link">¶</a></h3>
+<h2 id="contacts-conversations">Contacts / Conversations<a class="headerlink" href="#contacts-conversations" title="Permanent link">¶</a></h2>
 <p>There are 2 ways to create a new contact:</p>
 <ol>
 <li><strong>Receive a message from a new number</strong>, in which case a contact will automatically be created with that number.</li>
@@ -3771,24 +3798,9 @@ Leaving it empty means:</p>
 </ol>
 <p>Once created, you can archive the conversation or edit the contact:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png" data-desc-position="bottom"><img alt="Edit Conversation" src="../../../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png"></a></p>
-<hr>
-<h3 id="sending-messages">Sending Messages<a class="headerlink" href="#sending-messages" title="Permanent link">¶</a></h3>
-<p>WhatsApp supports a wide variety of message types:</p>
-<ul>
-<li>Templates</li>
-<li>Text</li>
-<li>Images</li>
-<li>Documents</li>
-<li>Audio</li>
-<li>Videos</li>
-<li>Call-to-action URLs</li>
-<li>Lists</li>
-<li>Locations</li>
-<li>Reply Buttons</li>
-<li>Contacts</li>
-</ul>
-<p>We can divide them into 4 types:</p>
-<h4 id="files">Files<a class="headerlink" href="#files" title="Permanent link">¶</a></h4>
+<h2 id="message-types">Message Types<a class="headerlink" href="#message-types" title="Permanent link">¶</a></h2>
+<p>WhatsApp supports multiple message types, grouped below by usage pattern. We can divide them into 4 types:</p>
+<h3 id="files">Files<a class="headerlink" href="#files" title="Permanent link">¶</a></h3>
 <p>Sent using the attach files button. The following extensions are allowed:</p>
 <table>
 <thead>
@@ -3816,28 +3828,28 @@ Leaving it empty means:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="messages-without-body">Messages Without Body<a class="headerlink" href="#messages-without-body" title="Permanent link">¶</a></h4>
-<p>Messages that do not contain an array of elements. You simply fill in the required fields and send them. 
+<h3 id="messages-without-body">Messages Without Body<a class="headerlink" href="#messages-without-body" title="Permanent link">¶</a></h3>
+<p>Messages that do <strong>not</strong> contain an array of elements. You simply fill in the required fields and send them. 
 You also have the option to <strong>create the message as an object</strong> so it can be reused easily. 
 (Text, URLs, Location, Location Request, and Contact).</p>
-<h4 id="messages-with-body">Messages With Body<a class="headerlink" href="#messages-with-body" title="Permanent link">¶</a></h4>
-<p>Messages that <strong>DO</strong> contain an array of elements. In addition to filling in required fields, you must add one or more elements to their body. 
+<h3 id="messages-with-body">Messages With Body<a class="headerlink" href="#messages-with-body" title="Permanent link">¶</a></h3>
+<p>Messages that <strong>do</strong> contain an array of elements. In addition to filling in required fields, you must add one or more elements to their body. 
 For this type of message, it is <strong>mandatory to create it as an object before sending</strong>. 
 (Lists and Reply Buttons)</p>
-<h4 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">¶</a></h4>
+<h3 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">¶</a></h3>
 <p>Predefined messages that must be created in <a href="https://business.facebook.com/latest/settings" target="_blank">Meta Business Suite</a> and approved by Meta.</p>
 <p>Some accept variables, which must always be completed before sending.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png" data-desc-position="bottom"><img alt="Message Buttons" src="../../../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png"></a></p>
-<hr>
-<h3 id="basic-flow">Basic Flow<a class="headerlink" href="#basic-flow" title="Permanent link">¶</a></h3>
+<h2 id="basic-flow">Basic Flow<a class="headerlink" href="#basic-flow" title="Permanent link">¶</a></h2>
 <p><strong>Receiving messages</strong>:</p>
-<div class="language-text no-language highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WhastsApp -&gt; Endpoint Webhook -&gt; Flexygo
-</span></code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    A[WhatsApp] --&gt; B[Endpoint Webhook]
+    B --&gt; C[Flexygo]</code></pre>
 <p><strong>Sending messages</strong>:</p>
-<div class="language-text no-language highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Flexygo -&gt; WhatsApp Cloud API -&gt; WhatsApp
-</span></code></pre></div>
-<hr>
-<h3 id="rules-and-limitations">Rules and Limitations<a class="headerlink" href="#rules-and-limitations" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    A[Flexygo] --&gt; B[WhatsApp Cloud API]
+    B --&gt; C[WhatsApp]</code></pre>
+<h2 id="rules-and-limitations">Rules and Limitations<a class="headerlink" href="#rules-and-limitations" title="Permanent link">¶</a></h2>
 <ul>
 <li>When a message is sent manually, the conversation is <strong>always switched</strong> to manual mode.</li>
 <li>AI assistants within the WhatsApp scope:<ul>
@@ -3851,38 +3863,65 @@ For this type of message, it is <strong>mandatory to create it as an object befo
 <li>If more than 24 hours have passed since the user's last message, <strong>only templates can be sent</strong> until they reply.</li>
 <li>Sending and receiving messages is subject to <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank">Meta's WhatsApp Business pricing</a>.</li>
 </ul>
-<hr>
 <h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">¶</a></h2>
 <ul>
 <li>Never share or expose any token, ID, or secret.</li>
 <li>Keep <strong>Signature Verification</strong> enabled in the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true"> Flexygo configuration </flx-navbutton> when not testing.</li>
 <li>Carefully review which sensitive information and processes AI assistants can access before assigning them to a conversation.</li>
 </ul>
-<hr>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <p>If at any point you are unable to receive/send messages, check the following:</p>
 <ul>
 <li>Make a GET request to the following URL to check your account status. If any issue is indicated, it must be resolved.</li>
 </ul>
-<div class="language-text no-language highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://graph.facebook.com/v25.0/{{Account ID}}?fields=health_status
-</span></code></pre></div>
-<blockquote>
-<p>Replace <strong><a href="./#account-id-and-phone-id">Account ID</a></strong> with the appropriate value.</p>
-</blockquote>
+<p><fh-copy>https://graph.facebook.com/v25.0/{{Account ID}}?fields=health_status</fh-copy></p>
+<div class="admonition warning">
+<p class="admonition-title">Your Account ID</p>
+<p>Replace <strong><a href="#flexygo-configuration">Account ID</a></strong> with the appropriate value.</p>
+</div>
 <ul>
 <li>Check in <a href="https://developers.facebook.com/apps" target="_blank">your WhatsApp Business application</a> under <strong>Products</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>API Setup</strong> &gt; <strong>Webhook Events</strong> which webhook events are being received related to your activity.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png" data-desc-position="bottom"><img alt="Webhook Events Check" src="../../../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png"></a></p>
-<p>The most common errors are:</p>
-<ul>
-<li>Expired token</li>
-<li>Webhook not verified</li>
-<li>Incorrect ID</li>
-<li>Invalid signature</li>
-<li>Number not approved</li>
-<li>Business not verified</li>
-<li>Account blocked</li>
-</ul>
+<p>Common causes of send/receive failures:</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Quick check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expired token</td>
+<td>Regenerate the token or run the token refresh Cron task.</td>
+</tr>
+<tr>
+<td>Webhook not verified</td>
+<td>Verify callback URL and verification token match your configuration.</td>
+</tr>
+<tr>
+<td>Incorrect ID</td>
+<td>Confirm Account ID and Phone ID values in settings.</td>
+</tr>
+<tr>
+<td>Invalid signature</td>
+<td>Check Client Secret and keep signature verification enabled.</td>
+</tr>
+<tr>
+<td>Number not approved</td>
+<td>Ensure the sender number is approved in Meta.</td>
+</tr>
+<tr>
+<td>Business not verified</td>
+<td>Complete business verification in Meta Business Suite.</td>
+</tr>
+<tr>
+<td>Account blocked</td>
+<td>Review account health status and restrictions in Meta.</td>
+</tr>
+</tbody>
+</table>
 <p>Remember that you can always contact <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/support" target="_blank">official WhatsApp Business support</a>.</p>
 <p>For more technical information, consult the <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/overview" target="_blank">official WhatsApp Business documentation</a>.</p>
 
@@ -4066,10 +4105,9 @@ For this type of message, it is <strong>mandatory to create it as an object befo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Basic Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#automatic-and-manual-mode" class="md-nav__link">
     <span class="md-ellipsis">
       Automatic and Manual Mode
@@ -4077,8 +4115,8 @@ For this type of message, it is <strong>mandatory to create it as an object befo
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#contacts-conversations" class="md-nav__link">
     <span class="md-ellipsis">
       Contacts / Conversations
@@ -4086,29 +4124,48 @@ For this type of message, it is <strong>mandatory to create it as an object befo
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#message-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Types">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sending-messages" class="md-nav__link">
+  <a href="#files" class="md-nav__link">
     <span class="md-ellipsis">
-      Sending Messages
+      Files
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#basic-flow" class="md-nav__link">
+  <a href="#messages-without-body" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Flow
+      Messages Without Body
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rules-and-limitations" class="md-nav__link">
+  <a href="#messages-with-body" class="md-nav__link">
     <span class="md-ellipsis">
-      Rules and Limitations
+      Messages With Body
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates
     </span>
   </a>
   
@@ -4116,6 +4173,24 @@ For this type of message, it is <strong>mandatory to create it as an object befo
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules and Limitations
+    </span>
+  </a>
   
 </li>
       

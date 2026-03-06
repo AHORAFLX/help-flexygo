@@ -539,13 +539,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuraciones-de-la-aplicacion" class="md-nav__link">
+  <a href="#configuracion-de-la-aplicacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuraciones de la aplicación
+      Configuración de la aplicación
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuraciones de la aplicación">
+    <nav class="md-nav" aria-label="Configuración de la aplicación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -618,9 +618,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#secreto-del-cliente" class="md-nav__link">
+  <a href="#client-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Secreto del Cliente
+      Client Secret
     </span>
   </a>
   
@@ -674,10 +674,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Uso básico">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modo-automatico-y-manual" class="md-nav__link">
     <span class="md-ellipsis">
       Modo automático y manual
@@ -685,8 +684,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#contactos-conversaciones" class="md-nav__link">
     <span class="md-ellipsis">
       Contactos / Conversaciones
@@ -694,29 +693,48 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de mensajes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de mensajes">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#envio-de-mensajes" class="md-nav__link">
+  <a href="#archivos" class="md-nav__link">
     <span class="md-ellipsis">
-      Envío de mensajes
+      Archivos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#flujo-basico" class="md-nav__link">
+  <a href="#mensajes-sin-cuerpo" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo Básico
+      Mensajes sin cuerpo
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reglas-y-limitaciones" class="md-nav__link">
+  <a href="#mensajes-con-cuerpo" class="md-nav__link">
     <span class="md-ellipsis">
-      Reglas y Limitaciones
+      Mensajes con cuerpo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plantillas
     </span>
   </a>
   
@@ -724,6 +742,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo básico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas y Limitaciones
+    </span>
+  </a>
   
 </li>
       
@@ -3627,52 +3663,52 @@
 <p><img alt="WhatsApp" class="fh-image-of-title" src="../../docs_assets/images/WhatsApp/WhatsApp.png"></p>
 <p><a href="https://business.whatsapp.com/products/business-app" target="_blank">WhatsApp Business</a> (Cloud API) es una herramienta oficial de Meta que permite integrar la mensajería de WhatsApp en tus soluciones empresariales.</p>
 <p>Siguiendo estos pasos, podrás integrarla con <strong>Flexygo</strong>, añadir contactos, enviar y recibir mensajes e incluso <strong>automatizar las conversaciones con agentes de IA</strong>.</p>
-<hr>
 <h2 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">¶</a></h2>
-<p>Localiza e <strong>instala el Addon de WhatsApp</strong> desde el <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> ubicado dentro de Flexygo.</p>
+<p>Localiza e <strong>instala el addon de WhatsApp</strong> desde el <flx-navbutton class="link" type="openpage" pagetypeid="list" objectname="sysAddons" objectwhere="" defaults="" targetid="popup1400x600" excludehist="true">marketplace</flx-navbutton> dentro de Flexygo.</p>
 <p>Antes de poder usarlo necesitarás crear:</p>
 <ul>
-<li>Un <strong>dominio seguro https</strong>.</li>
-<li>Una <strong>cuenta de desarrollador de Facebook</strong>.</li>
-<li>Una <strong>aplicación de WhatsApp Business</strong>.</li>
-<li>Un <strong>Portafolio Empresarial</strong> de tu empresa.</li>
+<li>Adquirir el módulo de licencia <strong>FlxWhatsapp</strong> a través del portal ABH.</li>
+<li>Un <strong>dominio HTTPS seguro</strong>.</li>
+<li>Una <strong>cuenta de desarrollador en Meta</strong>.</li>
+<li>Una <strong>aplicación en Meta con el producto WhatsApp Business añadido</strong>.</li>
+<li>Un <strong>Portafolio empresarial</strong> de tu empresa en Meta.</li>
 </ul>
-<p>En el apartado de requisitos previos y en el primer paso de la <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites" target="_blank">ayuda oficial</a> explican como se realiza este proceso en detalle.</p>
-<blockquote>
-<p>Miestras se configura y desarrolla <strong>recomendamos</strong> tener la aplicación en modo desarrolo (modo en el que no se pueden enviar mensajes) y usar el número de prueba que nos brinda WhatsApp.</p>
-<p>Una vez completemos las configuraciones, podemos cambiar a <strong>modo producción</strong>, verificar nuestro negocio, añadir nuestro teléfono y comenzar a usar WhatsApp Business desde FlexyGo.</p>
-</blockquote>
-<hr>
-<h2 id="configuraciones-de-la-aplicacion">Configuraciones de la aplicación<a class="headerlink" href="#configuraciones-de-la-aplicacion" title="Permanent link">¶</a></h2>
-<p>Una vez tengas los requisitos previos, continúa con estos pasos:</p>
+<p>En la sección de requisitos previos y en el primer paso de la <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites" target="_blank">documentación oficial</a> se explica este proceso en detalle.</p>
+<div class="admonition info">
+<p class="admonition-title">En desarrollo</p>
+<p>Durante la configuración y el desarrollo, <strong>recomendamos</strong> mantener la aplicación en modo desarrollo (modo en el que no se pueden enviar mensajes) y usar el número de prueba que proporciona WhatsApp.</p>
+<p>Una vez completada la configuración, puedes pasar a <strong>modo producción</strong>, verificar tu negocio, añadir tu número de teléfono y empezar a usar WhatsApp Business desde FlexyGo.</p>
+</div>
+<h2 id="configuracion-de-la-aplicacion">Configuración de la aplicación<a class="headerlink" href="#configuracion-de-la-aplicacion" title="Permanent link">¶</a></h2>
+<p>Una vez cumplidos los requisitos previos, continúa con los siguientes pasos:</p>
 <h3 id="1-anadir-dominios">1. Añadir dominios<a class="headerlink" href="#1-anadir-dominios" title="Permanent link">¶</a></h3>
 <p>Primero, añade tus <strong>dominios</strong> en la configuración de la aplicación.</p>
 <p>Escríbelos en el apartado de Información Básica dentro de la <strong>Configuración de la aplicación</strong> de <a href="https://developers.facebook.com/apps" target="_blank">tu aplicación de WhatsApp Business</a>:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_conf.png" data-desc-position="bottom"><img alt="Configuración de WhatsApp Business" src="../../docs_assets/images/WhatsApp/whatsapp_conf.png"></a></p>
-<blockquote>
-<p>Debes proporcionar una URL para las <strong>Políticas de privacidad</strong> y para los <strong>Términos de servicio</strong>.</p>
-</blockquote>
-<hr>
+<div class="admonition warning">
+<p class="admonition-title">Política de privacidad</p>
+<p>Debes proporcionar una URL para la <strong>Política de privacidad</strong> y los <strong>Términos del servicio</strong>.</p>
+</div>
 <h3 id="2-endpoint-de-webhooks">2. Endpoint de Webhooks<a class="headerlink" href="#2-endpoint-de-webhooks" title="Permanent link">¶</a></h3>
 <p>Añade el producto <strong>Webhooks</strong> a tu aplicación y configura el endpoint para <strong>Whatsapp Business Account</strong>.</p>
-<p>Rellena los campos:</p>
+<p>Completa los siguientes campos:</p>
 <ul>
 <li>URL de callback: <strong>Tu dominio</strong> + <code>/webhook/guest/FlxWhatsapp</code></li>
 <li>ID de verificación: Introduce una contraseña que usaremos más adelante. (Lo vemos en el siguiente punto)</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png" data-desc-position="bottom"><img alt="Configuración del Webhook" src="../../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png"></a></p>
-<p>Verifica que estás suscrito a los campos de <strong>mensajes</strong>.</p>
+<p>Asegúrate de estar suscrito al campo <strong>messages</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png" data-desc-position="bottom"><img alt="Campos del Webhook" src="../../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png"></a></p>
-<blockquote>
-<p>Antes de darle a Verificar y Guardar, <strong>completa la Configuración de Flexygo</strong> y cuando lo tengas le podrás dar.</p>
-</blockquote>
-<hr>
+<div class="admonition info">
+<p class="admonition-title">Configuración en Flexygo</p>
+<p>Antes de hacer clic en Verificar y guardar, <strong>completa primero la configuración en Flexygo</strong> y, cuando esté lista, vuelve para verificar.</p>
+</div>
 <h2 id="configuracion-en-flexygo">Configuración en Flexygo<a class="headerlink" href="#configuracion-en-flexygo" title="Permanent link">¶</a></h2>
 <p>Abre las <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuraciones de WhatsApp Business</flx-navbutton> en Flexygo y rellena los campos:</p>
 <h3 id="usuario-por-defecto">Usuario por defecto<a class="headerlink" href="#usuario-por-defecto" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsApp_DefaultAnswerUser</code>)</p>
-<p>Rellenar este campo determinará que <strong>usuario se le asignará por defecto</strong> con los contactos que sean creados de ahora en adelante. Se utiliza para determinar el idioma para los mensajes del sistema y la ejecución de la IA.
-Dejarlo vacío supondrá:</p>
+<p>Completar este campo determina qué <strong>usuario se asignará por defecto</strong> a los contactos que se creen a partir de ahora. Se usa para determinar el idioma de los mensajes del sistema y la ejecución de la IA.</p>
+<p>Si lo dejas vacío:</p>
 <ol>
 <li>Se buscará el primer <strong>usuario que tenga el mismo número</strong> que el contacto.</li>
 <li>Si se encuentra, se le asignará ese.</li>
@@ -3694,30 +3730,24 @@ Dejarlo vacío supondrá:</p>
 <li>Generar un <strong>Identificador de Acceso del Sistema</strong> desde <a href="https://business.facebook.com/latest/settings" target="_blank">Meta Business Suite</a>, lo puedes hacer en el apartado Usuarios del sistema.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png" data-desc-position="bottom"><img alt="Token de Acceso" src="../../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png"></a></p>
-<hr>
 <h3 id="id-de-la-aplicacion">ID de la Aplicación<a class="headerlink" href="#id-de-la-aplicacion" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppAccountId</code>)</p>
-<p>Necesario para refrescar el token mediante OAuth. </p>
-<hr>
-<h3 id="secreto-del-cliente">Secreto del Cliente<a class="headerlink" href="#secreto-del-cliente" title="Permanent link">¶</a></h3>
+<p>Necesario para refrescar el token mediante OAuth.</p>
+<h3 id="client-secret">Client Secret<a class="headerlink" href="#client-secret" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppClientSecret</code>)</p>
 <p>Necesario para verificar la firma de los webhooks. Este y el anterior, puedes encontrarlos en el apartado de Información Básica dentro de la <strong>Configuración de la aplicación</strong> de <a href="https://developers.facebook.com/apps" target="_blank">tu aplicación de WhatsApp Business</a>:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png" data-desc-position="bottom"><img alt="ApplicationId y Client Secret" src="../../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png"></a></p>
-<hr>
 <h3 id="id-de-la-cuenta-e-id-del-telefono">ID de la Cuenta e ID del Teléfono<a class="headerlink" href="#id-de-la-cuenta-e-id-del-telefono" title="Permanent link">¶</a></h3>
-<p>(Identificado como <code>WhatsAppApplicationId</code> y <code>WhatsAppPhoneId</code>)</p>
-<p>Necesarios para enviar mensajes. En tu aplicación, dentro de <strong>Productos</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>Tests de la API</strong>.  </p>
+<p>(Identificados como <code>WhatsAppApplicationId</code> y <code>WhatsAppPhoneId</code>)</p>
+<p>Necesarios para enviar mensajes. En tu aplicación, ve a <strong>Products</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>API Setup</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png" data-desc-position="bottom"><img alt="Phone ID" src="../../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png"></a></p>
-<hr>
 <h3 id="id-de-verificacion">ID de Verificación<a class="headerlink" href="#id-de-verificacion" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppVerificationId</code>)</p>
 <p>Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser <strong>el mismo que indicaste en el <a href="./#2-endpoint-de-webhooks">Apartado de Webhooks</a></strong>.</p>
-<hr>
 <h3 id="verificacion-de-la-firma">Verificación de la firma<a class="headerlink" href="#verificacion-de-la-firma" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppVerifySignature</code>)</p>
 <p>Tener esta opción activada <strong>rechaza todas las peticiones</strong> que se hagan al endpoint de Webhooks y <strong>solo acepta las que vengan de los servidores de Meta</strong>.</p>
 <p>Por defecto está activada, y solo conviene desactivarla para poder enviar peticiones de prueba a nuestro endpoint.</p>
-<hr>
 <h2 id="efectos-de-la-integracion">Efectos de la Integración<a class="headerlink" href="#efectos-de-la-integracion" title="Permanent link">¶</a></h2>
 <p>Una vez rellenes las <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuraciones de WhatsApp Business</flx-navbutton> en Flexygo, <strong>refresques cache</strong> y recarges la página, se activará la integración entre WhatsApp Business y Flexygo. Esto activará lo siguiente:</p>
 <ul>
@@ -3737,7 +3767,6 @@ Dejarlo vacío supondrá:</p>
 <p>Se activará la tarea de Cron <code>WhatsApp_ClearMessages</code>, encargada de eliminar los mensajes antiguos de la tabla con el objetivo de liberar memoria. El período de retención predeterminado es de 60 días, aunque puede modificarse mediante la configuración <code>ClearWhatsAppMessageDays</code>.</p>
 </li>
 </ul>
-<hr>
 <h2 id="uso-basico">Uso básico<a class="headerlink" href="#uso-basico" title="Permanent link">¶</a></h2>
 <p>Una vez configurado, puedes enviar y recibir mensajes desde <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> <a>la página de WhatsApp de Flexygo</a> </flx-navbutton>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_flexygo_page.png" data-desc-position="bottom"><img alt="Página de WhatsApp" src="../../docs_assets/images/WhatsApp/whatsapp_flexygo_page.png"></a></p>
@@ -3749,8 +3778,7 @@ Dejarlo vacío supondrá:</p>
 <li><strong>Caja de texto para escribir mensajes</strong>.</li>
 <li><strong>Opciones de envío</strong>. Contiene los botones para adjuntar archivos, enviar mensajes de texto y otros tipos de mensajes.</li>
 </ol>
-<hr>
-<h3 id="modo-automatico-y-manual">Modo automático y manual<a class="headerlink" href="#modo-automatico-y-manual" title="Permanent link">¶</a></h3>
+<h2 id="modo-automatico-y-manual">Modo automático y manual<a class="headerlink" href="#modo-automatico-y-manual" title="Permanent link">¶</a></h2>
 <p>Una conversación puede estar en 2 modos: <strong>automático</strong> o <strong>manual</strong>. Se puede cambiar una conversación de un modo a otro en cualquier momento desde el <strong>botón de alternancia</strong> que disponen en el listado de conversaciones. </p>
 <ul>
 <li>
@@ -3764,8 +3792,7 @@ Dejarlo vacío supondrá:</p>
 </ol>
 </li>
 </ul>
-<hr>
-<h3 id="contactos-conversaciones">Contactos / Conversaciones<a class="headerlink" href="#contactos-conversaciones" title="Permanent link">¶</a></h3>
+<h2 id="contactos-conversaciones">Contactos / Conversaciones<a class="headerlink" href="#contactos-conversaciones" title="Permanent link">¶</a></h2>
 <p>Hay 2 formas de que crear un nuevo contacto.</p>
 <ol>
 <li><strong>Recibir un mensaje de un número nuevo</strong>, en cuyo caso automáticamente se creará un contacto con ese número.</li>
@@ -3773,24 +3800,9 @@ Dejarlo vacío supondrá:</p>
 </ol>
 <p>Una vez creado, puedes archivar la conversación o editar el contacto: </p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png" data-desc-position="bottom"><img alt="Editar conversación" src="../../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png"></a></p>
-<hr>
-<h3 id="envio-de-mensajes">Envío de mensajes<a class="headerlink" href="#envio-de-mensajes" title="Permanent link">¶</a></h3>
-<p>WhatsApp soporta una gran variedad de tipos de mensajes:</p>
-<ul>
-<li>Plantillas</li>
-<li>Texto</li>
-<li>Imágenes</li>
-<li>Documentos</li>
-<li>Audios</li>
-<li>Videos</li>
-<li>URLs de llamada a la acción</li>
-<li>Listas</li>
-<li>Ubicaciones</li>
-<li>Botones de respuesta</li>
-<li>Contactos</li>
-</ul>
-<p>Podemos dividirlos en 4 tipos:</p>
-<h4 id="archivos">Archivos<a class="headerlink" href="#archivos" title="Permanent link">¶</a></h4>
+<h2 id="tipos-de-mensajes">Tipos de mensajes<a class="headerlink" href="#tipos-de-mensajes" title="Permanent link">¶</a></h2>
+<p>WhatsApp admite varios tipos de mensajes, agrupados por patrón de uso. Podemos dividirlos en 4 tipos:</p>
+<h3 id="archivos">Archivos<a class="headerlink" href="#archivos" title="Permanent link">¶</a></h3>
 <p>Se envían desde el botón de adjuntar archivos, se permiten estas extensiones:</p>
 <table>
 <thead>
@@ -3818,28 +3830,28 @@ Dejarlo vacío supondrá:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="mensajes-sin-cuerpo">Mensajes sin cuerpo<a class="headerlink" href="#mensajes-sin-cuerpo" title="Permanent link">¶</a></h4>
+<h3 id="mensajes-sin-cuerpo">Mensajes sin cuerpo<a class="headerlink" href="#mensajes-sin-cuerpo" title="Permanent link">¶</a></h3>
 <p>Son aquellos que no contienen un array de elementos, simplemente rellenas sus campos necesarios y los puedes enviar. 
 También tienes la opción de <strong>crear el mensaje como objeto</strong> para así poder reutilizarlo fácilmente en otras ocasiones. 
 (Texto, URLs, Ubicación, Solicitud de Ubicación y Contacto).</p>
-<h4 id="mensajes-con-cuerpo">Mensajes con cuerpo<a class="headerlink" href="#mensajes-con-cuerpo" title="Permanent link">¶</a></h4>
+<h3 id="mensajes-con-cuerpo">Mensajes con cuerpo<a class="headerlink" href="#mensajes-con-cuerpo" title="Permanent link">¶</a></h3>
 <p>Son aquellos que <strong>SÍ</strong> contienen un array de elementos, además de rellenar sus campos necesarios necesitas añadir uno o más elementos a su cuerpo.
 Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto siempre</strong> antes de enviarlo.
 (Listados y Botones de respuesta)</p>
-<h4 id="plantillas">Plantillas<a class="headerlink" href="#plantillas" title="Permanent link">¶</a></h4>
+<h3 id="plantillas">Plantillas<a class="headerlink" href="#plantillas" title="Permanent link">¶</a></h3>
 <p>Son mensajes predefinidos que deben ser creados desde <a href="https://business.facebook.com/latest/settings" target="_blank">Meta Business Suite</a> y aprobados por Meta.</p>
 <p>Algunos aceptan variables, así que se deberan rellenar siempre antes de enviarlas.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png" data-desc-position="bottom"><img alt="Botones de mensajes" src="../../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png"></a></p>
-<hr>
-<h3 id="flujo-basico">Flujo Básico<a class="headerlink" href="#flujo-basico" title="Permanent link">¶</a></h3>
+<h2 id="flujo-basico">Flujo básico<a class="headerlink" href="#flujo-basico" title="Permanent link">¶</a></h2>
 <p><strong>Recibir mensajes</strong>:</p>
-<div class="language-text no-language highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WhastsApp -&gt; Endpoint Webhook -&gt; Flexygo
-</span></code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    A[WhatsApp] --&gt; B[Endpoint Webhook]
+    B --&gt; C[Flexygo]</code></pre>
 <p><strong>Enviar mensajes</strong>:</p>
-<div class="language-text no-language highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Flexygo -&gt; WhatsApp Cloud API -&gt; WhatsApp
-</span></code></pre></div>
-<hr>
-<h3 id="reglas-y-limitaciones">Reglas y Limitaciones<a class="headerlink" href="#reglas-y-limitaciones" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    A[Flexygo] --&gt; B[WhatsApp Cloud API]
+    B --&gt; C[WhatsApp]</code></pre>
+<h2 id="reglas-y-limitaciones">Reglas y Limitaciones<a class="headerlink" href="#reglas-y-limitaciones" title="Permanent link">¶</a></h2>
 <ul>
 <li>Cuando se manda un mensaje manualmente, la conversación se <strong>cambia siempre</strong> a modo manual.</li>
 <li>Los asistentes de IA dentro del ámbito de WhatsApp:<ul>
@@ -3853,38 +3865,65 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
 <li>Si han pasado más de 24 horas desde el último mensaje del usuario, <strong>solo se pueden enviar plantillas</strong> hasta que nos conteste.</li>
 <li>El envío y recibo de mensajes está sujeto a los <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank">precios de Meta para WhatsApp Business</a>.</li>
 </ul>
-<hr>
 <h2 id="consideraciones-de-seguridad">Consideraciones de Seguridad<a class="headerlink" href="#consideraciones-de-seguridad" title="Permanent link">¶</a></h2>
 <ul>
 <li>Nunca compartas ni dejes visible ningún token, ID o secreto.</li>
 <li>Recuerda tener activada la <strong>Verificación de firma</strong> en la <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">configuración de Flexygo</flx-navbutton> cuando no estés haciendo pruebas.</li>
 <li>Revisa concienzudamente a que información sensible y a que procesos tienen acceso los asistentes de IA antes de asignarlos a una conversación.</li>
 </ul>
-<hr>
 <h2 id="solucion-de-problemas">Solución de problemas<a class="headerlink" href="#solucion-de-problemas" title="Permanent link">¶</a></h2>
 <p>Si en algún momento dejas de poder recibir/enviar mensajes comprueba lo siguiente:</p>
 <ul>
 <li>Haz una petición GET a esta URL para comprobar el estado de tu cuenta. Si se indica algún fallo, deberás solucionarlo.</li>
 </ul>
-<div class="language-text no-language highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://graph.facebook.com/v25.0/{{ID de la cuenta}}?fields=health_status
-</span></code></pre></div>
-<blockquote>
-<p>Reemplaza <strong><a href="./#id-de-la-cuenta-e-id-del-telefono">ID de la cuenta</a></strong> con el valor correspondiente.</p>
-</blockquote>
+<p><fh-copy>https://graph.facebook.com/v25.0/{{ID de la cuenta}}?fields=health_status</fh-copy></p>
+<div class="admonition warning">
+<p class="admonition-title">Tu ID de cuenta</p>
+<p>Reemplaza <strong><a href="#configuracion-en-flexygo">ID de la cuenta</a></strong> por el valor correspondiente.</p>
+</div>
 <ul>
 <li>Comprueba en <a href="https://developers.facebook.com/apps" target="_blank">tu aplicación de WhatsApp Business</a> dentro de <strong>Productos</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>Tests de la API</strong> &gt; <strong>7. Consulta los eventos del webhook</strong> que webhooks le están llegando a la plataforma en lo que respecta a nuestra actividad.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png" data-desc-position="bottom"><img alt="Consulta de eventos de webhook" src="../../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png"></a></p>
-<p>Los errores más comunes son los siguientes:</p>
-<ul>
-<li>Token expirado</li>
-<li>Webhook no verificado</li>
-<li>ID incorrecto</li>
-<li>Firma inválida</li>
-<li>Número no aprobado</li>
-<li>Negocio no verificado</li>
-<li>La cuenta ha sido bloqueada</li>
-</ul>
+<p>Causas comunes de fallos en envío/recepción:</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Comprobación rápida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Token expirado</td>
+<td>Regenera el token o ejecuta la tarea de Cron de refresco de token.</td>
+</tr>
+<tr>
+<td>Webhook no verificado</td>
+<td>Verifica que la callback URL y el token de verificación coinciden con tu configuración.</td>
+</tr>
+<tr>
+<td>ID incorrecto</td>
+<td>Confirma los valores de Account ID y Phone ID en la configuración.</td>
+</tr>
+<tr>
+<td>Firma inválida</td>
+<td>Revisa el Client Secret y mantén activada la verificación de firma.</td>
+</tr>
+<tr>
+<td>Número no aprobado</td>
+<td>Asegúrate de que el número emisor está aprobado en Meta.</td>
+</tr>
+<tr>
+<td>Negocio no verificado</td>
+<td>Completa la verificación de negocio en Meta Business Suite.</td>
+</tr>
+<tr>
+<td>Cuenta bloqueada</td>
+<td>Revisa el estado de salud de la cuenta y posibles restricciones en Meta.</td>
+</tr>
+</tbody>
+</table>
 <p>Recuerda que siempre puedes contactar con el <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/support" target="_blank">soporte oficial de WhatsApp Business</a>.</p>
 <p>Para más información técnica, consulta la <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/overview" target="_blank">documentación oficial de WhatsApp Business</a>.</p>
 
@@ -3933,13 +3972,13 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuraciones-de-la-aplicacion" class="md-nav__link">
+  <a href="#configuracion-de-la-aplicacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuraciones de la aplicación
+      Configuración de la aplicación
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuraciones de la aplicación">
+    <nav class="md-nav" aria-label="Configuración de la aplicación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4012,9 +4051,9 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
 </li>
         
           <li class="md-nav__item">
-  <a href="#secreto-del-cliente" class="md-nav__link">
+  <a href="#client-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Secreto del Cliente
+      Client Secret
     </span>
   </a>
   
@@ -4068,10 +4107,9 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Uso básico">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modo-automatico-y-manual" class="md-nav__link">
     <span class="md-ellipsis">
       Modo automático y manual
@@ -4079,8 +4117,8 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#contactos-conversaciones" class="md-nav__link">
     <span class="md-ellipsis">
       Contactos / Conversaciones
@@ -4088,29 +4126,48 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de mensajes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de mensajes">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#envio-de-mensajes" class="md-nav__link">
+  <a href="#archivos" class="md-nav__link">
     <span class="md-ellipsis">
-      Envío de mensajes
+      Archivos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#flujo-basico" class="md-nav__link">
+  <a href="#mensajes-sin-cuerpo" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo Básico
+      Mensajes sin cuerpo
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reglas-y-limitaciones" class="md-nav__link">
+  <a href="#mensajes-con-cuerpo" class="md-nav__link">
     <span class="md-ellipsis">
-      Reglas y Limitaciones
+      Mensajes con cuerpo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plantillas
     </span>
   </a>
   
@@ -4118,6 +4175,24 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo básico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas y Limitaciones
+    </span>
+  </a>
   
 </li>
       
