@@ -13,20 +13,22 @@
 
     <Message Text="FlxDocs: Sincronizando archivos en $(FlxDocsDestination)" Importance="high" />
 
-    <!-- 1️⃣ Eliminar archivos que ya no existen en el paquete -->
+    <!-- 1️⃣ Archivos existentes en wwwroot (solo docs y versions.json) -->
     <ItemGroup>
-      <!-- Archivos existentes en wwwroot que empiezan con docs o versions.json -->
-      <ExistingFlxDocs Include="$(FlxDocsDestination)\**\*" />
+      <ExistingFlxDocs Include="$(FlxDocsDestination)\docs\**\*.*" />
+      <ExistingFlxDocs Include="$(FlxDocsDestination)\versions.json" />
     </ItemGroup>
 
+    <!-- 2️⃣ Archivos a eliminar: existen en wwwroot pero NO en el paquete -->
     <ItemGroup>
-      <!-- Archivos a eliminar: existen en wwwroot pero NO en el paquete -->
-      <FilesToDelete Include="@(ExistingFlxDocs)" Exclude="@(FlxDocsFiles->'$(FlxDocsDestination)\%(RecursiveDir)%(Filename)%(Extension)')" />
+      <FilesToDelete Include="@(ExistingFlxDocs)" 
+                     Exclude="@(FlxDocsFiles->'%(FullPath)')" />
     </ItemGroup>
 
+    <!-- 3️⃣ Eliminar archivos obsoletos -->
     <Delete Files="@(FilesToDelete)" />
 
-    <!-- 2️⃣ Copiar archivos nuevos o modificados -->
+    <!-- 4️⃣ Copiar archivos nuevos o modificados -->
     <Copy SourceFiles="@(FlxDocsFiles)"
           DestinationFolder="$(FlxDocsDestination)\%(RecursiveDir)"
           SkipUnchangedFiles="true" />
