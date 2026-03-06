@@ -12,10 +12,11 @@ Localiza e **instala el addon de WhatsApp** desde el <flx-navbutton class="link"
 
 Antes de poder usarlo necesitarás crear:
 
+* Adquirir el módulo de licencia **FlxWhatsapp** a través del portal ABH.
 * Un **dominio HTTPS seguro**.
-* Una **cuenta de desarrollador de Facebook**.
-* Una **aplicación de WhatsApp Business**.
-* Un **Portafolio Empresarial** de tu empresa.
+* Una **cuenta de desarrollador en Meta**.
+* Una **aplicación en Meta con el producto WhatsApp Business añadido**.
+* Un **Portafolio empresarial** de tu empresa en Meta.
 
 En la sección de requisitos previos y en el primer paso de la [documentación oficial](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started#prerequisites){:target="_blank"} se explica este proceso en detalle.
 
