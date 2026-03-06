@@ -15,11 +15,7 @@
     <dependencies></dependencies>
   </metadata>
   <files>
-    <!-- Store files once - .targets will handle copying for both old and new projects -->
     <file src="docs\**\*.*" target="contentFiles\any\any\docs\" exclude="**\*.map" /> 
     <file src="versions.json" target="contentFiles\any\any\versions.json" /> 
-    
-    <!-- MSBuild target to copy files for all project types -->
-    <file src="flxDocs.targets" target="build\flxDocs.targets" />
   </files>
 </package>
