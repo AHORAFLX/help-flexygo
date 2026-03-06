@@ -1,0 +1,34 @@
+<Project>
+  <Target Name="SyncFlxDocs" BeforeTargets="BeforeBuild">
+    <!-- Carpeta de origen dentro del paquete NuGet -->
+    <PropertyGroup>
+      <FlxDocsSource>$(MSBuildThisFileDirectory)..\contentFiles\any\any</FlxDocsSource>
+      <FlxDocsDestination>$(MSBuildProjectDirectory)\wwwroot</FlxDocsDestination>
+    </PropertyGroup>
+
+    <!-- Todos los archivos que queremos copiar -->
+    <ItemGroup>
+      <FlxDocsFiles Include="$(FlxDocsSource)\**\*.*" />
+    </ItemGroup>
+
+    <Message Text="FlxDocs: Sincronizando archivos en $(FlxDocsDestination)" Importance="high" />
+
+    <!-- 1️⃣ Eliminar archivos que ya no existen en el paquete -->
+    <ItemGroup>
+      <!-- Archivos existentes en wwwroot que empiezan con docs o versions.json -->
+      <ExistingFlxDocs Include="$(FlxDocsDestination)\**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <!-- Archivos a eliminar: existen en wwwroot pero NO en el paquete -->
+      <FilesToDelete Include="@(ExistingFlxDocs)" Exclude="@(FlxDocsFiles->'$(FlxDocsDestination)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    </ItemGroup>
+
+    <Delete Files="@(FilesToDelete)" />
+
+    <!-- 2️⃣ Copiar archivos nuevos o modificados -->
+    <Copy SourceFiles="@(FlxDocsFiles)"
+          DestinationFolder="$(FlxDocsDestination)\%(RecursiveDir)"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>
