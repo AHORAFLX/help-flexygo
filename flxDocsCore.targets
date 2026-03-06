@@ -19,16 +19,21 @@
       <ExistingFlxDocs Include="$(FlxDocsDestination)\versions.json" />
     </ItemGroup>
 
-    <!-- 2️⃣ Archivos a eliminar: existen en wwwroot pero NO en el paquete -->
+    <!-- 2️⃣ Rutas de destino esperadas para cada archivo del paquete -->
     <ItemGroup>
-      <FilesToDelete Include="@(ExistingFlxDocs)" 
-                     Exclude="@(FlxDocsFiles->'%(FullPath)')" />
+      <FlxDocsDestFiles Include="@(FlxDocsFiles->'$(FlxDocsDestination)\%(RecursiveDir)%(Filename)%(Extension)')" />
     </ItemGroup>
 
-    <!-- 3️⃣ Eliminar archivos obsoletos -->
+    <!-- 3️⃣ Archivos a eliminar: existen en wwwroot pero NO en el paquete -->
+    <ItemGroup>
+      <FilesToDelete Include="@(ExistingFlxDocs)"
+                     Exclude="@(FlxDocsDestFiles)" />
+    </ItemGroup>
+
+    <!-- 4️⃣ Eliminar archivos obsoletos -->
     <Delete Files="@(FilesToDelete)" />
 
-    <!-- 4️⃣ Copiar archivos nuevos o modificados -->
+    <!-- 5️⃣ Copiar archivos nuevos o modificados -->
     <Copy SourceFiles="@(FlxDocsFiles)"
           DestinationFolder="$(FlxDocsDestination)\%(RecursiveDir)"
           SkipUnchangedFiles="true" />
