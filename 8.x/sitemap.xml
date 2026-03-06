@@ -22,20 +22,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/1Training/VideoTutorials/"/>
     </url>
     <url>
-        <loc>NoneAddons/1Addons/</loc>
-        <lastmod>2026-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAddons/1Addons/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Addons/1Addons/"/>
-    </url>
-    <url>
-        <loc>NoneAddons/WhatsApp/</loc>
-        <lastmod>2026-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAddons/WhatsApp/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Addons/WhatsApp/"/>
-    </url>
-    <url>
         <loc>NoneAhoraBusinessHub/AbhSign/</loc>
         <lastmod>2026-03-06</lastmod>
         <changefreq>daily</changefreq>
@@ -195,6 +181,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/WacomSignature/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/WacomSignature/"/>
+    </url>
+    <url>
+        <loc>NoneInformation/Addons/</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Addons/"/>
     </url>
     <url>
         <loc>NoneInformation/FriendlyURLs/</loc>
@@ -750,20 +743,6 @@
         <xhtml:link rel="alternate" hreflang="es" href="None1Training/VideoTutorials/"/>
     </url>
     <url>
-        <loc>Noneen/Addons/1Addons/</loc>
-        <lastmod>2026-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Addons/1Addons/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAddons/1Addons/"/>
-    </url>
-    <url>
-        <loc>Noneen/Addons/WhatsApp/</loc>
-        <lastmod>2026-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Addons/WhatsApp/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="NoneAddons/WhatsApp/"/>
-    </url>
-    <url>
         <loc>Noneen/AhoraBusinessHub/AbhSign/</loc>
         <lastmod>2026-03-06</lastmod>
         <changefreq>daily</changefreq>
@@ -923,6 +902,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Connectors/WacomSignature/"/>
         <xhtml:link rel="alternate" hreflang="es" href="NoneConnectors/WacomSignature/"/>
+    </url>
+    <url>
+        <loc>Noneen/Information/Addons/</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Information/Addons/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneInformation/Addons/"/>
     </url>
     <url>
         <loc>Noneen/Information/FriendlyURLs/</loc>

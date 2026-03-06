@@ -31,14 +31,8 @@ class FhVersions extends HTMLElement {
             versions_container.appendChild(version_element);
             
             if (version.version !== this.currentVersion) {
-                //Redirect to the same page in the selected version. If it doesn't exist, we move to the homepage of the selected version
-                version_element.addEventListener('click', async () => {
-                    let new_url = window.location.href.replace('/' + this.currentVersion + '/', '/' + version.version + '/');
-                    //If the new url doesn't exist, we redirect to the homepage of the selected version
-                    if (!await urlExists(new_url)) {
-                        new_url = new_url.split('/' + version.version + '/')[0] + '/' + version.version + '/';
-                    }
-                    window.location.href = new_url;
+                version_element.addEventListener('click', () => {
+                    window.location.href = window.location.href.replace('/' + this.currentVersion + '/', '/' + version.version + '/');
                 });
             } else {
                 version_element.classList.add('current');
