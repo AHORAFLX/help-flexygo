@@ -906,7 +906,7 @@ BEGIN CATCH
 END CATCH
 ```
 
-```sql { #fhmodal_insert_stored_ahora }
+```sql { #fhmodal_insert_json }
 CREATE PROCEDURE [dbo].[P_TestInsert_Stored]  
 	@Values as nvarchar(max) OUTPUT,
 	@RetValues as nvarchar(max) OUTPUT 	 
@@ -1090,7 +1090,7 @@ END CATCH
 GO
 ```
 
-```sql { #fhmodal_update_stored_ahora }
+```sql { #fhmodal_update_json }
 CREATE PROCEDURE [dbo].[P_TestUpdate_Stored]  
 	@Values as nvarchar(max) OUTPUT,
 	@OldValues as nvarchar(max),
@@ -1281,7 +1281,7 @@ END CATCH
 GO
 ```
 
-```sql { #fhmodal_delete_stored_ahora }
+```sql { #fhmodal_delete_json }
 CREATE PROCEDURE [dbo].[P_TestDelete_Stored]  
 	@Values as nvarchar(max) OUTPUT,
 	@RetValues as nvarchar(max) OUTPUT 	 
@@ -1444,7 +1444,7 @@ END CATCH
 GO
 ```
 
-```sql { #fhmodal_insert_json }
+```sql { #fhmodal_insert_stored_ahora }
 ALTER PROCEDURE [dbo].[P_Test_I]
 	@TestId int OUTPUT,
 	@Descrip nvarchar(2000) OUTPUT,
@@ -1482,7 +1482,7 @@ BEGIN
 END
 ```
 
-```sql { #fhmodal_update_json }
+```sql { #fhmodal_update_stored_ahora }
 CREATE PROCEDURE [dbo].[P_Test_U]
 	@TestId_A	int,
 	@Usuario nvarchar(50) OUTPUT,
@@ -1531,7 +1531,7 @@ END
 END
 ```
 
-```sql { #fhmodal_delete_json }
+```sql { #fhmodal_delete_stored_ahora }
 CREATE PROCEDURE [dbo].[P_Test_D]
 	@TestId int OUTPUT,
 	@Usuario nvarchar(50) OUTPUT,
