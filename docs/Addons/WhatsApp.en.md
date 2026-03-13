@@ -1,4 +1,8 @@
-# WhatsApp {.fh-title-with-image}
+---
+title: WhatsApp
+---
+
+# WhatsApp <span class="fh-version-tag" title="Available since version 9.1">9.1+</span> {.fh-title-with-image}
 
 ![WhatsApp](../docs_assets/images/WhatsApp/WhatsApp.png){.fh-image-of-title}
 
