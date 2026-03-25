@@ -139,6 +139,22 @@ En lugar de un evento onclick con:
 flexygo.nav.execProcess('PrintPage','','',null,null,'popup',false,$(this),false);
 ```
 
+## ExecProcess con parametros
+
+Para ejecutar un proceso con parámetros usa:
+
+```html
+<flx-navbutton class="test" type="execprocess" processname="MyProcess" processparams="[{&quot;Key&quot;: &quot;Param1&quot;, &quot;Value&quot;: &quot;Value1&quot;}, {&quot;Key&quot;: &quot;Param2&quot;, &quot;Value&quot;: &quot;Value2&quot;}]">
+      <button class="btn btn-outstanding">Click to execute PrintPage process</button>
+</flx-navbutton>
+```
+
+En lugar de un evento onclick con:
+
+```js
+flexygo.nav.execProcess('PrintPage','','',null, [{"Key": "Param1", "Value": "Value1"}, {"Key": "Param2", "Value": "Value2"}],'popup',false,$(this),false);
+```
+
 ## ViewReport
 
 <flx-navbutton class="button" type="viewReport" reportname="test_object_html_print" objectname="sysUsers">Click to view report</flx-navbutton>
