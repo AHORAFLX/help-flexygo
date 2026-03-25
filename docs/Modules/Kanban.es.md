@@ -57,7 +57,7 @@ Usado para establecer la configuración del área de archivo que aparece al move
 * **Archived Icon:** El icono que se verá en el área de archivo.
 * **Archived CSS Class:** La clase CSS aplicada al área de archivo.
 
-### Configuración deeventos
+### Configuración de eventos
 
 Usado para definir qué ocurre cuando se disparan los diferentes eventos.
 

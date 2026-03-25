@@ -1,0 +1,22 @@
+{
+    "repo_notes": [
+      {
+        "content": "Toda la documentación principal está en español en archivos *.es.md dentro de la carpeta docs.",
+        "author": "Maintainer"
+      },
+      {
+        "content": "Ignorar archivos *.en.md. Usar únicamente archivos *.es.md para generar la wiki.",
+        "author": "Maintainer"
+      },
+      {
+        "content": "Utiliza español como principal idioma. La documentación está organizada por carpetas dentro de docs como Addons, etc.",
+        "author": "Maintainer"
+      }
+    ],
+    "include": [
+      "docs/**/*.es.md"
+    ],
+    "exclude": [
+      "**/*.en.md"
+    ]
+  }
