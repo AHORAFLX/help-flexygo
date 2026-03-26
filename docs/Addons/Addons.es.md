@@ -14,3 +14,11 @@ Es posible que necesite adquirir el módulo de licencia correspondiente en AHORA
 ## ¿Cómo se desarrolla un addon?
 
 Para desarrollar un addon, puede encontrar la información necesaria en: [https://docs.flexygo.com/addon.html](https://docs.flexygo.com/addon.html)
+
+## Videotutorial
+
+Si prefiere entender cómo trabajar con addons mediante un video, eche un vistazo a este:
+
+<div class="video-wrapper">  
+    <iframe src="https://www.youtube.com/embed/VfvNyEPyx8E?si=N04WbJwhnxfWC6YG" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
