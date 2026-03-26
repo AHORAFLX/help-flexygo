@@ -78,6 +78,26 @@
     }
 }
 
+/* Title tag */
+.md-typeset .fh-version-tag {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    padding: 0.15em 0.8em;
+    border-radius: 999px;
+    background: var(--fh-identity-color);
+    color: var(--fh-color-text);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
+.md-typeset .fh-version-tag:hover {
+    filter: brightness(1.08);
+}
+
 /* Video Wrapper */
 .md-typeset .video-wrapper {
     position: relative;
