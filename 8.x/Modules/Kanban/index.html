@@ -1681,13 +1681,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#configuracion-del-modulo" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración
+      Configuración del módulo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuración">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-kanban" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración Kanban
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración Kanban">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1720,7 +1729,7 @@
           <li class="md-nav__item">
   <a href="#configuracion-del-area-de-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración del area de archivo
+      Configuración del área de archivo
     </span>
   </a>
   
@@ -1744,6 +1753,15 @@
   <a href="#anadir-el-kanban-a-tu-pagina" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir el kanban a tu página
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videotutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videotutorial
     </span>
   </a>
   
@@ -3405,69 +3423,224 @@
 <p>Kanban es un método de gestión de proyectos que ayuda a los equipos a visualizar mejor su carga de trabajo y su flujo de tareas. El módulo kanban de <strong>Flexygo</strong> permite definir un tablero utilizando cualquier tipo de objetos.</p>
 <p>En flexygo hay un ejemplo de kanban disponible; <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Board" objectwhere="([Kanban_Boards].[BoardName] = 'Flexygo_Task_List')" showprogress="false">haz clic aquí</flx-navbutton> para navegar a él, y aquí está su <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Setting" objectwhere="KanbanSettingsName='sysFlexygo_Kanban'" showprogress="false">configuración</flx-navbutton>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/kanban2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/kanban2.png" title="Image 1. Kanban"></a></p>
-<h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
-<p>La configuración de Kanban se divide en cinco grupos:</p>
+<h2 id="configuracion-del-modulo">Configuración del módulo<a class="headerlink" href="#configuracion-del-modulo" title="Permanent link">¶</a></h2>
+<p>Cuando en un módulo seleccionas el tipo <strong>Kanban Panel</strong>, debes configurar el <strong>Objeto</strong> y el <strong>Filtro del objeto</strong>. Para saber qué objeto debes elegir, primero necesitas entender cómo funciona el kanban.</p>
+<p>El kanban necesita dos objetos distintos: el <strong>objeto tablero</strong> y el <strong>objeto tarjetas</strong>. El objeto <strong>tablero</strong> será el padre del objeto <strong>tarjetas</strong>. Por ejemplo, un <strong>repartidor</strong> (tablero) tiene múltiples <strong>entregas</strong> (tarjetas). En la configuración del módulo debes establecer como objeto el de <strong>tablero</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Filtro de objeto obligatorio</p>
+<p>El <strong>filtro de objeto</strong> siempre es obligatorio, porque el Kanban debe representar un único registro de tablero.
+Por ejemplo, un conductor concreto y sus entregas. Si necesitas un tablero para un grupo de conductores, utiliza un objeto padre como Equipo y no Repartidor.</p>
+</div>
+<h2 id="configuracion-kanban">Configuración Kanban<a class="headerlink" href="#configuracion-kanban" title="Permanent link">¶</a></h2>
+<p>Después de seleccionar <strong>Object</strong> y <strong>Object Where</strong>, crea tu propia configuración en <strong>Kanban Settings</strong> desde el campo que aparece en la parte inferior derecha del formulario. Ahí configurarás las siguientes secciones:</p>
 <h3 id="configuracion-del-tablero">Configuración del tablero<a class="headerlink" href="#configuracion-del-tablero" title="Permanent link">¶</a></h3>
-<p>Se utiliza para definir los ajustes básicos del tablero kanban.</p>
+<p>Define el comportamiento básico del tablero y sus etiquetas.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/KanbanSettings1.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/KanbanSettings1.png" title="Image 1. Kanban Settings"></a></p>
-<ul>
-<li><strong>Settings Name:</strong> El nombre que quieres usar para identificar esta configuración kanban.</li>
-<li><strong>Board Object Name:</strong> El objeto principal del kanban, que será útil para parsear algunos valores en las siguientes propiedades, como puede verse en la imagen.</li>
-<li><strong>Board Title Template:</strong> El título que se mostrará en la parte superior del kanban.</li>
-<li><strong>Board Description Template:</strong> Una breve descripción que aparecerá debajo del título.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Settings Name</strong></td>
+<td>Nombre usado para identificar esta configuración de Kanban.</td>
+</tr>
+<tr>
+<td><strong>Board Object Name</strong></td>
+<td>Objeto principal del Kanban (padre de las tarjetas). Puedes usar sus propiedades en las plantillas de abajo.</td>
+</tr>
+<tr>
+<td><strong>Board Title Template</strong></td>
+<td>Título que se mostrará en la parte superior del tablero, por ejemplo <code>{{DriverName}} Kanban</code>.</td>
+</tr>
+<tr>
+<td><strong>Board Description Template</strong></td>
+<td>Texto corto que se mostrará bajo el título, por ejemplo <code>All deliveries for {{DriverName}}</code>.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="configuracion-de-columnas">Configuración de columnas<a class="headerlink" href="#configuracion-de-columnas" title="Permanent link">¶</a></h3>
-<p>Aquí se pueden establecer las vistas de columnas que se utilizarán como configuración de columnas.</p>
+<p>Aquí defines la vista que determina cuántas columnas tiene el Kanban y cómo se nombran y estilizan:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/KanbanSettings2.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/KanbanSettings2.png" title="Image 2. Kanban Settings"></a></p>
-<ul>
-<li><strong>Column View Name:</strong> Debe ser la vista utilizada para pintar la información de la columna y debe contener al menos las dos primeras propiedades de columna.</li>
-<li><strong>Column Description Field:</strong> La descripción que aparecerá en la parte superior de la columna.</li>
-<li><strong>Column Id Field:</strong> No aparece en el kanban, pero es necesario para identificar la columna.</li>
-<li><strong>CSS Class Field:</strong> La clase CSS que se aplicará a la columna en el div <code>.kanban-col</code>.</li>
-<li><strong>Icon Class:</strong> El icono que aparecerá junto a la descripción.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Column View Name</strong></td>
+<td>Vista usada para cargar la información de las columnas. Debe incluir al menos los dos primeros campos listados abajo.</td>
+</tr>
+<tr>
+<td><strong>Column Description Field</strong></td>
+<td>Texto mostrado en la parte superior de la columna.</td>
+</tr>
+<tr>
+<td><strong>Column ID Field</strong></td>
+<td>Identificador interno de cada columna.</td>
+</tr>
+<tr>
+<td><strong>CSS Class Field</strong></td>
+<td>Clase CSS aplicada al div <code>.kanban-col</code> de la columna.</td>
+</tr>
+<tr>
+<td><strong>Icon Class</strong></td>
+<td>Icono mostrado junto a la descripción de la columna.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">La vista de columnas puede estar desacoplada</p>
+<p>En muchas implementaciones esta vista está lógicamente desacoplada del <strong>board object</strong>.
+Esto es habitual cuando las columnas provienen de una tabla maestra que almacena los <strong>IDs</strong> y <strong>nombres</strong> de estado.</p>
+</div>
 <h3 id="configuracion-de-tarjetas">Configuración de tarjetas<a class="headerlink" href="#configuracion-de-tarjetas" title="Permanent link">¶</a></h3>
-<p>Aquí se establece el objeto y las vistas que se utilizarán como configuración de las tarjetas.</p>
+<p>Aquí defines el <strong>objeto de tarjetas</strong>, la <strong>vista</strong> usada para cargar los datos y los campos que renderizan cada tarjeta:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/KanbanSettings3.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/KanbanSettings3.png" title="Image 3. Kanban Settings"></a></p>
-<ul>
-<li><strong>Card Object Name:</strong> El objeto que se usará como tarjetas.</li>
-<li><strong>Card View Name:</strong> La vista utilizada para pintar la información de la tarjeta; debe contener al menos las tres primeras propiedades de tarjeta.</li>
-<li><strong>Card ID Field:</strong> No aparece en el kanban, pero es necesario para identificar la tarjeta.</li>
-<li><strong>Card Column ID Field:</strong> No aparece en el kanban, pero identifica en qué columna debe mostrarse la tarjeta al cargarse.</li>
-<li><strong>Card Description Field:</strong> La descripción será el contenido de la tarjeta si no se asigna una plantilla de contenido.</li>
-<li><strong>Card Content Template:</strong> Es la plantilla HTML donde, si se especifica, seguirá el contenido de la tarjeta; se puede parsear el campo descripción.</li>
-</ul>
-<h3 id="configuracion-del-area-de-archivo">Configuración del area de archivo<a class="headerlink" href="#configuracion-del-area-de-archivo" title="Permanent link">¶</a></h3>
-<p>Usado para establecer la configuración del área de archivo que aparece al mover una tarjeta.</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Card Object Name</strong></td>
+<td>Objeto que se usará como tarjetas.</td>
+</tr>
+<tr>
+<td><strong>Card View Name</strong></td>
+<td>Vista usada para renderizar la información de las tarjetas. Debe incluir al menos los tres primeros campos listados abajo.</td>
+</tr>
+<tr>
+<td><strong>Card ID Field</strong></td>
+<td>Identificador interno de la tarjeta.</td>
+</tr>
+<tr>
+<td><strong>Card Column ID Field</strong></td>
+<td>Campo que define en qué columna debe aparecer cada tarjeta al cargarse.</td>
+</tr>
+<tr>
+<td><strong>Card Description Field</strong></td>
+<td>La descripción será el contenido de la tarjeta si no se asigna una plantilla de contenido.</td>
+</tr>
+<tr>
+<td><strong>Card Content Template</strong></td>
+<td>Plantilla HTML opcional para renderizado enriquecido de la tarjeta. Si se usa, puede parsear campos de la tarjeta.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuracion-del-area-de-archivo">Configuración del área de archivo<a class="headerlink" href="#configuracion-del-area-de-archivo" title="Permanent link">¶</a></h3>
+<p>Configura el área de archivado. Archivar significa cambiar el estado de la tarjeta al <strong>Archived State ID</strong> configurado. Las tarjetas archivadas no se muestran en el tablero Kanban.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/KanbanSettings4.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/KanbanSettings4.png" title="Image 4. Kanban Settings"></a></p>
-<ul>
-<li><strong>Archived State Id:</strong> Determina cuál será el id asignado a la columna mencionada previamente en la configuración de tarjeta.</li>
-<li><strong>Archived Text:</strong> Un breve texto que aparecerá en el área de archivo.</li>
-<li><strong>Archived Icon:</strong> El icono que se verá en el área de archivo.</li>
-<li><strong>Archived CSS Class:</strong> La clase CSS aplicada al área de archivo.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Archived State ID</strong></td>
+<td>ID de estado que se asigna cuando una tarjeta se suelta en el área de archivado.</td>
+</tr>
+<tr>
+<td><strong>Archived Text</strong></td>
+<td>Texto corto mostrado en el área de archivado.</td>
+</tr>
+<tr>
+<td><strong>Archived Icon</strong></td>
+<td>Icono mostrado en el área de archivado.</td>
+</tr>
+<tr>
+<td><strong>Archived CSS Class</strong></td>
+<td>Clase CSS aplicada al área de archivado.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="configuracion-deeventos">Configuración deeventos<a class="headerlink" href="#configuracion-deeventos" title="Permanent link">¶</a></h3>
-<p>Usado para definir qué ocurre cuando se disparan los diferentes eventos.</p>
+<p>Define qué procesos se ejecutan cuando se disparan los eventos del Kanban.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/KanbanSettings5.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/KanbanSettings5.png" title="Image 5. Kanban Settings"></a></p>
-<ul>
-<li><strong>On card click:</strong> Proceso que se ejecuta al hacer clic en una tarjeta.</li>
-<li><strong>On Change Column:</strong> Proceso que se ejecuta cuando una tarjeta cambia de columna.</li>
-<li><strong>On Archive Box Drop:</strong> Proceso que se ejecuta cuando una tarjeta se deja caer en el área de archivo.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>On Card Click</strong></td>
+<td>Proceso ejecutado al hacer clic en una tarjeta.</td>
+</tr>
+<tr>
+<td><strong>On Change Column</strong></td>
+<td>Proceso ejecutado cuando una tarjeta cambia de columna.</td>
+</tr>
+<tr>
+<td><strong>On Archive Box Drop</strong></td>
+<td>Proceso ejecutado cuando una tarjeta se suelta en el área de archivado.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="anadir-el-kanban-a-tu-pagina">Añadir el kanban a tu página<a class="headerlink" href="#anadir-el-kanban-a-tu-pagina" title="Permanent link">¶</a></h2>
-<p>Solo arrastra el módulo a tu página desde el gestor de módulos y completa el siguiente formulario.</p>
+<p>Arrastra el módulo a tu página desde el gestor de módulos y completa los siguientes campos:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/ModulesConf/kanbanConf.png" data-desc-position="bottom"><img alt="" src="../../docs_assets/images/ModulesConf/kanbanConf.png" title="Image 6. Kanban Settings"></a></p>
-<ul>
-<li><strong>Id:</strong> Identifica el módulo.</li>
-<li><strong>Type:</strong> Tipo de módulo, en este caso Kanban.</li>
-<li><strong>Description:</strong> Breve descripción del módulo.</li>
-<li><strong>Title:</strong> Título que aparece en el módulo.</li>
-<li><strong>Classification:</strong> Como no es un módulo por defecto, siempre es Project Module.</li>
-<li><strong>Container:</strong> Tipo de contenedor del módulo.</li>
-<li><strong>Object Name:</strong> Se debe seleccionar el objeto que se desea relacionar con el gestor.</li>
-<li><strong>Object Where:</strong> Se debe seleccionar la condición del objeto que se desea relacionar con el gestor.</li>
-<li><strong>Kanban Settings Name:</strong> Las opciones kanban configuradas previamente.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID</strong></td>
+<td>Identificador del módulo.</td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td>Tipo de módulo, en este caso Kanban Panel.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Breve descripción del módulo.</td>
+</tr>
+<tr>
+<td><strong>Title</strong></td>
+<td>Título mostrado en el módulo.</td>
+</tr>
+<tr>
+<td><strong>Classification</strong></td>
+<td>Como no es un módulo por defecto, usa Project Module.</td>
+</tr>
+<tr>
+<td><strong>Container</strong></td>
+<td>Tipo de contenedor del módulo.</td>
+</tr>
+<tr>
+<td><strong>Object Name</strong></td>
+<td>Selecciona el objeto de tablero.</td>
+</tr>
+<tr>
+<td><strong>Object Where</strong></td>
+<td>Condición usada para cargar un único registro de tablero.</td>
+</tr>
+<tr>
+<td><strong>Kanban Settings Name</strong></td>
+<td>Configuración de Kanban creada en la sección anterior.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="videotutorial">Videotutorial<a class="headerlink" href="#videotutorial" title="Permanent link">¶</a></h2>
 <p>Puedes ver también el vídeo sobre cómo configurar el módulo kanban:</p>
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/AidJrIHQHZc" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
@@ -3509,13 +3682,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#configuracion-del-modulo" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración
+      Configuración del módulo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuración">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-kanban" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración Kanban
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración Kanban">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3548,7 +3730,7 @@
           <li class="md-nav__item">
   <a href="#configuracion-del-area-de-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuración del area de archivo
+      Configuración del área de archivo
     </span>
   </a>
   
@@ -3572,6 +3754,15 @@
   <a href="#anadir-el-kanban-a-tu-pagina" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir el kanban a tu página
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videotutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videotutorial
     </span>
   </a>
   
