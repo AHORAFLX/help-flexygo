@@ -1,89 +1,117 @@
 # Kanban
 
-Kanban is a project management method that helps teams to better visualize their workload and workflow. **Flexygo**s kanban module allows us to define a board using any type of objects.
+Kanban is a project management method that helps teams visualize workload and workflow. The **Flexygo** Kanban module lets you define a board using any type of object.
 
-A kanbas example is present in flexygo, <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Board" objectwhere="([Kanban_Boards].[BoardName] = 'Flexygo_Task_List')" showprogress="false">click here</flx-navbutton> to navigate to it, and here it is its <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Setting" objectwhere="KanbanSettingsName='sysFlexygo_Kanban'" showprogress="false">configuration</flx-navbutton>.
+There is a Kanban example in Flexygo. <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Board" objectwhere="([Kanban_Boards].[BoardName] = 'Flexygo_Task_List')" showprogress="false">Click here</flx-navbutton> to open it, and check its <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Setting" objectwhere="KanbanSettingsName='sysFlexygo_Kanban'" showprogress="false">configuration</flx-navbutton>.
 
 ![](../docs_assets/images/ModulesConf/kanban2.png "Image 1. Kanban")
 
-## Settings
+## Module Settings
 
-Kanban settings are divided in five groups:
+When you select in a module the type **Kanban Panel** you will need to set the **object** and its **object where**. To understand which object you have to choose you need to know how the kanban works.
+
+The kanban is going to need two different objects, the **board object** and the **cards object**. The **board** one is going to be the parent of the **cards** so for example a **delivery driver** (board) has multiple **deliveries** (cards). Here in the module you need to set the **board** one as your object.
+
+!!! warning "Object Where is required"
+    **Object Where** is always required, because the Kanban should represent one board record.
+    For example one specific driver and that driver's deliveries. If you need a board for a group of drivers, use a parent object such as Team.
+
+## Kanban Settings
+
+After selecting the  **Object** and **Object Where**, create your own **Kanban Settings** from the field shown at the bottom-right of the form. You will configure the following sections:
 
 ### Board Settings
 
-Used to define the kanban board most basic settings.
+Defines the basic board behavior and labels.
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings1.png "Image 1. Kanban Settings")
 
-*   **Settings Name:**The name you want to use to identify this kanban settings
-*   **Board Object Name:**The main kanban object, which will be usefull to parse some values on the next properties as it can be seen in the image bellow
-*   **Board Title Template:**The title that will be shown on the top of the kanban
-*   **Board Description Template:**A brief description that will appear below the title
+| Setting | Description |
+|---------|-------------|
+| **Settings Name** | Name used to identify this Kanban configuration. |
+| **Board Object Name** | Main Kanban object (parent of the cards). You can use its properties in templates below. |
+| **Board Title Template** | Title shown at the top of the board, for example `{{DriverName}} Kanban`. |
+| **Board Description Template** | Short text shown below the title, for example `All deliveries for {{DriverName}}`. |
 
 ### Column Settings
 
-Here it can be set the view columns that will be used as the column configuration
+Here you define the view that determines how many columns the Kanban has and how they are named and styled:
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings2.png "Image 2. Kanban Settings")
 
-*   **Column View Name:** This must be the view used to paint column information and it will need to contain at least the first 2 of this column properties
-*   **Column Description Field:** This will be the description that will appear on the top of the column
-*   **Column Id Field:** This field will not appear on the kanban but is needed to identify the column
-*   **CSS Class Field:** The css class will be applied on the column in the .kanban-col div
-*   **Icon Class:** This will be the icon that will appear next to the description
+| Setting | Description |
+|---------|-------------|
+| **Column View Name** | View used to load column information. It must contain at least the first two fields listed below. |
+| **Column Description Field** | Text shown at the top of the column. |
+| **Column ID Field** | Internal identifier for each column. |
+| **CSS Class Field** | CSS class applied to the column `.kanban-col` div. |
+| **Icon Class** | Icon shown next to the column description. |
+
+!!! info "View Name can be detached"
+    In many implementations, this view is logically detached from the **board object**.
+    This is common when columns come from a master table that stores state **IDs** and **names**.
 
 ### Card Settings
 
-Here it can be set the object and view columns that will be used as the card configuration
+Here you define the **card object**, the **view** used to load card data, and the fields used to render each card:
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings3.png "Image 3. Kanban Settings")
 
-*   **Card Object Name:** The object that will be used as cards
-*   **Card View Name:** This must be the view used to paint card information and it will need to contain at least the first 3 of this card properties
-*   **Card ID Field:** This field will not appear on the kanban but is needed to identify the card
-*   **Card Column ID Field:** This field will not appear on the kanban but is needed to identify in which column should the card appear when loaded
-*   **Card Description Field:** The description will be the content of the card if no content template is assigned
-*   **Card Content Template:** This is the HTML template field where if specified te card content will follow, description field can be parsed
+| Setting | Description |
+|---------|-------------|
+| **Card Object Name** | Object used as cards. |
+| **Card View Name** | View used to render card information. It must contain at least the first three fields listed below. |
+| **Card ID Field** | Internal card identifier. |
+| **Card Column ID Field** | Field that defines which column each card belongs to when loaded. |
+| **Card Description Field** | The description will be the card content if no content template is assigned. |
+| **Card Content Template** | Optional HTML template for rich card rendering. If used, it can parse card fields. |
 
 ### Archive Settings
 
-Used to set the settings of the archive its area that appears when moving a card
+Configures the archive area. Archiving means changing the card state to the configured **Archived State ID**. Archived cards are not shown in the Kanban board.
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings4.png "Image 4. Kanban Settings")
 
-*   **Archived State Id:** Determines which will be the id set to the column id previously mentioned in the card settings
-*   **Archived Text:** A little text that will appear on the archive area
-*   **Archieved Icon:** The icon which will be seen in the archive area
-*   **Archieved CSS Class:** CSS class that will be aplied to the archieve area
+| Setting | Description |
+|---------|-------------|
+| **Archived State ID** | State ID assigned when a card is dropped into the archive area. |
+| **Archived Text** | Short text shown in the archive area. |
+| **Archived Icon** | Icon shown in the archive area. |
+| **Archived CSS Class** | CSS class applied to the archive area. |
 
 ### Event Settings
 
-Used to define what happens when the different events are fired.
+Defines which processes run when Kanban events are triggered.
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings5.png "Image 5. Kanban Settings")
 
-*   **On card click:** Process to run when card is clicked
-*   **On Change Column:** Process to run when card gets changed of column
-*   **On Archieve Box Drop:** Process to run whe card is dropped on archieve area
+| Setting | Description |
+|---------|-------------|
+| **On Card Click** | Process executed when a card is clicked. |
+| **On Change Column** | Process executed when a card changes column. |
+| **On Archive Box Drop** | Process executed when a card is dropped into the archive area. |
 
 ## Add the kanban on your page
 
-Just proceed to drag module to your page from the module manager and fill out the following form.
+Drag the module to your page from the module manager and complete the following fields:
 
 ![](../docs_assets/images/ModulesConf/kanbanConf.png "Image 6. Kanban Settings")
 
-*   **Id:** Identify the module
-*   **Type:** Module type, in this case Kanban
-*   **Description:** brief description of the module
-*   **Title:** Title that appears on the module
-*   **Classification:** Since it is not a default module it is always Project Module
-*   **Container:** Module container type
-*   **Object Name:** They have to select the object that we want to relational with the manager
-*   **Object Where:** They have to select the condition to the object that we want to relational with the manager
-*   **Kanban Settings Name:** The kanban options configured before.
+| Setting | Description |
+|---------|-------------|
+| **ID** | Module identifier. |
+| **Type** | Module type, in this case Kanban Panel. |
+| **Description** | Brief module description. |
+| **Title** | Title shown on the module. |
+| **Classification** | As this is not a default module, use Project Module. |
+| **Container** | Module container type. |
+| **Object Name** | Select the board object. |
+| **Object Where** | Condition used to load one board record. |
+| **Kanban Settings Name** | Kanban settings configured in the previous section. |
 
-You can also watch the video about how to configurate kanban module:
+## Videotutorial
+
+You can also watch this video on how to configure the Kanban module:
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/AidJrIHQHZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
