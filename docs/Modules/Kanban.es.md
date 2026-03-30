@@ -6,82 +6,110 @@ En flexygo hay un ejemplo de kanban disponible; <flx-navbutton class="link" type
 
 ![](../docs_assets/images/ModulesConf/kanban2.png "Image 1. Kanban")
 
-## Configuración
+## Configuración del módulo
 
-La configuración de Kanban se divide en cinco grupos:
+Cuando en un módulo seleccionas el tipo **Kanban Panel**, debes configurar el **Objeto** y el **Filtro del objeto**. Para saber qué objeto debes elegir, primero necesitas entender cómo funciona el kanban.
+
+El kanban necesita dos objetos distintos: el **objeto tablero** y el **objeto tarjetas**. El objeto **tablero** será el padre del objeto **tarjetas**. Por ejemplo, un **repartidor** (tablero) tiene múltiples **entregas** (tarjetas). En la configuración del módulo debes establecer como objeto el de **tablero**.
+
+!!! warning "Filtro de objeto obligatorio"
+    El **filtro de objeto** siempre es obligatorio, porque el Kanban debe representar un único registro de tablero.
+    Por ejemplo, un conductor concreto y sus entregas. Si necesitas un tablero para un grupo de conductores, utiliza un objeto padre como Equipo y no Repartidor.
+
+## Configuración Kanban
+
+Después de seleccionar **Object** y **Object Where**, crea tu propia configuración en **Kanban Settings** desde el campo que aparece en la parte inferior derecha del formulario. Ahí configurarás las siguientes secciones:
 
 ### Configuración del tablero
 
-Se utiliza para definir los ajustes básicos del tablero kanban.
+Define el comportamiento básico del tablero y sus etiquetas.
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings1.png "Image 1. Kanban Settings")
 
-* **Settings Name:** El nombre que quieres usar para identificar esta configuración kanban.
-* **Board Object Name:** El objeto principal del kanban, que será útil para parsear algunos valores en las siguientes propiedades, como puede verse en la imagen.
-* **Board Title Template:** El título que se mostrará en la parte superior del kanban.
-* **Board Description Template:** Una breve descripción que aparecerá debajo del título.
+| Ajuste | Descripción |
+|--------|-------------|
+| **Settings Name** | Nombre usado para identificar esta configuración de Kanban. |
+| **Board Object Name** | Objeto principal del Kanban (padre de las tarjetas). Puedes usar sus propiedades en las plantillas de abajo. |
+| **Board Title Template** | Título que se mostrará en la parte superior del tablero, por ejemplo `{{DriverName}} Kanban`. |
+| **Board Description Template** | Texto corto que se mostrará bajo el título, por ejemplo `All deliveries for {{DriverName}}`. |
 
 ### Configuración de columnas
 
-Aquí se pueden establecer las vistas de columnas que se utilizarán como configuración de columnas.
+Aquí defines la vista que determina cuántas columnas tiene el Kanban y cómo se nombran y estilizan:
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings2.png "Image 2. Kanban Settings")
 
-* **Column View Name:** Debe ser la vista utilizada para pintar la información de la columna y debe contener al menos las dos primeras propiedades de columna.
-* **Column Description Field:** La descripción que aparecerá en la parte superior de la columna.
-* **Column Id Field:** No aparece en el kanban, pero es necesario para identificar la columna.
-* **CSS Class Field:** La clase CSS que se aplicará a la columna en el div `.kanban-col`.
-* **Icon Class:** El icono que aparecerá junto a la descripción.
+| Ajuste | Descripción |
+|--------|-------------|
+| **Column View Name** | Vista usada para cargar la información de las columnas. Debe incluir al menos los dos primeros campos listados abajo. |
+| **Column Description Field** | Texto mostrado en la parte superior de la columna. |
+| **Column ID Field** | Identificador interno de cada columna. |
+| **CSS Class Field** | Clase CSS aplicada al div `.kanban-col` de la columna. |
+| **Icon Class** | Icono mostrado junto a la descripción de la columna. |
+
+!!! info "La vista de columnas puede estar desacoplada"
+    En muchas implementaciones esta vista está lógicamente desacoplada del **board object**.
+    Esto es habitual cuando las columnas provienen de una tabla maestra que almacena los **IDs** y **nombres** de estado.
 
 ### Configuración de tarjetas
 
-Aquí se establece el objeto y las vistas que se utilizarán como configuración de las tarjetas.
+Aquí defines el **objeto de tarjetas**, la **vista** usada para cargar los datos y los campos que renderizan cada tarjeta:
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings3.png "Image 3. Kanban Settings")
 
-* **Card Object Name:** El objeto que se usará como tarjetas.
-* **Card View Name:** La vista utilizada para pintar la información de la tarjeta; debe contener al menos las tres primeras propiedades de tarjeta.
-* **Card ID Field:** No aparece en el kanban, pero es necesario para identificar la tarjeta.
-* **Card Column ID Field:** No aparece en el kanban, pero identifica en qué columna debe mostrarse la tarjeta al cargarse.
-* **Card Description Field:** La descripción será el contenido de la tarjeta si no se asigna una plantilla de contenido.
-* **Card Content Template:** Es la plantilla HTML donde, si se especifica, seguirá el contenido de la tarjeta; se puede parsear el campo descripción.
+| Ajuste | Descripción |
+|--------|-------------|
+| **Card Object Name** | Objeto que se usará como tarjetas. |
+| **Card View Name** | Vista usada para renderizar la información de las tarjetas. Debe incluir al menos los tres primeros campos listados abajo. |
+| **Card ID Field** | Identificador interno de la tarjeta. |
+| **Card Column ID Field** | Campo que define en qué columna debe aparecer cada tarjeta al cargarse. |
+| **Card Description Field** | La descripción será el contenido de la tarjeta si no se asigna una plantilla de contenido. |
+| **Card Content Template** | Plantilla HTML opcional para renderizado enriquecido de la tarjeta. Si se usa, puede parsear campos de la tarjeta. |
 
-### Configuración del area de archivo
+### Configuración del área de archivo
 
-Usado para establecer la configuración del área de archivo que aparece al mover una tarjeta.
+Configura el área de archivado. Archivar significa cambiar el estado de la tarjeta al **Archived State ID** configurado. Las tarjetas archivadas no se muestran en el tablero Kanban.
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings4.png "Image 4. Kanban Settings")
 
-* **Archived State Id:** Determina cuál será el id asignado a la columna mencionada previamente en la configuración de tarjeta.
-* **Archived Text:** Un breve texto que aparecerá en el área de archivo.
-* **Archived Icon:** El icono que se verá en el área de archivo.
-* **Archived CSS Class:** La clase CSS aplicada al área de archivo.
+| Ajuste | Descripción |
+|--------|-------------|
+| **Archived State ID** | ID de estado que se asigna cuando una tarjeta se suelta en el área de archivado. |
+| **Archived Text** | Texto corto mostrado en el área de archivado. |
+| **Archived Icon** | Icono mostrado en el área de archivado. |
+| **Archived CSS Class** | Clase CSS aplicada al área de archivado. |
 
 ### Configuración de eventos
 
-Usado para definir qué ocurre cuando se disparan los diferentes eventos.
+Define qué procesos se ejecutan cuando se disparan los eventos del Kanban.
 
 ![](../docs_assets/images/ModulesConf/KanbanSettings5.png "Image 5. Kanban Settings")
 
-* **On card click:** Proceso que se ejecuta al hacer clic en una tarjeta.
-* **On Change Column:** Proceso que se ejecuta cuando una tarjeta cambia de columna.
-* **On Archive Box Drop:** Proceso que se ejecuta cuando una tarjeta se deja caer en el área de archivo.
+| Ajuste | Descripción |
+|--------|-------------|
+| **On Card Click** | Proceso ejecutado al hacer clic en una tarjeta. |
+| **On Change Column** | Proceso ejecutado cuando una tarjeta cambia de columna. |
+| **On Archive Box Drop** | Proceso ejecutado cuando una tarjeta se suelta en el área de archivado. |
 
 ## Añadir el kanban a tu página
 
-Solo arrastra el módulo a tu página desde el gestor de módulos y completa el siguiente formulario.
+Arrastra el módulo a tu página desde el gestor de módulos y completa los siguientes campos:
 
 ![](../docs_assets/images/ModulesConf/kanbanConf.png "Image 6. Kanban Settings")
 
-* **Id:** Identifica el módulo.
-* **Type:** Tipo de módulo, en este caso Kanban.
-* **Description:** Breve descripción del módulo.
-* **Title:** Título que aparece en el módulo.
-* **Classification:** Como no es un módulo por defecto, siempre es Project Module.
-* **Container:** Tipo de contenedor del módulo.
-* **Object Name:** Se debe seleccionar el objeto que se desea relacionar con el gestor.
-* **Object Where:** Se debe seleccionar la condición del objeto que se desea relacionar con el gestor.
-* **Kanban Settings Name:** Las opciones kanban configuradas previamente.
+| Ajuste | Descripción |
+|--------|-------------|
+| **ID** | Identificador del módulo. |
+| **Type** | Tipo de módulo, en este caso Kanban Panel. |
+| **Description** | Breve descripción del módulo. |
+| **Title** | Título mostrado en el módulo. |
+| **Classification** | Como no es un módulo por defecto, usa Project Module. |
+| **Container** | Tipo de contenedor del módulo. |
+| **Object Name** | Selecciona el objeto de tablero. |
+| **Object Where** | Condición usada para cargar un único registro de tablero. |
+| **Kanban Settings Name** | Configuración de Kanban creada en la sección anterior. |
+
+## Videotutorial
 
 Puedes ver también el vídeo sobre cómo configurar el módulo kanban:
 <div class="video-wrapper">
