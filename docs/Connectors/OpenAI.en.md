@@ -86,7 +86,11 @@ In this new version you will be able to create, configure and assign a chat with
     ![ChatGPT Processes Switch](../docs_assets/images/openAI/chatgpt_processes_switch.png#only-light "Image 10. ChatGPT Processes Switch"){data-gallery="light"}
     ![ChatGPT Processes Switch](../docs_assets/images/openAI/chatgpt_processes_switch_dark.png#only-dark "Image 10. ChatGPT Processes Switch"){data-gallery="dark"}
 
-    You can get ChatGPT provide custom responses to the user if the linked process has a SuccessMessage.
+    You can get ChatGPT provide custom responses to the user if the linked process has a SuccessMessage. 
+    But for JavaScript processes, you need to add this line at the end of the code (Only for version 9.2+):
+    ```javascript
+    $(resultMessageContainer).text('This is my custom response!');
+    ```
     {: .flx-warning-card }
 
     ![ChatGPT Processes Module](../docs_assets/images/openAI/chatgpt_processes_module.png#only-light "Image 2. ChatGPT Processes Module"){data-gallery="light"}

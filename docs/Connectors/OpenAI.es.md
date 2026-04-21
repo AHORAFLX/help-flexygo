@@ -85,7 +85,11 @@ En esta nueva versión podrás crear, configurar y asignar un chat dentro de los
     ![Process switch](../docs_assets/images/openAI/chatgpt_processes_switch.png#only-light "Image 10. ChatGPT Processes Switch"){data-gallery="light"}
     ![Process switch](../docs_assets/images/openAI/chatgpt_processes_switch_dark.png#only-dark "Image 10. ChatGPT Processes Switch"){data-gallery="dark"}
 
-    Si el proceso tiene *SuccessMessage*, ChatGPT podrá usarlo para responder al usuario.
+    Si el proceso tiene *SuccessMessage*, ChatGPT podrá usarlo para responder al usuario. 
+    Pero para procesos de JavaScript, necesitarás añadir esta línea al final de tu codigo (Solo para la versión 9.2+):
+    ```javascript
+    $(resultMessageContainer).text('Este es mi mensaje personalizado!');
+    ```
     {: .flx-warning-card }
 
     ![Processes module](../docs_assets/images/openAI/chatgpt_processes_module.png#only-light "Image 11. ChatGPT Processes Module"){data-gallery="light"}
