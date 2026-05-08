@@ -88,7 +88,7 @@ Realiza una fotografí­a usando la app de cámara del dispositivo o una impleme
 | ------ | ------ | ------ | ------ |
 | `width` | `number` | `1000` | Anchura en pí­xeles de la imagen |
 | `height` | `number` | `1000` | Altura en pí­xeles de la imagen |
-| `quality` | `number` | `50` | Calidad de la imagen (0â€“100). Un valor menor reduce peso pero comprime más |
+| `quality` | `number` | `50` | Calidad de la imagen (0 a 100). Un valor menor reduce peso pero comprime más |
 | `typeCrop?` | `any` | `undefined` | Tipo de recorte (obsoleto, no tiene efecto) |
 | `alternativeCam?` | `boolean` | `false` | Usa una cámara alternativa (solo si hay problemas en móviles muy antiguos) |
 
@@ -115,7 +115,7 @@ Solicita al usuario seleccionar imágenes desde la galerí­a del dispositivo.
 | ------ | ------ | ------ | ------ |
 | `width` | `number` | `1000` | Anchura en pí­xeles |
 | `height` | `number` | `1000` | Altura en pí­xeles |
-| `quality` | `number` | `50` | Calidad de la imagen (0â€“100) |
+| `quality` | `number` | `50` | Calidad de la imagen (0 a 100) |
 
 #### Devuelve
 

@@ -336,8 +336,8 @@ Convierte un color hex a rgba.
 
 | Parámetro | Tipo | Descripción |
 | --------- | ----- | ----------- |
-| `hex` | `any` | Color hexadecimal |
-| `opacity` | `any` | Opacidad (0â€“1) |
+| `hex` | `string` | Color hexadecimal |
+| `opacity` | `number` | Opacidad (0 a 1) |
 
 #### Devuelve
 
@@ -358,7 +358,7 @@ Obtiene el tipo MIME de un Base64.
 
 | Parámetro | Tipo | Descripción |
 | --------- | ----- | ----------- |
-| `b64` | `any` | Cadena Base64 |
+| `b64` | `string` | Cadena Base64 |
 
 #### Devuelve
 
@@ -379,7 +379,7 @@ Obtiene el tipo MIME según la extensión del archivo.
 
 | Parámetro | Tipo | Descripción |
 | --------- | ----- | ----------- |
-| `fileName` | `any` | Nombre del archivo |
+| `fileName` | `string` | Nombre del archivo |
 
 #### Devuelve
 
@@ -459,8 +459,8 @@ Descarga un archivo desde una URL (solo navegador).
 
 | Parámetro | Tipo | Descripción |
 | --------- | ----- | ----------- |
-| `url` | `any` | URL del archivo |
-| `file_name` | `any` | Nombre del archivo |
+| `url` | `string` | URL del archivo |
+| `file_name` | `string` | Nombre del archivo |
 
 #### Devuelve
 
@@ -479,8 +479,8 @@ Descarga un archivo desde una URL (solo teléfono).
 
 | Parámetro | Tipo | Descripción |
 | --------- | ----- | ----------- |
-| `url` | `any` | URL del archivo |
-| `file_name` | `any` | Nombre del archivo |
+| `url` | `string` | URL del archivo |
+| `file_name` | `string` | Nombre del archivo |
 
 #### Devuelve
 
