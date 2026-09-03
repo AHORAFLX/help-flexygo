@@ -7433,7 +7433,7 @@
   
   
   <span class="md-ellipsis">
-    Guía de Configuración Segura: Flexygo
+    Guía de Configuración Segura
     
   </span>
   
@@ -7554,7 +7554,7 @@
           <li class="md-nav__item">
   <a href="#31-preparacion-del-entorno-pasos-12" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Preparación del entorno (pasos 1–2)
+      3.1. Preparación del entorno (pasos 1–2)
     </span>
   </a>
   
@@ -7563,7 +7563,7 @@
           <li class="md-nav__item">
   <a href="#32-compilacion-y-gestion-de-dependencias-pasos-36" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Compilación y gestión de dependencias (pasos 3–6)
+      3.2. Compilación y gestión de dependencias (pasos 3–6)
     </span>
   </a>
   
@@ -7572,7 +7572,7 @@
           <li class="md-nav__item">
   <a href="#33-pruebas-validacion-y-auditoria-tecnica-pasos-1114-2325-30" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)
+      3.3. Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)
     </span>
   </a>
   
@@ -7581,7 +7581,7 @@
           <li class="md-nav__item">
   <a href="#34-generacion-de-artefactos-y-documentacion-pasos-1622" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4 Generación de artefactos y documentación (pasos 16–22)
+      3.4. Generación de artefactos y documentación (pasos 16–22)
     </span>
   </a>
   
@@ -7590,7 +7590,7 @@
           <li class="md-nav__item">
   <a href="#35-respaldo-y-control-de-configuracion-pasos-26-y-1215" class="md-nav__link">
     <span class="md-ellipsis">
-      3.5 Respaldo y control de configuración (pasos 26 y 12–15)
+      3.5. Respaldo y control de configuración (pasos 26 y 12–15)
     </span>
   </a>
   
@@ -7599,7 +7599,7 @@
           <li class="md-nav__item">
   <a href="#36-escaneo-y-validacion-de-seguridad-dinamica-secdevops" class="md-nav__link">
     <span class="md-ellipsis">
-      3.6 Escaneo y validación de seguridad dinámica (SecDevOps)
+      3.6. Escaneo y validación de seguridad dinámica (SecDevOps)
     </span>
   </a>
   
@@ -7608,7 +7608,7 @@
           <li class="md-nav__item">
   <a href="#37-publicacion-de-artefactos-y-control-de-distribucion" class="md-nav__link">
     <span class="md-ellipsis">
-      3.7 Publicación de artefactos y control de distribución
+      3.7. Publicación de artefactos y control de distribución
     </span>
   </a>
   
@@ -7884,9 +7884,12 @@
 
 <h1 id="ciclo-de-vida-de-desarrollo-seguro-sdlc">Ciclo de Vida de Desarrollo Seguro (SDLC)<a class="headerlink" href="#ciclo-de-vida-de-desarrollo-seguro-sdlc" title="Permanent link">¶</a></h1>
 <h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">¶</a></h2>
-<p>El proyecto Flexygo implementa un Ciclo de Vida de Desarrollo Seguro formalmente estructurado, integrando prácticas de seguridad, control de calidad y trazabilidad en cada fase del proceso. El sistema de integración continua (CI/CD) documenta y ejecuta más de 30 pasos automatizados que aseguran la integridad, disponibilidad y seguridad del software.</p>
+<p>El proyecto Flexygo implementa un <strong>Ciclo de Vida de Desarrollo Seguro (SDLC)</strong> formalmente estructurado, integrando prácticas de seguridad, control de calidad y trazabilidad en cada fase del proceso de construcción, integración y despliegue.
+El sistema de integración continua (CI/CD) documenta y ejecuta más de 30 pasos automatizados que aseguran la <strong>integridad, disponibilidad y seguridad del software</strong> en todas las etapas del ciclo de desarrollo.</p>
+<p>El entorno de automatización garantiza que todas las compilaciones sigan un flujo reproducible, con controles de seguridad, análisis de código, pruebas unitarias, empaquetado seguro y respaldo periódico de los artefactos.</p>
 <h2 id="2-flujo-general-del-sdlc-aplicado">2. Flujo general del SDLC aplicado<a class="headerlink" href="#2-flujo-general-del-sdlc-aplicado" title="Permanent link">¶</a></h2>
-<p>El proceso se estructura en etapas secuenciales con dependencias condicionadas al éxito de los pasos anteriores:</p>
+<p>El proceso de desarrollo de Flexygo se estructura en <strong>etapas secuenciales con dependencias condicionadas al éxito de los pasos anteriores</strong>, garantizando un flujo seguro y libre de errores antes de llegar al entorno de publicación.</p>
+<p><strong>Fases principales:</strong></p>
 <ol>
 <li>Preparación y limpieza de entorno</li>
 <li>Compilación controlada de código</li>
@@ -7898,61 +7901,87 @@
 <li>Respaldo y conservación de versiones</li>
 <li>Cierre seguro de configuración</li>
 </ol>
+<p>Cada fase incorpora controles y evidencias verificables que demuestran la aplicación de medidas de seguridad y calidad.</p>
 <h2 id="3-controles-de-seguridad-y-procedimientos-implementados">3. Controles de seguridad y procedimientos implementados<a class="headerlink" href="#3-controles-de-seguridad-y-procedimientos-implementados" title="Permanent link">¶</a></h2>
-<h3 id="31-preparacion-del-entorno-pasos-12">3.1 Preparación del entorno (pasos 1–2)<a class="headerlink" href="#31-preparacion-del-entorno-pasos-12" title="Permanent link">¶</a></h3>
+<h3 id="31-preparacion-del-entorno-pasos-12">3.1. Preparación del entorno (pasos 1–2)<a class="headerlink" href="#31-preparacion-del-entorno-pasos-12" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Limpieza de cadenas de conexión</strong>: un script PowerShell elimina o enmascara credenciales en <code>web.config</code> antes de compilar</li>
-<li><strong>Backup del código fuente</strong>: respaldo automatizado previo a la compilación</li>
+<li><strong>Limpieza de cadenas de conexión en web.config</strong>: el proceso automatizado ejecuta un script PowerShell que elimina o enmascara las cadenas de conexión sensibles antes de iniciar la compilación, previniendo exposición accidental de credenciales. Este control asegura el cumplimiento de principios de <strong>minimización de información sensible en entornos de desarrollo</strong>.</li>
+<li><strong>Backup del código fuente</strong>: antes de compilar, se realiza un respaldo automatizado del código fuente, preservando un punto de restauración en caso de alteraciones o errores posteriores. El mecanismo de copia está condicionado al éxito de los pasos previos, garantizando que sólo versiones válidas sean almacenadas.</li>
 </ul>
-<h3 id="32-compilacion-y-gestion-de-dependencias-pasos-36">3.2 Compilación y gestión de dependencias (pasos 3–6)<a class="headerlink" href="#32-compilacion-y-gestion-de-dependencias-pasos-36" title="Permanent link">¶</a></h3>
+<h3 id="32-compilacion-y-gestion-de-dependencias-pasos-36">3.2. Compilación y gestión de dependencias (pasos 3–6)<a class="headerlink" href="#32-compilacion-y-gestion-de-dependencias-pasos-36" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Restauración de paquetes NuGet</strong>: desde fuentes controladas con versiones verificadas y bloqueadas</li>
-<li><strong>Compilación de la solución</strong>: mediante MSBuild con trazabilidad completa</li>
-<li><strong>Publicación de configuraciones</strong>: mediante SQLPACKAGE con validación condicionada</li>
+<li><strong>Restauración de paquetes NuGet</strong>: los paquetes se obtienen desde fuentes controladas, con versiones verificadas y bloqueadas para asegurar la <strong>reproducibilidad y la integridad del entorno de compilación</strong>.</li>
+<li><strong>Compilación de solución (.NET / MSBuild)</strong>: el proyecto se compila de forma automatizada mediante MSBuild, garantizando trazabilidad completa desde el código fuente hasta el binario generado.</li>
+<li><strong>Publicación de configuraciones y bases de datos (BBDD CONFIG y BBDD DATOS)</strong>: los scripts de publicación utilizan SQLPACKAGE y ejecutan procesos de compilación controlados, validados sólo si los pasos anteriores fueron exitosos, aplicando el principio de <strong>integridad de la cadena de construcción</strong>.</li>
 </ul>
-<h3 id="33-pruebas-validacion-y-auditoria-tecnica-pasos-1114-2325-30">3.3 Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)<a class="headerlink" href="#33-pruebas-validacion-y-auditoria-tecnica-pasos-1114-2325-30" title="Permanent link">¶</a></h3>
+<h3 id="33-pruebas-validacion-y-auditoria-tecnica-pasos-1114-2325-30">3.3. Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)<a class="headerlink" href="#33-pruebas-validacion-y-auditoria-tecnica-pasos-1114-2325-30" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Pruebas unitarias</strong>: Visual Studio Test (VSTest) para los módulos principales</li>
-<li><strong>Cobertura de código</strong>: JetBrains dotCover para métricas de validación</li>
-<li><strong>Análisis estático</strong>: SonarQube audita módulos TypeScript, T-SQL y VB en busca de vulnerabilidades, malas prácticas o código inseguro</li>
-</ul>
+<li><strong>Compilación y ejecución de pruebas de servicio e interfaz</strong>: se realizan pruebas unitarias mediante <strong>Visual Studio Test (VSTest)</strong>, integradas en el pipeline. Estas pruebas verifican la funcionalidad de los módulos principales y la interoperabilidad entre servicios. Los resultados de las pruebas se recopilan y analizan automáticamente para evaluar el cumplimiento de los criterios de calidad.</li>
+<li><strong>Cobertura de código</strong>: el sistema utiliza <strong>JetBrains dotCover</strong> para recopilar métricas de cobertura, lo que permite medir el grado de validación del código mediante pruebas. Este paso sólo se ejecuta si la compilación es exitosa, evitando reportes sobre versiones inconsistentes.</li>
+<li>
+<p><strong>Análisis estático de código (SonarQube)</strong>: aunque algunos análisis aparecen deshabilitados en las imágenes, el proceso SDLC considera su ejecución como parte del ciclo completo. Los módulos para TypeScript, T-SQL y VB se auditan en busca de vulnerabilidades, malas prácticas o código inseguro. Esto aporta evidencia de cumplimiento con los <strong>controles de análisis estático del OWASP SAMM y ISO/IEC 27034</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/SecureSDLC/1.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/SecureSDLC/1.png"></a>
 <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/SecureSDLC/2.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/SecureSDLC/2.png"></a></p>
-<h3 id="34-generacion-de-artefactos-y-documentacion-pasos-1622">3.4 Generación de artefactos y documentación (pasos 16–22)<a class="headerlink" href="#34-generacion-de-artefactos-y-documentacion-pasos-1622" title="Permanent link">¶</a></h3>
+</li>
+</ul>
+<h3 id="34-generacion-de-artefactos-y-documentacion-pasos-1622">3.4. Generación de artefactos y documentación (pasos 16–22)<a class="headerlink" href="#34-generacion-de-artefactos-y-documentacion-pasos-1622" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Changelog automatizado</strong>: mediante PowerShell para trazabilidad entre versiones</li>
-<li><strong>Empaquetado seguro</strong>: ZIP APP, ZIP DOCU, paquete NuGet con versionado y firma digital</li>
-<li><strong>Documentación técnica automatizada</strong>:<ul>
-<li>JavaScript: YUIDoc</li>
-<li>VB: GhostDoc</li>
-<li>SQL: TeamCity SQLDoc</li>
+<li><strong>Changelog automatizado</strong>: se genera mediante PowerShell, asegurando trazabilidad entre versiones y facilitando auditorías de cambios.</li>
+<li><strong>Empaquetado seguro (ZIP APP, ZIP DOCU, paquete NuGet)</strong>: los artefactos se empaquetan de forma automatizada y versionada, con inclusión de número de compilación y firma digital interna. Este proceso garantiza el no repudio y la integridad de los artefactos distribuidos.</li>
+<li>
+<p><strong>Generación automática de documentación técnica</strong>: se generan tres tipos de documentación:</p>
+<ul>
+<li><strong>JS</strong>: mediante Node.js (YUIDoc)</li>
+<li><strong>VB</strong>: mediante GhostDoc</li>
+<li><strong>SQL</strong>: mediante TeamCity SQLDoc</li>
+</ul>
+<p>Esto asegura la coherencia documental y la trazabilidad técnica entre código y documentación.</p>
+</li>
+</ul>
+<h3 id="35-respaldo-y-control-de-configuracion-pasos-26-y-1215">3.5. Respaldo y control de configuración (pasos 26 y 12–15)<a class="headerlink" href="#35-respaldo-y-control-de-configuracion-pasos-26-y-1215" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Copia de respaldo post-publicación</strong>: se generan copias automáticas tras la publicación de cada build, garantizando la conservación de artefactos finales y evidencias de despliegue.</li>
+<li><strong>Gestión de archivos de configuración</strong>: el sistema limpia y reemplaza los archivos config en diferentes momentos del pipeline (inicio y cierre) para asegurar que:<ul>
+<li>No se exponen credenciales ni claves en entornos de pruebas.</li>
+<li>Las configuraciones sensibles se mantengan fuera del control de código fuente.</li>
 </ul>
 </li>
 </ul>
-<h3 id="35-respaldo-y-control-de-configuracion-pasos-26-y-1215">3.5 Respaldo y control de configuración (pasos 26 y 12–15)<a class="headerlink" href="#35-respaldo-y-control-de-configuracion-pasos-26-y-1215" title="Permanent link">¶</a></h3>
-<ul>
-<li>Copia de respaldo post-publicación</li>
-<li>Gestión de archivos de configuración para evitar la exposición de credenciales</li>
-</ul>
-<h3 id="36-escaneo-y-validacion-de-seguridad-dinamica-secdevops">3.6 Escaneo y validación de seguridad dinámica (SecDevOps)<a class="headerlink" href="#36-escaneo-y-validacion-de-seguridad-dinamica-secdevops" title="Permanent link">¶</a></h3>
-<p>El pipeline SecDevOps incluye:</p>
+<h3 id="36-escaneo-y-validacion-de-seguridad-dinamica-secdevops">3.6. Escaneo y validación de seguridad dinámica (SecDevOps)<a class="headerlink" href="#36-escaneo-y-validacion-de-seguridad-dinamica-secdevops" title="Permanent link">¶</a></h3>
+<p>El pipeline <strong>SecDevOps</strong>, integrado dentro del ciclo de desarrollo, se encarga de validar la resistencia del software ante vulnerabilidades y exploits antes de su publicación. El flujo incluye los siguientes pasos automatizados:</p>
 <ol>
-<li>Descargar el instalable</li>
-<li>Instalar Flexygo en un entorno aislado</li>
-<li>Ejecutar pruebas de seguridad automatizadas (script Python <code>flexygoscan.py</code>) que incluyen validaciones de autenticación, inyección SQL, XSS y manipulación de sesión</li>
-<li>Desinstalar Flexygo</li>
-<li>Eliminar la base de datos de pruebas</li>
+<li><strong>Descargar instalable</strong>: obtiene la última versión compilada del software desde los repositorios internos, asegurando que se ejecuten pruebas sobre la versión final y no sobre entornos intermedios.</li>
+<li><strong>Instalar Flexygo</strong>: automatiza la instalación de la aplicación en un entorno aislado de pruebas, replicando la infraestructura de producción.</li>
+<li><strong>Ejecutar exploit (pruebas de seguridad automatizadas)</strong>: se ejecuta un script Python (<code>flexygoscan.py</code>) que realiza pruebas de penetración controladas sobre la instancia desplegada. Estas pruebas incluyen validaciones de autenticación, inyección SQL, XSS y manipulación de sesión, sirviendo como evidencia de un proceso activo de <strong>análisis dinámico de seguridad (DAST)</strong>.</li>
+<li><strong>Desinstalar Flexygo</strong>: el entorno de pruebas se limpia automáticamente al finalizar el análisis, garantizando que no queden residuos de ejecución o datos sensibles.</li>
+<li><strong>Eliminar base de datos de pruebas</strong>: como última fase, se elimina de forma segura la base de datos utilizada durante los test, preservando la confidencialidad y evitando exposición de información.</li>
 </ol>
+<p>Este proceso constituye una evidencia clave de seguridad operativa, demostrando que Flexygo aplica controles activos de detección temprana de vulnerabilidades antes de liberar versiones.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/SecureSDLC/3.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/SecureSDLC/3.png"></a></p>
-<h3 id="37-publicacion-de-artefactos-y-control-de-distribucion">3.7 Publicación de artefactos y control de distribución<a class="headerlink" href="#37-publicacion-de-artefactos-y-control-de-distribucion" title="Permanent link">¶</a></h3>
-<ul>
-<li>Publicación en repositorio corporativo (nuget.ahorabh.com) y oficial (nuget.org)</li>
-<li>Marcado de artefactos como "pinned" para bloquear su eliminación accidental</li>
+<h3 id="37-publicacion-de-artefactos-y-control-de-distribucion">3.7. Publicación de artefactos y control de distribución<a class="headerlink" href="#37-publicacion-de-artefactos-y-control-de-distribucion" title="Permanent link">¶</a></h3>
+<p>El flujo de publicación final incluye la validación y despliegue de paquetes NuGet en repositorios autenticados:</p>
+<ol>
+<li><strong>Publicación de artefactos NuGet internos y externos</strong>:<ul>
+<li>Repositorio corporativo de Ahora (<code>nuget.ahorabh.com</code>)</li>
+<li>Repositorio oficial de Microsoft NuGet (<code>nuget.org</code>)</li>
 </ul>
+</li>
+<li>Cada publicación está condicionada a la finalización exitosa de todos los pasos anteriores, garantizando que solo artefactos verificados y auditados sean distribuidos.</li>
+<li><strong>Marcado de artefactos como "pinned"</strong>: el proceso PowerShell final bloquea versiones críticas en el repositorio interno, impidiendo su eliminación o sobreescritura accidental. Este control asegura la trazabilidad y disponibilidad de versiones certificadas.</li>
+</ol>
 <h2 id="4-auditorias-y-trazabilidad">4. Auditorías y trazabilidad<a class="headerlink" href="#4-auditorias-y-trazabilidad" title="Permanent link">¶</a></h2>
-<p>Cada etapa se registra en el sistema de integración continua, permitiendo auditar tiempos de ejecución, resultados de pruebas, logs, versiones y cambios de configuración. El pipeline impide el avance a la siguiente fase si un paso no se ejecuta correctamente.</p>
+<p>Cada etapa del SDLC está registrada en el sistema de integración continua, lo que permite auditar:</p>
+<ul>
+<li>Tiempos de ejecución</li>
+<li>Resultados de pruebas</li>
+<li>Logs de compilación y publicación</li>
+<li>Versiones generadas</li>
+<li>Cambios en configuraciones</li>
+</ul>
+<p>El pipeline impide el avance a la siguiente fase si un paso no se ejecuta correctamente, lo que constituye un control de flujo de seguridad y evidencia de cumplimiento de buenas prácticas DevSecOps.</p>
 <h2 id="5-conclusiones">5. Conclusiones<a class="headerlink" href="#5-conclusiones" title="Permanent link">¶</a></h2>
-<p>El modelo incorpora mecanismos de seguridad, control y trazabilidad alineados con estándares internacionales como OWASP SAMM, ISO/IEC 27034 y NIST SP 800-218 (SSDF), aportando garantías de integridad, trazabilidad y seguridad del software producido.</p>
+<p>El modelo de desarrollo seguro de Flexygo incorpora mecanismos de seguridad, control y trazabilidad en todo el ciclo de vida del software. Las evidencias muestran la aplicación sistemática de medidas de protección de la información, control de versiones, auditoría de código y validación de artefactos.</p>
+<p>Este proceso cumple con los principios de un <strong>SDLC seguro</strong>, alineado con estándares internacionales como <strong>OWASP SAMM</strong>, <strong>ISO/IEC 27034</strong> y <strong>NIST SP 800-218 (SSDF)</strong>, aportando garantías de integridad, trazabilidad y seguridad del software producido.</p>
 
 
 
@@ -8020,7 +8049,7 @@
           <li class="md-nav__item">
   <a href="#31-preparacion-del-entorno-pasos-12" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Preparación del entorno (pasos 1–2)
+      3.1. Preparación del entorno (pasos 1–2)
     </span>
   </a>
   
@@ -8029,7 +8058,7 @@
           <li class="md-nav__item">
   <a href="#32-compilacion-y-gestion-de-dependencias-pasos-36" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Compilación y gestión de dependencias (pasos 3–6)
+      3.2. Compilación y gestión de dependencias (pasos 3–6)
     </span>
   </a>
   
@@ -8038,7 +8067,7 @@
           <li class="md-nav__item">
   <a href="#33-pruebas-validacion-y-auditoria-tecnica-pasos-1114-2325-30" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)
+      3.3. Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)
     </span>
   </a>
   
@@ -8047,7 +8076,7 @@
           <li class="md-nav__item">
   <a href="#34-generacion-de-artefactos-y-documentacion-pasos-1622" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4 Generación de artefactos y documentación (pasos 16–22)
+      3.4. Generación de artefactos y documentación (pasos 16–22)
     </span>
   </a>
   
@@ -8056,7 +8085,7 @@
           <li class="md-nav__item">
   <a href="#35-respaldo-y-control-de-configuracion-pasos-26-y-1215" class="md-nav__link">
     <span class="md-ellipsis">
-      3.5 Respaldo y control de configuración (pasos 26 y 12–15)
+      3.5. Respaldo y control de configuración (pasos 26 y 12–15)
     </span>
   </a>
   
@@ -8065,7 +8094,7 @@
           <li class="md-nav__item">
   <a href="#36-escaneo-y-validacion-de-seguridad-dinamica-secdevops" class="md-nav__link">
     <span class="md-ellipsis">
-      3.6 Escaneo y validación de seguridad dinámica (SecDevOps)
+      3.6. Escaneo y validación de seguridad dinámica (SecDevOps)
     </span>
   </a>
   
@@ -8074,7 +8103,7 @@
           <li class="md-nav__item">
   <a href="#37-publicacion-de-artefactos-y-control-de-distribucion" class="md-nav__link">
     <span class="md-ellipsis">
-      3.7 Publicación de artefactos y control de distribución
+      3.7. Publicación de artefactos y control de distribución
     </span>
   </a>
   

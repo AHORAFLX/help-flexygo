@@ -7433,7 +7433,7 @@
   
   
   <span class="md-ellipsis">
-    Secure Configuration Guide: Flexygo
+    Secure Configuration Guide
     
   </span>
   
@@ -7510,18 +7510,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-integrating-flexygo-in-a-cicd-cycle" class="md-nav__link">
+  <a href="#2-integrating-flexygo-into-a-cicd-cycle" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Integrating Flexygo in a CI/CD cycle
+      2. Integrating Flexygo into a CI/CD cycle
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-including-tests-in-the-cicd" class="md-nav__link">
+  <a href="#3-including-tests-in-cicd" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Including tests in the CI/CD
+      3. Including tests in CI/CD
     </span>
   </a>
   
@@ -7614,7 +7614,7 @@
   
   
   <span class="md-ellipsis">
-    Secure Development Life Cycle (SDLC)
+    Secure Development Lifecycle (SDLC)
     
   </span>
   
@@ -7637,7 +7637,7 @@
   
   
   <span class="md-ellipsis">
-    Vulnerability Management
+    Vulnerability management
     
   </span>
   
@@ -7863,73 +7863,79 @@
 
 <h1 id="secure-development-guide-in-flexygo">Secure Development Guide in Flexygo<a class="headerlink" href="#secure-development-guide-in-flexygo" title="Permanent link">¶</a></h1>
 <h2 id="1-principle-of-least-privilege-mandatory">1. Principle of least privilege (mandatory)<a class="headerlink" href="#1-principle-of-least-privilege-mandatory" title="Permanent link">¶</a></h2>
-<p>Every object, process or customization must apply the principle of least privilege:</p>
+<p>Every object, process or customization <strong>MUST</strong> be created applying the principle of <strong>least privilege</strong>.</p>
 <ul>
-<li>Explicitly define roles with read, write and delete permissions</li>
-<li>Avoid objects accessible by every user</li>
-<li>Do not rely on button visibility as a security control</li>
-<li>Block direct execution by URL when it should not be allowed</li>
-<li>Do not expose unnecessary objects in the API</li>
+<li>Explicitly define roles with access and their read, write and delete permissions</li>
+<li>Avoid objects accessible by <em>all users</em>.</li>
+<li>Do not rely on button visibility as a security control.</li>
+<li>Block direct execution by URL when it should not be allowed.</li>
+<li>Do not expose unnecessary objects in the API.</li>
 </ul>
-<h2 id="2-integrating-flexygo-in-a-cicd-cycle">2. Integrating Flexygo in a CI/CD cycle<a class="headerlink" href="#2-integrating-flexygo-in-a-cicd-cycle" title="Permanent link">¶</a></h2>
-<p>Flexygo must be integrated into a CI/CD pipeline to guarantee quality and security:</p>
+<h2 id="2-integrating-flexygo-into-a-cicd-cycle">2. Integrating Flexygo into a CI/CD cycle<a class="headerlink" href="#2-integrating-flexygo-into-a-cicd-cycle" title="Permanent link">¶</a></h2>
+<p>Flexygo must be integrated into a <strong>CI/CD pipeline</strong> to guarantee ongoing quality and security.</p>
 <ul>
-<li>Version control through NuGet packages</li>
-<li>Use centralized repositories (Git)</li>
-<li>Define a Hotfix policy</li>
+<li>Version control through NuGet packages.</li>
+<li>Use centralized repositories (Git).</li>
+<li>Define a Hotfix policy.</li>
 </ul>
-<h2 id="3-including-tests-in-the-cicd">3. Including tests in the CI/CD<a class="headerlink" href="#3-including-tests-in-the-cicd" title="Permanent link">¶</a></h2>
-<p>Every development must include automated tests:</p>
+<h2 id="3-including-tests-in-cicd">3. Including tests in CI/CD<a class="headerlink" href="#3-including-tests-in-cicd" title="Permanent link">¶</a></h2>
+<p>Every development must include <strong>automated tests</strong>, adapted to Flexygo's low-code nature.</p>
 <ul>
-<li>Interface tests to guarantee full functionality and access</li>
-<li>Unit tests to test DLLs or stored procedures</li>
-<li>Execution of Flexygo's native tests to validate structure</li>
-<li>Load tests when working in environments with many users</li>
+<li>Develop interface tests to ensure full functionality and access.</li>
+<li>Unit tests to test DLLs or stored procedures.</li>
+<li>Include running Flexygo's native tests to verify the tool's structure.</li>
+<li>Add load tests if you'll be working in environments with many users.</li>
 </ul>
 <h2 id="4-protecting-passwords-and-secrets">4. Protecting passwords and secrets<a class="headerlink" href="#4-protecting-passwords-and-secrets" title="Permanent link">¶</a></h2>
+<p>It is mandatory to ensure that <strong>no password or secret</strong> leaves the system.</p>
 <p><strong>Forbidden:</strong></p>
 <ul>
-<li>Hardcoding passwords in code, SQL or configuration</li>
-<li>Sending credentials through logs or errors</li>
-<li>Uploading passwords to source control</li>
+<li>Hardcoding passwords in code, SQL or configuration.</li>
+<li>Sending credentials through logs or error messages.</li>
+<li>Committing passwords to source control.</li>
 </ul>
 <p><strong>Mandatory:</strong></p>
 <ul>
-<li>Add pipeline controls that look for secret patterns</li>
-<li class="flx-warning-card">Block deployment if credentials are detected</li>
+<li>Add pipeline checks that:<ul>
+<li>Look for secret patterns in the code.</li>
+<li>Block the deployment if any are detected.</li>
+</ul>
+</li>
 </ul>
 <h2 id="5-auditing">5. Auditing<a class="headerlink" href="#5-auditing" title="Permanent link">¶</a></h2>
 <h3 id="51-enabling-auditing">5.1 Enabling auditing<a class="headerlink" href="#51-enabling-auditing" title="Permanent link">¶</a></h3>
-<p>Enable auditing on objects that:</p>
+<p>Enable auditing on every object that:</p>
 <ul>
-<li>Handle sensitive data</li>
-<li>Allow critical changes</li>
-<li>Affect key business processes</li>
+<li>Handles sensitive data</li>
+<li>Allows critical changes</li>
+<li>Affects key business processes</li>
 </ul>
 <h2 id="6-secure-dll-development">6. Secure DLL development<a class="headerlink" href="#6-secure-dll-development" title="Permanent link">¶</a></h2>
+<p>When developing <strong>custom DLLs</strong>, the following rules must be strictly followed.</p>
 <h3 id="61-database-access">6.1 Database access<a class="headerlink" href="#61-database-access" title="Permanent link">¶</a></h3>
-<p><strong>Use exclusively:</strong></p>
+<p>Use exclusively:</p>
 <ul>
 <li>Parameterized SQL</li>
-<li>Stored procedures</li>
+<li>Stored Procedures</li>
 </ul>
-<p><strong>Forbidden:</strong> dynamic SQL built by string concatenation.</p>
-<p><strong>Incorrect example:</strong></p>
+<p>Dynamic SQL built by string concatenation is forbidden.</p>
+<p>❌ Incorrect:</p>
 <div class="language-csharp highlight"><span class="filename">C#</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SELECT * FROM Clientes WHERE Id = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 </span></code></pre></div>
-<p><strong>Correct example:</strong></p>
+<p>✅ Correct:</p>
 <div class="language-csharp highlight"><span class="filename">C#</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">"GetClienteById"</span><span class="p">,</span><span class="w"> </span><span class="n">conn</span><span class="p">);</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">cmd</span><span class="p">.</span><span class="n">CommandType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CommandType</span><span class="p">.</span><span class="n">StoredProcedure</span><span class="p">;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">"@Id"</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
 </span></code></pre></div>
 <h2 id="7-pre-production-review-checklist">7. Pre-production review checklist<a class="headerlink" href="#7-pre-production-review-checklist" title="Permanent link">¶</a></h2>
+<p>Before deploying to production, make sure you meet these points:</p>
 <ul>
-<li>☐ Least privilege is applied to every object</li>
-<li>☐ Flexygo is integrated into CI/CD</li>
-<li>☐ Tests run successfully in the pipeline</li>
-<li>☐ No passwords or secrets are exposed</li>
-<li>☐ Auditing is enabled where appropriate</li>
-<li>☐ DLLs use parameterized SQL or stored procedures</li>
+<li>[ ] Least privilege is applied to all objects</li>
+<li>[ ] Flexygo is integrated into CI/CD</li>
+<li>[ ] Tests run successfully in the pipeline</li>
+<li>[ ] No passwords or secrets are exposed</li>
+<li>[ ] Auditing is enabled where appropriate</li>
+<li>[ ] DLLs use parameterized SQL or stored procedures</li>
 </ul>
 
 
@@ -7977,18 +7983,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-integrating-flexygo-in-a-cicd-cycle" class="md-nav__link">
+  <a href="#2-integrating-flexygo-into-a-cicd-cycle" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Integrating Flexygo in a CI/CD cycle
+      2. Integrating Flexygo into a CI/CD cycle
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-including-tests-in-the-cicd" class="md-nav__link">
+  <a href="#3-including-tests-in-cicd" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Including tests in the CI/CD
+      3. Including tests in CI/CD
     </span>
   </a>
   

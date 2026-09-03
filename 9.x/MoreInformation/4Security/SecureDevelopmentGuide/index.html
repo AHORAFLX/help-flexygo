@@ -7433,7 +7433,7 @@
   
   
   <span class="md-ellipsis">
-    Guía de Configuración Segura: Flexygo
+    Guía de Configuración Segura
     
   </span>
   
@@ -7585,9 +7585,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-checklist-de-revision-previa-a-produccion" class="md-nav__link">
+  <a href="#7-checklist-de-revision" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Checklist de revisión previa a producción
+      7. Checklist de revisión
     </span>
   </a>
   
@@ -7863,73 +7863,79 @@
 
 <h1 id="guia-de-desarrollo-seguro-en-flexygo">Guía de Desarrollo Seguro en Flexygo<a class="headerlink" href="#guia-de-desarrollo-seguro-en-flexygo" title="Permanent link">¶</a></h1>
 <h2 id="1-principio-de-minimo-privilegio-obligatorio">1. Principio de mínimo privilegio (obligatorio)<a class="headerlink" href="#1-principio-de-minimo-privilegio-obligatorio" title="Permanent link">¶</a></h2>
-<p>Todo objeto, proceso o personalización debe aplicar el principio de mínimo privilegio:</p>
+<p>Todo objeto, proceso o personalización <strong>DEBE</strong> crearse aplicando el principio de <strong>mínimo privilegio</strong>.</p>
 <ul>
-<li>Definir explícitamente roles con permisos de lectura, escritura y eliminación</li>
-<li>Evitar objetos accesibles por todos los usuarios</li>
-<li>No confiar en la visibilidad del botón como control de seguridad</li>
-<li>Bloquear ejecución directa por URL si no procede</li>
-<li>No abrir objetos innecesarios en el API</li>
+<li>Definir explícitamente roles con acceso y sus permisos de lectura, escritura y eliminación</li>
+<li>Evitar objetos accesibles por <em>todos los usuarios</em>.</li>
+<li>No confiar en la visibilidad del botón como control de seguridad.</li>
+<li>Bloquear ejecución directa por URL si no procede.</li>
+<li>Abrir objetos innecesarios en el API.</li>
 </ul>
 <h2 id="2-integracion-de-flexygo-en-un-ciclo-cicd">2. Integración de Flexygo en un ciclo CI/CD<a class="headerlink" href="#2-integracion-de-flexygo-en-un-ciclo-cicd" title="Permanent link">¶</a></h2>
-<p>Flexygo debe integrarse en un pipeline de CI/CD para garantizar calidad y seguridad:</p>
+<p>Flexygo debe integrarse en un <strong>pipeline de CI/CD</strong> para garantizar calidad y seguridad continua.</p>
 <ul>
-<li>Control de versiones mediante paquetes NuGet</li>
-<li>Usar repositorios centralizados (Git)</li>
-<li>Definir una política de Hotfix</li>
+<li>Control de versiones mediante paquetes NuGet.</li>
+<li>Usar repositorios centralizados (Git).</li>
+<li>Definir una política de Hotfix.</li>
 </ul>
 <h2 id="3-inclusion-de-tests-en-el-cicd">3. Inclusión de tests en el CI/CD<a class="headerlink" href="#3-inclusion-de-tests-en-el-cicd" title="Permanent link">¶</a></h2>
-<p>Todo desarrollo debe incluir pruebas automatizadas:</p>
+<p>Todo desarrollo debe incluir <strong>pruebas automatizadas</strong>, adaptadas a la naturaleza low-code de Flexygo.</p>
 <ul>
-<li>Tests de interfaz para garantizar funcionalidad completa y accesos</li>
-<li>Tests unitarios para probar DLLs o stored procedures</li>
-<li>Ejecución de tests nativos de Flexygo para validar estructura</li>
-<li>Tests de carga si se trabaja en entornos de muchos usuarios</li>
+<li>Desarrolla test de interfaz para garantizar la funcionalidad completa y accesos.</li>
+<li>Test unitarios para probar las DLLs o storeds.</li>
+<li>Incluye la ejecución de los test nativos de Flexygo para garantizar la estructura de la herramienta.</li>
+<li>Añade tests de carga si vas a trabajar en entornos de muchos usuarios.</li>
 </ul>
 <h2 id="4-proteccion-de-contrasenas-y-secretos">4. Protección de contraseñas y secretos<a class="headerlink" href="#4-proteccion-de-contrasenas-y-secretos" title="Permanent link">¶</a></h2>
+<p>Es obligatorio garantizar que <strong>ninguna contraseña o secreto</strong> sale al exterior.</p>
 <p><strong>Prohibido:</strong></p>
 <ul>
-<li>Hardcodear contraseñas en código, SQL o configuración</li>
-<li>Enviar credenciales por logs o errores</li>
-<li>Subir contraseñas al control de código</li>
+<li>Hardcodear contraseñas en código, SQL o configuración.</li>
+<li>Enviar credenciales por logs o errores.</li>
+<li>Subir contraseñas al control de código.</li>
 </ul>
 <p><strong>Obligatorio:</strong></p>
 <ul>
-<li>Añadir controles en el pipeline que busquen patrones de secretos</li>
-<li class="flx-warning-card">Bloquear despliegue si se detectan credenciales</li>
+<li>Añadir controles en el pipeline que:<ul>
+<li>Busquen patrones de secretos en el código.</li>
+<li>Bloqueen el despliegue si se detectan.</li>
+</ul>
+</li>
 </ul>
 <h2 id="5-auditoria">5. Auditoría<a class="headerlink" href="#5-auditoria" title="Permanent link">¶</a></h2>
 <h3 id="51-activacion-de-auditoria">5.1 Activación de auditoría<a class="headerlink" href="#51-activacion-de-auditoria" title="Permanent link">¶</a></h3>
-<p>Activar auditoría en objetos que:</p>
+<p>Activar auditoría en todos los objetos que:</p>
 <ul>
 <li>Manejen datos sensibles</li>
 <li>Permitan cambios críticos</li>
 <li>Afecten a procesos de negocio clave</li>
 </ul>
 <h2 id="6-desarrollo-seguro-de-dlls">6. Desarrollo seguro de DLLs<a class="headerlink" href="#6-desarrollo-seguro-de-dlls" title="Permanent link">¶</a></h2>
+<p>Cuando se desarrollen <strong>DLLs personalizadas</strong>, se deben cumplir estrictamente las siguientes normas.</p>
 <h3 id="61-acceso-a-base-de-datos">6.1 Acceso a base de datos<a class="headerlink" href="#61-acceso-a-base-de-datos" title="Permanent link">¶</a></h3>
-<p><strong>Usar exclusivamente:</strong></p>
+<p>Usar exclusivamente:</p>
 <ul>
 <li>SQL parametrizado</li>
-<li>Stored procedures</li>
+<li>Stored Procedures</li>
 </ul>
-<p><strong>Prohibido:</strong> SQL dinámico construido por concatenación.</p>
-<p><strong>Ejemplo incorrecto:</strong></p>
+<p>Prohibido el SQL dinámico construido por concatenación.</p>
+<p>❌ Incorrecto:</p>
 <div class="language-csharp highlight"><span class="filename">C#</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SELECT * FROM Clientes WHERE Id = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 </span></code></pre></div>
-<p><strong>Ejemplo correcto:</strong></p>
+<p>✅ Correcto:</p>
 <div class="language-csharp highlight"><span class="filename">C#</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">"GetClienteById"</span><span class="p">,</span><span class="w"> </span><span class="n">conn</span><span class="p">);</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">cmd</span><span class="p">.</span><span class="n">CommandType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CommandType</span><span class="p">.</span><span class="n">StoredProcedure</span><span class="p">;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">"@Id"</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
 </span></code></pre></div>
-<h2 id="7-checklist-de-revision-previa-a-produccion">7. Checklist de revisión previa a producción<a class="headerlink" href="#7-checklist-de-revision-previa-a-produccion" title="Permanent link">¶</a></h2>
+<h2 id="7-checklist-de-revision">7. Checklist de revisión<a class="headerlink" href="#7-checklist-de-revision" title="Permanent link">¶</a></h2>
+<p>Antes de desplegar a producción asegúrate que cumples estos puntos:</p>
 <ul>
-<li>☐ Se aplica mínimo privilegio en todos los objetos</li>
-<li>☐ Flexygo integrado en CI/CD</li>
-<li>☐ Tests ejecutados correctamente en el pipeline</li>
-<li>☐ No existen contraseñas ni secretos expuestos</li>
-<li>☐ Auditoría activada donde corresponde</li>
-<li>☐ DLLs usan SQL parametrizado o stored procedures</li>
+<li>[ ] Se aplica mínimo privilegio en todos los objetos</li>
+<li>[ ] Flexygo integrado en CI/CD</li>
+<li>[ ] Tests ejecutados correctamente en el pipeline</li>
+<li>[ ] No existen contraseñas ni secretos expuestos</li>
+<li>[ ] Auditoría activada donde corresponde</li>
+<li>[ ] DLLs usan SQL parametrizado o stored procedures</li>
 </ul>
 
 
@@ -8052,9 +8058,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-checklist-de-revision-previa-a-produccion" class="md-nav__link">
+  <a href="#7-checklist-de-revision" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Checklist de revisión previa a producción
+      7. Checklist de revisión
     </span>
   </a>
   

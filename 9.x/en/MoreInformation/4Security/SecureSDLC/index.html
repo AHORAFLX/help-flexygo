@@ -17,7 +17,7 @@
     
     
       
-        <title>Secure Development Life Cycle (SDLC) - Flexygo Docs</title>
+        <title>Secure Development Lifecycle (SDLC) - Flexygo Docs</title>
       
     
     
@@ -109,7 +109,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#secure-development-life-cycle-sdlc" class="md-skip">
+        <a href="#secure-development-lifecycle-sdlc" class="md-skip">
           Skip to content
         </a>
       
@@ -7433,7 +7433,7 @@
   
   
   <span class="md-ellipsis">
-    Secure Configuration Guide: Flexygo
+    Secure Configuration Guide
     
   </span>
   
@@ -7488,7 +7488,7 @@
   
   
   <span class="md-ellipsis">
-    Secure Development Life Cycle (SDLC)
+    Secure Development Lifecycle (SDLC)
     
   </span>
   
@@ -7501,7 +7501,7 @@
   
   
   <span class="md-ellipsis">
-    Secure Development Life Cycle (SDLC)
+    Secure Development Lifecycle (SDLC)
     
   </span>
   
@@ -7542,55 +7542,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-security-controls-and-implemented-procedures" class="md-nav__link">
+  <a href="#3-security-controls-and-procedures-implemented" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Security controls and implemented procedures
+      3. Security controls and procedures implemented
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Security controls and implemented procedures">
+    <nav class="md-nav" aria-label="3. Security controls and procedures implemented">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#31-environment-preparation-steps-12" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Environment preparation (steps 1–2)
+      3.1. Environment preparation (steps 1–2)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-compilation-and-dependency-management-steps-36" class="md-nav__link">
+  <a href="#32-build-and-dependency-management-steps-36" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Compilation and dependency management (steps 3–6)
+      3.2. Build and dependency management (steps 3–6)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-testing-validation-and-technical-audit-steps-1114-2325-30" class="md-nav__link">
+  <a href="#33-testing-validation-and-technical-auditing-steps-1114-2325-30" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Testing, validation and technical audit (steps 11–14, 23–25, 30)
+      3.3. Testing, validation and technical auditing (steps 11–14, 23–25, 30)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#34-artifact-generation-and-documentation-steps-1622" class="md-nav__link">
+  <a href="#34-artifact-and-documentation-generation-steps-1622" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4 Artifact generation and documentation (steps 16–22)
+      3.4. Artifact and documentation generation (steps 16–22)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#35-backup-and-configuration-control-steps-26-and-1215" class="md-nav__link">
+  <a href="#35-backup-and-configuration-control-step-26-and-1215" class="md-nav__link">
     <span class="md-ellipsis">
-      3.5 Backup and configuration control (steps 26 and 12–15)
+      3.5. Backup and configuration control (step 26 and 12–15)
     </span>
   </a>
   
@@ -7599,16 +7599,16 @@
           <li class="md-nav__item">
   <a href="#36-dynamic-security-scanning-and-validation-secdevops" class="md-nav__link">
     <span class="md-ellipsis">
-      3.6 Dynamic security scanning and validation (SecDevOps)
+      3.6. Dynamic security scanning and validation (SecDevOps)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#37-artifact-publication-and-distribution-control" class="md-nav__link">
+  <a href="#37-artifact-publishing-and-distribution-control" class="md-nav__link">
     <span class="md-ellipsis">
-      3.7 Artifact publication and distribution control
+      3.7. Artifact publishing and distribution control
     </span>
   </a>
   
@@ -7658,7 +7658,7 @@
   
   
   <span class="md-ellipsis">
-    Vulnerability Management
+    Vulnerability management
     
   </span>
   
@@ -7882,77 +7882,106 @@
 
 
 
-<h1 id="secure-development-life-cycle-sdlc">Secure Development Life Cycle (SDLC)<a class="headerlink" href="#secure-development-life-cycle-sdlc" title="Permanent link">¶</a></h1>
+<h1 id="secure-development-lifecycle-sdlc">Secure Development Lifecycle (SDLC)<a class="headerlink" href="#secure-development-lifecycle-sdlc" title="Permanent link">¶</a></h1>
 <h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">¶</a></h2>
-<p>The Flexygo project implements a formally structured Secure Development Life Cycle, integrating security practices, quality control and traceability at every phase of the process. The continuous integration (CI/CD) system documents and executes more than 30 automated steps that ensure the integrity, availability and security of the software.</p>
+<p>The Flexygo project implements a formally structured <strong>Secure Development Lifecycle (SDLC)</strong>, integrating security practices, quality control and traceability into every phase of the build, integration and deployment process.
+The continuous integration (CI/CD) system documents and runs more than 30 automated steps that ensure the <strong>integrity, availability and security of the software</strong> at every stage of the development cycle.</p>
+<p>The automation environment guarantees that every build follows a reproducible flow, with security controls, code analysis, unit tests, secure packaging and periodic artifact backups.</p>
 <h2 id="2-general-flow-of-the-applied-sdlc">2. General flow of the applied SDLC<a class="headerlink" href="#2-general-flow-of-the-applied-sdlc" title="Permanent link">¶</a></h2>
-<p>The process is structured in sequential stages, with each step's execution conditioned by the success of the previous ones:</p>
+<p>Flexygo's development process is structured into <strong>sequential stages with dependencies conditioned on the success of the previous steps</strong>, guaranteeing a secure, error-free flow before reaching the publishing environment.</p>
+<p><strong>Main phases:</strong></p>
 <ol>
 <li>Environment preparation and cleanup</li>
-<li>Controlled code compilation</li>
+<li>Controlled code build</li>
 <li>Secure dependency management</li>
-<li>Validation and unit testing</li>
+<li>Validation and unit tests</li>
 <li>Quality and coverage analysis</li>
-<li>Artifact generation and publication</li>
+<li>Artifact generation and publishing</li>
 <li>Automated technical documentation</li>
 <li>Version backup and retention</li>
 <li>Secure configuration closure</li>
 </ol>
-<h2 id="3-security-controls-and-implemented-procedures">3. Security controls and implemented procedures<a class="headerlink" href="#3-security-controls-and-implemented-procedures" title="Permanent link">¶</a></h2>
-<h3 id="31-environment-preparation-steps-12">3.1 Environment preparation (steps 1–2)<a class="headerlink" href="#31-environment-preparation-steps-12" title="Permanent link">¶</a></h3>
+<p>Each phase includes verifiable controls and evidence demonstrating the application of security and quality measures.</p>
+<h2 id="3-security-controls-and-procedures-implemented">3. Security controls and procedures implemented<a class="headerlink" href="#3-security-controls-and-procedures-implemented" title="Permanent link">¶</a></h2>
+<h3 id="31-environment-preparation-steps-12">3.1. Environment preparation (steps 1–2)<a class="headerlink" href="#31-environment-preparation-steps-12" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Connection string cleanup</strong>: a PowerShell script removes or masks credentials in <code>web.config</code> before compiling</li>
-<li><strong>Source code backup</strong>: automated backup prior to compilation</li>
+<li><strong>Cleaning connection strings in web.config</strong>: the automated process runs a PowerShell script that removes or masks sensitive connection strings before starting the build, preventing accidental credential exposure. This control ensures compliance with the principle of <strong>minimizing sensitive information in development environments</strong>.</li>
+<li><strong>Source code backup</strong>: before building, an automated backup of the source code is made, preserving a restore point in case of later alterations or errors. The backup mechanism is conditioned on the success of the previous steps, ensuring only valid versions are stored.</li>
 </ul>
-<h3 id="32-compilation-and-dependency-management-steps-36">3.2 Compilation and dependency management (steps 3–6)<a class="headerlink" href="#32-compilation-and-dependency-management-steps-36" title="Permanent link">¶</a></h3>
+<h3 id="32-build-and-dependency-management-steps-36">3.2. Build and dependency management (steps 3–6)<a class="headerlink" href="#32-build-and-dependency-management-steps-36" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>NuGet package restore</strong>: from controlled sources, with verified and locked versions</li>
-<li><strong>Solution build</strong>: through MSBuild with full traceability</li>
-<li><strong>Configuration publication</strong>: through SQLPACKAGE with conditioned validation</li>
+<li><strong>NuGet package restoration</strong>: packages are obtained from controlled sources, with verified and locked versions to ensure the <strong>reproducibility and integrity of the build environment</strong>.</li>
+<li><strong>Solution build (.NET / MSBuild)</strong>: the project is built automatically using MSBuild, ensuring full traceability from source code to the generated binary.</li>
+<li><strong>Publishing configurations and databases (CONFIG DB and DATA DB)</strong>: the publishing scripts use SQLPACKAGE and run controlled build processes, only validated if the previous steps succeeded, applying the principle of <strong>build-chain integrity</strong>.</li>
 </ul>
-<h3 id="33-testing-validation-and-technical-audit-steps-1114-2325-30">3.3 Testing, validation and technical audit (steps 11–14, 23–25, 30)<a class="headerlink" href="#33-testing-validation-and-technical-audit-steps-1114-2325-30" title="Permanent link">¶</a></h3>
+<h3 id="33-testing-validation-and-technical-auditing-steps-1114-2325-30">3.3. Testing, validation and technical auditing (steps 11–14, 23–25, 30)<a class="headerlink" href="#33-testing-validation-and-technical-auditing-steps-1114-2325-30" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Unit testing</strong>: Visual Studio Test (VSTest) for the main modules</li>
-<li><strong>Code coverage</strong>: JetBrains dotCover for validation metrics</li>
-<li><strong>Static analysis</strong>: SonarQube audits TypeScript, T-SQL and VB modules looking for vulnerabilities, bad practices or insecure code</li>
-</ul>
+<li><strong>Building and running service and interface tests</strong>: unit tests are run using <strong>Visual Studio Test (VSTest)</strong>, integrated into the pipeline. These tests verify the functionality of the main modules and the interoperability between services. Test results are automatically collected and analyzed to assess compliance with quality criteria.</li>
+<li><strong>Code coverage</strong>: the system uses <strong>JetBrains dotCover</strong> to collect coverage metrics, allowing the degree of test validation of the code to be measured. This step only runs if the build succeeds, avoiding reports on inconsistent versions.</li>
+<li>
+<p><strong>Static code analysis (SonarQube)</strong>: although some analyses appear disabled in the screenshots, the SDLC process considers their execution part of the full cycle. The TypeScript, T-SQL and VB modules are audited for vulnerabilities, poor practices or insecure code. This provides evidence of compliance with the <strong>static analysis controls of OWASP SAMM and ISO/IEC 27034</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/SecureSDLC/1.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/SecureSDLC/1.png"></a>
 <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/SecureSDLC/2.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/SecureSDLC/2.png"></a></p>
-<h3 id="34-artifact-generation-and-documentation-steps-1622">3.4 Artifact generation and documentation (steps 16–22)<a class="headerlink" href="#34-artifact-generation-and-documentation-steps-1622" title="Permanent link">¶</a></h3>
+</li>
+</ul>
+<h3 id="34-artifact-and-documentation-generation-steps-1622">3.4. Artifact and documentation generation (steps 16–22)<a class="headerlink" href="#34-artifact-and-documentation-generation-steps-1622" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Automated changelog</strong>: through PowerShell for traceability between versions</li>
-<li><strong>Secure packaging</strong>: ZIP APP, ZIP DOCU, NuGet package with versioning and digital signature</li>
-<li><strong>Automated technical documentation</strong>:<ul>
-<li>JavaScript: YUIDoc</li>
-<li>VB: GhostDoc</li>
-<li>SQL: TeamCity SQLDoc</li>
+<li><strong>Automated changelog</strong>: generated through PowerShell, ensuring traceability between versions and facilitating change audits.</li>
+<li><strong>Secure packaging (ZIP APP, ZIP DOCU, NuGet package)</strong>: artifacts are packaged automatically and versioned, including a build number and an internal digital signature. This process guarantees the non-repudiation and integrity of the distributed artifacts.</li>
+<li>
+<p><strong>Automatic technical documentation generation</strong>: three types of documentation are generated:</p>
+<ul>
+<li><strong>JS</strong>: through Node.js (YUIDoc)</li>
+<li><strong>VB</strong>: through GhostDoc</li>
+<li><strong>SQL</strong>: through TeamCity SQLDoc</li>
+</ul>
+<p>This ensures documentation consistency and technical traceability between code and documentation.</p>
+</li>
+</ul>
+<h3 id="35-backup-and-configuration-control-step-26-and-1215">3.5. Backup and configuration control (step 26 and 12–15)<a class="headerlink" href="#35-backup-and-configuration-control-step-26-and-1215" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Post-publication backup copy</strong>: automatic copies are generated after publishing each build, ensuring the preservation of final artifacts and deployment evidence.</li>
+<li><strong>Configuration file management</strong>: the system cleans and replaces config files at different points of the pipeline (start and close) to ensure that:<ul>
+<li>No credentials or keys are exposed in test environments.</li>
+<li>Sensitive configurations stay out of source control.</li>
 </ul>
 </li>
 </ul>
-<h3 id="35-backup-and-configuration-control-steps-26-and-1215">3.5 Backup and configuration control (steps 26 and 12–15)<a class="headerlink" href="#35-backup-and-configuration-control-steps-26-and-1215" title="Permanent link">¶</a></h3>
-<ul>
-<li>Post-publication backup copy</li>
-<li>Configuration file management to avoid credential exposure</li>
-</ul>
-<h3 id="36-dynamic-security-scanning-and-validation-secdevops">3.6 Dynamic security scanning and validation (SecDevOps)<a class="headerlink" href="#36-dynamic-security-scanning-and-validation-secdevops" title="Permanent link">¶</a></h3>
-<p>The SecDevOps pipeline includes:</p>
+<h3 id="36-dynamic-security-scanning-and-validation-secdevops">3.6. Dynamic security scanning and validation (SecDevOps)<a class="headerlink" href="#36-dynamic-security-scanning-and-validation-secdevops" title="Permanent link">¶</a></h3>
+<p>The <strong>SecDevOps</strong> pipeline, integrated within the development cycle, is responsible for validating the software's <strong>resilience against vulnerabilities and exploits</strong> before it is published. The flow includes the following automated steps:</p>
 <ol>
-<li>Downloading the installer</li>
-<li>Installing Flexygo in an isolated environment</li>
-<li>Running automated security tests (Python script <code>flexygoscan.py</code>) covering authentication validation, SQL injection, XSS and session manipulation</li>
-<li>Uninstalling Flexygo</li>
-<li>Removing the test database</li>
+<li><strong>Download the installer</strong>: retrieves the latest compiled version of the software from the internal repositories, ensuring tests run against the final version rather than intermediate environments.</li>
+<li><strong>Install Flexygo</strong>: automates installing the application in an isolated test environment that replicates the production infrastructure.</li>
+<li><strong>Run exploit (automated security testing)</strong>: a Python script (<code>flexygoscan.py</code>) is run that performs controlled penetration tests against the deployed instance. These tests include validations of authentication, SQL injection, XSS and session manipulation, serving as evidence of an active <strong>dynamic application security testing (DAST)</strong> process.</li>
+<li><strong>Uninstall Flexygo</strong>: the test environment is automatically cleaned up once the analysis finishes, ensuring no execution artifacts or sensitive data remain.</li>
+<li><strong>Delete the test database</strong>: as the final phase, the database used during the tests is securely deleted, preserving confidentiality and preventing information exposure.</li>
 </ol>
+<p>This process constitutes key evidence of operational security, demonstrating that Flexygo applies active controls for early vulnerability detection before releasing versions.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/SecureSDLC/3.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/SecureSDLC/3.png"></a></p>
-<h3 id="37-artifact-publication-and-distribution-control">3.7 Artifact publication and distribution control<a class="headerlink" href="#37-artifact-publication-and-distribution-control" title="Permanent link">¶</a></h3>
-<ul>
-<li>Publication to the corporate repository (nuget.ahorabh.com) and the official one (nuget.org)</li>
-<li>Marking artifacts as "pinned" to prevent accidental deletion</li>
+<h3 id="37-artifact-publishing-and-distribution-control">3.7. Artifact publishing and distribution control<a class="headerlink" href="#37-artifact-publishing-and-distribution-control" title="Permanent link">¶</a></h3>
+<p>The final publishing flow includes validating and deploying NuGet packages to authenticated repositories:</p>
+<ol>
+<li><strong>Publishing internal and external NuGet artifacts</strong>:<ul>
+<li>Ahora's corporate repository (<code>nuget.ahorabh.com</code>)</li>
+<li>Microsoft's official NuGet repository (<code>nuget.org</code>)</li>
 </ul>
+</li>
+<li>Each publication is conditioned on the successful completion of all previous steps, ensuring that only verified and audited artifacts are distributed.</li>
+<li><strong>Marking artifacts as "pinned"</strong>: the final PowerShell process locks critical versions in the internal repository, preventing their accidental deletion or overwriting. This control ensures the traceability and availability of certified versions.</li>
+</ol>
 <h2 id="4-audits-and-traceability">4. Audits and traceability<a class="headerlink" href="#4-audits-and-traceability" title="Permanent link">¶</a></h2>
-<p>Every stage is logged in the CI system, allowing execution times, test results, logs, versions and configuration changes to be audited. The pipeline blocks progress to the next phase if a step does not run successfully.</p>
+<p>Every SDLC stage is logged in the continuous integration system, making it possible to audit:</p>
+<ul>
+<li>Execution times</li>
+<li>Test results</li>
+<li>Build and publishing logs</li>
+<li>Generated versions</li>
+<li>Configuration changes</li>
+</ul>
+<p>The pipeline prevents moving on to the next phase if a step doesn't run correctly, which constitutes a security flow control and evidence of compliance with DevSecOps best practices.</p>
 <h2 id="5-conclusions">5. Conclusions<a class="headerlink" href="#5-conclusions" title="Permanent link">¶</a></h2>
-<p>The model incorporates security, control and traceability mechanisms aligned with international standards such as OWASP SAMM, ISO/IEC 27034 and NIST SP 800-218 (SSDF), providing guarantees of integrity, traceability and security for the software produced.</p>
+<p>Flexygo's secure development model incorporates security, control and traceability mechanisms across the entire software lifecycle. The evidence shows the systematic application of information protection measures, version control, code auditing and artifact validation.</p>
+<p>This process complies with the principles of a <strong>secure SDLC</strong>, aligned with international standards such as <strong>OWASP SAMM</strong>, <strong>ISO/IEC 27034</strong> and <strong>NIST SP 800-218 (SSDF)</strong>, providing guarantees of integrity, traceability and security for the software produced.</p>
 
 
 
@@ -8008,55 +8037,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-security-controls-and-implemented-procedures" class="md-nav__link">
+  <a href="#3-security-controls-and-procedures-implemented" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Security controls and implemented procedures
+      3. Security controls and procedures implemented
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Security controls and implemented procedures">
+    <nav class="md-nav" aria-label="3. Security controls and procedures implemented">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#31-environment-preparation-steps-12" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Environment preparation (steps 1–2)
+      3.1. Environment preparation (steps 1–2)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-compilation-and-dependency-management-steps-36" class="md-nav__link">
+  <a href="#32-build-and-dependency-management-steps-36" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Compilation and dependency management (steps 3–6)
+      3.2. Build and dependency management (steps 3–6)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-testing-validation-and-technical-audit-steps-1114-2325-30" class="md-nav__link">
+  <a href="#33-testing-validation-and-technical-auditing-steps-1114-2325-30" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Testing, validation and technical audit (steps 11–14, 23–25, 30)
+      3.3. Testing, validation and technical auditing (steps 11–14, 23–25, 30)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#34-artifact-generation-and-documentation-steps-1622" class="md-nav__link">
+  <a href="#34-artifact-and-documentation-generation-steps-1622" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4 Artifact generation and documentation (steps 16–22)
+      3.4. Artifact and documentation generation (steps 16–22)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#35-backup-and-configuration-control-steps-26-and-1215" class="md-nav__link">
+  <a href="#35-backup-and-configuration-control-step-26-and-1215" class="md-nav__link">
     <span class="md-ellipsis">
-      3.5 Backup and configuration control (steps 26 and 12–15)
+      3.5. Backup and configuration control (step 26 and 12–15)
     </span>
   </a>
   
@@ -8065,16 +8094,16 @@
           <li class="md-nav__item">
   <a href="#36-dynamic-security-scanning-and-validation-secdevops" class="md-nav__link">
     <span class="md-ellipsis">
-      3.6 Dynamic security scanning and validation (SecDevOps)
+      3.6. Dynamic security scanning and validation (SecDevOps)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#37-artifact-publication-and-distribution-control" class="md-nav__link">
+  <a href="#37-artifact-publishing-and-distribution-control" class="md-nav__link">
     <span class="md-ellipsis">
-      3.7 Artifact publication and distribution control
+      3.7. Artifact publishing and distribution control
     </span>
   </a>
   
