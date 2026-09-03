@@ -2,50 +2,52 @@
 
 ## 1. Principio de mínimo privilegio (obligatorio)
 
-Todo objeto, proceso o personalización debe aplicar el principio de mínimo privilegio:
+Todo objeto, proceso o personalización **DEBE** crearse aplicando el principio de **mínimo privilegio**.
 
-* Definir explícitamente roles con permisos de lectura, escritura y eliminación
-* Evitar objetos accesibles por todos los usuarios
-* No confiar en la visibilidad del botón como control de seguridad
-* Bloquear ejecución directa por URL si no procede
-* No abrir objetos innecesarios en el API
+* Definir explícitamente roles con acceso y sus permisos de lectura, escritura y eliminación
+* Evitar objetos accesibles por *todos los usuarios*.
+* No confiar en la visibilidad del botón como control de seguridad.
+* Bloquear ejecución directa por URL si no procede.
+* Abrir objetos innecesarios en el API.
 
 ## 2. Integración de Flexygo en un ciclo CI/CD
 
-Flexygo debe integrarse en un pipeline de CI/CD para garantizar calidad y seguridad:
+Flexygo debe integrarse en un **pipeline de CI/CD** para garantizar calidad y seguridad continua.
 
-* Control de versiones mediante paquetes NuGet
-* Usar repositorios centralizados (Git)
-* Definir una política de Hotfix
+* Control de versiones mediante paquetes NuGet.
+* Usar repositorios centralizados (Git).
+* Definir una política de Hotfix.
 
 ## 3. Inclusión de tests en el CI/CD
 
-Todo desarrollo debe incluir pruebas automatizadas:
+Todo desarrollo debe incluir **pruebas automatizadas**, adaptadas a la naturaleza low-code de Flexygo.
 
-* Tests de interfaz para garantizar funcionalidad completa y accesos
-* Tests unitarios para probar DLLs o stored procedures
-* Ejecución de tests nativos de Flexygo para validar estructura
-* Tests de carga si se trabaja en entornos de muchos usuarios
+* Desarrolla test de interfaz para garantizar la funcionalidad completa y accesos.
+* Test unitarios para probar las DLLs o storeds.
+* Incluye la ejecución de los test nativos de Flexygo para garantizar la estructura de la herramienta.
+* Añade tests de carga si vas a trabajar en entornos de muchos usuarios.
 
 ## 4. Protección de contraseñas y secretos
 
+Es obligatorio garantizar que **ninguna contraseña o secreto** sale al exterior.
+
 **Prohibido:**
 
-* Hardcodear contraseñas en código, SQL o configuración
-* Enviar credenciales por logs o errores
-* Subir contraseñas al control de código
+* Hardcodear contraseñas en código, SQL o configuración.
+* Enviar credenciales por logs o errores.
+* Subir contraseñas al control de código.
 
 **Obligatorio:**
 
-* Añadir controles en el pipeline que busquen patrones de secretos
-* Bloquear despliegue si se detectan credenciales
-{: .flx-warning-card }
+* Añadir controles en el pipeline que:
+    * Busquen patrones de secretos en el código.
+    * Bloqueen el despliegue si se detectan.
 
 ## 5. Auditoría
 
 ### 5.1 Activación de auditoría
 
-Activar auditoría en objetos que:
+Activar auditoría en todos los objetos que:
 
 * Manejen datos sensibles
 * Permitan cambios críticos
@@ -53,22 +55,24 @@ Activar auditoría en objetos que:
 
 ## 6. Desarrollo seguro de DLLs
 
+Cuando se desarrollen **DLLs personalizadas**, se deben cumplir estrictamente las siguientes normas.
+
 ### 6.1 Acceso a base de datos
 
-**Usar exclusivamente:**
+Usar exclusivamente:
 
 * SQL parametrizado
-* Stored procedures
+* Stored Procedures
 
-**Prohibido:** SQL dinámico construido por concatenación.
+Prohibido el SQL dinámico construido por concatenación.
 
-**Ejemplo incorrecto:**
+❌ Incorrecto:
 
 ```csharp
 string sql = "SELECT * FROM Clientes WHERE Id = " + id;
 ```
 
-**Ejemplo correcto:**
+✅ Correcto:
 
 ```csharp
 SqlCommand cmd = new SqlCommand("GetClienteById", conn);
@@ -76,11 +80,13 @@ cmd.CommandType = CommandType.StoredProcedure;
 cmd.Parameters.AddWithValue("@Id", id);
 ```
 
-## 7. Checklist de revisión previa a producción
+## 7. Checklist de revisión
 
-* ☐ Se aplica mínimo privilegio en todos los objetos
-* ☐ Flexygo integrado en CI/CD
-* ☐ Tests ejecutados correctamente en el pipeline
-* ☐ No existen contraseñas ni secretos expuestos
-* ☐ Auditoría activada donde corresponde
-* ☐ DLLs usan SQL parametrizado o stored procedures
+Antes de desplegar a producción asegúrate que cumples estos puntos:
+
+* [ ] Se aplica mínimo privilegio en todos los objetos
+* [ ] Flexygo integrado en CI/CD
+* [ ] Tests ejecutados correctamente en el pipeline
+* [ ] No existen contraseñas ni secretos expuestos
+* [ ] Auditoría activada donde corresponde
+* [ ] DLLs usan SQL parametrizado o stored procedures
