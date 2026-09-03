@@ -1,27 +1,19 @@
 # What is Flexygo's SBOM and why do we publish it?
 
-## Introduction
+At Flexygo we maintain an ongoing commitment to the transparency, security and trust that our customers place in us. With that goal in mind, we have decided to publish our platform's **SBOM (Software Bill of Materials)**, a document that details all the software components — both our own and third-party — that are part of the solutions built with Flexygo.
 
-Flexygo has decided to publish the **SBOM (Software Bill of Materials)** of its platform as part of its commitment to transparency and security. This document lists every software component —both proprietary and third-party— that is part of the solutions developed with Flexygo.
+An **SBOM** can be understood as the digital equivalent of a bill of materials in manufacturing. In a software context, this document structurally records every library, module and dependency involved in developing, running and maintaining an application. This provides a complete view of the product's technical composition, which is essential to guarantee its traceability and strengthen the security of the digital supply chain.
 
-## What is an SBOM?
+Publishing the SBOM follows an increasingly widespread practice in the technology industry, driven by the growing need to control the risks associated with external dependencies and to comply with new international standards on cybersecurity and regulatory compliance. Bodies such as the United States' **National Telecommunications and Information Administration (NTIA)** and the **European Union Agency for Cybersecurity (ENISA)** actively promote the adoption of SBOMs as a key tool to increase the transparency and resilience of computer systems.
 
-An SBOM works as the digital equivalent of a bill of materials in the industrial field. In software, it documents in a structured way every library, module and dependency involved in the development, execution and maintenance of an application, providing a complete view of the product's technical composition.
+With this in mind, the decision to publish Flexygo's SBOM pursues three main objectives. First, **guaranteeing transparency**, giving our customers, auditors and partners the ability to know precisely which components make up the platform. This information enables compliance analysis, license verification and technological compatibility checks with other environments. Second, **strengthening security**, by making it easier to detect and manage vulnerabilities associated with external dependencies or outdated versions. Having an up-to-date SBOM makes it possible to act quickly on security alerts and apply preventive measures effectively. And third, **meeting regulatory and technology-governance requirements**, which are becoming increasingly strict in both the public and private sectors.
 
-## Regulatory context
+Having an audited SBOM demonstrates a genuine commitment to secure development best practices and to the traceability of software throughout its entire lifecycle.
 
-This publication responds to practices that are increasingly widespread across the technology industry, driven by organizations such as the **National Telecommunications and Information Administration (NTIA)** in the United States and the **European Union Agency for Cybersecurity (ENISA)**, which promote SBOMs as key tools to increase transparency and resilience.
+Publishing our SBOM is not a simple transparency gesture, but a **strategic measure** that strengthens trust in the Flexygo platform. It represents a decisive step towards a more open, verifiable and sustainable development model, where users can have full certainty about the origin, licensing and security of every component. It also lets us improve our own internal quality-control, version-management and dependency-monitoring processes, strengthening the foundation on which our technology solutions evolve.
 
-## Three main goals
+In short, publishing Flexygo's SBOM reflects our commitment to responsible innovation and technical excellence. We believe that transparency and traceability are not merely regulatory obligations, but fundamental values that help build a more trustworthy, secure and collaborative digital ecosystem.
 
-1. **Guarantee transparency**: allow customers, auditors and partners to know precisely the platform's components, carrying out compliance analysis and verifying licenses.
-2. **Strengthen security**: facilitate the detection and management of vulnerabilities associated with external dependencies or outdated versions, allowing a quick response to alerts.
-3. **Meet regulatory requirements**: demonstrate a commitment to secure development best practices and software traceability.
+## Attachment
 
-## Strategic benefits
-
-Publishing the SBOM is a strategic measure that strengthens trust in the platform, allowing users to verify the origin, licenses and security of each component. It also improves Flexygo's internal quality control and version management processes.
-
-## Conclusion
-
-This initiative reflects Flexygo's commitment to responsible innovation and technical excellence, considering transparency and traceability to be fundamental values for building a more trustworthy and collaborative digital ecosystem.
+You can download [Flexygo's SBOM](./readme/utils/sbom.json) in CycloneDX (JSON) format.
