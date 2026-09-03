@@ -8,7 +8,7 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
 
 <ul class="fh-home-cards">
     <li class="fh-home-card">
-        <a href="./Modules/Modules">
+        <a href="./Help/Modules/Modules">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-modules"></i>
             </span>
@@ -17,7 +17,7 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./Programming/Controls">
+        <a href="./Help/Programming/Controls">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-vcard"></i>
             </span>
@@ -26,7 +26,7 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./Information/GoodPractices">
+        <a href="./Help/Information/GoodPractices">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-select-1"></i>
             </span>
@@ -35,7 +35,7 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./OfflineApp/AccessandDescription">
+        <a href="./Help/OfflineApp/AccessandDescription">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-mobile"></i>
             </span>
@@ -51,7 +51,7 @@ Flexygo está desarrollado sobre el framework .NET Core, proporcionando una base
 
 ### Front End
 
-Al desarrollar el front-end de un producto Flexygo podrás utilizar las propias herramientas de Flexygo, como los [módulos](./Modules/Modules) y [componentes](./Components) predefinidos. Además, tendrás acceso a HTML, CSS, JS y [Bootstrap](https://getbootstrap.com/).
+Al desarrollar el front-end de un producto Flexygo podrás utilizar las propias herramientas de Flexygo, como los [módulos](./Help/Modules/Modules) y componentes predefinidos. Además, tendrás acceso a HTML, CSS, JS y [Bootstrap](https://getbootstrap.com/).
 
 ### Back End
 
@@ -65,24 +65,28 @@ Mediante la configuración de estos objetos reutilizables, puedes crear rápidam
 
 ## Módulos
 
-Los productos Flexygo se construyen utilizando [módulos](./Modules/Modules), que son componentes fáciles de configurar con múltiples capacidades, como mostrar [gráficos](./Modules/Chart.md), crear un [Kanban](./Modules/Kanban), mostrar [mapas](./Modules/Maps) con ubicaciones y [rutas](./Modules/Maps#routes), y muchas funcionalidades más.
+Los productos Flexygo se construyen utilizando [módulos](./Help/Modules/Modules), que son componentes fáciles de configurar con múltiples capacidades, como mostrar [gráficos](./Help/Modules/Chart.md), crear un [Kanban](./Help/Modules/Kanban), mostrar [mapas](./Help/Modules/Maps) con ubicaciones y [rutas](./Help/Modules/Maps#routes), y muchas funcionalidades más.
 
 ## Creación de informes
 
-Flexygo también ofrece la posibilidad de crear tus propios [informes](./Reporting/Newsandversionnotes.md) en HTML, Power BI, DevExpress y Crystal Reports.
+Flexygo también ofrece la posibilidad de crear tus propios informes en HTML, Power BI, DevExpress y Crystal Reports.
 
 ## Aplicación Offline
 
-Flexygo también ofrece la posibilidad de crear una [aplicación móvil](./OfflineApp/AccessandDescription) independiente a la que se puede acceder sin conexión, permitiendo continuar trabajando incluso en lugares remotos con baja conectividad.
+Flexygo también ofrece la posibilidad de crear una [aplicación móvil](./Help/OfflineApp/AccessandDescription) independiente a la que se puede acceder sin conexión, permitiendo continuar trabajando incluso en lugares remotos con baja conectividad.
 
 ### Tecnologías
 
-La [aplicación Offline](./OfflineApp/AccessandDescription) de Flexygo utiliza [Ionic](https://ionicframework.com/docs/v4/components) como base, junto con [Capacitor](https://capacitorjs.com/docs) y [Stencil](https://stenciljs.com/). También utiliza [SQLite](https://sqlite.org/) como sistema de almacenamiento de los datos que se sincronizan con tu proyecto Flexygo.
+La [aplicación Offline](./Help/OfflineApp/AccessandDescription) de Flexygo utiliza [Ionic](https://ionicframework.com/docs/v4/components) como base, junto con [Capacitor](https://capacitorjs.com/docs) y [Stencil](https://stenciljs.com/). También utiliza [SQLite](https://sqlite.org/) como sistema de almacenamiento de los datos que se sincronizan con tu proyecto Flexygo.
 
 ### Desarrollo
 
-El desarrollo de la [aplicación Offline](./OfflineApp/AccessandDescription) de Flexygo requiere un mayor conocimiento de programación, ya que las páginas deben construirse utilizando HTML, CSS, JS e Ionic.
+El desarrollo de la [aplicación Offline](./Help/OfflineApp/AccessandDescription) de Flexygo requiere un mayor conocimiento de programación, ya que las páginas deben construirse utilizando HTML, CSS, JS e Ionic.
 
 ### Seguimiento
 
-La [aplicación Offline](./OfflineApp/AccessandDescription) de Flexygo dispone de funcionalidad de [seguimiento](./OfflineApp/Trackingconfiguration), que permite obtener los datos exactos de localización de los dispositivos configurados incluso cuando la aplicación está cerrada. Puede configurarse para realizar el seguimiento únicamente durante determinados periodos de tiempo.
+La [aplicación Offline](./Help/OfflineApp/AccessandDescription) de Flexygo dispone de funcionalidad de [seguimiento](./Help/OfflineApp/Trackingconfiguration), que permite obtener los datos exactos de localización de los dispositivos configurados incluso cuando la aplicación está cerrada. Puede configurarse para realizar el seguimiento únicamente durante determinados periodos de tiempo.
+
+## Más información
+
+Además de la documentación técnica recogida en **Ayuda**, en la sección **Más información** de este mismo menú encontrarás contenido adicional sobre Flexygo: preguntas frecuentes, curiosidades ("¿Sabías que...?"), notas de versión, guías de seguridad y del ciclo de CI/CD, entre otros.

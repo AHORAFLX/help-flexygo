@@ -4,7 +4,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
 
 <ul class="fh-home-cards">
     <li class="fh-home-card">
-        <a href="./Modules/Modules">
+        <a href="./Help/Modules/Modules">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-modules"></i>
             </span>
@@ -13,7 +13,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./Programming/Controls">
+        <a href="./Help/Programming/Controls">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-vcard"></i>
             </span>
@@ -22,7 +22,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./Information/GoodPractices">
+        <a href="./Help/Information/GoodPractices">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-select-1"></i>
             </span>
@@ -31,7 +31,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
         </a>
     </li>
     <li class="fh-home-card">
-        <a href="./OfflineApp/AccessandDescription">
+        <a href="./Help/OfflineApp/AccessandDescription">
             <span class="fh-home-card-icon">
                 <i class="flx-icon icon-mobile"></i>
             </span>
@@ -45,7 +45,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
 Flexygo is engineered on the .NET core framework, providing a modern, cross-platform, and high-performance foundation. Its native compatibility with both SQL Server and Oracle databases offers significant architectural flexibility.
 
 ### Front End
-When developing a Flexygo product front-end you'll be able to use Flexygo's own tools like prebuilt [modules](./Modules/Modules) and [components](./Components). Also you'll have acces to HTML, CSS, JS and [Bootstrap](https://getbootstrap.com/).
+When developing a Flexygo product front-end you'll be able to use Flexygo's own tools like prebuilt [modules](./Help/Modules/Modules) and components. Also you'll have acces to HTML, CSS, JS and [Bootstrap](https://getbootstrap.com/).
 
 ### Back End
 As Flexygo has been developed in .NET Core it does admit creating DLL process in C# or vb.net, and also admits stored procedures from SQL Server and Oracle as previously mentioned.
@@ -56,19 +56,23 @@ FlexyGo Objects are the fundamental building blocks for creating applications in
 By configuring these reusable objects, you can rapidly build tailored web applications without extensive coding, ensuring consistency and saving development time.
 
 ## Modules
-Flexygo products are built using [modules](./Modules/Modules) which are easy to configure components with lots of differents capabilities like showing [charts](./Modules/Chart.md), creaing a [Kanban](./Modules/Kanban.md), showing [maps](./Modules/Maps.md) with locations and [routes](./Modules/Maps.md#routes) and lots more.
+Flexygo products are built using [modules](./Help/Modules/Modules) which are easy to configure components with lots of differents capabilities like showing [charts](./Help/Modules/Chart.md), creaing a [Kanban](./Help/Modules/Kanban.md), showing [maps](./Help/Modules/Maps.md) with locations and [routes](./Help/Modules/Maps.md#routes) and lots more.
 
 ## Creating Reports
-Flexygo does also have the possibilty of creatintg your own [reports](./Reporting/Newsandversionnotes.md) in HTML, Power BI, DevExpress and Crystal Reports.
+Flexygo does also have the possibilty of creatintg your own reports in HTML, Power BI, DevExpress and Crystal Reports.
 
 ## Offline Application
-Flexygo does also have the possibilty of creating an aside [mobile app](./OfflineApp/AccessandDescription) to be accessed offline allowing to continue working even in remote places with low connectivity. 
+Flexygo does also have the possibilty of creating an aside [mobile app](./Help/OfflineApp/AccessandDescription) to be accessed offline allowing to continue working even in remote places with low connectivity. 
 
 ### Technologies
-Flexygo's [Offline app](./OfflineApp/AccessandDescription) does use [Ionic](https://ionicframework.com/docs/v4/components) at is base, with [Capacitor](https://capacitorjs.com/docs) and [Stencil](https://stenciljs.com/). It also uses [SQLite](https://sqlite.org/) as its way to store the data that will come in a synchronization with your Flexygo project.
+Flexygo's [Offline app](./Help/OfflineApp/AccessandDescription) does use [Ionic](https://ionicframework.com/docs/v4/components) at is base, with [Capacitor](https://capacitorjs.com/docs) and [Stencil](https://stenciljs.com/). It also uses [SQLite](https://sqlite.org/) as its way to store the data that will come in a synchronization with your Flexygo project.
 
 ### Development
-Flexygo's [Offline app](./OfflineApp/AccessandDescription) product development requires of a bigger programming knowdledge as the pages must be built with HTML, CSS, JS and Ionic knowdlege.
+Flexygo's [Offline app](./Help/OfflineApp/AccessandDescription) product development requires of a bigger programming knowdledge as the pages must be built with HTML, CSS, JS and Ionic knowdlege.
 
 ### Tracking
-Flexygo's [Offline app](./OfflineApp/AccessandDescription) has [tracking](./OfflineApp/Trackingconfiguration) functionality which allows getting the exact location data of the configured devices even when the app is closed. It can be configured to just track during ceratin periods of time.
+Flexygo's [Offline app](./Help/OfflineApp/AccessandDescription) has [tracking](./Help/OfflineApp/Trackingconfiguration) functionality which allows getting the exact location data of the configured devices even when the app is closed. It can be configured to just track during ceratin periods of time.
+
+## More information
+
+Besides the technical documentation gathered under **Help**, the **More information** section of this same menu holds additional content about Flexygo: frequently asked questions, trivia ("Did you know...?"), release notes, security guides and the CI/CD cycle, among others.
