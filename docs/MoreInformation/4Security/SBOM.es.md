@@ -16,4 +16,4 @@ En definitiva, la publicación del SBOM de Flexygo refleja nuestro compromiso co
 
 ## Archivo adjunto
 
-Puedes descargar el [SBOM de Flexygo](./readme/utils/sbom.json) en formato CycloneDX (JSON).
+Puedes descargar el [SBOM de Flexygo](./readme/utils/sbom.json){ download="sbom.json" } en formato CycloneDX (JSON).
