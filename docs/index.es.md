@@ -4,6 +4,12 @@ title: Introducción a Flexygo
 
 # Introducción a Flexygo
 
+!!! tip "Descarga del instalador"
+    Puedes descargar el **instalador oficial de Flexygo** para comenzar rápidamente con tu entorno de desarrollo.
+    👉 [Descargar instalador](https://ayuda.ahora.es/Flexygo/files/flexygoinstallercore.zip)
+
+    Consulta la guía completa del [Instalador](./1Deployment/1Installer/Introduction.md) para conocer todas sus opciones (IIS, Docker, migración, desinstalación).
+
 Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida gracias a su interfaz fácil de usar. Puedes construir prácticamente cualquier cosa con poco o ningún conocimiento de HTML, CSS, JS o C#. No obstante, si en algún momento necesitas desarrollar aplicaciones más complejas, tendrás acceso completo a todas estas tecnologías para poder crear exactamente la idea que tienes en mente.
 
 <ul class="fh-home-cards">
@@ -44,6 +50,37 @@ Flexygo es una plataforma Low-Code con IA para crear productos de forma rápida 
         </a>
     </li>
 </ul>
+
+## 🔄 Evolución de la arquitectura
+
+Flexygo ha evolucionado desde el modelo clásico basado en .NET Framework hacia una arquitectura completamente nueva basada en **.NET 9**.
+
+Hasta ahora, el modelo de Flexygo consistía en una **única aplicación web** que contenía tanto el frontend como el backend y todas sus librerías dentro del mismo sitio.
+
+Con la nueva arquitectura, Flexygo se divide en:
+
+- 🖥️ **Frontend**: la interfaz web que el usuario ve
+- ⚙️ **Backend**: la lógica del servidor y las APIs
+- 🛢️ **Base de datos**
+
+Este enfoque modular responde a varios objetivos clave:
+
+- **Seguridad**: al separar los componentes, puedes alojar el frontend en un servidor distinto del backend y la base de datos. Si se comprometiera el servidor frontend, no habría acceso directo a los datos ni a la lógica interna.
+- **Escalabilidad**: puedes distribuir las partes del sistema en diferentes entornos físicos o virtuales.
+- **Flexibilidad**: permite desplegar soluciones personalizadas y adaptadas a cada cliente o entorno.
+- **Rendimiento y mantenimiento**: usar .NET 9 permite trabajar con las últimas mejoras del ecosistema .NET en rendimiento, soporte multiplataforma y facilidad de despliegue.
+
+Con esta base, Flexygo continúa modernizando todo su ecosistema, asegurando su futuro y adaptándolo a los estándares actuales de desarrollo empresarial.
+
+## 🚀 ¿Cómo se despliega Flexygo?
+
+Tienes varias opciones para ejecutar o desplegar tu solución Flexygo:
+
+- **[Instalador](./1Deployment/1Installer/Introduction.md)** — Ideal para entornos Windows. Incluye modos IIS básico, IIS avanzado y Docker vía instalador. Automatiza toda la configuración.
+- **[Docker](./1Deployment/4Docker/index.md)** — Perfecto para despliegue en la nube, entornos Linux o soluciones automatizadas con contenedores.
+- **[Kestrel](./1Deployment/5Kestrel/index.md)** — Ejecutable directamente con `dotnet run`, ideal para entornos de desarrollo o soluciones con proxy inverso.
+
+Consulta la sección **Despliegue** del menú para ver guías detalladas de cada opción.
 
 ## Tecnologías de Flexygo
 
@@ -89,4 +126,4 @@ La [aplicación Offline](./Help/OfflineApp/AccessandDescription) de Flexygo disp
 
 ## Más información
 
-Además de la documentación técnica recogida en **Ayuda**, en la sección **Más información** de este mismo menú encontrarás contenido adicional sobre Flexygo: preguntas frecuentes, curiosidades ("¿Sabías que...?"), notas de versión, guías de seguridad y del ciclo de CI/CD, entre otros.
+Además de la documentación técnica recogida en **Ayuda**, este sitio incluye documentación específica sobre **Despliegue**, **Desarrollo de producto**, **CI/CD** y **Solución de Problemas**, así como la sección **Más información**, con contenido adicional sobre Flexygo: preguntas frecuentes, curiosidades ("¿Sabías que...?"), notas de versión, guías de seguridad y del ciclo de CI/CD, entre otros.

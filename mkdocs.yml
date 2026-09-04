@@ -121,6 +121,15 @@ plugins:
             2Versions: Versions
             4Security: Security
             5Certification: Certification
+            1Deployment: Deployment
+            1Installer: Installer
+            2ConfigWizard: Configuration Wizard
+            3Updater: Updater
+            4Docker: Docker
+            5Kestrel: Kestrel
+            2ProductDevelopment: Product Development
+            3CICD: CI/CD
+            4Troubleshooting: Troubleshooting
         - locale: es
           default: true
           name: Español
@@ -147,6 +156,15 @@ plugins:
             5Certification: Certificación
             6CICD: CI/CD
             1FAQ: Preguntas frecuentes
+            1Deployment: Despliegue
+            1Installer: Instalador
+            2ConfigWizard: Asistente de configuración
+            3Updater: Actualizador
+            4Docker: Docker
+            5Kestrel: Kestrel
+            2ProductDevelopment: Desarrollo de producto
+            3CICD: CI/CD
+            4Troubleshooting: Solución de Problemas
   - glightbox:
       touchNavigation: true
       loop: false

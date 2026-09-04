@@ -1,5 +1,11 @@
 # Introduction to Flexygo
 
+!!! tip "Download the installer"
+    You can download the **official Flexygo installer** to quickly get started with your development environment.
+    👉 [Download installer](https://ayuda.ahora.es/Flexygo/files/flexygoinstallercore.zip)
+
+    See the full [Installer](./1Deployment/1Installer/Introduction.md) guide to learn about all its options (IIS, Docker, migration, uninstall).
+
 Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to use interface, you can build anything with little to no knowdlege about HTML, CSS, JS or C#. But if you ever want to develop more complex applications you'll have access to all of them so you can create the exact idea you had in mind.
 
 <ul class="fh-home-cards">
@@ -41,6 +47,37 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
     </li>
 </ul>
 
+## 🔄 Architecture evolution
+
+Flexygo has evolved from the classic .NET Framework-based model into a completely new architecture based on **.NET 9**.
+
+Until now, the Flexygo model consisted of a **single web application** that contained the frontend, the backend and all its libraries within the same site.
+
+With the new architecture, Flexygo is split into:
+
+- 🖥️ **Frontend**: the web interface the user sees
+- ⚙️ **Backend**: the server-side logic and APIs
+- 🛢️ **Database**
+
+This modular approach serves several key goals:
+
+- **Security**: by separating the components, you can host the frontend on a different server than the backend and the database. If the frontend server were compromised, there would be **no direct access to the data** or the internal logic.
+- **Scalability**: you can distribute the parts of the system across different physical or virtual environments.
+- **Flexibility**: it allows deploying customized solutions adapted to each customer or environment.
+- **Performance and maintenance**: using .NET 9 lets us work with the latest improvements in the .NET ecosystem in terms of performance, cross-platform support and ease of deployment.
+
+Building on this foundation, Flexygo keeps modernizing its whole ecosystem, securing its future and adapting it to today's enterprise development standards.
+
+## 🚀 How is Flexygo deployed?
+
+You have several options to run or deploy your Flexygo solution:
+
+- **[Installer](./1Deployment/1Installer/Introduction.md)** — Ideal for Windows environments. Includes basic IIS, advanced IIS and Docker-via-installer modes. Automates the whole configuration.
+- **[Docker](./1Deployment/4Docker/index.md)** — Perfect for cloud deployment, Linux environments or container-based automated solutions.
+- **[Kestrel](./1Deployment/5Kestrel/index.md)** — Runs directly with `dotnet run`, ideal for development environments or reverse-proxy solutions.
+
+See the **Deployment** section of the menu for detailed guides on each option.
+
 ## Flexygo's technologies
 Flexygo is engineered on the .NET core framework, providing a modern, cross-platform, and high-performance foundation. Its native compatibility with both SQL Server and Oracle databases offers significant architectural flexibility.
 
@@ -75,4 +112,4 @@ Flexygo's [Offline app](./Help/OfflineApp/AccessandDescription) has [tracking](.
 
 ## More information
 
-Besides the technical documentation gathered under **Help**, the **More information** section of this same menu holds additional content about Flexygo: frequently asked questions, trivia ("Did you know...?"), release notes, security guides and the CI/CD cycle, among others.
+Besides the technical documentation gathered under **Help**, this site includes dedicated documentation on **Deployment**, **Product Development**, **CI/CD** and **Troubleshooting**, as well as the **More information** section, with additional content about Flexygo: frequently asked questions, trivia ("Did you know...?"), release notes, security guides and the CI/CD cycle, among others.
