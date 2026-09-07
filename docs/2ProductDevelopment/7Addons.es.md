@@ -19,6 +19,14 @@ En la pantalla **Crear addon** completa:
 
 Pulsa **Crear Addon**. El instalador genera automáticamente todos los proyectos necesarios (configuración de base de datos, modelo de datos, procesos), ya vinculados entre sí y con la plantilla del producto — no hace falta crearlos ni configurarlos a mano.
 
+!!! warning "Dónde van los ficheros del addon"
+    Cuando se instala un addon, este se ubica en la ruta `custom/{NombreAddon}`. Por tanto, cualquier fichero que forme parte del addon (JS, CSS, DLL, etc.) debe colocarse dentro de esa misma carpeta, y las rutas utilizadas en el proyecto deben hacer referencia a ella.
+
+    Como ahora el producto se divide en Frontend y Backend, esa carpeta `custom/{NombreAddon}` existe en los dos, según el tipo de fichero:
+
+    - **Backend**: aquí van las **DLLs** del addon.
+    - **Frontend**: aquí van el **CSS, JS y demás recursos** del addon.
+
 ## 2. Comprobar la ruta de salida del proyecto Processes
 
 El proyecto `{NombreAddon}.Processes` generado ya incluye por defecto una ruta de salida (`OutputPath`) que apunta a la carpeta `custom/{NombreAddon}` del Backend del producto, para que todas las DLLs del addon queden juntas en esa carpeta:

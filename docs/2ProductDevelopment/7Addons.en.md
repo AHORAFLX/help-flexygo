@@ -19,6 +19,14 @@ On the **Create addon** screen, fill in:
 
 Click **Create Addon**. The installer automatically generates all the necessary projects (database configuration, data model, processes), already wired together and to the product's template — there's no need to create or configure them by hand.
 
+!!! warning "Where the addon's files go"
+    When an addon is installed, it's placed at the `custom/{AddonName}` path. So any file that's part of the addon (JS, CSS, DLL, etc.) must be placed inside that same folder, and the paths used in the project must reference it.
+
+    Since the product is now split into Frontend and Backend, that `custom/{AddonName}` folder exists in both, depending on the type of file:
+
+    - **Backend**: this is where the addon's **DLLs** go.
+    - **Frontend**: this is where the addon's **CSS, JS and other assets** go.
+
 ## 2. Check the Processes project's output path
 
 The generated `{AddonName}.Processes` project already includes, by default, an output path (`OutputPath`) that points to the product's Backend `custom/{AddonName}` folder, so that all of the addon's DLLs end up together in that folder:
