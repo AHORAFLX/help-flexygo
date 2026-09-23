@@ -11,9 +11,9 @@ Antes de empezar a trabajar con un producto generado por la plantilla **Flexygo*
 
     Descarga desde [dotnet.microsoft.com](https://dotnet.microsoft.com/download).
 
-### **SQL Server 2016 o superior**
+### **SQL Server 2022 o superior**
 
-Debes tener una instancia local o accesible de **SQL Server 2016 o superior** para poder desplegar y trabajar con los proyectos de base de datos. La edición gratuita **SQL Server Express** es suficiente para entornos de desarrollo.
+Debes tener una instancia local o accesible de **SQL Server 2022 o superior** para poder desplegar y trabajar con los proyectos de base de datos. La edición gratuita **SQL Server Express** es suficiente para entornos de desarrollo.
 
 ---
 

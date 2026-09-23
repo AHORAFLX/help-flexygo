@@ -13,13 +13,13 @@ Para instalar flexygo tan solo tendrás que descargarlo utilizando el botón de 
 *   Servidor Windows 2013 o superior
 *   Internet Information server
 *   Microsof Framework 4.5
-*   SQL 2016 Express.
+*   SQL 2022 Express.
 
 ## Recomendaciones técnicas
 
-Además de mirar los requesitos mínimos debes seguir las siguientes recomendaciones para que tu proyecto vaya sobre ruedas. **Flexygo** funciona sobre un **IIS con el framework 4.5** instalado, por lo que necesitaremos un **Servidor Windows 2013 o superior**. Su modelo de datos de configuración es **S****QL de Microsoft a partir de la versión 2016**, siempre recomendamos que sean máquinas separadas para el IIS y para SQL, sobre todo con un volumen alta de usuarios.
+Además de mirar los requesitos mínimos debes seguir las siguientes recomendaciones para que tu proyecto vaya sobre ruedas. **Flexygo** funciona sobre un **IIS con el framework 4.5** instalado, por lo que necesitaremos un **Servidor Windows 2013 o superior**. Su modelo de datos de configuración es **S****QL de Microsoft a partir de la versión 2022**, siempre recomendamos que sean máquinas separadas para el IIS y para SQL, sobre todo con un volumen alta de usuarios.
 
-Recomendamos en cualquier caso y cuando no sepamos la dimensión que puede adquirir el proyecto, tener un SQL Enterprise sea 2016 o superior. Usar una versión Enterprise permite escalabilidad y uso de más memoria y procesadores conforme pueda ir creciendo el proyecto y el número de usuarios, pero no es un requisito mínimo ya que valdría un SQL2016 Express.
+Recomendamos en cualquier caso y cuando no sepamos la dimensión que puede adquirir el proyecto, tener un SQL Enterprise sea 2022 o superior. Usar una versión Enterprise permite escalabilidad y uso de más memoria y procesadores conforme pueda ir creciendo el proyecto y el número de usuarios, pero no es un requisito mínimo ya que valdría un SQL2022 Express.
 
 Hacer una estimación de la dimensión de las máquinas depende del tipo de proyecto que se esté abordando, ya que intervienen variables como el tipo de aplicación, número de usuarios y número de integraciones con otros servicios.
 

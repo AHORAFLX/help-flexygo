@@ -5,11 +5,11 @@ Flexygo requiere:
 * Windows Server 2013 o superior
 * Internet Information Server (IIS)
 * Microsoft Framework 4.5
-* SQL 2016 Express
+* SQL 2022 Express
 
 ## Recomendaciones técnicas
 
-La plataforma funciona sobre IIS con el framework 4.5 instalado y utiliza Microsoft SQL a partir de la versión 2016. Se recomienda utilizar máquinas separadas para IIS y SQL, especialmente con un volumen alto de usuarios.
+La plataforma funciona sobre IIS con el framework 4.5 instalado y utiliza Microsoft SQL a partir de la versión 2022. Se recomienda utilizar máquinas separadas para IIS y SQL, especialmente con un volumen alto de usuarios.
 
 ### Para unos 100 usuarios simultáneos
 

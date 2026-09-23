@@ -13,13 +13,13 @@ To install Flexygo, you just need to download it using the button below and foll
 * Windows Server 2013 or later
 * Internet Information Server (IIS)
 * Microsoft Framework 4.5
-* SQL 2016 Express
+* SQL 2022 Express
 
 ## Technical recommendations
 
-In addition to checking the minimum requirements, you should follow the recommendations below to ensure your project runs smoothly. **Flexygo** runs on **IIS with Framework 4.5** installed, so you will need a **Windows Server 2013 or later**. Its configuration data model is **Microsoft SQL starting from version 2016**. We always recommend using separate machines for IIS and SQL, especially when there is a high volume of users.
+In addition to checking the minimum requirements, you should follow the recommendations below to ensure your project runs smoothly. **Flexygo** runs on **IIS with Framework 4.5** installed, so you will need a **Windows Server 2013 or later**. Its configuration data model is **Microsoft SQL starting from version 2022**. We always recommend using separate machines for IIS and SQL, especially when there is a high volume of users.
 
-In any case, and particularly when the future size of the project is unknown, we recommend using SQL Enterprise 2016 or later. Using an Enterprise version allows scalability and the use of more memory and processors as the project and number of users grow. However, this is not a minimum requirement, since SQL 2016 Express would also work.
+In any case, and particularly when the future size of the project is unknown, we recommend using SQL Enterprise 2022 or later. Using an Enterprise version allows scalability and the use of more memory and processors as the project and number of users grow. However, this is not a minimum requirement, since SQL 2022 Express would also work.
 
 Estimating the size of the machines depends on the type of project being addressed, as variables such as the type of application, number of users, and number of integrations with other services come into play.
 
