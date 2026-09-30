@@ -93,6 +93,15 @@ header.md-header {
             border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0;
           }
         }
+
+        /* Keyboard shortcut hint replacing the search options icons */
+        .fh-search-shortcut {
+          user-select: none;
+          background: #ffffff36;
+          padding: 2px 5px;
+          border-radius: 5px;
+          font-weight: bold;
+        }
       }
 
       .md-search-result__meta {
