@@ -13,7 +13,7 @@ Desde el marketplace ubicado dentro de flexygo, en el panel de administración, 
 
 ## ¿Cómo se desarrolla un addon?
 
-Para desarrollar un addon, puede encontrar la información necesaria [aquí](Creation.es.md).
+Para desarrollar un addon, puede encontrar la información necesaria [aquí](../../2ProductDevelopment/7Addons.es.md).
 
 ## Videotutorial
 
