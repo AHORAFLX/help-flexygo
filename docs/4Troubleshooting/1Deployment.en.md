@@ -64,6 +64,54 @@ Diagnostic guide for the most common problems when configuring and starting up F
 3. If the problem persists, stop and restart the application pool.
 
 
+### Infinite redirect loop behind a reverse proxy
+
+**Symptom:** The application never loads and the browser keeps redirecting. Inspecting the request shows a **307** response whose `location` header is **identical to the requested URL**. No error appears anywhere: not in the Event Viewer, not in the application logs, not in the IIS logs.
+
+**Cause:** There is a reverse proxy in front (nginx, ARR, a load balancer) that terminates TLS and hands the request to Flexygo over `http` without forwarding the `X-Forwarded-Proto` header. The application then believes the request is insecure and redirects to `https`; the proxy hands it over again via `http` and the cycle never ends. A 307 is a valid response, which is why it is not logged anywhere.
+
+**Solution:**
+
+1. Configure the proxy to forward the original scheme. In nginx, inside the `location` block:
+   ```nginx
+   proxy_set_header X-Forwarded-Proto $scheme;
+   ```
+2. Reload the proxy and test again.
+3. If you cannot change the proxy right away, disable the redirection in the Frontend's `appsettings.json` and recycle the application pool:
+   ```json
+   {
+     "HttpsRedirection": false
+   }
+   ```
+
+!!! tip "Full configuration"
+    The requirements for a deployment with a proxy in front are in [Deployment behind a reverse proxy](../1Deployment/6ReverseProxy/index.md).
+
+
+### Access auditing always records the same IP
+
+**Symptom:** All sign-ins appear with the same IP address, or the per-user IP restrictions block people they should not.
+
+**Cause:** There is a reverse proxy in front and the application sees its address instead of the client's. Flexygo only accepts the forwarded IP when the request comes from a declared proxy.
+
+**Solution:**
+
+1. Find out which address the proxy uses to open the connection to the server. In IIS it is the `c-ip` field of the site log, under `C:\inetpub\logs\LogFiles`.
+2. Declare it in the `appsettings.json` of both Frontend and Backend:
+   ```json
+   {
+     "ForwardedHeaders": {
+       "KnownProxies": [ "192.168.1.10" ]
+     }
+   }
+   ```
+3. Check that the proxy forwards the `X-Forwarded-For` header.
+4. Recycle the application pools.
+
+!!! note "Proxy on the same machine"
+    If the proxy runs on the same server as Flexygo, nothing needs to be declared: local addresses are accepted by default.
+
+
 ## Development environment
 
 ### VS Code does not recognize the project (IntelliSense does not work)

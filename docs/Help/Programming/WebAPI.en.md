@@ -2,7 +2,10 @@
 
 **Flexygo** Web API is an application programming interface to access externally authorized objects and processes from the control panel located at Admin Work Area > Security > WebAPI or just click here.
 
-This API follows [OpenAPI Initiative](https://www.openapis.org/) and SDKs can be generated with [Swagger Codegen](https://swagger.io/) using your current [Schema Definition.](./webapi)
+This API follows [OpenAPI Initiative](https://www.openapis.org/) and SDKs can be generated with [Swagger Codegen](https://swagger.io/) using your application's schema definition, available at `https://<your-app>/webapi`.
+
+!!! tip "Version 10"
+    Since version 10 the API applies the token role's security just like the interface, and trims the OpenAPI by role: [WebAPI security](WebAPISecurity.md).
 
 It is **highly** recommended to use **HTTPS**.
 {: .flx-warning-card }

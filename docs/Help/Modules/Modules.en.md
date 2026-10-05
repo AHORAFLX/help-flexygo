@@ -60,6 +60,8 @@ Check out additional help to see how to set it up:
 
 [Manual Calendar and Scheduler](SchedulerCalendar.md)
 
+[Calendars with FullCalendar 6 (version 10)](SchedulerCalendarV10.md)
+
 [Video Scheduller](https://youtu.be/lKKMce5PsrA)
 </div>
 
@@ -75,6 +77,8 @@ Check out additional help to see how to set it up:
 [Manual Chart](Chart.md)
 
 [Manual Chart II](ChartII.md)
+
+[Charts with ECharts (version 10)](ECharts.md)
 
 [Video Chart](https://youtu.be/Nj8si7aUPe4)
 </div>
@@ -120,7 +124,9 @@ Check out additional help to see how to set it up
 <div class="flx-info-card" markdown="1">
 Check out additional help to see how to set it up:
 
-[Manual Easy Pie/Line/Info](ChartII.md)
+[Manual Easy Pie/Line/Info](Chart.md)
+
+[Easy info: cards, links and periods (version 10)](EasyInfo.md)
 </div>
 
 ## Edit Object List

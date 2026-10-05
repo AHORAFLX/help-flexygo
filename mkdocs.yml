@@ -130,6 +130,10 @@ plugins:
             2ProductDevelopment: Product Development
             3CICD: CI/CD
             4Troubleshooting: Troubleshooting
+            Administration: Administration
+            AIAssistants: AI assistants (MCP)
+            6ReverseProxy: Reverse proxy
+            8ExportProject: Export as project
         - locale: es
           default: true
           name: Español
@@ -164,6 +168,10 @@ plugins:
             2ProductDevelopment: Desarrollo de producto
             3CICD: CI/CD
             4Troubleshooting: Solución de Problemas
+            Administration: Administración
+            AIAssistants: Asistentes de IA (MCP)
+            6ReverseProxy: Proxy inverso
+            8ExportProject: Exportar como proyecto
   - glightbox:
       touchNavigation: true
       loop: false

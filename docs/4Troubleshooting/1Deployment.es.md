@@ -64,6 +64,54 @@ Guía de diagnóstico para los problemas más frecuentes al configurar y poner e
 3. Si el problema persiste, detén y vuelve a iniciar el pool de aplicaciones.
 
 
+### Bucle de redirecciones infinito tras un proxy inverso
+
+**Síntoma:** La aplicación no llega a cargar y el navegador redirige sin parar. Al inspeccionar la petición se ve una respuesta **307** cuya cabecera `location` es **idéntica a la URL solicitada**. No aparece ningún error en ninguna parte: ni en el Visor de eventos, ni en los logs de la aplicación, ni en los de IIS.
+
+**Causa:** Hay un proxy inverso delante (nginx, ARR, un balanceador) que termina el TLS y entrega la petición a Flexygo por `http` sin reenviar la cabecera `X-Forwarded-Proto`. La aplicación cree entonces que la petición es insegura y redirige a `https`; el proxy la vuelve a entregar por `http` y el ciclo no termina. Un 307 es una respuesta correcta, y por eso no se registra en ningún sitio.
+
+**Solución:**
+
+1. Configura el proxy para que reenvíe el esquema original. En nginx, dentro del bloque `location`:
+   ```nginx
+   proxy_set_header X-Forwarded-Proto $scheme;
+   ```
+2. Recarga el proxy y vuelve a probar.
+3. Si no puedes tocar el proxy de inmediato, desactiva la redirección en el `appsettings.json` del Frontend y recicla el pool de aplicaciones:
+   ```json
+   {
+     "HttpsRedirection": false
+   }
+   ```
+
+!!! tip "Configuración completa"
+    Los requisitos de un despliegue con proxy delante están en [Despliegue tras un proxy inverso](../1Deployment/6ReverseProxy/index.md).
+
+
+### La auditoría de accesos registra siempre la misma IP
+
+**Síntoma:** Todos los inicios de sesión aparecen con la misma dirección IP, o las restricciones de IP por usuario bloquean a quien no deberían.
+
+**Causa:** Hay un proxy inverso delante y la aplicación está viendo su dirección en lugar de la del cliente. Flexygo sólo acepta la IP reenviada cuando la petición procede de un proxy declarado.
+
+**Solución:**
+
+1. Averigua desde qué dirección abre el proxy la conexión contra el servidor. En IIS es el campo `c-ip` del log del sitio, bajo `C:\inetpub\logs\LogFiles`.
+2. Declárala en el `appsettings.json` de Frontend y Backend:
+   ```json
+   {
+     "ForwardedHeaders": {
+       "KnownProxies": [ "192.168.1.10" ]
+     }
+   }
+   ```
+3. Comprueba que el proxy reenvía la cabecera `X-Forwarded-For`.
+4. Recicla los pools de aplicaciones.
+
+!!! note "Proxy en la misma máquina"
+    Si el proxy corre en el mismo servidor que Flexygo no hace falta declarar nada: las direcciones locales se aceptan de fábrica.
+
+
 ## Entorno de desarrollo
 
 ### VS Code no reconoce el proyecto (IntelliSense no funciona)

@@ -5,3 +5,5 @@ Flexygo can receive events from external services regardless of their transmissi
 This feature enables secure integration with third-party services. For example, it can be used to securely receive notification of when a user completes a payment and start shipping an order.
 
 ![](../../docs_assets/images/DidYouKnow/Webhooks/1.png)
+
+Flexygo can also **notify outwards** when a record changes (outbound webhooks) and open decisions to people or roles: [Approvals, human tasks and outbound webhooks](../../Help/Programming/ApprovalsAndWebhooks.md).

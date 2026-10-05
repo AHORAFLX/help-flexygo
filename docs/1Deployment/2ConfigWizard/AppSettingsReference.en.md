@@ -107,7 +107,9 @@ These keys do not appear in the file until the first startup and are invisible t
   "BackendEndpoint": "http://localhost:7110/api/backend/", // (3)!
   "AllowedHosts": "*",
   "WebApiOrigins": "*", // (4)!
-  "DebugUpdater": false // (5)!
+  "DebugUpdater": false, // (5)!
+  "EnableWindowsAuth": false, // (6)!
+  "HttpsRedirection": true // (7)!
 }
 ```
 
@@ -116,6 +118,16 @@ These keys do not appear in the file until the first startup and are invisible t
 3. **BackendEndpoint** — URL of the Backend API consumed by the Frontend. Configured automatically by the installer. Only change it if the domain or port changes after installation.
 4. **WebApiOrigins** — Allowed origins for CORS. `"*"` allows any origin. Restrict it in production if required.
 5. **DebugUpdater** — Enables the updater's debug mode in the Frontend. Keep it set to `false` in production.
+6. **EnableWindowsAuth** — Enables integrated Windows sign-in (NTLM/Kerberos). Requires IIS to have both anonymous and Windows authentication enabled. Keep it set to `false` unless automatic sign-in against LDAP is used.
+7. **HttpsRedirection** — Redirects requests that arrive over `http` to `https`. Enabled by default. Set it to `false` only when a reverse proxy in front already enforces `https`; see [Deployment behind a reverse proxy](../6ReverseProxy/index.md).
+
+## Optional keys (Frontend and Backend)
+
+They are not included in the template and are only added when needed:
+
+| Key | Purpose |
+|-------|-----------|
+| `ForwardedHeaders.KnownProxies` | IP addresses of the trusted reverse proxies, so the application accepts the real client IP from them. See [Deployment behind a reverse proxy](../6ReverseProxy/index.md) |
 
 ## Automatically generated keys (Frontend)
 

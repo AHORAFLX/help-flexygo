@@ -150,6 +150,9 @@ Select count(id) as value,''%'' as symbol, ''blue'' as barColor, ''red'' as colo
 
 ## Easy Info
 
+!!! tip "Versión 10"
+    Desde la versión 10 el easy info admite tarjetas, enlaces, conmutador de período y nuevas columnas en el SQL. La referencia completa está en [Easy info: tarjetas, enlaces y períodos](EasyInfo.md).
+
 Puedes añadir Easy Info referenciando un módulo:
 
 ```html

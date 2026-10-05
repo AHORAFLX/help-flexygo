@@ -107,7 +107,9 @@ Estas claves no aparecen en el archivo hasta el primer arranque y son invisibles
   "BackendEndpoint": "http://localhost:7110/api/backend/", // (3)!
   "AllowedHosts": "*",
   "WebApiOrigins": "*", // (4)!
-  "DebugUpdater": false // (5)!
+  "DebugUpdater": false, // (5)!
+  "EnableWindowsAuth": false, // (6)!
+  "HttpsRedirection": true // (7)!
 }
 ```
 
@@ -116,6 +118,16 @@ Estas claves no aparecen en el archivo hasta el primer arranque y son invisibles
 3. **BackendEndpoint** — URL de la API del Backend que el Frontend consume. Configurada automáticamente por el instalador. Solo modificar en caso de cambio de dominio o puerto tras la instalación.
 4. **WebApiOrigins** — Orígenes permitidos para CORS. `"*"` permite cualquier origen. Restringir en producción si se requiere.
 5. **DebugUpdater** — Activa el modo de depuración del actualizador en el Frontend. Mantener en `false` en producción.
+6. **EnableWindowsAuth** — Activa el inicio de sesión integrado de Windows (NTLM/Kerberos). Requiere que IIS tenga habilitadas tanto la autenticación anónima como la de Windows. Mantener en `false` salvo que se use inicio de sesión automático contra LDAP.
+7. **HttpsRedirection** — Redirige a `https` las peticiones que llegan por `http`. Activada por defecto. Ponerla en `false` únicamente cuando un proxy inverso delante ya obliga a `https`; ver [Despliegue tras un proxy inverso](../6ReverseProxy/index.md).
+
+## Claves opcionales (Frontend y Backend)
+
+No vienen en la plantilla y sólo se añaden cuando hacen falta:
+
+| Clave | Propósito |
+|-------|-----------|
+| `ForwardedHeaders.KnownProxies` | Direcciones IP de los proxies inversos de confianza, para que la aplicación acepte de ellos la IP real del cliente. Ver [Despliegue tras un proxy inverso](../6ReverseProxy/index.md) |
 
 ## Claves generadas automáticamente (Frontend)
 

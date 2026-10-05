@@ -5,3 +5,5 @@ Flexygo puede recibir eventos de servicios externos independientemente de su pro
 Esta funcionalidad permite una integración segura con servicios de terceros. Por ejemplo, podemos usarlo para recibir de forma segura la notificación de cuando un usuario finaliza un pago y comenzar con el envío de un pedido.
 
 ![](../../docs_assets/images/DidYouKnow/Webhooks/1.png)
+
+Flexygo también puede **avisar hacia fuera** cuando un registro cambia (webhooks de salida) y abrir decisiones a personas o roles: [Aprobaciones, tareas humanas y webhooks de salida](../../Help/Programming/ApprovalsAndWebhooks.md).

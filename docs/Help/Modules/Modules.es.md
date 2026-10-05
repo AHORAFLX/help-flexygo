@@ -54,6 +54,8 @@ Consulta ayuda adicional para configurar el módulo:
 
 [Manual Calendar and Scheduler](SchedulerCalendar.md)
 
+[Calendarios con FullCalendar 6 (versión 10)](SchedulerCalendarV10.md)
+
 [Vídeo Scheduler](https://youtu.be/lKKMce5PsrA)
 </div>
 
@@ -69,6 +71,8 @@ Revisa las siguientes ayudas para aprender a como conigurarlo:
 [Manual Chart](Chart.md)
 
 [Manual Chart II](ChartII.md)
+
+[Gráficas con ECharts (versión 10)](ECharts.md)
 
 [Vídeo Chart](https://youtu.be/Nj8si7aUPe4)
 </div>
@@ -112,7 +116,9 @@ Estos componentes permiten realizar gráficos sencillos. Combinados en un módul
 <div class="flx-info-card" markdown="1">
 Revisa las siguientes ayudas para aprender a como conigurarlo:
 
-[Manual Easy Pie/Line/Info](ChartII.md)
+[Manual Easy Pie/Line/Info](Chart.md)
+
+[Easy info: tarjetas, enlaces y períodos (versión 10)](EasyInfo.md)
 </div>
 
 ## Lista de objetos editable

@@ -2,7 +2,10 @@
 
 Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde el panel de control ubicado en Área de Trabajo de Administrador > Seguridad > WebAPI o simplemente haz clic aquí. 
 
-Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando su actual [Definición de Esquema](./webapi). 
+Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando la definición de esquema de tu aplicación, disponible en `https://<tu-aplicacion>/webapi`. 
+
+!!! tip "Versión 10"
+    Desde la versión 10 la API aplica la seguridad del rol del token igual que la interfaz y recorta el OpenAPI por rol: [Seguridad de la WebAPI](WebAPISecurity.md).
 
 Es **altamente** recomendado utilizar **HTTPS**.
 {: .flx-warning-card }

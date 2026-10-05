@@ -116,6 +116,9 @@ sudo systemctl status flexygo-backend
 
 En producción, coloca nginx delante de Kestrel para gestionar TLS, cabeceras y balanceo de carga.
 
+!!! tip "Requisitos del proxy"
+    Las cabeceras que el proxy debe reenviar, los proxies de confianza y la redirección a HTTPS están en [Despliegue tras un proxy inverso](../6ReverseProxy/index.md).
+
 ### Instalación de nginx
 
 ```bash
