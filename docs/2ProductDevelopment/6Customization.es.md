@@ -23,11 +23,13 @@ Flexygo resuelve los assets mediante una **cadena de 3 niveles**. Cada nivel pue
 
 La carpeta de producto se **descubre automáticamente** al iniciar la aplicación — no necesitas configurar su nombre. El sistema explora los subdirectorios de `wwwroot` y considera carpeta de producto al **primero que contenga el archivo marcador `css/theme.less`**. La primera coincidencia gana.
 
-!!! danger "El archivo `css/theme.less` es obligatorio"
+!!! danger "`css/theme.less` es el marcador de carpeta de producto"
     Una carpeta de `wwwroot` **solo se detecta como carpeta de producto si contiene `css/theme.less`**. El archivo puede estar **vacío**, pero debe existir. Sin él, la carpeta se ignora por completo y todas tus personalizaciones de producto (CSS, JS, `favicon.ico`, `manifest.json`…) quedarán sin efecto, degradándose el sistema a la cadena de 2 niveles (Instalación → Flexygo).
 
-!!! info "Convención: carpeta creada por el instalador"
-    El **instalador de Flexygo** ya crea automáticamente la carpeta de producto —con su `css/theme.less`— durante la creación o migración de un proyecto. Esta es la carpeta que debes usar como convención para todas tus personalizaciones a nivel de producto. No es necesario que crees una manualmente ni que adivines el nombre — utiliza la que el instalador ha generado.
+!!! info "`theme.less` NO se crea por defecto"
+    La plantilla de proyecto **no incluye `css/theme.less`**, de forma intencionada. Debes crearlo (junto con la carpeta de producto) **solo cuando realmente quieras personalizar algo a nivel de producto**.
+
+    Al actuar como marcador de carpeta de producto, solo tiene sentido crearlo cuando haya algo que personalizar.
 
 !!! warning "Nombres de carpeta válidos"
     El nombre de la carpeta de producto solo puede contener caracteres `[a-zA-Z0-9_-]+`. Otros caracteres serán rechazados por seguridad.
@@ -44,7 +46,7 @@ wwwroot/
     manifest.json                    ← Manifiesto PWA
     favicon.ico                      ← Favicon del producto
     css/
-      theme.less                     ← OBLIGATORIO: marcador de carpeta de producto (puede estar vacío) + variables de tema
+      theme.less                     ← Marcador de carpeta de producto (créalo al personalizar; puede estar vacío) + variables de tema
       views/
         account/
           account.css                ← CSS genérico de cuenta
@@ -135,7 +137,7 @@ Coloca este archivo en `wwwroot/{producto}/manifest.json`.
 **Propósito:** Recibir valores específicos del producto desde la base de datos, asignarlos a variables Less y exponerlos como propiedades CSS personalizadas (`--*`).
 
 !!! danger "Doble función: también es el marcador de carpeta de producto"
-    La presencia de `{producto}/css/theme.less` es lo que hace que Flexygo reconozca `{producto}/` como carpeta de producto. **Debe existir siempre** en tu carpeta de producto, aunque sea un archivo vacío. Si no vas a definir variables de tema propias, créalo igualmente vacío.
+    La presencia de `{producto}/css/theme.less` es lo que hace que Flexygo reconozca `{producto}/` como carpeta de producto. **No se crea por defecto**: créalo cuando quieras aplicar personalizaciones a nivel de producto. Una vez tengas una carpeta de producto con personalizaciones (CSS, JS, favicon, manifest…), debe existir, aunque sea un archivo vacío si no vas a definir variables de tema propias.
 
 **Resolución:** Se concatenan los 3 niveles (Flexygo → Producto → Instalación). El pipeline `ReplaceLessVars` procesa el `theme.less` de cada nivel: los placeholders `dbColor()`/`dbSize()` se reemplazan con valores calculados desde base de datos, y las variables Less se convierten en propiedades CSS mediante `:root { --*: @variable; }`.
 
@@ -363,7 +365,7 @@ Donde `{nivel}` es:
 ## Limitaciones y Comportamiento de Degradación
 
 - **Detección de carpeta de producto** se ejecuta una sola vez al inicio. Se identifica la carpeta de producto por la presencia del archivo marcador `css/theme.less` en un subdirectorio de `wwwroot`. Si ninguna carpeta contiene ese archivo, el sistema se degrada a una cadena de 2 niveles (Instalación → Flexygo).
-- **`css/theme.less` ausente** en tu carpeta de producto hace que **toda la carpeta se ignore** — no solo el tema, sino también CSS/JS de vistas, `favicon.ico` y `manifest.json` a nivel de producto. Créalo aunque sea vacío.
+- **`css/theme.less` ausente** en tu carpeta de producto hace que **toda la carpeta se ignore** — no solo el tema, sino también CSS/JS de vistas, `favicon.ico` y `manifest.json` a nivel de producto. No forma parte de la plantilla: créalo (aunque sea vacío) cuando empieces a personalizar.
 - **Múltiples carpetas de producto** (varios subdirectorios con `css/theme.less`) generan una advertencia en el log; solo se usa la primera carpeta encontrada.
 - **Archivos ausentes** en cualquier nivel se omiten silenciosamente — solo se emiten los archivos que existen.
 - **`manifest.json` y `favicon.ico`** usan el patrón *first-found-wins*; el fallback nativo de Flexygo siempre está disponible.

@@ -23,11 +23,13 @@ Flexygo resolves assets through a **3-level chain**. Each level can provide its 
 
 The product folder is **discovered automatically** when the application starts — you don't need to configure its name. The system scans the subdirectories of `wwwroot` and treats as the product folder the **first one that contains the marker file `css/theme.less`**. The first match wins.
 
-!!! danger "The `css/theme.less` file is mandatory"
+!!! danger "`css/theme.less` is the product folder marker"
     A `wwwroot` folder **is only detected as a product folder if it contains `css/theme.less`**. The file can be **empty**, but it must exist. Without it, the folder is ignored entirely and all your product-level customizations (CSS, JS, `favicon.ico`, `manifest.json`…) will have no effect, degrading the system to the 2-level chain (Installation → Flexygo).
 
-!!! info "Convention: folder created by the installer"
-    The **Flexygo Installer** already automatically creates the product folder — with its `css/theme.less` — during the creation or migration of a project. This is the folder you should use as the convention for all your product-level customizations. There's no need to create one manually or guess the name — use the one the installer generated.
+!!! info "`theme.less` is NOT created by default"
+    The project template **does not include `css/theme.less`**, on purpose. You must create it (together with the product folder) **only when you actually want to customize something at product level**.
+
+    Since it acts as the product folder marker, it only makes sense to create it once there is something to customize.
 
 !!! warning "Valid folder names"
     The product folder's name can only contain the characters `[a-zA-Z0-9_-]+`. Other characters will be rejected for security reasons.
@@ -44,7 +46,7 @@ wwwroot/
     manifest.json                    ← PWA manifest
     favicon.ico                      ← Product favicon
     css/
-      theme.less                     ← REQUIRED: product folder marker (can be empty) + theme variables
+      theme.less                     ← Product folder marker (create it when you customize; can be empty) + theme variables
       views/
         account/
           account.css                ← Generic account CSS
@@ -135,7 +137,7 @@ Place this file at `wwwroot/{product}/manifest.json`.
 **Purpose:** Receive product-specific values from the database, assign them to Less variables, and expose them as custom CSS properties (`--*`).
 
 !!! danger "Dual role: it's also the product folder marker"
-    The presence of `{product}/css/theme.less` is what makes Flexygo recognize `{product}/` as the product folder. **It must always exist** in your product folder, even as an empty file. If you're not going to define your own theme variables, create it empty anyway.
+    The presence of `{product}/css/theme.less` is what makes Flexygo recognize `{product}/` as the product folder. **It is not created by default**: create it when you want to apply product-level customizations. Once you have a product folder with customizations (CSS, JS, favicon, manifest…), it must exist, even as an empty file, if you're not going to define your own theme variables.
 
 **Resolution:** The 3 levels are concatenated (Flexygo → Product → Installation). The `ReplaceLessVars` pipeline processes the `theme.less` of each level: the `dbColor()`/`dbSize()` placeholders are replaced with values calculated from the database, and the Less variables are turned into CSS properties via `:root { --*: @variable; }`.
 
@@ -363,7 +365,7 @@ Where `{level}` is:
 ## Limitations and Degradation Behavior
 
 - **Product folder detection** runs only once at startup. The product folder is identified by the presence of the marker file `css/theme.less` in a subdirectory of `wwwroot`. If no folder contains that file, the system degrades to a 2-level chain (Installation → Flexygo).
-- **Missing `css/theme.less`** in your product folder causes **the entire folder to be ignored** — not just the theme, but also the views' CSS/JS, `favicon.ico`, and `manifest.json` at the product level. Create it even if empty.
+- **Missing `css/theme.less`** in your product folder causes **the entire folder to be ignored** — not just the theme, but also the views' CSS/JS, `favicon.ico`, and `manifest.json` at the product level. It is not part of the template: create it (even if empty) when you start customizing.
 - **Multiple product folders** (several subdirectories with `css/theme.less`) generate a warning in the log; only the first folder found is used.
 - **Missing files** at any level are silently skipped — only the files that exist are emitted.
 - **`manifest.json` and `favicon.ico`** use the *first-found-wins* pattern; Flexygo's native fallback is always available.
