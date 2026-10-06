@@ -115,9 +115,9 @@ Content-Type: application/json
 | Actualizar objeto por filtro | PUT | webapi/object/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_update_filter" modal_title="Update object by filter">&lt;/&gt;</fh-modal> |
 | Eliminar objeto por id | DELETE | webapi/object/{ObjectName}/{Id} | | | <fh-modal class="link" modal_id="fhmodal_delete" modal_title="Delete object by id">&lt;/&gt;</fh-modal> |
 | Eliminar objeto por filtro | DELETE | webapi/object/{ObjectName} | ?filter={filter?} | | <fh-modal class="link" modal_id="fhmodal_delete_filter" modal_title="Delete object by filter">&lt;/&gt;</fh-modal> |
-| Ejecutar proceso con objeto por id | PUT | webapi/exec/{ProcessName}/{ObjectName}/{Id} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process" modal_title="Execute process with object by id">&lt;/&gt;</fh-modal> |
-| Ejecutar proceso con objeto por filtro | PUT | webapi/exec/{ProcessName}/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_filter" modal_title="Execute process with object by filter">&lt;/&gt;</fh-modal> |
-| Ejecutar proceso sin objeto | PUT | webapi/exec/{ProcessName} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_no_object" modal_title="Execute process without object">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso con objeto por id | POST | webapi/exec/{ProcessName}/{ObjectName}/{Id} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process" modal_title="Execute process with object by id">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso con objeto por filtro | POST | webapi/exec/{ProcessName}/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_filter" modal_title="Execute process with object by filter">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso sin objeto | POST | webapi/exec/{ProcessName} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_no_object" modal_title="Execute process without object">&lt;/&gt;</fh-modal> |
 
 <div id="fhmodal_list" markdown="1">
 
