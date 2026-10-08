@@ -44,7 +44,7 @@ Want to try it end to end with a public API? [Try it: an object that lives in a 
 | **Base URL** | Root of the API. The object's paths are relative to it. |
 | **Authentication** | `None`, `API key` (header, `X-Api-Key` by default), `Basic` (the secret is `user:password`), `Bearer` (the secret is the token) or `OAuth2 client credentials` (token URL, client id and scope; the secret is the client secret). |
 | **Secret** | The key, the token, `user:password` or the client secret, depending on the authentication. Its label changes with it: **API key**, **Token**, **User:password** or **Client Secret**. With `None` it does not appear. |
-| **Filter mode** | How filters, sorting and pages are requested from the API: **OData** (`$filter`, `$orderby`, `$top`, `$skip`), **Query string** (templates `{field}={value}` and `{field} {dir}` defined on the object) or **None** (the API returns everything and Flexygo filters, sorts and pages in memory). |
+| **Filter mode** | How filters, sorting and pages are requested from the API: **OData** (`$filter`, `$orderby`, `$top`, `$skip`), **Query string** (templates `{field}={value}` and `{field} {dir}` defined on the object; `{where}` passes the whole filter as a SQL `WHERE`, for APIs that understand it, such as [another Flexygo](#7-another-flexygo-as-the-api)) or **None** (the API returns everything and Flexygo filters, sorts and pages in memory). |
 | **Page / Page size / Offset / Sort parameter** | Names of the API's paging and sorting parameters, and the number of the first page. |
 | **Max rows in memory** | Cap on the rows fetched when the API does not filter (`None`); 5,000 by default. If the API returns more, a warning is shown. |
 | **Error path** | JSON path of the error node, for APIs that answer errors with a 200. |
@@ -103,6 +103,33 @@ In each **property**'s form there are two fields that only make sense in an exte
 
 The **views** of an external object have no SQL: you choose the columns and the order, and the API does the rest. The view manager does not offer "from SQL" for these objects.
 
+### Dropdowns over an external object
+
+When a field stores the code of something that also lives in the API (the customer of a work order, the technician, the warehouse), the dropdown cannot read from the database: it reads from **another external object**, the master.
+
+1. Register the master as another external object, with the same service. Read-only is enough: leave the insert, update and delete paths empty.
+2. In the property that stores the code:
+
+| Field | Value |
+|---|---|
+| **Type** | `DbCombo` |
+| **Data Source Object** | The master object (the record, not the collection). |
+| **Data Source View** | Empty, to use the master's default view, or one of its views. |
+| **SQL Value Field** | The master's key: the code that is stored. |
+| **SQL Display Field** | The master's field with the text to show. |
+| **SQL Sentence** | **Empty.** With an external *Data Source Object* it is not used: the values always come from the master through the API. |
+| **SQL Filter** | Optional. It is applied as a filter on the master and travels to the API like any other filter. |
+| **Connection String** | The form asks for it on every dropdown, but it is not used here: any will do. |
+
+**Where those fields are.** The **property wizard** (the *Properties* window opened by the form's configure button in development mode, or the properties step of the object workbench) shows *Data Source Object* and *Data Source View* on any dropdown. The property's **full form** only shows them when the property is offline or its object is external. For a dropdown over an external object on a database object, use the wizard.
+
+**When you type in the dropdown**, the text becomes a filter on the displayed field. With a service that filters (*Filter mode* `OData` or `Query string`), the API returns only what matches. With `None`, Flexygo brings the whole master and filters in memory: with large masters the service should filter.
+
+**The record view and the view** show the text of the value, which Flexygo asks the master for by its key.
+
+!!! tip "No published master"
+    If the master is not in the API (statuses, types with a few fixed values), use a **static** dropdown (`Combo` with its values). And if the API already returns the text next to the code, as another Flexygo does with `Field_flxtext` (see [§7](#7-another-flexygo-as-the-api)), adding that property to the views is enough to see the text in the lists.
+
 ---
 
 ## 4. Use the object
@@ -125,7 +152,7 @@ From then on it is just another object: it is placed on pages, given permissions
 </figure>
 
 !!! note "Dropdowns too"
-    A property of any object can be a dropdown **over an external object**. The master (statuses, roles…) is registered as another external object and, in the property wizard, you choose the **DbCombo** type, the **Data Source Object** (the master object), its **Data Source View**, the **SQL Value Field** (the code) and the **SQL Display Field** (the text). Values are resolved on the server through the API; the record view and the view show the text, and the text search searches by it (see the table below).
+    A property of any object can be a dropdown **over an external object**: the master is registered as another external object. How to set it up, in [Dropdowns over an external object](#dropdowns-over-an-external-object).
 
 ---
 
@@ -231,3 +258,66 @@ A list of flat rows. For example, sales and purchases by month, with a goal line
 - **A single source**: `mixed` charts with several SQL statements separated by `;` remain SQL only.
 - **The rows requested are all the ones the API returns** at once; if the service does not filter and Flexygo filters in memory, the service's **Max rows in memory** applies.
 - A chart **with** SQL over an external object is still rejected as in [section 5](#5-what-works-and-what-doesnt).
+
+---
+
+## 7. Another Flexygo as the API
+
+A Flexygo can read and write the objects that **another Flexygo** publishes in its [web API](WebAPI.md): for example, the work orders of a field service application from another application. It is just another REST API, with a few particulars that are best set up as follows.
+
+### 7.1 The service
+
+| Field | Value |
+|---|---|
+| **Base URL** | The other Flexygo's Frontend URL followed by `/webapi`, for example `https://server/sat/webapi`. |
+| **Authentication** | `Bearer`. |
+| **Secret** | A token from the other Flexygo's web API (see below). |
+| **Filter mode** | `Query string`. |
+| **Page parameter** | `page`. |
+| **First page number** | `0`. |
+| **Page size parameter** | `pagesize`. |
+| **Sort parameter** | `orderBy`. |
+
+**The token.** Flexygo's web API only accepts tokens (`Authorization: Bearer`), and its `/token` only grants them with a user name and password (`grant_type=password`). That is why neither `Basic` nor `OAuth2 client credentials` work here. Ask for the token once, with the user the integration will use, and paste it in **Secret**:
+
+```
+POST https://server/sat/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=USER&password=PASSWORD
+```
+
+Copy the `access_token` from the answer. It lasts as long as the other Flexygo's `WebAPI_Timeout` setting says (about ten years by default; the `expires_in` of the answer confirms it). If it is revoked, ask for another one and change it in the service.
+
+### 7.2 The object
+
+| Field | Value |
+|---|---|
+| **List path** | `list/sat_Parte` |
+| **Record path** | `object/sat_Parte/{key}` |
+| **Insert path** | `object/sat_Parte` |
+| **Update path** | `object/sat_Parte/{key}`, method `PUT` |
+| **Delete path** | `object/sat_Parte/{key}` |
+| **Records path** | Empty: the list comes as an array. |
+| **Filter template** | `filter={where}`: the filter travels as the `WHERE` that Flexygo's web API understands. |
+
+- **`{key}`** only works with a **single-field** key, which is what Flexygo's web API accepts as an identifier.
+- **What can be done** is decided by the other Flexygo: the object has to be published in its web API with permission to view, insert, edit or delete, and the token's user also needs permission on the object ([WebAPI security](WebAPISecurity.md)).
+- **An insert** returns the created record in Flexygo's web API format (`Properties.Field.Value`). Flexygo recognises it and takes from there the key the other server generated, so **Find inserted record by** is not needed.
+
+### 7.3 Dropdown texts (`_flxtext`)
+
+The list of Flexygo's web API returns, next to each dropdown field, another one with its text: `IdCliente` and `IdCliente_flxtext`. The probe proposes them **unchecked**:
+
+- To show the customer's name in a list without setting up a dropdown, check the `_flxtext` you need and add it to the view.
+- For a real dropdown, register the master (`sat_Cliente`) as another external object and set it up as in [Dropdowns over an external object](#dropdowns-over-an-external-object).
+- If you want none of them, ask for the list without them: **List path** `list/sat_Parte?withDescrips=false`.
+
+### 7.4 If something goes wrong
+
+| What you see | Why | What to do |
+|---|---|---|
+| `401 Unauthorized` | The token is missing, has expired or has been revoked | Ask for another token and change it in **Secret** |
+| `403 Forbidden` | The object is not published in the other Flexygo's web API for that operation, or the token's user has no permission | Publish the operation and check the role's permissions |
+| `405 Method Not Allowed` when editing or deleting | The other Flexygo runs on IIS with the **WebDAV** module, which takes the `PUT` and `DELETE` requests before they reach the application | In the `web.config` of the other Flexygo's Frontend **and** Backend, inside `<system.webServer>`, add `<modules><remove name="WebDAVModule" /></modules>` and, in `<handlers>`, `<remove name="WebDAV" />` before the `<add name="aspNetCore" … />` |
+| The list is slow | Without *Filter mode* or paging, every page brings all the records and Flexygo cuts them in memory | Set up the service and the **Filter template** as in the tables above |

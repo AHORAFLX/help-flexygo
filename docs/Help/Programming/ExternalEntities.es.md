@@ -44,7 +44,7 @@ En **External services** se da de alta la API una sola vez: panel de control →
 | **Base URL** | Raíz de la API. Las rutas del objeto son relativas a ella. |
 | **Authentication** | `None`, `API key` (cabecera, por defecto `X-Api-Key`), `Basic` (el secreto es `usuario:contraseña`), `Bearer` (el secreto es el token) u `OAuth2 client credentials` (URL del token, client id y scope; el secreto es el client secret). |
 | **Secret** | La clave, el token, `usuario:contraseña` o el client secret, según la autenticación. Su rótulo cambia con ella: **API key**, **Token**, **User:password** o **Client Secret**. Con `None` no aparece. |
-| **Filter mode** | Cómo se le piden a la API los filtros, el orden y las páginas: **OData** (`$filter`, `$orderby`, `$top`, `$skip`), **Query string** (plantillas `{field}={value}` y `{field} {dir}` que se definen en el objeto) o **None** (la API devuelve todo y Flexygo filtra, ordena y pagina en memoria). |
+| **Filter mode** | Cómo se le piden a la API los filtros, el orden y las páginas: **OData** (`$filter`, `$orderby`, `$top`, `$skip`), **Query string** (plantillas `{field}={value}` y `{field} {dir}` que se definen en el objeto; `{where}` pasa el filtro entero como un `WHERE` de SQL, para APIs que lo entienden, como [otro Flexygo](#7-otro-flexygo-como-api)) o **None** (la API devuelve todo y Flexygo filtra, ordena y pagina en memoria). |
 | **Page / Page size / Offset / Sort parameter** | Nombres de los parámetros de paginación y orden de la API, y el número de la primera página. |
 | **Max rows in memory** | Tope de filas que se traen cuando la API no filtra (`None`); por defecto 5.000. Si la API devuelve más, se avisa. |
 | **Error path** | Ruta JSON del nodo de error, para APIs que contestan errores con un 200. |
@@ -103,6 +103,33 @@ En el formulario de cada **propiedad** hay dos campos que solo tienen sentido en
 
 Las **vistas** de un objeto externo no llevan SQL: se eligen las columnas y el orden, y el resto lo hace la API. El gestor de vistas no ofrece «desde SQL» para estos objetos.
 
+### Desplegables sobre un objeto externo
+
+Cuando un campo guarda el código de algo que también vive en la API (el cliente de un parte, el técnico, el almacén), el desplegable no puede leer de la base de datos: lee de **otro objeto externo**, el maestro.
+
+1. Da de alta el maestro como un objeto externo más, con el mismo servicio. Basta de solo lectura: rutas de alta, edición y borrado vacías.
+2. En la propiedad que guarda el código:
+
+| Campo | Valor |
+|---|---|
+| **Type** | `DbCombo` |
+| **Data Source Object** | El objeto del maestro (el registro, no la colección). |
+| **Data Source View** | Vacía, para usar la vista por defecto del maestro, o una de sus vistas. |
+| **SQL Value Field** | La clave del maestro: el código que se guarda. |
+| **SQL Display Field** | El campo del maestro con el texto que se enseña. |
+| **SQL Sentence** | **Vacía.** Con un *Data Source Object* externo no se usa: los valores llegan siempre del maestro a través de la API. |
+| **SQL Filter** | Opcional. Se aplica como filtro sobre el maestro y viaja a la API como cualquier otro filtro. |
+| **Connection String** | El formulario la pide para todo desplegable, pero aquí no se usa: vale cualquiera. |
+
+**Dónde están esos campos.** El **asistente de la propiedad** (la ventana *Properties* que abre el botón de configurar del formulario en modo desarrollo, o el paso de propiedades del banco de trabajo) enseña *Data Source Object* y *Data Source View* en cualquier desplegable. El **formulario completo** de la propiedad solo los enseña cuando la propiedad es offline o su objeto es externo. Para un desplegable sobre un objeto externo en un objeto de la base de datos, usa el asistente.
+
+**Al escribir en el desplegable**, el texto se convierte en un filtro sobre el campo que se enseña. Con un servicio que filtra (*Filter mode* `OData` o `Query string`), la API devuelve solo lo que coincide. Con `None`, Flexygo trae el maestro entero y filtra en memoria: con maestros grandes conviene que el servicio filtre.
+
+**La ficha y la vista** enseñan el texto del valor, que Flexygo pide al maestro por su clave.
+
+!!! tip "Sin maestro publicado"
+    Si el maestro no está en la API (estados, tipos con pocos valores fijos), usa un desplegable **estático** (`Combo` con sus valores). Y si la API ya devuelve el texto junto al código, como hace otro Flexygo con `Campo_flxtext` (ver [§7](#7-otro-flexygo-como-api)), basta con añadir esa propiedad a las vistas para ver el texto en las listas.
+
 ---
 
 ## 4. Usar el objeto
@@ -125,7 +152,7 @@ A partir de ahí es un objeto más: se coloca en páginas, se le dan permisos, s
 </figure>
 
 !!! note "Los desplegables también"
-    Una propiedad de cualquier objeto puede ser un desplegable **sobre un objeto externo**. El maestro (estados, roles…) se da de alta como un objeto externo más y, en el asistente de la propiedad, se elige el tipo **DbCombo**, el **Data Source Object** (el objeto del maestro), su **Data Source View**, el **SQL Value Field** (el código) y el **SQL Display Field** (el texto). Los valores se resuelven en el servidor a través de la API; la ficha y la vista enseñan el texto, y la búsqueda de texto lo busca por él (ver la tabla de abajo).
+    Una propiedad de cualquier objeto puede ser un desplegable **sobre un objeto externo**: el maestro se da de alta como un objeto externo más. Cómo se configura, en [Desplegables sobre un objeto externo](#desplegables-sobre-un-objeto-externo).
 
 ---
 
@@ -231,3 +258,66 @@ Una lista de filas planas. Por ejemplo, ventas y compras por mes, con una línea
 - **Una sola fuente**: las gráficas `mixed` con varios SQL separados por `;` siguen siendo solo SQL.
 - **Las filas que se piden son todas las que devuelva la API** de una vez; si el servicio no filtra y Flexygo filtra en memoria, rige el **Max rows in memory** del servicio.
 - Una gráfica **con** SQL sobre un objeto externo se sigue rechazando como en la [sección 5](#5-que-funciona-y-que-no).
+
+---
+
+## 7. Otro Flexygo como API
+
+Un Flexygo puede leer y escribir los objetos que **otro Flexygo** publica en su [web API](WebAPI.md): por ejemplo, los partes de un SAT desde otra aplicación. Es una API REST más, con unas particularidades que conviene configurar así.
+
+### 7.1 El servicio
+
+| Campo | Valor |
+|---|---|
+| **Base URL** | La URL del Frontend del otro Flexygo seguida de `/webapi`, por ejemplo `https://servidor/sat/webapi`. |
+| **Authentication** | `Bearer`. |
+| **Secret** | Un token de la web API del otro Flexygo (ver abajo). |
+| **Filter mode** | `Query string`. |
+| **Page parameter** | `page`. |
+| **First page number** | `0`. |
+| **Page size parameter** | `pagesize`. |
+| **Sort parameter** | `orderBy`. |
+
+**El token.** La web API de Flexygo solo acepta tokens (`Authorization: Bearer`), y su `/token` solo los concede con usuario y contraseña (`grant_type=password`). Por eso ni `Basic` ni `OAuth2 client credentials` sirven aquí. El token se pide una vez, con el usuario que vaya a usar la integración, y se pega en **Secret**:
+
+```
+POST https://servidor/sat/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=USUARIO&password=CONTRASEÑA
+```
+
+De la respuesta se copia el `access_token`. Dura lo que diga el ajuste `WebAPI_Timeout` del otro Flexygo (por defecto, unos diez años; el `expires_in` de la respuesta lo confirma). Si se revoca, se pide otro y se cambia en el servicio.
+
+### 7.2 El objeto
+
+| Campo | Valor |
+|---|---|
+| **List path** | `list/sat_Parte` |
+| **Record path** | `object/sat_Parte/{key}` |
+| **Insert path** | `object/sat_Parte` |
+| **Update path** | `object/sat_Parte/{key}`, método `PUT` |
+| **Delete path** | `object/sat_Parte/{key}` |
+| **Records path** | Vacía: la lista llega como un array. |
+| **Filter template** | `filter={where}`: el filtro viaja como el `WHERE` que la web API de Flexygo entiende. |
+
+- **`{key}`** solo vale con una clave de **un solo campo**, que es lo que admite la web API de Flexygo por identificador.
+- **Lo que se puede hacer** lo decide el otro Flexygo: el objeto tiene que estar publicado en su web API con permiso de ver, insertar, editar o borrar, y el usuario del token necesita además permiso sobre el objeto ([Seguridad de la WebAPI](WebAPISecurity.md)).
+- **El alta** devuelve el registro creado con el formato de la web API de Flexygo (`Properties.Campo.Value`). Flexygo lo reconoce y toma de ahí la clave que ha generado el otro servidor, así que no hace falta **Find inserted record by**.
+
+### 7.3 Los textos de los desplegables (`_flxtext`)
+
+La lista de la web API de Flexygo devuelve, junto a cada campo con desplegable, otro con su texto: `IdCliente` y `IdCliente_flxtext`. La sonda los propone **desmarcados**:
+
+- Para enseñar el nombre del cliente en una lista sin montar un desplegable, marca el `_flxtext` que te interese y añádelo a la vista.
+- Para un desplegable de verdad, da de alta el maestro (`sat_Cliente`) como otro objeto externo y configúralo como en [Desplegables sobre un objeto externo](#desplegables-sobre-un-objeto-externo).
+- Si no quieres ninguno, pide la lista sin ellos: **List path** `list/sat_Parte?withDescrips=false`.
+
+### 7.4 Si algo no sale
+
+| Lo que ves | Por qué | Qué hacer |
+|---|---|---|
+| `401 Unauthorized` | Falta el token, ha caducado o se ha revocado | Pide otro token y cámbialo en **Secret** |
+| `403 Forbidden` | El objeto no está publicado en la web API del otro Flexygo para esa operación, o el usuario del token no tiene permiso | Publica la operación y revisa los permisos del rol |
+| `405 Method Not Allowed` al editar o borrar | El otro Flexygo está en IIS con el módulo **WebDAV**, que se queda los `PUT` y `DELETE` antes de que lleguen a la aplicación | En el `web.config` del Frontend **y** del Backend del otro Flexygo, dentro de `<system.webServer>`, añade `<modules><remove name="WebDAVModule" /></modules>` y, en `<handlers>`, `<remove name="WebDAV" />` antes del `<add name="aspNetCore" … />` |
+| La lista va lenta | Sin *Filter mode* ni paginación, cada página trae todos los registros y Flexygo los corta en memoria | Configura el servicio y la **Filter template** como en las tablas de arriba |
