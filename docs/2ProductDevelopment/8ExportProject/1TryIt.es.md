@@ -27,6 +27,7 @@ Panel de control → lista de acciones → **Export as project**. La ventana lee
 
 - *The configuration of origin N*: el origen es el de tu proyecto, no el 0 (con el 0 la ventana lo dice y no deja exportar).
 - *The data model*: la conexión de tus tablas (las marcadas con **Update data model** en *Connection strings*). Si dice *none marked*, el proyecto llevará el proyecto de datos vacío.
+- *The custom folder*: despliega **Choose what travels** y mira qué carpetas y ficheros de `custom` van a viajar. Los repositorios de documentos e imágenes, las carpetas de ejecución y lo que pase de 100 MB salen desmarcados; desmarca también lo que sea dato y no proyecto ([la carpeta custom](2Reference.md#31-la-carpeta-custom-se-elige-que-viaja)).
 - *.NET SDK found* y la plantilla de la versión de tu aplicación (*already installed*, o que se descargará).
 
 ## 2. Elige los datos maestros

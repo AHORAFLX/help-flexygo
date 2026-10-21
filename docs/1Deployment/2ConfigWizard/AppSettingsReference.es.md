@@ -47,6 +47,7 @@ El archivo `appsettings.json` del **Backend** contiene toda la configuración de
     "PreReleaseVersions": false
   },
   "DisableCronJobs": false, // (7)!
+  "DisableScriptJobs": false,
   "FrontendEndpoint": "http://localhost:7111", // (8)!
   "AllowedHosts": "*",
   "WebApiOrigins": "*", // (9)!
@@ -60,7 +61,7 @@ El archivo `appsettings.json` del **Backend** contiene toda la configuración de
 4. **ConnectionStrings** — Cadenas de conexión a las dos bases de datos. El Asistente de Configuración las genera y actualiza automáticamente. `ConfConnectionString` apunta a la BD de configuración y `DataConnectionString` a la BD de datos.
 5. **MailSettings** — Parámetros del servidor SMTP. Configurados por el Asistente. La clave `Configured: true` indica que el asistente ya ha pasado por este paso; si se pone a `false`, el asistente vuelve a solicitar la configuración de correo al iniciar la aplicación.
 6. **DatabaseNuget** — Fuente NuGet desde donde el sistema comprueba actualizaciones de la base de datos de configuración. No modificar salvo que uses un feed NuGet corporativo propio.
-7. **DisableCronJobs** — Deshabilita las tareas programadas internas de Flexygo. Útil en entornos de prueba o cuando hay múltiples instancias del Backend.
+7. **DisableCronJobs** y **DisableScriptJobs** — `DisableCronJobs` deshabilita las tareas programadas internas de Flexygo (*Cron Jobs*) y `DisableScriptJobs`, los [trabajos de script de base de datos](../../Help/Programming/DatabaseScriptJobs.md) que se lanzan al arrancar. Útiles en entornos de prueba, en copias que apuntan a una base compartida o cuando hay varias instancias del Backend. Solo el valor `true` las apaga. **Se leen de este fichero**, que manda sobre cualquier otro sitio (la tabla de ajustes no cuenta), y **solo al arrancar**: después de cambiarlas hay que reiniciar el Backend.
 8. **FrontendEndpoint** — URL del Frontend tal como la conoce el Backend. Configurada automáticamente por el instalador. Solo modificar en caso de cambio de dominio o puerto tras la instalación.
 9. **WebApiOrigins** — Orígenes permitidos para las peticiones CORS a la API. `"*"` permite cualquier origen. Restringir en producción si se requiere.
 10. **DebugUpdater** — Activa el modo de depuración del actualizador. Solo para diagnóstico; mantener en `false` en producción.

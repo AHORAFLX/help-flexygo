@@ -24,6 +24,20 @@ Se configura en la herramienta **WebAPI** del área **Security** del [panel de c
 
 Y debajo de todo eso, **la seguridad de siempre del rol**: los permisos de objeto (ver la ficha, ver la lista), los filtros de fila y los permisos de cada proceso. Publicar un objeto en la API no se salta nada de eso.
 
+### Solo las propiedades definidas
+
+La API sirve **solo las propiedades definidas** del objeto y sus claves: en las listas, en los registros, en los esquemas de alta y edición y en el OpenAPI. Una columna de la tabla que no sea propiedad del objeto no sale, aunque esté en la vista. Lo mismo vale para los asistentes de IA (MCP). Lo decide el ajuste **`WebAPI_OnlyDefinedProperties`**, que viene **activado** y se da por activado si falta.
+
+| `WebAPI_OnlyDefinedProperties` | Qué sirve la API |
+|---|---|
+| `true` (por defecto) | Las propiedades definidas del objeto y sus claves |
+| `false` | Todas las columnas de la tabla del objeto, sean propiedad o no, como antes de la versión 10 |
+
+Para ocultar a la API una propiedad que sí está definida, sigue estando **WebApiHidden** en la propiedad.
+
+!!! warning "Si una integración lee columnas que no son propiedad"
+    Antes de la versión 10 la API devolvía todas las columnas de la tabla. Si una integración lee alguna que no es propiedad del objeto, **defínela como propiedad**. Poner el ajuste a `false` también la devuelve, pero devuelve con ella todas las demás columnas de la tabla.
+
 El token se pide con `POST /token` (`grant_type=password`, `username`, `password`) y viaja en `Authorization: Bearer …`.
 
 ---
@@ -123,6 +137,25 @@ Cada bloqueo tiene un **ámbito** (`Scope`):
 
 Los bloqueos también **se crean solos**: las peticiones sospechosas (lista negra y lista gris de Sentinel, y en el MCP los registros de clientes, los canjes de token fallidos y las llamadas sin sesión) se cuentan por dirección, y al pasar de `SentinelMaxBlackRequests` o `SentinelMaxGreyRequests` en poco tiempo la dirección queda bloqueada con el ámbito de lo que la provocó.
 
+### Intentos fallidos de pedir un token
+
+**50 intentos fallidos de `POST /token` en 60 segundos** desde la misma dirección la bloquean, con ámbito `All` (**toda la aplicación**, pantalla de entrada incluida) y **sin fecha de fin**: sigue bloqueada hasta que un administrador quita la fila en **IP Lockouts**.
+
+- **Cuentan** las credenciales malas: usuario que no existe, contraseña incorrecta, LDAP que rechaza y `refresh_token` inválido. No cuenta la contraseña correcta de un usuario bloqueado o sin permiso para la API.
+- **Cada intento fallido** queda en el log de la WebAPI (`WebAPI_Logs`, tipo `TOKEN`) con el usuario que se probó y las direcciones por las que llegó la petición, aunque el log de la WebAPI esté apagado. Así se ve de dónde vino un bloqueo.
+- Las direcciones **locales** (loopback) no se bloquean nunca.
+- La cuenta se lleva en memoria: cada instancia del Backend cuenta por su lado, y un reinicio empieza de cero.
+
+| Ajuste | Por defecto | Con `0` |
+|---|---|---|
+| `WebAPI_MaxFailedTokenAttempts` | `50` intentos | No se bloquea |
+| `WebAPI_FailedTokenInterval` | `60` segundos | No se bloquea |
+
+!!! danger "Detrás de un proxy, un bloqueo los cierra a todos"
+    Si la dirección que ve el Backend es la de un proxy o la del Frontend, una sola integración con la contraseña caducada bloquea esa dirección y, con ella, **a todos los que entran por ahí**. Configura el proxy como se explica abajo.
+
+### La dirección del cliente
+
 La dirección que se comprueba y que queda en el log es **la del cliente**, no la del Frontend: el Frontend se la pasa al Backend. Detrás de un proxy inverso, configura `ForwardedHeaders` como dice [Proxy inverso](../../1Deployment/6ReverseProxy/index.md), o todas las peticiones parecerán venir del proxy.
 
 ---
@@ -138,3 +171,5 @@ La dirección que se comprueba y que queda en el log es **la del cliente**, no l
 | Proceso de colección sin `filter` → corría sobre todos | `400` | Manda siempre el `filter`. |
 | Proceso de objeto sin objeto → corría | `400` | Usa la ruta con objeto y registro. |
 | Parámetro `{{Campo}}` mandado en el cuerpo → se usaba | Se ignora | Elige el registro por la ruta. |
+| Se servían todas las columnas de la tabla | Solo las propiedades definidas y las claves (`WebAPI_OnlyDefinedProperties`) | Define como propiedad lo que lea la integración (ver 1). |
+| Intentos fallidos de token sin límite | 50 en 60 s bloquean la dirección en toda la aplicación | Revisa las credenciales de las integraciones y el proxy (ver 5). |

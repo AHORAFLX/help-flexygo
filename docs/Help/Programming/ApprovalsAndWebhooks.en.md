@@ -1,4 +1,4 @@
-# Approvals, human tasks and outbound webhooks
+# Approvals, human tasks and outbound webhooks <span class="fh-version-tag" title="Available since version 10">10.0+</span>
 
 Flexygo does not orchestrate automations: that is what n8n, Make, Zapier or any other orchestrator is for. What it does do is **what an orchestrator cannot do on its own**: open a **decision** to a person or a role inside the application, with its inbox, its deadline and its escalation, and **notify the outside world** when a record changes (**outbound webhooks**). The two pieces combine into a circuit:
 
@@ -17,6 +17,19 @@ flowchart LR
 
 The orchestrator and the callback are optional: a **decision rule** opens tasks on save without leaving Flexygo, and an outbound webhook serves any HTTP receiver even if there is no task behind it.
 
+Want to try it in fifteen minutes? [Try it: a decision and an outbound webhook](ApprovalsAndWebhooksTryIt.md).
+
+Everything looks and is configured the same way in both skins (skin2026 and flexy2022):
+
+| What | skin2026 | flexy2022 |
+|---|---|---|
+| The inbox | **Decisions** menu node, with a counter | **Decisiones** menu node, with a counter |
+| Decision rules | **Control panel › Logic and rules › Decision rules** | **Admin › Lógica y reglas › Reglas de decisión** |
+| Outbound webhooks and their deliveries | **Control panel › Logic and rules › Outgoing webhooks** | **Admin › Lógica y reglas › Webhooks de salida** |
+| From the object | The object's workbench, *Decisions* and *Webhooks* sections | — |
+
+![Logic and rules in the skin2026 control panel](../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png)
+
 ---
 
 ## 1. Human tasks (decisions)
@@ -27,9 +40,16 @@ A **task** is a question with options —*Approve* / *Reject* by default— addr
 |---|---|
 | **Decisions** (menu node, with a counter) | The inbox: *Mine* · *My roles* · *All open* · *Resolved*, with the options on the row and the link to the record. |
 | **The task record view** (`sysTask`) | The *Resolve*, *Reassign* and *Cancel* processes in the process menu (only while it is pending). |
-| **The record's record view** | The `sysmod-task-decision-2026` module (can be placed on any record view page) shows the pending tasks of that record with their buttons, the comment and the history. |
+| **The record's record view** | The *Pending decision* card (`sysmod-task-decision-2026` module) shows the pending tasks of that record with their buttons, the comment and the history. It comes **out of the box at the top of the default record views** (view and edit) of every object that has no record view of its own, and takes no space if the record has nothing pending. On an object with its own record view (users, roles…) it is placed by hand like any module. |
 | **The bell** | Each pending task leaves a notice (`Notices`) for the user or the role members; it expires when the task is decided, cancelled, reassigned or expires. |
 | **The web API** | The same processes, see §3. |
+
+![The decisions inbox](../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png)
+
+![The decision card on the default record view of a record](../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png)
+
+!!! note "What the card costs"
+    Opening a default record view runs one more query, the record's pending tasks, backed by the `IX_Tasks_Status_Object` index on `Tasks`. Measured with 50,000 tasks in the table: between 44 and 57 ms per opening. Lists do not carry it.
 
 ### Statuses and priorities
 
@@ -61,7 +81,9 @@ The **`flxTaskEscalation`** job (every 5 minutes, `sysTaskEscalation` process) l
 
 ## 2. Decision rules
 
-A **rule** (`Tasks_Rules`, `sysTaskRule` object, *Decision rules* node under *Logic and Rules*, and the *Decisions* section of the object's workbench) opens a task when a record of the object is saved, with no code. It is evaluated after the save is committed, whether it comes from a screen or from the web API; whoever saves does not need permission on the task processes.
+A **rule** (`Tasks_Rules`, `sysTaskRule` object, *Decision rules* / *Reglas de decisión* node under *Logic and rules*, and the *Decisions* section of the object's workbench) opens a task when a record of the object is saved, with no code. It is evaluated after the save is committed, whether it comes from a screen or from the web API; whoever saves does not need permission on the task processes.
+
+![The record view of a decision rule](../../docs_assets/images/ApprovalsAndWebhooks/regla.png)
 
 | Field | What for |
 |---|---|
@@ -76,11 +98,16 @@ A **rule** (`Tasks_Rules`, `sysTaskRule` object, *Decision rules* node under *Lo
 | **Due in (minutes)** | Deadline from the moment it is opened. |
 | **Escalate after / to role / to user** | The escalation from §1. |
 | **On resolve process** | Process that receives the result (§1). |
-| **Callback URL / secret ref** | To notify an orchestrator on decision (§5). |
+| **Callback URL / Callback secret** | To notify an orchestrator on decision (§5). The secret is stored in the rule, is shown masked and is passed on to every task the rule opens. |
 | **Enabled** | A disabled rule does not fire. |
 
+!!! warning "External objects: no condition"
+    On an external object (its records live behind an API, see [External entities](ExternalEntities.md)) there is no table to evaluate a `WHERE` on. That is why, when an external object is chosen, **Only if** and **Urgent if** are disabled, and the server rejects a condition that arrives by another route (the web API, or a value that was already written) with *«An external object takes no condition»*. A rule without a condition works just as on any other object.
+
 !!! tip "Test with a record"
-    In the rule's record view, the **Test with a record** process asks for a `WHERE` that names a record (`Id = 'admins'`) and shows the task it would open —rendered title, assignee, priority, due date, escalation and events— **without creating it**. If the record does not meet the condition, or the rule is disabled, it says so.
+    In the rule's record view, the **Test with a record** process asks for a `WHERE` that names a record (`Id = 'admins'`) and shows, **without creating it**, the task it would open: rendered title, assignee, priority, due date, escalation and events. The answer comes up in a dialog titled with the rule's name, closed with **OK**. If the record does not meet the condition, or the rule is disabled, it says so. Through the web API, the same text arrives in `Data.Message`.
+
+    ![Test with a record: the task it would open](../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png){ width="600" }
 
 An object's rules are read once along with its configuration and are reloaded when a rule is saved or deleted from its record view: no restart is needed. An object without rules pays nothing on save.
 
@@ -97,6 +124,16 @@ Everything goes through the Flexygo **web API**: `POST /token` (`grant_type=pass
 | `POST /webapi/exec/sysTaskCancel/sysTask/{TaskId}` | Cancels: `Comment`. |
 | `POST /webapi/exec/sysTaskReassign/sysTask/{TaskId}` | Reassigns: `AssignedRoleId`, `AssignedUserId`, `Comment`. |
 | `GET /webapi/object/sysTask` · `GET /webapi/object/sysTask/{TaskId}` | Reads tasks like any object. |
+| `POST /webapi/exec/sysTaskRuleTest/sysTaskRule/{RuleId}` | A rule's **Test with a record**: `Record` (a `WHERE` that names a record, `Id = 'admins'`). Creates nothing; the text of the task it would open comes back in `Data.Message`. |
+| `POST /webapi/exec/sysWebhookTest/sysWebhookSubscription/{SubscriptionId}` | A subscription's **Send a test**: `Record`, as above. Queues a real delivery with `event: test`. |
+| `POST /webapi/exec/sysWebhookRetry/sysWebhookDelivery/{DeliveryId}` | **Retry**: queues a `failed` or `dead` delivery again. |
+
+!!! note "A process of an object is called with its object and its record"
+    Every process that hangs from an object is called as `/webapi/exec/<process>/<object>/<id>`: the web API requires it and, without
+    the object and the record in the route, answers *«send the object and the record (id or filter) to run it on»*. An id that does not exist
+    gives 404 *«record not found»*, and a process that the record does not allow (a **Retry** of a delivery already sent) gives *«not available
+    for this record»*. Only `sysTaskCreate`, which hangs from no object, goes without a record. Rules, subscriptions and deliveries are
+    **administrators only**: the API user that tests or retries them has to be one.
 
 ### `sysTaskCreate` parameters
 
@@ -104,7 +141,7 @@ Everything goes through the Flexygo **web API**: `POST /token` (`grant_type=pass
 |---|---|---|
 | `Title` | text | **Mandatory.** Accepts `{{Field}}` from the record if `ObjectName`/`ObjectWhere` is given. |
 | `Descrip` | long text | Context for whoever decides; also with `{{Field}}`. |
-| `ObjectName`, `ObjectWhere` | text | The record being decided on. `ObjectWhere` can be plain (`Id = 'x'`) or encrypted as Flexygo delivers it (the `objectWhere` of a webhook, for example); it is always stored in canonical form. No record is also fine. |
+| `ObjectName`, `ObjectWhere` | text | The record being decided on. `ObjectWhere` can be plain (`Id = 'x'`, or a webhook's `objectWhere` as is) or encrypted as a Flexygo screen delivers it; **it is always stored in plain form**, as the record's key (`[AspNetRoles].[Id] = N'x'`), so that the task keeps finding its record even if the application moves to another server. No record is also fine. |
 | `AssignedRoleId`, `AssignedUserId` | text | To whom. Both: the person within the role. Neither: the task stays open to anyone. |
 | `Priority` | 0 · 1 · 2 | normal · high · urgent. |
 | `DueDate` | date-time | Deadline. |
@@ -113,7 +150,7 @@ Everything goes through the Flexygo **web API**: `POST /token` (`grant_type=pass
 | `RequireComment` | boolean | |
 | `OnResolveProcess` | text | Flexygo process that receives `TaskId`, `Outcome`, `Comment`, `ObjectName`, `ObjectWhere` and `CorrelationId`. |
 | `CallbackUrl` | URL | `POST` with the result on decision, cancellation or expiry (§5). |
-| `CallbackSecretRef` | text | `appsettings.json` key holding the secret that signs the callback. The secret **never** goes in the call or in the database. |
+| `CallbackSecret` | text | The secret shared with whoever receives the callback, to sign it (§4, *Headers and signature*). It is stored in the task and shown masked in its record view. Empty: the callback goes unsigned. |
 | `CorrelationId` | text | Whatever the caller wants to get back (its execution id, for example). |
 
 The response is that of any process: `Success`, `SuccessMessage`, `WarningMessage`, `LastException` and `Data` (`TaskId` and `Status`; on resolve, also `Outcome` and the result of the `OnResolveProcess`).
@@ -130,27 +167,44 @@ POST /webapi/exec/sysTaskCreate
   "EscalateAfter": 1440,
   "EscalateToRoleId": "admins",
   "CallbackUrl": "https://n8n.example.com/webhook-waiting/1234",
+  "CallbackSecret": "a-long-random-string-shared-with-n8n",
   "CorrelationId": "1234"
 }
+```
+
+When resolving through the API, `Outcome` goes in the body with the option's `id`:
+
+```json
+POST /webapi/exec/sysTaskResolve/sysTask/0F12D8AC-…
+{ "Outcome": "reject", "Comment": "Not this quarter" }
 ```
 
 ---
 
 ## 4. Outbound webhooks
 
-A **subscription** (`WebHooks_Subscriptions`, `sysWebhookSubscription` object, *Outgoing webhooks* node and *Webhooks* section of the object's workbench) sends a `POST` to a URL when a record of the object is saved or deleted. The save **never waits for the receiver**: the delivery is queued (`WebHooks_Deliveries`) and the **`flxWebhookDispatcher`** job (every minute, `SendPendingWebhooks` process) sends it.
+A **subscription** (`WebHooks_Subscriptions`, `sysWebhookSubscription` object) sends a `POST` to a URL when a record of the object is saved or deleted. The save **never waits for the receiver**: the delivery is queued (`WebHooks_Deliveries`) and the **`flxWebhookDispatcher`** job (every minute, `SendPendingWebhooks` process) sends it.
+
+Subscriptions and their deliveries live on **a single screen**, *Outgoing webhooks* / *Webhooks de salida*, with two tabs: **Subscriptions** (*Suscripciones*) and **Deliveries** (*Envíos*), the log of everything that has been sent. It is the same in both skins. It can also be reached from the *Webhooks* section of the object's workbench.
+
+![Outgoing webhooks, Subscriptions tab](../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png)
+
+!!! note "Outbound and inbound webhooks"
+    This screen is the **outbound** one: Flexygo notifies another system. **Inbound** webhooks (another system calls Flexygo, `/webhook/{id}`, `sysWebHook` object) belong to the web API and have no menu node.
 
 | Field | What for |
 |---|---|
 | **Object** | The object being watched. |
 | **After insert / update / delete** | The events it listens to. |
-| **Only if** (`Condition`) | A `WHERE` on the table; on delete it is evaluated **before** deleting. |
-| **URL**, **Method** | Where and how (`POST` by default). |
+| **Only if** (`Condition`) | A `WHERE` on the table; on delete it is evaluated **before** deleting. Not allowed on an external object (as with rules, §2). |
+| **Url**, **Method** | Where and how (`POST` by default). |
 | **Headers** | Fixed headers, in JSON: `{"X-Api-Key": "…"}`. |
-| **Secret ref** | `appsettings.json` key holding the signature secret (below). Empty: `Webhooks:{SubscriptionId}:Secret`. With no secret configured, the delivery goes unsigned. |
-| **Payload mode** | `record` (all fields of the record), `keys` (only the keys) or `template` (`PayloadTemplate` rendered with `{{Field}}`, as is). |
-| **Timeout (seconds)**, **Max attempts** | 10 s and 6 attempts by default. |
+| **Secret** | The secret shared with the receiver, which signs every delivery (below). It is stored in the subscription and shown masked. Empty: the delivery goes unsigned. |
+| **Payload** | `record` (*The whole record*: all fields of the record), `keys` (only the keys) or `template` (**Template** rendered with `{{Field}}`, as is). |
+| **Timeout (seconds)**, **Attempts** | 10 s and 6 attempts by default. |
 | **Enabled** | A disabled subscription does not queue. |
+
+![A subscription's record view, with the secret masked](../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png)
 
 An object's subscriptions are read once along with its configuration and are reloaded when a subscription is saved from its record view. An object without subscriptions pays nothing on save.
 
@@ -162,7 +216,7 @@ With `record` and `keys`, the body is a fixed envelope with the record in `data`
 {
   "event": "insert",
   "object": "sysRole",
-  "objectWhere": "…",
+  "objectWhere": "[AspNetRoles].[Id] = N'sales'",
   "subscriptionId": "2eebc76e-…",
   "firedAt": "2026-09-15T20:03:11.4+02:00",
   "firedBy": "admin",
@@ -170,7 +224,7 @@ With `record` and `keys`, the body is a fixed envelope with the record in `data`
 }
 ```
 
-`event` is `insert`, `update`, `delete`, `test` (a test delivery) or `task` (a task callback, §5). `objectWhere` is the encrypted identifier of the record: it can be used as is to open it or for `sysTaskCreate`. With `template`, the body is exactly the rendered template.
+`event` is `insert`, `update`, `delete`, `test` (a test delivery) or `task` (a task callback, §5). `objectWhere` is the record's key in plain form: it can be used as is for `sysTaskCreate` or to read the record through the web API. With `template`, the body is exactly the rendered template.
 
 ### Headers and signature
 
@@ -191,13 +245,8 @@ const expected = 'sha256=' + crypto.createHmac('sha256', secret).update(rawBody)
 const ok = crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(req.headers['x-flexygo-signature'] || ''));
 ```
 
-!!! warning "The secret lives in the application configuration"
-    ```json
-    "Webhooks": {
-      "2eebc76e-eff9-4699-bb1c-be2369d77392": { "Secret": "…" }
-    }
-    ```
-    Or any other key, named in the subscription's **Secret ref** (or in the task's `CallbackSecretRef`).
+!!! warning "The secret lives in the subscription"
+    Like that of an external service (`External_Services.Secret`), the secret is written in the record view (the subscription's **Secret**, the rule's **Callback secret**, the task's `CallbackSecret`) and stored in the configuration database. It is shown masked and does not travel in the body. It is the same value that is set in the receiver: in n8n, for example, the one in the *Crypto* (HMAC) node or the code that checks the signature. Changing it means editing the record view; there is no need to touch `appsettings.json` or restart.
 
 ### Retries and statuses
 
@@ -210,16 +259,18 @@ A `2xx` response marks the delivery `sent`. Any other —or no response within t
 | `failed` | It failed and will be retried at `NextAttempt`. |
 | `dead` | It used up its attempts. |
 
-In the record view of a `failed` or `dead` delivery, the **Retry** process queues it again right away (a failure leaves it `dead` again).
+All deliveries, including task callbacks (§5), are on the **Deliveries** tab (*Envíos*). In the record view of a `failed` or `dead` delivery, the **Retry** process queues it again right away (a failure leaves it `dead` again).
+
+![Outgoing webhooks, Deliveries tab](../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png)
 
 !!! tip "Send a test"
-    In the subscription's record view, **Send a test** asks for a `WHERE` that names a record and queues a **real delivery** with `event: test`, even if the subscription is disabled or the record does not meet the condition —the message says whether a save would have fired it—. It goes out within a minute and stays on the deliveries screen.
+    In the subscription's record view, **Send a test** asks for a `WHERE` that names a record and queues a **real delivery** with `event: test`, even if the subscription is disabled or the record does not meet the condition —the message says whether a save would have fired it—. It goes out within a minute and stays on the **Deliveries** tab.
 
 ---
 
 ## 5. A task's callback
 
-When a task with a `CallbackUrl` is **decided, cancelled or expires**, a `task` delivery to that URL is queued, through the same queue and with the same headers and retries (`POST` method, 10 s, 6 attempts); signed if the task has a `CallbackSecretRef`. The task log records `callback_sent` or `callback_failed`.
+When a task with a `CallbackUrl` is **decided, cancelled or expires**, a `task` delivery to that URL is queued, through the same queue and with the same headers and retries (`POST` method, 10 s, 6 attempts); signed if the task has a `CallbackSecret` (if a rule opened it, the rule's *Callback secret*). The task log records `callback_sent` or `callback_failed`.
 
 ```json
 {
@@ -252,7 +303,7 @@ An expired task arrives with `"status": "expired"` and `"outcome": null`; a canc
 ## 6. Example: n8n orchestrates, Flexygo decides
 
 1. A subscription on `sysRole` (*After insert*) points to the n8n **Webhook** node.
-2. n8n requests a token (`POST /token`), calls `sysTaskCreate` with the payload's `objectWhere`, `CallbackUrl = {{ $execution.resumeUrl }}` and `CorrelationId = {{ $execution.id }}`, and waits in a **Wait** node (*resume on webhook*).
+2. n8n requests a token (`POST /token`), calls `sysTaskCreate` with the payload's `objectWhere`, `CallbackUrl = {{ $execution.resumeUrl }}`, `CorrelationId = {{ $execution.id }}` and, if it wants to check who calls it, a `CallbackSecret`, and waits in a **Wait** node (*resume on webhook*).
 3. A person decides in the Flexygo inbox.
 4. The callback reaches the resume URL; n8n continues along the `approve` or `reject` branch by reading `body.data.outcome`.
 

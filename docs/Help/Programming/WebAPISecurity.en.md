@@ -24,6 +24,20 @@ It is configured in the **WebAPI** tool of the **Security** area of the [control
 
 And underneath all that, **the role's usual security**: object permissions (view the record view, view the list), row filters and the permissions of each process. Publishing an object in the API does not bypass any of that.
 
+### Only the defined properties
+
+The API serves **only the object's defined properties** and its keys: in lists, in records, in the insert and edit schemas and in the OpenAPI. A table column that is not a property of the object does not come out, even if it is in the view. The same goes for AI assistants (MCP). It is decided by the **`WebAPI_OnlyDefinedProperties`** setting, which comes **on** and is taken as on when it is missing.
+
+| `WebAPI_OnlyDefinedProperties` | What the API serves |
+|---|---|
+| `true` (default) | The object's defined properties and its keys |
+| `false` | Every column of the object's table, property or not, as before version 10 |
+
+To hide from the API a property that is defined, **WebApiHidden** on the property is still the way.
+
+!!! warning "If an integration reads columns that are not properties"
+    Before version 10 the API returned every column of the table. If an integration reads one that is not a property of the object, **define it as a property**. Setting the option to `false` also returns it, but returns every other column of the table along with it.
+
 The token is requested with `POST /token` (`grant_type=password`, `username`, `password`) and travels in `Authorization: Bearer …`.
 
 ---
@@ -123,6 +137,25 @@ Each lockout has a **scope** (`Scope`):
 
 Lockouts are also **created automatically**: suspicious requests (Sentinel's blacklist and greylist, and in the MCP, client registrations, failed token exchanges and calls without a session) are counted per address, and when `SentinelMaxBlackRequests` or `SentinelMaxGreyRequests` is exceeded in a short time, the address is blocked with the scope of whatever caused it.
 
+### Failed attempts to get a token
+
+**50 failed `POST /token` attempts in 60 seconds** from the same address lock it out, with scope `All` (**the whole application**, sign-in page included) and **with no end date**: it stays locked until an administrator removes the row in **IP Lockouts**.
+
+- **Wrong credentials count**: a user that does not exist, a wrong password, an LDAP refusal and an invalid `refresh_token`. The right password of a locked user, or of one without API permission, does not.
+- **Every failed attempt** is written to the WebAPI log (`WebAPI_Logs`, type `TOKEN`) with the user name tried and the addresses the request came through, even if the WebAPI log is off. That is how a lockout is traced back to its origin.
+- **Local** (loopback) addresses are never locked out.
+- The count is kept in memory: each Backend instance counts on its own, and a restart starts over.
+
+| Setting | Default | With `0` |
+|---|---|---|
+| `WebAPI_MaxFailedTokenAttempts` | `50` attempts | No lockout |
+| `WebAPI_FailedTokenInterval` | `60` seconds | No lockout |
+
+!!! danger "Behind a proxy, one lockout shuts everyone out"
+    If the address the Backend sees is a proxy's or the Frontend's, a single integration with an expired password locks out that address and, with it, **everyone who comes in through it**. Configure the proxy as explained below.
+
+### The client's address
+
 The address that is checked and recorded in the log is **the client's**, not the Frontend's: the Frontend passes it to the Backend. Behind a reverse proxy, configure `ForwardedHeaders` as described in [Reverse proxy](../../1Deployment/6ReverseProxy/index.md), or all requests will appear to come from the proxy.
 
 ---
@@ -138,3 +171,5 @@ The address that is checked and recorded in the log is **the client's**, not the
 | Collection process without `filter` → ran on all records | `400` | Always send the `filter`. |
 | Object process without object → ran | `400` | Use the path with object and record. |
 | `{{Field}}` parameter sent in the body → was used | Ignored | Choose the record through the path. |
+| Every column of the table was served | Only the defined properties and the keys (`WebAPI_OnlyDefinedProperties`) | Define as a property whatever the integration reads (see 1). |
+| Failed token attempts without limit | 50 in 60 s lock the address out of the whole application | Check the integrations' credentials and the proxy (see 5). |

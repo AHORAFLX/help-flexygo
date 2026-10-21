@@ -47,6 +47,7 @@ The **Backend**'s `appsettings.json` file contains all of the application's conf
     "PreReleaseVersions": false
   },
   "DisableCronJobs": false, // (7)!
+  "DisableScriptJobs": false,
   "FrontendEndpoint": "http://localhost:7111", // (8)!
   "AllowedHosts": "*",
   "WebApiOrigins": "*", // (9)!
@@ -60,7 +61,7 @@ The **Backend**'s `appsettings.json` file contains all of the application's conf
 4. **ConnectionStrings** — Connection strings for the two databases. The Configuration Wizard generates and updates these automatically. `ConfConnectionString` points to the configuration database and `DataConnectionString` to the data database.
 5. **MailSettings** — SMTP server parameters. Configured by the wizard. The `Configured: true` key indicates that the wizard has already gone through this step; if set to `false`, the wizard will ask for the mail configuration again when the application starts.
 6. **DatabaseNuget** — NuGet source from which the system checks for updates to the configuration database. Do not modify unless you use your own corporate NuGet feed.
-7. **DisableCronJobs** — Disables Flexygo's internal scheduled tasks. Useful in test environments or when there are multiple Backend instances.
+7. **DisableCronJobs** and **DisableScriptJobs** — `DisableCronJobs` disables Flexygo's internal scheduled tasks (*Cron Jobs*) and `DisableScriptJobs`, the [database script jobs](../../Help/Programming/DatabaseScriptJobs.md) launched at startup. Useful in test environments, in copies pointing to a shared database or when there are several Backend instances. Only the value `true` turns them off. **They are read from this file**, which overrides any other place (the settings table does not count), and **only at startup**: after changing them, restart the Backend.
 8. **FrontendEndpoint** — URL of the Frontend as known by the Backend. Configured automatically by the installer. Only change it if the domain or port changes after installation.
 9. **WebApiOrigins** — Allowed origins for CORS requests to the API. `"*"` allows any origin. Restrict it in production if required.
 10. **DebugUpdater** — Enables the updater's debug mode. For diagnostics only; keep it set to `false` in production.

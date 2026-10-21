@@ -36,7 +36,7 @@ In the **control panel**, in the action list: **Export as project** (the folder-
 
 ## 3. What it shows before starting
 
-As soon as it opens, the window reads the installation and says what it is going to take. The lines change with what is chosen below (the target origin and the three switches); whatever is turned off is dimmed.
+As soon as it opens, the window reads the installation and says what it is going to take. The lines change with what is chosen: the target origin and what is ticked in the `custom` folder (3.1).
 
 <figure markdown="span">
   ![The export window with the preview](../../docs_assets/images/CoreProductDevelopment/ExportProject/formulario.png)
@@ -48,7 +48,7 @@ As soon as it opens, the window reads the installation and says what it is going
 | **The configuration of origin N** | How many rows from how many tables travel as `MERGE` scripts of the `Conf.Database` project: those of the active origin plus those already in the target one. And, if any, how many rows from **other origins are left out** and from which tables |
 | **The data model** | Which connections take their schema to the project and which project each one goes to (4), or **none marked** if there are none |
 | **Static files** | How many CSS and JS files the origin registers, and how many of them **are not on disk** |
-| **The custom folder** | How many files in the Frontend's `custom` folder travel, or that there is no folder |
+| **The custom folder** | How many folders and files of the Frontend's `custom` folder travel, out of how many, with their size, and how much is left out; or that the Frontend has no `custom` folder (3.1) |
 | **Process DLLs** | How many process DLLs of the origin are not from the core, how many **are not in `bin`** and how many belong to an addon (only listed) |
 | **.NET SDK** | Whether the server has an SDK (**found**, with the version) or not (**not on this server**: the first export downloads it into a private Backend folder, without administrator permissions; it needs internet and takes a few more minutes). And the **template**: whether it is already installed and in which version, or that it will be downloaded from the updater's feed the first time |
 
@@ -58,11 +58,33 @@ Below, what is requested:
 |---|---|
 | **Product name** | .NET identifier (letters, digits and underscore, starting with a letter). It names the solution and each project: `CRMCore.Backend`, `CRMCore.Conf.Database`… |
 | **Scripts travel as origin** | The target origin (1). 1 · Product by default |
-| **Static files** | The files the origin registers in `Skins_Css`, `Plugins` and `Interfaces_Types_JS`, copied under the project Frontend's `wwwroot` at the **same path** (`~/crm/css/crm.css` → `wwwroot/crm/css/crm.css`), so the rows remain valid as they are |
-| **Custom folder** | The Frontend's `wwwroot/custom` folder **in full** —its JS, CSS and images, whether a row registers them or not—, without the subfolders the installation writes at run time (`images`, `documents`, `avatars`, `temp`, `Scripting`) |
-| **Process DLLs** | The DLLs that the origin's processes run and that are not from the core, as a binary reference of the `Processes` project (7) |
+| **Template package** and **Template short name** | The template the project is generated on. They are worked out from the product's namespace (`AutoUpdatePackageNamespace`): `Flexygo.Product.Template` and `flexygoproduct` for Flexygo. They can only be changed by turning on **Custom template**, to generate the project on another product's template |
+
+The **static files** and the **DLLs** **always** travel, because the rows that name them travel and without them the project would point to nothing:
+
+- **Static files**: the files the origin registers in `Skins_Css`, `Plugins` and `Interfaces_Types_JS`, copied under the project Frontend's `wwwroot` at the **same path** (`~/crm/css/crm.css` → `wwwroot/crm/css/crm.css`), so the rows remain valid as they are.
+- **Process DLLs**: the DLLs that the origin's processes run and that are not from the core, as a binary reference of the `Processes` project (7).
 
 **Export** is enabled when the name is valid, the active origin is not 0 and no other export is running. At the bottom, a reminder: nothing is built here; the zip is for a developer's machine.
+
+### 3.1 The custom folder: choosing what travels
+
+The Frontend's `wwwroot/custom` folder usually mixes **project** (your own JS, CSS and images) with **data** (what people attach, photos, exports). That is why it does not travel in full: **Choose what travels** expands its top-level folders and files, with how many files each one holds and its size, a search box and two shortcuts, **Suggested** (what comes ticked by default) and **None**. **Only what is ticked travels**, copied as it is.
+
+<figure markdown="span">
+  ![The custom folder list, with what comes unticked by default](../../docs_assets/images/CoreProductDevelopment/ExportProject/carpeta-custom.png){ width="640" }
+  <figcaption>What is data or weighs a lot comes unticked, with its reason</figcaption>
+</figure>
+
+These come **unticked by default**, with a label that says why:
+
+| Label | What it is |
+|---|---|
+| *documents* / *images* | The folders where the configuration keeps documents or images (the paths of the objects' document and image managers), whatever they are called |
+| *run time* | Those the installation writes while it runs: `images`, `documents`, `avatars`, `temp` and `Scripting` |
+| *Left out for its size* | Any folder or file **over 100 MB**. If it is ticked, its row warns and the line counts the large ones that travel; the list opens by itself when there is one |
+
+The preview line sums up the choice (for example, *1 of 8 folders, 3 of 3 files · 1 KB* and *176.9 MB left out*). Every time the window opens it is proposed again with these rules: the choice is not saved.
 
 ---
 
@@ -108,12 +130,12 @@ When you click **Export** the window switches to the steps: at the top "Step N o
 | 4. **Solution** | Generates the solution with `dotnet new flexygoproduct`, the same template a developer or TeamCity uses |
 | 5. **Configuration scripts** | One `MERGE` per table, like those of *Generate scripts*, in `scripts\staticdata` of `Conf.Database`, referenced from the post-deploy. And the **settings** the installation changed with respect to the core, as `UPDATE` at the end of `scripts\config.sql` (see 9) |
 | 6. **Data model** | The schema of each marked connection (4), one line per connection with the objects it carries |
-| 7. **Static files** | Copies the registered static files (if the switch is on) |
-| 8. **Custom folder** | Copies the `custom` folder (same) |
-| 9. **Process DLLs** | Copies the non-core DLLs to `Processes\lib` and references them from the `.csproj` (same) |
-| 10. **Zip and download** | Packs the project (without `bin`, `obj` or `.vs`) and downloads it |
+| 7. **Static files** | Copies the registered static files |
+| 8. **Custom folder** | Copies what is ticked in the `custom` folder (3.1) |
+| 9. **Process DLLs** | Copies the non-core DLLs to `Processes\lib` and references them from the `.csproj` |
+| 10. **Zip and download** | Checks that the zip fits on the server's disk, writes it to disk (without `bin`, `obj` or `.vs`) and downloads it |
 
-A step turned off by its switch comes out as **skipped**. There is no cancel button: closing the window while it runs **asks first**, because the export continues on the server and the zip can only be collected by reopening the window before it finishes (and clicking **Follow it**).
+If nothing in the `custom` folder is ticked, step 8 comes out as **skipped**. There is no cancel button: closing the window while it runs **asks first**, because the export continues on the server and the zip can only be collected by reopening the window before it finishes (and clicking **Follow it**).
 
 ---
 
@@ -127,6 +149,8 @@ A step turned off by its switch comes out as **skipped**. There is no cancel but
 - **The full report**, collapsible, with everything that was done and everything that was left out, table by table.
 
 The export and its zip are kept for **one hour** on the server; after that they are deleted automatically and **Download again** no longer works: export again.
+
+Before writing the zip, the free space is checked: if it does not fit, the export stops with a message that says how much the project takes and how much free space that disk has left. Free some space and export again.
 
 **If it fails**, the window says "… could not be exported" and "Stopped at step N of 10 · nothing was downloaded, nothing changed": the failed step comes out in **red** with the error, the log opens by itself, **Copy details** copies the error and the log to pass them on to whoever is responsible, and **Try again** goes back to the preview.
 
@@ -157,9 +181,9 @@ The DLLs of an **addon** (`~/custom/<addon>/`) do not belong to the project: the
 - Rows created with the active origin at **0** (indistinguishable from the core) and those of **other origins** different from the active and the target ones: the preview and the report count them per table.
 - The **data** in the databases, except the tables chosen as master data (4.1): for the rest, only the schema, and only that of the marked connections (4).
 - **Environment settings**: the settings the installation changed travel as `UPDATE` in `config.sql` (the MCP or the web API turned on, `ApplicationDescription`…), but not those that belong to each installation: password-type settings, those of the updater (`flx-version`), telemetry, paths and integrations with credentials (`flx-azure`, `flx-google`, `flx-office`, `flx-payments`, `flx-passbook`, `flx-clave`, `flx-sendinblue`, `flx-abh`), nor `BundleGUID`. The window lists in *Worth a look* those that travel.
-- The `images`, `documents`, `avatars`, `temp` and `Scripting` folders of `custom`: they are run-time data.
+- Whatever is left **unticked** in the `custom` folder (3.1). By default: the document and image repositories, the run-time folders (`images`, `documents`, `avatars`, `temp`, `Scripting`) and anything over 100 MB.
 - A file that a row registers and **is not on disk**: the row travels and the report warns about it.
 - A DLL that a process names and **is not in `bin`**: the process travels and the report warns about it.
 
 !!! note "Frontend and Backend on different servers"
-    The export runs in the Backend. The DLLs are there; the Frontend files (the registered ones and the `custom` folder) are requested from the Frontend through its internal file API. There is no need to share folders or copy anything by hand. In that case the preview cannot check one by one which static files are missing: the report says so when it finishes.
+    The export runs in the Backend. The DLLs are there; the Frontend files (the registered ones and the `custom` folder) are requested from the Frontend through its internal file API. There is no need to share folders or copy anything by hand. In that case the preview cannot check one by one which static files are missing: the report says so when it finishes. And the zip, which the Backend hands over to the Frontend, can be at most **700 MB**: if it is larger, the export says so and you export again with fewer files from `custom`.

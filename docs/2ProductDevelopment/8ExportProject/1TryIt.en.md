@@ -27,6 +27,7 @@ Control panel → action list → **Export as project**. The window reads the in
 
 - *The configuration of origin N*: the origin is your project's, not 0 (with 0 the window says so and does not allow exporting).
 - *The data model*: the connection of your tables (those marked with **Update data model** in *Connection strings*). If it says *none marked*, the project will carry an empty data project.
+- *The custom folder*: expand **Choose what travels** and look at which folders and files of `custom` will travel. The document and image repositories, the run-time folders and anything over 100 MB come unticked; untick too whatever is data and not project ([the custom folder](2Reference.md#31-the-custom-folder-choosing-what-travels)).
 - *.NET SDK found* and the template for your application's version (*already installed*, or that it will be downloaded).
 
 ## 2. Choose the master data
