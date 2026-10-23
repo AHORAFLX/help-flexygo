@@ -88,25 +88,23 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Herramientas de desarrollo
 
-- **Los objetos externos amplían su uso en Flexygo y conservan más opciones al exportar proyectos.** Puedes consultar y actualizar datos mediante servicios REST y utilizar estos objetos en listas, formularios, calendarios, paneles Kanban e informes HTML. Las listas admiten paginación, los formularios muestran el origen de los campos de selección y, al insertar registros, se recoge la clave generada por el servicio. También puedes consultar totales y medidas, mostrar datos en paneles y conservar en la exportación los ajustes modificados, excepto los propios del entorno.
-- **Incorpora controles deslizantes con el valor visible en tus aplicaciones.** El valor se confirma al soltar el control, aunque también puedes reaccionar mientras se arrastra. Está disponible entre los elementos compartidos.
-- **Crea interfaces con pestañas mediante los nuevos controles compartidos.** Puedes vincular las pestañas y su contenido mediante un valor. Así se gestiona qué sección permanece activa.
-- **Crea, organiza y personaliza pestañas desde la tira del diseñador.** La tira aparece aunque el objeto aún no tenga pestañas y permite añadir la primera, renombrar las existentes, elegir sus iconos o eliminarlas. Las opciones se gestionan desde la propia pestaña, sin ocupar el área de diseño.
-- **Configura propiedades desde un panel de ajustes rápidos más amplio.** Al editar una propiedad, el panel se abre junto al banco de objetos y puedes cerrarlo sin volver a desplegar la navegación. Los campos tienen más espacio y el desplazamiento se mantiene dentro del panel.
-- **Busca y selecciona iconos desde un explorador visual.** Puedes recorrer bibliotecas y categorías y previsualizar los iconos antes de elegirlos.
-- **Define en las plantillas de listas SQL los enlaces a los registros.** La plantilla puede construir enlaces incluso cuando las filas contienen distintos tipos de objeto. Se mantienen la ordenación y el redimensionado de columnas, sin depender de la detección automática de enlaces.
-- **La operación getView de la WebAPI aplica los valores predeterminados correspondientes.** Al consultar una vista, se devuelven sus valores predeterminados correctos.
-- **Consulta los errores en una lista filtrable, paginada y con detalles desplegables.** Puedes combinar filtros para acotar los resultados y consultar las opciones disponibles en cada criterio. El acceso desde el panel de inicio muestra los errores de las últimas 24 horas.
-- **Crea recorridos guiados señalando los elementos de cada pantalla.** El editor agrupa los pasos por pantalla, permite reordenarlos y muestra el elemento seleccionado antes de guardar. Puedes personalizar la tarjeta de bienvenida con una imagen o con la marca de Flexygo, que puede mostrarse con una animación de escritura.
-- **La skin 2026 incorpora pestañas en procesos e informes, asistentes para objetos y gestores de documentos e imágenes.** Los gestores de imágenes permiten presentar el contenido como galería o como lista. Las pestañas amplían la organización de propiedades más allá de la edición de objetos.
-- **Elige el origen de la nueva skin y cierra el diálogo sin cambiarlo.** El origen actual queda señalado y las opciones se distinguen con una insignia de color. Los orígenes caben en el diálogo y se muestran con sus nombres; el addon se presenta por separado. La etiqueta activa se actualiza al cambiar de origen, sin recargar la pantalla.
-- **En modo de desarrollo, el menú de un módulo ofrece accesos a la configuración de su objeto.** Las opciones aparecen agrupadas al final del menú y no se muestran en la skin clásica.
-- **Organiza los módulos de una página directamente desde la propia página.** Puedes mover módulos entre zonas, elegir otro diseño y crear módulos sin ir al gestor. Antes de guardar, se avisa si el cambio deja posiciones sin asignar o si la página procede de una distribución y se revertirá al actualizar.
-- **Integra Flexygo con otros sistemas mediante webhooks.** Los desarrolladores pueden utilizar esta funcionalidad para conectar sus aplicaciones con otros sistemas.
-- **Cambia la optimización de los paquetes desde el menú de desarrollo.** Puedes alternar este ajuste sin salir del menú.
-- **Los desarrolladores pueden suscribirse a los mensajes informativos de SQL de DataManager.** La opción permite recibir esos mensajes desde código externo que utilice DataManager.
+- **Los objetos externos amplían su compatibilidad con WebAPI, listas, formularios, asistentes, consultas y paneles.** Puedes crear objetos que consultan y actualizan datos mediante un servicio REST; el asistente puede analizarlo y proponer sus propiedades. Las listas admiten paginación, los formularios muestran el origen de los campos de selección y, al insertar, se recoge la clave generada por la WebAPI. También puedes consultar totales y medidas, y mostrar datos en paneles; las opciones no compatibles indican el motivo. La exportación conserva los ajustes de configuración modificados en la instalación, excepto los propios del entorno.
+- **Añade controles deslizantes con el valor visible en tus aplicaciones.** El valor se confirma al soltar el control, y también puedes reaccionar mientras se arrastra. El control está disponible entre los elementos compartidos.
+- **Crea interfaces con pestañas mediante los nuevos controles compartidos.** Las pestañas y su contenido se vinculan mediante un valor. Así puedes gestionar qué sección está activa.
+- **Crea y administra pestañas directamente desde la tira del diseñador, con nombre e icono personalizados.** La tira aparece aunque el objeto todavía no tenga pestañas y permite añadir la primera. La primera pestaña agrupa el contenido inicial del objeto; desde cada pestaña puedes renombrarla, cambiar su icono o eliminarla. Las opciones de configuración están disponibles en la propia tira, sin elementos adicionales dentro del área de diseño.
+- **Configura propiedades desde un panel de ajustes rápidos más amplio en el banco de objetos.** Al editar una propiedad, el panel se abre junto al banco de objetos y puede cerrarse sin desplegar de nuevo la navegación. Los campos disponen de más espacio y el desplazamiento se mantiene dentro del panel.
+- **Busca y selecciona iconos desde un explorador visual.** Puedes recorrer las bibliotecas y sus categorías, y previsualizar los iconos antes de elegirlos.
 - **Los desarrolladores ya pueden realizar consultas GET con flexygo.ajax.get.** Esta función permite acceder a operaciones que requieren ese tipo de consulta. También vuelve a funcionar la consulta de versiones que utiliza el pie de página.
-- **Se aplican valores predeterminados a las URL amigables.** La resolución de estas direcciones cuenta ahora con valores predeterminados.
+- **La operación getView de la WebAPI aplica los valores predeterminados correspondientes.** Al consultar una vista mediante esta operación, se devuelven los valores predeterminados correctos.
+- **Aplica valores predeterminados a las URL amigables.** La resolución de estas direcciones cuenta ahora con valores predeterminados.
+- **Crea recorridos guiados señalando directamente los elementos de cada pantalla.** El editor agrupa los pasos por pantalla y permite reordenarlos. Antes de guardar, muestra qué elemento se ha seleccionado para cada paso.
+- **La skin 2026 incorpora pestañas en procesos e informes, asistentes para objetos y gestores de documentos e imágenes.** Los gestores de imágenes permiten presentar el contenido como galería o como lista. Las pestañas amplían la organización de propiedades más allá de la edición de objetos.
+- **La skin 2026 permite elegir el origen activo o cerrar el diálogo sin cambiarlo.** El origen actual queda señalado y las opciones se distinguen mediante una insignia de color. El diálogo se puede cerrar con el botón correspondiente o con Esc; sus cuatro orígenes se muestran en dos columnas y el addon se presenta por separado. La etiqueta se actualiza al cambiar de origen y el panel de control muestra el nombre y el indicador de color de Addon.
+- **En modo de desarrollo, el menú de un módulo ofrece accesos a la configuración de su objeto.** Las opciones aparecen agrupadas al final del menú y no se muestran en la skin clásica.
+- **Organiza los módulos de una página directamente desde la página, sin ir al gestor de módulos.** Puedes mover módulos entre zonas, elegir otro diseño y crear módulos desde el organizador. Antes de guardar, avisa si un cambio de diseño dejaría posiciones sin asignar o si la página procede de una distribución y se revertirá con una actualización.
+- **Integra Flexygo con otros sistemas mediante webhooks.** Los desarrolladores pueden utilizar esta funcionalidad para conectar sus aplicaciones con otros sistemas.
+- **Cambia la optimización de los paquetes desde el menú de desarrollo.** La opción permite alternar este ajuste sin salir del menú.
+- **Los desarrolladores pueden suscribirse a los mensajes informativos de SQL de DataManager.** La opción permite recibir esos mensajes desde código externo que utilice DataManager.
 
 ### Informes
 
@@ -190,10 +188,10 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad de la WebAPI
 
-- **La WebAPI y MCP limitan los datos expuestos a las propiedades definidas en cada objeto.** La opción está activada de forma predeterminada e incluye las propiedades definidas y las claves. Las respuestas y los esquemas omiten las columnas que no están disponibles en todas las instalaciones.
-- **Flexygo incorpora un servidor MCP para asistentes y aplica los permisos del token en la WebAPI.** El servidor MCP está desactivado inicialmente y cuenta con permisos propios por usuario y rol, además de pantallas de administración. La WebAPI rechaza las operaciones no permitidas con un motivo y no las muestra en OpenAPI.
-- **La navegación incorpora búsqueda y la WebAPI permite operaciones masivas y consultas de relaciones.** La búsqueda ayuda a localizar contenido desde la navegación. Además, los desarrolladores pueden realizar operaciones masivas y consultar relaciones a través de la WebAPI.
-- **Scalar permite consultar las definiciones de API del backend y la WebAPI.** La vista ofrece a quienes desarrollan sobre Flexygo una referencia de las API disponibles. Desde ella pueden consultar las definiciones correspondientes al backend y a la WebAPI.
+- **La WebAPI y MCP pueden limitar los datos expuestos a las propiedades definidas en cada objeto.** La opción está activada de forma predeterminada e incluye las propiedades definidas y las claves. Las respuestas de los registros y los esquemas omiten las columnas que no están disponibles en todas las instalaciones.
+- **Flexygo incorpora un servidor MCP para asistentes y aplica los permisos del token en la WebAPI.** El servidor MCP está desactivado inicialmente y cuenta con permisos propios por usuario y rol, además de pantallas de administración. La WebAPI rechaza las operaciones no permitidas e indica el motivo, y no las incluye en OpenAPI.
+- **La barra de navegación incorpora búsqueda y la WebAPI permite operaciones masivas y consultas de relaciones.** La búsqueda facilita localizar contenido desde la navegación. Además, quienes desarrollan integraciones pueden trabajar con operaciones masivas y relaciones a través de la WebAPI.
+- **Los desarrolladores pueden consultar en Scalar las definiciones de API del backend y la WebAPI.** La vista Scalar ofrece una referencia de las API de Flexygo para quienes desarrollan sobre la plataforma.
 - **Puedes exponer entidades de la aplicación mediante la WebAPI.** La WebAPI incorpora autenticación mediante tokens y opciones para definir y consultar entidades, lo que permite conectar otras aplicaciones con Flexygo. La configuración de orígenes permitidos admite el uso de comodines.
 
 ### Tareas programadas
@@ -263,24 +261,27 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 ### Herramientas de desarrollo
 
 - **Configura más opciones en los controles compartidos.** Puedes añadir un botón para borrar la selección, elegir cuándo un diálogo ocupa toda la pantalla y controlar el foco del campo de texto. Las tarjetas de opción también admiten un color de acento.
-- **Configura documentos e imágenes y accede a listas, formularios y seguridad desde el espacio del objeto.** La sección de archivos permite alternar entre documentos e imágenes y carga la configuración correspondiente. También puedes abrir la lista o un formulario nuevo; el acceso a la lista aparece cuando el objeto tiene una colección asociada.
-- **La sección de diseño de vista del banco de objetos tiene un nombre más claro.** El nuevo nombre evita confundirla con el diseño del registro. Está disponible en los siete idiomas incluidos.
-- **Agrupa y pliega los módulos por tipo en el panel de colocación.** Puedes mantener abiertos los grupos que estés utilizando. Al buscar, se despliegan los grupos que contienen resultados.
-- **El editor de recorridos y el configurador de páginas muestran sus textos traducidos.** Ambas herramientas están disponibles en siete idiomas y, si falta una traducción, se muestra el texto original en inglés. En el editor de recorridos también se traducen los nombres de los anclajes propios de Flexygo; los textos escritos por quien configura el recorrido se mantienen.
-- **Durante el desarrollo, los archivos modificados se actualizan al volver a solicitarlos.** El navegador puede cargar los cambios sin reiniciar la aplicación. La mejora también permite que los productos derivados arranquen aunque no tengan las mismas carpetas de desarrollo; en producción no es necesaria.
-- **Al colocar módulos, puedes consultar detalles, localizar los ya añadidos y desplazarte por la página.** Las tarjetas muestran información del módulo y las páginas donde aparece. Puedes mover módulos incluso si no tienen cabecera y los controles de redimensionado quedan alineados con sus esquinas; el menú conserva sus clics aunque coincida con esos controles. También puedes cerrar las capas de colocación una a una con Escape y seguir moviendo módulos después de cancelar un arrastre con esa tecla.
-- **El marketplace de addons presenta las opciones en filas y gestiona mejor los resultados.** La nueva disposición aprovecha mejor el espacio y mantiene a la vista la información y las acciones de cada addon. También se corrige la carga cuando falla una consulta, los controles de las tarjetas instaladas y el espacio sobrante cuando no hay resultados.
-- **Quienes tienen permisos de diseño acceden directamente al modo de desarrollo y pueden desactivarlo desde el menú.** El modo conserva el estado elegido al volver a entrar y el acceso solo aparece para quienes tienen el rol correspondiente. Desactivarlo funciona aunque no haya un panel lateral que cerrar; la selección de origen presenta el addon por separado.
-- **En la nueva skin, las herramientas de desarrollo están disponibles en sus áreas y las vistas previas tienen tarjeta propia.** Los ajustes de objetos, páginas y catálogos se encuentran en sus ubicaciones específicas, en vez de duplicarse en el panel lateral. El control de giro prepara la orientación de la siguiente apertura de la vista previa.
-- **El acceso para crear objetos se distingue mejor y permite iniciar la creación desde el catálogo.** El botón de suma aumenta su contraste al pasar el puntero y tiene un fondo propio. Al pulsarlo se abre el asistente sin activar el acceso al catálogo que lo contiene.
-- **Las vistas previas de móvil y tableta permiten elegir dispositivo y cambiar la orientación.** Puedes cambiar de dispositivo sin perder la orientación actual. El giro afecta a la vista previa abierta y no tiene efecto si no hay ninguna abierta.
-- **Activa o desactiva Minificar JS/CSS desde una tarjeta del panel de control.** La tarjeta se integra con las demás opciones y permite cambiar el ajuste desde toda su superficie.
-- **Los procesos admiten distintos tipos de respuesta al comunicarse con el proxy.** Esto permite gestionar las respuestas necesarias para operaciones con documentos.
-- **Los desarrolladores pueden depurar el código de la aplicación con source maps.** Esta mejora facilita localizar el origen de un problema durante la depuración y está orientada a quienes desarrollan sobre Flexygo.
-- **La documentación de Flexygo amplía sus contenidos sobre formación, addons y conectores.** Incluye cursos, tutoriales y documentación sobre distintos addons e integraciones.
-- **La herramienta de traducción incluye textos localizados.** Esto facilita su uso a quienes trabajan con la localización de la aplicación.
+- **Configura documentos e imágenes y encuentra accesos a listas, formularios y seguridad desde el espacio del objeto.** La sección de archivos permite alternar entre documentos e imágenes y carga la configuración correspondiente al objeto. También puedes abrir la lista o un formulario nuevo; el acceso a la lista aparece cuando el objeto tiene una colección asociada.
+- **La sección de diseño de vista del banco de objetos tiene ahora un nombre más claro.** El nuevo nombre evita confusiones con el diseño del registro. El cambio está disponible en los siete idiomas incluidos.
+- **Agrupa y pliega los módulos por tipo en el panel de colocación.** Puedes mantener abiertos los grupos que estés utilizando. Al buscar, se despliegan los que contienen resultados.
+- **Al editar un archivo durante el desarrollo, la aplicación actualiza su versión al volver a solicitarlo.** El navegador puede cargar la versión modificada sin reiniciar la aplicación. El cambio afecta al entorno de desarrollo y permite que los productos derivados arranquen aunque no tengan las mismas carpetas de desarrollo.
+- **El editor de recorridos y el configurador de páginas muestran sus textos traducidos.** Los textos de ambas herramientas están disponibles en siete idiomas; si falta una traducción, se muestra el texto original en inglés. En el editor de recorridos también se traducen los nombres de los anclajes propios de Flexygo, mientras que los textos escritos por quien configura el recorrido conservan su contenido.
+- **Las listas SQL pueden definir sus enlaces a registros desde sus propias plantillas.** La plantilla puede construir enlaces aunque las filas contengan distintos tipos de objeto. Se mantienen la ordenación y el redimensionado de columnas, sin depender de la detección automática de enlaces de la skin 2026.
 - **La configuración de objetos muestra sus textos traducidos en los siete idiomas disponibles.** La traducción incluye los títulos de las secciones y sus descripciones.
-- **El administrador de vistas se muestra correctamente y resulta más legible en la skin 2026.** Se corrigen la disposición de sus campos, los colores del texto y los estados al pasar el puntero. Las mejoras se aplican también al administrador cuando se abre como plantilla.
+- **El administrador de vistas se muestra correctamente y resulta más legible en la skin 2026.** Se corrigen la disposición de sus campos, los colores del texto y los estados al pasar el puntero. Las mejoras también se aplican cuando el administrador se abre como plantilla.
+- **Al colocar módulos, puedes desplazarte por la página, consultar detalles y localizar los que ya están añadidos.** Las tarjetas muestran información del módulo y las páginas donde aparece; los módulos colocados siguen visibles en el panel lateral. Esc permite cerrar las capas del modo de colocación de una en una. En los módulos sin cabecera, la banda para moverlos solo destaca al pasar el puntero, aunque sigue disponible para arrastrar.
+- **Personaliza la tarjeta de bienvenida de un recorrido con una imagen o la marca de Flexygo.** La marca puede mostrarse con una animación de escritura. Si seleccionas otra imagen, aparece como ilustración estática.
+- **Consulta errores en una lista filtrable, paginada y con detalle desplegable.** Puedes combinar filtros para acotar los resultados y ver las opciones disponibles para cada criterio. El acceso desde el panel de inicio abre la lista con los errores de las últimas 24 horas.
+- **El marketplace de addons presenta cada opción en una fila y aprovecha mejor el espacio.** La búsqueda queda alineada con la lista y la información y las acciones de cada addon permanecen a la vista. También se corrigen los controles de las tarjetas instaladas, los errores de carga cuando falla una consulta y el espacio sobrante cuando no hay resultados.
+- **Quienes tienen permisos de desarrollo acceden directamente con el modo de desarrollo activado y pueden desactivarlo desde el menú.** El modo conserva el estado elegido al volver a entrar y su acceso solo aparece para usuarios con rol de diseñador. Desactivarlo ya no provoca un error cuando no hay un panel lateral que cerrar; además, la selección de origen no incluye el addon, que se presenta por separado.
+- **En la skin 2026, las herramientas de desarrollo están disponibles en sus áreas correspondientes y las vistas previas tienen una tarjeta propia.** Los ajustes de objetos, páginas y catálogos se acceden desde sus ubicaciones específicas, en vez de duplicarse en el panel lateral. El control de giro de las vistas previas prepara la orientación de la siguiente apertura.
+- **El botón para crear objetos se distingue mejor al señalarlo en la skin 2026.** El símbolo de suma aumenta su contraste y cuenta con un fondo propio para diferenciarlo del acceso al catálogo. También puedes iniciar la creación directamente desde ese acceso, sin activar el catálogo que lo contiene.
+- **Las vistas previas de móvil y tableta usan controles para elegir dispositivo y cambiar la orientación.** Puedes cambiar de dispositivo sin perder la orientación actual. El giro afecta a la vista previa abierta y no hace nada si no hay ninguna abierta.
+- **Puedes activar o desactivar Minificar JS/CSS desde una tarjeta del panel de control.** La tarjeta se integra con las demás opciones del panel y permite cambiar el ajuste desde toda su superficie.
+- **La comunicación de los procesos con el proxy admite distintos tipos de respuesta.** Esto permite gestionar las respuestas necesarias para las operaciones de documentos de ABH Sign.
+- **Los desarrolladores pueden depurar el código de la aplicación con source maps.** Esta mejora facilita localizar el origen de un problema durante la depuración y está orientada a quienes desarrollan sobre Flexygo.
+- **La documentación de Flexygo incluye nuevos contenidos sobre formación, addons y conectores.** Se amplía el contenido disponible para consultar cursos, tutoriales e integraciones.
+- **La herramienta de traducción incluye textos localizados.** La mejora facilita el uso de la herramienta a quienes trabajan con la localización de la aplicación.
 
 ### Informes
 
@@ -383,8 +384,9 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Rendimiento
 
-- **Se comprimen los recursos servidos y se reflejan los cambios de estilo en la versión de sus archivos.** La compresión reduce los datos transferidos al cargar la aplicación, especialmente en conexiones lentas. La dirección de los archivos de estilo cambia cuando estos se modifican.
-- **La recarga silenciosa de la caché actualiza también los datos almacenados en memoria.** La información en memoria se actualiza como parte de la recarga, sin necesidad de realizar una acción adicional para refrescar esos datos. Así, la operación incluye tanto la caché como los datos guardados en memoria.
+- **Las páginas con muchos componentes cargan más rápido al leer la skin una sola vez.** Si se recargan las hojas de estilo de la skin sin recargar la página, se vuelve a leer para aplicar los cambios.
+- **La aplicación comprime los recursos que sirve y refleja los cambios de estilo en su versión.** La compresión reduce el volumen de datos que se descarga al cargar la aplicación, especialmente en conexiones lentas. Además, los cambios en las hojas de estilo quedan reflejados en la dirección de los archivos.
+- **La recarga silenciosa de la caché actualiza también los datos almacenados en memoria.** Al realizar esta recarga, los datos en memoria se actualizan junto con el resto de la caché.
 
 ### Seguridad
 
@@ -396,13 +398,16 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad de la WebAPI
 
-- **La WebAPI bloquea temporalmente las IP que superan 50 intentos fallidos de token por minuto.** El límite predeterminado se puede modificar mediante la configuración correspondiente. La protección distingue la IP del cliente, también cuando accede a través del frontend, y se aplica a accesos con contraseña, LDAP, SSO y renovación de token; los usuarios bloqueados no pueden acceder.
-- **El acceso a las herramientas de WebAPI requiere una licencia válida.** La validación impide utilizar herramientas de WebAPI que no estén cubiertas por la licencia de Flexygo. De este modo, el acceso a esas herramientas queda sujeto a la licencia disponible.
-- **La documentación de la WebAPI y OpenAPI es más clara y se genera considerando solo los objetos expuestos.** La especificación organiza mejor las operaciones, respuestas y modelos de error, y agrupa los esquemas compartidos. También muestra la descripción de los objetos cuando está disponible e indica desde qué valor empiezan las páginas y cómo escribir fechas en los filtros. Los objetos sin permisos de acceso a través de la WebAPI no se procesan al generar la documentación.
-- **La WebAPI incluye la fecha, la hora y la zona horaria del servidor en la información de contexto.** Estos datos se añaden a la información de contexto existente, sin sustituirla. Así, las aplicaciones pueden consultar también la referencia temporal del servidor.
-- **Los contadores de los nodos de navegación se calculan sin enviar sus consultas al navegador.** La aplicación envía los identificadores de los nodos y recibe los valores de los contadores. El cambio se aplica a los nodos que tienen un contador configurado.
-- **La WebAPI devuelve las fechas con un formato actualizado.** El formato que reciben las aplicaciones consumidoras cambia para permitir un tratamiento coherente de las fechas al integrar la WebAPI.
-- **Flexygo vuelve a comprobar las condiciones de seguridad de los usuarios que ya han iniciado sesión.** Si esas condiciones dejan de cumplirse, el acceso no se mantiene como si siguieran vigentes. La comprobación permite que la sesión refleje los cambios en las condiciones de seguridad.
+- **La WebAPI bloquea temporalmente las IP con demasiados intentos fallidos de autenticación y distingue correctamente las IP de los clientes.** Por defecto, el bloqueo se activa tras 50 intentos fallidos de token en un minuto, y los administradores pueden ajustar estos valores. La protección también se aplica a los accesos con contraseña, LDAP, SSO y a la renovación de tokens; además, rechaza a los usuarios bloqueados.
+- **El acceso a las herramientas de WebAPI requiere una licencia válida.** La comprobación impide utilizar herramientas de WebAPI que no estén cubiertas por la licencia de Flexygo.
+- **La especificación de la WebAPI se genera más rápido al considerar solo los objetos expuestos.** Los objetos sin permisos de acceso a través de la WebAPI ya no se procesan al generar la documentación.
+- **La documentación de la WebAPI explica desde qué valor empiezan las páginas y cómo escribir fechas en los filtros.** Estas indicaciones ayudan a crear consultas sin saltarse la primera página ni depender del idioma del servidor.
+- **La documentación de la WebAPI muestra la descripción del objeto cuando está disponible.** La descripción ayuda a entender el propósito del objeto al consultar sus operaciones y campos.
+- **La WebAPI permite consultar la fecha, la hora y la zona horaria del servidor.** Esta información se añade a los datos de contexto existentes, sin sustituirlos.
+- **Los contadores de los nodos de navegación se calculan sin enviar sus consultas al navegador.** La aplicación envía los identificadores de los nodos y recibe los valores de sus contadores. El cambio se aplica a los nodos que tengan un contador configurado.
+- **La definición OpenAPI de la WebAPI externa presenta de forma más clara sus operaciones, respuestas y modelos de error.** Los esquemas compartidos aparecen agrupados para facilitar la consulta y la integración con otras aplicaciones.
+- **La WebAPI devuelve las fechas con un formato actualizado.** El nuevo formato ayuda a las aplicaciones que consumen la WebAPI a tratar las fechas de forma coherente durante las integraciones.
+- **Flexygo vuelve a comprobar las condiciones de seguridad de los usuarios que ya han iniciado sesión.** Si esas condiciones dejan de cumplirse, el acceso no se mantiene como si siguieran vigentes.
 
 ### Skins
 
@@ -501,15 +506,19 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Herramientas de desarrollo
 
-- **Los objetos creados sobre una tabla nueva se pueden volver a cargar correctamente.** La corrección evita que la configuración del origen de datos impida abrir el objeto después de crearlo.
-- **La documentación se redirige correctamente en productos derivados.** Se corrige la resolución de las rutas al utilizar recursos web estáticos, para que se encuentre la documentación correspondiente a cada producto.
-- **Se corrige la carga de estilos LESS en los plugins personalizados.** Los desarrolladores pueden utilizar estos estilos en sus plugins sin los problemas corregidos.
-- **Se corrigen las variables LESS personalizadas y la ruta de los archivos exportados con cambios de base de datos.** Los estilos personalizados se procesan correctamente y la exportación de cambios de base de datos utiliza la ruta corregida.
-- **Se corrigen los errores de análisis y carga del editor Monaco.** También se corrige la carga de las definiciones TypeScript en el editor.
+- **Al exportar proyectos, se excluyen usuarios y secretos y se generan scripts compatibles con datos de cualquier tipo y tamaño.** Los secretos se guardan en un archivo local ignorado por Git y solo se aplican al publicar en Debug. La publicación no sobrescribe los secretos configurados en cada instalación.
+- **Los objetos creados sobre una tabla nueva se pueden volver a cargar correctamente.** La configuración del origen de datos ya no impide abrir el objeto después de crearlo.
+- **Puedes volver a mover módulos después de cancelar un arrastre con Escape.** Se corrige el fallo de movimiento que podía producirse al cancelar la operación con esa tecla.
+- **Los cambios en propiedades se guardan correctamente y el asistente abre el administrador adecuado.** Mover propiedades entre pestañas y reordenarlas funciona también en procesos e informes. Al editar la configuración de un proceso, informe u objeto, ya no se abre un administrador vacío o sin título.
+- **Los controles de redimensionado aparecen alineados con las esquinas de los módulos.** Las marcas se dibujan en el borde visible de la tarjeta y ya no parecen un segundo contorno. Los laterales conservan su zona de redimensionado.
+- **El menú de un módulo ya no queda tapado por los controles de redimensionado.** Los elementos del menú conservan sus clics aunque coincidan con la zona de los controles. La corrección se aplica a la skin 2026.
+- **La documentación se redirige correctamente en productos derivados.** Las rutas de documentación se resuelven correctamente al utilizar recursos web estáticos.
+- **Se corrige la carga de estilos LESS en los plugins personalizados.** Los desarrolladores pueden utilizar estilos LESS en sus plugins personalizados sin los problemas corregidos.
+- **Se corrigen las variables LESS personalizadas y la ruta de los archivos exportados con cambios de base de datos.** Los estilos personalizados se procesan correctamente. Además, la exportación de cambios de base de datos usa la ruta corregida.
+- **Se corrigen errores de análisis y carga del editor Monaco, incluidas sus definiciones TypeScript.** Estos ajustes evitan fallos al procesar contenido, cargar el editor y cargar definiciones TypeScript.
 - **Se evitan errores al publicar la base de datos desde Visual Studio con el asistente de configuración.** Esto facilita a los desarrolladores publicar la base de datos durante la configuración de Flexygo.
 - **Puedes cambiar el orden de los nodos sin errores al cargar sus propiedades.** Se corrige el comportamiento durante la edición de nodos y la carga de sus propiedades.
 - **Se corrige el clonado de barras de herramientas.** Al clonar una barra de herramientas, se conservan correctamente sus datos.
-- **Los cambios en propiedades se guardan correctamente y el asistente abre el administrador adecuado.** Mover propiedades entre pestañas y reordenarlas funciona también en procesos e informes. Al editar la configuración de un proceso, informe u objeto, ya no se abre un administrador vacío o sin título.
 
 ### Informes
 
@@ -623,7 +632,7 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Rendimiento
 
-- **Se evitan las recargas repetidas y simultáneas al recuperar el servicio tras un reinicio.** Esto reduce la carga durante la recuperación y mejora la estabilidad. También evita reconstrucciones innecesarias de datos al cargar páginas.
+- **La aplicación evita las recargas repetidas tras reiniciar el grupo de aplicaciones.** Así se reducen las recargas simultáneas y se mejora la estabilidad mientras se recupera el servicio. También se evitan reconstrucciones innecesarias de datos al cargar páginas.
 
 ### Seguridad
 
@@ -633,15 +642,15 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad de la WebAPI
 
-- **Las listas de la WebAPI no muestran textos asociados a propiedades ocultas.** También se omite la descripción de los valores de búsqueda cuando la propiedad está marcada como oculta. Así, esos textos no aparecen en las respuestas de la WebAPI.
-- **Los filtros de seguridad por rol se aplican correctamente y se rechazan las condiciones no válidas en la WebAPI y MCP.** Las búsquedas relacionadas ya no hacen que las listas omitan el filtro de seguridad. Las condiciones que podrían eludirlo se rechazan, en lugar de devolver registros no autorizados.
-- **Las inserciones por la WebAPI ejecutan los procesos asociados a propiedades aunque estas no tengan dependencias.** Los valores calculados por esos procesos quedan disponibles para las dependencias que se evalúan después. Así, el resultado de la inserción puede tener en cuenta esos valores calculados.
-- **Las respuestas de error de la WebAPI comunican el estado HTTP correspondiente.** Las aplicaciones que consumen la WebAPI pueden identificar correctamente el resultado de una petición. Por ejemplo, pueden distinguir entre una falta de permisos y un objeto inexistente.
-- **Se muestran errores detallados al definir la WebAPI y se evita una pantalla en blanco al acceder como invitado sin permiso.** Los usuarios invitados que no están autorizados reciben una respuesta en lugar de quedarse ante una página vacía. Cuando falla una definición de la WebAPI, también se ofrece información más clara.
-- **La definición de la WebAPI solo muestra objetos habilitados.** Las vistas y sus colecciones dejan de aparecer en la definición cuando sus objetos están deshabilitados. Así, la documentación refleja qué objetos están disponibles para su exposición.
-- **Se corrige la redirección de la WebAPI.** Al acceder a la WebAPI, la redirección vuelve a funcionar correctamente y permite llegar al destino esperado.
-- **Se corrige la validación de tokens de la WebAPI.** Las solicitudes que utilizan tokens pueden superar correctamente la validación. Esto permite acceder a la WebAPI cuando el token es válido.
-- **La WebAPI acepta correctamente las peticiones que se envían sin contenido.** Se corrige el envío de peticiones con el cuerpo vacío para que no falle por no incluir contenido.
+- **IIS permite las peticiones PUT y DELETE a la WebAPI y muestra sus errores con el estado HTTP correspondiente.** Las respuestas conservan el contenido de error que devuelve el servidor, incluso cuando la aplicación y el servidor están en equipos distintos. Así, las aplicaciones que consumen la WebAPI pueden identificar correctamente errores como la falta de permisos o un objeto inexistente.
+- **Las listas de la WebAPI ya no muestran los textos asociados a propiedades ocultas.** También se omite la descripción de un valor de búsqueda cuando su propiedad está marcada como oculta. Así, esos textos no aparecen en las respuestas de las listas.
+- **La WebAPI y MCP aplican los filtros por rol a los registros correctos y rechazan condiciones no válidas.** Las búsquedas relacionadas ya no hacen que las listas dejen de aplicar el filtro de seguridad. Las condiciones que podrían eludir ese filtro se rechazan, en lugar de devolver resultados no autorizados.
+- **Las inserciones de la WebAPI ejecutan los procesos asociados a propiedades aunque estas no tengan dependencias.** Los valores calculados por esos procesos quedan disponibles para las dependencias que se evalúan después. Esto permite que esas dependencias utilicen los valores actualizados durante la inserción.
+- **Se muestran errores detallados al definir la WebAPI y se evita una pantalla en blanco al acceder como invitado sin permiso.** Los usuarios invitados sin autorización reciben una respuesta en lugar de quedarse ante una página vacía. Quienes configuran la WebAPI también obtienen información más clara cuando falla una definición.
+- **La definición de la WebAPI solo muestra objetos habilitados.** Las vistas y sus colecciones dejan de aparecer en la definición cuando sus objetos están deshabilitados.
+- **Se corrige la redirección de la WebAPI.** Al acceder a la WebAPI, la redirección vuelve a funcionar correctamente.
+- **Se corrige un error al validar tokens de la WebAPI.** Las solicitudes que utilizan tokens pueden superar correctamente la validación.
+- **La WebAPI acepta correctamente las peticiones que se envían sin contenido.** Se corrige el envío de este tipo de peticiones para evitar errores cuando el cuerpo está vacío.
 
 ### Skins
 
@@ -660,4 +669,4 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad de la WebAPI
 
-- **Se retiran las funciones obsoletas de comprobación de conexión y mantenimiento.** Dejan de estar disponibles el endpoint de comprobación de conexión y el proceso para activar el modo de mantenimiento. Las integraciones que los utilicen deberán dejar de depender de esas funciones.
+- **Se retiran las funciones obsoletas de comprobación de conexión y mantenimiento.** Dejan de estar disponibles el endpoint de comprobación de conexión y el proceso de activación del modo de mantenimiento.
