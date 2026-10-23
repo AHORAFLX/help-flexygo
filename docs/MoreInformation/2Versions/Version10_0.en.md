@@ -99,6 +99,10 @@ Try the 2026 skin, with responsive side navigation and light and dark modes.
 - **You can start installing a database from the Configurator.** The database setup starts from the Flexygo Configurator itself.
 - **You can install, update and configure Flexygo from the setup wizard.** The initial screens bring these tasks together and let you create the database. The flow also guides you through project and email setup, and includes user registration.
 
+### Integrations
+
+- **The MCP endpoint registers assistants using their metadata and includes the issuer in the login response.** Assistants are identified by their metadata document and are not duplicated, while dynamic client registration is maintained. In addition, processes that run for more than ten minutes no longer fail.
+
 ### Interface
 
 - **In the 2026 skin, you can edit values directly in lists and add rows from the list or form.** Each row is saved when you leave it, and its actions menu stays available. Lists retain changes when you sort or refresh, let you cancel and reorder rows, and display values and formats correctly. You can also resize columns and scroll horizontally; on mobile phones and tablets, the experience adapts to the screen size. Combos and row actions adjust so they are not cut off.
@@ -163,9 +167,10 @@ Try the 2026 skin, with responsive side navigation and light and dark modes.
 
 ### Security
 
-- **The 2026 skin includes a unified manager for viewing and managing the security of users, roles, faculties, and Flexygo elements.** It opens from the workspace or the relevant forms, with the element selected; when changing scope, the object is retained, and a new search clears the filter. The table shows the applied rules and the default policy, explains the order of roles, faculties, and users, and lets you compare permissions between objects and view conditions. You can create, modify, or delete rules, add conditions, block them, filter elements with rules, and remove all rules for a family; actions on roles and users include a preview. It also groups field permissions under their object, shows when a module condition determines access, and lets you manage navigation elements identified by their path. It is translated into the seven available languages; access to object security is not shown if the object has no connection, and the 2022 skin retains the previous screen.
-- **You can control who runs each process, even if it is not linked to an object, and restrict it using SQL conditions.** Configure permissions for users, roles, and faculties from their security screens or from the process form. The condition is checked each time permission is validated and only allows execution if it returns 1 or true; if it is not met, the process is hidden from menus and toolbars. The rule is applied before object-specific permissions, and the security screen lets you review who can run each process and which condition restricts it.
-- **Configure object security conditions by choosing a property, an operator, and a value.** The wizard shows the available properties and lets you select context values, without needing to remember table names or special markers. Before saving, you can test the condition and view the SQL that is run.
+- **You can control who runs each process and restrict access with optional SQL conditions.** Permissions can be configured for users, roles, and faculties, even if the process is not linked to an object. The condition is checked each time the permission is validated, and the process can only run if it returns 1 or true. If the condition is not met, the process cannot run and is hidden from menus and toolbars; the security screen lets you review the restrictions applied.
+- **Manage permissions and review the security of users, roles, faculties, and objects from the security manager.** You can open the manager from the user, role, faculty, and object screens, with the corresponding item already selected. The table lets you review permissions by action, add conditions, and block or delete rules; you can also filter items with rules or remove all rules from a family. From the security screen, you can access the management of objects, modules, properties, and processes, as well as review available actions and preview changes. Search keeps the selected object when you change scope, and the screen is translated into the seven available languages; objects without a connection do not show access to the manager.
+- **The 2026 skin includes a screen for managing and understanding the permissions of roles, users, and faculties.** The screen brings together the applied rules and the default policy, and shows the priority order and conditions to explain why a user can see an item. You can create, edit, and delete rules, and compare the permissions granted, denied, or undefined across objects. You can also review navigation items by their path, and permissions for each field are grouped under their object. For modules, it shows when a condition determines access; the previous screen remains available in flexy2022.
+- **Configure object security conditions by choosing a property, an operator, and a value.** The wizard offers the object's properties and lets you select context values, without having to remember table names or special markers. Before saving, you can test the condition and review the SQL that runs.
 
 ### Updater
 
@@ -382,11 +387,12 @@ Try the 2026 skin, with responsive side navigation and light and dark modes.
 
 ### Security
 
-- **Role and permission changes take effect on subsequent requests, without requiring the user to log in again.** The update includes permissions associated with roles and those for objects, pages, and reports. This means security changes are reflected in the user's next request.
-- **The licensing API separates status queries from status updates and sends the activation code in the request.** This change affects integrations that query or update the license status and those that send an activation code. Review these integrations and adapt them to the new way of making requests.
-- **The security rules catalog includes pages, templates, and reports.** It also indicates families that have no view available and prevents templates from appearing more than once in the results.
-- **New objects display their name in the singular, and a view for page faculties is added.** The view lets you consult page faculties through the security layer. When creating objects, the singular name is used instead of the collection's plural title.
-- **The password change page displays form errors and validation messages.** This lets you identify problems when entering or updating the password and fix them before continuing.
+- **The configuration encrypts the application's passwords and sensitive keys on disk.** This protects, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. The executable lets you manage the encryption key and move it to another server without needing the SDK.
+- **The licensing API separates status queries from status updates and sends the activation code in the request.** This change affects integrations that query or update the license status, or send an activation code.
+- **Role and permission changes take effect on subsequent requests, without requiring the user to log in again.** This includes permissions associated with roles and those for objects, pages, and reports. When a role is updated, the resulting permissions are also reflected in the user's next request.
+- **The security rules catalog includes pages, templates, and reports.** It also identifies families that do not have an available view and avoids repeating templates in the results.
+- **Object creation shows the name in singular form, and a view for page faculties has been added.** The new view lets you review page faculties through the security layer. In addition, the object name no longer uses the collection's plural title.
+- **The password change page displays form errors and validations.** This helps you identify problems when entering or updating the password.
 
 ### Skins
 
@@ -542,7 +548,7 @@ Try the 2026 skin, with responsive side navigation and light and dark modes.
 
 ### Integrations
 
-- **Errors when retrieving Google, email and Office tokens are handled.** This improvement affects token retrieval for these services.
+- **Error handling is improved when obtaining tokens from Google, email, and Office.** Error handling covers obtaining tokens from all three services.
 
 ### Interface
 
@@ -630,9 +636,9 @@ Try the 2026 skin, with responsive side navigation and light and dark modes.
 
 ### Security
 
-- **You can log in and access downloads and reports using a token included in the URL.** The token is retained during redirects. This means that if the link requests a login before opening a download or report, authorization is retained so you can continue.
-- **Errors when obtaining Google, Mail, and Office tokens are handled.** Error handling applies to token acquisition in all three integrations.
-- **Access validation after reloading server data is fixed.** This prevents token validation from failing in this situation.
+- **Error handling is added when obtaining tokens from Google, Mail, and Office.** Error handling covers obtaining tokens in all three integrations.
+- **You can log in and access downloads and reports using a token included in the URL.** The token is retained through redirects, including when a login is required before opening the link.
+- **Access validation after reloading server data is fixed.** This prevents token validation from failing in that situation.
 
 ### Skins
 

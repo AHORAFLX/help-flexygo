@@ -141,6 +141,10 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 - **Puedes iniciar la instalación de una base de datos desde el configurador.** La puesta en marcha de la base de datos se inicia desde el propio configurador de Flexygo.
 - **Puedes instalar, actualizar y configurar Flexygo desde el asistente de puesta en marcha.** Las pantallas iniciales reúnen estas tareas y permiten crear la base de datos. El flujo también guía la configuración del proyecto y del correo, e incorpora el registro de usuarios.
 
+### Integraciones
+
+- **El endpoint MCP registra asistentes mediante sus metadatos e incluye el emisor en la respuesta de inicio de sesión.** Los asistentes se identifican mediante su documento de metadatos y no se duplican, aunque se mantiene el registro dinámico de clientes. Además, los procesos de más de diez minutos ya no fallan.
+
 ### Inteligencia artificial
 
 - **Se incorporan nuevos modelos GPT para las funciones de inteligencia artificial.** La lista de modelos disponibles para configurar la inteligencia artificial queda actualizada. Desde esa configuración se eligen los modelos que se utilizarán.
@@ -182,9 +186,10 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad
 
-- **La skin 2026 incorpora un gestor unificado para consultar y administrar la seguridad de usuarios, roles, facultades y elementos de Flexygo.** Se abre desde el área de trabajo o desde las fichas correspondientes, con el elemento seleccionado; al cambiar de ámbito se conserva el objeto y una búsqueda nueva limpia el filtro. La tabla muestra las reglas aplicadas y la política predeterminada, explica el orden de roles, facultades y usuarios, y permite comparar permisos entre objetos y consultar condiciones. Puedes crear, modificar o eliminar reglas, añadir condiciones, bloquearlas, filtrar elementos con reglas y quitar todas las reglas de una familia; las acciones sobre roles y usuarios incluyen una vista previa. También agrupa los permisos de los campos bajo su objeto, muestra cuándo una condición de módulo determina el acceso y permite gestionar elementos de navegación identificados por su ruta. Está traducido a los siete idiomas disponibles; el acceso a la seguridad de objetos no aparece si el objeto no tiene conexión y la skin 2022 conserva la pantalla anterior.
-- **Puedes controlar quién ejecuta cada proceso, incluso si no está vinculado a un objeto, y limitarlo mediante condiciones SQL.** Configura permisos para usuarios, roles y facultades desde sus pantallas de seguridad o desde la ficha del proceso. La condición se comprueba cada vez que se valida el permiso y solo autoriza la ejecución si devuelve 1 o true; si no se cumple, el proceso queda oculto en menús y barras de herramientas. La regla se aplica antes que los permisos específicos del objeto y la pantalla de seguridad permite revisar quién puede ejecutar cada proceso y qué condición lo limita.
-- **Configura condiciones de seguridad de objetos eligiendo una propiedad, un operador y un valor.** El asistente muestra las propiedades disponibles y permite seleccionar valores de contexto, sin tener que recordar nombres de tablas ni marcas especiales. Antes de guardar, puedes probar la condición y consultar el SQL ejecutado.
+- **Puedes controlar quién ejecuta cada proceso y limitar su acceso con condiciones SQL opcionales.** Los permisos se configuran para usuarios, roles y facultades, incluso si el proceso no está vinculado a un objeto. La condición se comprueba cada vez que se valida el permiso y solo permite ejecutar el proceso si devuelve 1 o true. Si no se cumple, el proceso no se puede ejecutar y queda oculto en menús y barras de herramientas; la pantalla de seguridad permite consultar las restricciones aplicadas.
+- **Gestiona permisos y revisa la seguridad de usuarios, roles, facultades y objetos desde el gestor de seguridad.** Puedes abrir el gestor desde las pantallas de usuarios, roles, facultades y objetos, con el elemento correspondiente ya seleccionado. La tabla permite consultar permisos por acción, añadir condiciones y bloquear o eliminar reglas; también puedes filtrar los elementos con reglas o quitar todas las reglas de una familia. Desde la pantalla de seguridad puedes acceder a la gestión de objetos, módulos, propiedades y procesos, así como consultar acciones disponibles y una vista previa de los cambios. La búsqueda mantiene el objeto seleccionado al cambiar de ámbito, y la pantalla está traducida a los siete idiomas disponibles; en objetos sin conexión no aparece el acceso al gestor.
+- **La skin 2026 incorpora una pantalla para gestionar y entender los permisos de roles, usuarios y facultades.** La pantalla reúne las reglas aplicadas y la política predeterminada, y muestra el orden de prioridad y las condiciones para explicar por qué un usuario puede ver un elemento. Puedes crear, modificar y eliminar reglas, y comparar los permisos concedidos, denegados o no definidos entre objetos. También permite consultar elementos de navegación por su ruta y agrupa los permisos de cada campo bajo su objeto. En los módulos muestra cuándo una condición determina el acceso; la pantalla anterior sigue disponible en flexy2022.
+- **Configura condiciones de seguridad de objetos eligiendo una propiedad, un operador y un valor.** El asistente ofrece las propiedades del objeto y permite seleccionar valores de contexto, sin tener que recordar nombres de tablas o marcas especiales. Antes de guardar, puedes probar la condición y consultar el SQL ejecutado.
 
 ### Seguridad de la WebAPI
 
@@ -390,11 +395,12 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad
 
-- **Los cambios de roles y permisos se aplican en las siguientes solicitudes, sin que el usuario tenga que volver a iniciar sesión.** La actualización incluye los permisos asociados a roles y los de objetos, páginas e informes. Así, los cambios de seguridad se reflejan en la siguiente petición del usuario.
-- **La API de licencias separa la consulta y la actualización del estado, y envía el código de activación en la solicitud.** Este cambio afecta a las integraciones que consultan o actualizan el estado de la licencia y a las que envían un código de activación. Revisa esas integraciones para adaptarlas a la nueva forma de realizar las solicitudes.
-- **El catálogo de reglas de seguridad incluye páginas, plantillas e informes.** También indica las familias que no tienen una vista disponible y evita que las plantillas aparezcan repetidas en los resultados.
-- **Los objetos nuevos muestran su nombre en singular y se incorpora una vista para las facultades de página.** La vista permite consultar las facultades de página mediante la capa de seguridad. Al crear objetos, se utiliza el nombre singular en lugar del título plural de la colección.
-- **La página de cambio de contraseña muestra los errores y las validaciones del formulario.** Así puedes localizar los problemas al introducir o actualizar la contraseña y corregirlos antes de continuar.
+- **La configuración cifra en disco las contraseñas y claves sensibles de la aplicación.** Protege, entre otros datos, las cadenas de conexión, las contraseñas de correo y NuGet y las claves JWT y Data Protection. El ejecutable permite gestionar la clave de cifrado y trasladarla a otro servidor sin necesitar el SDK.
+- **La API de licencias separa la consulta y actualización del estado, y envía el código de activación en la solicitud.** El cambio afecta a las integraciones que consultan el estado de la licencia, lo actualizan o envían un código de activación.
+- **Los cambios de roles y permisos se aplican en las siguientes solicitudes, sin que el usuario tenga que volver a iniciar sesión.** Esto incluye los permisos asociados a roles y los de objetos, páginas e informes. Al actualizar un rol, los permisos resultantes también se reflejan en la siguiente solicitud del usuario.
+- **El catálogo de reglas de seguridad incluye páginas, plantillas e informes.** También identifica las familias que no tienen una vista disponible y evita repetir plantillas en los resultados.
+- **La creación de objetos muestra el nombre en singular y se incorpora una vista para las facultades de página.** La nueva vista permite consultar las facultades de página mediante la capa de seguridad. Además, el nombre del objeto deja de tomar el título plural de la colección.
+- **La página de cambio de contraseña muestra los errores y las validaciones del formulario.** Así puedes identificar los problemas al introducir o actualizar la contraseña.
 
 ### Seguridad de la WebAPI
 
@@ -568,7 +574,7 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Integraciones
 
-- **Se gestionan los errores al obtener tokens de Google, correo y Office.** La mejora afecta a la obtención de tokens de esos servicios.
+- **Se mejora la gestión de errores al obtener tokens de Google, correo y Office.** La gestión abarca la obtención de tokens de esos tres servicios.
 
 ### Inteligencia artificial
 
@@ -636,9 +642,9 @@ Estrena la skin 2026, con navegación lateral adaptable y modos claro y oscuro.
 
 ### Seguridad
 
-- **Puedes iniciar sesión y acceder a descargas e informes mediante un token incluido en la URL.** El token se mantiene durante los redireccionamientos. Así, si el enlace solicita iniciar sesión antes de abrir una descarga o un informe, se conserva la autorización para continuar.
-- **Se gestionan los errores al obtener tokens de Google, Mail y Office.** La gestión de errores se aplica a la obtención de tokens en las tres integraciones.
-- **Se corrige la validación del acceso después de recargar los datos del servidor.** Así se evita que falle la validación del token en esa situación.
+- **Se gestionan los errores al obtener tokens de Google, Mail y Office.** La gestión de errores cubre la obtención de tokens en las tres integraciones.
+- **Puedes iniciar sesión y acceder a descargas e informes mediante un token incluido en la URL.** El token se conserva durante los redireccionamientos, incluso cuando se solicita iniciar sesión antes de abrir el enlace.
+- **Se corrige la validación del acceso después de recargar los datos del servidor.** Así se evita que la validación del token falle en esa situación.
 
 ### Seguridad de la WebAPI
 
