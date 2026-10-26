@@ -1,18 +1,18 @@
 # Version 10.0
 
-The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alerts and profile, and lets you deploy the interface, backend, and database separately on .NET 9.
+Flexygo runs on .NET 9, lets you deploy the interface, backend and database separately, and introduces the 2026 skin with an adaptable sidebar and new shortcuts.
 
 ## New features
 
 ### Skins
 
-- **Introduces the 2026 skin, a complete redesign of Flexygo with an adaptable sidebar and shortcuts to alerts and profile.** Refreshes all screens, menus, lists, forms, panels, and dialogs, with new typography, colors, spacing, and controls. You can collapse the sidebar and use Ctrl+K; the previous skin is still available.
+- **Introducing skin 2026, a complete redesign with a responsive sidebar and new shortcuts.** The screens, menus, lists, forms, panels, and dialogs have been redesigned with new typography, colors, and controls. You can collapse the sidebar, access alerts and your profile, and use Ctrl+K; the previous skin is still available.
 
-    ![Introduces the 2026 skin, a complete redesign of Flexygo with an adaptable sidebar and shortcuts to alerts and profile.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
-- **The 2026 skin configuration is preserved when publishing database scripts.** Publishing includes the skin’s appearance, menus, panels, and pages. This lets new installations start with these elements configured.
-- **Customize account page resources from your product.** You can adapt styles, scripts, and icons at different customization levels. This lets you tailor the login, registration, and password recovery pages to each product.
-- **You can switch between light, dark, and system themes.** The interface and some built-in elements adapt their appearance to the selected theme. If you choose the system theme, Flexygo follows your device’s appearance preference.
-- **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. This gives you more options for adapting the application’s appearance.
+    ![Introducing skin 2026, a complete redesign with a responsive sidebar and new shortcuts.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
+- **Database publishing preserves the skin 2026 configuration.** The skin's appearance, menus, panels, and pages are included in the publishing scripts. This allows a new installation to start with these elements configured.
+- **Customize account page resources from your product.** You can adapt the styles, scripts, and icons for the login, registration, and password recovery pages. Customization supports different levels.
+- **You can switch between light, dark, and system themes.** The interface and some built-in elements adapt their appearance to the selected theme. If you select the system theme, Flexygo follows your device's appearance preference.
+- **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. This gives you more options for adapting the application's appearance.
 
 ### Artificial Intelligence
 
@@ -31,14 +31,14 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Configuration
 
-- **Administrators can enable maintenance mode and display a notice that updates immediately.** The control is available in the administration panel and displays a public page while the application is unavailable. Open pages reflect the status change, and users can return to their page when maintenance ends.
-- **You can configure the separator used when exporting CSV files.** Adjust this option to adapt the format of exported files to each application's needs. This ensures the CSV uses the separator its recipients expect.
-- **Configure offline applications from a screen organized into sections and view their synchronization history.** The screen brings together objects, menus, pages, code, resources, and synchronization, and includes an emulator for previewing the application on a mobile device. You can no longer link an object from this screen, but the options to create and clone objects remain available.
-- **Refresh the screens of all connected users or select specific sessions.** You will find the action in the version information menu. You can search for users and choose who to send the refresh to.
-- **Administrators can view configuration and process status on read-only screens.** The application configuration and server configuration are shown separately. You can also view the status of processes, the database, and available resources.
+- **Administrators can enable maintenance mode and display a notice while the application is unavailable.** The control is in the administration panel, and a public page is displayed during maintenance. Open pages update when the status changes, and visitors can return to their page when maintenance ends.
+- **You can configure the separator used when exporting CSV files.** This lets you adapt the format of exported files to the needs of each application.
+- **Configure offline applications from a screen organized into sections.** The screen brings together objects, menus, pages, code, resources and synchronization, and includes the synchronization history and an emulator for viewing the application on a mobile device. The option to link an object is no longer shown on this screen, but the options to create and clone objects remain.
+- **Update the screens of all connected users or select specific sessions.** The action is available in the actions menu for the version information. You can search for and select users to send them the update.
+- **Administrators can view the configuration and status of processes on read-only screens.** The configuration is shown separately for the application and the server. You can also view the status of processes, the database and available resources.
 - **You can open page settings from a button next to the tool for organizing modules.** The option is available in development mode and follows the current page when you navigate to another one, without rebuilding the header.
-- **You can configure the application with values specific to each environment.** The application can load and save settings specific to environments such as development. These values are kept separate from the general configuration.
-- **You can publish a database from the configurator.** The tool includes this task so you can publish from the configurator itself, without using another administration option.
+- **Configure the application with values specific to each environment.** The application can load and save settings for each environment, such as development. This keeps those values separate from the general configuration.
+- **Publish a database from the configurator.** The tool lets you do this from the application configuration itself.
 
 ### Deployment
 
@@ -97,22 +97,26 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Integrations
 
-- **The MCP endpoint registers assistants using their metadata and includes the issuer in the login response.** Assistants are identified using their metadata document and are not duplicated; dynamic client registration remains available. In addition, processes lasting more than ten minutes no longer fail.
+- **The MCP integration improves tool selection and assistant registration through metadata.** Assistants can distinguish which tools retrieve data, modify information or support retries, helping them choose how to use them. They can also be registered from their metadata document without being duplicated; the login response includes the issuer, and dynamic client registration remains available. In addition, processes that run for more than ten minutes no longer fail. Flexygo.Library maintains the MCP version compatible with the application.
 
 ### Interface
 
-- **In skin 2026, you can edit values directly in lists and add rows from the list or form.** Each row is saved when you leave it and retains the record actions menu. The experience adapts to mobile phones and tablets and is available in light and dark modes; the flexy2022 skin is unchanged. Changes are also retained when sorting or refreshing, and editable lists adapt to the available space.
-- **From the 2026 dashboard, you can view and edit the home page for each profile.** Each profile has a schematic preview based on its configuration. The preview does not run the page or save changes.
-- **Enjoy refreshed calendars with an annual view, filters, and range selection.** They include a legend and options to configure overlapping events and working hours. In the annual view, you can check the records for each day, and changes made by other people appear in the monthly view; marker colors remain legible in the different modes.
+- **In the 2026 skin, edit values directly in lists and add rows from the list or form.** Each row is saved when you leave it and retains the record actions menu. Lists also keep changes when sorting or refreshing, display values and formats correctly, and let you resize columns and scroll horizontally. In narrow spaces, combos and lists fit the available width.
+- **From the 2026 control panel, you can view and edit the home page for each profile.** Each profile has a schematic preview based on its configuration. The preview does not run the page or save changes, so you can review the configuration without modifying it.
+- **Try the redesigned calendars, with an annual view, filters and range selection.** They include a legend and options to configure overlap and working hours. In the annual view, you can see the records for each day, and changes made by other people appear in the monthly view. Marker colors remain legible in different modes.
 - **The new interface includes administration screens and refreshed navigation.** It includes administration for users, roles, properties, processes, settings, and other items. Navigation adds quick access, a collapsible sidebar, and a resizable panel.
-- **Administrator and guest profiles have an avatar, and the profile photo is displayed in the header and footer.** The profile image is shared between both skins, including the classic one. When you change the photo from the menu or user form, it updates in the interface without reloading the page; the legibility of initials and pop-up notifications has also been improved.
-- **Administrators can switch a page to free layout and rearrange its modules directly in the grid.** When free layout is enabled, modules are placed according to the areas already shown on the page, and you can drag and resize them. Modules without a header can also be arranged; changes can be saved or discarded, and pages with this layout adapt their modules to narrow screens while preserving the reading order.
-- **Administrators can offer guided tours of the product to authorized users.** The tour is configured with steps and added to a page as a module; the module security determines who can view and restart it. Steps can point to specific items and perform predefined actions, and the tour continues when changing screens without leaving layers that block the page.
+- **The administrator and guest profiles now have avatars, and the profile picture is displayed in the footer and header.** The profile image is shared between both skins, including the classic one. When a user's photo is changed, it is also updated in those areas.
+- **Administrators can switch a page to free layout and keep the arrangement of its modules.** When the option is enabled, modules are placed in the grid according to the areas already shown on the page. You can save or discard the change.
+- **Administrators can drag and resize modules in a page's grid.** Placement mode lets you rearrange modules and adjust their size directly on the page. You can save or discard the changes.
+- **Pages with free layout display each module in its defined position and size.** On narrow screens, modules move to a single column and keep the established reading order. Pages without free layout continue to display as before.
+- **Administrators can offer guided product tours to authorized users.** A tour is configured with steps and added to a page as a module; the module's security settings determine who can view and restart it. Steps can point to elements, perform actions, and guide users through different screens. The tour has also been reviewed so it can continue even if a step or element is unavailable, and so it does not block the page.
 - **Developers can open the global search configuration from the palette.** The option appears at the bottom of the palette and lets you return to the generic filters manager to configure the search. It is only available in development mode.
-- **You can display search results over the page without replacing its content.** Palette mode is optional and groups results by criterion, with a title, description, and destination. Search responds faster and sends only the data needed to display results to the browser.
-- **Indicator cards display values, descriptions, and optional trends more clearly.** Cards in the same row share the same width and height, and align their values and footers even when they include additional information. When they appear inside a list, they avoid duplicating the frame: the list keeps its frame, and the card retains its content and layout.
-- **The Flexygo Core interface adopts a more modern design.** The navigation and user menu have been redesigned, with the missing translations added. Core colors have also been updated, and the new visual style has been applied more fully across different skins.
-- **You can access Flexygo pages using friendly URLs.** This new way of resolving addresses is available in the Flexygo core. It lets you reach pages using this type of URL.
+- **The new skin brings the theme, profile, and sign-out options together in a menu accessible from the footer.** The menu also shows the signed-in person's details and lets you switch between light and dark themes. The theme change is applied on screen as soon as you select it.
+- **When arranging a page, you can also drag modules that have no header.** These modules display a drag strip while arrangement mode is active and hide it when you exit that mode. The page configuration opens on the side to keep the content you are arranging visible.
+- **You can display search results over the page without replacing its content.** Palette mode is optional and groups results by criterion, with their title, description, and destination. Search responds faster and does not send data to the browser that it does not need to display.
+- **Indicator cards offer optional descriptions and trends, with a clearer layout.** Cards in a row share the same width and height, and their values and footers are aligned even when some include additional information. If they appear in a list, they avoid duplicating the frame: the list keeps its frame, and the card keeps its content.
+- **The Flexygo Core interface adopts a more modern design.** Visual elements in the navigation and user menu are updated, along with the color palette. The new menu includes the missing translations, and the changes complete the visual style across different skins.
+- **You can access Flexygo pages through friendly URLs.** This new way of resolving addresses is available in the Flexygo core.
 
 ### Licenses
 
@@ -139,10 +143,9 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Notifications
 
-- **Define which records for each object should generate notifications.** You can set the conditions in the object configuration, alongside its notification events. They are combined with the security rules so that a notification is sent only when the record meets the specified conditions.
-- **Receive real-time notifications about new records only when you can view the record.** The notification appears in the bottom-right corner and lets you open the record or its list. List filters and each recipient's permissions are checked; if several records of the same type are created, the notification is updated instead of accumulating. The connection for receiving live updates is also fixed.
-- **Enable notifications to track insertions, modifications, and deletions in the objects you choose.** Each user receives notifications according to their own session and permissions. This lets you track changes to records in the objects you have configured.
-- **The application includes a push notification service.** The service integrates with the application's offline features. You can use push notifications together with this mode of operation.
+- **Receive real-time notifications when records are created, and configure which users can see them.** You can define in the object configuration which records generate notifications; list filters and security conditions are applied for each recipient. The notification appears in the lower-right corner and lets you open the record or its list. If several records of the same type are created, the notification is updated instead of accumulating.
+- **Enable notifications to track changes to the records you want.** Notifications report inserts, modifications, and deletions in configured objects. Each user receives notifications according to their own session and permissions.
+- **The application includes a push notification service.** The service integrates with the application's offline features.
 
 ### Processes
 
@@ -165,9 +168,11 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Security
 
-- **You can configure permissions to control who runs each process, even if it is not linked to an object.** Permissions can be assigned to users, roles, and faculties, and configured from the security screens or the process form. You can also add an SQL condition, which is evaluated when checking the permission: the process can only be run if it returns 1 or true. If the condition is not met, the process is hidden from menus and toolbars.
-- **You can configure object security conditions by selecting a property, operator, and value.** The wizard offers the object's properties and lets you select context values, without needing to remember table names or special tags. Before saving, you can test the condition and review the SQL executed.
-- **Skin 2026 adds a screen for viewing and managing the security of roles, users, and faculties.** From the workspace, you can create, modify, and delete rules, and compare permissions between objects. The screen displays field permissions under their object, rules for navigation items, and when a module condition determines access. It also explains which rule allows a user to see an item and displays the applied rules alongside the default policy; the previous screen remains available in flexy2022.
+- **You can control who runs each process, even if it is not linked to an object, and restrict it with SQL conditions.** Configure permissions for users, roles, and capabilities from their security screens or from the process record. Optional conditions are checked when validating the permission and only allow the process to run if they return 1 or true; if the condition is not met, the process is hidden from menus and toolbars.
+- **View and modify permissions for users, roles, capabilities, and objects from a security table.** The table shows permissions by action and lets you add conditions, block rules, or delete them directly. You can filter for items that have rules and remove all the rules in a family. You can also open the manager from users, roles, capabilities, and objects with the item already selected, view the available actions, and review a preview before applying changes; the screen is translated into the seven available languages.
+- **View the security of objects, modules, properties, and processes from a single workbench screen.** The screen lets you access each of these areas and open the view with a specific item selected. From an object's screen, you can open its security settings; when you change scope, the selected object is retained, and a new search clears the previous selection. The 2022 skin retains its previous screen.
+- **Configure object security conditions by choosing a property, an operator, and a value.** The wizard displays the object's properties and lets you select context values, so you do not have to remember table names or special markers. Before saving, you can test the condition and view the SQL that was executed.
+- **Skin 2026 includes a screen for viewing and managing the security of roles, users, and capabilities.** The screen brings together rules and default policies, explains which rule determines permissions, and shows the conditions and application order for roles, capabilities, and users. It lets you create, modify, and delete rules, compare permissions between objects, and manage field and navigation item permissions. It also shows the conditions of modules that determine access; you can access it from the skin 2026 workspace, and the previous screen is still available in flexy2022.
 
 ### Updater
 
@@ -218,15 +223,16 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Configuration
 
-- **The administrator starts with the 2026admin profile, does not see «Decisions», and only administrators can change profiles.** The option to change profiles is no longer shown to users who do not have permission to use it. This ensures that each person only sees the actions they can perform.
-- **SQL connection errors are correctly identified for different network problems.** The information distinguishes problems locating the server, timeouts, and rejected connections. This makes it easier to identify the type of connection problem that occurred.
-- **The quick configuration panel is easier to read in the 2026 skin.** Labels, section headings, and help text are clearer. The appearance of the save button has also been adjusted.
-- **When configuring email with SSL, the selected option is applied and a default port is suggested.** The email configuration wizard uses the SSL value you selected and fills in the corresponding port. This means you do not have to enter it manually for an SSL connection.
-- **Configuration groups show how many options they contain and appear as clearer cards in the 2026 skin.** The layout takes up less space and makes it easier to find each group. The edit action remains visible when you hover over it.
-- **The action to convert the development database clearly states what it does and warns about its consequences.** Its name avoids confusion with the interface's development mode. The action is also marked as dangerous.
-- **You can search for and configure chart themes from Flexygo administration.** Themes appear in navigation and in configuration searches. You can then assign them to chart modules.
-- **Flexygo creates a default configuration if the application starts without a configuration file.** This lets the application start even if that file has not yet been created. The default configuration is available at startup.
-- **You can configure the Flexygo port, schema, and URL.** These values let you adapt the application configuration to the environment where it runs. You can set them to match that environment's details.
+- **Configuration secrets remain encrypted in IIS and Docker in production.** In other environments, they are decrypted when the application starts. If a Docker secret is missing or cannot be read, the application will not start instead of creating a new key.
+- **The 2026admin profile is assigned to the administrator, and the option to change profiles is only shown to administrators.** The administrator no longer sees “Decisions” in the menu. Other users also do not see an option they cannot use.
+- **SQL connection errors are correctly identified for different network problems.** This helps distinguish problems resolving the server, timeouts and rejected connections.
+- **The quick configuration panel is easier to read in the 2026 skin.** The readability of labels, section titles and help text is improved. The appearance of the save button is also adjusted.
+- **The email configuration applies SSL and suggests a default port when you enable it.** During configuration, the selected SSL value is applied and the port is filled in for SSL connections. This means you do not have to enter it manually in that case.
+- **Configuration groups show how many options they contain and are displayed as clearer cards.** The layout takes up less space and makes each group easier to find. The edit action remains visible when you hover over it.
+- **The action to convert the development database clearly states its effect and warns of its consequences.** Its name is no longer confused with the interface development mode. The action is also marked as dangerous.
+- **You can search for and configure chart themes from Flexygo administration.** Themes appear in navigation and configuration searches. They can also be assigned to chart modules.
+- **Flexygo creates a default configuration if the application starts without a configuration file.** This lets you start the application when that file has not yet been created.
+- **You can configure the Flexygo port, schema and URL.** These values are set in the application configuration to adapt it to the environment where it runs.
 
 ### Development Tools
 
@@ -273,54 +279,62 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Interface
 
-- **Flexygo icons use the updated Font Awesome 7 names.** The update covers icons in screens, views, navigation, and other application elements.
+- **Flexygo icons are displayed using the updated Font Awesome 7 names.** The update covers icons for screens, views, navigation and other application elements. This means icons use the updated naming.
 - **The 2026 skin refreshes email, notifications, and AI chat to make them easier to use.** In email, you can view folders next to the list, filter by read messages, search by subject, and open each message in a side panel. Notifications include filters and the option to mark them all as read; AI chat appears in a compact panel. The flexy2022 skin keeps its current look.
-- **The 2026 interface quick access menu lets you return to the control panel or dashboard from any page.** The shortcuts appear in an administration section of the menu, even if the project menu does not include that group.
-- **The 2026 skin improves the display and use of windows, lists, combos, and wizards.** Button tooltips are displayed again, and lists and tabs are better organized. The template wizard is also restored, and creating objects offline is easier.
-- **New installations start with the 2026 interface, and new users inherit the profile of the person who creates them.** Existing installations retain their profile, and products are unaffected. The 2026 administration profile is only offered to users with an administrator role.
-- **You can copy an error’s technical details without showing additional notifications.** The button confirms the copy visually by changing its icon. It is also available as a shared item for developers.
-- **The 2026 skin improves lists, mobile use, and several work tools.** List groupings and headers stay visible, and editing is faster. On mobile devices, side navigation adapts to a sheet, and rows and controls are easier to use with touch; calendars, charts, and offline synchronization are also improved.
-- **Loading screens use a new animation.** The animation displays the logo or the default indicator, depending on the loading context.
-- **Dropdown menus are displayed in full and are no longer clipped by their containing area.** Their position adjusts relative to the control that opens them, even inside scrollable areas.
-- **flexy2022 calendars have a layout similar to the previous one again.** The monthly and annual views, the position of pop-up notifications, and the alignment of the planning view have been adjusted. The change only affects this skin.
+- **The 2026 interface quick access menu lets you return to the control panel or dashboard from any page.** The shortcuts appear in an administration section of the menu. They are available even if the project menu does not include that group.
+- **The 2026 skin improves the display and use of windows, lists, combos and wizards.** Button help text is shown again, and lists and tabs are better organized. The template wizard is also restored, and creating offline objects is easier; the display of combos and property settings is also improved.
+- **New Flexygo installations start with the 2026 interface, and new users inherit the profile of the person who creates them.** Existing installations keep their profile, and products are unaffected. The 2026 administration profile is only offered to users with the administrator role.
+- **Copy the technical details of an error without displaying additional notices.** The button visually confirms the copy with an icon change. Developers can also use it as a shared element.
+- **The 2026 skin improves lists, mobile use and several work tools.** List groupings and headers stay visible, and editing is faster. On mobile devices, the side navigation adapts to a sheet, and rows and controls are easier to use with touch. Calendars, charts and offline synchronization are also improved.
+- **Loading screens use a new animation.** The animation displays the logo or the default indicator depending on the loading context. This provides a visual cue while the screen waits.
+- **Drop-down menus are displayed without being clipped by their containing area.** Their position is adjusted relative to the control that opens them, even inside scrollable areas. This keeps the options visible when you open the menu.
+- **The flexy2022 calendars return to an appearance similar to the previous one.** The monthly and annual views, the position of pop-up notices and the alignment of the planning view are adjusted. The change only affects the flexy2022 skin.
 - **The skin 2026 views display their fields and labels more clearly.** Labels and long values stay on one line and are clipped when they do not fit. Spacing between rows and the display of headers have also been improved.
-- **Logos can adapt to the light or dark theme and change without reloading the page.** You can use a logo variant for the dark theme. Flexygo also correctly finds that variant and keeps the configured logo if no alternative exists; images are displayed even when their paths contain backslashes.
-- **The skin 2026 side panels separate their controls from the content with a top bar.** The title is on the left and the controls are on the right, with the content below. This makes it easier to distinguish side panel actions from the icons of the module that contains it.
-- **The emulator displays the selected device and keeps its screen visible as you scroll.** It represents an iPhone 17 or a Samsung Galaxy S25 with the corresponding dimensions. The iPhone frame is the same height as the Samsung frame, and sections are rearranged in narrower windows.
-- **The timeline and annual calendar are displayed more clearly in the skin 2026.** Selected items and days with activity are easier to distinguish. The current day is highlighted, and pop-up notifications and empty states are more legible.
-- **The parameter view is better integrated with the skin 2026.** The new layout applies only to this view and does not change how it is displayed in the Flexygo 2022 skin.
-- **New card markers are easier to distinguish in the skin 2026.** The adjustment improves visibility on both dashboard cards and the column indicator.
+- **The module administration side panels are easier to use.** Configuration, events, security and page relationship options are displayed in panels that leave some of the content visible. Controls are organized, and the configuration panel has more room for its fields and buttons.
+- **The offline application emulator keeps the device visible and adapts to narrow windows.** It displays an iPhone 17 or a Samsung Galaxy S25, depending on the selected device, with the corresponding screen dimensions. The iPhone frame is the same height as the Samsung frame, without changing the size of the application inside the device.
+- **Navigation remains accessible when viewing the offline configuration screen in the 2026 skin.** The sidebar collapses instead of disappearing. When another page loads, it restores its saved state.
+- **The security screen has a clearer, more spacious layout in the 2026 skin.** Titles, labels, controls and the save button are easier to distinguish within the module. This makes its options easier to review.
+- **New card markers are easier to distinguish in the 2026 skin.** This improves their visibility both on dashboard cards and in the column indicator. This makes it easier to identify new items.
 - **Links and clickable labels are easier to distinguish in the 2026 skin, in both light and dark modes.** Actual links are underlined and have their own color. Labels that act as controls use the text color and are underlined on hover.
-- **Module administration options open in side panels that are easier to use.** Configuration has more space to display fields and buttons on a single row while keeping part of the page visible. Security and events panels appear from the bottom, and the events panel adjusts its height to the content; they also include the page relationship options.
-- **The gear opens the module configuration, and the other administration options are grouped in another menu.** In development mode, the additional menu brings together the security, events, and page relationship options. Branches in the navigation panel show whether they are open or closed, can be expanded without closing the panel, and keep their icons in the expected order.
-- **Notifications and prompts in the page configurator are easier to read in the skin 2026.** The contrast has been increased for the notification about the page source and the prompt that appears when you hover over a module.
-- **Interface text is displayed in the selected language when a translation is available.** This improvement covers manager titles and buttons, chart messages, types and names of items in recent changes, list headers, and home page messages. It also includes chart theme names, options, wizards, and templates in the skin 2026; the search box correctly displays its text in German.
-- **The skin 2026 navigation keeps the menu footer when refreshed and allows you to open profile options.** The language option opens the corresponding form from the menu again. The display of footer shortcuts when refreshing the menu has also been fixed.
-- **Grid design mode opens from navigation and keeps module titles visible.** Access remains available after refreshing navigation and keeps the keyboard shortcut. Drag areas do not cover titles, the page makes better use of space, and charts and forms adapt to the size of their modules.
-- **Pages in the skin 2026 balance the space between content and the window edges.** Space is left below the last module, empty space above pages is reduced, and the space taken up by the sidebar is accounted for. Content is better separated from the brand and side shortcuts.
-- **Related items are displayed as compact tags that are easier to navigate.** Links to objects, processes, and reports take up less space and are easier to distinguish when you hover over them. This change prevents titles that do not perform an action from being highlighted as interactive.
+- **Module administration options are better organized.** The gear opens the module, and the other options are grouped in a separate menu. In development mode, this menu groups the security, events and page relationship options.
+- **Branches in the navigation panel show whether they are open or closed and can be expanded without closing the panel.** The indicator appears on branches that contain options and changes direction when they are opened; options with no items do not show it. Final options still navigate to their destination and close the panel, and opening a group closes any open options menu.
+- **Notices and instructions in the page configurator are easier to read in the 2026 skin.** The contrast of the notice about the page source and the instruction shown when you hover over a module is increased. This makes both references more visible.
+- **The recent changes list, startup messages and chart themes display translations when available.** Existing translations are used for item types and their names, without changing names assigned by each customer. Messages in startup modules are also translated when there is no information to display.
+- **The new skin displays its menus, wizards and templates in the available languages.** Profile, control panel and object workspace options are translated. This means these screens no longer mix English text with the selected language.
+- **The 2026 skin navigation retains the menu footer when refreshed and lets you open profile options.** Footer options no longer disappear when the menu is refreshed. From the profile menu, the language option opens the corresponding form again.
+- **Avatar initials and pop-up content are easier to read.** The contrast of the initials is adjusted to the avatar background. Pop-ups have a style consistent with the rest of the interface.
+- **The timeline and annual calendar are clearer in the 2026 skin.** Selected items and days with activity are easier to distinguish, and the current day is highlighted. Pop-ups and empty states are also easier to read.
+- **The parameter view integrates better with skin 2026.** The new presentation applies only to this view. It does not change how it is displayed in the Flexygo 2022 skin.
+- **Grid design mode opens from a button integrated into the navigation.** Access appears in the skin 2026 interface and retains the keyboard shortcut to open it. The page makes better use of the available space, and the button appears again when you refresh the navigation.
+- **Labels in skin 2026 are easier to read in both light and dark modes.** Soft tones are adjusted to maintain suitable contrast in both modes. This improvement affects interface text in this skin.
+- **Pages in skin 2026 balance the space between content and the edges of the window.** Space is left below the last module, and empty space above the pages is reduced. The sidebar and branding are better differentiated, and margins look more consistent.
+- **Design mode keeps module titles visible and limits empty spaces on the page.** The drag area does not cover the headers, and the indicator appears when you hover over it; modules without a header retain an area for moving them. The page keeps spaces between modules but avoids long empty areas at the end.
+- **Guided tours display translated text and correctly describe navigation, rules, and errors.** Translations, steps, and their actions are reviewed so they lead to the screens and elements they describe. Their text appears in the selected language, including the seven languages available in Flexygo.
+- **Related items are displayed as compact tags that are easier to navigate.** Links to objects, processes, and reports take up less space and stand out more when you hover over them. Titles that do not perform an action are no longer highlighted as interactive.
 - **The agenda distinguishes events more clearly and keeps their category visible in light and dark modes.** Events are displayed as cards, and their color is retained as a side marker. Controls and the grid are also updated to match the new skin.
 - **The new skin groups module actions next to the title and hides secondary options in a menu.** The main action is readily available, and the bar takes up less space, especially in narrow modules. Less frequently used options remain available from the three-dot menu.
-- **Semantic color text and secondary text are easier to read in light and dark modes.** The contrast of text in lists and other views has been adjusted without changing the background, button, or chart colors. The legibility of labels, icons, and object cards has also been improved.
-- **The agenda displays the month alongside the events for the selected day.** Days, events, and the current date are easier to distinguish, and the panel lets you view all events for the day. The month selector adapts to the language and color mode.
-- **In the skin 2026, module headers display fewer maximize and minimize buttons.** The refresh and collapse buttons remain. The classic skin keeps its current buttons.
-- **The skin 2026 displays a progress bar while a page loads.** The visible bar lets you track navigation progress and replaces the spinner.
+- **Text with semantic colors is easier to read in light and dark modes.** Text colors are adjusted without changing the background, button, or chart colors that also use those tones. The improvement applies to lists and other views in the new skin.
+- **The calendar displays the month alongside the events for the selected day.** Days, events, and the current date are easier to distinguish, and the panel lets you view all the events for the day. The month selector also adapts to the language and color mode.
+- **Secondary text and accent colors are easier to read in lists and views in the new skin.** Contrast is adjusted so text stands out without competing with primary names and titles, including in dark mode. Backgrounds and buttons that use the same colors keep their appearance.
 - **Palette search indicates when it is working and distinguishes empty results from errors.** While results are loading, the screen keeps its space and displays a wait prompt. If there are no matches or the search fails, each situation is reported separately.
-- **The skin 2026 profile menu groups the theme, profile, and sign-out options in the footer.** It displays the details of the person who is signed in and lets you switch between the light and dark themes; the change is applied as soon as you select it. From the menu, you can change the language, password, and profile photo, and the language option displays the corresponding flag when the culture includes a country.
-- **Modules fit better in the narrow columns of the new skin.** The toolbar can wrap onto several lines instead of widening the module and causing horizontal scrolling on the page. At greater widths, the layout does not change.
-- **The free grid keeps modules within their allocated space and prevents empty scrollbars.** Charts use the available space, and form blocks no longer appear collapsed. The page avoids unnecessarily extending the empty area at the end.
-- **Navigation remains accessible when viewing the offline configuration screen in the skin 2026.** The sidebar collapses instead of disappearing and restores its saved state when another page loads.
-- **The security screen has a clearer, more spacious layout in the skin 2026.** Titles, labels, controls, and the save button are easier to distinguish within the module.
-- **Page configuration is available from the module organization bar.** Access is next to the tools for organizing the page. The display of the control panel and translated menus has also been adjusted.
-- **The Kanban board has clearer columns and cards, including when moving or archiving them and in dark mode.** Drop zones for cards fill the entire column, even when it is empty, and the archive area stays within its strip when cards are dragged. Cards stand out better from the background, and target areas are easier to identify.
-- **Pop-up menus for filters, processes, and notifications have a more consistent appearance.** They share the same shadow and border style, making them fit together better. This gives the different menus a uniform visual appearance.
-- **The planner has a more organized toolbar and side panel.** Buttons make the active option easier to identify and reserve red for dangerous actions. Panel labels and types are easier to read, align with the grid, and take up only the necessary space; the panel also collapses without visual delay.
-- **Module tabs have a clearer design and can be navigated when they do not fit on screen.** Active tabs are easier to distinguish from inactive ones. Long tabs can be scrolled without leaving the module, and the module selector adopts the style of the other controls.
-- **Maps, network charts, and the agenda are displayed correctly in dark mode.** Their display areas no longer depend on a light background. This lets them better match the dark appearance of the application.
-- **In the new skin, controls and navigation items are better integrated with dark mode.** Light backgrounds that made some items difficult to read have been fixed. The light skin is unchanged.
-- **Submenus appear nested, and the last column can fill the table’s remaining space.** When you resize a table, the last column adjusts to prevent a gap. Context menus retain the hierarchy of their options.
+- **Modules fit better in narrow columns in the new skin.** The toolbar can wrap onto several lines instead of widening the module and causing horizontal scrolling on the page. At greater widths, the layout does not change.
+- **The language option in the profile menu displays the flag for the selected culture.** The flag appears next to the language value and makes it easy to identify at a glance. If the culture does not include a country, no flag is displayed.
+- **You can change the language, password, and profile photo directly from the menu.** Each option opens its corresponding action without going through a preferences folder. The fields available for each change remain the same.
+- **Object card labels are easier to read in light and dark modes.** Labels have a minimum contrast level, and the card background adapts to the display mode. The change affects cards without changing the meaning of opacity styles in other areas.
+- **Row actions appear at the end of the list, in a column better sized to their buttons.** The column takes up less empty space and leaves more room for list data. In editable lists, the row for adding data also displays its buttons in that column.
+- **In the new skin, module headers show fewer maximize and minimize buttons.** The refresh and collapse buttons remain. The classic skin keeps its current buttons.
+- **The new skin displays a progress bar while a page loads, instead of a spinning indicator.** The visible bar lets you track navigation progress. This way, you can see that the page is loading.
+- **Side panels in skin 2026 display a top bar that separates their controls from the content.** The title is on the left and the controls are on the right, with the content below the bar. This makes the side panel actions easier to distinguish from the icons of the module that contains it.
+- **When arranging a page, you can move modules without headers and access configuration from the arrangement bar.** When you switch pages, arrangement mode closes and warns you if there are unsaved changes. Display details in the control panel and translated menus are also corrected.
+- **The Kanban board makes its columns and cards clearer, including when moving or archiving them and in dark mode.** Drop areas for cards fill the entire column, even when it is empty. When you drag cards, the archive area stays within its strip, and the drop areas are easier to distinguish.
+- **The planner has a more orderly and readable toolbar and side panel.** Buttons highlight the active option and reserve red for dangerous actions. Labels and types align better with the grid and take up only the space they need; the panel also folds away without visual delay.
+- **Module tabs are easier to distinguish and can be scrolled through when they do not fit on screen.** Long tabs scroll within the module without extending beyond it. The module selector adopts the style of the other controls and makes active and inactive tabs easier to distinguish.
+- **Maps, network charts, and the calendar display correctly in dark mode.** Their display areas no longer depend on a light background and fit better with the application's dark appearance.
+- **In the new skin, controls and navigation integrate better with dark mode.** Light backgrounds that made some elements difficult to read are corrected. The light skin does not change.
+- **Pop-up menus for filters, processes, and notifications have a more consistent appearance.** They share the same shadow and border style, so the different menus look integrated with one another.
+- **Submenus are displayed in a nested layout, and the last column can use the table's free space.** When you resize a table, the last column adjusts to prevent a gap from being left. Context menus retain the hierarchy of their options.
 - **Version updates refresh affected web files, and access handles Backend interruptions better.** Files that have not changed can be kept in the browser. Access labels for SSO are also translated.
-- **Application errors are displayed more consistently.** The display of messages across different operations has been unified. This makes errors easier to understand and gives them a consistent appearance.
+- **Application errors are displayed more consistently.** Their presentation is unified across different operations so messages are clearer.
 
 ### Licenses
 
@@ -337,7 +351,8 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Notifications
 
-- **Keep error or warning messages on screen until you close them.** This option is useful when you need to read a message carefully before dismissing it. You can configure it to prevent the message from disappearing automatically.
+- **The decision card appears only when appropriate, and the bell updates when notifications change.** This way, notifications show when there is a decision to address and avoid unnecessary updates to the bell.
+- **Error and warning messages can remain on screen until the user closes them.** This option is useful when a message needs to be read carefully and should not disappear automatically.
 
 ### Performance
 
@@ -357,27 +372,23 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Security
 
-- **The configuration encrypts the application's passwords and sensitive keys on disk.** This protects, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. The executable lets you manage the encryption key and move it to another server without needing the SDK.
-- **The license API separates status queries from status updates and sends the activation code in the request.** This change affects integrations that query or update the license status, or send an activation code. Review these operations in integrations that use the API.
-- **Role and permission changes take effect without requiring the user to sign in again.** Updated permissions are reflected in the user's subsequent requests. This includes permissions associated with roles and those for objects, pages, and reports.
-- **You can view and modify permissions in a security table and open it directly from users, roles, faculties, and objects.** The table displays permissions by action and lets you add conditions, block or delete rules, filter items with rules, and remove all rules from a family. When opened from an item, that item is selected. You can also view the security of objects, modules, properties, and processes on a single screen; when changing scope, the selected object is retained until you enter a new search.
-- **The security screen is translated into all seven available languages.** Labels and options are displayed in the corresponding language instead of relying on fallback English text. This makes them easier to review and configure in the different language versions.
-- **New objects display their name in singular form, and a view for page faculties is added.** The new view lets you review page faculties through the security layer. Also, when creating an object, its singular name is used instead of the collection's plural title.
-- **You can access role and user security actions from the security screen.** When you select a user or role, the available actions are displayed. Before applying them, a preview lets you review which rules will be retained.
-- **The security rules catalog includes pages, templates, and reports.** The catalog identifies families that do not have a view available and avoids repeating templates in the results. This lets you review the rules for these items alongside the rest of the catalog.
-- **The password change page displays form errors and validations.** You can identify and fix problems that arise when entering or updating the password before continuing.
+- **The application configuration encrypts passwords and other sensitive keys on disk.** This protects, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. The executable lets you manage the encryption key and move it to another server without needing the SDK.
+- **The licensing API separates status queries from status updates and sends the activation code in the request.** This change affects integrations that query or update a license status, or send an activation code. Review these integrations and adapt them to the new behavior.
+- **Role and permission changes take effect without users having to log in again.** The update includes permissions associated with roles and permissions for objects, pages, and reports. Changes take effect in the user's subsequent requests, including role changes.
+- **New objects display their name in singular form, and a view for page capabilities is added.** The new view lets you query page capabilities through the security layer. In addition, when you create an object, its name is no longer taken from the plural title of its collection.
+- **The security rules catalog includes pages, templates, and reports.** The catalog also identifies families that do not have a view available and prevents templates from appearing more than once in the results. This makes it easier to see which items are covered by the rules.
+- **The password change page displays form errors and validations.** This helps you identify problems when entering or updating your password and fix them before continuing.
 
 ### Skins
 
-- **The 2026 skin improves the contrast and readability of controls, menus, cards, and notifications.** The adjustments apply to dialogs, danger options, secondary text, and wizard steps. They also make notifications and scheduler controls easier to read in light and dark modes.
-- **The 2026 skin uses the Geist font instead of IBM Plex.** This change updates the appearance of text and reduces the size of the font files used by this skin.
-- **In the 2026 skin, processes with text remain in the toolbar, and the button to run them is easier to distinguish.** Processes without text remain grouped in the three-dot menu to keep the toolbar tidy. The contrast of the run button text is also improved.
-- **In the 2026 skin, filters and the actions menu take up less space above the content.** The controls appear next to the module title. If there are no filters to show, no empty row is added.
-- **Fields that fail validation are easier to distinguish in the 2026 skin.** The error message appears next to the field label. This prevents it from being cut off or overlapping the next row.
-- **From the 2026 skin header, you can open the module organizer using a button or keyboard shortcut.** The shortcut is Ctrl+Shift+M, and the button appears next to notifications. Access respects design permissions.
-- **You can access skin variables without case sensitivity.** Variable lookup works even if you use different capitalization.
-- **You can display a different logo depending on the interface mode.** Flexygo looks for the logo variant that corresponds to the active mode. This lets you adapt its appearance to each mode.
-- **The default Flexygo logo now has a gray background instead of a white one.** The change affects the logo image included by default.
+- **Skin 2026 improves the contrast and readability of various controls, text, and notifications.** The changes affect dialogs, menu options, process buttons, cards, wizard steps, and scheduler notifications. They apply in both light and dark modes to make these elements easier to distinguish.
+- **Skin 2026 uses the Geist typeface instead of IBM Plex.** This change updates the appearance of text in this skin. It also reduces the size of the font files used.
+- **You can display a different logo for each interface mode.** Flexygo selects the logo variant that matches the active mode. This lets you adapt its appearance to each mode.
+- **In skin 2026, processes with visible text remain in the toolbar.** Processes without text remain grouped in the three-dot menu. This keeps actions accessible without cluttering the toolbar.
+- **In skin 2026, filters and the actions menu take up less space above the content.** The controls appear next to the module title. If there are no filters to display, the empty row is removed.
+- **Skin 2026 displays fields that fail validation more clearly.** The error message appears next to the field label. This prevents it from being cut off or overlapping the next row.
+- **You can open the module organizer from the skin 2026 header.** The shortcut is next to the notifications, and you can also use Ctrl+Shift+M. It is only available if you have design permissions.
+- **You can access skin variables without distinguishing between uppercase and lowercase letters.** A variable search works even if you use different capitalization. This means you do not have to match the capitalization of the name exactly.
 
 ### Updater
 
@@ -413,9 +424,9 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Configuration
 
-- **Missing translations are restored, and an execution log list is corrected.** Translations for the new administration screens are also completed. The list now includes the identifier needed to recognize each log entry.
-- **Errors when saving dependencies and retrieving license values are fixed.** Both operations work correctly again: you can save dependencies and retrieve license values.
-- **The configuration tables script includes the missing columns.** When these tables are created or updated, the expected columns are now included. This prevents required data from being missing.
+- **Translations are restored, translations for the new administration screens are completed, and a list of records is fixed.** Translation resources used during installation are also unified. The execution log list includes the identifier needed to identify each row.
+- **Errors when saving dependencies and retrieving license values are fixed.** Operations for saving dependencies and checking license values work correctly again.
+- **The configuration table script includes the missing columns.** This ensures that the expected columns are included when these tables are created or updated.
 
 ### Conversations
 
@@ -464,22 +475,33 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Interface
 
-- **Several interface details are fixed, and the options to disable scheduled tasks and script tasks work again.** The display of the kanban and HTML editor, the menu logo, and the response of annual calendar days and information cells when interacting with them are also adjusted.
-- **EasyInfo and charts load correctly for users who are not designers.** These modules no longer fail when the user does not have access to debugging tools. They can now be used without designer permissions.
-- **Layout issues in forms, the dashboard, the annual calendar, and icons in the flexy2022 skin are fixed.** Form fields are laid out correctly again, and the dashboard retains its modules. The annual calendar adapts to the available width and lets you open days with a tap.
-- **The offline application views and their module descriptions are displayed correctly.** Module and page descriptions are also translated into the languages included in the application.
-- **Setting group markers and information cards are displayed correctly in the skin 2022.** In the skin 2022, the unformatted counter is hidden on setting group cards. Information cards use the available width, display their data with more contrast, and have their icons back in their original position.
-- **The translation of the empty error list and sorting from the options menu have been fixed.** The list displays its text and filters in the correct language even when there are no records yet. The intermittent issue when sorting from the menu has also been fixed.
-- **Grid row controls stay in place when you interact with them.** When you select a row, its icons no longer move outside the visible area. You can still drag and save the layout; if you exit design mode without saving, you can restore the previous layout.
-- **Pages in the skin 2026 have fewer unnecessary scrollbars and more consistent spacing.** Margins, module height, and available space have been adjusted so content fits better. Resize controls, placement mode prompts, and the cursor that appeared in empty areas have also been fixed.
-- **Guided tours continue even if a screen or one of its steps is unavailable.** The tour skips steps that cannot be opened and waits for content to appear without waiting for the entire screen to finish loading. Its text is translated according to the product language, and its steps and actions lead to the corresponding screens and items.
+- **Non-designer users can now open the module menu in the 2026 skin.** Access to the menu no longer depends on having the designer profile. This lets more users view the available modules.
+- **The display of the kanban and HTML editor, the menu logo and other interface details are fixed.** The response of annual calendar days and information cells when you interact with them is also adjusted. In addition, the options for disabling scheduled tasks and script tasks work again.
+- **EasyInfo and charts load correctly for non-designer users.** These modules no longer fail when the user does not have access to debugging tools. This lets users work with EasyInfo and view charts without being designers.
+- **Layout issues in forms, the control panel, the annual calendar and icons in the flexy2022 skin are fixed.** Form fields are laid out correctly again, and the control panel retains its modules. The annual calendar adapts to the available width and lets you open days with a tap; its appearance and some icons are also fixed.
+- **Offline application views and their module descriptions are displayed correctly.** Module and page descriptions are also translated into the languages included in the application. This lets users view the information correctly in different languages.
+- **Logos and profile pictures are displayed correctly even when their paths contain backslashes.** In dark mode, Flexygo also finds the dark logo variant and keeps the configured logo if no variant exists. Logos can change with the theme without needing to reload the page.
+- **The profile picture updates when changed from the menu or user form, without reloading the page.** The new image is also reflected in other interface elements that show the profile. This keeps the same photo up to date in different places.
+- **Row actions are displayed in the expected position in each skin again.** In flexy2022, they appear before the columns, and in the 2026 skin, after them. Headers and rows remain aligned.
+- **An unformatted counter is no longer shown on settings group cards in the 2022 skin.** The counter remains visible as a badge in the 2026 skin. It is hidden in the 2022 skin, where it does not have a suitable design.
+- **Information cards once again fill the width of their space and display their data with more contrast in the 2022 skin.** Icons return to their position at the edge of each card, and important data is easier to read. Standalone information cards retain their usual size.
+- **The translation of the error log when it is empty and sorting from the options menu are fixed.** The error list displays its text and filters in translation even when there are no records yet. The intermittent issue when sorting from the menu is also fixed.
+- **Titles, buttons and headers that previously appeared as internal keys or in English are now translated.** The fix covers labels in the property manager and image manager, chart messages and list headers, even when they are not associated with an object. Search text is also translated into German where applicable.
+- **Grid row controls stay in place when you interact with them.** When you select a row, its icons no longer move out of the visible area. You can still drag and save the layout.
+- **When you exit design mode without saving, the page restores its previous layout.** If there are pending changes, you are asked to confirm, and you can restore the original layout. If no changes have been made, you can exit directly.
+- **Pages in skin 2026 have fewer unnecessary scrollbars and more consistent spacing.** Margins and the height of some modules are adjusted so content fits better in the available space. Resize controls and placement mode tips no longer interfere with titles or content.
+- **The resize cursor no longer appears in empty areas of pages in skin 2026.** Resize areas outside the columns are disabled without affecting the resizing of actual columns. The space to the right of the content is also reviewed.
+- **Empty scrollbars are removed, and the response to a tour invitation is corrected.** Scrollbars no longer appear when the content fits in the module, but remain visible if the table really needs the space. The invitation options let you respond and keep your choice.
+- **In the grid, modules display all their content and charts use the available space.** Form blocks no longer appear collapsed, and charts adapt to the size of their module. The page is also prevented from unnecessarily extending the empty area at the bottom.
 - **Object menus no longer repeat processes and actions that already appear in the bar.** The option explicitly configured in the bar is kept, including actions that open a new window. The menu also opens again in the correct position without disappearing.
-- **Row actions appear at the end of the list, aligned in a column sized to fit their buttons.** The column takes up less empty space and leaves more room for data. Its position adapts to each skin and stays aligned with the headers; when you adjust a column's width, the actions column does not expand to fill the extra space.
-- **Profile menu options work correctly, and sign-out is available again.** Administrators can open their record from “My profile.” Menu text is displayed in the different languages, and the source indicator reflects changes without needing to reload.
-- **Template cards in the classic skin are legible in dark mode.** The text color adapts to the dark background without changing the appearance in light mode.
-- **Copying exceptions to the clipboard works with special characters.** Certain characters in the exception text could interrupt the action. You can now copy that text without those characters preventing the copy from completing.
-- **Duplicate keys that could interfere with application translations have been fixed.** Affected strings are translated correctly even when they share a primary key. The adjustment also affects translated text loaded from the application data.
-- **Date compatibility is fixed, and Blazor styles no longer affect other pages.** Dates retain the format expected by the existing interface. Blazor page styles are also isolated so they do not change the appearance of other pages.
+- **When you adjust a column's width, the actions column no longer expands to fill the remaining space.** The distribution of the available width in lists is corrected. This prevents the actions column from becoming disproportionately wide.
+- **Template cards in the classic skin are readable in dark mode.** Text color adapts to the dark background. The appearance in light mode does not change.
+- **Administrators can open their record from “My Profile” in the new skin.** The option opens the record of the signed-in user. It is also available in the user view for those with administrative permissions.
+- **Profile menu options respond when selected, and sign-out is available again.** The menu uses the sign-out action, and its text can be displayed in different languages. The origin indicator reflects changes without needing to reload.
+- **Guided tours continue if they cannot open a screen.** Steps for that screen are skipped, and the tour continues with the next ones.
+- **Copying exceptions to the clipboard works with special characters.** Certain characters in the exception text no longer interrupt the copy action.
+- **Translation issues caused by duplicate keys are corrected.** Affected strings are translated correctly even when they share a primary key. The change also affects translated text loaded from application data.
+- **Date compatibility is corrected, and Blazor page styles are prevented from affecting other pages.** Dates keep the format expected by the existing interface. Blazor page styles are also isolated so they do not change the appearance of other pages.
 
 ### Login
 
@@ -489,8 +511,9 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Notifications
 
-- **Open unread emails from the bell and see the counter update immediately.** When you open an email, the bell closes and the unread message counter decreases without waiting for a later update.
-- **The notification sound no longer repeats when many notifications arrive at once.** The fix prevents the chime from sounding continuously while scheduled processes are running.
+- **You can open unread emails from the bell and see its counter update immediately.** When you open an email, the bell closes and the unread message counter decreases without waiting for a later task.
+- **Notification sounds no longer repeat continuously when many notifications arrive at once.** This correction prevents continuous ringing while scheduled processes are running.
+- **A connection issue that prevented real-time notifications from being received correctly is corrected.** The change affects the connection the application uses to receive live updates.
 
 ### Performance
 
@@ -520,13 +543,15 @@ The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alert
 
 ### Security
 
-- **You can sign in and access downloads and reports using a token included in the URL.** The token is retained during redirects, including when sign-in is required before opening the link. This allows access to the destination to continue after authentication.
+- **External addresses and return destinations are validated to prevent unsafe connections or redirects.** MCP client metadata requests are restricted to public addresses. Login and password change returns are restricted to application pages, and decision calls can only be directed to public or allowed addresses.
+- **You can log in and access downloads and reports using a token included in the URL.** The token is retained during redirects. This means the link also works if you are asked to log in before opening the content.
 
 ### Skins
 
-- **Links in lists respect the muted color defined in their template.** The adjustment applies to the 2026 skin and improves the readability of text such as “No address.” It is visible in both light and dark mode.
-- **Styles no longer fail to load when a variable is missing.** This adjustment prevents errors when applying styles if a variable used in them is undefined.
-- **The path is corrected so the main logo is displayed.** With this adjustment, the main logo is displayed correctly in the application.
+- **In skin 2026, the email editing footer buttons no longer cover Save.** When editing an email, the Save button remains accessible even when there are other buttons in the footer. This lets you save changes without the controls overlapping.
+- **The display of the main logo and the background of the default logo have been corrected.** The main logo is displayed correctly again. The default image now has a gray background instead of a white one.
+- **In skin 2026, list links respect the muted color defined by their template.** This improves the readability of secondary text, such as “No address”. It applies in both light and dark modes.
+- **Style loading no longer fails if a LESS variable is missing.** A missing LESS variable does not interrupt style loading. This prevents errors when applying styles with CSS variables.
 
 ### Updater
 
