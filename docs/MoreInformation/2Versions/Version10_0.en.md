@@ -1,18 +1,17 @@
 # Version 10.0
 
-The 2026 skin includes adaptive side navigation, light and dark modes, and quick access to alerts and the profile.
+Flexygo runs on .NET 9, lets you deploy the interface, backend and database separately, and introduces a skin with adaptable navigation and light, dark or automatic themes.
 
 ## New features
 
 ### Skins
 
-- **Skin 2026 introduces adaptable side navigation, light and dark modes, and quick access to alerts and profile.** You can collapse the sidebar and open functions using the Ctrl+K shortcut. The previous skin remains available.
+- **Introducing the 2026 skin, with adaptable side navigation and light, dark or system-based themes.** The sidebar can be collapsed and groups the menus; you also have access to alerts and your profile, as well as the Ctrl+K shortcut. You can choose the theme from the user menu, and Flexygo remembers your selection; the system theme follows your device's appearance preference.
 
-    ![Skin 2026 introduces adaptable side navigation, light and dark modes, and quick access to alerts and profile.](../../docs_assets/images/Versions/Version10_0/skin2026.png)
-- **Database publishing retains the complete configuration of skin 2026.** Publishing scripts include the skin's appearance, menus, panels, and pages. This means they are also reflected correctly when publishing from an empty database.
-- **You can customize account page resources from your product.** Adapt the styles, scripts, and icons for the sign-in, registration, and password recovery pages. Customization is available at different levels.
-- **You can choose light, dark, or system themes to adapt the interface to your preferences.** With the system theme, Flexygo follows your device's appearance preference. The interface and some built-in elements change with the selected theme, and the selector also adapts its appearance.
-- **You can use custom CSS variables in your styles.** This expands the options for adapting the application's appearance. Style loading also prevents errors when a variable is missing.
+    ![Introducing the 2026 skin, with adaptable side navigation and light, dark or system-based themes.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
+- **The 2026 skin's configuration is retained when publishing database scripts.** The publication includes this skin's appearance, menus, panels and pages, rather than removing them from the database. It also lets an installation from an empty database include its elements and start with the complete appearance.
+- **Customize account page resources from your product.** You can customize styles, scripts and icons at different levels. This lets you adapt the login, registration and password recovery pages for each product.
+- **You can use custom CSS variables in your styles.** This expands the options for adapting the application's appearance. In addition, loading styles does not fail if a LESS variable is missing from the CSS variables.
 
 ### Artificial Intelligence
 
@@ -42,34 +41,29 @@ The 2026 skin includes adaptive side navigation, light and dark modes, and quick
 
 ### Deployment
 
-- **Export large projects and customize their content and template from the administration area.** The wizard creates a ZIP, shows progress, and records exports and errors. Exports support projects larger than 2 GB, check available space, and let you view elapsed time. You can choose a custom template or switch back to the installed product template; the template and version are also shown, and you are notified if the active source is reserved. Authorized users can select custom folders and files; document and image repositories and other large files are excluded by default. When choosing the destination, reserved sources are excluded and the first available source is suggested.
-- **In installations with separate frontend and backend servers, file operations work across both servers.** The application can transfer files between the two servers during upload, download, and deletion operations. This support also covers access through impersonation.
-- **You can integrate RDS into Docker deployments and update the configuration.** RDS integration expands deployment options. The update flow lets you apply configuration changes.
-- **You can publish data databases from the configurator, even if they are empty or have no definition file.** Publishing also handles empty databases or databases without a definition file. In addition, an error when updating databases in Docker environments has been fixed.
-- **You can deploy the Flexygo database with Docker.** The Docker files required to use Docker for database deployment are included.
-- **You can generate Flexygo images with Docker.** Docker files and a configuration for starting the different parts of the application together are included.
+- **Project export supports large files and lets you define its template, content and access from the administration area.** The process supports projects larger than 2 GB, checks available space, and shows progress and elapsed time. You can choose custom folders and files; document and image repositories and other large files are excluded by default. The template corresponds to the installed product, although you can customize it; the window shows the template and version, warns about reserved sources, and suggests an available destination. From the administration area's tools, authorized administrators can export the installed application as a product project in a ZIP and view the export and error logs.
+- **In installations with separate frontend and backend servers, file operations work across both servers.** The application can transfer files during upload, download and deletion operations. This support also works when accessing through impersonation.
+- **You can generate Flexygo images with Docker and deploy its database too.** The Docker configuration lets you start the application components together and retrieve connection strings from the configuration available in the deployment environment. You can also integrate RDS and apply configuration changes during the update.
+- **You can publish data databases from the configurator.** Publishing supports empty databases or databases that do not have their definition file. An error that could occur when updating databases in Docker environments is also fixed.
 
 ### Development Tools
 
-- **External objects query and update data through REST services and work with more Flexygo tools.** The object wizard can analyze the service and suggest its properties. You can use these objects in lists, forms, calendars, Kanban boards, and HTML reports; lists can also paginate results, and forms can show the source of selection fields. The key generated when records are inserted is also captured, wizards can query totals and measures, and dashboards can display their data. Project exports include modified installation settings as updates, except for environment-specific settings.
-- **Add sliders with a visible value to your applications.** The value is confirmed when you release the control, although you can also respond while it is being dragged. The control is available among the shared elements.
-- **Create interfaces with tabs using the new shared controls.** You can link the tabs and their content using a value. This lets you manage which section is active.
-- **Create, name, and manage tabs directly from the designer's tab strip.** The strip is available even if the object does not yet have tabs and lets you add the first one. From each tab, you can change its name or icon, or delete it; the first tab groups the object's initial content.
-- **Configure properties from a larger quick settings panel in the object bank.** When editing a property, the panel opens next to the bank, and you can close it without expanding the navigation again. Fields have more space, and scrolling stays within the panel.
-- **Search for and select icons in a visual browser.** You can browse libraries and categories and preview icons before choosing them.
-- **Developers can subscribe to DataManager SQL informational messages.** This lets them receive these messages from external code that uses DataManager.
-- **Run GET queries with flexygo.ajax.get.** This function lets you access operations that require this type of query. The version query used by the footer also works again.
-- **Define links to records in an SQL list template.** The template can create links even when rows contain different object types. Column sorting and resizing are also retained, without relying on automatic link detection in the 2026 skin.
-- **The WebAPI getView operation applies the corresponding default values.** When a view is queried, its default values are applied and incorrect values are no longer returned.
-- **Default values are applied to friendly URLs.** These addresses are now resolved using default values.
-- **Create guided tours by pointing directly to elements on each screen.** The editor groups steps by screen, lets you reorder them, and shows the selected element before saving. You can also customize the welcome card with an image or Flexygo branding, which can be displayed with a typing animation.
-- **The 2026 skin adds tabs to processes and reports, object wizards, and document and image managers.** Image managers let you display content as a gallery or a list. Tabs extend the organization of properties beyond object editing.
-- **The 2026 skin lets you choose a source or close the dialog without changing it.** The current source is highlighted, and the options are distinguished by a colored badge. The dialog displays the four sources in two columns, keeps Addon out of the list, and can be closed with the button or Esc. The label updates when you change the source, without reloading the screen.
-- **Create objects from the catalog shortcut or the plus button.** The plus button opens the wizard without activating the catalog shortcut that contains it. When you hover over it, the symbol gains contrast and has its own background to distinguish it from the catalog.
-- **In development mode, a module’s menu provides shortcuts to its object configuration.** The options are grouped at the end of the menu and are not displayed in the classic skin.
-- **Organize a page’s modules directly from the page, without going to the module manager.** You can move modules between zones, choose another layout, and create modules from the same page. Before saving, the organizer warns you if a change would leave positions unassigned or if the page comes from a distribution and will be reverted by an update.
-- **Integrate Flexygo with other systems using webhooks.** Developers can use this feature to connect their applications with other systems.
-- **Change package optimization from the development menu.** The option lets you toggle this setting without leaving the menu.
+- **Browse and select icons, and generate fonts for exportable libraries.** The browser lets you explore libraries and categories, and preview icons before choosing them. The generator supports libraries with glyphs and offers a ZIP download; if there are no compatible libraries, the option is disabled with an explanation.
+- **External objects let you query and update data through REST and expand their compatibility with Flexygo.** The wizard can analyze a service and suggest its properties. Lists support pagination; forms show the source of selection fields and, when inserting, retrieve the key generated by the WebAPI. You can also query totals and measures, display data in panels, and retain configuration settings when exporting projects, except those specific to the environment.
+- **Add sliders that display their value in applications.** The value is confirmed when you release the control, and you can also respond while it is being dragged. The control is available among the shared elements.
+- **Create tabbed interfaces and link each tab to its content.** Tabs and their content are linked by a value. This lets you manage which section remains active.
+- **Create, name and manage tabs directly from the designer strip.** The strip appears even if the object does not yet have tabs, so you can add the first one. From each tab, you can change its name, choose an icon, configure its options or delete it; the first tab groups the object's initial content.
+- **Configure properties from a larger quick settings panel in the object bank.** When editing a property, the panel opens next to the object bank, and you can close it without expanding the navigation again. Fields have more space, and scrolling stays within the panel.
+- **Developers can subscribe to DataManager's SQL information messages.** The option lets you receive these messages from external code that uses DataManager. This allows you to incorporate them into your own development processes.
+- **Make GET requests with flexygo.ajax.get.** The function lets you access operations that require this type of request. The version query used by the footer also works again.
+- **getView in the WebAPI applies the corresponding default values.** When querying a view, the operation returns its corresponding default values. This fixes the response, which could include incorrect values or fail to apply them.
+- **Default values are applied when resolving friendly URLs.** These URLs are now resolved with the corresponding default values. This lets you use the URL without having to define them manually.
+- **Create guided tours by pointing directly to elements on each screen.** The editor groups steps by screen and lets you reorder them; before saving, it shows the selected element for each step. You can customize the welcome card with an image or Flexygo branding, which can be displayed with a typing animation.
+- **The 2026 skin adds tabs for processes and reports, object wizards, and document and image managers.** Image managers can display content as a gallery or a list. Development tools are available in their respective areas, and previews have their own card.
+- **In development mode, a module's menu provides access to its object configuration.** The options are grouped at the end of the menu. They are not shown in the classic skin.
+- **Organize a page's modules directly from the page, without opening the module manager.** You can move modules between zones, choose a different layout and create modules from the organizer. Before saving, you will be warned if a layout change leaves positions unassigned or if an update will revert the organization because the page comes from a distribution.
+- **Integrate Flexygo with other systems using webhooks.** Developers can use this functionality to connect their applications to other systems. This lets them incorporate webhooks into their integrations.
+- **Change package optimization from the development menu.** The option lets you toggle this setting without leaving the menu. You can change it directly from the development tools.
 
 ### Document and Image Management
 
@@ -204,6 +198,15 @@ The 2026 skin includes adaptive side navigation, light and dark modes, and quick
 
 ## Improvements
 
+### Deployment
+
+- **Flexygo runs on .NET 9 and lets you deploy the interface, backend and database separately.** You can install it on IIS, as a standalone service or in Docker, on both Windows and Linux. The interface, backend and database can run on the same server or on different servers, and you can roll back updates from the version wizard.
+
+    ![Flexygo runs on .NET 9 and lets you deploy the interface, backend and database separately.](../../docs_assets/images/Versions/Version10_0/net9-architecture.png)
+- **Product translations are retained when publishing configuration data.** You can include translations associated with product elements in the publication. Translations belonging to test modules can be excluded.
+- **You can choose which JavaScript and CSS files are included in bundled files.** Loading custom styles is also improved, and errors are prevented when optimizing files with the PDF plugin installed. Custom plugins are bundled separately from system plugins, and the process is more compatible with installations hosted within an IIS application.
+- **Deployment scripts are compatible with Linux.** This compatibility makes it easier to deploy Flexygo in Linux environments.
+
 ### Artificial Intelligence
 
 - **Artificial intelligence requests have a timeout limit.** This prevents a call that does not respond from remaining pending indefinitely. This lets the application continue working even if the artificial intelligence provider does not respond.
@@ -224,31 +227,25 @@ The 2026 skin includes adaptive side navigation, light and dark modes, and quick
 - **Flexygo creates a default configuration if the application starts without a configuration file.** This lets the application start even if that file has not yet been created. The default configuration is available at startup.
 - **You can configure the Flexygo port, schema, and URL.** These values let you adapt the application configuration to the environment where it runs. You can set them to match that environment's details.
 
-### Deployment
-
-- **When publishing configuration data, you can retain product translations.** You can include translations associated with product items during publishing. You can also exclude those belonging to test modules.
-- **Docker installations retrieve connection strings from the application configuration.** This lets you configure connections using the settings available in the deployment environment.
-- **Deployment scripts are compatible with Linux.** This compatibility makes it easier to deploy Flexygo in Linux environments.
-- **You can choose which JavaScript and CSS files are included in bundled files.** Bundling correctly loads custom styles and prevents PDF plugin errors during optimization. It also separates custom plugins from system plugins and improves compatibility with installations hosted inside an IIS application.
-
 ### Development Tools
 
-- **Configure more options in shared controls.** You can add a button to clear the selection, choose when a dialog fills the screen, and control the text field’s focus. Option cards also support an accent color.
-- **Configure documents and images, and access lists, forms, and security from the object workspace.** The files section lets you switch between documents and images and loads the corresponding configuration. You can also open the list or a new form if the object has an associated collection.
+- **Shared controls offer more configuration options.** You can add a button to clear the selection, choose when a dialog fills the screen, and control the text field's focus. Option cards also support an accent color.
+- **Configure documents and images, and access lists and forms from the object's configuration area.** The files section lets you switch between documents and images and loads the corresponding configuration. You can also open the object's list if it has an associated collection, or create a new form.
 - **The view design section in the object bank has a clearer name.** The new name avoids confusion with record design. The change is available in the seven included languages.
-- **Group and collapse modules by type in the placement panel.** You can keep the groups you are using open. When you search, groups containing results are expanded.
-- **The tour editor and page configurator display their translated text.** Text in both tools is available in seven languages, including the names of Flexygo's own anchors in the tour editor. If a translation is missing, the original English text is displayed; text entered by the person configuring the tour retains its content.
-- **Object configuration displays translated text in all seven available languages.** The translation includes section titles and their descriptions.
-- **The view manager displays correctly and is more readable in the 2026 skin.** Field layout, text colors, and hover states have been adjusted. The improvements also apply when the manager is opened as a template.
-- **The placement panel makes it easier to move modules, view their details, and find those already added.** Cards show information about the module and the pages where it appears; modules already placed remain visible in the side panel. You can also scroll through the page and close placement mode layers one at a time with Esc. The bar for moving modules without a header is highlighted only when you hover over it, and resize controls and the menu remain accessible without interfering with each other. If you cancel a drag with Escape, you can move modules again without errors.
-- **View errors in a filterable, paginated list with expandable details.** You can combine filters to narrow down the results and view the available options for each criterion. Access from the home panel opens the list with errors from the last 24 hours.
-- **The addons marketplace displays each option in a row and manages its results better.** The layout makes good use of space whether there are few addons or many, and keeps each one’s information and actions visible. The controls on installed cards are also fixed, and the marketplace no longer gets stuck loading if a query fails.
-- **Users with development permissions can access the application with development mode enabled and turn it off from the menu.** The mode retains its selected state when you return, and turning it off does not cause errors if there is no side panel to close. Access is only available to users with a designer role, and Addon appears separately instead of being included in the source selection.
-- **In the 2026 skin, development tools are in their corresponding areas, and previews have their own card.** Object, page, and catalog settings are accessed from their specific locations instead of being duplicated in the side panel. The rotation control sets the orientation for the next time the preview is opened.
-- **Mobile and tablet previews use controls to select a device and change its orientation.** You can change devices without losing the current orientation. Rotation affects the open preview and does nothing if none is open.
-- **Enable or disable Minificar JS/CSS from a card on the control panel.** The card is integrated with the other panel options and lets you change the setting from anywhere on its surface.
-- **Process communication with the proxy supports different response types.** This makes it possible to handle the responses required for ABH Sign document operations.
-- **Developers can debug application code using source maps.** This improvement makes it easier to locate the source of a problem during debugging and is intended for people developing on Flexygo.
+- **The placement panel lets you group modules, view their details and find those already added.** You can collapse groups by type and keep the ones you are using open; searches expand groups with results. Cards show module information and the pages where it appears, and placed modules remain visible in the panel. You can also scroll through the page and close placement mode layers one at a time with Esc.
+- **The 2026 skin's source menu displays the options correctly and lets you close the dialog without changing the source.** The four sources are displayed in two columns, and the current source is marked with a colored badge; Addon appears separately. The active label updates when you change the source, and you can close the dialog with the button or Esc.
+- **The tour editor and page configurator display their translated text.** The text in both tools is available in seven languages, including the names of Flexygo-specific anchors in the tour editor. Text entered by the person configuring the tour is retained; if a translation is missing, the original English text is shown.
+- **SQL list templates let you define links to records.** You can create links even when rows contain different object types and do without automatic detection in the 2026 skin. Column sorting and resizing are retained.
+- **Object configuration displays its text translated into the seven available languages.** The translation includes section titles and their descriptions. This makes it easier to identify each setting in the selected language.
+- **The view manager displays correctly and is more readable in the 2026 skin.** Field layout, text colors and hover states are fixed. These improvements also apply when the manager is opened as a template.
+- **View errors in a filterable, paginated list with expandable details.** You can combine filters to narrow down results and view the options available for each criterion. Accessing the list from the home panel opens it with errors from the last 24 hours.
+- **The addons marketplace displays options in rows and keeps their actions visible.** The new layout makes better use of space, whether there are few or many addons, and aligns the search with the list. Controls on installed cards and the extra space shown when there are no results are also fixed; if a query fails, the marketplace no longer gets stuck loading.
+- **Users with development permissions get direct access with development mode enabled and can turn it off from the menu.** The mode retains the selected state when you return and does not cause errors when turned off if there is no side panel to close. Access is only shown to users with a designer role; the source selector does not include Addon, which is presented separately.
+- **The button for creating objects is easier to distinguish and lets you start creating from the catalog access point.** The plus symbol has more contrast on hover and its own background to distinguish it from the catalog. When clicked, the wizard opens without activating the access point that contains it.
+- **Mobile and tablet previews let you choose the device and change the orientation.** You can change devices without losing the current orientation. Rotation affects the open preview and does nothing if none is open.
+- **Turn Minify JS/CSS on or off from a control panel card.** The card fits in with the other panel options and lets you change the setting from anywhere on its surface. You do not need to leave the panel to change it.
+- **Process communication with the proxy supports different response types.** This lets you handle the responses required for document operations. Processes can therefore work with the different formats those operations require.
+- **Developers can debug application code with source maps.** This option makes it easier to find the source of a problem during debugging. It is intended for people developing on Flexygo.
 
 ### Filters
 
@@ -371,13 +368,14 @@ The 2026 skin includes adaptive side navigation, light and dark modes, and quick
 
 ### Skins
 
-- **Skin 2026 improves the readability of menus, dialogs, fields, and other interface elements.** The Apply button in dialogs and danger options are more distinct in light and dark modes. The muted color of links is also adjusted according to the template, as is the position of validation messages. Cards, wizard steps, secondary text, and scheduler controls and notifications have better contrast.
-- **Skin 2026 organizes the toolbar better and makes processes and filters easier to access.** Processes with text remain visible on the toolbar, while those without text are grouped in the three-dot menu; their button also has more contrast. Filters and the actions menu are placed next to the module title and take up less space, with no empty row when there are no filters.
-- **Skin 2026 uses the Geist typeface instead of IBM Plex.** This change alters the appearance of text in this skin and reduces the size of the font files used.
-- **You can display a different logo for each interface mode.** Flexygo uses the logo variant for the active mode. This lets you adapt its appearance to each mode.
-- **You can open the module organizer from the skin 2026 header.** The button appears next to notifications, and you can also use the Ctrl+Shift+M shortcut. Access respects design permissions.
-- **Skin variables can be searched without distinguishing between uppercase and lowercase letters.** You can enter a variable using different combinations of uppercase and lowercase letters, and Flexygo will still find it.
-- **The main logo display is fixed and the default logo background is updated.** The path to the main logo is fixed so that it is displayed. The default Flexygo image now has a gray background instead of a white one.
+- **You can display a different logo for each interface mode.** The application looks for the logo variant corresponding to the active mode. This lets you adapt its appearance to each mode.
+- **The 2026 skin improves the readability of controls, messages and secondary text.** Changes affect, among other elements, the Apply button in dialogs, dangerous options in menus, and buttons for running processes. They also make validation errors, scheduler warnings, wizard steps and faded links easier to distinguish in light and dark modes.
+- **The 2026 skin uses the Geist typeface instead of IBM Plex.** This change adjusts the appearance of text and reduces the size of the font files used by this skin.
+- **In the 2026 skin, processes with visible text remain in the toolbar.** Processes without text remain grouped in the three-dot menu to keep the toolbar tidy.
+- **In the 2026 skin, filters and the actions menu take up less space above the content.** The controls are placed next to the module title. If there are no filters to show, the empty row disappears.
+- **You can open the module organizer from the 2026 skin header.** Use the button next to notifications or the Ctrl+Shift+M shortcut. Access respects design permissions.
+- **The default Flexygo logo displays a gray background instead of a white one.** This change affects the logo image included by default.
+- **You can access skin variables without case sensitivity.** Variable lookup works even if you use different capitalization.
 
 ### Updater
 
@@ -424,17 +422,16 @@ The 2026 skin includes adaptive side navigation, light and dark modes, and quick
 
 ### Deployment
 
-- **Database deployment avoids errors related to icon changes.** The process prepares changes to the icon tables. This avoids the error that could occur during deployment.
+- **Database deployment avoids an error related to changes to icons.** During deployment, changes to the icon tables are prepared to prevent this error.
 
 ### Development Tools
 
-- **When exporting a project, users and secrets are excluded, and scripts are generated that support data of any type and size.** Secrets are saved in a local file that Git ignores and are only applied when publishing to Debug. This way, publishing does not overwrite the secrets configured in each installation.
-- **Select the Addon source from the 2026 skin's source selector.** When Addon is enabled, the control panel also displays its name and color indicator.
-- **Changes to properties are saved correctly, and the assistant opens the appropriate manager.** Moving properties between tabs and reordering them also works in processes and reports. When you edit the configuration of a process, report, or object, an empty or untitled manager no longer opens.
-- **Custom LESS variables and the path for exported files with database changes are fixed.** Custom styles are processed correctly, and the export of database changes uses the corrected path.
-- **Errors in parsing and loading the Monaco editor are fixed, including the loading of TypeScript definitions.** These changes prevent errors when processing content and loading the editor and its definitions.
-- **You can change the order of nodes without errors when loading their properties.** Behavior when editing nodes and loading their properties is fixed.
-- **Toolbar cloning is fixed.** When you clone a toolbar, its data is preserved correctly.
+- **Project export excludes users and secrets, and generates scripts that support data of any type and size.** Secrets are saved in a local file ignored by Git and are only applied when publishing in Debug. This means publishing does not overwrite the secrets configured in each installation.
+- **Changes to properties are saved correctly, and the wizard opens the appropriate manager.** You can move properties between tabs and reorder them in processes and reports too. When editing the configuration of a process, report or object, an empty or untitled manager no longer opens.
+- **Custom LESS variables and the path for exported files with database changes are fixed.** Custom styles are processed correctly. In addition, exporting database changes uses the corrected path.
+- **Errors in the Monaco editor's parsing and loading are fixed.** The changes prevent failures when processing content and loading the editor. TypeScript definition loading is also fixed.
+- **Change the order of nodes without errors when loading their properties.** Behavior when editing nodes and loading their properties is fixed. You can now reorder them without errors.
+- **Toolbar cloning is fixed.** When cloning a toolbar, its data is retained correctly. The copy therefore keeps the information from the original toolbar.
 
 ### Document and Image Management
 
@@ -522,6 +519,10 @@ The 2026 skin includes adaptive side navigation, light and dark modes, and quick
 ### Security
 
 - **You can sign in and access downloads and reports using a token included in the URL.** The token is retained during redirects, including when sign-in is required before opening the link. This allows access to the destination to continue after authentication.
+
+### Skins
+
+- **The path is fixed so the main logo is displayed.** This change lets the main logo display correctly.
 
 ### Updater
 
