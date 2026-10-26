@@ -19,12 +19,20 @@ dotnet --list-sdks
 
 ---
 
+## Claude Code
+
+El servidor se usa desde **Claude Code**, en cualquiera de sus formas: la aplicación de escritorio, la extensión de VS Code o la terminal. Los comandos `/flx-*` del flujo de trabajo y el [panel de Flexygo](./7PanelAndBoard.md) son de Claude Code.
+
+Otros clientes MCP pueden usar las herramientas del servidor, pero sin los comandos ni el panel.
+
+---
+
 ## Connection strings configuradas
 
 !!! danger "Requisito bloqueante"
     El servidor `flexygo-mcp` necesita acceso a las bases de datos del proyecto para poder operar. Si el `appsettings.json` del Backend **no tiene las connection strings configuradas**, el servidor arrancará pero no podrá ejecutar ninguna herramienta — el agente recibirá errores en todas las operaciones.
 
-    Asegúrate de haber completado el Asistente de configuración antes de usar el MCP. Una vez configuradas `ConfConnectionString` y `DataConnectionString`, el servidor funcionará correctamente.
+    Completa el Asistente de configuración antes de usar el MCP, o escribe `/flx-setup` en Claude Code: te guía para crear o elegir las bases de datos y escribir `ConfConnectionString` y `DataConnectionString`. Con ellas configuradas, el servidor funciona correctamente.
 
 ---
 

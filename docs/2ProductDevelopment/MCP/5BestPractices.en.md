@@ -1,25 +1,25 @@
 # Best practices
 
-These recommendations assume the `flexygo-mcp` server is running and connected to GitHub Copilot in agent mode. If you haven't set it up yet, see [Basic use](./2Usage.md) first.
+These recommendations assume the `flexygo-mcp` server is connected to Claude Code. If you haven't set it up yet, see [Basic use](./2Usage.md) first.
 
 ---
 
 ## Recommended model
 
-To work with the Flexygo MCP server, it's recommended to use **Claude Sonnet 4.6** as the model in Copilot's agent. It offers the best balance between reasoning, MCP tool handling, and generated code quality.
+Use a current Claude model. For thinking and deciding (`/flx-context`, `/flx-plan`, `/flx-discuss`), use the most capable model you have; for executing a block already decided (`/flx-execute`, `/flx-verify`), a faster and cheaper one is enough.
 
 ---
 
 ## Managing the context window
 
-This is the factor that most affects the quality of working with the agent. As the conversation grows, the agent starts losing coherence, forgets earlier instructions, and makes mistakes it wouldn't make with a clean context.
+This is the factor that most affects the quality of the work with the agent. As the conversation grows, the agent starts to lose coherence, forgets earlier instructions and makes mistakes it wouldn't make with a clean context. Every message in a long conversation also costs more.
 
 **Practical rules:**
 
-- **One task per conversation.** Open a new agent conversation for each independent task. Don't accumulate the history of previous sessions.
-- **Close and reopen when you notice degradation.** If the agent starts giving inconsistent answers or ignoring instructions, the conversation is too loaded. Open a new one and summarize the state.
-- **Don't use the same conversation to plan and to execute.** The analysis or discussion phase consumes context that's later needed for execution.
-- **For long flows like `/build-mvp`, always start with a clean context.** The agent needs the entire available window to correctly orchestrate the whole flow.
+- **A new chat for each phase or block.** The server keeps a checkpoint of each development, so a new chat resumes the work without rereading the previous conversation: type `/flx-status` or the next command. See [Resuming the work](./6Workflow.md#resuming-without-paying-for-the-whole-conversation).
+- **Heed the status line's warning.** When the context fills up, the Flexygo status line says so with `context N% → new chat`.
+- **Don't use the same conversation to plan and to execute.** The analysis or discussion phase uses up context that is then needed for the execution.
+- **For `/flx-build-product`, always start with a clean context.**
 
 ---
 
@@ -38,15 +38,9 @@ This is the factor that most affects the quality of working with the agent. As t
 
 ---
 
-## The /build-mvp prompt
+## Follow the command flow
 
-The main prompt for **creating a Flexygo product from scratch**. Just describe what you want to build:
-
-```text
-/build-mvp I want a backoffice to manage a call center
-```
-
-The agent guides the whole process: data model → style → implementation plan → generation → verification → migration scripts. See the [full flow in Basic use](./2Usage.md#the-build-mvp-flow) to see each phase in detail.
+The `/flx-*` commands take the work phase by phase: context, plan, decisions, execution block by block, review, verification, tests, quality, help and, if needed, the API. Each phase is the gate to the next, so you don't need to remember what comes next: the agent, the panel and `/flx-status` tell you. See the [whole flow](./6Workflow.md).
 
 ---
 
@@ -132,48 +126,47 @@ The agent will work on what you describe to it — don't assume it "knows" the c
 
 ---
 
-## Tips for using Copilot
+## Tips for using Claude Code
 
-- Start the `flexygo-mcp` server **before** opening VS Code. If Copilot was already open, reload the window (`Ctrl+Shift+P` → **Developer: Reload Window**).
-- Always use **Agent** mode in the Chat panel, not the inline edit chat — only agent mode has access to the MCP tools.
-- If the agent doesn't use the MCP tools when it should, explicitly remind it: `"Use the Flexygo MCP tools for this"`.
-- When the agent proposes several approaches, pick one before continuing. Sustained ambiguity consumes context without moving forward.
-- If a response was wrong, correct it in the next message before continuing with the task — don't ignore it, or the agent will build on top of the error.
+- If the agent doesn't use the Flexygo tools when it should, remind it explicitly: `"Use the Flexygo MCP tools for this"`.
+- When the agent proposes several approaches, pick one before continuing. Sustained ambiguity uses up context without progress.
+- If an answer was wrong, correct it in the next message before continuing with the task — don't ignore it or the agent will build on the error.
+- When you update the server (`dotnet tool update -g flexygo-mcp`), open a **new chat**: a chat already under way keeps the tools it started with.
 
 ---
 
 ## Verify that the agent is using the tools
 
-The Copilot chat shows in real time which tools the agent is invoking. **If the agent doesn't appear to be using any Flexygo tool, it's making up the answer** — it isn't querying or modifying anything real in the project.
+The Claude Code chat shows in real time which tools the agent is calling. **If the agent doesn't show any Flexygo tool being used, it's making the answer up** — it isn't reading or changing anything real in the project.
 
 Signs that the agent is hallucinating instead of using the MCP:
 
-- It responds immediately without showing any tool invocation
-- It describes entities or structures that don't match your actual project
-- The changes it "made" don't show up reflected in the application
+- It answers immediately without showing any tool call
+- It describes entities or structures that don't match your real project
+- The changes it "made" don't show up in the application
 
-If this happens, stop the conversation, verify the server is active in `.vscode/mcp.json` (**Running** status), and explicitly ask the agent to use the Flexygo tools.
+If it happens, stop the conversation, check with `/mcp` that the `flexygo` server is connected, and explicitly ask the agent to use the Flexygo tools.
 
 ---
 
 ## Make a checkpoint commit before iterating
 
-Once you've completed the `/build-mvp` flow and the user has reviewed and approved the generated base, **make a commit to Git before continuing** with requests for improvements or individual modifications.
+When you close a block or a development and have reviewed and approved it, **make a Git commit before continuing** with requests for improvements or individual changes.
 
 This checkpoint has several advantages:
 
 - You have a clear point to return to if a later iteration breaks something
 - The agent can see exactly what changed in each task (clean diff)
-- You keep control over what is the "approved base" and what are later changes
+- You keep control of what is "approved base" and what are later changes
 
-It's good practice to make frequent commits as you go — don't wait until the product is finished.
+It's good practice to commit often as you go — don't wait until the product is finished.
 
 ---
 
 ## Adjust the complexity of what you ask for
 
-The MCP server can assess the size of a task and decide how to approach it: if the task is large enough it will generate a plan before executing; if it's more limited it will tackle it directly.
+A small change to something that already exists goes through `/flx-fast`, with no plan. Anything that creates tables or entities, touches permissions or loads data goes through `/flx-new-development` and `/flx-plan`, which splits it into blocks.
 
-Either way, **it's the user's responsibility not to ask for tasks that are too complex or that open too many fronts at once**. The more variables a request has, the more likely the result won't be what was expected, or the agent will lose coherence partway through the process.
+In any case, **it's the user's responsibility not to ask for tasks that are too complex or have too many open fronts at once**. The more variables a request has, the more likely the result won't be what was expected or the agent will lose coherence halfway through.
 
-If the task you have in mind seems large, break it down yourself before giving it to the agent.
+If the task you have in mind seems big, split it yourself before giving it to the agent.

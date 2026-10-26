@@ -1,28 +1,20 @@
 # MCP tools and resources
 
-The `flexygo-mcp` server exposes tools and resources that the Copilot agent can invoke to interact with the Flexygo project. You don't need to know all of them — the agent discovers and uses them automatically based on the prompt's context.
+The `flexygo-mcp` server exposes tools the agent uses to work on the Flexygo project: reading and creating objects, properties, pages, modules, processes, security, tests… You don't need to know them: the `/flx-*` commands and the agent itself use them according to what you ask for.
 
 ---
 
 ## Exploring the available tools
 
-Once the server is active, the `.vscode/mcp.json` file shows the total number of available tools and prompts. Click **More...** to see the full list directly in VS Code.
+In Claude Code, type `/mcp` and choose the `flexygo` server to see whether it is connected and the list of its tools.
 
-<figure markdown="span">
-  ![Active server — 138 tools, 1 prompt, More link](../../docs_assets/images/CoreProductDevelopment/MCP/startedMCP.png)
-  <figcaption>Click More... to explore all the available tools</figcaption>
-</figure>
+While the agent works, the chat shows each tool it calls. That way you see what it is reading or changing in the project.
 
 ---
 
 ## MCP Apps
 
-Besides the data tools, the server includes three **MCP Apps**: interactive visual interfaces that the agent can open in response to specific prompts.
-
-<figure markdown="span">
-  ![The 3 MCP Apps available in the resources panel](../../docs_assets/images/CoreProductDevelopment/MCP/mcpApps.png)
-  <figcaption>The 3 MCP Apps appear as resources in the agent's panel</figcaption>
-</figure>
+Besides the data tools, the server includes three **MCP Apps**: interactive visual interfaces that the agent can open in response to specific requests. They show in clients that display MCP Apps.
 
 ### Flexygo Schema Diagram UI
 

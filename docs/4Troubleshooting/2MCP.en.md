@@ -1,53 +1,29 @@
 # Troubleshooting: MCP
 
-Diagnostic guide for the most common problems with the `flexygo-mcp` server.
+Diagnostic guide for the most common problems with the `flexygo-mcp` server in Claude Code.
 
 
-## The AI client cannot find the server
+## Claude Code cannot find the server
 
-**Symptom in VS Code:** The `flexygo` server does not appear in the MCP panel, or it appears as "disconnected" / "error". Copilot does not list the Flexygo tools.
+**Symptom:** When you type `/mcp`, the `flexygo` server does not show, or it shows with an error. The agent uses no Flexygo tool.
 
-**Symptom in Claude Desktop:** The Flexygo tools do not appear in the available tools panel.
+**Cause A:** Claude Code is not open in the project's root folder, which is where `.mcp.json` lives.
 
-**Most common cause A:** The `flexygo-mcp` server is not running.
+**Cause B:** The project's server has not been approved.
 
-**Most common cause B:** The URL configured in the client is not correct.
+**Cause C:** The `flexygo-mcp` tool is not installed (see the next section).
 
-**Solution A — Check that the server is running:**
+**Solution:**
 
-Open a terminal and run:
-```bash
-flexygo-mcp
-```
-
-The server should show output similar to:
-```
-Flexygo MCP Server started at http://localhost:5100
-Waiting for connections...
-```
-
-Keep the terminal open while you use the AI client.
-
-**Solution B — Check the client's URL:**
-
-- **VS Code:** Check that the URL in the MCP configuration is `http://localhost:5100` (no trailing slash).
-- **Claude Desktop:** Verify that `claude_desktop_config.json` contains:
-  ```json
-  {
-    "mcpServers": {
-      "flexygo": {
-        "url": "http://localhost:5100"
-      }
-    }
-  }
-  ```
-
-After fixing it, restart the AI client.
+1. Open Claude Code in the project's root folder, the one that holds `.mcp.json` and the `.claude` folder.
+2. Check that `.mcp.json` has the `flexygo` entry with `"command": "flexygo-mcp"`. See the [server configuration](../2ProductDevelopment/MCP/3Configuration.md).
+3. If Claude Code asked whether to use the project's server and you said no, turn it on from `/mcp`.
+4. Open a new chat.
 
 
 ## `flexygo-mcp` is not recognized as a command
 
-**Symptom:** Running `flexygo-mcp` in the terminal produces the error:
+**Symptom:** When you run `flexygo-mcp` in the terminal you get the error:
 ```
 'flexygo-mcp' is not recognized as an internal or external command
 ```
@@ -68,7 +44,7 @@ The term 'flexygo-mcp' is not recognized as the name of a cmdlet, function...
    ```bash
    dotnet --list-sdks
    ```
-   If no `10.x.x` version appears, download it from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
+   If no `10.x.x` version shows, download it from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
 
 2. Check whether the tool is already installed:
    ```bash
@@ -76,7 +52,7 @@ The term 'flexygo-mcp' is not recognized as the name of a cmdlet, function...
    ```
    Look for `flexygo-mcp` in the list.
 
-3. If it does not appear, install it manually:
+3. If it is not there, install it manually:
    ```bash
    dotnet tool install -g flexygo-mcp
    ```
@@ -86,107 +62,62 @@ The term 'flexygo-mcp' is not recognized as the name of a cmdlet, function...
    - **Linux/macOS:** `~/.dotnet/tools`
 
 !!! tip "Automatic installation"
-    When you create a new product from the Installer, `flexygo-mcp` is installed automatically. If the error occurs after a manual installation, follow the steps above. See the [MCP prerequisites](../2ProductDevelopment/MCP/1Prerequisites.md).
+    When you create a new product from the Installer, `flexygo-mcp` is installed automatically. If the error happens after a manual installation, follow the steps above. See the [MCP prerequisites](../2ProductDevelopment/MCP/1Prerequisites.md).
 
 
-## The server starts but the tools do not appear
+## The `/flx-*` commands do not show
 
-**Symptom:** `flexygo-mcp` is running and responds at `http://localhost:5100`, but the AI client does not list any Flexygo tool (or lists 0 tools).
+**Symptom:** The server is connected, but typing `/flx-` shows no command.
 
-**Cause A:** The `mcp.json` file is missing from the Flexygo project's root directory.
+**Cause:** The server installs the commands in the project when it starts, and the chat was opened before that.
 
-**Cause B:** `mcp.json` has the wrong backend URL — the MCP server cannot connect to the backend to register the tools.
-
-**Cause C:** The client did not reconnect to the server after it started.
-
-**Solution A — Check mcp.json:**
-
-1. Check that `mcp.json` exists at the root of your project (at the same level as `appsettings.json`):
-   ```bash
-   ls mcp.json
-   ```
-2. The file should have a structure similar to:
-   ```json
-   {
-     "backendUrl": "http://localhost/flexygo-backend",
-     "apiKey": "YOUR_API_KEY"
-   }
-   ```
-3. Make sure `backendUrl` points to the running Flexygo Backend.
-
-**Solution B — Force a reconnection in the client:**
-
-- **VS Code:** Reload the window (`Ctrl+Shift+P` → **Developer: Reload Window**) or restart VS Code.
-- **Claude Desktop:** Close and reopen the application.
+**Solution:** Open a new chat in the project. If they still do not show, ask the agent to sync the Flexygo commands and open a chat again.
 
 
-## Port 5100 is already in use
+## The tools fail with database errors
 
-**Symptom:** When starting `flexygo-mcp`, the following error appears:
-```
-Failed to bind to address http://localhost:5100: address already in use
-```
+**Symptom:** The tools show, but all of them return connection errors or say there are no connection strings.
 
-**Cause:** Another process is listening on port 5100 (it could be a previous instance of the MCP server that did not close correctly, or another service).
+**Cause A:** The Backend's `appsettings` has no `ConfConnectionString` and `DataConnectionString`.
+
+**Cause B:** The server reads another `appsettings` file. The `ASPNETCORE_ENVIRONMENT` variable in `.mcp.json` decides which: with `Development`, `appsettings.Development.json`.
+
+**Solution:** Type `/flx-setup`: it checks which databases exist, publishes the missing ones and writes the connection strings. See [The databases](../2ProductDevelopment/MCP/3Configuration.md#the-databases).
+
+
+## What the agent just created does not show in the application
+
+**Symptom:** The agent created an object or changed a property, but the application does not show it, a list answers with a 500 error, or `The given key was not present in the dictionary` appears.
+
+**Cause:** The running application keeps the object definitions in memory and does not read them again. What the agent writes is in the database, but the application does not see it yet. It is not a configuration error.
 
 **Solution:**
 
-1. Identify which process is using the port:
-   ```bash
-   # Windows
-   netstat -ano | findstr ":5100"
-   ```
-   Note the PID (last column).
-
-2. Terminate the process:
-   ```bash
-   # Windows
-   taskkill /PID {PID} /F
-   ```
-
-3. Start `flexygo-mcp` again.
-
-!!! note "Previous instances"
-    If you close the terminal where `flexygo-mcp` was running with Ctrl+C, the process normally terminates. If the terminal was closed abruptly, an orphaned process may remain. The step above resolves it.
+1. The first time, the agent asks for your Flexygo password to reload the cache. It is kept in memory only, for that session, and from then on the cache reloads by itself after each change.
+2. If the Backend is on another computer, the agent tells you its name and asks before sending your credentials to it. See [Security checks](../2ProductDevelopment/MCP/3Configuration.md#security-checks).
+3. If you would rather not give the password, use the **Reload Cache** button in the users list, or restart the Backend.
+4. If you had the screen open in the browser, load it again.
 
 
-## Errors when running tools (access denied, backend unreachable)
+## The Flexygo panel does not show
 
-**Symptom:** The MCP server is running and the tools appear in the client, but invoking them returns errors such as:
+**Symptom:** You see neither the band above the chat nor the side pane.
 
-- `Error: Unable to connect to backend`
-- `Error: Access denied` / `Unauthorized`
-- `Error: Database connection failed`
+**Cause A:** The one-time step `flexygo-mcp --enable-panel` has not been run on this computer.
 
-**Most common cause A:** The Flexygo Backend is not running or is not reachable from the MCP server.
+**Cause B:** The chat was opened before turning it on: the panel shows when you open a new chat or session.
 
-**Most common cause B:** The credentials in `mcp.json` (API key, user) are incorrect or have expired.
+**Cause C:** The project has the panel turned off in its `.claude/settings.json`.
 
-**Solution:**
+**Cause D:** You are using Claude Code with no interface (`claude -p`), where there is no panel.
 
-1. Verify that the Backend is running by accessing its URL in a browser or with `curl`:
-   ```bash
-   curl http://localhost/flexygo-backend/api/health
-   ```
-   It should respond with HTTP 200.
-
-2. Review the credentials in `mcp.json`:
-   - The `apiKey` must match the one configured in the Backend.
-   - The `backendUrl` must be reachable from the machine where the MCP server is running.
-
-3. Check the MCP server logs in the terminal for the specific error — the full error message usually indicates exactly what is failing.
-
-See the [MCP configuration guide](../2ProductDevelopment/MCP/3Configuration.md) for the full structure of `mcp.json`.
+**Solution:** See [How to turn on the panel and the board](../2ProductDevelopment/MCP/7PanelAndBoard.md#how-to-turn-on-the-panel-and-the-board).
 
 
-## A specific tool is not available
+## After an update, the agent does not see what is new
 
-**Symptom:** Most tools work, but one or more specific tools do not appear, or return an error when invoked.
+**Symptom:** You updated the server with `dotnet tool update -g flexygo-mcp`, but the agent does not use the new tools or parameters.
 
-**Cause:** The tool requires a specific Backend feature to be enabled, or the product to have a certain configuration.
+**Cause:** A chat already under way keeps the list of tools it received when it started.
 
-**Solution:**
-
-1. See the [MCP tools reference](../2ProductDevelopment/MCP/4Tools.md) for the requirements of each tool.
-2. Verify that the Flexygo Backend has the module or endpoint that the tool needs enabled.
-3. Restart the MCP server to force rediscovery of the available tools.
+**Solution:** Open a new chat.

@@ -26,7 +26,7 @@ El modo **Desarrollo** del instalador está orientado a desarrolladores que trab
     Introduce el nombre del producto y la ruta donde se generará el proyecto. El instalador instala la plantilla (o la actualiza si ya está instalada) e instala o actualiza también las herramientas de desarrollo:
 
     - **Flexygo Product Tools** — permite generar NuGets y actualizar el proyecto desde línea de comandos o desde las extensiones de Visual Studio y VS Code
-    - **Flexygo MCP** — servidor MCP para integración con Copilot y otros clientes IA
+    - **Flexygo MCP** — servidor MCP para construir la aplicación con Claude Code y otros clientes de IA
 
     Una vez completado, crea la solución a partir de la plantilla.
 

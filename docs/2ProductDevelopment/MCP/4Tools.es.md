@@ -1,28 +1,20 @@
 # Herramientas y recursos MCP
 
-El servidor `flexygo-mcp` expone herramientas y recursos que el agente de Copilot puede invocar para interactuar con el proyecto Flexygo. No es necesario conocerlas todas — el agente las descubre y usa automáticamente según el contexto del prompt.
+El servidor `flexygo-mcp` expone herramientas que el agente usa para trabajar sobre el proyecto Flexygo: leer y crear objetos, propiedades, páginas, módulos, procesos, seguridad, pruebas… No es necesario conocerlas: los comandos `/flx-*` y el propio agente las usan según lo que pidas.
 
 ---
 
 ## Explorar las herramientas disponibles
 
-Una vez que el servidor está activo, el archivo `.vscode/mcp.json` muestra el número total de herramientas y prompts disponibles. Haz clic en **More...** para ver el listado completo directamente en VS Code.
+En Claude Code, escribe `/mcp` y elige el servidor `flexygo` para ver si está conectado y el listado de sus herramientas.
 
-<figure markdown="span">
-  ![Servidor activo — 138 tools, 1 prompt, enlace More](../../docs_assets/images/CoreProductDevelopment/MCP/startedMCP.png)
-  <figcaption>Haz clic en More... para explorar todas las herramientas disponibles</figcaption>
-</figure>
+Mientras el agente trabaja, el chat enseña cada herramienta que invoca. Así ves qué está consultando o cambiando en el proyecto.
 
 ---
 
 ## MCP Apps
 
-Además de las herramientas de datos, el servidor incluye tres **MCP Apps**: interfaces visuales interactivas que el agente puede abrir en respuesta a prompts específicos.
-
-<figure markdown="span">
-  ![Las 3 MCP Apps disponibles en el panel de recursos](../../docs_assets/images/CoreProductDevelopment/MCP/mcpApps.png)
-  <figcaption>Las 3 MCP Apps aparecen como recursos en el panel del agente</figcaption>
-</figure>
+Además de las herramientas de datos, el servidor incluye tres **MCP Apps**: interfaces visuales interactivas que el agente puede abrir en respuesta a peticiones concretas. Se ven en los clientes que muestran MCP Apps.
 
 ### Flexygo Schema Diagram UI
 

@@ -1,94 +1,46 @@
 # Basic use of the MCP server
 
-Once the [prerequisites](./1Prerequisites.md) are met, the project already includes everything needed to start the MCP server directly from VS Code.
+Once the [prerequisites](./1Prerequisites.md) are met, the project already includes everything needed to work with the MCP server from **Claude Code**.
 
 ---
 
-## Starting the server from VS Code
+## Opening the project in Claude Code
 
-The project generated from the Flexygo template includes a preconfigured `.vscode/mcp.json` file:
+The project generated from the Flexygo template carries, at its root, the `.mcp.json` file, which tells Claude Code how to start the server, and `.claude/settings.json`, which turns it on for the project. There is nothing to start by hand: Claude Code launches the server when you open the project folder.
 
-```json
-{
-  "servers": {
-    "flexygo": {
-      "command": "flexygo-mcp"
-    }
-  }
-}
-```
+1. Open the project folder in Claude Code: in the desktop app, in the VS Code extension, or in a terminal with `claude` from that folder.
+2. If Claude Code asks whether to use the project's `flexygo` server, accept.
+3. Type `/mcp` to check that the `flexygo` server shows as connected.
 
-Open that file in VS Code and click **Start** to launch the server.
-
-<figure markdown="span">
-  ![.vscode/mcp.json file with the Start link](../../docs_assets/images/CoreProductDevelopment/MCP/startMCP.png)
-  <figcaption>The mcp.json file includes the Start link directly in the editor</figcaption>
-</figure>
-
-Once the server is active, the file shows the **Running** status alongside the number of available tools and prompts.
-
-<figure markdown="span">
-  ![Active MCP server — Running with 138 tools](../../docs_assets/images/CoreProductDevelopment/MCP/startedMCP.png)
-  <figcaption>The server is ready when Running appears with the tool count</figcaption>
-</figure>
-
-!!! tip "The server must be active before using the agent"
-    Always start the MCP server before opening the Copilot chat in agent mode. If Copilot was already open when you started the server, reload the VS Code window (`Ctrl+Shift+P` → **Developer: Reload Window**).
+The first time it starts, the server installs the `/flx-*` commands and the Flexygo panel in the project. If the commands do not show when you type `/flx-`, open a new chat.
 
 !!! warning "Before you start: spec-driven tools"
-    If you use tools like **GSD**, **Spec Kit**, or others based on *spec-driven development*, **don't combine them with the Flexygo MCP server**. The context they generate interferes with the real context provided by the MCP and degrades the agent's quality. See [Best Practices](./5BestPractices.md#spec-driven-development-tools-gsd-spec-kit-and-similar) for more detail.
+    If you use tools such as **GSD**, **Spec Kit** or others based on *spec-driven development*, **do not combine them with the Flexygo MCP server**. The context they generate interferes with the real context the MCP provides and degrades the agent's quality. See [Best practices](./5BestPractices.md#spec-driven-development-tools-gsd-spec-kit-and-similar) for more detail.
 
 ---
 
-## The /build-mvp flow
+## First steps
 
-Once the server is connected, the main workflow is creating a Flexygo product from scratch using the `/build-mvp` prompt. This prompt triggers an orchestrated flow in which the agent guides the entire process.
+The work is done with commands that start with `/flx-`, one phase at a time. To begin:
 
-### How to start it
+| Situation | Command |
+|---|---|
+| A freshly created project, with no databases or connections | `/flx-setup` prepares the databases and the connection strings. |
+| The first time you work on the project | `/flx-context` gathers what the application is about and who uses it. |
+| You want a whole application | `/flx-build-product`, with a description of what you want to build. |
+| You want to add something to a project that already has things built | `/flx-new-development`, then `/flx-plan`. |
+| It is a small change to something that already exists | `/flx-fast`. |
+| You do not know where you left off | `/flx-status`. |
 
-In GitHub Copilot's agent mode, launch the prompt with a minimal description of what you want to build:
-
-<figure markdown="span">
-  ![Input dialog for the /build-mvp prompt](../../docs_assets/images/CoreProductDevelopment/MCP/buildMvpRequest.png)
-  <figcaption>The agent asks for a description of the application to build</figcaption>
-</figure>
+For example:
 
 ```text
-/build-mvp I want a backoffice to manage a call center
+/flx-build-product I want a back office to manage a call center
 ```
 
-The more specific you are in the initial description, the better starting point the agent will have.
+The more specific your description, the better the agent's start. From there on, the agent tells you at every moment which command comes next.
 
-<figure markdown="span">
-  ![The agent starts the Build MVP flow](../../docs_assets/images/CoreProductDevelopment/MCP/buildMvpChat.png)
-  <figcaption>The agent kicks off the orchestrated product-building flow</figcaption>
-</figure>
-
-### Flow phases
-
-**1. Analysis and data model**
-
-The agent analyzes the described domain and presents a proposed data model: entities, properties, relationships, and types. At this point you can review and adjust whatever you consider before continuing.
-
-**2. Visual style**
-
-Once the data model is confirmed, the agent asks for style preferences: typography, main colors, and any visual guidelines relevant to the product.
-
-**3. Implementation plan**
-
-With the model and style confirmed, the agent generates a complete implementation plan as a checklist: everything it's going to create (objects, properties, relationships, configurations) before executing any change. You can review it and request adjustments.
-
-**4. Product generation**
-
-The agent executes the plan by orchestrating subagents to preserve the context window. It builds the product's complete structure autonomously.
-
-**5. Verification**
-
-When finished, the agent performs automatic checks to verify that everything generated is correct and consistent.
-
-**6. Migration scripts (optional)**
-
-As a final step, it offers to generate scripts for both the configuration database and the data database, ready to apply to the current project.
+See the whole flow, phase by phase, in [Workflow with commands](./6Workflow.md). The state of the work can also be seen in the [panel and board](./7PanelAndBoard.md).
 
 !!! tip "Tips for better results"
-    See [Tips with Copilot](./5BestPractices.md) for recommendations on which model to use and prompting patterns that improve result quality.
+    See [Best practices](./5BestPractices.md) for recommendations on how to ask for things and when to open a new chat.

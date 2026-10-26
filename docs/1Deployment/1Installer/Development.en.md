@@ -26,7 +26,7 @@ The installer's **Development** mode is aimed at developers working with Flexygo
     Enter the product name and the path where the project will be generated. The installer installs the template (or updates it if already installed) and also installs or updates the development tools:
 
     - **Flexygo Product Tools** — lets you generate NuGets and update the project from the command line or from the Visual Studio and VS Code extensions
-    - **Flexygo MCP** — MCP server for integration with Copilot and other AI clients
+    - **Flexygo MCP** — MCP server for building the application with Claude Code and other AI clients
 
     Once completed, it creates the solution from the template.
 

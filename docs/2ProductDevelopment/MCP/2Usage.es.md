@@ -1,94 +1,46 @@
 # Uso básico del servidor MCP
 
-Una vez cumplidos los [prerrequisitos](./1Prerequisites.md), el proyecto ya incluye todo lo necesario para arrancar el servidor MCP directamente desde VS Code.
+Una vez cumplidos los [prerrequisitos](./1Prerequisites.md), el proyecto ya incluye todo lo necesario para trabajar con el servidor MCP desde **Claude Code**.
 
 ---
 
-## Arrancar el servidor desde VS Code
+## Abrir el proyecto en Claude Code
 
-El proyecto generado desde la plantilla de Flexygo incluye un archivo `.vscode/mcp.json` preconfigurado:
+El proyecto generado desde la plantilla de Flexygo trae en su raíz el fichero `.mcp.json`, que le dice a Claude Code cómo arrancar el servidor, y `.claude/settings.json`, que lo deja activado para el proyecto. No hay que arrancar nada a mano: Claude Code lanza el servidor al abrir la carpeta del proyecto.
 
-```json
-{
-  "servers": {
-    "flexygo": {
-      "command": "flexygo-mcp"
-    }
-  }
-}
-```
+1. Abre la carpeta del proyecto en Claude Code: en la aplicación de escritorio, en la extensión de VS Code o en una terminal, con `claude` desde esa carpeta.
+2. Si Claude Code te pregunta si quieres usar el servidor `flexygo` del proyecto, acepta.
+3. Escribe `/mcp` para comprobar que el servidor `flexygo` aparece conectado.
 
-Abre ese archivo en VS Code y haz clic en **Start** para arrancar el servidor.
-
-<figure markdown="span">
-  ![Archivo .vscode/mcp.json con el enlace Start](../../docs_assets/images/CoreProductDevelopment/MCP/startMCP.png)
-  <figcaption>El archivo mcp.json incluye el enlace Start directamente en el editor</figcaption>
-</figure>
-
-Cuando el servidor esté activo, el archivo muestra el estado **Running** junto al número de herramientas y prompts disponibles.
-
-<figure markdown="span">
-  ![Servidor MCP activo — Running con 138 tools](../../docs_assets/images/CoreProductDevelopment/MCP/startedMCP.png)
-  <figcaption>El servidor está listo cuando aparece Running con el recuento de herramientas</figcaption>
-</figure>
-
-!!! tip "El servidor debe estar activo antes de usar el agente"
-    Arranca siempre el servidor MCP antes de abrir el chat de Copilot en modo agente. Si Copilot ya estaba abierto cuando arrancaste el servidor, recarga la ventana de VS Code (`Ctrl+Shift+P` → **Developer: Reload Window**).
+La primera vez que arranca, el servidor instala en el proyecto los comandos `/flx-*` y el panel de Flexygo. Si al escribir `/flx-` no aparecen los comandos, abre un chat nuevo.
 
 !!! warning "Antes de empezar: herramientas spec-driven"
     Si usas herramientas como **GSD**, **Spec Kit** u otras basadas en *spec-driven development*, **no las combines con el servidor MCP de Flexygo**. El contexto que generan interfiere con el contexto real que aporta el MCP y degrada la calidad del agente. Consulta [Buenas prácticas](./5BestPractices.md#herramientas-de-desarrollo-spec-driven-gsd-spec-kit-y-similares) para más detalle.
 
 ---
 
-## Flujo /build-mvp
+## Primeros pasos
 
-Una vez conectado el servidor, el flujo principal de trabajo es crear un producto Flexygo desde cero usando el prompt `/build-mvp`. Este prompt activa un flujo orquestado en el que el agente guía todo el proceso.
+El trabajo se hace con comandos que empiezan por `/flx-`, fase a fase. Para empezar:
 
-### Cómo iniciarlo
+| Situación | Comando |
+|---|---|
+| Proyecto recién creado, sin bases de datos ni conexiones | `/flx-setup` prepara las bases de datos y las cadenas de conexión. |
+| Primera vez que trabajas en el proyecto | `/flx-context` recoge de qué va la aplicación y quién la usa. |
+| Quieres una aplicación entera | `/flx-build-product`, con una descripción de lo que quieres construir. |
+| Quieres añadir algo a un proyecto que ya tiene cosas | `/flx-new-development`, y después `/flx-plan`. |
+| Es un cambio pequeño sobre algo que ya existe | `/flx-fast`. |
+| No sabes por dónde ibas | `/flx-status`. |
 
-En el modo agente de GitHub Copilot, lanza el prompt con una descripción mínima de lo que quieres construir:
-
-<figure markdown="span">
-  ![Diálogo de entrada del prompt /build-mvp](../../docs_assets/images/CoreProductDevelopment/MCP/buildMvpRequest.png)
-  <figcaption>El agente solicita una descripción de la aplicación a construir</figcaption>
-</figure>
+Por ejemplo:
 
 ```text
-/build-mvp Quiero un backoffice para gestionar un call center
+/flx-build-product Quiero un backoffice para gestionar un call center
 ```
 
-Cuanto más concreto seas en la descripción inicial, mejor partirá el agente.
+Cuanto más concreto seas en la descripción, mejor parte el agente. A partir de ahí, el agente te dice en cada momento qué comando toca.
 
-<figure markdown="span">
-  ![El agente inicia el flujo Build MVP](../../docs_assets/images/CoreProductDevelopment/MCP/buildMvpChat.png)
-  <figcaption>El agente arranca el flujo orquestado de construcción del producto</figcaption>
-</figure>
-
-### Fases del flujo
-
-**1. Análisis y modelo de datos**
-
-El agente analiza el dominio descrito y presenta una propuesta de modelo de datos: entidades, propiedades, relaciones y tipos. En este punto puedes revisar y ajustar lo que consideres antes de continuar.
-
-**2. Estilo visual**
-
-Una vez confirmado el modelo de datos, el agente solicita las preferencias de estilo: tipografía, colores principales y cualquier directriz visual relevante para el producto.
-
-**3. Plan de implementación**
-
-Con el modelo y el estilo confirmados, el agente genera un plan de implementación completo en forma de checklist: todo lo que va a crear (objetos, propiedades, relaciones, configuraciones) antes de ejecutar ningún cambio. Puedes revisarlo y pedir ajustes.
-
-**4. Generación del producto**
-
-El agente ejecuta el plan orquestando subagentes para preservar la ventana de contexto. Crea la estructura completa del producto de forma autónoma.
-
-**5. Verificación**
-
-Al finalizar, el agente realiza verificaciones automáticas para comprobar que todo lo generado es correcto y coherente.
-
-**6. Scripts de migración (opcional)**
-
-Como paso final, se ofrece la posibilidad de generar scripts tanto para la base de datos de configuración como para la de datos, listos para aplicar al proyecto actual.
+Consulta el flujo completo, fase a fase, en [Flujo de trabajo con comandos](./6Workflow.md). El estado del trabajo se ve también en el [panel y el tablero](./7PanelAndBoard.md).
 
 !!! tip "Consejos para mejores resultados"
-    Consulta los [Tips con Copilot](./5BestPractices.md) para recomendaciones sobre el modelo a usar y patrones de prompting que mejoran la calidad del resultado.
+    Consulta las [Buenas prácticas](./5BestPractices.md) para recomendaciones sobre cómo pedir las cosas y cuándo abrir un chat nuevo.

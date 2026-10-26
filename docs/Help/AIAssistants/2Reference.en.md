@@ -5,7 +5,7 @@ Since version 10, **every Flexygo application is also an MCP server**: an AI ass
 Want to try it in fifteen minutes? [Try it: an AI assistant working with your application](1TryIt.md).
 
 !!! note "This is not the builder's MCP server"
-    The [MCP](../../2ProductDevelopment/MCP/2Usage.md) section of this documentation describes the server that **builds** applications from VS Code. This page describes the opposite: the already built application, exposed to its **users'** assistants.
+    The [MCP](../../2ProductDevelopment/MCP/2Usage.md) section of this documentation describes the server that **builds** applications from Claude Code. This page describes the opposite: the already built application, exposed to its **users'** assistants.
 
 ```mermaid
 flowchart LR
@@ -67,7 +67,7 @@ All of this is product configuration: it is written with the **project origin** 
 
 ### A prompt for an AI to fill it in
 
-Filling in these fields by hand in an application with dozens of objects takes time. An assistant with **read** access to the configuration database (for example, the [builder's MCP](../../2ProductDevelopment/MCP/2Usage.md) in VS Code, or a SQL query) can propose them. This prompt tells it what to look at, where it is and how to work out what the application is for; what it returns is a script for you to review, not changes already made.
+Filling in these fields by hand in an application with dozens of objects takes time. An assistant with **read** access to the configuration database (for example, the [builder's MCP](../../2ProductDevelopment/MCP/2Usage.md) in Claude Code, or a SQL query) can propose them. This prompt tells it what to look at, where it is and how to work out what the application is for; what it returns is a script for you to review, not changes already made.
 
 ```text
 You are an analyst preparing a Flexygo application to be used by AI assistants through MCP.

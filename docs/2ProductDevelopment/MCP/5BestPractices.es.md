@@ -1,25 +1,25 @@
 # Buenas prácticas
 
-Estas recomendaciones asumen que el servidor `flexygo-mcp` está en marcha y conectado a GitHub Copilot en modo agente. Si todavía no lo has configurado, consulta primero [Uso básico](./2Usage.md).
+Estas recomendaciones asumen que el servidor `flexygo-mcp` está conectado a Claude Code. Si todavía no lo has configurado, consulta primero [Uso básico](./2Usage.md).
 
 ---
 
 ## Modelo recomendado
 
-Para trabajar con el servidor MCP de Flexygo se recomienda usar **Claude Sonnet 4.6** como modelo en el agente de Copilot. Ofrece el mejor equilibrio entre razonamiento, gestión de herramientas MCP y calidad de código generado.
+Usa un modelo Claude actual. Para pensar y decidir (`/flx-context`, `/flx-plan`, `/flx-discuss`) conviene el modelo más capaz que tengas; para ejecutar un bloque ya decidido (`/flx-execute`, `/flx-verify`) basta con uno más rápido y barato.
 
 ---
 
 ## Gestión de la ventana de contexto
 
-Este es el factor que más afecta a la calidad del trabajo con el agente. A medida que la conversación crece, el agente empieza a perder coherencia, olvida instrucciones anteriores y comete errores que no cometería con el contexto limpio.
+Este es el factor que más afecta a la calidad del trabajo con el agente. A medida que la conversación crece, el agente empieza a perder coherencia, olvida instrucciones anteriores y comete errores que no cometería con el contexto limpio. Además, cada mensaje en una conversación larga cuesta más.
 
 **Reglas prácticas:**
 
-- **Una tarea por conversación.** Abre una nueva conversación de agente para cada tarea independiente. No acumules el historial de sesiones anteriores.
-- **Cierra y reabre cuando notes degradación.** Si el agente empieza a dar respuestas inconsistentes o a ignorar instrucciones, la conversación está demasiado cargada. Abre una nueva y resume el estado.
+- **Un chat nuevo por fase o por bloque.** El servidor guarda un punto de control de cada desarrollo, así que un chat nuevo retoma el trabajo sin releer la conversación anterior: escribe `/flx-status` o el siguiente comando. Consulta [Retomar el trabajo](./6Workflow.md#retomar-el-trabajo-sin-pagar-la-conversacion-entera).
+- **Haz caso al aviso de la línea de estado.** Cuando el contexto se llena, la línea de estado de Flexygo lo dice con `context N% → new chat`.
 - **No uses la misma conversación para planificar y ejecutar.** La fase de análisis o discusión consume contexto que luego hace falta para la ejecución.
-- **Para flujos largos como `/build-mvp`, empieza siempre con contexto limpio.** El agente necesita toda la ventana disponible para orquestar correctamente el flujo completo.
+- **Para `/flx-build-product`, empieza siempre con contexto limpio.**
 
 ---
 
@@ -38,15 +38,9 @@ Este es el factor que más afecta a la calidad del trabajo con el agente. A medi
 
 ---
 
-## Prompt /build-mvp
+## Sigue el flujo de comandos
 
-El prompt principal para **crear un producto Flexygo desde cero**. Basta con describir qué quieres construir:
-
-```text
-/build-mvp Quiero un backoffice para gestionar un call center
-```
-
-El agente guía todo el proceso: modelo de datos → estilo → plan de implementación → generación → verificación → scripts de migración. Consulta el [flujo completo en Uso básico](./2Usage.md#flujo-build-mvp) para ver cada fase con detalle.
+Los comandos `/flx-*` llevan el trabajo fase a fase: contexto, plan, decisiones, ejecución por bloques, revisión, verificación, pruebas, calidad, ayuda y, si hace falta, la API. Cada fase es la puerta de la siguiente, así que no hace falta que recuerdes qué toca: el agente, el panel y `/flx-status` lo dicen. Consulta el [flujo completo](./6Workflow.md).
 
 ---
 
@@ -132,19 +126,18 @@ El agente trabajará sobre lo que le describes — no asumas que "sabe" cómo es
 
 ---
 
-## Tips de uso con Copilot
+## Consejos de uso con Claude Code
 
-- Arranca el servidor `flexygo-mcp` **antes** de abrir VS Code. Si Copilot ya estaba abierto, recarga la ventana (`Ctrl+Shift+P` → **Developer: Reload Window**).
-- Usa siempre el modo **Agente** en el panel de Chat, no el chat de edición inline — solo el modo agente tiene acceso a las herramientas MCP.
-- Si el agente no usa las herramientas MCP cuando debería, recuérdaselo explícitamente: `"Usa las herramientas de Flexygo MCP para esto"`.
+- Si el agente no usa las herramientas de Flexygo cuando debería, recuérdaselo explícitamente: `"Usa las herramientas de Flexygo MCP para esto"`.
 - Cuando el agente proponga varios enfoques, elige uno antes de continuar. La ambigüedad sostenida consume contexto sin avanzar.
 - Si una respuesta fue incorrecta, corrígela en el siguiente mensaje antes de continuar con la tarea — no la ignores o el agente construirá sobre el error.
+- Cuando actualices el servidor (`dotnet tool update -g flexygo-mcp`), abre un **chat nuevo**: un chat ya empezado sigue con las herramientas de antes.
 
 ---
 
 ## Verifica que el agente usa las herramientas
 
-El chat de Copilot muestra en tiempo real qué herramientas está invocando el agente. **Si el agente no aparece usando ninguna herramienta de Flexygo, está inventando la respuesta** — no está consultando ni modificando nada real en el proyecto.
+El chat de Claude Code muestra en tiempo real qué herramientas está invocando el agente. **Si el agente no aparece usando ninguna herramienta de Flexygo, está inventando la respuesta** — no está consultando ni modificando nada real en el proyecto.
 
 Señales de que el agente está alucinando en lugar de usar el MCP:
 
@@ -152,13 +145,13 @@ Señales de que el agente está alucinando en lugar de usar el MCP:
 - Describe entidades o estructuras que no coinciden con tu proyecto real
 - Los cambios que "realizó" no aparecen reflejados en la aplicación
 
-Si ocurre, detén la conversación, verifica que el servidor está activo en `.vscode/mcp.json` (estado **Running**) y pide al agente explícitamente que use las herramientas de Flexygo.
+Si ocurre, detén la conversación, comprueba con `/mcp` que el servidor `flexygo` está conectado y pide al agente explícitamente que use las herramientas de Flexygo.
 
 ---
 
 ## Haz un commit de checkpoint antes de iterar
 
-Cuando hayas completado el flujo `/build-mvp` y el usuario haya revisado y aprobado la base generada, **haz un commit a Git antes de continuar** con peticiones de mejoras o modificaciones individuales.
+Cuando cierres un bloque o un desarrollo y lo hayas revisado y aprobado, **haz un commit a Git antes de continuar** con peticiones de mejoras o modificaciones individuales.
 
 Este checkpoint tiene varias ventajas:
 
@@ -172,7 +165,7 @@ Es una buena práctica hacer commits frecuentes a medida que avanzas — no espe
 
 ## Ajusta la complejidad de lo que pides
 
-El servidor MCP tiene capacidad de evaluar la envergadura de una tarea y decidir cómo afrontarla: si la tarea es suficientemente grande generará un plan antes de ejecutar; si es más acotada la abordará directamente.
+Un cambio pequeño sobre algo que ya existe va por `/flx-fast`, sin plan. Lo que crea tablas o entidades, toca permisos o carga datos va por `/flx-new-development` y `/flx-plan`, que lo parte en bloques.
 
 En cualquier caso, **es responsabilidad del usuario no pedir tareas demasiado complejas o con demasiados frentes abiertos a la vez**. Cuantas más variables tenga una petición, más probabilidades hay de que el resultado no sea el esperado o de que el agente pierda coherencia a mitad del proceso.
 
