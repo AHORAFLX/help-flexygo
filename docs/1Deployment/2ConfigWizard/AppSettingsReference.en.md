@@ -2,6 +2,8 @@
 
 The **Backend**'s `appsettings.json` file contains all of the application's configuration. The Configuration Wizard automatically manages the main keys; the rest rarely require manual intervention.
 
+In IIS and in a production container, the passwords and keys in this file are stored encrypted: see [Encrypted appsettings](EncryptedSettings.md).
+
 ---
 
 ## Backend — full appsettings.json

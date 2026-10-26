@@ -2,6 +2,8 @@
 
 El archivo `appsettings.json` del **Backend** contiene toda la configuración de la aplicación. El Asistente de Configuración gestiona automáticamente las claves principales; el resto raramente requiere intervención manual.
 
+En IIS y en un contenedor de producción, las contraseñas y claves de este fichero se guardan cifradas: ver [Cifrado de los appsettings](EncryptedSettings.md).
+
 ---
 
 ## Backend — appsettings.json completo

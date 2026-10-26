@@ -244,3 +244,42 @@ docker logs flexygo-backend
       - AutoUpdateEnable=false
     ```
     Añade esta variable al servicio `flx-frontend` y `flx-backend` en tu `docker-compose.yml`.
+
+### Llave de cifrado como secreto de Docker
+
+Un contenedor en producción (`ASPNETCORE_ENVIRONMENT` en `Production` o sin poner) guarda cifradas las contraseñas y claves de sus `appsettings`. Si no se le da una llave, la genera y la deja en el volumen de la `conf`, junto a lo que cifra. En producción, dásela como **secreto de Docker** `flexygo_config_key`:
+
+```yaml
+services:
+  flx-frontend:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    secrets:
+      - flexygo_config_key
+
+  flx-backend:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    secrets:
+      - flexygo_config_key
+
+secrets:
+  flexygo_config_key:
+    file: ./flexygo_config_key.txt
+```
+
+Crea el fichero **antes del primer `docker compose up`**, junto al `docker-compose.yml`, con una llave nueva en base64:
+
+```bash
+openssl rand -base64 32 > flexygo_config_key.txt
+```
+
+!!! warning "Si falta el fichero, la aplicación no arranca"
+    `docker compose up` no falla si `flexygo_config_key.txt` no existe: Docker crea en su lugar una **carpeta vacía** con ese nombre y la monta como secreto. La aplicación lo ve y **no arranca**, y en el log del contenedor (`docker compose logs`) dice qué ha encontrado y cómo arreglarlo; nunca cifra con una llave propia. Para arreglarlo: `docker compose down`, borra esa carpeta, crea el fichero y vuelve a levantar. Pasa lo mismo si el fichero está vacío.
+
+- **Todos los contenedores reciben el mismo secreto**: el frontend y el backend, y cada réplica si hay varias. Una réplica con otra llave no puede leer lo que cifraron las demás.
+- **Dásela desde el primer arranque.** Si un contenedor arranca sin ella, cifra con una llave propia en el volumen, y al darle después el secreto ya no puede leer lo que cifró.
+- **Guarda una copia del fichero** fuera del servidor y no lo subas a git: sin él los valores cifrados no se recuperan.
+- Los ejemplos de esta página son para probar (`Development`) y, como el Docker que monta el instalador, no cifran ni necesitan el secreto.
+
+Todo lo demás sobre el cifrado, en [Cifrado de los appsettings](../2ConfigWizard/EncryptedSettings.md).

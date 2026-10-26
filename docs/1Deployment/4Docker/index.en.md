@@ -244,3 +244,42 @@ docker logs flexygo-backend
       - AutoUpdateEnable=false
     ```
     Add this variable to the `flx-frontend` and `flx-backend` services in your `docker-compose.yml`.
+
+### Encryption key as a Docker secret
+
+A production container (`ASPNETCORE_ENVIRONMENT` set to `Production` or not set) keeps the passwords and keys of its `appsettings` encrypted. If it is not given a key, it generates one and leaves it in the `conf` volume, next to what it encrypts. In production, give it as the **Docker secret** `flexygo_config_key`:
+
+```yaml
+services:
+  flx-frontend:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    secrets:
+      - flexygo_config_key
+
+  flx-backend:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    secrets:
+      - flexygo_config_key
+
+secrets:
+  flexygo_config_key:
+    file: ./flexygo_config_key.txt
+```
+
+Create the file **before the first `docker compose up`**, next to `docker-compose.yml`, with a new base64 key:
+
+```bash
+openssl rand -base64 32 > flexygo_config_key.txt
+```
+
+!!! warning "If the file is missing, the application does not start"
+    `docker compose up` does not fail when `flexygo_config_key.txt` does not exist: Docker creates an **empty folder** with that name instead and mounts it as the secret. The application notices and **does not start**, and the container's log (`docker compose logs`) says what it found and how to fix it; it never encrypts with a key of its own. To fix it: `docker compose down`, delete that folder, create the file and start again. The same happens when the file is empty.
+
+- **Every container gets the same secret**: the frontend and the backend, and each replica if there are several. A replica with another key cannot read what the others encrypted.
+- **Give it from the first start.** If a container starts without it, it encrypts with a key of its own in the volume, and once it gets the secret later it can no longer read what it encrypted.
+- **Keep a copy of the file** off the server and do not commit it to git: without it the encrypted values cannot be recovered.
+- The examples on this page are for testing (`Development`) and, like the Docker the installer sets up, they do not encrypt and do not need the secret.
+
+Everything else about encryption, in [Encrypted appsettings](../2ConfigWizard/EncryptedSettings.md).
