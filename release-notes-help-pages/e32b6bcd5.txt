@@ -1,1 +1,1 @@
-docs/Help/Style/SkinNavigation
+docs/Help/Administration/Skin2026

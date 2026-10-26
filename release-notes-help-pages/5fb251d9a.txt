@@ -1,1 +1,1 @@
-docs/Help/Administration/FlexygoDeployment
+docs/1Deployment/Architecture
