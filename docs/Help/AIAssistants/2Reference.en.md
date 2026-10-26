@@ -5,7 +5,7 @@ Since version 10, **every Flexygo application is also an MCP server**: an AI ass
 Want to try it in fifteen minutes? [Try it: an AI assistant working with your application](1TryIt.md).
 
 !!! note "This is not the builder's MCP server"
-    The [MCP](../../2ProductDevelopment/MCP/2Usage.md) section of this documentation describes the server that **builds** applications from Claude Code. This page describes the opposite: the already built application, exposed to its **users'** assistants.
+    The [MCP](../../2ProductDevelopment/MCP/2Usage.md) section of this documentation describes the server that **builds** applications from VS Code. This page describes the opposite: the already built application, exposed to its **users'** assistants.
 
 ```mermaid
 flowchart LR
@@ -67,7 +67,7 @@ All of this is product configuration: it is written with the **project origin** 
 
 ### A prompt for an AI to fill it in
 
-Filling in these fields by hand in an application with dozens of objects takes time. An assistant with **read** access to the configuration database (for example, the [builder's MCP](../../2ProductDevelopment/MCP/2Usage.md) in Claude Code, or a SQL query) can propose them. This prompt tells it what to look at, where it is and how to work out what the application is for; what it returns is a script for you to review, not changes already made.
+Filling in these fields by hand in an application with dozens of objects takes time. An assistant with **read** access to the configuration database (for example, the [builder's MCP](../../2ProductDevelopment/MCP/2Usage.md) in VS Code, or a SQL query) can propose them. This prompt tells it what to look at, where it is and how to work out what the application is for; what it returns is a script for you to review, not changes already made.
 
 ```text
 You are an analyst preparing a Flexygo application to be used by AI assistants through MCP.
@@ -160,7 +160,7 @@ https://<tu-aplicacion>/mcp
 | **Claude Desktop** | *Settings → Connectors*, same as on the web. |
 | **Claude Code** | `claude mcp add --transport http <nombre> https://<tu-aplicacion>/mcp` |
 | **ChatGPT** | *Settings → Connectors*. The server also serves the two tools ChatGPT requires of a connector (`search` and `fetch`, in the shape OpenAI asks for) to accept it outside **developer mode** and in deep research; they are aliases of the search and the record, and the other assistants keep using the `flexygo_*` ones. |
-| Any other MCP client | *Streamable HTTP* transport with OAuth 2.1; the client registers itself (dynamic registration) and discovers the rest. |
+| Any other MCP client | *Streamable HTTP* transport with OAuth 2.1; the client introduces itself with its card (CIMD) or registers itself (dynamic registration) and discovers the rest. See [How assistants register](4ClientRegistration.md). |
 
 When connecting, the assistant opens the browser on the application. The person **logs in with their usual user** (with whatever SSO and two-step verification they have configured) and sees the consent page:
 
@@ -234,7 +234,7 @@ All in *Settings*, *WebAPI* group:
 - **Log**: every tool call and every resource read is recorded in `WebAPI_Logs` with `PetitionType = MCP`: user, tool (`FunctionName`), object, arguments (`Body`), status (200; 403 refusal by role or scope; 404 record that does not exist; 400 argument, filter or query timed out; 429 call limit; 500 failure) and duration. It is purged with `ClearWebApiLogDays`, like the rest of the log.
 The administration screens are in the **Environment** area of the [control panel](../Administration/ControlPanel.md) (in flexy2022, *Admin Work Area › Environment*): **MCP assistants**, **MCP sessions**, **MCP prompts** and **MCP usage**.
 
-**MCP assistants**: the assistants that have registered in the application (they register themselves the first time they connect; `MCP_Clients` table), with their redirect domains, registration date, live sessions and the **Approved** switch. Removing *Approved* **blocks the assistant instantly**: its sessions stop working on the next call and nobody can connect it again until it is approved again. Deleting an assistant takes its sessions with it. With `MCP_RequireApprovedClients` on (§5), each new assistant appears here unapproved and is approved manually before anyone uses it.
+**MCP assistants**: the assistants that have registered in the application (they register themselves the first time they connect; `MCP_Clients` table; those using CIMD take a single row per product, see [How assistants register](4ClientRegistration.md)), with their redirect domains, registration date, live sessions and the **Approved** switch. Removing *Approved* **blocks the assistant instantly**: its sessions stop working on the next call and nobody can connect it again until it is approved again. Deleting an assistant takes its sessions with it. With `MCP_RequireApprovedClients` on (§5), each new assistant appears here unapproved and is approved manually before anyone uses it.
 
 <figure markdown="span">
   ![MCP assistants: name, redirect domains, registration, live sessions and Approved](../../docs_assets/images/AIAssistants/clientes.png)

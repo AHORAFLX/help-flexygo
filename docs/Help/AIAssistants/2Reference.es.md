@@ -5,7 +5,7 @@ Desde la versión 10, **cada aplicación Flexygo es también un servidor MCP**: 
 ¿Quieres probarlo en quince minutos? [Pruébalo: un asistente de IA trabajando con tu aplicación](1TryIt.md).
 
 !!! note "No es el servidor MCP del constructor"
-    La sección [MCP](../../2ProductDevelopment/MCP/2Usage.md) de esta documentación describe el servidor que **construye** aplicaciones desde Claude Code. Esta página describe lo contrario: la aplicación ya construida, expuesta a los asistentes de sus **usuarios**.
+    La sección [MCP](../../2ProductDevelopment/MCP/2Usage.md) de esta documentación describe el servidor que **construye** aplicaciones desde VS Code. Esta página describe lo contrario: la aplicación ya construida, expuesta a los asistentes de sus **usuarios**.
 
 ```mermaid
 flowchart LR
@@ -67,7 +67,7 @@ Todo esto es configuración del producto: se escribe con el **origen del proyect
 
 ### Un prompt para que una IA lo rellene
 
-Rellenar estos campos a mano en una aplicación con decenas de objetos lleva tiempo. Un asistente con acceso **de lectura** a la base de configuración (por ejemplo, el [MCP del constructor](../../2ProductDevelopment/MCP/2Usage.md) en Claude Code, o una consulta SQL) puede proponerlos. Este prompt le dice qué mirar, dónde está y cómo deducir para qué sirve la aplicación; lo que devuelve es un guion para revisarlo, no cambios hechos.
+Rellenar estos campos a mano en una aplicación con decenas de objetos lleva tiempo. Un asistente con acceso **de lectura** a la base de configuración (por ejemplo, el [MCP del constructor](../../2ProductDevelopment/MCP/2Usage.md) en VS Code, o una consulta SQL) puede proponerlos. Este prompt le dice qué mirar, dónde está y cómo deducir para qué sirve la aplicación; lo que devuelve es un guion para revisarlo, no cambios hechos.
 
 ```text
 Eres un analista que prepara una aplicación Flexygo para que la usen asistentes de IA por MCP.
@@ -160,7 +160,7 @@ https://<tu-aplicacion>/mcp
 | **Claude Desktop** | *Ajustes → Conectores*, igual que en la web. |
 | **Claude Code** | `claude mcp add --transport http <nombre> https://<tu-aplicacion>/mcp` |
 | **ChatGPT** | *Ajustes → Conectores*. El servidor sirve además las dos herramientas que ChatGPT exige a un conector (`search` y `fetch`, con la forma que pide OpenAI) para admitirlo fuera del **modo desarrollador** y en la investigación en profundidad; son alias del buscador y de la ficha, y los demás asistentes siguen usando las `flexygo_*`. |
-| Cualquier otro cliente MCP | Transporte *streamable HTTP* con OAuth 2.1; el cliente se registra solo (registro dinámico) y descubre el resto. |
+| Cualquier otro cliente MCP | Transporte *streamable HTTP* con OAuth 2.1; el cliente se presenta con su ficha (CIMD) o se registra solo (registro dinámico) y descubre el resto. Ver [Cómo se registran los asistentes](4ClientRegistration.md). |
 
 Al conectar, el asistente abre el navegador en la aplicación. La persona **entra con su usuario de siempre** (con el SSO y la verificación en dos pasos que tenga configurados) y ve la página de consentimiento:
 
@@ -234,7 +234,7 @@ Todos en *Ajustes*, grupo *WebAPI*:
 - **Log**: cada llamada a una herramienta y cada lectura de un recurso queda en `WebAPI_Logs` con `PetitionType = MCP`: usuario, herramienta (`FunctionName`), objeto, argumentos (`Body`), estado (200; 403 negativa por rol o por scope; 404 registro que no existe; 400 argumento, filtro o consulta agotada; 429 tope de llamadas; 500 fallo) y duración. Se purga con `ClearWebApiLogDays`, como el resto del log.
 Las pantallas de administración están en el área **Environment** del [panel de control](../Administration/ControlPanel.md) (en flexy2022, *Admin Work Area › Environment*): **MCP assistants**, **MCP sessions**, **MCP prompts** y **MCP usage**.
 
-**MCP assistants**: los asistentes que se han registrado en la aplicación (se registran solos al conectar por primera vez; tabla `MCP_Clients`), con sus dominios de redirección, la fecha de alta, las sesiones vivas y el interruptor **Approved**. Quitar *Approved* **bloquea al asistente al instante**: sus sesiones dejan de funcionar en la siguiente llamada y nadie puede volver a conectarlo hasta que se apruebe de nuevo. Borrar un asistente se lleva sus sesiones. Con `MCP_RequireApprovedClients` encendido (§5), cada asistente nuevo aparece aquí sin aprobar y se aprueba a mano antes de que nadie lo use.
+**MCP assistants**: los asistentes que se han registrado en la aplicación (se registran solos al conectar por primera vez; tabla `MCP_Clients`; los que usan CIMD ocupan una sola fila por producto, ver [Cómo se registran los asistentes](4ClientRegistration.md)), con sus dominios de redirección, la fecha de alta, las sesiones vivas y el interruptor **Approved**. Quitar *Approved* **bloquea al asistente al instante**: sus sesiones dejan de funcionar en la siguiente llamada y nadie puede volver a conectarlo hasta que se apruebe de nuevo. Borrar un asistente se lleva sus sesiones. Con `MCP_RequireApprovedClients` encendido (§5), cada asistente nuevo aparece aquí sin aprobar y se aprueba a mano antes de que nadie lo use.
 
 <figure markdown="span">
   ![MCP assistants: nombre, dominios de redirección, alta, sesiones vivas y Approved](../../docs_assets/images/AIAssistants/clientes.png)

@@ -298,12 +298,23 @@ Cuando una tarea con `CallbackUrl` se **decide, se cancela o expira**, se encola
 
 Una tarea expirada llega con `"status": "expired"` y `"outcome": null`; una cancelada, con `"status": "cancelled"`.
 
+### Solo a direcciones públicas
+
+La `CallbackUrl` la pone quien abre la tarea por la API, no un administrador, así que Flexygo solo la llama si su servidor está en una **dirección pública**. No la llama si el nombre resuelve a una dirección interna: loopback (`127.0.0.1`, `::1`), redes privadas (`10.x`, `172.16-31.x`, `192.168.x`), enlace local (`169.254.x`, incluida la de metadatos de la nube `169.254.169.254`, y `fe80::`), CGNAT (`100.64.x`), multicast, difusión y las IPv6 únicas locales (`fc00::/7`) o que llevan dentro una IPv4 privada. Se comprueban todas las direcciones del nombre al conectar, la conexión va a la dirección comprobada y una redirección a una dirección interna también se rechaza.
+
+Si el orquestador está en la red interna (un n8n de la intranet, por ejemplo), su host se añade al ajuste **`DecisionCallbackAllowedHosts`** (grupo de seguridad): una lista separada por comas de nombres de host, o de `host:puerto` para permitir solo ese puerto. Por ejemplo, `n8n.intranet, 10.0.0.5:5678`. Vacío por defecto.
+
+El certificado del servidor se valida: uno autofirmado o no válido solo se acepta de un host que esté en `DecisionCallbackAllowedHosts`. Los callbacks no pasan por proxy: un servidor que solo sale a Internet por un proxy no puede enviarlos.
+
+Una llamada rechazada no pierde la decisión: la tarea queda resuelta y la entrega falla con el error *Internal address not allowed: …* en la pestaña **Envíos**, que nombra el host y el ajuste. Se reintenta como cualquier otra entrega, así que al añadir el host al ajuste el siguiente intento sale; también se puede lanzar ya con **Retry**. Si la dirección va escrita en la URL (`http://127.0.0.1:5678/...`, `http://localhost/...`), `sysTaskCreate` lo dice al crear la tarea. De la respuesta del callback se guardan solo los 500 primeros caracteres.
+
 ---
 
 ## 6. Ejemplo: n8n orquesta, Flexygo decide
 
 1. Una suscripción en `sysRole` (*After insert*) apunta al nodo **Webhook** de n8n.
 2. n8n pide un token (`POST /token`), llama a `sysTaskCreate` con el `objectWhere` del payload, `CallbackUrl = {{ $execution.resumeUrl }}`, `CorrelationId = {{ $execution.id }}` y, si quiere comprobar quién le llama, un `CallbackSecret`, y espera en un nodo **Wait** (*resume on webhook*).
+   Si n8n está en la red interna, su host va en `DecisionCallbackAllowedHosts` (§5).
 3. Una persona decide en la bandeja de Flexygo.
 4. El callback llega a la URL de reanudación; n8n sigue por la rama `approve` o `reject` leyendo `body.data.outcome`.
 
