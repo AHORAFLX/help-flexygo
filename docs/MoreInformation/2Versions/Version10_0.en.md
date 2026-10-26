@@ -1,17 +1,18 @@
 # Version 10.0
 
-Flexygo runs on .NET 9, lets you deploy the interface, backend and database separately, and introduces a skin with adaptable navigation and light, dark or automatic themes.
+The 2026 skin redesigns Flexygo with an adaptable sidebar and shortcuts to alerts and profile, and lets you deploy the interface, backend, and database separately on .NET 9.
 
 ## New features
 
 ### Skins
 
-- **Introducing the 2026 skin, with adaptable side navigation and light, dark or system-based themes.** The sidebar can be collapsed and groups the menus; you also have access to alerts and your profile, as well as the Ctrl+K shortcut. You can choose the theme from the user menu, and Flexygo remembers your selection; the system theme follows your device's appearance preference.
+- **Introduces the 2026 skin, a complete redesign of Flexygo with an adaptable sidebar and shortcuts to alerts and profile.** Refreshes all screens, menus, lists, forms, panels, and dialogs, with new typography, colors, spacing, and controls. You can collapse the sidebar and use Ctrl+K; the previous skin is still available.
 
-    ![Introducing the 2026 skin, with adaptable side navigation and light, dark or system-based themes.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
-- **The 2026 skin's configuration is retained when publishing database scripts.** The publication includes this skin's appearance, menus, panels and pages, rather than removing them from the database. It also lets an installation from an empty database include its elements and start with the complete appearance.
-- **Customize account page resources from your product.** You can customize styles, scripts and icons at different levels. This lets you adapt the login, registration and password recovery pages for each product.
-- **You can use custom CSS variables in your styles.** This expands the options for adapting the application's appearance. In addition, loading styles does not fail if a LESS variable is missing from the CSS variables.
+    ![Introduces the 2026 skin, a complete redesign of Flexygo with an adaptable sidebar and shortcuts to alerts and profile.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
+- **The 2026 skin configuration is preserved when publishing database scripts.** Publishing includes the skin’s appearance, menus, panels, and pages. This lets new installations start with these elements configured.
+- **Customize account page resources from your product.** You can adapt styles, scripts, and icons at different customization levels. This lets you tailor the login, registration, and password recovery pages to each product.
+- **You can switch between light, dark, and system themes.** The interface and some built-in elements adapt their appearance to the selected theme. If you choose the system theme, Flexygo follows your device’s appearance preference.
+- **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. This gives you more options for adapting the application’s appearance.
 
 ### Artificial Intelligence
 
@@ -368,14 +369,15 @@ Flexygo runs on .NET 9, lets you deploy the interface, backend and database sepa
 
 ### Skins
 
-- **You can display a different logo for each interface mode.** The application looks for the logo variant corresponding to the active mode. This lets you adapt its appearance to each mode.
-- **The 2026 skin improves the readability of controls, messages and secondary text.** Changes affect, among other elements, the Apply button in dialogs, dangerous options in menus, and buttons for running processes. They also make validation errors, scheduler warnings, wizard steps and faded links easier to distinguish in light and dark modes.
-- **The 2026 skin uses the Geist typeface instead of IBM Plex.** This change adjusts the appearance of text and reduces the size of the font files used by this skin.
-- **In the 2026 skin, processes with visible text remain in the toolbar.** Processes without text remain grouped in the three-dot menu to keep the toolbar tidy.
-- **In the 2026 skin, filters and the actions menu take up less space above the content.** The controls are placed next to the module title. If there are no filters to show, the empty row disappears.
-- **You can open the module organizer from the 2026 skin header.** Use the button next to notifications or the Ctrl+Shift+M shortcut. Access respects design permissions.
-- **The default Flexygo logo displays a gray background instead of a white one.** This change affects the logo image included by default.
+- **The 2026 skin improves the contrast and readability of controls, menus, cards, and notifications.** The adjustments apply to dialogs, danger options, secondary text, and wizard steps. They also make notifications and scheduler controls easier to read in light and dark modes.
+- **The 2026 skin uses the Geist font instead of IBM Plex.** This change updates the appearance of text and reduces the size of the font files used by this skin.
+- **In the 2026 skin, processes with text remain in the toolbar, and the button to run them is easier to distinguish.** Processes without text remain grouped in the three-dot menu to keep the toolbar tidy. The contrast of the run button text is also improved.
+- **In the 2026 skin, filters and the actions menu take up less space above the content.** The controls appear next to the module title. If there are no filters to show, no empty row is added.
+- **Fields that fail validation are easier to distinguish in the 2026 skin.** The error message appears next to the field label. This prevents it from being cut off or overlapping the next row.
+- **From the 2026 skin header, you can open the module organizer using a button or keyboard shortcut.** The shortcut is Ctrl+Shift+M, and the button appears next to notifications. Access respects design permissions.
 - **You can access skin variables without case sensitivity.** Variable lookup works even if you use different capitalization.
+- **You can display a different logo depending on the interface mode.** Flexygo looks for the logo variant that corresponds to the active mode. This lets you adapt its appearance to each mode.
+- **The default Flexygo logo now has a gray background instead of a white one.** The change affects the logo image included by default.
 
 ### Updater
 
@@ -522,7 +524,9 @@ Flexygo runs on .NET 9, lets you deploy the interface, backend and database sepa
 
 ### Skins
 
-- **The path is fixed so the main logo is displayed.** This change lets the main logo display correctly.
+- **Links in lists respect the muted color defined in their template.** The adjustment applies to the 2026 skin and improves the readability of text such as “No address.” It is visible in both light and dark mode.
+- **Styles no longer fail to load when a variable is missing.** This adjustment prevents errors when applying styles if a variable used in them is undefined.
+- **The path is corrected so the main logo is displayed.** With this adjustment, the main logo is displayed correctly in the application.
 
 ### Updater
 

@@ -1,17 +1,18 @@
 # Versión 10.0
 
-Flexygo funciona sobre .NET 9, permite desplegar por separado la interfaz, el backend y la base de datos, y estrena una skin con navegación adaptable y temas claro, oscuro o automático.
+La skin 2026 rediseña Flexygo con barra lateral adaptable y accesos a alertas y perfil, y permite desplegar por separado interfaz, backend y base de datos sobre .NET 9.
 
 ## Novedades
 
 ### Skins
 
-- **Estrena la skin 2026, con navegación lateral adaptable y temas claro, oscuro o según el sistema.** La barra lateral se puede contraer y agrupa los menús; también tienes accesos a alertas y al perfil, además del atajo Ctrl+K. Puedes elegir el tema desde el menú de usuario y Flexygo recuerda tu selección; el tema del sistema sigue la preferencia de apariencia de tu dispositivo.
+- **Estrena la skin 2026, un rediseño completo de Flexygo con una barra lateral adaptable y accesos a alertas y perfil.** Renueva todas las pantallas, los menús, las listas, los formularios, los paneles y los diálogos, con nueva tipografía, colores, espaciado y controles. Puedes contraer la barra lateral y usar Ctrl+K; la skin anterior sigue disponible.
 
-    ![Estrena la skin 2026, con navegación lateral adaptable y temas claro, oscuro o según el sistema.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
-- **La configuración de la skin 2026 se conserva al publicar los scripts de la base de datos.** La publicación incluye la apariencia, los menús, los paneles y las páginas de esta skin, en lugar de eliminarlos de la base de datos. También permite que una instalación desde una base de datos vacía incluya sus elementos y arranque con la apariencia completa.
-- **Personaliza los recursos de las páginas de cuenta desde tu producto.** Puedes adaptar estilos, scripts e iconos en distintos niveles de personalización. Esto te permite ajustar las páginas de acceso, registro y recuperación de contraseña a cada producto.
-- **Puedes utilizar variables CSS personalizadas en tus estilos.** Esto amplía las opciones para adaptar la apariencia de la aplicación. Además, la carga de estilos no falla si falta una variable LESS en las variables CSS.
+    ![Estrena la skin 2026, un rediseño completo de Flexygo con una barra lateral adaptable y accesos a alertas y perfil.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
+- **La configuración de la skin 2026 se conserva al publicar los scripts de la base de datos.** La publicación incluye la apariencia, los menús, los paneles y las páginas de la skin. Así, las instalaciones nuevas pueden arrancar con esos elementos configurados.
+- **Personaliza los recursos de las páginas de cuenta desde tu producto.** Puedes adaptar los estilos, scripts e iconos en distintos niveles de personalización. Esto permite ajustar las páginas de acceso, registro y recuperación de contraseña a cada producto.
+- **Puedes cambiar entre los temas claro, oscuro y del sistema.** La interfaz y algunos elementos integrados adaptan su apariencia al tema seleccionado. Si eliges el tema del sistema, Flexygo sigue la preferencia de apariencia de tu dispositivo.
+- **Puedes utilizar variables CSS personalizadas en tus estilos.** Flexygo admite variables CSS propias al aplicar estilos. Esto amplía las opciones para adaptar la apariencia de la aplicación.
 
 ### Actualizador
 
@@ -384,14 +385,15 @@ Flexygo funciona sobre .NET 9, permite desplegar por separado la interfaz, el ba
 
 ### Skins
 
-- **Puedes mostrar un logotipo distinto según el modo de interfaz.** La aplicación busca la variante del logotipo correspondiente al modo activo. Así puedes adaptar su apariencia a cada modo.
-- **La skin 2026 mejora la legibilidad de controles, mensajes y textos secundarios.** Los cambios afectan, entre otros elementos, al botón Aplicar de los diálogos, las opciones de peligro de los menús y los botones para ejecutar procesos. También ayudan a distinguir los errores de validación, los avisos del planificador, los pasos de los asistentes y los enlaces atenuados, en los modos claro y oscuro.
-- **La skin 2026 utiliza la tipografía Geist en lugar de IBM Plex.** El cambio ajusta la apariencia del texto y reduce el tamaño de los archivos tipográficos utilizados por esta skin.
-- **En la skin 2026, los procesos con texto visible permanecen en la barra de herramientas.** Los procesos sin texto siguen agrupados en el menú de tres puntos para mantener la barra ordenada.
-- **En la skin 2026, los filtros y el menú de acciones ocupan menos espacio sobre el contenido.** Los controles se sitúan junto al título del módulo. Si no hay filtros que mostrar, desaparece la fila vacía.
-- **Puedes abrir el organizador de módulos desde la cabecera de la skin 2026.** Usa el botón junto a las notificaciones o el atajo Ctrl+Mayús+M. El acceso respeta los permisos de diseño.
-- **El logotipo predeterminado de Flexygo muestra un fondo gris en lugar de blanco.** El cambio afecta a la imagen del logotipo incluida de forma predeterminada.
+- **La skin 2026 mejora el contraste y la legibilidad de controles, menús, tarjetas y avisos.** Los ajustes se aplican a los diálogos, las opciones de peligro, los textos secundarios y los pasos de los asistentes. También facilitan la lectura de los avisos y controles del planificador en los modos claro y oscuro.
+- **La skin 2026 utiliza la tipografía Geist en lugar de IBM Plex.** El cambio actualiza la apariencia del texto y reduce el tamaño de los archivos tipográficos utilizados por esta skin.
+- **En la skin 2026, los procesos con texto permanecen en la barra de herramientas y se distingue mejor el botón para ejecutarlos.** Los procesos sin texto siguen agrupados en el menú de tres puntos para mantener la barra ordenada. Además, mejora el contraste del texto del botón de ejecución.
+- **En la skin 2026, los filtros y el menú de acciones ocupan menos espacio sobre el contenido.** Los controles aparecen junto al título del módulo. Si no hay filtros que mostrar, no se añade una fila vacía.
+- **Los campos que no superan la validación se distinguen mejor en la skin 2026.** El mensaje de error aparece junto a la etiqueta del campo. Así se evita que quede cortado o invada la fila siguiente.
+- **Desde la cabecera de la skin 2026 puedes abrir el organizador de módulos con un botón o un atajo de teclado.** El atajo es Ctrl+Mayús+M y el botón aparece junto a las notificaciones. El acceso respeta los permisos de diseño.
 - **Puedes acceder a las variables de las skins sin distinguir mayúsculas y minúsculas.** La búsqueda de variables funciona aunque las escribas con un uso distinto de mayúsculas.
+- **Puedes mostrar un logotipo distinto según el modo de interfaz.** Flexygo busca la variante del logotipo correspondiente al modo activo. Así puedes adaptar su apariencia a cada modo.
+- **El logotipo predeterminado de Flexygo muestra un fondo gris en lugar de blanco.** El cambio afecta a la imagen del logotipo que se incluye de forma predeterminada.
 
 ### Tareas programadas
 
@@ -534,7 +536,9 @@ Flexygo funciona sobre .NET 9, permite desplegar por separado la interfaz, el ba
 
 ### Skins
 
-- **Se corrige la ruta para que se muestre el logotipo principal.** El cambio permite mostrar correctamente el logotipo principal.
+- **Los enlaces de las listas respetan el color atenuado definido en su plantilla.** El ajuste se aplica en la skin 2026 y mejora la lectura de textos como «Sin dirección». Se aprecia tanto en el modo claro como en el oscuro.
+- **La carga de estilos ya no falla cuando falta una variable.** Este ajuste evita errores al aplicar estilos si no está definida alguna variable utilizada en ellos.
+- **Se corrige la ruta para que se muestre el logotipo principal.** Con este ajuste, el logotipo principal se muestra correctamente en la aplicación.
 
 ### Tareas programadas
 
