@@ -1,5 +1,13 @@
 # Configuration
 
+!!! info "New in version 10.0"
+
+    Initial setup is now handled by a wizard on the Login screen. Press **Empezar** to begin. The wizard checks the values and shows progress as it publishes and creates the databases. You can use a dacpac file or a NuGet feed as the schema source.
+
+    If you leave or an error occurs, you can return to the first pending step and retry without losing your progress. Credential errors identify the fields to check. If mail is already configured, the wizard skips that step. When setup is complete, press **Ir al inicio de sesión**.
+
+    ![New in version 10.0](../../docs_assets/images/Configuration/setup-wizard.png)
+
 The Configuration Wizard guides the initial process after installation: it configures the databases, sets the administrator password, and adjusts the mail settings. All of this automatically updates `appsettings.json`, with no need to edit any file manually.
 
 !!! info "From web.config to appsettings.json"

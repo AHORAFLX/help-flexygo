@@ -1,6 +1,6 @@
 # Version 10.0
 
-The Flexygo 2026 skin renews the application, lets you deploy its parts separately, connect AI assistants to query data, manage updates, and export the application as a product project.
+Refreshes the skin with a responsive sidebar, integrates AI assistants and adds guided assistants for installation and updates, as well as new deployment and icon management options.
 
 ## New features
 
@@ -76,6 +76,16 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 - **Integrate Flexygo with other systems using webhooks.** Developers can use this feature to connect their applications to other systems.
 - **Change package optimization from the development menu.** This option lets you switch this setting without leaving the menu.
 
+### Installation
+
+- **Configure Flexygo with a guided wizard from the login screen, with process tracking and the option to resume it.** The wizard replaces the old installation screen and lets you configure the backend, databases, project, administrator password and, when applicable, email. It checks the values and generates the required steps for each active pending connection; it also supports different schema sources, such as a dacpac file or a NuGet feed. It shows the progress of publishing and database creation, and asks for the project name if it is missing from an existing database. If you leave or an error occurs, you can return to the first pending step and retry without losing the context; credential errors identify the affected fields. If email is already configured, the wizard skips that step, and when it finishes, it reloads the login screen.
+
+    ![Configure Flexygo with a guided wizard from the login screen, with process tracking and the option to resume it.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
+- **You can configure an unattended installation that completes automatically when the backend starts.** You can create, update or reuse databases and define the project name and administrator password. If a step fails, the installation reports it as a failed startup.
+- **Install a database and check deployment progress from the configurator.** The configurator displays the connection when the database is already configured and reports the deployment stages. Database installation from this screen is also available in development environments.
+- **Flexygo initial configuration includes a revamped flow for setting up and registering the application.** The process brings together project, database and email configuration, and includes user registration. It also includes empty states and titles on the screen, along with the visual adjustments planned for this flow.
+- **You can install and update Flexygo from the initial configuration screens and the configurator.** The new process downloads and installs the application packages and deploys the new version. It can also update the database and accounts for operations that may be affected by locked files or resources.
+
 ### Artificial Intelligence
 
 - **New GPT models are added for artificial intelligence features.** The available models are updated for use in the artificial intelligence settings. You can select the available models for these features there.
@@ -125,15 +135,6 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 - **In skin 2026, customize the modules on each page and view a revamped home dashboard, with the license expiry date fixed.** Each user can reorder, pin, and collapse modules, or restore the administrator’s layout. The dashboard brings together cards with information about errors, tasks, users, the license, activity, and other application data. The license expiry date is displayed in the expected format.
 
-### Installation
-
-- **Configure and set up Flexygo using a guided wizard from the login screen.** The wizard brings together project, database, email, and publishing configuration, replacing the previous installer. You can resume installation from the first pending step; completed steps remain closed, and errors are shown in the relevant step so you can retry it. You can also choose the schema source, such as a dacpac file or a NuGet feed, and view the progress of publishing and database creation.
-- **Unattended installation can be completed automatically when the backend starts.** You can choose whether databases are created, updated, or reused, and set the project name and administrator password. If a step fails, the installation reports it through a failed startup.
-- **The wizard adds steps based on the active data connections that still need configuration.** This way, the flow adapts to the connections defined in each installation and only asks you to configure those that are pending.
-- **The configurator lets you set the connection and view database deployment progress.** The connection is shown once the database is configured. You can also view the deployment stages, including in development environments.
-- **You can install a database from the Flexygo configurator.** Installation starts directly from the configurator. The new flow also fixes starting this operation from that screen.
-- **You can install and update Flexygo from the initial configuration screens or from the configurator.** The update process includes the application and database changes, and downloads and deploys the required packages. It also accounts for operations affected by locked files or resources.
-
 ### Interface
 
 - **In the 2026 skin, edit values directly in lists and add rows from the list or form.** Each row is saved when you leave it and retains the record's actions menu. The experience adapts to phones and tablets and is available in light and dark modes; the flexy2022 skin is unchanged. Combos and lists adjust to the available space.
@@ -179,10 +180,10 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Processes
 
-- **Manage record approvals and configure decision rules and webhooks for each object.** Those responsible receive notifications and can review decisions in an inbox or on the record form. Rules can open decisions when saving, set deadlines, and escalate them; webhooks are sent when saving or deleting, with retries and a test option. You can also open and resolve decisions through the WebAPI. Each person can view their own decisions and those of their roles, while administrators can view them all; decisions must be assigned to a user or role.
-- **The scheduler, agenda views, and kanban display new cards and changes without switching screens.** When you create or save records, cards appear in their cell, day, or column and are highlighted so you can find them, even if they are outside the visible area. Filters and permissions are respected, and partial updates preserve position, selection, and scrolling; if the change does not match the view or filter, a full update is performed. In skin 2026, the planning calendar updates the period and visible objects without going blank during reloading.
-- **Administrators can start creating a guided tour from a tour record.** Creation opens the first step page and displays the configuration panel; if there are no steps, this is indicated. Invitations appear on the page where the tour starts, and users' responses are retained.
-- **The application context includes integrated processes and active modules.** This information is available to product developers through the application context. Colors are also adjusted, and errors are prevented when searching for paths to nonexistent processes.
+- **Configure rules to automate actions and manage decisions and webhooks from different parts of the application.** From the object configuration, you can create rules with actions such as sending emails, displaying alerts, logging information or starting processes, and test them with a real record. Decisions can be started when saving, have deadlines and be escalated; you can review them from the inbox, notifications, chat or record page, and resolve them through the WebAPI as well. Each person can view their own decisions and those of their roles, while administrators can view them all; decisions must be assigned to a person or a role, take effect after one minute and can be undone. Webhooks can be sent when records are saved or deleted, with retries and a test option; existing decision rules and webhooks are migrated to the new system during an update. In addition, the MCP dashboard displays amounts with their currency and its own palette, and adapts to the available width.
+- **The scheduler, agenda views and kanban boards display new records without switching screens.** Cards appear in the corresponding cell, day or column, with a notification in the module bar when applicable. Filters and permissions are applied before the records are displayed. New cards are temporarily highlighted and, if they are outside the visible area, an indicator lets you scroll to them. When saving, only the changes are updated and the rest of the view is preserved, including its position, selection and scroll; when applicable, the usual full refresh is applied. The calendar updates the visible period and objects without going blank, and this improvement is available in the 2026 skin.
+- **Administrators can start creating a guided tour from its record.** Creation opens the first step's page and displays the configuration panel; if there are no steps, this is indicated. Invitations appear on the page where the tour starts, and users' responses are retained.
+- **Integrated processes and active modules are available in the application context.** This information can be accessed from the context to work with processes and modules. Errors when searching for paths to processes that do not exist are also avoided, and the displayed colors are adjusted.
 
 ### Reports
 
@@ -358,8 +359,8 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 ### Processes
 
 - **ABH Sign can read documents through the application's proxy.** This lets you manage documents when the signature process and the application are on different servers.
-- **When reviewing errors, you can also view chained process exceptions.** The error trace shows information about exceptions that occur within chained processes.
-- **Process and report parameters are retained when saving their configuration.** This means values associated with processes and reports are retained when configuration changes are saved.
+- **When reviewing errors, you can also view chained exceptions from processes.** The error trace displays information about exceptions that occur within chained processes.
+- **Process and report parameters are retained when saving their configuration.** This keeps the values associated with processes and reports when saving changes.
 
 ### Scheduled Tasks
 
@@ -473,7 +474,7 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Installation
 
-- **Addon installation correctly recognizes beta versions.** The “-beta” suffix in the addon version is interpreted correctly.
+- **Addon installation correctly recognizes beta versions.** The interpretation of the «-beta» suffix in the addon version is corrected.
 
 ### Interface
 
@@ -510,11 +511,11 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Processes
 
-- **The post-login ERP process also runs for guest users.** This means guest sign-ins follow the same post-login flow as other users.
-- **Document downloads from integrated processes are fixed.** Download handling now correctly processes document decoding and references.
-- **ABH Sign correctly interprets signature credit information.** This prevents errors when processing credits received from the signature service.
-- **Template downloads and data imports from Excel are fixed.** The download icon once again provides the template needed to prepare the data. The process is also fixed so you can upload data from Excel without the previous issue.
-- **Jobs in an error state can be restarted to run again.** This means jobs that did not finish successfully can be started again.
+- **The ERP process that runs after login also runs for guest users.** This means guest logins follow the same flow as other users after logging in.
+- **Document downloads from integrated processes correctly handle decoding and references.** The fix applies to the handling of documents downloaded from an integrated process.
+- **ABH Sign correctly interprets information about signing credits.** This prevents errors when processing credits received from the signing service.
+- **The Excel import template downloads and the import process works correctly.** You can download the template from the process icon and upload data from Excel without the issues fixed in this version.
+- **Jobs in an error state can be restarted to run again.** This lets you restart jobs that did not finish successfully.
 - **Translation and serialization errors when using the application offline are fixed.** Data is now processed correctly in offline mode.
 - **The Redsys integration is fixed.** The integration processes its operations correctly again.
 - **Parameter creation processes can find libraries even when they are in different paths.** This fixes the issue that prevented the required library from being found when it was not in the expected path.

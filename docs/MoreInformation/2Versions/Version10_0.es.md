@@ -1,6 +1,6 @@
 # Versión 10.0
 
-La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por separado, conectar asistentes de IA para consultar datos, gestionar actualizaciones y exportar la aplicación como proyecto de producto.
+Renueva la skin con una barra lateral adaptable, integra asistentes de IA y añade asistentes guiados para instalación y actualizaciones, además de nuevas opciones de despliegue y gestión de iconos.
 
 ## Novedades
 
@@ -76,6 +76,16 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 - **Integra Flexygo con otros sistemas mediante webhooks.** Los desarrolladores pueden utilizar esta funcionalidad para conectar sus aplicaciones con otros sistemas.
 - **Cambia la optimización de los paquetes desde el menú de desarrollo.** La opción permite alternar este ajuste sin salir del menú.
 
+### Instalación
+
+- **Configura Flexygo con un asistente guiado desde la pantalla de inicio de sesión, con seguimiento del proceso y posibilidad de retomarlo.** El asistente sustituye a la antigua pantalla de instalación y permite configurar el backend, las bases de datos, el proyecto, la contraseña de administración y, cuando corresponde, el correo. Comprueba los valores y genera los pasos necesarios para cada conexión activa pendiente; también admite distintos orígenes para el esquema, como un archivo dacpac o un feed de NuGet. Muestra el avance de la publicación y la creación de bases de datos, y solicita el nombre del proyecto si falta en una base de datos existente. Si sales o se produce un error, puedes volver al primer paso pendiente y reintentarlo sin perder el contexto; los errores de credenciales señalan los campos afectados. Cuando el correo ya está configurado, omite ese paso, y al terminar vuelve a cargar la pantalla de inicio de sesión.
+
+    ![Configura Flexygo con un asistente guiado desde la pantalla de inicio de sesión, con seguimiento del proceso y posibilidad de retomarlo.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
+- **Puedes configurar una instalación desatendida que se completa automáticamente al iniciar el backend.** Puedes crear, actualizar o reutilizar las bases de datos y definir el nombre del proyecto y la contraseña de administración. Si falla algún paso, la instalación lo comunica mediante un inicio fallido.
+- **Instala una base de datos y consulta el progreso del despliegue desde el configurador.** El configurador muestra la conexión cuando la base de datos ya está configurada e informa de las etapas del despliegue. La instalación de la base de datos desde esta pantalla también está disponible en entornos de desarrollo.
+- **La configuración inicial de Flexygo incorpora un flujo renovado para preparar y registrar la aplicación.** El proceso reúne la configuración del proyecto, la base de datos y el correo, e incorpora el registro de usuarios. También contempla estados y títulos vacíos en la pantalla, junto con los ajustes visuales previstos para este flujo.
+- **Puedes instalar y actualizar Flexygo desde las pantallas de configuración inicial y el configurador.** El nuevo proceso descarga e instala los paquetes de la aplicación y despliega la nueva versión. También puede actualizar la base de datos y contempla operaciones que pueden verse afectadas por archivos o recursos bloqueados.
+
 ### Configuración
 
 - **Los administradores pueden consultar y editar la configuración de la instalación desde una pantalla específica, con comprobaciones antes de guardar.** La pantalla reúne opciones, niveles de registro, conexiones y credenciales; también agrupa las conexiones y muestra el estado de sus comprobaciones. Señala los campos que requieren atención y explica los valores no válidos; las contraseñas aparecen enmascaradas.
@@ -144,15 +154,6 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 - **Puedes iniciar y cerrar sesión y mantenerla activa para no volver a introducir tus credenciales.** El acceso también admite la dirección de correo. Se actualizan las traducciones y el tratamiento de cookies, y se corrigen problemas con claves que difieren en mayúsculas y minúsculas.
 - **Puedes iniciar sesión y gestionar el acceso a tu cuenta.** Se adaptan las plantillas de acceso, registro y recuperación de contraseña. La selección de idioma queda oculta temporalmente.
 
-### Instalación
-
-- **Configura y pon en marcha Flexygo con un asistente guiado desde la pantalla de inicio de sesión.** El asistente reúne la configuración del proyecto, las bases de datos, el correo y la publicación, y sustituye al instalador anterior. Puedes retomar la instalación desde el primer paso pendiente; los pasos completados quedan cerrados y los errores se muestran en el paso correspondiente para que puedas reintentarlo. También puedes elegir el origen del esquema, como un archivo dacpac o un feed de NuGet, y consultar el avance de la publicación y la creación de bases de datos.
-- **La instalación desatendida puede completarse automáticamente al iniciar el backend.** Puedes elegir si se crean, actualizan o reutilizan las bases de datos, además de establecer el nombre del proyecto y la contraseña de administración. Si un paso falla, la instalación lo comunica mediante un inicio fallido.
-- **El asistente añade pasos según las conexiones de datos activas que todavía necesitan configuración.** Así, el flujo se adapta a las conexiones definidas en cada instalación y solo solicita configurar las que están pendientes.
-- **El configurador permite establecer la conexión y consultar el progreso del despliegue de la base de datos.** La conexión se muestra cuando la base de datos ya está configurada. También puedes consultar las etapas del despliegue, incluso en entornos de desarrollo.
-- **Puedes instalar una base de datos desde el configurador de Flexygo.** La instalación se inicia directamente desde el configurador. El nuevo flujo también corrige el inicio de esta operación desde esa pantalla.
-- **Puedes instalar y actualizar Flexygo desde las pantallas de configuración inicial o desde el configurador.** El proceso de actualización incluye la aplicación y los cambios de base de datos, y descarga y despliega los paquetes necesarios. También contempla operaciones afectadas por archivos o recursos bloqueados.
-
 ### Inteligencia artificial
 
 - **Se incorporan nuevos modelos GPT para las funciones de inteligencia artificial.** Los modelos disponibles se actualizan para su uso en la configuración de inteligencia artificial. Desde allí se pueden seleccionar los modelos disponibles para estas funciones.
@@ -186,10 +187,10 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 
 ### Procesos
 
-- **Gestiona las aprobaciones de registros y configura reglas de decisión y webhooks para cada objeto.** Las personas responsables reciben avisos y pueden revisar las decisiones en una bandeja de entrada o en la ficha del registro. Las reglas permiten abrir decisiones al guardar, establecer plazos y escalarlas; los webhooks se envían al guardar o eliminar, con reintentos y opción de prueba. También puedes abrir y resolver decisiones mediante la WebAPI. Cada persona consulta sus decisiones y las de sus roles, mientras que los administradores pueden verlas todas; las decisiones deben asignarse a un usuario o rol.
-- **El planificador, las vistas de agenda y el kanban muestran las nuevas tarjetas y cambios sin cambiar de pantalla.** Al crear o guardar registros, las tarjetas aparecen en su celda, día o columna y se marcan para que puedas localizarlas, incluso si quedan fuera del área visible. Se respetan los filtros y permisos, y las actualizaciones parciales conservan la posición, la selección y el desplazamiento; si el cambio no corresponde a la vista o al filtro, se realiza la actualización completa. En la skin 2026, el calendario de planificación actualiza el periodo y los objetos visibles sin quedarse en blanco durante la recarga.
-- **Los administradores pueden iniciar la creación de un recorrido guiado desde un registro de recorrido.** La creación abre la página del primer paso y muestra el panel de configuración; si no hay pasos, se informa de ello. Las invitaciones aparecen en la página donde comienza el recorrido y se conservan las respuestas de los usuarios.
-- **El contexto de la aplicación incluye los procesos integrados y los módulos activos.** Esta información queda disponible para que los desarrolladores de producto trabajen con ella desde el contexto de la aplicación. También se ajustan los colores y se evitan errores al buscar rutas de procesos inexistentes.
+- **Configura reglas para automatizar acciones y gestiona decisiones y webhooks desde distintos puntos de la aplicación.** Desde la configuración del objeto puedes crear reglas con acciones como enviar correos, mostrar avisos, registrar información o iniciar procesos, y probarlas con un registro real. Las decisiones pueden iniciarse al guardar, tener plazos y escalarse; puedes revisarlas desde la bandeja de entrada, las notificaciones, el chat o la ficha del registro, y resolverlas también mediante la WebAPI. Cada persona consulta las decisiones propias y las de sus roles, mientras que los administradores pueden verlas todas; las decisiones deben asignarse a una persona o un rol, se aplican tras un minuto y pueden deshacerse. Los webhooks pueden enviarse al guardar o eliminar registros, con reintentos y opción de prueba; las reglas de decisión y los webhooks existentes se trasladan al nuevo sistema al actualizar. Además, el dashboard MCP muestra los importes con su moneda y una paleta propia, y se adapta al ancho disponible.
+- **El planificador, las vistas de agenda y los tableros kanban muestran los registros nuevos sin cambiar de pantalla.** Las tarjetas aparecen en la celda, el día o la columna correspondientes, con un aviso en la barra del módulo cuando procede. Se aplican los filtros y permisos antes de mostrar los registros. Las tarjetas nuevas quedan marcadas temporalmente y, si están fuera de la zona visible, un indicador permite desplazarse hasta ellas. Al guardar, se actualizan solo los cambios y se conserva el resto de la vista, incluida la posición, la selección y el desplazamiento; cuando corresponde, se aplica la actualización completa habitual. El calendario actualiza el periodo y los objetos visibles sin quedarse en blanco, y esta mejora está disponible en la skin 2026.
+- **Los administradores pueden iniciar la creación de un recorrido guiado desde su registro.** La creación abre la página del primer paso y muestra el panel de configuración; si no hay pasos, se informa de ello. Las invitaciones aparecen en la página donde comienza el recorrido y se conservan las respuestas de los usuarios.
+- **Los procesos integrados y los módulos activos están disponibles en el contexto de la aplicación.** Esta información puede consultarse desde el contexto para trabajar con procesos y módulos. También se evitan errores al buscar rutas de procesos que no existen y se ajustan los colores mostrados.
 
 ### Seguridad
 
@@ -365,8 +366,8 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 ### Procesos
 
 - **ABH Sign puede leer documentos a través del proxy de la aplicación.** Esto permite gestionar documentos cuando el proceso de firma y la aplicación están en servidores distintos.
-- **Al revisar errores, también puedes consultar las excepciones encadenadas de los procesos.** La traza del error muestra información sobre las excepciones que se producen dentro de procesos encadenados.
-- **Los parámetros de procesos e informes se conservan al guardar su configuración.** Así, los valores asociados a procesos e informes se mantienen al guardar los cambios de configuración.
+- **Al revisar errores, también puedes consultar las excepciones encadenadas de los procesos.** La traza del error muestra la información de las excepciones que se producen dentro de procesos encadenados.
+- **Los parámetros de procesos e informes se conservan al guardar su configuración.** Así se mantienen los valores asociados a procesos e informes al guardar los cambios.
 
 ### Rendimiento
 
@@ -482,7 +483,7 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 
 ### Instalación
 
-- **La instalación de addons reconoce correctamente las versiones beta.** Se interpreta correctamente el sufijo «-beta» de la versión del addon.
+- **La instalación de addons reconoce correctamente las versiones beta.** Se corrige la interpretación del sufijo «-beta» en la versión del addon.
 
 ### Inteligencia artificial
 
@@ -515,11 +516,11 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 
 ### Procesos
 
-- **El proceso ERP posterior al inicio de sesión también se ejecuta para usuarios invitados.** Así, los accesos de invitados siguen el mismo flujo posterior al inicio de sesión que los demás usuarios.
-- **Se corrige la descarga de documentos desde procesos integrados.** La gestión de las descargas procesa correctamente la descodificación y las referencias de los documentos.
-- **ABH Sign interpreta correctamente la información de créditos de firma.** Esto evita errores al procesar los créditos recibidos por el servicio de firma.
-- **Se corrigen la descarga de la plantilla y la importación de datos desde Excel.** El icono de descarga vuelve a ofrecer la plantilla necesaria para preparar los datos. También se corrige el proceso para que puedas cargar los datos desde Excel sin el problema anterior.
-- **Los trabajos en estado de error se pueden reiniciar para volver a ejecutarse.** Así, los trabajos que no terminaron correctamente pueden ponerse de nuevo en marcha.
+- **El proceso ERP posterior al inicio de sesión también se ejecuta para usuarios invitados.** Así, los accesos de invitados siguen el mismo flujo que los demás usuarios después de iniciar sesión.
+- **Las descargas de documentos desde procesos integrados gestionan correctamente la descodificación y las referencias.** La corrección se aplica a la gestión de documentos descargados desde un proceso integrado.
+- **ABH Sign interpreta correctamente la información de los créditos de firma.** Así se evitan errores al procesar los créditos recibidos por el servicio de firma.
+- **La plantilla de importación de Excel se descarga y el proceso de importación funciona correctamente.** Puedes descargar la plantilla desde el icono del proceso y cargar los datos desde Excel sin los fallos corregidos en esta versión.
+- **Los trabajos en estado de error pueden reiniciarse para volver a ejecutarse.** Así puedes poner de nuevo en marcha los trabajos que no terminaron correctamente.
 - **Se corrigen errores de traducción y serialización al usar la aplicación sin conexión.** Los datos se procesan correctamente en el modo sin conexión.
 - **Se corrige el funcionamiento de la integración de Redsys.** La integración vuelve a procesar correctamente sus operaciones.
 - **Los procesos de creación de parámetros encuentran las bibliotecas aunque estén en distintas rutas.** Se corrige el problema que impedía localizar la biblioteca necesaria cuando no estaba en la ruta esperada.

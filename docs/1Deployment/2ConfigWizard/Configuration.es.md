@@ -1,5 +1,13 @@
 # Configuración
 
+!!! info "Novedad en la versión 10.0"
+
+    La configuración inicial ahora se hace con un asistente desde la pantalla de inicio de sesión. Pulsa **Empezar** para iniciar el proceso. El asistente comprueba los valores y muestra el avance de la publicación y la creación de las bases de datos. Puedes usar un archivo dacpac o un feed de NuGet como origen del esquema.
+
+    Si sales o se produce un error, puedes volver al primer paso pendiente y reintentarlo sin perder el contexto. Los errores de credenciales señalan los campos que debes revisar. Si el correo ya está configurado, el asistente omite ese paso. Al terminar, pulsa **Ir al inicio de sesión**.
+
+    ![Novedad en la versión 10.0](../../docs_assets/images/Configuration/setup-wizard.png)
+
 El Asistente de Configuración guía el proceso inicial tras la instalación: configura las bases de datos, establece la contraseña de administrador y ajusta los parámetros de correo. Todo ello actualiza `appsettings.json` automáticamente sin necesidad de editar ningún archivo.
 
 !!! info "De web.config a appsettings.json"
