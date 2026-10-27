@@ -1,6 +1,6 @@
 # Versión 10.0
 
-Renueva la skin Flexygo 2026, añade actualizaciones y reversiones guiadas y despliegues separados; conecta asistentes de IA para consultar datos y, con autorización, modificar registros y ejecutar procesos.
+La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por separado, conectar asistentes de IA para consultar datos, gestionar actualizaciones y exportar la aplicación como proyecto de producto.
 
 ## Novedades
 
@@ -13,6 +13,12 @@ Renueva la skin Flexygo 2026, añade actualizaciones y reversiones guiadas y des
 - **Puedes personalizar los recursos de las páginas de cuenta desde tu producto.** Adapta estilos, scripts e iconos en distintos niveles de personalización. Esto permite ajustar las páginas de acceso, registro y recuperación de contraseña a cada producto.
 - **Puedes cambiar entre los temas claro, oscuro y del sistema.** La interfaz y algunos elementos integrados adaptan su apariencia al tema seleccionado. Si eliges el tema del sistema, Flexygo sigue la preferencia de apariencia del dispositivo.
 - **Puedes utilizar variables CSS personalizadas en tus estilos.** Flexygo admite variables CSS propias al aplicar los estilos. Además, la carga de estilos no falla si falta una variable LESS en las variables CSS.
+
+### Integraciones
+
+- **Conecta asistentes de IA para consultar datos y, si lo autorizas, modificar registros y ejecutar procesos.** El administrador activa MCP en Administración > Seguridad > WebAPI y asigna el permiso a usuarios o roles. Al conectar Claude o ChatGPT desde el menú del perfil, cada usuario autoriza el acceso y decide si será de solo lectura o también podrá cambiar datos. Los asistentes respetan los permisos del usuario, se pueden consultar o desconectar desde «Asistentes conectados» y las herramientas indican si consultan, modifican o permiten reintentos. El endpoint MCP registra asistentes a partir de sus metadatos para evitar duplicados, incluye el emisor en la respuesta de inicio de sesión y mantiene disponible el registro dinámico de clientes. Además, los procesos que superan diez minutos ya no fallan y se mantiene la compatibilidad de la aplicación con MCP.
+
+    ![Conecta asistentes de IA para consultar datos y, si lo autorizas, modificar registros y ejecutar procesos.](../../docs_assets/images/Versions/Version10_0/mcp-assistant-panel.png)
 
 ### Actualizador
 
@@ -69,12 +75,6 @@ Renueva la skin Flexygo 2026, añade actualizaciones y reversiones guiadas y des
 - **Organiza los módulos de una página directamente desde la propia página.** Puedes mover módulos entre zonas, elegir otro diseño y crear módulos desde el organizador. Antes de guardar, se avisa si quedan posiciones sin asignar o si la página procede de una distribución y los cambios se revertirán con una actualización.
 - **Integra Flexygo con otros sistemas mediante webhooks.** Los desarrolladores pueden utilizar esta funcionalidad para conectar sus aplicaciones con otros sistemas.
 - **Cambia la optimización de los paquetes desde el menú de desarrollo.** La opción permite alternar este ajuste sin salir del menú.
-
-### Integraciones
-
-- **Conecta asistentes de IA para consultar datos y, si lo autorizas, modificar registros y ejecutar procesos.** El administrador activa MCP en Administración > Seguridad > WebAPI y asigna el permiso a usuarios o roles. Al conectar Claude o ChatGPT desde el menú del perfil, cada usuario autoriza el acceso y decide si será de solo lectura o también podrá cambiar datos. Los asistentes respetan los permisos del usuario, se pueden consultar o desconectar desde «Asistentes conectados» y las herramientas indican si consultan, modifican o permiten reintentos. El endpoint MCP registra asistentes a partir de sus metadatos para evitar duplicados, incluye el emisor en la respuesta de inicio de sesión y mantiene disponible el registro dinámico de clientes. Además, los procesos que superan diez minutos ya no fallan y se mantiene la compatibilidad de la aplicación con MCP.
-
-    ![Conecta asistentes de IA para consultar datos y, si lo autorizas, modificar registros y ejecutar procesos.](../../docs_assets/images/Versions/Version10_0/mcp-assistant-panel.png)
 
 ### Configuración
 
@@ -193,10 +193,9 @@ Renueva la skin Flexygo 2026, añade actualizaciones y reversiones guiadas y des
 
 ### Seguridad
 
-- **Puedes controlar quién ejecuta cada proceso, incluso si no está vinculado a un objeto, y limitarlo con condiciones SQL opcionales.** Los permisos se configuran para usuarios, roles y facultades, desde sus pantallas de seguridad o desde la ficha del proceso. La condición SQL se evalúa al comprobar el permiso y solo permite ejecutar el proceso si devuelve 1 o true. La pantalla de seguridad permite consultar si el proceso se puede ejecutar y qué condición restringe su uso; si no se cumple, el proceso queda oculto en menús y barras de herramientas.
-- **La skin 2026 incorpora una pantalla para consultar y gestionar la seguridad de roles, usuarios y facultades.** Desde el área de trabajo puedes abrir el gestor con el elemento seleccionado y revisar reglas de objetos, campos y navegación, incluidos los permisos de lectura y edición y las rutas afectadas. La pantalla permite comparar permisos concedidos, denegados o no definidos, y muestra qué regla, condición y prioridad determinan el acceso, junto con la política predeterminada. Puedes crear, modificar o eliminar reglas y definir su nivel inicial; también consultar las condiciones de acceso de los módulos y gestionar acciones con una vista previa de los cambios. La tabla permite filtrar elementos con reglas, añadir condiciones, bloquear reglas o eliminar todas las de una familia, y cuenta con traducciones en los siete idiomas disponibles. La pantalla se abre desde la skin 2026; la anterior sigue disponible en flexy2022.
-- **Consulta la seguridad de objetos, módulos, propiedades y procesos desde una misma pantalla del workbench.** Puedes acceder a cada área desde esa pantalla y abrirla con un elemento concreto ya seleccionado. Desde la pantalla de un objeto, la búsqueda mantiene la selección al cambiar de ámbito y se limpia al iniciar una búsqueda nueva; la skin 2022 conserva su pantalla anterior.
-- **Puedes configurar condiciones de seguridad de objetos eligiendo una propiedad, un operador y un valor.** El asistente ofrece las propiedades del objeto y permite seleccionar valores de contexto, sin tener que recordar nombres de tablas o marcas especiales. También puedes probar la condición antes de guardarla y consultar el SQL ejecutado.
+- **Puedes controlar quién ejecuta cada proceso, incluso si no está vinculado a un objeto, y limitarlo con condiciones SQL opcionales.** Configura permisos para usuarios, roles y facultades desde sus pantallas de seguridad o desde la ficha del proceso. Una condición SQL opcional permite la ejecución solo si devuelve 1 o true; si no se cumple, el proceso queda oculto en menús y barras de herramientas. La regla se aplica antes que los permisos específicos del objeto, y puedes consultar desde seguridad quién puede ejecutar cada proceso y qué condición lo limita.
+- **La skin 2026 incorpora una pantalla para consultar y gestionar la seguridad de usuarios, roles, facultades y objetos.** Puedes abrirla desde el área de trabajo o desde usuarios, roles, facultades y objetos, con el elemento correspondiente seleccionado; también reúne la seguridad de módulos, propiedades y procesos. La tabla muestra permisos por acción, agrupa los de cada campo bajo su objeto y permite comparar permisos entre objetos; además, muestra las reglas de navegación y las condiciones de acceso de los módulos. Consulta las reglas aplicadas, la política predeterminada y el orden en que roles, facultades y usuarios determinan el acceso, sin modificarlo. Desde la pantalla puedes crear, modificar o eliminar reglas, consultar las acciones disponibles y revisar una vista previa antes de aplicarlas; también puedes filtrar el catálogo, que incluye páginas, plantillas e informes. La pantalla está traducida a los siete idiomas disponibles y la anterior sigue disponible en flexy2022.
+- **Puedes configurar condiciones de seguridad de objetos eligiendo una propiedad, un operador y un valor.** El asistente ofrece las propiedades del objeto y permite seleccionar valores de contexto, sin tener que recordar nombres de tablas o marcas especiales. Antes de guardar, puedes probar la condición y consultar el SQL ejecutado.
 
 ### Seguridad de la WebAPI
 
@@ -376,12 +375,11 @@ Renueva la skin Flexygo 2026, añade actualizaciones y reversiones guiadas y des
 
 ### Seguridad
 
-- **La configuración de la aplicación cifra en disco las contraseñas y claves sensibles.** Se protegen, entre otros datos, las cadenas de conexión, las contraseñas de correo y NuGet, y las claves JWT y Data Protection. El ejecutable permite gestionar la clave de cifrado y trasladarla a otro servidor sin necesitar el SDK.
-- **La API de licencias separa la consulta y la actualización del estado, y envía el código de activación en la solicitud.** El cambio afecta a las integraciones que consultan el estado de la licencia, lo actualizan o envían un código de activación.
-- **Los cambios de roles y permisos se aplican sin que el usuario tenga que volver a iniciar sesión.** Los cambios de rol se reflejan en la siguiente solicitud del usuario. La actualización también alcanza a los permisos asociados a objetos, páginas e informes, por lo que los cambios de seguridad pueden hacerse efectivos de inmediato.
-- **Los objetos nuevos muestran su nombre en singular y se incorpora una vista para las facultades de página.** La nueva vista permite consultar las facultades de página mediante la capa de seguridad. Al crear objetos, se deja de usar como nombre el título plural de la colección.
-- **El catálogo de reglas de seguridad incluye páginas, plantillas e informes.** También identifica las familias que no tienen una vista disponible y evita repetir plantillas en los resultados.
-- **La página de cambio de contraseña muestra los errores y validaciones del formulario.** Así puedes identificar los problemas al introducir o actualizar la contraseña.
+- **La configuración de la aplicación cifra en disco las contraseñas y claves sensibles.** La protección incluye, entre otros datos, las cadenas de conexión, las contraseñas de correo y NuGet, y las claves JWT y Data Protection. Puedes gestionar la clave de cifrado con el ejecutable y trasladarla a otro servidor sin necesitar el SDK.
+- **La API de licencias separa la consulta y la actualización del estado, y envía el código de activación en la solicitud.** Este cambio afecta a las integraciones que consultan o actualizan el estado de la licencia y a las que envían un código de activación. Revisa las solicitudes de esas integraciones para adaptarlas al nuevo funcionamiento.
+- **Los cambios de roles y permisos se aplican sin que el usuario tenga que volver a iniciar sesión.** La actualización se refleja en las siguientes solicitudes del usuario. Incluye permisos asociados a roles y permisos de objetos, páginas e informes.
+- **Los objetos nuevos muestran su nombre en singular y se incorpora una vista para consultar las facultades de página.** La nueva vista permite consultar esas facultades mediante la capa de seguridad. Al crear un objeto, se utiliza su nombre en singular en lugar del título plural de la colección.
+- **La página de cambio de contraseña muestra los errores y las validaciones del formulario.** Así puedes identificar los problemas al introducir o actualizar la contraseña y corregirlos antes de continuar.
 
 ### Seguridad de la WebAPI
 
@@ -532,9 +530,10 @@ Renueva la skin Flexygo 2026, añade actualizaciones y reversiones guiadas y des
 
 ### Seguridad
 
-- **Los usuarios autenticados ya no pueden obtener la clave con la que se firman los tokens.** La clave se genera en la configuración durante el primer inicio, pero ya no se entrega mediante una dirección accesible para usuarios autenticados. Así se evita que puedan utilizarla para crear sus propios tokens.
-- **Se validan las direcciones externas y los destinos de retorno para evitar conexiones o redirecciones no seguras.** La obtención de metadatos de clientes MCP se limita a direcciones públicas. Los retornos de inicio de sesión y cambio de contraseña se restringen a páginas de la aplicación, y las llamadas de decisión, a direcciones públicas o permitidas.
-- **Puedes iniciar sesión y acceder a descargas e informes mediante un token incluido en la URL.** El token se conserva durante los redireccionamientos, incluso si se solicita iniciar sesión antes de abrir el enlace.
+- **Las vistas de objetos aplican los permisos de lista del rol y no muestran filas fuera de su acceso.** Al consultar una vista desde JavaScript, se aplican los mismos filtros de lista que en la colección. Los filtros enviados no pueden ampliar los permisos y se rechazan si contienen ciertos errores de formato. Los administradores y las vistas configuradas como «No filter» mantienen su comportamiento.
+- **Los usuarios autenticados ya no pueden obtener la clave de firma de los tokens.** La clave se genera en la configuración durante el primer inicio, pero deja de estar disponible mediante una dirección accesible para cualquier usuario autenticado. Así se evita que otros usuarios puedan utilizarla para crear tokens propios.
+- **Se validan las direcciones externas y los destinos de retorno para evitar conexiones o redirecciones no seguras.** La obtención de metadatos de clientes MCP se limita a direcciones públicas. Los retornos de inicio de sesión y cambio de contraseña se restringen a páginas de la aplicación, y las llamadas de decisión solo pueden dirigirse a direcciones públicas o permitidas.
+- **Puedes iniciar sesión y acceder a descargas e informes mediante un token incluido en la URL.** El token se conserva durante los redireccionamientos, también cuando el enlace solicita iniciar sesión antes de abrir el contenido.
 
 ### Seguridad de la WebAPI
 

@@ -1,6 +1,6 @@
 # Version 10.0
 
-Renews the Flexygo 2026 skin, adds guided updates and rollbacks and separate deployments; connects AI assistants to query data and, with authorization, modify records and run processes.
+The Flexygo 2026 skin renews the application, lets you deploy its parts separately, connect AI assistants to query data, manage updates, and export the application as a product project.
 
 ## New features
 
@@ -13,6 +13,33 @@ Renews the Flexygo 2026 skin, adds guided updates and rollbacks and separate dep
 - **You can customize account page resources from your product.** Adapt styles, scripts and icons at different customization levels. This lets you adjust sign-in, registration and password recovery pages for each product.
 - **You can switch between light, dark and system themes.** The interface and some integrated elements adapt their appearance to the selected theme. If you choose the system theme, Flexygo follows the device’s appearance preference.
 - **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. In addition, style loading does not fail if a LESS variable is missing from the CSS variables.
+
+### Integrations
+
+- **Connect AI assistants to query data and, if you authorize them, modify records and run processes.** The administrator enables MCP in Administración > Seguridad > WebAPI and assigns the permission to users or roles. When connecting Claude or ChatGPT from the profile menu, each user authorizes access and decides whether it will be read-only or also allow data changes. Assistants respect the user's permissions, can be viewed or disconnected from «Asistentes conectados», and the tools indicate whether they query, modify or allow retries. The MCP endpoint registers assistants from their metadata to avoid duplicates, includes the issuer in the login response and keeps dynamic client registration available. In addition, processes that take more than ten minutes no longer fail, and the application remains compatible with MCP.
+
+    ![Connect AI assistants to query data and, if you authorize them, modify records and run processes.](../../docs_assets/images/Versions/Version10_0/mcp-assistant-panel.png)
+
+### Updater
+
+- **Manage updates, rollbacks and versions from an assistant that guides you through the process and shows its progress.** The assistant lets you review the requirements before continuing and check the version changes. It also shows the result of each operation and lets you return to previous steps.
+
+    ![Manage updates, rollbacks and versions from an assistant that guides you through the process and shows its progress.](../../docs_assets/images/Versions/Version10_0/updater-wizard.png)
+- **Check ongoing operations and follow those started by other administrators.** You can see who is running each operation and follow it in read-only mode if you did not start it. The Updater prevents incompatible operations from running simultaneously and lets you resume interrupted preparations from another tab, retaining the tracking information and completed steps.
+- **Check the operation history from the version information.** You can open the result and log of a previous operation. Deleting the history does not affect operations that are still in progress.
+- **Read the full version notes and see what changes you will receive when you update.** The history includes beta versions, shows changes from previous versions and lets you review the differences between the installed version and the latest one. It also includes published Backend notes and excludes unpublished versions.
+- **View and manage available, installed and downloaded versions from the versions page.** The page shows the status of each version and keeps the information up to date when you change its status or delete a version. You can also apply the latest available version and delete downloaded versions from the Updater.
+- **You can roll back an update if the process does not finish correctly.** This option lets you return to the previous state if problems occur during the update. You can restore the previous version from the Updater process.
+- **View logs in real time and filter their contents from the assistant's advanced mode.** You can search the logs and filter them by level and context, as well as switch between the summary and the log in the results. Reading or clearing the log during an operation does not interrupt incoming messages, and on small screens the views appear in tabs.
+- **View the result of each update or deletion, with details of any errors.** The screen shows what happened and which version is in use, and lets you copy the technical error details along with its code. Closing the result refreshes the versions list.
+- **Resolve configuration conflicts during an update and choose the initial value for each conflict.** The assistant lets you review pending differences and start with a blank value, the previous value, a custom value or the new version's value. You can also resume an interrupted update from where it stopped and expand the window to full screen.
+- **The Updater recognizes preview versions and lets you configure whether it searches for them.** Compatibility includes correctly searching for and comparing beta packages based on the installed version. You can control the use of preview versions in the settings.
+- **The 2026 skin shows the installed version and can notify you about changes.** The version appears in the sidebar footer, and the notification is shown once for each major and minor version. You can view the update details from the notification; administrators also receive updates for each minor version.
+- **Update the Flexygo database in Docker environments and use connection credentials.** The process also lets you update the database from installations that require credentials. Error messages and the handling of session or network issues during the update have been improved.
+- **Install and update the database from the configurator.** The configurator includes these tasks so you can perform them from the configuration tool. This makes it easier to manage the database during installation and updates.
+- **Update Flexygo in a Docker installation from the maintenance page.** The process provides information about the update and lets you manage installation maintenance.
+- **The Updater checks local repositories and supports download paths in Linux.** When the process finishes, it returns to the application. Some informational messages in the update flow have also been reviewed.
+- **You can roll back an update if the process does not finish correctly.** The option is available during the update process. Use it to restore the previous state if problems occur.
 
 ### Deployment
 
@@ -48,33 +75,6 @@ Renews the Flexygo 2026 skin, adds guided updates and rollbacks and separate dep
 - **Organize a page's modules directly from the page itself.** You can move modules between areas, choose a different layout, and create modules from the organizer. Before saving, a warning appears if any positions remain unassigned or if the page is based on a distribution and an update will revert the changes.
 - **Integrate Flexygo with other systems using webhooks.** Developers can use this feature to connect their applications to other systems.
 - **Change package optimization from the development menu.** This option lets you switch this setting without leaving the menu.
-
-### Integrations
-
-- **Connect AI assistants to query data and, if you authorize them, modify records and run processes.** The administrator enables MCP in Administración > Seguridad > WebAPI and assigns the permission to users or roles. When connecting Claude or ChatGPT from the profile menu, each user authorizes access and decides whether it will be read-only or also allow data changes. Assistants respect the user's permissions, can be viewed or disconnected from «Asistentes conectados», and the tools indicate whether they query, modify or allow retries. The MCP endpoint registers assistants from their metadata to avoid duplicates, includes the issuer in the login response and keeps dynamic client registration available. In addition, processes that take more than ten minutes no longer fail, and the application remains compatible with MCP.
-
-    ![Connect AI assistants to query data and, if you authorize them, modify records and run processes.](../../docs_assets/images/Versions/Version10_0/mcp-assistant-panel.png)
-
-### Updater
-
-- **Manage updates, rollbacks and versions from an assistant that guides you through the process and shows its progress.** The assistant lets you review the requirements before continuing and check the version changes. It also shows the result of each operation and lets you return to previous steps.
-
-    ![Manage updates, rollbacks and versions from an assistant that guides you through the process and shows its progress.](../../docs_assets/images/Versions/Version10_0/updater-wizard.png)
-- **Check ongoing operations and follow those started by other administrators.** You can see who is running each operation and follow it in read-only mode if you did not start it. The Updater prevents incompatible operations from running simultaneously and lets you resume interrupted preparations from another tab, retaining the tracking information and completed steps.
-- **Check the operation history from the version information.** You can open the result and log of a previous operation. Deleting the history does not affect operations that are still in progress.
-- **Read the full version notes and see what changes you will receive when you update.** The history includes beta versions, shows changes from previous versions and lets you review the differences between the installed version and the latest one. It also includes published Backend notes and excludes unpublished versions.
-- **View and manage available, installed and downloaded versions from the versions page.** The page shows the status of each version and keeps the information up to date when you change its status or delete a version. You can also apply the latest available version and delete downloaded versions from the Updater.
-- **You can roll back an update if the process does not finish correctly.** This option lets you return to the previous state if problems occur during the update. You can restore the previous version from the Updater process.
-- **View logs in real time and filter their contents from the assistant's advanced mode.** You can search the logs and filter them by level and context, as well as switch between the summary and the log in the results. Reading or clearing the log during an operation does not interrupt incoming messages, and on small screens the views appear in tabs.
-- **View the result of each update or deletion, with details of any errors.** The screen shows what happened and which version is in use, and lets you copy the technical error details along with its code. Closing the result refreshes the versions list.
-- **Resolve configuration conflicts during an update and choose the initial value for each conflict.** The assistant lets you review pending differences and start with a blank value, the previous value, a custom value or the new version's value. You can also resume an interrupted update from where it stopped and expand the window to full screen.
-- **The Updater recognizes preview versions and lets you configure whether it searches for them.** Compatibility includes correctly searching for and comparing beta packages based on the installed version. You can control the use of preview versions in the settings.
-- **The 2026 skin shows the installed version and can notify you about changes.** The version appears in the sidebar footer, and the notification is shown once for each major and minor version. You can view the update details from the notification; administrators also receive updates for each minor version.
-- **Update the Flexygo database in Docker environments and use connection credentials.** The process also lets you update the database from installations that require credentials. Error messages and the handling of session or network issues during the update have been improved.
-- **Install and update the database from the configurator.** The configurator includes these tasks so you can perform them from the configuration tool. This makes it easier to manage the database during installation and updates.
-- **Update Flexygo in a Docker installation from the maintenance page.** The process provides information about the update and lets you manage installation maintenance.
-- **The Updater checks local repositories and supports download paths in Linux.** When the process finishes, it returns to the application. Some informational messages in the update flow have also been reviewed.
-- **You can roll back an update if the process does not finish correctly.** The option is available during the update process. Use it to restore the previous state if problems occur.
 
 ### Artificial Intelligence
 
@@ -198,10 +198,9 @@ Renews the Flexygo 2026 skin, adds guided updates and rollbacks and separate dep
 
 ### Security
 
-- **You can control who runs each process, even if it is not linked to an object, and restrict it with optional SQL conditions.** Permissions are configured for users, roles and faculties, from their security screens or from the process record. The SQL condition is evaluated when checking permission and allows the process to run only if it returns 1 or true. The security screen lets you check whether the process can run and which condition restricts its use; if the condition is not met, the process is hidden from menus and toolbars.
-- **The 2026 skin includes a screen for viewing and managing the security of roles, users and faculties.** From the workspace, you can open the manager with the selected item and review object, field and navigation rules, including read and edit permissions and affected paths. The screen lets you compare granted, denied or undefined permissions, and shows which rule, condition and priority determine access, along with the default policy. You can create, edit or delete rules and set their initial level; you can also view module access conditions and manage actions with a preview of the changes. The table lets you filter items with rules, add conditions, block rules or delete all rules in a family, and includes translations in the seven available languages. The screen opens from the 2026 skin; the previous one remains available in flexy2022.
-- **View the security of objects, modules, properties and processes from a single workbench screen.** You can access each area from that screen and open it with a specific item already selected. From an object screen, the search keeps the selection when you change scope and clears it when you start a new search; the 2022 skin retains its previous screen.
-- **You can configure object security conditions by choosing a property, an operator and a value.** The wizard provides the object’s properties and lets you select context values, without needing to remember table names or special tags. You can also test the condition before saving it and view the SQL that was run.
+- **You can control who runs each process, even if it is not linked to an object, and restrict it with optional SQL conditions.** Configure permissions for users, roles, and capabilities from their security screens or from the process record. An optional SQL condition allows execution only if it returns 1 or true; if the condition is not met, the process is hidden from menus and toolbars. The rule is applied before object-specific permissions, and you can check in Security who can run each process and what condition restricts it.
+- **The 2026 skin includes a screen for viewing and managing the security of users, roles, capabilities, and objects.** You can open it from the workspace or from users, roles, capabilities, and objects, with the relevant item selected; it also brings together the security settings for modules, properties, and processes. The table shows permissions by action, groups permissions for each field under its object, and lets you compare permissions between objects; it also shows navigation rules and module access conditions. View the applied rules, the default policy, and the order in which roles, capabilities, and users determine access, without changing them. From the screen, you can create, modify, or delete rules, view the available actions, and check a preview before applying them; you can also filter the catalog, which includes pages, templates, and reports. The screen is translated into the seven available languages, and the previous one is still available in flexy2022.
+- **You can configure object security conditions by choosing a property, an operator, and a value.** The wizard offers the object's properties and lets you select context values, so you do not have to remember table names or special tags. Before saving, you can test the condition and view the SQL that was run.
 
 ### WebAPI Security
 
@@ -367,12 +366,11 @@ Renews the Flexygo 2026 skin, adds guided updates and rollbacks and separate dep
 
 ### Security
 
-- **Application configuration encrypts passwords and sensitive keys on disk.** This protects, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. The executable can manage the encryption key and move it to another server without requiring the SDK.
-- **The license API separates status queries from status updates and sends the activation code in the request.** This change affects integrations that query or update license status, or send an activation code.
-- **Role and permission changes take effect without requiring the user to sign in again.** Role changes are reflected in the user’s next request. The update also applies to permissions associated with objects, pages and reports, so security changes can take effect immediately.
-- **New objects display their name in the singular, and a view for page faculties is added.** The new view lets you check page faculties through the security layer. When creating objects, the plural title of the collection is no longer used as the name.
-- **The security rules catalog includes pages, templates and reports.** It also identifies families that do not have a view available and avoids repeating templates in the results.
-- **The password-change page displays form errors and validations.** This helps you identify issues when entering or updating the password.
+- **The application configuration encrypts passwords and sensitive keys on disk.** Protection includes, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. You can manage the encryption key with the executable and move it to another server without needing the SDK.
+- **The licensing API separates querying and updating the status, and sends the activation code in the request.** This change affects integrations that query or update the license status and those that send an activation code. Review the requests used by these integrations and adapt them to the new behavior.
+- **Role and permission changes take effect without requiring the user to sign in again.** The changes are reflected in the user's subsequent requests. This includes permissions associated with roles and permissions for objects, pages, and reports.
+- **New objects display their name in the singular, and a view for checking page capabilities is added.** The new view lets you check these capabilities through the security layer. When you create an object, its singular name is used instead of the collection's plural title.
+- **The password change page displays form errors and validation messages.** This helps you identify problems when entering or updating the password and fix them before continuing.
 
 ### Skins
 
@@ -533,9 +531,10 @@ Renews the Flexygo 2026 skin, adds guided updates and rollbacks and separate dep
 
 ### Security
 
-- **Authenticated users can no longer obtain the key used to sign tokens.** The key is generated in the configuration during first startup, but is no longer provided through an address accessible to authenticated users. This prevents them from using it to create their own tokens.
-- **External addresses and return destinations are validated to prevent unsafe connections or redirects.** Retrieving MCP client metadata is restricted to public addresses. Sign-in and password-change return destinations are restricted to application pages, and decision calls are restricted to public or permitted addresses.
-- **You can sign in and access downloads and reports using a token included in the URL.** The token is retained during redirects, even if sign-in is requested before the link is opened.
+- **Object views apply the role's list permissions and do not show rows outside the user's access.** When you query a view from JavaScript, the same list filters as in the collection are applied. Submitted filters cannot expand permissions and are rejected if they contain certain formatting errors. Administrators and views configured as «No filter» keep their existing behavior.
+- **Authenticated users can no longer obtain the token signing key.** The key is generated in the configuration during the first startup, but is no longer available through an address accessible to any authenticated user. This prevents other users from using it to create their own tokens.
+- **External addresses and return destinations are validated to prevent unsafe connections or redirects.** Retrieving MCP client metadata is restricted to public addresses. Login and password change returns are restricted to application pages, and decision calls can only be directed to public or permitted addresses.
+- **You can sign in and access downloads and reports using a token included in the URL.** The token is retained during redirects, including when the link requests that you sign in before opening the content.
 
 ### Skins
 
