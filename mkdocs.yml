@@ -137,6 +137,7 @@ plugins:
             AIAssistants: AI assistants (MCP)
             6ReverseProxy: Reverse proxy
             8ExportProject: Export as project
+            RolesAndPermissions: Security (roles and permissions)
         - locale: es
           default: true
           name: Español
@@ -175,6 +176,7 @@ plugins:
             AIAssistants: Asistentes de IA (MCP)
             6ReverseProxy: Proxy inverso
             8ExportProject: Exportar como proyecto
+            RolesAndPermissions: Seguridad (roles y permisos)
   - glightbox:
       touchNavigation: true
       loop: false

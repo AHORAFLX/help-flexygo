@@ -1,5 +1,8 @@
 # Approvals, human tasks and outbound webhooks <span class="fh-version-tag" title="Available since version 10">10.0+</span>
 
+!!! tip "Decisions and webhooks are two step types of actions on save"
+    A decision rule or an outgoing webhook is a rule with one step. If you want a single save to do several things in order (an e-mail, a notification, create a record, a decision, a webhook…), see [Actions on save](ActionsOnSave.md). This page still covers everything specific to decisions (inbox, card, escalation, web API) and to webhooks (signature, retries, deliveries).
+
 Flexygo does not orchestrate automations: that is what n8n, Make, Zapier or any other orchestrator is for. What it does do is **what an orchestrator cannot do on its own**: open a **decision** to a person or a role inside the application, with its inbox, its deadline and its escalation, and **notify the outside world** when a record changes (**outbound webhooks**). The two pieces combine into a circuit:
 
 ```mermaid
@@ -26,7 +29,7 @@ Everything looks and is configured the same way in both skins (skin2026 and flex
 | The inbox | **Decisions** menu node, with a counter | **Decisiones** menu node, with a counter |
 | Decision rules | **Control panel › Logic and rules › Decision rules** | **Admin › Lógica y reglas › Reglas de decisión** |
 | Outbound webhooks and their deliveries | **Control panel › Logic and rules › Outgoing webhooks** | **Admin › Lógica y reglas › Webhooks de salida** |
-| From the object | The object's workbench, *Decisions* and *Webhooks* sections | — |
+| From the object | The object's workbench, *Rules and actions* section (see [Actions on save](ActionsOnSave.md)) | — |
 
 ![Logic and rules in the skin2026 control panel](../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png)
 
@@ -56,7 +59,8 @@ A **task** is a question with options —*Approve* / *Reject* by default— addr
 | `Status` | When |
 |---|---|
 | `pending` | Open, waiting for someone. |
-| `resolved` | Someone chose an option (`Outcome`), with or without a `Comment`. |
+| `applying` | Someone chose an option and the decision waits a minute (`ApplyAt`) before it applies; meanwhile it can be undone. |
+| `resolved` | Someone chose an option (`Outcome`), with or without a `Comment`, and it applied. |
 | `cancelled` | It was cancelled without a decision. |
 | `expired` | The deadline passed and there was no one to escalate to. |
 
@@ -73,15 +77,16 @@ The **`flxTaskEscalation`** job (every 5 minutes, `sysTaskEscalation` process) l
 ### What happens on decision
 
 1. It checks that the person deciding is allowed —the assigned user, anyone with the assigned role, an administrator, or anyone if the task is not assigned; role membership is read from the database at that moment— and that there is a comment if the task or the option requires one (`RequireComment`, or `requireComment` on the option).
-2. `resolved` is written with `Outcome`, `Comment`, `ResolvedBy` and `ResolvedDate`, along with the log.
-3. If the task has an **`OnResolveProcess`**, that Flexygo process is run with `TaskId`, `Outcome`, `Comment`, `ObjectName`, `ObjectWhere` and `CorrelationId`, bound to the task's record if it has one. **The decision stands even if the process fails**: the failure comes back as a warning (`WarningMessage`) and in `Data` (`OnResolveProcessSuccess: false`).
-4. If the task has a **`CallbackUrl`**, a webhook with the result is queued (§5). The same happens on cancel and on expiry.
+2. The decision stays **`applying`** for **60 seconds** (`ApplyAt`), with `Outcome`, `Comment` and who decided. Nothing else happens yet and nobody else can decide it. Within that minute, whoever decided (or an administrator) can **undo** it with *Undo* on the card or the `sysTaskUndo` process: it goes back to `pending` without a trace. It is the same minute you get when deciding from the chat ([Approving decisions from the chat](../AIAssistants/3Decisions.md)).
+3. Once the minute is over, the **`flxTaskApply`** job (every 15 seconds) applies it: it writes `resolved` with `ResolvedBy` and `ResolvedDate`, along with the log. From then on it cannot be undone.
+4. If the task has an **`OnResolveProcess`**, that Flexygo process is run with `TaskId`, `Outcome`, `Comment`, `ObjectName`, `ObjectWhere` and `CorrelationId`, bound to the task's record if it has one. **The decision stands even if the process fails**: the failure comes back as a warning (`WarningMessage`) and in `Data` (`OnResolveProcessSuccess: false`).
+5. If the task has a **`CallbackUrl`**, a webhook with the result is queued (§5). The same happens on cancel and on expiry.
 
 ---
 
 ## 2. Decision rules
 
-A **rule** (`Tasks_Rules`, `sysTaskRule` object, *Decision rules* / *Reglas de decisión* node under *Logic and rules*, and the *Decisions* section of the object's workbench) opens a task when a record of the object is saved, with no code. It is evaluated after the save is committed, whether it comes from a screen or from the web API; whoever saves does not need permission on the task processes.
+A **rule** (a rule of `Objects_Rules` with a decision step in `Objects_Actions`; `sysTaskRule` object, *Decision rules* / *Reglas de decisión* node under *Logic and rules*, and the *Rules and actions* section of the object's workbench) opens a task when a record of the object is saved, with no code. It is evaluated after the save is committed, whether it comes from a screen or from the web API; whoever saves does not need permission on the task processes.
 
 ![The record view of a decision rule](../../docs_assets/images/ApprovalsAndWebhooks/regla.png)
 
@@ -120,7 +125,8 @@ Everything goes through the Flexygo **web API**: `POST /token` (`grant_type=pass
 | Call | What it does |
 |---|---|
 | `POST /webapi/exec/sysTaskCreate` | Opens a task. Parameters in the body (JSON), below. |
-| `POST /webapi/exec/sysTaskResolve/sysTask/{TaskId}` | Decides: `Outcome` (mandatory, the `id` of an option) and `Comment`. |
+| `POST /webapi/exec/sysTaskResolve/sysTask/{TaskId}` | Decides: `Outcome` (mandatory, the `id` of an option) and `Comment`. The decision applies a minute later. |
+| `POST /webapi/exec/sysTaskUndo/sysTask/{TaskId}` | Undoes the decision taken while it has not applied. |
 | `POST /webapi/exec/sysTaskCancel/sysTask/{TaskId}` | Cancels: `Comment`. |
 | `POST /webapi/exec/sysTaskReassign/sysTask/{TaskId}` | Reassigns: `AssignedRoleId`, `AssignedUserId`, `Comment`. |
 | `GET /webapi/object/sysTask` · `GET /webapi/object/sysTask/{TaskId}` | Reads tasks like any object. |
@@ -183,7 +189,7 @@ POST /webapi/exec/sysTaskResolve/sysTask/0F12D8AC-…
 
 ## 4. Outbound webhooks
 
-A **subscription** (`WebHooks_Subscriptions`, `sysWebhookSubscription` object) sends a `POST` to a URL when a record of the object is saved or deleted. The save **never waits for the receiver**: the delivery is queued (`WebHooks_Deliveries`) and the **`flxWebhookDispatcher`** job (every minute, `SendPendingWebhooks` process) sends it.
+A **subscription** (a rule of `Objects_Rules` with a webhook step in `Objects_Actions`; `sysWebhookSubscription` object) sends a `POST` to a URL when a record of the object is saved or deleted. The save **never waits for the receiver**: the delivery is queued (`WebHooks_Deliveries`) and the **`flxWebhookDispatcher`** job (every minute, `SendPendingWebhooks` process) sends it.
 
 Subscriptions and their deliveries live on **a single screen**, *Outgoing webhooks* / *Webhooks de salida*, with two tabs: **Subscriptions** (*Suscripciones*) and **Deliveries** (*Envíos*), the log of everything that has been sent. It is the same in both skins. It can also be reached from the *Webhooks* section of the object's workbench.
 

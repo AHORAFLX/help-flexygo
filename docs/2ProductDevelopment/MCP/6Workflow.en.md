@@ -1,5 +1,13 @@
 # Workflow with commands
 
+!!! info "New in version 10.0"
+
+    You can now create a Flexygo application by talking to an assistant connected to the MCP. The assistant gathers the requirements, asks you questions before starting, proposes a design and organises the work into blocks and tasks. It then builds the application and opens it in the browser so you can check it.
+
+    You can also open a board from the assistant to follow tasks, decisions, history and quality checks.
+
+    ![New in version 10.0](../../docs_assets/images/6Workflow/mcp-product-building.png)
+
 With Claude Code, the Flexygo MCP server is driven by **commands** that start with `/flx-`. Each command is a phase, and each phase is the gate to the next one: the agent does not skip a phase or guess which one it is in.
 
 !!! tip "Can't see the commands?"
