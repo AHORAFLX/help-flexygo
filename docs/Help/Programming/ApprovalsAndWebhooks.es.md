@@ -1,5 +1,8 @@
 # Aprobaciones, tareas humanas y webhooks de salida <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
 
+!!! tip "Decisiones y webhooks son dos tipos de paso de las acciones al guardar"
+    Una regla de decisión o un webhook de salida es una regla de un solo paso. Si quieres que un mismo guardado haga varias cosas en orden (un correo, un aviso, crear un registro, una decisión, un webhook…), mira [Acciones al guardar](ActionsOnSave.md). Esta página sigue valiendo para todo lo propio de las decisiones (bandeja, tarjeta, escalado, web API) y de los webhooks (firma, reintentos, envíos).
+
 Flexygo no orquesta automatismos: para eso están n8n, Make, Zapier o cualquier otro orquestador. Lo que sí hace es **lo que un orquestador no puede hacer solo**: abrir una **decisión** a una persona o a un rol dentro de la aplicación, con su bandeja, su plazo y su escalado, y **avisar hacia fuera** cuando un registro cambia (**webhooks de salida**). Las dos piezas se combinan en un circuito:
 
 ```mermaid
@@ -26,7 +29,7 @@ Todo se ve y se configura igual en las dos pieles (skin2026 y flexy2022):
 | La bandeja | Nodo **Decisions** del menú, con contador | Nodo **Decisiones** del menú, con contador |
 | Reglas de decisión | **Control panel › Logic and rules › Decision rules** | **Admin › Lógica y reglas › Reglas de decisión** |
 | Webhooks de salida y sus envíos | **Control panel › Logic and rules › Outgoing webhooks** | **Admin › Lógica y reglas › Webhooks de salida** |
-| Desde el objeto | Banco de trabajo del objeto, secciones *Decisions* y *Webhooks* | — |
+| Desde el objeto | Banco de trabajo del objeto, sección *Rules and actions* (ver [Acciones al guardar](ActionsOnSave.md)) | — |
 
 ![Logic and rules en el panel de control de skin2026](../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png)
 
@@ -56,7 +59,8 @@ Una **tarea** es una pregunta con opciones —por defecto *Approve* / *Reject*�
 | `Status` | Cuándo |
 |---|---|
 | `pending` | Abierta, esperando a alguien. |
-| `resolved` | Alguien eligió una opción (`Outcome`), con o sin `Comment`. |
+| `applying` | Alguien eligió una opción y la decisión espera un minuto (`ApplyAt`) antes de aplicarse; mientras, se puede deshacer. |
+| `resolved` | Alguien eligió una opción (`Outcome`), con o sin `Comment`, y se aplicó. |
 | `cancelled` | Se canceló sin decidir. |
 | `expired` | Venció el plazo y no había a quién escalar. |
 
@@ -73,15 +77,16 @@ El job **`flxTaskEscalation`** (cada 5 minutos, proceso `sysTaskEscalation`) mir
 ### Qué pasa al decidir
 
 1. Se comprueba que quien decide puede —el usuario asignado, cualquiera con el rol asignado, un administrador, o cualquiera si la tarea no está asignada; la pertenencia al rol se lee de la base en ese momento— y que hay comentario si la tarea o la opción lo exigen (`RequireComment`, o `requireComment` en la opción).
-2. Se escribe `resolved` con `Outcome`, `Comment`, `ResolvedBy` y `ResolvedDate`, y el log.
-3. Si la tarea tiene **`OnResolveProcess`**, se ejecuta ese proceso de Flexygo con `TaskId`, `Outcome`, `Comment`, `ObjectName`, `ObjectWhere` y `CorrelationId`, atado al registro de la tarea si lo tiene. **La decisión se mantiene aunque el proceso falle**: el fallo vuelve como aviso (`WarningMessage`) y en `Data` (`OnResolveProcessSuccess: false`).
-4. Si la tarea tiene **`CallbackUrl`**, se encola un webhook con el resultado (§5). Lo mismo al cancelar y al expirar.
+2. La decisión queda **`applying`** durante **60 segundos** (`ApplyAt`), con `Outcome`, `Comment` y quién decidió. Todavía no ocurre nada más y nadie más puede decidirla. Dentro de ese minuto, quien decidió (o un administrador) puede **deshacerla** con *Deshacer* en la tarjeta o el proceso `sysTaskUndo`: vuelve a `pending` sin dejar rastro. Es el mismo minuto que se tiene al decidir desde el chat ([Aprobar decisiones desde el chat](../AIAssistants/3Decisions.md)).
+3. Pasado el minuto, el job **`flxTaskApply`** (cada 15 segundos) la aplica: escribe `resolved` con `ResolvedBy` y `ResolvedDate`, y el log. Desde ahí ya no se puede deshacer.
+4. Si la tarea tiene **`OnResolveProcess`**, se ejecuta ese proceso de Flexygo con `TaskId`, `Outcome`, `Comment`, `ObjectName`, `ObjectWhere` y `CorrelationId`, atado al registro de la tarea si lo tiene. **La decisión se mantiene aunque el proceso falle**: el fallo vuelve como aviso (`WarningMessage`) y en `Data` (`OnResolveProcessSuccess: false`).
+5. Si la tarea tiene **`CallbackUrl`**, se encola un webhook con el resultado (§5). Lo mismo al cancelar y al expirar.
 
 ---
 
 ## 2. Reglas de decisión
 
-Una **regla** (`Tasks_Rules`, objeto `sysTaskRule`, nodo *Decision rules* / *Reglas de decisión* bajo *Logic and rules*, y sección *Decisions* del banco de trabajo del objeto) abre una tarea cuando se guarda un registro del objeto, sin código. Se evalúa después de confirmar el guardado, venga de una pantalla o de la web API; quien guarda no necesita permiso sobre los procesos de tareas.
+Una **regla** (una regla de `Objects_Rules` con un paso de decisión en `Objects_Actions`; objeto `sysTaskRule`, nodo *Decision rules* / *Reglas de decisión* bajo *Logic and rules*, y sección *Rules and actions* del banco de trabajo del objeto) abre una tarea cuando se guarda un registro del objeto, sin código. Se evalúa después de confirmar el guardado, venga de una pantalla o de la web API; quien guarda no necesita permiso sobre los procesos de tareas.
 
 ![La ficha de una regla de decisión](../../docs_assets/images/ApprovalsAndWebhooks/regla.png)
 
@@ -120,7 +125,8 @@ Todo pasa por la **web API** de Flexygo: `POST /token` (`grant_type=password`, `
 | Llamada | Qué hace |
 |---|---|
 | `POST /webapi/exec/sysTaskCreate` | Abre una tarea. Parámetros en el cuerpo (JSON), abajo. |
-| `POST /webapi/exec/sysTaskResolve/sysTask/{TaskId}` | Decide: `Outcome` (obligatorio, el `id` de una opción) y `Comment`. |
+| `POST /webapi/exec/sysTaskResolve/sysTask/{TaskId}` | Decide: `Outcome` (obligatorio, el `id` de una opción) y `Comment`. La decisión se aplica al cabo de un minuto. |
+| `POST /webapi/exec/sysTaskUndo/sysTask/{TaskId}` | Deshace la decisión tomada mientras no se ha aplicado. |
 | `POST /webapi/exec/sysTaskCancel/sysTask/{TaskId}` | Cancela: `Comment`. |
 | `POST /webapi/exec/sysTaskReassign/sysTask/{TaskId}` | Reasigna: `AssignedRoleId`, `AssignedUserId`, `Comment`. |
 | `GET /webapi/object/sysTask` · `GET /webapi/object/sysTask/{TaskId}` | Lee las tareas como cualquier objeto. |
@@ -183,7 +189,7 @@ POST /webapi/exec/sysTaskResolve/sysTask/0F12D8AC-…
 
 ## 4. Webhooks de salida
 
-Una **suscripción** (`WebHooks_Subscriptions`, objeto `sysWebhookSubscription`) manda un `POST` a una URL cuando se guarda o borra un registro del objeto. El guardado **nunca espera al receptor**: la entrega se encola (`WebHooks_Deliveries`) y el job **`flxWebhookDispatcher`** (cada minuto, proceso `SendPendingWebhooks`) la envía.
+Una **suscripción** (una regla de `Objects_Rules` con un paso webhook en `Objects_Actions`; objeto `sysWebhookSubscription`) manda un `POST` a una URL cuando se guarda o borra un registro del objeto. El guardado **nunca espera al receptor**: la entrega se encola (`WebHooks_Deliveries`) y el job **`flxWebhookDispatcher`** (cada minuto, proceso `SendPendingWebhooks`) la envía.
 
 Las suscripciones y sus envíos viven en **una sola pantalla**, *Outgoing webhooks* / *Webhooks de salida*, con dos pestañas: **Subscriptions** (*Suscripciones*) y **Deliveries** (*Envíos*), el registro de todo lo que se ha mandado. Es la misma en las dos pieles. También se llega desde la sección *Webhooks* del banco de trabajo del objeto.
 
