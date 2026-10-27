@@ -40,7 +40,7 @@ For example:
 
 The more specific your description, the better the agent's start. From there on, the agent tells you at every moment which command comes next.
 
-See the whole flow, phase by phase, in [Workflow with commands](./6Workflow.md). The state of the work can also be seen in the [panel and board](./7PanelAndBoard.md).
+See the whole flow, phase by phase, in [Workflow with commands](./6Workflow.md). The state of the work can also be seen in the [panel and board](./7PanelAndBoard.md), and what the agent builds with Flexygo 10, in [What it builds on Flexygo 10](./8Flexygo10.md).
 
 !!! tip "Tips for better results"
     See [Best practices](./5BestPractices.md) for recommendations on how to ask for things and when to open a new chat.

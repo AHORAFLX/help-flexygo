@@ -40,7 +40,7 @@ Por ejemplo:
 
 Cuanto más concreto seas en la descripción, mejor parte el agente. A partir de ahí, el agente te dice en cada momento qué comando toca.
 
-Consulta el flujo completo, fase a fase, en [Flujo de trabajo con comandos](./6Workflow.md). El estado del trabajo se ve también en el [panel y el tablero](./7PanelAndBoard.md).
+Consulta el flujo completo, fase a fase, en [Flujo de trabajo con comandos](./6Workflow.md). El estado del trabajo se ve también en el [panel y el tablero](./7PanelAndBoard.md), y lo que el agente construye con Flexygo 10, en [Lo que construye en Flexygo 10](./8Flexygo10.md).
 
 !!! tip "Consejos para mejores resultados"
     Consulta las [Buenas prácticas](./5BestPractices.md) para recomendaciones sobre cómo pedir las cosas y cuándo abrir un chat nuevo.
