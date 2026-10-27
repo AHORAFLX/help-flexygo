@@ -13,7 +13,7 @@ Desde la versión 10, **cada aplicación Flexygo es también un servidor MCP**: 
 ¿Quieres probarlo en quince minutos? [Pruébalo: un asistente de IA trabajando con tu aplicación](1TryIt.md).
 
 !!! note "No es el servidor MCP del constructor"
-    La sección [MCP](../../2ProductDevelopment/MCP/2Usage.md) de esta documentación describe el servidor que **construye** aplicaciones desde VS Code. Esta página describe lo contrario: la aplicación ya construida, expuesta a los asistentes de sus **usuarios**.
+    La sección [MCP](../../2ProductDevelopment/MCP/2Usage.md) de esta documentación describe el servidor que **construye** aplicaciones desde Claude Code. Esta página describe lo contrario: la aplicación ya construida, expuesta a los asistentes de sus **usuarios**.
 
 ```mermaid
 flowchart LR
@@ -75,7 +75,7 @@ Todo esto es configuración del producto: se escribe con el **origen del proyect
 
 ### Un prompt para que una IA lo rellene
 
-Rellenar estos campos a mano en una aplicación con decenas de objetos lleva tiempo. Un asistente con acceso **de lectura** a la base de configuración (por ejemplo, el [MCP del constructor](../../2ProductDevelopment/MCP/2Usage.md) en VS Code, o una consulta SQL) puede proponerlos. Este prompt le dice qué mirar, dónde está y cómo deducir para qué sirve la aplicación; lo que devuelve es un guion para revisarlo, no cambios hechos.
+Rellenar estos campos a mano en una aplicación con decenas de objetos lleva tiempo. Un asistente con acceso **de lectura** a la base de configuración (por ejemplo, el [MCP del constructor](../../2ProductDevelopment/MCP/2Usage.md) en Claude Code, o una consulta SQL) puede proponerlos. Este prompt le dice qué mirar, dónde está y cómo deducir para qué sirve la aplicación; lo que devuelve es un guion para revisarlo, no cambios hechos.
 
 ```text
 Eres un analista que prepara una aplicación Flexygo para que la usen asistentes de IA por MCP.

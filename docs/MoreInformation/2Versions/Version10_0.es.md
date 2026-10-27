@@ -375,7 +375,7 @@ La skin Flexygo 2026 renueva la aplicación, permite desplegar sus partes por se
 
 ### Seguridad
 
-- **La configuración de la aplicación cifra en disco las contraseñas y claves sensibles.** La protección incluye, entre otros datos, las cadenas de conexión, las contraseñas de correo y NuGet, y las claves JWT y Data Protection. Puedes gestionar la clave de cifrado con el ejecutable y trasladarla a otro servidor sin necesitar el SDK.
+- **La configuración de la aplicación cifra en disco las contraseñas y claves sensibles.** La protección incluye, entre otros datos, las cadenas de conexión, las contraseñas de correo y NuGet, y las claves JWT y Data Protection. Puedes gestionar la clave de cifrado con el ejecutable y trasladarla a otro servidor sin necesitar el SDK. Más información en [¿Cómo descifrar y volver a cifrar la configuración?](../1FAQ/DecryptWebConfig.md).
 - **La API de licencias separa la consulta y la actualización del estado, y envía el código de activación en la solicitud.** Este cambio afecta a las integraciones que consultan o actualizan el estado de la licencia y a las que envían un código de activación. Revisa las solicitudes de esas integraciones para adaptarlas al nuevo funcionamiento.
 - **Los cambios de roles y permisos se aplican sin que el usuario tenga que volver a iniciar sesión.** La actualización se refleja en las siguientes solicitudes del usuario. Incluye permisos asociados a roles y permisos de objetos, páginas e informes.
 - **Los objetos nuevos muestran su nombre en singular y se incorpora una vista para consultar las facultades de página.** La nueva vista permite consultar esas facultades mediante la capa de seguridad. Al crear un objeto, se utiliza su nombre en singular en lugar del título plural de la colección.

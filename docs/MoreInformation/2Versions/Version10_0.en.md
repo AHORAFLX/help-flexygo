@@ -366,7 +366,7 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Security
 
-- **The application configuration encrypts passwords and sensitive keys on disk.** Protection includes, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. You can manage the encryption key with the executable and move it to another server without needing the SDK.
+- **The application configuration encrypts passwords and sensitive keys on disk.** Protection includes, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. You can manage the encryption key with the executable and move it to another server without needing the SDK. More information in [How do I decrypt and re-encrypt the configuration?](../1FAQ/DecryptWebConfig.md).
 - **The licensing API separates querying and updating the status, and sends the activation code in the request.** This change affects integrations that query or update the license status and those that send an activation code. Review the requests used by these integrations and adapt them to the new behavior.
 - **Role and permission changes take effect without requiring the user to sign in again.** The changes are reflected in the user's subsequent requests. This includes permissions associated with roles and permissions for objects, pages, and reports.
 - **New objects display their name in the singular, and a view for checking page capabilities is added.** The new view lets you check these capabilities through the security layer. When you create an object, its singular name is used instead of the collection's plural title.
