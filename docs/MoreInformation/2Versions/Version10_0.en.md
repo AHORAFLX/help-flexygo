@@ -1,6 +1,6 @@
 # Version 10.0
 
-The Flexygo 2026 skin redesigns the application with an adaptable sidebar and new shortcuts, and allows the interface, backend, and database to be deployed separately on .NET 9.
+The Flexygo 2026 skin adds an adaptive sidebar; interface, backend and database deployments are separated, and AI assistants query data, modify records and run processes with authorization.
 
 ## New features
 
@@ -13,6 +13,12 @@ The Flexygo 2026 skin redesigns the application with an adaptable sidebar and ne
 - **You can customize account page resources from your product.** Adapt styles, scripts and icons at different customization levels. This lets you adjust sign-in, registration and password recovery pages for each product.
 - **You can switch between light, dark and system themes.** The interface and some integrated elements adapt their appearance to the selected theme. If you choose the system theme, Flexygo follows the device’s appearance preference.
 - **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. In addition, style loading does not fail if a LESS variable is missing from the CSS variables.
+
+### Integrations
+
+- **Connect AI assistants to query data and, if you authorize them, modify records and run processes.** The administrator enables MCP in Administración > Seguridad > WebAPI and assigns the permission to users or roles. When connecting Claude or ChatGPT from the profile menu, each user authorizes access and decides whether it will be read-only or also allow data changes. Assistants respect the user's permissions, can be viewed or disconnected from «Asistentes conectados», and the tools indicate whether they query, modify or allow retries. The MCP endpoint registers assistants from their metadata to avoid duplicates, includes the issuer in the login response and keeps dynamic client registration available. In addition, processes that take more than ten minutes no longer fail, and the application remains compatible with MCP.
+
+    ![Connect AI assistants to query data and, if you authorize them, modify records and run processes.](../../docs_assets/images/Versions/Version10_0/mcp-assistant-panel.png)
 
 ### Artificial Intelligence
 
@@ -97,10 +103,6 @@ The Flexygo 2026 skin redesigns the application with an adaptable sidebar and ne
 - **The configurator lets you set the connection and view database deployment progress.** The connection is shown once the database is configured. You can also view the deployment stages, including in development environments.
 - **You can install a database from the Flexygo configurator.** Installation starts directly from the configurator. The new flow also fixes starting this operation from that screen.
 - **You can install and update Flexygo from the initial configuration screens or from the configurator.** The update process includes the application and database changes, and downloads and deploys the required packages. It also accounts for operations affected by locked files or resources.
-
-### Integrations
-
-- **The MCP integration improves tool selection and assistant registration through metadata.** Assistants can distinguish which tools retrieve data, modify information or support retries, helping them choose how to use them. They can also be registered from their metadata document without being duplicated; the login response includes the issuer, and dynamic client registration remains available. In addition, processes that run for more than ten minutes no longer fail. Flexygo.Library maintains the MCP version compatible with the application.
 
 ### Interface
 

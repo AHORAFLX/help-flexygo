@@ -1,5 +1,13 @@
 # AI assistants connected to the application (MCP) <span class="fh-version-tag" title="Available since version 10">10.0+</span>
 
+!!! info "New in version 10.0"
+
+    From the profile menu, you can connect an assistant and choose whether it can only read data or also make changes. **Connected assistants** lets you review and disconnect connections. An administrator enables **Enable WebAPI** and **Enable MCP** in **Administration > Security > WebAPI**, and assigns the MCP permission to the authorized users or roles. The assistant's tools indicate whether they read data, make changes, or allow retries.
+
+    Processes that take more than ten minutes are also supported. Assistant registration uses its metadata to avoid duplicates and keeps dynamic client registration available.
+
+    ![New in version 10.0](../../docs_assets/images/2Reference/mcp-assistant-panel.png)
+
 Since version 10, **every Flexygo application is also an MCP server**: an AI assistant (Claude, ChatGPT, Gemini, Claude Code or any other client that speaks the *Model Context Protocol*) connects to the application with the usual user and **sees and does exactly what that user can see and do, nothing more**. Nothing has to be programmed in the application: the assistant reads the objects, views, processes and reports that already exist, with their descriptions, and works with them in the user's language.
 
 Want to try it in fifteen minutes? [Try it: an AI assistant working with your application](1TryIt.md).

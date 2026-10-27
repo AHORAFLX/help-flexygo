@@ -1,5 +1,13 @@
 # Asistentes de IA conectados a la aplicación (MCP) <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
 
+!!! info "Novedad en la versión 10.0"
+
+    Desde el menú del perfil, puedes conectar un asistente y elegir si tendrá permiso solo para consultar o también para modificar datos. En **Asistentes conectados** puedes revisar las conexiones y desconectarlas. El administrador activa **Enable WebAPI** y **Enable MCP** en **Administración > Seguridad > WebAPI**, y asigna el permiso MCP a los usuarios o roles autorizados. Las herramientas del asistente indican si consultan datos, los modifican o permiten reintentos.
+
+    También se admiten procesos que duran más de diez minutos. El registro de asistentes usa sus metadatos para evitar duplicados y mantiene disponible el registro dinámico de clientes.
+
+    ![Novedad en la versión 10.0](../../docs_assets/images/2Reference/mcp-assistant-panel.png)
+
 Desde la versión 10, **cada aplicación Flexygo es también un servidor MCP**: un asistente de IA (Claude, ChatGPT, Gemini, Claude Code o cualquier otro cliente que hable el *Model Context Protocol*) se conecta a la aplicación con el usuario de siempre y **ve y hace exactamente lo que ese usuario puede ver y hacer, nada más**. No hay que programar nada en la aplicación: el asistente lee los objetos, las vistas, los procesos y los informes que ya existen, con sus descripciones, y trabaja con ellos en el idioma del usuario.
 
 ¿Quieres probarlo en quince minutos? [Pruébalo: un asistente de IA trabajando con tu aplicación](1TryIt.md).

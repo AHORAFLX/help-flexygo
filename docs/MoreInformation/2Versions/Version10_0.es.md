@@ -1,6 +1,6 @@
 # Versión 10.0
 
-La skin Flexygo 2026 rediseña la aplicación con barra lateral adaptable y nuevos accesos, y permite desplegar por separado la interfaz, el backend y la base de datos sobre .NET 9.
+La skin Flexygo 2026 añade barra lateral adaptable; se separan los despliegues de interfaz, backend y base de datos, y asistentes de IA consultan datos, modifican registros y ejecutan procesos con autorización.
 
 ## Novedades
 
@@ -13,6 +13,12 @@ La skin Flexygo 2026 rediseña la aplicación con barra lateral adaptable y nuev
 - **Puedes personalizar los recursos de las páginas de cuenta desde tu producto.** Adapta estilos, scripts e iconos en distintos niveles de personalización. Esto permite ajustar las páginas de acceso, registro y recuperación de contraseña a cada producto.
 - **Puedes cambiar entre los temas claro, oscuro y del sistema.** La interfaz y algunos elementos integrados adaptan su apariencia al tema seleccionado. Si eliges el tema del sistema, Flexygo sigue la preferencia de apariencia del dispositivo.
 - **Puedes utilizar variables CSS personalizadas en tus estilos.** Flexygo admite variables CSS propias al aplicar los estilos. Además, la carga de estilos no falla si falta una variable LESS en las variables CSS.
+
+### Integraciones
+
+- **Conecta asistentes de IA para consultar datos y, si lo autorizas, modificar registros y ejecutar procesos.** El administrador activa MCP en Administración > Seguridad > WebAPI y asigna el permiso a usuarios o roles. Al conectar Claude o ChatGPT desde el menú del perfil, cada usuario autoriza el acceso y decide si será de solo lectura o también podrá cambiar datos. Los asistentes respetan los permisos del usuario, se pueden consultar o desconectar desde «Asistentes conectados» y las herramientas indican si consultan, modifican o permiten reintentos. El endpoint MCP registra asistentes a partir de sus metadatos para evitar duplicados, incluye el emisor en la respuesta de inicio de sesión y mantiene disponible el registro dinámico de clientes. Además, los procesos que superan diez minutos ya no fallan y se mantiene la compatibilidad de la aplicación con MCP.
+
+    ![Conecta asistentes de IA para consultar datos y, si lo autorizas, modificar registros y ejecutar procesos.](../../docs_assets/images/Versions/Version10_0/mcp-assistant-panel.png)
 
 ### Actualizador
 
@@ -138,10 +144,6 @@ La skin Flexygo 2026 rediseña la aplicación con barra lateral adaptable y nuev
 - **El configurador permite establecer la conexión y consultar el progreso del despliegue de la base de datos.** La conexión se muestra cuando la base de datos ya está configurada. También puedes consultar las etapas del despliegue, incluso en entornos de desarrollo.
 - **Puedes instalar una base de datos desde el configurador de Flexygo.** La instalación se inicia directamente desde el configurador. El nuevo flujo también corrige el inicio de esta operación desde esa pantalla.
 - **Puedes instalar y actualizar Flexygo desde las pantallas de configuración inicial o desde el configurador.** El proceso de actualización incluye la aplicación y los cambios de base de datos, y descarga y despliega los paquetes necesarios. También contempla operaciones afectadas por archivos o recursos bloqueados.
-
-### Integraciones
-
-- **La integración MCP mejora la selección de herramientas y el registro de asistentes mediante metadatos.** Los asistentes pueden distinguir qué herramientas consultan datos, modifican información o admiten reintentos, lo que les ayuda a elegir cómo utilizarlas. También pueden registrarse a partir de su documento de metadatos sin duplicarse; la respuesta de inicio de sesión incluye el emisor y sigue disponible el registro dinámico de clientes. Además, los procesos de más de diez minutos ya no fallan. Flexygo.Library mantiene la versión de MCP compatible con la aplicación.
 
 ### Inteligencia artificial
 
