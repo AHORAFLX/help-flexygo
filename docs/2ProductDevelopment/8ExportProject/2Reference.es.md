@@ -1,5 +1,13 @@
 # Exportar la aplicación como proyecto <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
 
+!!! info "Novedad en la versión 10.0"
+
+    El asistente de exportación muestra la plantilla y la versión elegidas, explica qué se incluirá y permite seguir el progreso hasta descargar el ZIP. Puedes elegir los archivos y carpetas personalizados y modificar la plantilla. De forma predeterminada, usa la plantilla del producto instalado y excluye los repositorios de documentos e imágenes y otros archivos grandes. Admite proyectos de más de 2 GB y comprueba que haya espacio suficiente. También registra las exportaciones y los errores.
+
+    La exportación no incluye usuarios y guarda los secretos en un archivo local que no se comparte. Si el origen activo está reservado, el asistente avisa y propone el primer destino disponible. Solo pueden usarlo los administradores autorizados.
+
+    ![Novedad en la versión 10.0](../../docs_assets/images/2Reference/export-as-project.png)
+
 Una aplicación Flexygo puede nacer configurándola a mano sobre el core —objetos, páginas, procesos, hojas de estilo— sin que exista ningún proyecto detrás. Cuando esa aplicación crece y hace falta **desarrollarla y mantenerla con integración continua**, **Exportar como proyecto** la convierte en un proyecto de la [plantilla de producto](../2Template.md): la misma solución que genera `dotnet new flexygoproduct`, con la configuración, el modelo de datos, los ficheros estáticos y las DLL de la instalación ya dentro, en un zip listo para abrir con Visual Studio y subir a un repositorio.
 
 ¿Quieres hacerlo de principio a fin con una aplicación tuya? [Pruébalo: de aplicación instalada a proyecto que compila y arranca](1TryIt.md).

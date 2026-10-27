@@ -1,5 +1,13 @@
 # Icons
 
+!!! info "New in version 10.0"
+
+    In **Help** > **Icon list**, you can browse more than 5,000 icons, filter them by library and category, preview them, and click one to copy its class. You can then use it in a module, menu, or button.
+
+    If you are an administrator, you can add your own SVG icons with **New icon** and generate the font for exportable libraries in the project with **Generate font**. If a library is not compatible, the screen explains why font generation is unavailable and lets you download a ZIP instead.
+
+    ![New in version 10.0](../../docs_assets/images/Icon/icon-browser.png)
+
 Use **flexygo** icon's collection in your templates and object/collection configuration, custom controls.
 
 Watch the following video for additional information:

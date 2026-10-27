@@ -1,5 +1,13 @@
 # Flexygo Updater
 
+!!! info "New in version 10.0"
+
+    In **Version management**, you can review what each version includes and use **Update** to start a wizard that can also revert the application or switch it to another version. Before continuing, the wizard checks the requirements and shows progress step by step, with Flexygo tips. When it finishes, it displays the result, the time taken and the version it started from. Select **Show log** to view the detailed log.
+
+    Other administrators can follow an operation in progress. Each update or removal keeps its result and log. Administrators only can access this feature.
+
+    ![New in version 10.0](../../docs_assets/images/UpdateFlow/updater-wizard.png)
+
 The Flexygo updater lets you update the version of the deployed application without having to reinstall from scratch. The process coordinates the Frontend and Backend to validate, download, and apply the new version, automatically performing the necessary backups and configuration changes.
 
 ## Update flow

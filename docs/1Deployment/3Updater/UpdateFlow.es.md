@@ -1,5 +1,13 @@
 # Actualizador de Flexygo
 
+!!! info "Novedad en la versión 10.0"
+
+    En **Version management**, puedes consultar las novedades de cada versión y usar **Update** para iniciar un asistente que también permite revertir la aplicación o cambiarla a otra versión. Antes de continuar, el asistente comprueba los requisitos y muestra el progreso paso a paso, con consejos de Flexygo. Al terminar, indica el resultado, el tiempo empleado y la versión de origen. Usa **Show log** para consultar el registro detallado.
+
+    Otros administradores pueden seguir una operación en curso. Cada actualización o eliminación conserva su resultado y su registro. Solo pueden acceder los administradores.
+
+    ![Novedad en la versión 10.0](../../docs_assets/images/UpdateFlow/updater-wizard.png)
+
 El actualizador de Flexygo permite actualizar la versión de la aplicación desplegada sin necesidad de reinstalar desde cero. El proceso coordina Frontend y Backend para validar, descargar y aplicar la nueva versión, realizando los backups y cambios de configuración necesarios de forma automática.
 
 ## Flujo de actualización
