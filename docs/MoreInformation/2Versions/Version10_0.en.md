@@ -198,9 +198,10 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Security
 
-- **You can control who runs each process, even if it is not linked to an object, and restrict it with optional SQL conditions.** Configure permissions for users, roles, and capabilities from their security screens or from the process record. An optional SQL condition allows execution only if it returns 1 or true; if the condition is not met, the process is hidden from menus and toolbars. The rule is applied before object-specific permissions, and you can check in Security who can run each process and what condition restricts it.
-- **The 2026 skin includes a screen for viewing and managing the security of users, roles, capabilities, and objects.** You can open it from the workspace or from users, roles, capabilities, and objects, with the relevant item selected; it also brings together the security settings for modules, properties, and processes. The table shows permissions by action, groups permissions for each field under its object, and lets you compare permissions between objects; it also shows navigation rules and module access conditions. View the applied rules, the default policy, and the order in which roles, capabilities, and users determine access, without changing them. From the screen, you can create, modify, or delete rules, view the available actions, and check a preview before applying them; you can also filter the catalog, which includes pages, templates, and reports. The screen is translated into the seven available languages, and the previous one is still available in flexy2022.
+- **You can control who runs each process, even if it is not linked to an object, and add optional SQL conditions.** Permissions can be configured for users, roles, and capabilities from their security screens or from the process record. The condition is checked when validating the permission and only allows the process to run if it returns 1 or true; if it is not met, the process is hidden from menus and toolbars. From security, you can check which processes can be run and what condition limits their use.
+- **View and manage permissions for users, roles, capabilities, objects, modules, properties, and processes from the security screens.** The manager lets you review permissions by action and add conditions, block rules, or delete them. You can open it from the relevant screens with the item selected, and preview changes before applying them. The catalog includes pages, templates, and reports, and the screen is translated into the seven available languages.
 - **You can configure object security conditions by choosing a property, an operator, and a value.** The wizard offers the object's properties and lets you select context values, so you do not have to remember table names or special tags. Before saving, you can test the condition and view the SQL that was run.
+- **The 2026 skin includes a screen for viewing and managing permissions for users, roles, and capabilities.** The screen shows the applied rules and the default policy, and explains which rule and condition determine access. It lets you create, modify, and delete rules, compare permissions between objects, and view field and navigation item permissions. It also shows when a module condition determines access; the previous screen is still available in flexy2022.
 
 ### WebAPI Security
 
@@ -366,11 +367,11 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Security
 
-- **The application configuration encrypts passwords and sensitive keys on disk.** Protection includes, among other data, connection strings, email and NuGet passwords, and JWT and Data Protection keys. You can manage the encryption key with the executable and move it to another server without needing the SDK. More information in [How do I decrypt and re-encrypt the configuration?](../1FAQ/DecryptWebConfig.md).
-- **The licensing API separates querying and updating the status, and sends the activation code in the request.** This change affects integrations that query or update the license status and those that send an activation code. Review the requests used by these integrations and adapt them to the new behavior.
-- **Role and permission changes take effect without requiring the user to sign in again.** The changes are reflected in the user's subsequent requests. This includes permissions associated with roles and permissions for objects, pages, and reports.
-- **New objects display their name in the singular, and a view for checking page capabilities is added.** The new view lets you check these capabilities through the security layer. When you create an object, its singular name is used instead of the collection's plural title.
-- **The password change page displays form errors and validation messages.** This helps you identify problems when entering or updating the password and fix them before continuing.
+- **The application configuration encrypts passwords and sensitive keys on disk.** The protected data includes connection strings, email and NuGet passwords, and JWT and Data Protection keys. The executable lets you manage the encryption key and transfer it to another server without needing the SDK.
+- **The licenses API separates status queries from status updates and sends the activation code in the request.** This change affects integrations that query or update the license status, as well as those that send an activation code. Review these integrations to adapt them to the new separation of operations.
+- **Changes to roles and permissions take effect without requiring the user to log in again.** The update includes permissions associated with roles and those for objects, pages, and reports. Changes made are reflected in the user's subsequent requests.
+- **New objects display their name in the singular, and a view for consulting page capabilities is added.** The view lets you consult page capabilities through the security layer. When creating an object, the collection's plural title is no longer used as its name.
+- **The password-change page displays form errors and validation messages.** This helps you identify problems when entering or updating the password and correct them before continuing.
 
 ### Skins
 
@@ -531,10 +532,10 @@ The Flexygo 2026 skin renews the application, lets you deploy its parts separate
 
 ### Security
 
-- **Object views apply the role's list permissions and do not show rows outside the user's access.** When you query a view from JavaScript, the same list filters as in the collection are applied. Submitted filters cannot expand permissions and are rejected if they contain certain formatting errors. Administrators and views configured as «No filter» keep their existing behavior.
-- **Authenticated users can no longer obtain the token signing key.** The key is generated in the configuration during the first startup, but is no longer available through an address accessible to any authenticated user. This prevents other users from using it to create their own tokens.
-- **External addresses and return destinations are validated to prevent unsafe connections or redirects.** Retrieving MCP client metadata is restricted to public addresses. Login and password change returns are restricted to application pages, and decision calls can only be directed to public or permitted addresses.
-- **You can sign in and access downloads and reports using a token included in the URL.** The token is retained during redirects, including when the link requests that you sign in before opening the content.
+- **Records, views, and templates respect the user's role permissions and list filters.** If the role cannot access the list, no results are returned; access to records queried without a view is also denied. The filters sent cannot expand the permitted data and are rejected if they contain certain invalid formats. Administrators and views configured as «No filter» retain their behavior.
+- **Authenticated users can no longer obtain the key used to sign tokens.** The key is still generated in the configuration during the first startup. Since it is no longer available through an address accessible to any authenticated user, it cannot be used from there to create custom tokens.
+- **External URLs and return destinations are validated to prevent unsafe connections or redirects.** Retrieving metadata for MCP clients is limited to public URLs. Login and password-change return destinations are restricted to application pages; decision calls are limited to public or permitted URLs.
+- **You can log in and access downloads and reports using a token included in the URL.** The token is preserved during redirects, even if the link requests a login before opening the content. This keeps the session and access to the destination in place as you continue.
 
 ### Skins
 
