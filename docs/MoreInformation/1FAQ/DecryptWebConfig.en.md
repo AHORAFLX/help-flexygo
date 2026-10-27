@@ -18,7 +18,15 @@ For security, Flexygo keeps the connection strings, the mail password and other 
     (or `Flexygo.Frontend.exe config decrypt` for the Frontend).
 
 2. Edit the value in `appsettings.json`: the connection string under `ConnectionStrings`, the mail account under `MailSettings`.
-3. Restart the application (in IIS, recycle the pool). When it starts it encrypts again whatever is left in plain text.
+3. Encrypt the configuration again:
+
+    ```
+    Flexygo.Backend.exe config encrypt
+    ```
+
+    (or `Flexygo.Frontend.exe config encrypt` for the Frontend).
+
+4. Restart the application (in IIS, recycle the pool) so it reads the new value. If you skip step 3, the application encrypts whatever is left in plain text when it starts.
 
 `config status` says where the key is and what each file holds encrypted.
 

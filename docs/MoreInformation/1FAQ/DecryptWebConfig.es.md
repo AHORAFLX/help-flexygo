@@ -18,7 +18,15 @@ Por seguridad, Flexygo guarda cifradas las cadenas de conexión, la contraseña 
     (o `Flexygo.Frontend.exe config decrypt` para el Frontend).
 
 2. Edita el valor en el `appsettings.json`: la cadena en `ConnectionStrings`, la cuenta de correo en `MailSettings`.
-3. Reinicia la aplicación (en IIS, recicla el pool). Al arrancar vuelve a cifrar lo que ha quedado en claro.
+3. Vuelve a cifrar la configuración:
+
+    ```
+    Flexygo.Backend.exe config encrypt
+    ```
+
+    (o `Flexygo.Frontend.exe config encrypt` para el Frontend).
+
+4. Reinicia la aplicación (en IIS, recicla el pool) para que lea el valor nuevo. Si te saltas el paso 3, la aplicación cifra al arrancar lo que haya quedado en claro.
 
 `config status` dice dónde está la llave y qué tiene cifrado cada fichero.
 
