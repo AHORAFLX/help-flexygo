@@ -1,5 +1,13 @@
 # Flujo de trabajo con comandos
 
+!!! info "Novedad en la versión 10.0"
+
+    Ahora puedes crear una aplicación Flexygo hablando con un asistente conectado al MCP. El asistente recoge los requisitos, te pregunta antes de empezar, propone un diseño y organiza el trabajo en bloques y tareas. Después crea la aplicación y la abre en el navegador para que puedas comprobarla.
+
+    Desde el asistente también puedes abrir un tablero para seguir las tareas, las decisiones, el historial y los controles de calidad.
+
+    ![Novedad en la versión 10.0](../../docs_assets/images/6Workflow/mcp-product-building.png)
+
 Con Claude Code, el servidor MCP de Flexygo se maneja con **comandos** que empiezan por `/flx-`. Cada comando es una fase, y cada fase es la puerta de la siguiente: el agente no salta una fase ni adivina en cuál está.
 
 !!! tip "¿No ves los comandos?"
