@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # Migration to Flexygo 1.3.0.1
 
 Version **1.3.0.1** of Flexygo introduces important structural changes in derived projects: a new static assets system via NuGet, a `conf/` configuration folder, a `buildTransitive` system, a new solution-level `nuget.config`, and the removal of `install.map.json`, among others.

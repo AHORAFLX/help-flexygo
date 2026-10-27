@@ -7,6 +7,9 @@ El modo **Migración** del instalador permite trasladar proyectos y aplicaciones
   <figcaption>El modo Migración ofrece 2 opciones</figcaption>
 </figure>
 
+!!! danger "Flexygo 10 requiere SQL Server 2022 o superior"
+    A partir de Flexygo 10, la versión mínima de SQL Server es **SQL Server 2022**. Antes de migrar, comprueba que el servidor SQL donde están las bases de datos de la aplicación cumple este requisito; si no, actualízalo primero. Consulta los [Requisitos del sistema](../SystemRequirements.md).
+
 ---
 
 === "Migrar Productos"
