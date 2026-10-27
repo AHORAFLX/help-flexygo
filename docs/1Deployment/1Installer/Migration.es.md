@@ -18,6 +18,18 @@ El modo **Migración** del instalador permite trasladar proyectos y aplicaciones
 
     Esta opción escanea el workspace en busca de soluciones .NET Framework de Flexygo y permite migrarlas a la estructura de Flexygo (.NET moderno).
 
+    ### Migrar desde VS Code con Claude Code
+
+    Si abres un proyecto de Flexygo para .NET Framework en VS Code con la [extensión de Flexygo](../../2ProductDevelopment/5IDEExtensions.md#migrar-un-proyecto-antiguo), el panel avisa de que usa una versión obsoleta y ofrece **Migrar a Flexygo Core**. La ventana que se abre propone dos caminos:
+
+    - **Con IA (Claude Code)**: la extensión instala la skill `flexygo-migrar-core`, que hace toda la migración por ti: crea la rama, actualiza el NuGet de Flexygo, lanza este instalador, coloca la solución Core en el repositorio, la valida y la corrige, y deja un informe, con un commit por fase. Copia el comando `/flexygo-migrar-core` y pégalo en Claude Code abierto en la carpeta del proyecto, o pulsa **Abrir Claude Code en un terminal**.
+    - **Sin IA**: descarga el instalador y migra el proyecto a mano con los pasos de este apartado.
+
+    <figure markdown="span">
+      ![Migrar a Flexygo Core desde VS Code](../../docs_assets/images/CoreDeployment/installer/Migracion/migrarVSCodeClaude.png)
+      <figcaption>La extensión de VS Code detecta el proyecto .NET Framework y propone migrarlo con la skill de Claude Code</figcaption>
+    </figure>
+
     ### Carga del workspace
 
     Indica la **carpeta de trabajo** donde se encuentran los proyectos y pulsa **Escanear proyectos**. El instalador analizará el workspace en busca de soluciones .NET Framework de Flexygo.
