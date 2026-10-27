@@ -1,6 +1,6 @@
 # Version 10.0
 
-Refreshes the skin with a responsive sidebar, integrates AI assistants and adds guided assistants for installation and updates, as well as new deployment and icon management options.
+Runs on .NET 9, refreshes the skin, connects AI assistants, manages updates and rollbacks, allows separate deployments, exports projects from administration, and configures installation with wizards.
 
 ## New features
 
@@ -78,13 +78,14 @@ Refreshes the skin with a responsive sidebar, integrates AI assistants and adds 
 
 ### Installation
 
-- **Configure Flexygo with a guided wizard from the login screen, with process tracking and the option to resume it.** The wizard replaces the old installation screen and lets you configure the backend, databases, project, administrator password and, when applicable, email. It checks the values and generates the required steps for each active pending connection; it also supports different schema sources, such as a dacpac file or a NuGet feed. It shows the progress of publishing and database creation, and asks for the project name if it is missing from an existing database. If you leave or an error occurs, you can return to the first pending step and retry without losing the context; credential errors identify the affected fields. If email is already configured, the wizard skips that step, and when it finishes, it reloads the login screen.
+- **Configure Flexygo from the login screen with a wizard that guides you through setup and lets you resume it.** The wizard brings together the connection, databases, project, email, and publishing, and lets you configure pending data connections for each installation. It checks the values, shows progress, and keeps each step available so you can fix errors or try again; if you leave, you can continue from the first pending step. It is only available while installation is pending and replaces the previous installer.
 
-    ![Configure Flexygo with a guided wizard from the login screen, with process tracking and the option to resume it.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
-- **You can configure an unattended installation that completes automatically when the backend starts.** You can create, update or reuse databases and define the project name and administrator password. If a step fails, the installation reports it as a failed startup.
-- **Install a database and check deployment progress from the configurator.** The configurator displays the connection when the database is already configured and reports the deployment stages. Database installation from this screen is also available in development environments.
-- **Flexygo initial configuration includes a revamped flow for setting up and registering the application.** The process brings together project, database and email configuration, and includes user registration. It also includes empty states and titles on the screen, along with the visual adjustments planned for this flow.
-- **You can install and update Flexygo from the initial configuration screens and the configurator.** The new process downloads and installs the application packages and deploys the new version. It can also update the database and accounts for operations that may be affected by locked files or resources.
+    ![Configure Flexygo from the login screen with a wizard that guides you through setup and lets you resume it.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
+- **You can configure an unattended installation to complete automatically when the backend starts.** It lets you create, update, or reuse databases, as well as set the project name and administrator password. If a step fails, the installation reports it with a failed startup.
+- **You can install a database and check deployment progress from the configurator.** The configurator shows the connection when the database is already configured and reports the deployment stages. This option also works in development environments.
+- **Initial setup introduces a new flow for configuring Flexygo and registering users.** The process includes project, database, and email settings. It also handles states without a title and an empty project name.
+- **Install and update Flexygo from the configuration screens, including updates to the application and database.** The new update process is managed from the configurator and downloads and installs the packages needed to deploy the new version. It also accounts for operations affected by locked files or resources.
+- **You can install and update Flexygo from the initial configuration screens.** The wizard brings together the application installation and update options. This lets you perform these tasks from within the application itself.
 
 ### Artificial Intelligence
 
@@ -474,7 +475,7 @@ Refreshes the skin with a responsive sidebar, integrates AI assistants and adds 
 
 ### Installation
 
-- **Addon installation correctly recognizes beta versions.** The interpretation of the «-beta» suffix in the addon version is corrected.
+- **Addon installation now correctly recognizes beta versions.** The «-beta» suffix in the addon version is interpreted correctly.
 
 ### Interface
 

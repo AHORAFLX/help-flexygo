@@ -1,6 +1,6 @@
 # Versión 10.0
 
-Renueva la skin con una barra lateral adaptable, integra asistentes de IA y añade asistentes guiados para instalación y actualizaciones, además de nuevas opciones de despliegue y gestión de iconos.
+Funciona sobre .NET 9, renueva la skin, conecta asistentes de IA, gestiona actualizaciones y reversiones, permite despliegues por separado, exportar proyectos desde administración y configurar la instalación con asistentes.
 
 ## Novedades
 
@@ -78,13 +78,14 @@ Renueva la skin con una barra lateral adaptable, integra asistentes de IA y aña
 
 ### Instalación
 
-- **Configura Flexygo con un asistente guiado desde la pantalla de inicio de sesión, con seguimiento del proceso y posibilidad de retomarlo.** El asistente sustituye a la antigua pantalla de instalación y permite configurar el backend, las bases de datos, el proyecto, la contraseña de administración y, cuando corresponde, el correo. Comprueba los valores y genera los pasos necesarios para cada conexión activa pendiente; también admite distintos orígenes para el esquema, como un archivo dacpac o un feed de NuGet. Muestra el avance de la publicación y la creación de bases de datos, y solicita el nombre del proyecto si falta en una base de datos existente. Si sales o se produce un error, puedes volver al primer paso pendiente y reintentarlo sin perder el contexto; los errores de credenciales señalan los campos afectados. Cuando el correo ya está configurado, omite ese paso, y al terminar vuelve a cargar la pantalla de inicio de sesión.
+- **Configura Flexygo desde la pantalla de inicio de sesión con un asistente que guía la puesta en marcha y permite retomarla.** El asistente reúne la conexión, las bases de datos, el proyecto, el correo y la publicación, y permite configurar conexiones de datos pendientes según cada instalación. Comprueba los valores, muestra el progreso y mantiene cada paso disponible para corregir errores o volver a intentarlo; si sales, podrás continuar desde el primer paso pendiente. Solo está disponible mientras la instalación está pendiente y sustituye al instalador anterior.
 
-    ![Configura Flexygo con un asistente guiado desde la pantalla de inicio de sesión, con seguimiento del proceso y posibilidad de retomarlo.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
-- **Puedes configurar una instalación desatendida que se completa automáticamente al iniciar el backend.** Puedes crear, actualizar o reutilizar las bases de datos y definir el nombre del proyecto y la contraseña de administración. Si falla algún paso, la instalación lo comunica mediante un inicio fallido.
-- **Instala una base de datos y consulta el progreso del despliegue desde el configurador.** El configurador muestra la conexión cuando la base de datos ya está configurada e informa de las etapas del despliegue. La instalación de la base de datos desde esta pantalla también está disponible en entornos de desarrollo.
-- **La configuración inicial de Flexygo incorpora un flujo renovado para preparar y registrar la aplicación.** El proceso reúne la configuración del proyecto, la base de datos y el correo, e incorpora el registro de usuarios. También contempla estados y títulos vacíos en la pantalla, junto con los ajustes visuales previstos para este flujo.
-- **Puedes instalar y actualizar Flexygo desde las pantallas de configuración inicial y el configurador.** El nuevo proceso descarga e instala los paquetes de la aplicación y despliega la nueva versión. También puede actualizar la base de datos y contempla operaciones que pueden verse afectadas por archivos o recursos bloqueados.
+    ![Configura Flexygo desde la pantalla de inicio de sesión con un asistente que guía la puesta en marcha y permite retomarla.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
+- **Puedes configurar una instalación desatendida para que se complete automáticamente al iniciar el backend.** Permite crear, actualizar o reutilizar las bases de datos, además de definir el nombre del proyecto y la contraseña de administración. Si falla algún paso, la instalación lo comunica mediante un inicio fallido.
+- **Puedes instalar una base de datos y consultar el progreso del despliegue desde el configurador.** El configurador muestra la conexión cuando la base de datos ya está configurada e informa de las etapas del despliegue. Esta opción también funciona en entornos de desarrollo.
+- **La configuración inicial estrena un flujo para configurar Flexygo y registrar usuarios.** El proceso incluye los ajustes del proyecto, la base de datos y el correo. También contempla estados sin título y el tratamiento de un nombre de proyecto vacío.
+- **Instala y actualiza Flexygo desde las pantallas de configuración, con actualización de la aplicación y la base de datos.** El nuevo proceso de actualización se gestiona desde el configurador y descarga e instala los paquetes necesarios para desplegar la nueva versión. También contempla operaciones afectadas por archivos o recursos bloqueados.
+- **Puedes instalar Flexygo y actualizarlo desde las pantallas de configuración inicial.** El asistente reúne las opciones de instalación y actualización de la aplicación. Así puedes realizar estas tareas desde la propia aplicación.
 
 ### Configuración
 
@@ -483,7 +484,7 @@ Renueva la skin con una barra lateral adaptable, integra asistentes de IA y aña
 
 ### Instalación
 
-- **La instalación de addons reconoce correctamente las versiones beta.** Se corrige la interpretación del sufijo «-beta» en la versión del addon.
+- **La instalación de addons reconoce correctamente las versiones beta.** Se interpreta correctamente el sufijo «-beta» de la versión del addon.
 
 ### Inteligencia artificial
 
