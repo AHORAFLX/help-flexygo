@@ -11,7 +11,7 @@ En caso de necesitar abrir páginas de aplicaciones **flexygo** externas desde t
     ![Connected flexygo](../../docs_assets/images/FlexygoConnector/ConnectedFlexygo.PNG "Image 1. Connected flexygo")
 
 2.  En tu aplicación externa **flexygo** (no en esta), debes autorizar esta app:
-    * Abre tu aplicación externa y ve a **Admin Work Area > Security > WebAPI**, luego pulsa **Authorized Apps**.
+    * Abre tu aplicación externa y ve a el panel de control → área **Seguridad** → *WebAPI* (en la skin flexy2022: *Admin Work Area > Security > WebAPI*), luego pulsa **Authorized Apps**.
     * Crea una nueva app autorizada usando el nombre del proyecto actual como App ID.  
       **App ID** es el nombre del proyecto de tu primera aplicación **flexygo** (1) y **return token url** es la URL del token web configurada en el paso anterior en tu flexygo principal (1).
 

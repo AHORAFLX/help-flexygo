@@ -4,7 +4,7 @@ Los popovers y tooltips permiten mostrar información adicional sobre un element
 
 ## Configuración
 
-El componente web flx-popover tiene dos modos de funcionamiento y cuatro atributos adicionales:
+El componente web `flx-tooltip` tiene dos modos de funcionamiento y estos atributos:
 
 ### Modos
 

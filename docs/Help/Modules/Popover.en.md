@@ -4,7 +4,7 @@ Popovers and tooltips allows you to display further information on an element wh
 
 ## Configuration
 
-The flx-popover web component has two working modes and four additional attributes:
+The `flx-tooltip` web component has two working modes and these attributes:
 
 ### Modes
 

@@ -144,6 +144,9 @@ Select count(id) as value,''%'' as symbol, ''blue'' as barColor, ''red'' as colo
 
 ## Easy Info
 
+!!! tip "Version 10"
+    Since version 10 easy info supports cards, links, a period switch and new SQL columns. The full reference is in [Easy info: cards, links and periods](EasyInfo.md).
+
 You can add your easy info charts by referencing an easy info module
 
 ```html

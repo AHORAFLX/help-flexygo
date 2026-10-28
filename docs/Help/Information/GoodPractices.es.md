@@ -12,13 +12,16 @@ Coloca tu carpeta personalizada, por ejemplo con el mismo nombre de tu proyecto,
 
 ## Login
 
-**Flexygo** tiene un **login.css por defecto que no debe modificarse ni moverse** de su carpeta original, ya que será sobrescrito en la siguiente actualización de versión.  
-Crea una carpeta **css** dentro de tu custom folder y coloca allí un archivo **login.css**, el cual sobrescribirá al login.less original.  
-De esta forma puedes cambiar cualquier clase o id de la pantalla de login.
+Los estilos y scripts nativos de las páginas de cuenta (login, registro, contraseña olvidada, autenticación en dos pasos…) **no deben modificarse**, ya que se sobrescriben en la siguiente actualización de versión.  
+Para personalizarlas, crea tus propios ficheros con la misma ruta en la carpeta `custom/` del Frontend (o en la carpeta de tu producto). flexygo los busca en cascada —`custom/` → producto → nativo— y carga todos los que encuentra, de forma que los tuyos ganan. Por ejemplo:
 
-También puedes crear una carpeta **js** en el custom folder y añadir un **login.js** para incluir lógica de cliente.
+* `custom/css/views/account/account.css` y `custom/js/views/account/account.js` para todas las páginas de cuenta.
+* `custom/css/views/account/login/login.css` y `custom/js/views/account/login/login.js` solo para el login.
+* `custom/css/views/account/authentication/authentication.css` solo para la página de autenticación.
 
-Además, puedes personalizar el idioma de la pantalla de login modificando *Login Language Setting* en **Admin Work Area > Environment > Settings**, con 4 opciones disponibles: _es-ES | ca-ES | fr-FR | de-DE_
+Tienes todas las rutas y las variables de tema en [Personalización de assets](../../2ProductDevelopment/6Customization.md).
+
+Además, puedes fijar el idioma de la pantalla de login con el ajuste **LoginLanguage** (grupo *Seguridad*) en el panel de control → área **Entorno** → *Parámetros* (en la skin flexy2022: *Admin Work Area > Environment > Settings*). Admite 7 idiomas: _ca-ES | de-DE | en-GB | es-ES | fr-FR | it-IT | pt-PT_. Si se deja vacío, el login usa el idioma del navegador.
 
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
@@ -65,10 +68,10 @@ Puedes añadir código cliente personalizado para extender flexygo de las siguie
 
 ## DLL Processes
 
-**Crea una carpeta bin dentro del custom folder** y coloca allí tus dll personalizadas.  
-Puedes ver cómo crear procesos dll consultando el tutorial de Custom dll.
+**Coloca tus dll personalizadas en la carpeta `custom/bin` del Backend.**  
+Puedes ver cómo crear procesos dll consultando el tutorial de [DLL personalizada](../Programming/CustomDLL.md).
 
-No coloques las dll directamente en la carpeta bin de flexygo o se perderán al actualizar la versión.
+No coloques las dll directamente en la carpeta del Backend junto a las de flexygo o se perderán al actualizar la versión.
 
 ## Favicon
 

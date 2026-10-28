@@ -1,33 +1,41 @@
 # Did you know there is a mode for performing maintenance work on the application?
 
-Starting with Flexygo version 5.3, a maintenance mode is available through the update panel.
+Maintenance mode blocks access to the application while you work on it. Starting with version 10 it's managed from the **Version Management** screen, which only administrators can open. In the Flexygo 2026 skin, open it by clicking the **Version** row at the bottom of the sidebar.
 
-![](../../docs_assets/images/DidYouKnow/MaintenanceMode/1.png)
+## Enabling or scheduling maintenance
 
-## Main features
+1. In **Version Management**, open **More actions** (the three dots next to **Update**) and choose **Maintenance mode**.
 
-Two available options:
+    <figure markdown="span">
+      ![Version Management More actions menu](../../docs_assets/images/DidYouKnow/MaintenanceMode/maintenance-menu.png)
+      <figcaption>More actions: Maintenance mode and Refresh screens</figcaption>
+    </figure>
 
-1. Enable maintenance mode for every user except the admin user
-2. Ability to refresh the screens of every user or a specific one
+2. In **When should it start?**, choose **Start now** or **Schedule** and set the **Start date and time**.
+3. Optionally, write a **Message for users (optional)**. **This is what users will see** shows how the maintenance page will look.
+4. Click **Activate** and confirm.
 
-## Behavior in maintenance mode
+<figure markdown="span">
+  ![Maintenance mode panel](../../docs_assets/images/DidYouKnow/MaintenanceMode/maintenance-panel.png)
+  <figcaption>The panel with <b>Schedule</b> chosen: start date and time, message and preview of the maintenance page (Spanish interface)</figcaption>
+</figure>
 
-* Regular users see a maintenance interface
+While it's on or scheduled, **Version Management** shows a notice with a **Manage** button to change it. For a scheduled maintenance you can use **Reschedule** or **Cancel schedule**; otherwise it turns on by itself on the scheduled date.
 
-![](../../docs_assets/images/DidYouKnow/MaintenanceMode/2.png)
+## Who can still get in
 
-* The administrator user keeps full access to the application
+* **The administrator who enabled it** keeps using the application normally.
+* **Other administrators** can open **Version Management** to turn it off, even if whoever enabled it isn't available.
+* **Every other user** is redirected to the maintenance page, with the message you entered. Open pages update when the state changes and, when maintenance ends, users can go back to their page.
 
-![](../../docs_assets/images/DidYouKnow/MaintenanceMode/3.png)
+To finish, click **Maintenance mode** and then **Deactivate**. Maintenance stays on until an administrator turns it off: it has no scheduled end.
 
-## Disabling the mode
+!!! note "Note"
+    During an application update, maintenance is controlled by the update process itself, with no exemptions for anyone, and it can't be turned off manually until the update finishes.
 
-To disable maintenance mode, you can use the update panel's own button or click the maintenance window that appears at the top left over the logo.
+## Refreshing users' screens
 
-## Scheduled maintenance
+In **Version Management**, open **More actions** and choose **Refresh screens**. You can reload the screen of **All users** connected or of **Specific users**, whom you can search for and select.
 
-A new setting was added to the Version Update block that lets you schedule future maintenance. When a date is scheduled, a notice appears to every user showing the remaining time.
-
-![](../../docs_assets/images/DidYouKnow/MaintenanceMode/4.png)
-![](../../docs_assets/images/DidYouKnow/MaintenanceMode/5.png)
+!!! warning "Removed processes"
+    The system processes `EnableMaintenanceMode` and `DisableMaintenanceMode` were removed in version 10. If you called them from a button or an integration, use the **Version Management** screen.

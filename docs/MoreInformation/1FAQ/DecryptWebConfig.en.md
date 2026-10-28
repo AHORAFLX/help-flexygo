@@ -1,15 +1,33 @@
-# How do I decrypt the connection string and mail account from the Web.config file?
+# How do I decrypt and re-encrypt the configuration?
 
-For security reasons, the Flexygo applications installer encrypts the content of 2 sections of the `Web.config` file, which hold the connection strings and the mail account configuration the system uses to send emails.
+For security, Flexygo keeps the connection strings, the mail password and other keys of its configuration encrypted. They live in the `appsettings` files of the `conf` folder of the Backend and the Frontend, and they are encrypted value by value: the rest of the file stays readable.
 
-There are 2 separate articles for these, since they are different sections within the same file. Both detail the commands to decrypt them as well as to re-encrypt them once the relevant changes have been made.
+* **Which files:** only `appsettings.json` and `appsettings.Production.json`. The others (`appsettings.Development.json`…) always stay in plain text.
+* **Where:** in IIS and in production Docker containers. Anywhere else (development, Kestrel, the installer's test Docker) the application decrypts them when it starts.
+* **The key:** on Windows there is **one per server** (`%ProgramData%\Flexygo\keys\config.key`), shared by every application on the server. To move an application to another server, `config export-key` on the source and `config import-key` on the destination.
+* **Docker:** in production the key is given as the secret `flexygo_config_key`, the same one for every container. If the secret's file is missing, the application does not start and says why.
 
-## Sections to decrypt
+## Changing a connection string, the mail account or another key
 
-* **Connection strings:** [How do I modify the encrypted connection strings?](EncryptedConnectionStrings.md)
-* **Mail account configuration:** [How do I modify the encrypted mail configuration?](EncryptedMailConfig.md)
+1. In the application's folder, from an administrator console, decrypt the configuration:
 
-!!! warning "Important note"
-    Encryption/decryption is only valid on the machine where the initial installation was performed, since the seed used depends on that specific machine.
+    ```
+    Flexygo.Backend.exe config decrypt
+    ```
 
-    If the file is moved between machines, it is recommended to decrypt it on the original machine first. Otherwise, both sections would need to be manually rewritten in decrypted form.
+    (or `Flexygo.Frontend.exe config decrypt` for the Frontend).
+
+2. Edit the value in `appsettings.json`: the connection string under `ConnectionStrings`, the mail account under `MailSettings`.
+3. Encrypt the configuration again:
+
+    ```
+    Flexygo.Backend.exe config encrypt
+    ```
+
+    (or `Flexygo.Frontend.exe config encrypt` for the Frontend).
+
+4. Restart the application (in IIS, recycle the pool) so it reads the new value. If you skip step 3, the application encrypts whatever is left in plain text when it starts.
+
+`config status` says where the key is and what each file holds encrypted.
+
+All the detail (the console, losing the key, updating, moving servers and Docker) is in [Encrypted appsettings](../../1Deployment/2ConfigWizard/EncryptedSettings.md).

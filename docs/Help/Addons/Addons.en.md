@@ -4,7 +4,7 @@ An addon is an additional feature of the tool that can be installed separately a
 
 ## Marketplace
 
-From the marketplace located inside flexygo in the administration panel under **Other Tools** -> **Addons** you can install the available addons.
+From the marketplace located inside flexygo in the control panel, **Other tools** area → *Addons* (in the flexy2022 skin: *Admin Work Area > Other Tools > Addons*) you can install the available addons.
 
 !!! warning "License maybe needed"
     You may need to acquire the corresponding license module from AHORA Business Hub in order to use it.
@@ -13,7 +13,7 @@ From the marketplace located inside flexygo in the administration panel under **
 
 ## How do I develop an addon?
 
-To develop an addon, you can find the necessary information [here](Creation.en.md).
+To develop an addon, you can find the necessary information [here](../../2ProductDevelopment/7Addons.en.md).
 
 ## Videotutorial
 

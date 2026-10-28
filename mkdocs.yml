@@ -25,6 +25,14 @@ theme:
     - search.suggest # Show search suggestions
     - content.code.copy  # Code copy button
 use_directory_urls: true
+# Pages that are built (reachable by direct link) but hidden from the navigation
+not_in_nav: |
+  /2ProductDevelopment/4Migration131*.md
+  /MoreInformation/1FAQ/RemoveFlexygoService*.md
+  /MoreInformation/1FAQ/UpdateFromOldVersions*.md
+  /MoreInformation/1FAQ/CorruptedCentralDirectory*.md
+  /MoreInformation/1FAQ/UpdateNugetPackageSource*.md
+  /3CICD/4AzureDevOps*.md
 extra:
   version:
     provider: mike
@@ -121,6 +129,20 @@ plugins:
             2Versions: Versions
             4Security: Security
             5Certification: Certification
+            1Deployment: Deployment
+            1Installer: Installer
+            2ConfigWizard: Configuration Wizard
+            3Updater: Updater
+            4Docker: Docker
+            5Kestrel: Kestrel
+            2ProductDevelopment: Product Development
+            3CICD: CI/CD
+            4Troubleshooting: Troubleshooting
+            Administration: Administration
+            AIAssistants: AI assistants (MCP)
+            6ReverseProxy: Reverse proxy
+            8ExportProject: Export as project
+            RolesAndPermissions: Security (roles and permissions)
         - locale: es
           default: true
           name: Español
@@ -131,7 +153,6 @@ plugins:
             AhoraBusinessHub: Ahora Business Hub
             Connectors: Conectores
             Information: Información
-            Instalation: Instalación
             Modules: Módulos
             OfflineApp: App Offline
             JSFunctions: Funciones JS
@@ -147,6 +168,20 @@ plugins:
             5Certification: Certificación
             6CICD: CI/CD
             1FAQ: Preguntas frecuentes
+            1Deployment: Despliegue
+            1Installer: Instalador
+            2ConfigWizard: Asistente de configuración
+            3Updater: Actualizador
+            4Docker: Docker
+            5Kestrel: Kestrel
+            2ProductDevelopment: Desarrollo de producto
+            3CICD: CI/CD
+            4Troubleshooting: Solución de Problemas
+            Administration: Administración
+            AIAssistants: Asistentes de IA (MCP)
+            6ReverseProxy: Proxy inverso
+            8ExportProject: Exportar como proyecto
+            RolesAndPermissions: Seguridad (roles y permisos)
   - glightbox:
       touchNavigation: true
       loop: false

@@ -13,7 +13,7 @@ In case you need to launch pages of external **flexygo** applications from this 
     
 2.  In your external **flexygo** application (not in this), you must authroize this app:
     
-    *   Open your external app and go to **Admin Work Area > Security > WebAPI** and press **Authorized Apps** button.
+    *   Open your external app and go to the control panel → **Security** area → *WebAPI* (in the flexy2022 skin: *Admin Work Area > Security > WebAPI*) and press **Authorized Apps** button.
     *   Create new authorized app using current project name as App ID. **App ID** is project name of your first **flexygo** (1) application and **return token url** is web token url of previous step on your first **flexygo** (1).
     
     ![Authorized Apps](../../docs_assets/images/FlexygoConnector/AuthorizedApps.PNG "Image 2. Authorized Apps")

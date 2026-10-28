@@ -8,7 +8,7 @@ Todo objeto, proceso o personalización **DEBE** crearse aplicando el principio 
 * Evitar objetos accesibles por *todos los usuarios*.
 * No confiar en la visibilidad del botón como control de seguridad.
 * Bloquear ejecución directa por URL si no procede.
-* Abrir objetos innecesarios en el API.
+* No abrir objetos innecesarios en la API.
 
 ## 2. Integración de Flexygo en un ciclo CI/CD
 

@@ -2,6 +2,9 @@
 
 Consulta cómo utilizar el componente web Scheduler y Calendar. Con Scheduler y Calendar es posible usar la misma configuración y obtener distintas visualizaciones.
 
+!!! tip "Versión 10"
+    Desde la versión 10 los calendarios se pintan con FullCalendar 6. Los cambios de configuración, de comportamiento y lo que puede afectar a un producto están en [Calendarios con FullCalendar 6](SchedulerCalendarV10.md).
+
 ![](../../docs_assets/images/Scheduller/Calendar_2.jpg "Imagen 1. Calendario")
 
 ## Configuración de Scheduler y Calendar

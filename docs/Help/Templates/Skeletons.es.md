@@ -8,6 +8,8 @@ Los tipos de módulos más comunes (flx-list, flx-edit, flx-view, flx-moduletab 
 
 ## Cómo crear tu propio esqueleto
 
+Para añadir un esqueleto propio, abre *Esqueletos* en el área **Entorno** del [panel de control](../Administration/ControlPanel.md) (en la skin flexy2022: *Admin Work Area > Environment > Skeletons*) y añade uno nuevo a la lista.
+
 El esqueleto puede dividirse en tres partes (skeletonHeader, skeletonBody, skeletonFooter) esto se debe a la necesidad de mostrar o no ciertos elementos dependiendo si es la primera carga del módulo o si es una actualización. Para que Flexygo sepa qué parte es, será necesario encapsular el esqueleto con divs que contengan las clases (skeletonHeader, skeletonBody, skeletonFooter), como en el siguiente ejemplo.
 
 ![Navegación del Menú de la Base de Datos](../../docs_assets/images/Skeletons/SkeletonNavigation.png "Imagen 1. Navegación del Menú de la Base de Datos")

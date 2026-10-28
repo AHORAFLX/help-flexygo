@@ -2,6 +2,9 @@
 
 See how to use the Scheduller and Calendar web component. With Scheduller and Calendar it's possible to use the same configuration and obtain different visualizations.
 
+!!! tip "Version 10"
+    Since version 10 calendars are drawn with FullCalendar 6. Configuration and behaviour changes, and what may affect a product, are in [Calendars with FullCalendar 6](SchedulerCalendarV10.md).
+
 ![](../../docs_assets/images/Scheduller/Calendar_2.jpg "Image 1. Calendar")
 
 ## Scheduler and Calendar configuration

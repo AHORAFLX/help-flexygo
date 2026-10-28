@@ -1,34 +1,29 @@
-# Did you know you can create a test environment without worrying about the license, thanks to "Set Single User Mode"?
+# Did you know you can set up a test environment without worrying about the license?
 
-The **Set Single User Mode** process lets you set up a test environment with no license limitations.
+The **Convert to dev database** action (process `SetDbDevelopMode`; in earlier versions, *Set Single User Mode*) gets a copy of the configuration database ready for testing.
 
-## Main purpose
+## What it is for
 
-This process is especially useful when moving the production database to a test environment, where the license would normally not work due to environment and existing-user differences.
+It is useful when you move the production database to a test environment: the license does not work there, because the server and the environment change, and you do not want every production user to be able to sign in.
 
-## Automatic behavior
+## What it does
 
-The process automatically performs the following actions:
+* **Deletes the license** from the database. You then have to activate a new one, for example an evaluation license.
+* **Blocks every user** except `admin`, `guest` and the one you choose in **Enable user to perform tests**.
+* Reloads the cache and the page.
 
-* Generates a new evaluation license
-* Blocks every user except guest, admin and one selected user
-* Allows development with admin and testing with the chosen user according to their profile/role
+This way you can develop with `admin` and test with the chosen user, with their profile and roles. The chosen user keeps their own password.
 
-## Benefits
+!!! warning "Use it only on a copy"
+    It deletes the license and blocks users in the database the application is connected to. Before running it, make sure you are working in a test environment that is distinct from production: server, database, configuration and project name.
 
-This approach saves every step described above, leaving only the new license to be activated.
+## Where it is
 
-!!! warning "Important warning"
-    We recommend verifying that you are indeed working in a test environment that is distinct from production in terms of server, database, configuration and project name.
+Only administrators can run it. In skin 2026, open the [control panel](../../Help/Administration/ControlPanel.md) and, in the actions, click **Convert to dev database**. It asks for the test user and for a confirmation before doing anything.
 
-## Accessing the process
+<figure markdown="span">
+  ![Control panel actions](../../docs_assets/images/DidYouKnow/TestEnvironmentSingleUserMode/control-panel-actions.png)
+  <figcaption>Control panel actions, with <b>Convert to dev database</b> (Spanish interface)</figcaption>
+</figure>
 
-Only administrators can access it from **Admin Area → Object Collection**.
-
-![](../../docs_assets/images/DidYouKnow/TestEnvironmentSingleUserMode/1.png)
-
-![](../../docs_assets/images/DidYouKnow/TestEnvironmentSingleUserMode/2.png)
-
-![](../../docs_assets/images/DidYouKnow/TestEnvironmentSingleUserMode/3.png)
-
-During the process you select a user who, along with admin and guest, will remain active.
+In the flexy2022 skin it is the **Set Db to Development Mode** process of the object collection (*Admin Area → Object Collection*).

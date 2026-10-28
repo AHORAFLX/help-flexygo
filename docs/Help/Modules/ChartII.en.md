@@ -2,6 +2,9 @@
 
 Chart helps you easily visualize data using JavaScript. It supports 8 different chart types (including bars, lines, and pies), and they're all responsive.
 
+!!! tip "Version 10: charts with ECharts"
+    This page describes the `flx-chart` module (Chart.js), which does not change. Since version 10 there is also the `flx-echart` module, based on Apache ECharts, with themes and JSON options: [Charts with ECharts](ECharts.md).
+
 ## Chart Types
 
 In this sample we are using a query based on data model objects. All charts in this acticle's examples has the following query.

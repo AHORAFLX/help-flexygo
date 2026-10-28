@@ -1,0 +1,142 @@
+# Reference: appsettings.json
+
+The **Backend**'s `appsettings.json` file contains all of the application's configuration. The Configuration Wizard automatically manages the main keys; the rest rarely require manual intervention.
+
+In IIS and in a production container, the passwords and keys in this file are stored encrypted: see [Encrypted appsettings](EncryptedSettings.md).
+
+---
+
+## Backend — full appsettings.json
+
+```json
+{
+  "Kestrel": { // (1)!
+    "Endpoints": {
+      "Http": {
+        "Url": "http://localhost:7110"
+      }
+    }
+  },
+  "ProjectName": "RENAME", // (2)!
+  "Logging": { // (3)!
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    },
+    "EventLog": {
+      "LogLevel": {
+        "Default": "Warning",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    }
+  },
+  "ConnectionStrings": { // (4)!
+    "ConfConnectionString": "Data Source=localhost;Initial Catalog=RENAME;User ID=sa;Password=;Encrypt=False;Trust Server Certificate=True",
+    "DataConnectionString": "Data Source=localhost;Initial Catalog=RENAME;User ID=sa;Password=;Encrypt=False;Trust Server Certificate=True"
+  },
+  "MailSettings": { // (5)!
+    "From": "",
+    "Host": "",
+    "Port": 25,
+    "Ssl": false,
+    "UserName": "",
+    "Password": "",
+    "Configured": false
+  },
+  "DatabaseNuget": { // (6)!
+    "PackageId": "Flexygo.Conf.Database",
+    "NugetUrl": "https://nuget.ahorabh.com/v3/index.json",
+    "PreReleaseVersions": false
+  },
+  "DisableCronJobs": false, // (7)!
+  "DisableScriptJobs": false,
+  "FrontendEndpoint": "", // (8)!
+  "AllowedHosts": "*",
+  "WebApiOrigins": "*", // (9)!
+  "DebugUpdater": false // (10)!
+}
+```
+
+1. **Kestrel** — Port the Backend listens on. Configured by the installer according to the environment. Only change it if you manually change the port.
+2. **ProjectName** — Name of the project/product. The installer fills it in with the name of the installed product.
+3. **Logging** — Log levels for the application and the Windows Event Log. The default values are suitable for production.
+4. **ConnectionStrings** — Connection strings for the two databases. The Configuration Wizard generates and updates these automatically. `ConfConnectionString` points to the configuration database and `DataConnectionString` to the data database.
+5. **MailSettings** — SMTP server parameters. Configured by the wizard. The `Configured` key is `false` in the template and the wizard sets it to `true` when the mail is saved; while it is `false`, the wizard asks for the mail configuration again.
+6. **DatabaseNuget** — NuGet source from which the system checks for updates to the configuration database. Do not modify unless you use your own corporate NuGet feed.
+7. **DisableCronJobs** and **DisableScriptJobs** — `DisableCronJobs` disables Flexygo's internal scheduled tasks (*Cron Jobs*) and `DisableScriptJobs`, the [database script jobs](../../Help/Programming/DatabaseScriptJobs.md) launched at startup. Useful in test environments, in copies pointing to a shared database or when there are several Backend instances. Only the value `true` turns them off. **They are read from this file**, which overrides any other place (the settings table does not count), and **only at startup**: after changing them, restart the Backend.
+8. **FrontendEndpoint** — URL of the Frontend as known by the Backend. It is empty in the template and the installer sets it automatically (for example, `http://localhost:7111`). Only change it if the domain or port changes after installation.
+9. **WebApiOrigins** — Allowed origins for CORS requests to the API. `"*"` allows any origin. Restrict it in production if required.
+10. **DebugUpdater** — Enables the updater's debug mode. For diagnostics only; keep it set to `false` in production.
+
+---
+
+## Automatically generated keys (Backend)
+
+The first time the application starts, the system generates and persists the following security keys in `appsettings.json`. **The user should not modify them** except in very specific scenarios (e.g. key rotation in environments with multiple instances):
+
+| Key | Purpose |
+|-------|-----------|
+| `JwtSettings.SecretKey` | Signs the authentication JWT tokens |
+| `DataProtection.ApplicationId` | Application identifier for encrypting sensitive data |
+| `DataProtection.Key` | Encryption key for ASP.NET Core data protection |
+
+These keys do not appear in the file until the first startup and are invisible to the user in the normal installation and configuration flow.
+
+---
+
+## Frontend — full appsettings.json
+
+```json
+{
+  "Kestrel": { // (1)!
+    "Endpoints": {
+      "Http": {
+        "Url": "http://localhost:7111"
+      }
+    }
+  },
+  "Logging": { // (2)!
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    },
+    "EventLog": {
+      "LogLevel": {
+        "Default": "Warning",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    }
+  },
+  "BackendEndpoint": "", // (3)!
+  "AllowedHosts": "*",
+  "WebApiOrigins": "*", // (4)!
+  "DebugUpdater": false, // (5)!
+  "EnableWindowsAuth": false // (6)!
+}
+```
+
+1. **Kestrel** — Port the Frontend listens on. Configured by the installer. Only change it if you manually change the port.
+2. **Logging** — Log levels. Identical to the Backend; the default values are suitable for production.
+3. **BackendEndpoint** — URL of the Backend API consumed by the Frontend. It is empty in the template and the installer sets it automatically (for example, `http://localhost:7110/api/backend/`). Only change it if the domain or port changes after installation.
+4. **WebApiOrigins** — Allowed origins for CORS. `"*"` allows any origin. Restrict it in production if required.
+5. **DebugUpdater** — Enables the updater's debug mode in the Frontend. Keep it set to `false` in production.
+6. **EnableWindowsAuth** — Enables integrated Windows sign-in (NTLM/Kerberos). Requires IIS to have both anonymous and Windows authentication enabled. Keep it set to `false` unless automatic sign-in against LDAP is used.
+
+## Optional keys (Frontend and Backend)
+
+They are not included in the template and are only added when needed:
+
+| Key | Purpose |
+|-------|-----------|
+| `ForwardedHeaders.KnownProxies` | IP addresses of the trusted reverse proxies, so the application accepts the real client IP from them. See [Deployment behind a reverse proxy](../6ReverseProxy/index.md) |
+| `HttpsRedirection` (Frontend only) | Redirects requests that arrive over `http` to `https`. When it is missing, it is `true`. Set it to `false` only when a reverse proxy in front already enforces `https`; see [Deployment behind a reverse proxy](../6ReverseProxy/index.md#https-redirection) |
+
+## Automatically generated keys (Frontend)
+
+Just like the Backend, the Frontend generates and persists these keys on first startup. **Do not modify** except in very specific cases:
+
+| Key | Purpose |
+|-------|-----------|
+| `JwtSettings.SecretKey` | Verifies the JWT tokens received from the Backend |
+| `DataProtection.ApplicationId` | Identifier for session data encryption |
+| `DataProtection.Key` | Encryption key for ASP.NET Core data protection |

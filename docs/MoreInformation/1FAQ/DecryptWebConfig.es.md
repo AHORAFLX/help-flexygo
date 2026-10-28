@@ -1,15 +1,33 @@
-# ¿Cómo desencriptar la cadena de conexión y la cuenta de mail del fichero Web.config?
+# ¿Cómo descifrar y volver a cifrar la configuración?
 
-Por razones de seguridad, el instalable de las aplicaciones Flexygo encripta el contenido de 2 secciones del fichero `Web.config`, en las cuales se especifican las cadenas de conexión y la configuración de la cuenta de correo que utiliza el sistema para el envío de mails.
+Por seguridad, Flexygo guarda cifradas las cadenas de conexión, la contraseña del correo y otras claves de su configuración. Están en los `appsettings` de la carpeta `conf` del Backend y del Frontend, y se cifran valor a valor: el resto del fichero se sigue leyendo en claro.
 
-Existen 2 artículos diferenciados, ya que son secciones distintas dentro del mismo fichero. En ambos se detallan los comandos tanto para desencriptar como para volver a encriptar una vez realizadas las modificaciones pertinentes.
+* **Qué ficheros:** solo `appsettings.json` y `appsettings.Production.json`. Los demás (`appsettings.Development.json`…) se quedan siempre en claro.
+* **Dónde:** en IIS y en contenedores Docker de producción. En el resto (desarrollo, Kestrel, el Docker de pruebas del instalador) la aplicación los descifra al arrancar.
+* **La llave:** en Windows hay **una por servidor** (`%ProgramData%\Flexygo\keys\config.key`), compartida por todas las aplicaciones del servidor. Para llevar una aplicación a otro servidor, `config export-key` en el origen y `config import-key` en el destino.
+* **Docker:** en producción la llave se da como secreto `flexygo_config_key`, el mismo para todos los contenedores. Si falta el fichero del secreto, la aplicación no arranca y dice por qué.
 
-## Secciones a desencriptar
+## Cambiar una cadena de conexión, el correo u otra clave
 
-* **Cadenas de conexión:** [¿Cómo modificar las cadenas de conexión encriptadas?](EncryptedConnectionStrings.md)
-* **Configuración de la cuenta de mail:** [¿Cómo modificar la configuración de correo encriptada?](EncryptedMailConfig.md)
+1. En la carpeta de la aplicación, desde una consola de administrador, descifra la configuración:
 
-!!! warning "Nota importante"
-    La encriptación/desencriptación solo es válida en la máquina en la que se hizo la instalación inicial, ya que la semilla utilizada depende de la máquina en cuestión.
+    ```
+    Flexygo.Backend.exe config decrypt
+    ```
 
-    Si se traslada el fichero entre máquinas, lo recomendable es desencriptarlo en la máquina inicial. De lo contrario, habría que reescribir manualmente ambas secciones de forma desencriptada.
+    (o `Flexygo.Frontend.exe config decrypt` para el Frontend).
+
+2. Edita el valor en el `appsettings.json`: la cadena en `ConnectionStrings`, la cuenta de correo en `MailSettings`.
+3. Vuelve a cifrar la configuración:
+
+    ```
+    Flexygo.Backend.exe config encrypt
+    ```
+
+    (o `Flexygo.Frontend.exe config encrypt` para el Frontend).
+
+4. Reinicia la aplicación (en IIS, recicla el pool) para que lea el valor nuevo. Si te saltas el paso 3, la aplicación cifra al arrancar lo que haya quedado en claro.
+
+`config status` dice dónde está la llave y qué tiene cifrado cada fichero.
+
+Todo el detalle (la consola, perder la llave, actualizar, cambiar de servidor y Docker) está en [Cifrado de los appsettings](../../1Deployment/2ConfigWizard/EncryptedSettings.md).

@@ -1,8 +1,11 @@
 # API Web
 
-Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde el panel de control ubicado en Área de Trabajo de Administrador > Seguridad > WebAPI o simplemente haz clic aquí. 
+Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde la herramienta *WebAPI* del área **Seguridad** del [panel de control](../Administration/ControlPanel.md) (en la skin flexy2022: *Admin Work Area > Security > WebAPI*) o simplemente haz clic aquí. 
 
-Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando su actual [Definición de Esquema](./webapi). 
+Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando la definición de esquema de tu aplicación, disponible en `https://<tu-aplicacion>/webapi`. 
+
+!!! tip "Versión 10"
+    Desde la versión 10 la API aplica la seguridad del rol del token igual que la interfaz y recorta el OpenAPI por rol: [Seguridad de la WebAPI](WebAPISecurity.md).
 
 Es **altamente** recomendado utilizar **HTTPS**.
 {: .flx-warning-card }
@@ -112,9 +115,9 @@ Content-Type: application/json
 | Actualizar objeto por filtro | PUT | webapi/object/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_update_filter" modal_title="Update object by filter">&lt;/&gt;</fh-modal> |
 | Eliminar objeto por id | DELETE | webapi/object/{ObjectName}/{Id} | | | <fh-modal class="link" modal_id="fhmodal_delete" modal_title="Delete object by id">&lt;/&gt;</fh-modal> |
 | Eliminar objeto por filtro | DELETE | webapi/object/{ObjectName} | ?filter={filter?} | | <fh-modal class="link" modal_id="fhmodal_delete_filter" modal_title="Delete object by filter">&lt;/&gt;</fh-modal> |
-| Ejecutar proceso con objeto por id | PUT | webapi/exec/{ProcessName}/{ObjectName}/{Id} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process" modal_title="Execute process with object by id">&lt;/&gt;</fh-modal> |
-| Ejecutar proceso con objeto por filtro | PUT | webapi/exec/{ProcessName}/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_filter" modal_title="Execute process with object by filter">&lt;/&gt;</fh-modal> |
-| Ejecutar proceso sin objeto | PUT | webapi/exec/{ProcessName} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_no_object" modal_title="Execute process without object">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso con objeto por id | POST | webapi/exec/{ProcessName}/{ObjectName}/{Id} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process" modal_title="Execute process with object by id">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso con objeto por filtro | POST | webapi/exec/{ProcessName}/{ObjectName} | ?filter={filter?} | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_filter" modal_title="Execute process with object by filter">&lt;/&gt;</fh-modal> |
+| Ejecutar proceso sin objeto | POST | webapi/exec/{ProcessName} | | data:JsonObject | <fh-modal class="link" modal_id="fhmodal_process_no_object" modal_title="Execute process without object">&lt;/&gt;</fh-modal> |
 
 <div id="fhmodal_list" markdown="1">
 

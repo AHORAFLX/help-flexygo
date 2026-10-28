@@ -23,7 +23,7 @@ Marca **Turn on modern authentication…** para los flujos OAuth y las opciones 
 
 ![](../../docs_assets/images/ModulesConf/MailOffice6.png "Image 3. Modern authentication")
 
-Luego ve a la pantalla **Users**:
+Luego ve a la pantalla **Usuarios**:
 
 ![](../../docs_assets/images/ModulesConf/MailOffice7.png "Image 4. Users")
 
@@ -128,7 +128,9 @@ Este módulo permite añadir un correo web a tus proyectos **flexygo**.
 
 ## Añadir icono de Webmail a la barra de herramientas
 
-El icono ya existe, pero está deshabilitado por defecto. Puedes habilitarlo como administrador en la barra superior.
+En la skin 2026 no hay icono aparte: el correo es el grupo **Correo** de la campana de notificaciones de la barra superior, con los últimos correos sin leer, y su cabecera abre la bandeja de entrada.
+
+En la skin flexy2022, el icono ya existe en la barra superior, pero está deshabilitado por defecto. Puedes habilitarlo como administrador.
 
 ![](../../docs_assets/images/ModulesConf/Mail2.PNG "Image 21. Webmail icon")
 

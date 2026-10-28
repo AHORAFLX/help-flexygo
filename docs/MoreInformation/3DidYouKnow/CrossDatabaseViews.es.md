@@ -6,8 +6,11 @@ Flexygo tiene la capacidad de trabajar simultáneamente con múltiples bases de 
 
 Para añadir cadenas de conexión adicionales, es necesario:
 
-* Incorporarlas al archivo `web.config`
+* Incorporarlas a la sección `ConnectionStrings` del `appsettings.json` del Backend
 * Crear una entrada en la tabla del sistema `DbConnectionStrings`
+
+!!! note "Cadenas cifradas"
+    En IIS y en un contenedor de producción, las cadenas de conexión se guardan cifradas (`enc:v1:...`). Puedes escribir la nueva en claro: la aplicación la cifra en el siguiente arranque. Para cambiar una existente, consulta [Cambiar un valor cifrado a mano](../../1Deployment/2ConfigWizard/EncryptedSettings.md#cambiar-un-valor-cifrado-a-mano).
 
 ## Consultas cruzadas entre bases de datos
 

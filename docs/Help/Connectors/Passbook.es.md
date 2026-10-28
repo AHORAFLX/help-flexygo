@@ -104,6 +104,9 @@ También es importante que, desde la consola, una vez importado el certificado e
 * Botón derecho → All Tasks → Manage Private Keys
 * Añadimos **IIS_IUSRS** y le damos permisos.
 
+Los pasos con **IIS_IUSRS** y la identidad del Application Pool solo se aplican cuando la aplicación se publica en **IIS**. Si se ejecuta de otra forma (Kestrel, servicio de Windows, Docker), da permisos sobre la clave privada a la cuenta con la que se ejecuta el Backend.
+{: .flx-info-card }
+
 ![](../../docs_assets/images/Passbook/passbook11.png "Image 8. Certificate management")
 
 Es necesario también tener configurado el **impersonate**, ya que la generación del passbook hace uso de él.
@@ -125,6 +128,8 @@ Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en
 
 ## Ejemplo de uso desde DLL
 
+La clase es `FLEXYGO.flxPassbook` (biblioteca `flxSysProcess`). Las rutas se resuelven con `Ret.ConfToken.MapFrontPath` (carpeta `wwwroot` del Frontend) y `Ret.ConfToken.MapBackPath` (carpeta del Backend).
+
 <fh-modal class="button" modal_id="fhmodal_dll_example" modal_title="DLL function example">Ejemplo de DLL</fh-modal>
 
 ## Ejemplo de diseño y layout
@@ -133,65 +138,60 @@ Una vez realizado todo lo anterior, podemos proceder a configurar los ajustes en
 
 ![](../../docs_assets/images/Passbook/passbook13.PNG "Image 11. Passbook example")
 
-```vbnet { #fhmodal_dll_example }
-Public Shared Function generatePassbook(ByVal Entity As EntityObject, ByRef Ret As ProcessHelper) As Boolean
-        Try
-            Dim aPrimaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-            aPrimaryField.Add(New KeyValuePair(Of String, String)("Nombre", "Aitor"))
-            Dim aSecondaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-            aSecondaryField.Add(New KeyValuePair(Of String, String)("Apellido", "Torres"))
-            Dim aAuxiliaryField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-            aAuxiliaryField.Add(New KeyValuePair(Of String, String)("Movil", "123456"))
-            Dim aBackField As List(Of KeyValuePair(Of String, String)) = New List(Of KeyValuePair(Of String, String))
-            aBackField.Add(New KeyValuePair(Of String, String)("Otros", "Loren ipsum"))
-            Dim aBackgroundColor As String = "#000000"
-            Dim aForegroundColor As String = "#FFFFFF"
-            Dim aLabelColor As String = "#FFFFFF"
-            Dim aIcon As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
-            Dim aLogo As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\icons\icon-256x256.png"))
-            Dim aDescription As String = "Passbook flexygo"
-            Dim aOrganizationName As String = "Flexygo"
-            Dim aLogoText As String = "Logo text"
-            Dim aThumbnail As Byte() = File.ReadAllBytes(HttpContext.Current.Server.MapPath("~\img\Avatars\avatar_blank.png"))
-            Dim aHeaderField As KeyValuePair(Of String, String)=("Cabecera","Business card")
+```csharp { #fhmodal_dll_example }
+using System;
+using System.Collections.Generic;
+using System.IO;
+using FLEXYGO;
+using FLEXYGO.Objects;
+using FLEXYGO.Utilities;
+using static FLEXYGO.Processing.ProcessManager;
 
-            'vCard info for qr barcode
-            Dim FirstName As String = "Aitor"
-            Dim LastName As String = "Torres"
-            Dim CompanyName As String = "Flexygo"
-            Dim JobTitle As String = "Programador"
-            Dim StreetAddress As String = "Carrer dels Ceramistes 19"
-            Dim Zip As String = "46900"
-            Dim City As String = "Valencia"
-            Dim CountryName As String = "España"
-            Dim Phone As String = "123456"
-            Dim Mobile As String = "987654"
-            Dim Fax As String = ""
-            Dim Email As String = "aitor@ahora.es"
-            Dim HomePage As String = "www.flexygo.com"
-            Dim loUid As String = System.Guid.NewGuid().ToString()
-            Dim vCard As New VCard(FirstName, LastName, CompanyName, JobTitle, StreetAddress, Zip, City, CountryName, Phone, Mobile, Fax, Email, HomePage, loUid)
+public static bool generatePassbook(EntityObject Entity, ref ProcessHelper Ret)
+{
+    try
+    {
+        var aPrimaryField = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Nombre", "Aitor") };
+        var aSecondaryField = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Apellido", "Torres") };
+        var aAuxiliaryField = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Movil", "123456") };
+        var aBackField = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Otros", "Loren ipsum") };
+        string aBackgroundColor = "#000000";
+        string aForegroundColor = "#FFFFFF";
+        string aLabelColor = "#FFFFFF";
+        // Images of the Frontend (wwwroot)
+        byte[] aIcon = File.ReadAllBytes(Ret.ConfToken.MapFrontPath("~/img/icons/icon-256x256.png"));
+        byte[] aLogo = File.ReadAllBytes(Ret.ConfToken.MapFrontPath("~/img/icons/icon-256x256.png"));
+        byte[] aThumbnail = File.ReadAllBytes(Ret.ConfToken.MapFrontPath("~/img/avatars/avatar_blank.png"));
+        string aDescription = "Passbook flexygo";
+        string aOrganizationName = "Flexygo";
+        string aLogoText = "Logo text";
+        var aHeaderField = new KeyValuePair<string, string>("Cabecera", "Business card");
 
-            Dim aBarcode As String = vCard.VCardBody()
+        // vCard info for qr barcode
+        VCard vCard = new VCard("Aitor", "Torres", "Flexygo", "Programador", "Carrer dels Ceramistes 19", "46900", "Valencia", "España",
+                                "123456", "987654", "", "aitor@ahora.es", "www.flexygo.com", Guid.NewGuid().ToString());
+        string aBarcode = vCard.VCardBody();
 
-            Dim passbook As New Passbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText, aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail)
-            'We can write on disk, download it, send by mail, etc...
-            File.WriteAllBytes(HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass"), passbook.generatePassbook())
-            Dim path As String = HttpContext.Current.Server.MapPath("~\Custom\passbook\prueba.pkpass")
-            Dim dw As New Utilities.Download With {
-                    .Path = path,
-                    .DeleteAfterDownload = True
-                }
-                
-            Ret.JSCode = String.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink))
-            Ret.Success = True
-            Ret.SuccessMessage = "Passbook generated"
-            Return Ret.Success
+        flxPassbook passbook = new flxPassbook(aPrimaryField, aBackgroundColor, aForegroundColor, aLabelColor, aIcon, aDescription, aOrganizationName, aLogoText,
+                                               aBarcode, aHeaderField, aLogo, aSecondaryField, aAuxiliaryField, aBackField, aThumbnail);
 
-        Catch ex As Exception
-            Ret.Success = False
-            Ret.LastException = ex
-            Return Ret.Success
-        End Try
-    End Function
+        // We can write on disk, download it, send by mail, etc...
+        string path = Ret.ConfToken.MapBackPath("~/custom/passbook/prueba.pkpass");
+        Directory.CreateDirectory(Path.GetDirectoryName(path));
+        File.WriteAllBytes(path, passbook.generatePassbook());
+
+        Download dw = new Download { Path = path, DeleteAfterDownload = true };
+
+        Ret.JSCode = string.Format("window.open('{0}')", Ret.ConfToken.ResolveUrl(dw.GetLink()));
+        Ret.Success = true;
+        Ret.SuccessMessage = "Passbook generated";
+        return Ret.Success;
+    }
+    catch (Exception ex)
+    {
+        Ret.Success = false;
+        Ret.LastException = ex;
+        return Ret.Success;
+    }
+}
 ```

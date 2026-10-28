@@ -8,7 +8,7 @@ The most common module types (flx-list, flx-edit, flx-view, flx-moduletab and fl
 
 ## How to create your own skeleton
 
-Adding a custom skeleton is as easy as navigating to the skeletons page through the admin work, and through the list adding a new one.
+Adding a custom skeleton is as easy as opening *Skeletons* in the **Environment** area of the [control panel](../Administration/ControlPanel.md) (in the flexy2022 skin: *Admin Work Area > Environment > Skeletons*) and adding a new one to the list.
 
 ![Menu](../../docs_assets/images/Skeletons/SkeletonNavigation.png "Image 1. New Skeleton")
 

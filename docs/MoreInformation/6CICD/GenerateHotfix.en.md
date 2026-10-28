@@ -22,7 +22,7 @@ We review the pending changes and mark the ones that belong to the fix.
 
 ![](../../docs_assets/images/CICD/GenerateHotfix/5.png)
 
-We make a commit starting the message with the `HOTFIX:` tag, followed by the description of the fix.
+We make a commit starting the message with the `FIX:` tag, followed by the description of the fix (the symptom users saw). The release notes only pick up `FT:`, `FIX:`, `HL:` and `DEP:` commits; see [How do I develop in GIT?](GitCommitConventions.md).
 
 ![](../../docs_assets/images/CICD/GenerateHotfix/6.png)
 

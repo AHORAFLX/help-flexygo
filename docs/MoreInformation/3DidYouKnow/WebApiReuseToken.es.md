@@ -7,7 +7,7 @@ Por defecto, Flexygo genera un nuevo token en cada solicitud al endpoint `/token
 Para que el sistema devuelva el mismo código mientras permanezca válido, es necesario:
 
 1. Acceder a los parámetros de la aplicación
-2. Activar la opción **ReuseToken**
+2. Activar la opción **ReuseTokens**
 
 ## Resultado
 

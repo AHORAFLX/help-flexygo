@@ -127,7 +127,9 @@ This module allows you to add a web mail to your **flexygo** projects.
 
 ## Add Webmail icon to your toolbar
 
-Icon already exists, but it's disabled by default. You can enable it as Admin on the top toolbar
+In skin 2026 there is no separate icon: mail is the **Mail** group of the notification bell in the top bar, with the latest unread mails, and its header opens the inbox.
+
+In the flexy2022 skin, the icon already exists on the top toolbar, but it's disabled by default. You can enable it as Admin
 
 ![](../../docs_assets/images/ModulesConf/Mail2.PNG "Image 21. Webmail icon")
 

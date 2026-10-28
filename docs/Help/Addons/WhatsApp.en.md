@@ -138,7 +138,7 @@ It is enabled by default and should only be disabled to send test requests to yo
 
 Once you complete the <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="syspage-edit-settings" objectname="sysSettings" objectwhere="GroupName='flx-whatsapp'" defaults="" targetid="popup1400x600" excludehist="true">WhatsApp Business configuration</flx-navbutton> in Flexygo, **refresh the cache** and reload the page. The integration between WhatsApp Business and Flexygo will be activated. This will trigger the following:
 
-* A **WhatsApp icon button** will appear in the top navigation bar. Clicking it will take you directly to <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false">the WhatsApp page in Flexygo</flx-navbutton>.
+* In skin 2026, WhatsApp will appear as a group of the **notification bell** in the top bar, with the latest unread messages (only for users with the `sysFlxWhatsapp` faculty). In the flexy2022 skin, a **WhatsApp icon button** will appear in the top navigation bar. Clicking the group header or the button will take you directly to <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false">the WhatsApp page in Flexygo</flx-navbutton>.
 
 * The Cron task `WhatsAppActivateInactiveConversations` will be activated. Each day it will look for conversations whose **last message is older than 24 hours**, have an **AI assistant assigned**, and are in manual mode. These will be switched to automatic mode.
 

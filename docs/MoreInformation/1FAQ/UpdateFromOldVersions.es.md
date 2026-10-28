@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # Actualizar productos o aplicaciones Flexygo desde versiones antiguas
 
 ## Requisitos previos

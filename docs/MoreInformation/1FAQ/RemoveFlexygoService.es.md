@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # ¿Cómo puedo eliminar el servicio de Flexygo, forzar la actualización o instalarlo sin instalar un Flexygo en esa máquina?
 
 Descarga el zip adjunto y extráelo en una carpeta del servidor, por ejemplo `C:\FlexygoServiceHelper`.

@@ -10,13 +10,13 @@ Mira el video sobre cómo crear un procedimiento almacenado en el entorno de fle
 
 1.  Codificar el procedimiento almacenado en la base de datos. <fh-modal class="link" modal_id="fhmodal_object" modal_title="Proceso almacenado">Ejemplo</fh-modal>.
 
-2.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB.
+2.  Agrégalo al repositorio de procedimientos almacenados de flexygo en el panel de control → área **Lógica y reglas** → *DB Stored Procedures* (en la skin flexy2022: *Admin Work Area > Logic and Rules > DB Stored Procedures*).
     
     ![Stored Procedure Repository](../../docs_assets/images/Custom_DLL/ObjectStored.PNG "Image 1. Stored Procedure Repository")
     
 3.  Si el procedimiento tiene parámetros, insértalos automáticamente usando el menú **Generar parámetros**.
 
-4.  Agrega relación al objeto en Área de Trabajo del Administrador > Gestión de objetos > Lógica.
+4.  Agrega relación al objeto en el panel de control → área **Objetos** → *Lógica* (en la skin flexy2022: *Admin Work Area > Object Management > Logic*).
     
     ![Stored and Object Relation](../../docs_assets/images/Custom_DLL/RelatedObjectStored.PNG "Image 2. Stored and Object Relation")
     
@@ -31,13 +31,13 @@ Mira el video sobre cómo crear un procedimiento almacenado en el entorno de fle
     
 2.  Codificar el procedimiento almacenado en la base de datos. Agrega un parámetro con el nombre @sysCollectionSentence y tipo nvarchar(max) para recibir un SQL con los elementos seleccionados. <fh-modal class="link" modal_id="fhmodal_collection" modal_title="Collection Stored Procedure">Ejemplo</fh-modal>
 
-3.  Agregalo al repositorio de procedimientos almacenados de flexygo en Área de Trabajo del Administrador > Lógica y Reglas > Procedimientos Almacenados DB. 
+3.  Agrégalo al repositorio de procedimientos almacenados de flexygo en el panel de control → área **Lógica y reglas** → *DB Stored Procedures* (en la skin flexy2022: *Admin Work Area > Logic and Rules > DB Stored Procedures*). 
     
     ![Stored Procedure Repository](../../docs_assets/images/Custom_DLL/CollectionStored.PNG "Image 4. Stored Procedure Repository")
     
 4.  Si el procedimiento tiene parámetros, insértalos automáticamente usando el menú **Generar parámetros**.
 
-5.  Agrega relación a la colección en Área de Trabajo del Administrador > Gestión de objetos > Lógica. Si el proceso solo puede ejecutarse con los elementos seleccionados, por favor establece el interruptor en verdadero, de lo contrario el proceso se ejecutará con todos los elementos filtrados en la pantalla actual. 
+5.  Agrega relación a la colección en el panel de control → área **Objetos** → *Lógica* (en la skin flexy2022: *Admin Work Area > Object Management > Logic*). Si el proceso solo puede ejecutarse con los elementos seleccionados, por favor establece el interruptor en verdadero, de lo contrario el proceso se ejecutará con todos los elementos filtrados en la pantalla actual. 
     
     ![Stored and Collection Relation](../../docs_assets/images/Custom_DLL/RelatedCollectionStored.PNG "Image 5. Stored and Collection Relation")
 

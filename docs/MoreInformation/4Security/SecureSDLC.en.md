@@ -29,20 +29,20 @@ Each phase includes verifiable controls and evidence demonstrating the applicati
 
 ### 3.1. Environment preparation (steps 1–2)
 
-* **Cleaning connection strings in web.config**: the automated process runs a PowerShell script that removes or masks sensitive connection strings before starting the build, preventing accidental credential exposure. This control ensures compliance with the principle of **minimizing sensitive information in development environments**.
+* **Cleaning connection strings in the `appsettings.json` files** (in installations they are stored encrypted): the automated process runs a PowerShell script that removes or masks sensitive connection strings before starting the build, preventing accidental credential exposure. This control ensures compliance with the principle of **minimizing sensitive information in development environments**.
 * **Source code backup**: before building, an automated backup of the source code is made, preserving a restore point in case of later alterations or errors. The backup mechanism is conditioned on the success of the previous steps, ensuring only valid versions are stored.
 
 ### 3.2. Build and dependency management (steps 3–6)
 
 * **NuGet package restoration**: packages are obtained from controlled sources, with verified and locked versions to ensure the **reproducibility and integrity of the build environment**.
-* **Solution build (.NET / MSBuild)**: the project is built automatically using MSBuild, ensuring full traceability from source code to the generated binary.
+* **Solution build (.NET)**: the project is built and published automatically with `dotnet build` and `dotnet publish`, ensuring full traceability from source code to the generated binary.
 * **Publishing configurations and databases (CONFIG DB and DATA DB)**: the publishing scripts use SQLPACKAGE and run controlled build processes, only validated if the previous steps succeeded, applying the principle of **build-chain integrity**.
 
 ### 3.3. Testing, validation and technical auditing (steps 11–14, 23–25, 30)
 
 * **Building and running service and interface tests**: unit tests are run using **Visual Studio Test (VSTest)**, integrated into the pipeline. These tests verify the functionality of the main modules and the interoperability between services. Test results are automatically collected and analyzed to assess compliance with quality criteria.
 * **Code coverage**: the system uses **JetBrains dotCover** to collect coverage metrics, allowing the degree of test validation of the code to be measured. This step only runs if the build succeeds, avoiding reports on inconsistent versions.
-* **Static code analysis (SonarQube)**: although some analyses appear disabled in the screenshots, the SDLC process considers their execution part of the full cycle. The TypeScript, T-SQL and VB modules are audited for vulnerabilities, poor practices or insecure code. This provides evidence of compliance with the **static analysis controls of OWASP SAMM and ISO/IEC 27034**.
+* **Static code analysis (SonarQube)**: although some analyses appear disabled in the screenshots, the SDLC process considers their execution part of the full cycle. The TypeScript, T-SQL and C# modules are audited for vulnerabilities, poor practices or insecure code. This provides evidence of compliance with the **static analysis controls of OWASP SAMM and ISO/IEC 27034**.
 
     ![](../../docs_assets/images/SecureSDLC/1.png)
     ![](../../docs_assets/images/SecureSDLC/2.png)
@@ -53,7 +53,7 @@ Each phase includes verifiable controls and evidence demonstrating the applicati
 * **Secure packaging (ZIP APP, ZIP DOCU, NuGet package)**: artifacts are packaged automatically and versioned, including a build number and an internal digital signature. This process guarantees the non-repudiation and integrity of the distributed artifacts.
 * **Automatic technical documentation generation**: three types of documentation are generated:
     * **JS**: through Node.js (YUIDoc)
-    * **VB**: through GhostDoc
+    * **C#**: through GhostDoc
     * **SQL**: through TeamCity SQLDoc
 
     This ensures documentation consistency and technical traceability between code and documentation.

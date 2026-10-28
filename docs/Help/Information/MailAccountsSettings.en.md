@@ -1,12 +1,12 @@
 # Mail Accounts Settings
 
-Configure email account for users and profiles by overwriting **web.config** SMTP settings. In case you configure mail setting account for an user it'll take it to send mails. In case you configure mail setting account for a profile it'll take it to send mail. If you related both it'll use the user configuration. If there aren't any configuration, the application will take the web.config SMTP settings.
+Configure email account for users and profiles by overwriting the SMTP settings of the `MailSettings` section of the **Backend** `appsettings.json`. In case you configure mail setting account for an user it'll take it to send mails. In case you configure mail setting account for a profile it'll take it to send mail. If you related both it'll use the user configuration. If there aren't any configuration, the application will take the `MailSettings` SMTP settings (see [Reference: appsettings.json](../../1Deployment/2ConfigWizard/AppSettingsReference.md)).
 
 ## Create Mail Account
 
-You can manage the mail accounts settings from **Admin Panel Area > Security > Mail Account**.
+You can manage the mail accounts settings from the control panel → **Security** area → *Mail Accounts* (in the flexy2022 skin: *Admin Work Area > Security > Mail Accounts*).
 
-![](../../docs_assets/images/MailAccountsSettings/AdminWorkArea.PNG "Image 1. Admin Work Area")
+![Security area of the control panel](../../docs_assets/images/MailAccountsSettings/control-panel-security-2026.png "Image 1. Security area of the control panel (Spanish interface)")
 
 Complete the mail server and account info to send mails from a specific configuration.
 
@@ -14,11 +14,11 @@ Complete the mail server and account info to send mails from a specific configur
 
 ## Link Mail Account
 
-You can link email account settings to users in **Admin Work Area > Security > Users**.
+You can link email account settings to users in the control panel → **Security** area → *Users* (in the flexy2022 skin: *Admin Work Area > Security > Users*).
 
 ![](../../docs_assets/images/MailAccountsSettings/MailAccountUsers.PNG "Image 3. Mail Account Users")
 
-You can link email accounts settings to profiles in **Admin Work Area > Security > Profiles**.
+You can link email accounts settings to profiles in the control panel → **Security** area → *Profiles* (in the flexy2022 skin: *Admin Work Area > Security > Profiles*).
 
 ![](../../docs_assets/images/MailAccountsSettings/MailAccountProfiles.PNG "Image 4. Mail Account Profiles")
 

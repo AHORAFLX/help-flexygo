@@ -2,6 +2,9 @@
 
 Chart te ayuda a visualizar datos fácilmente usando JavaScript. Soporta 8 tipos diferentes de gráficos (incluyendo barras, líneas y sectores), y todos son responsivos.
 
+!!! tip "Versión 10: gráficas con ECharts"
+    Esta página describe el módulo `flx-chart` (Chart.js), que no cambia. Desde la versión 10 existe además el módulo `flx-echart`, basado en Apache ECharts, con temas y opciones JSON: [Gráficas con ECharts](ECharts.md).
+
 ## Tipos de gráficos
 
 En este ejemplo estamos usando una consulta basada en objetos del modelo de datos. Todos los gráficos de los ejemplos de este artículo utilizan la siguiente consulta:
