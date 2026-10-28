@@ -107,15 +107,15 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Configuration
 
-- **Administrators can view and edit the installation configuration from a dedicated screen, with checks before saving.** The screen brings together options, log levels, connections, and credentials; it also groups connections and shows the status of their checks. It highlights fields that need attention and explains invalid values; passwords are masked.
-- **Administrators can enable maintenance mode and display a notice while the application is unavailable.** The control is available in the administration panel, and the notice updates when the status changes. Open pages are refreshed, and visitors to the site can return to their page when maintenance ends.
-- **You can configure the delimiter used when exporting CSV files.** Choose the format that best suits each application. The option changes the delimiter used in exported files.
-- **Configure offline applications from a screen organized into sections.** From the screen, you can manage objects, menus, pages, code, resources, and synchronization, as well as view the synchronization history. The emulator lets you see how the application looks on a mobile device.
-- **Refresh the screens of all connected users or select specific sessions.** The action is in the actions menu of the version information. You can search for users and choose who to send the refresh to.
-- **Administrators can view the configuration and process status on read-only screens.** The configuration is displayed separately for the application and the server. The status of processes, the database, and available resources can also be viewed, without changing those values from these screens.
-- **You can open the page configuration from a button next to the tool for arranging modules.** The shortcut is available in development mode. When you navigate to another page, it continues to show the current page's configuration without rebuilding the header.
-- **Configure the application with values specific to each environment.** You can load and save settings for each environment, such as development. This keeps those values separate from the general configuration.
-- **Publish a database from the configurator.** The configuration tool includes this task, so you can perform it there without using another shortcut.
+- **Administrators can view and edit the installation configuration from a dedicated screen, with checks before saving.** The screen brings together options, logging levels, connections, and credentials, and shows how many connections there are and how many checks have failed. The checks flag fields that need attention and let you save directly when there is nothing to review; passwords are masked.
+- **Administrators can enable maintenance mode and display a notice while the application is unavailable.** The control is in the administration panel, and a public page is also displayed during maintenance. When the status changes, open pages are refreshed, and when maintenance ends, site visitors can return to their page.
+- **Configure offline applications from a screen organized into sections, with a synchronization history and mobile emulator.** The screen brings together objects, menus, pages, code, resources, and synchronization. The option to link an object is no longer available from the offline applications screen, but the options to create and clone objects remain.
+- **You can configure the delimiter used when exporting CSV files.** The option lets you adjust the format of exported files to each application's needs. Configure it so the data is separated as needed when you open the file.
+- **Refresh the screens of all connected users or select specific sessions.** The action is available in the action menu for version information. You can search for users and select their sessions to send them the update.
+- **Administrators can view the configuration and status of processes in read-only screens.** The application configuration and server configuration are shown separately. You can also view the status of processes, the database, and available resources.
+- **You can open the page configuration from a button next to the tool for organizing modules.** The option is available in development mode and follows the current page when you navigate to another one, without rebuilding the header.
+- **Configure the application with values specific to each environment.** The application can load and save settings specific to each environment, such as development. This keeps those values separate from the general configuration.
+- **Publish a database from the configurator.** The configuration tool now includes database publishing. You can perform this task from the configurator itself.
 
 ### Document and Image Management
 
@@ -237,16 +237,17 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Configuration
 
-- **Configuration secrets remain encrypted in IIS and production Docker containers.** In other environments, they are decrypted when the application starts. If a Docker secret is missing or cannot be read, the application does not start with a new key.
-- **The administrator signs in with the 2026admin profile and no longer sees “Decisions” in the menu.** The change affects the profile assigned to the administrator user. It also removes the decision task entry from the menu.
-- **SQL connection errors are correctly identified for different network problems.** The information lets you distinguish between server resolution problems, timeouts, and rejected connections. This makes it easier to identify the type of connection failure.
-- **The quick configuration panel is more readable in the 2026 skin.** Labels, section headings, and help text are easier to read. The appearance of the save button has also been adjusted.
-- **When configuring email with SSL, the selected value is applied and a default port is suggested.** The configuration step automatically fills in the port when you enable SSL. You can change it if you need to use a different value.
+- **Configuration secrets remain encrypted in IIS and production Docker containers.** In other environments, secrets are decrypted when the application starts. If a Docker secret is missing or cannot be read, the application does not start by generating a new key.
+- **The administrator starts with the 2026admin profile, and only administrators see the option to switch profiles; “Decisions” no longer appears in the menu.** The assigned profile change applies to the administrator user. Other users do not see an action they cannot perform, and the decision tasks entry is removed from the menu.
+- **Translations are completed for the Connectors area of the 2026 control panel and the new administration screens.** People who use Flexygo in other languages can view these translated areas. Missing translations are also restored, and a list of records is fixed to include the identifier for each row.
+- **SQL connection errors are correctly identified for different network issues.** This helps distinguish server resolution errors, timeouts, and rejected connections. This makes it easier to identify the type of problem preventing a connection to SQL.
+- **The quick configuration panel is more readable in the 2026 skin.** Labels, section headings, and help text are easier to read. The appearance of the save button is also adjusted.
+- **When you enable SSL in the email settings, a default port is suggested and the selected SSL value is applied.** The email configuration step fills in the port for SSL connections. This means you do not have to enter it manually in that case.
 - **Configuration groups show how many options they contain and are displayed in clearer cards.** The new layout takes up less space and makes it easier to find each group. When you hover over a group, the edit action remains visible.
-- **The action to convert the development database clearly describes its effects and warns of the consequences.** Its name can no longer be confused with the interface's development mode. It is also marked as a dangerous action.
-- **You can search for and configure chart themes from Flexygo administration.** Themes appear in navigation and configuration searches. You can then assign them to chart modules.
-- **Flexygo creates a default configuration if the application starts without a configuration file.** This lets the application start even if the file has not yet been created. The default configuration is available for that first startup.
-- **You can configure the port, schema, and Flexygo URL.** These values let you adapt the application to the environment where it runs. They are set in the application configuration.
+- **The action to convert the development database clearly indicates its effect and warns of its consequences.** The name avoids confusion with the interface development mode. The action is also marked as dangerous.
+- **You can search for and configure chart themes from Flexygo administration.** Themes appear in navigation and configuration searches. They can also be assigned to chart modules.
+- **Flexygo creates a default configuration if the application starts without a configuration file.** This lets you start the application when that file has not yet been created. The default configuration is created at startup.
+- **You can configure the port, scheme, and URL of Flexygo.** These values are set in the application configuration. This lets you adapt it to the environment where it runs.
 
 ### Development Tools
 
@@ -435,10 +436,8 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Configuration
 
-- **The option to change profiles is only displayed to administrators.** Other users no longer see an action they cannot perform. This ensures the available options match their permissions.
-- **Missing translations are restored, translations for new administration screens are completed, and a log list is fixed.** The runtime log list includes the identifier needed to recognize each row. The translation scripts used during installation are also unified.
-- **Errors when saving dependencies and retrieving license values are fixed.** Both operations now work correctly. This lets you save dependencies and retrieve license values without the previous failures.
-- **Configuration tables include the missing columns.** The definition used to create or update these tables now includes all the expected columns. This ensures the tables are complete after the operation.
+- **Errors when saving dependencies and retrieving license values are fixed.** Operations for saving dependencies and retrieving license values are working correctly again. You can now complete these tasks without the previous errors.
+- **The configuration tables script includes the missing columns.** Creating or updating these tables now includes the expected columns. This prevents columns from being missing when you run the script.
 
 ### Conversations
 
@@ -578,10 +577,6 @@ Simplifies installation and updates with wizards, refreshes the application with
 - **The WebAPI correctly accepts requests sent without content.** Sending these requests is fixed so they do not fail when the body is empty.
 
 ## Deprecated
-
-### Configuration
-
-- **The option to link an object is no longer displayed on the offline applications screen.** Only that linking option has been removed. The options to create and clone objects remain available.
 
 ### WebAPI Security
 

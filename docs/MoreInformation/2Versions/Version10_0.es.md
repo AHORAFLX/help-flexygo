@@ -92,15 +92,15 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Configuración
 
-- **Los administradores pueden consultar y editar la configuración de la instalación desde una pantalla específica, con comprobaciones antes de guardar.** La pantalla reúne opciones, niveles de registro, conexiones y credenciales; también agrupa las conexiones y muestra el estado de sus comprobaciones. Señala los campos que requieren atención y explica los valores no válidos; las contraseñas aparecen enmascaradas.
-- **Los administradores pueden activar el modo de mantenimiento y mostrar un aviso mientras la aplicación no está disponible.** El control está disponible en el panel de administración y el aviso se actualiza al cambiar el estado. Las páginas abiertas se actualizan, y quienes visitan el sitio pueden volver a su página cuando termina el mantenimiento.
-- **Puedes configurar el separador que se utiliza al exportar archivos CSV.** Elige el formato que mejor se adapte a cada aplicación. La opción modifica el separador de los archivos exportados.
-- **Configura aplicaciones sin conexión desde una pantalla organizada por secciones.** Desde la pantalla puedes gestionar objetos, menús, páginas, código, recursos y sincronización, además de consultar el historial de sincronización. El emulador permite ver cómo queda la aplicación en un dispositivo móvil.
-- **Actualiza las pantallas de todos los usuarios conectados o selecciona sesiones concretas.** La acción se encuentra en el menú de acciones de la información de versión. Puedes buscar usuarios y elegir a quién enviar la actualización.
-- **Los administradores pueden consultar la configuración y el estado de los procesos en pantallas de solo lectura.** La configuración se muestra por separado para la aplicación y el servidor. También se puede consultar el estado de los procesos, la base de datos y los recursos disponibles, sin modificar esos valores desde estas pantallas.
-- **Puedes abrir la configuración de la página desde un botón junto a la herramienta para organizar módulos.** El acceso está disponible en modo de desarrollo. Al navegar a otra página, sigue mostrando la configuración de la página actual sin reconstruir la cabecera.
-- **Configura la aplicación con valores específicos para cada entorno.** Puedes cargar y guardar ajustes propios de cada entorno, como desarrollo. Así, esos valores se mantienen separados de la configuración general.
-- **Publica una base de datos desde el configurador.** La herramienta de configuración incorpora esta tarea, por lo que puedes realizarla desde allí sin recurrir a otro acceso.
+- **Los administradores pueden consultar y editar la configuración de la instalación desde una pantalla específica, con comprobaciones antes de guardar.** La pantalla reúne opciones, niveles de registro, conexiones y credenciales, y muestra cuántas conexiones hay y cuántas comprobaciones han fallado. Las comprobaciones señalan los campos que necesitan atención y permiten guardar directamente cuando no hay nada que revisar; las contraseñas aparecen enmascaradas.
+- **Los administradores pueden activar el modo de mantenimiento y mostrar un aviso mientras la aplicación no está disponible.** El control está en el panel de administración y también se muestra una página pública durante el mantenimiento. Al cambiar el estado, las páginas abiertas se actualizan y, cuando termina, quienes visitan el sitio pueden volver a su página.
+- **Configura aplicaciones sin conexión desde una pantalla organizada por secciones, con historial de sincronización y emulador móvil.** La pantalla reúne objetos, menús, páginas, código, recursos y sincronización. Desde la pantalla de aplicaciones sin conexión ya no se ofrece la opción de enlazar un objeto, aunque se mantienen las opciones para crear y clonar objetos.
+- **Puedes configurar el separador que se utiliza al exportar archivos CSV.** La opción permite ajustar el formato de los archivos exportados a las necesidades de cada aplicación. Configúrala para que los datos se separen como necesitas al abrir el archivo.
+- **Actualiza las pantallas de todos los usuarios conectados o selecciona sesiones concretas.** La acción está disponible en el menú de acciones de la información de versión. Puedes buscar usuarios y seleccionar sus sesiones para enviarles la actualización.
+- **Los administradores pueden consultar la configuración y el estado de los procesos en pantallas de solo lectura.** La configuración de la aplicación y la del servidor se muestran por separado. También se puede consultar el estado de los procesos, la base de datos y los recursos disponibles.
+- **Puedes abrir la configuración de la página desde un botón junto a la herramienta para organizar módulos.** El acceso está disponible en modo de desarrollo y sigue la página actual al navegar a otra, sin reconstruir la cabecera.
+- **Configura la aplicación con valores específicos para cada entorno.** La aplicación puede cargar y guardar los ajustes propios de cada entorno, como desarrollo. Así, esos valores no se mezclan con la configuración general.
+- **Publica una base de datos desde el configurador.** La herramienta de configuración incorpora la publicación de bases de datos. Puedes realizar esta tarea desde el propio configurador.
 
 ### Correo electrónico
 
@@ -242,16 +242,17 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Configuración
 
-- **Los secretos de configuración se mantienen cifrados en IIS y en contenedores Docker de producción.** En otros entornos, se descifran al iniciar la aplicación. Si falta un secreto de Docker o no se puede leer, la aplicación no inicia con una clave nueva.
-- **El administrador inicia con el perfil 2026admin y deja de ver «Decisions» en el menú.** El cambio afecta al perfil asignado al usuario administrador. También elimina del menú la entrada de tareas de decisión.
-- **Los errores de conexión a SQL se identifican correctamente para distintos problemas de red.** La información permite distinguir entre problemas de resolución del servidor, tiempos de espera y conexiones rechazadas. Así resulta más fácil reconocer el tipo de fallo de conexión.
-- **El panel de configuración rápida resulta más legible en la skin 2026.** Las etiquetas, los títulos de sección y las ayudas se leen con más claridad. También se ha ajustado el aspecto del botón para guardar.
-- **Al configurar el correo con SSL, se aplica el valor seleccionado y se propone un puerto predeterminado.** El paso de configuración rellena automáticamente el puerto cuando activas SSL. Puedes cambiarlo si necesitas usar otro valor.
+- **Los secretos de configuración se mantienen cifrados en IIS y en contenedores Docker de producción.** En otros entornos, los secretos se descifran al iniciar la aplicación. Si falta un secreto de Docker o no se puede leer, la aplicación no inicia creando una clave nueva.
+- **El administrador inicia con el perfil 2026admin y solo los administradores ven la opción para cambiar de perfil; «Decisions» ya no aparece en el menú.** El cambio de perfil asignado se aplica al usuario administrador. Los demás usuarios no ven una acción que no pueden ejecutar, y se elimina del menú la entrada de tareas de decisión.
+- **Se completan las traducciones del área Connectors del panel de control de 2026 y de las nuevas pantallas administrativas.** Quienes utilizan Flexygo en otros idiomas pueden consultar estas áreas traducidas. También se recuperan traducciones que faltaban y se corrige una lista de registros para que incluya el identificador de cada fila.
+- **Los errores de conexión a SQL se identifican correctamente para distintos problemas de red.** Esto ayuda a distinguir los errores de resolución del servidor, los tiempos de espera y las conexiones rechazadas. Así resulta más fácil reconocer el tipo de problema que impide conectar con SQL.
+- **El panel de configuración rápida resulta más legible en la skin 2026.** Se mejora la lectura de las etiquetas, los títulos de sección y las ayudas. También se ajusta el aspecto del botón para guardar.
+- **Al activar SSL en la configuración del correo, se propone un puerto predeterminado y se aplica el valor SSL seleccionado.** El paso de configuración del correo rellena el puerto para las conexiones con SSL. Así no tienes que introducirlo manualmente en ese caso.
 - **Los grupos de configuración muestran cuántas opciones contienen y se presentan en tarjetas más claras.** La nueva disposición ocupa menos espacio y facilita localizar cada grupo. Al pasar el cursor, la acción para editarlo permanece visible.
-- **La acción para convertir la base de datos de desarrollo indica claramente sus efectos y advierte de sus consecuencias.** Su nombre ya no se confunde con el modo de desarrollo de la interfaz. Además, aparece marcada como una acción peligrosa.
-- **Puedes buscar y configurar los temas de gráficos desde la administración de Flexygo.** Los temas aparecen en la navegación y en las búsquedas de configuración. Después puedes asignarlos a los módulos de gráfico.
-- **Flexygo crea una configuración predeterminada si la aplicación arranca sin archivo de configuración.** Esto permite iniciar la aplicación aunque todavía no se haya creado dicho archivo. La configuración predeterminada queda disponible para ese primer arranque.
-- **Puedes configurar el puerto, el esquema y la URL de Flexygo.** Estos valores permiten adaptar la aplicación al entorno donde se ejecuta. Se establecen en la configuración de la aplicación.
+- **La acción para convertir la base de datos de desarrollo indica claramente su efecto y advierte de sus consecuencias.** El nombre evita confusiones con el modo de desarrollo de la interfaz. Además, la acción aparece marcada como peligrosa.
+- **Puedes buscar y configurar los temas de gráficos desde la administración de Flexygo.** Los temas aparecen en la navegación y en las búsquedas de configuración. También pueden asignarse a los módulos de gráfico.
+- **Flexygo crea una configuración predeterminada si la aplicación arranca sin archivo de configuración.** Esto permite poner en marcha la aplicación cuando todavía no se ha creado ese archivo. La configuración predeterminada se crea al iniciar.
+- **Puedes configurar el puerto, el esquema y la URL de Flexygo.** Estos valores se establecen en la configuración de la aplicación. Así puedes adaptarla al entorno donde se ejecuta.
 
 ### Filtros
 
@@ -429,10 +430,8 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Configuración
 
-- **La opción para cambiar de perfil solo aparece a los administradores.** Los demás usuarios dejan de ver una acción que no pueden ejecutar. Así, las opciones disponibles se ajustan a sus permisos.
-- **Se recuperan traducciones que faltaban, se completan las de las nuevas pantallas administrativas y se corrige una lista de registros.** La lista de registros de ejecución incluye el identificador necesario para reconocer cada fila. También se unifican los scripts de traducción utilizados durante la instalación.
-- **Se corrigen los errores al guardar dependencias y obtener valores de licencia.** Ambas operaciones vuelven a funcionar correctamente. Esto permite guardar las dependencias y consultar los valores de licencia sin los fallos anteriores.
-- **Las tablas de configuración incluyen las columnas que faltaban.** La definición utilizada para crear o actualizar estas tablas incorpora ahora todas las columnas previstas. Así, las tablas quedan completas tras la operación.
+- **Se corrigen los errores al guardar dependencias y obtener valores de licencia.** Las operaciones para guardar dependencias y consultar valores de licencia vuelven a funcionar correctamente. Ya puedes completar estas tareas sin los errores anteriores.
+- **El script de tablas de configuración incluye las columnas que faltaban.** La creación o actualización de estas tablas cuenta ahora con las columnas previstas. Esto evita que falten columnas al aplicar el script.
 
 ### Conversaciones
 
@@ -578,10 +577,6 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 - **Los objetos relacionados con tareas programadas aplican correctamente la seguridad configurada.** La seguridad configurada se aplica a estos objetos. Así, conservan las restricciones previstas.
 
 ## Obsoleto
-
-### Configuración
-
-- **Ya no aparece la opción de enlazar un objeto desde la pantalla de aplicaciones sin conexión.** La retirada afecta únicamente a esa opción de enlace. Se mantienen las opciones para crear y clonar objetos.
 
 ### Seguridad de la WebAPI
 
