@@ -1,18 +1,56 @@
 # Version 10.0
 
-Renews the application with the Flexygo 2026 skin, adds AI assistants to query data, modify records and create applications, and simplifies deployments, installation and updates with guided assistants.
+Simplifies installation and updates with wizards, refreshes the application with the Flexygo 2026 skin, allows separate deployments and adds AI assistants for querying data and running processes.
 
 ## New features
 
+### Installation
+
+- **Configure Flexygo from the login screen with a wizard that guides you through setup and lets you resume it.** The wizard brings together the connection, databases, project, email, and publishing, and lets you configure pending data connections for each installation. It checks the values, shows progress, and keeps each step available so you can fix errors or try again; if you leave, you can continue from the first pending step. It is only available while installation is pending and replaces the previous installer.
+
+    ![Configure Flexygo from the login screen with a wizard that guides you through setup and lets you resume it.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
+- **You can configure an unattended installation to complete automatically when the backend starts.** It lets you create, update, or reuse databases, as well as set the project name and administrator password. If a step fails, the installation reports it with a failed startup.
+- **You can install a database and check deployment progress from the configurator.** The configurator shows the connection when the database is already configured and reports the deployment stages. This option also works in development environments.
+- **Initial setup introduces a new flow for configuring Flexygo and registering users.** The process includes project, database, and email settings. It also handles states without a title and an empty project name.
+- **Install and update Flexygo from the configuration screens, including updates to the application and database.** The new update process is managed from the configurator and downloads and installs the packages needed to deploy the new version. It also accounts for operations affected by locked files or resources.
+- **You can install and update Flexygo from the initial configuration screens.** The wizard brings together the application installation and update options. This lets you perform these tasks from within the application itself.
+
 ### Skins
 
-- **The Flexygo 2026 skin redesigns the application and adds a responsive sidebar and new shortcuts.** It renews screens, menus, lists, forms, panels and dialogs, with new typography, colors, spacing and controls. The sidebar can be collapsed and includes shortcuts to alerts and the profile; it also offers the Ctrl+K shortcut and keeps the previous skin available.
+- **The Flexygo 2026 skin refreshes the design of the entire application and adds a responsive sidebar.** The redesign covers screens, menus, lists, forms, panels and dialogs, with new typography, colors, spacing and controls. The sidebar groups menus and can be collapsed; it also includes shortcuts to alerts and profile, and the Ctrl+K shortcut. The previous skin remains available.
 
-    ![The Flexygo 2026 skin redesigns the application and adds a responsive sidebar and new shortcuts.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
-- **The 2026 skin retains its configuration when database scripts are published.** Publishing includes the skin’s appearance, menus, panels and pages, even when starting from an empty database. This lets a new installation start with these items available.
-- **You can customize account page resources from your product.** Adapt styles, scripts and icons at different customization levels. This lets you adjust sign-in, registration and password recovery pages for each product.
-- **You can switch between light, dark and system themes.** The interface and some integrated elements adapt their appearance to the selected theme. If you choose the system theme, Flexygo follows the device’s appearance preference.
-- **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. In addition, style loading does not fail if a LESS variable is missing from the CSS variables.
+    ![The Flexygo 2026 skin refreshes the design of the entire application and adds a responsive sidebar.](../../docs_assets/images/Versions/Version10_0/skin-2026.png)
+- **The Flexygo 2026 skin adds the Import menu and a connectors section to the control panel.** Import is available to registered users, but not guests. The connectors section includes MailChimp, Ahora ERP and Power BI, among others.
+- **Database script publishing preserves the 2026 skin configuration.** The skin's appearance, menus, panels and pages are included. This allows a new installation to start with the complete configuration, even when publishing from an empty database.
+- **You can customize account page resources from your product.** You can adapt styles, scripts and icons at different customization levels. This lets you tailor the sign-in, registration and password recovery pages for each product.
+- **You can switch between light, dark and system themes.** The interface and some built-in elements adapt their appearance to the selected theme. If you choose the system theme, Flexygo follows the device's appearance preference; the selector also adapts its options to the active theme.
+- **You can use custom CSS variables in your styles.** Flexygo supports custom CSS variables when applying styles. This gives you more options for adapting the application's appearance.
+
+### Development Tools
+
+- **Explore, search and select icons, add your own SVGs and generate fonts for project libraries.** In Help > Icon List, you can search more than 5,000 icons, filter them by library and category, and preview them. Administrators can add SVG icons and generate fonts for compatible libraries; they can also download a ZIP as an alternative.
+
+    ![Explore, search and select icons, add your own SVGs and generate fonts for project libraries.](../../docs_assets/images/Versions/Version10_0/icon-browser.png)
+- **Create Flexygo applications through a conversation with an AI assistant connected to the Flexygo MCP.** The assistant gathers the requirements, proposes the design and organizes the work before creating the application. You can then review and test the result in the browser, while a board displays the tasks, decisions, history and quality checks.
+
+    ![Create Flexygo applications through a conversation with an AI assistant connected to the Flexygo MCP.](../../docs_assets/images/Versions/Version10_0/mcp-product-building.png)
+- **Create external objects that query and update data through REST services and extend their compatibility with Flexygo.** The object assistant can analyze the service and suggest its properties. These objects can be used in lists, forms, calendars, Kanban boards and HTML reports; lists support pagination, and forms show the source of their selection fields. The key generated by the external WebAPI when records are inserted is also captured, and assistants can query totals and measures; the MCP server can display its data in dashboards. The export preserves settings modified during installation as updates, except for environment-specific settings.
+- **Add sliders with a visible value to your applications.** The value is confirmed when you release the control, and you can also respond while it is being dragged. The control is available among the shared elements.
+- **Create tabbed interfaces with the new shared controls.** Tabs and their content are linked by a value. This lets you manage which section is active.
+- **Create, name and manage tabs from the designer's tab strip.** The strip appears even when the object has no tabs yet, so you can add the first one directly. From each tab, you can change its name or icon and delete it; the first tab groups the object's initial content.
+- **Configure properties from a larger quick settings panel in the Object Bank.** When you edit a property, the panel opens next to the Object Bank and you can close it without expanding the navigation again. Fields have more space, and scrolling stays within the panel.
+- **Developers can subscribe to DataManager's SQL informational messages.** This option lets you receive these messages from external code that uses DataManager. This makes it possible to check its notifications while using that code.
+- **Run GET queries with flexygo.ajax.get.** This function lets you access operations that require this type of query. It also restores the version query used by the footer.
+- **The WebAPI getView operation applies the corresponding default values.** When you query a view through this operation, its default values are included. The issue that returned incorrect default values is also fixed.
+- **Default values are applied to friendly URLs.** These addresses are now resolved using default values. This makes it possible to resolve them while taking those values into account.
+- **Create guided tours by pointing directly to elements on each screen.** The editor groups steps by screen, lets you reorder them and displays the selected element for each step before saving. You can also customize the welcome card with an image or the Flexygo brand, which can be displayed with a typing animation; selected images are displayed as static illustrations.
+- **The 2026 skin adds tabs to processes and reports, object wizards, and document and image managers.** Image managers can display content as a gallery or a list. Tabs extend the organization of properties beyond object editing.
+- **The 2026 skin lets you select a source or close the dialog without changing it.** The current source is highlighted, and the options are distinguished by a color badge. The selector displays the four sources in two columns, keeps the addon out of that list and lets you close the dialog with the corresponding button or Esc; the active label updates when you change sources.
+- **Start creating an object directly from the object catalog access point.** The plus button opens the assistant without activating the catalog access point that contains it. On hover, the symbol stands out with more contrast and its own background.
+- **In development mode, a module's menu provides access to its object's configuration.** The options are grouped at the end of the menu. They are not displayed in the classic skin.
+- **Organize a page's modules directly from the page, without going to the module manager.** You can move modules between zones, choose another layout and create modules from the organizer. Before saving, it warns you if a layout change would leave positions unassigned or if the page comes from a distribution and would be reverted by an update.
+- **Integrate Flexygo with other systems using webhooks.** Developers can use this feature to connect their applications with other systems. This lets integrated systems exchange information through webhooks.
+- **Change package optimization from the development menu.** This option lets you toggle the setting without leaving the menu. This lets you change optimization from the development tools.
 
 ### Integrations
 
@@ -52,43 +90,6 @@ Renews the application with the Flexygo 2026 skin, adds AI assistants to query d
 - **Deploy the Flexygo database with Docker.** The required Docker files for deploying the database with this technology are included.
 - **Generate Flexygo images with Docker and configure its components to start together.** Docker files and a configuration for starting the different parts of the application together are included. This lets you prepare a Flexygo deployment with Docker.
 
-### Development Tools
-
-- **Explore, search and select icons, add your own SVGs and generate fonts for project libraries.** In Help > Icon List, you can search more than 5,000 icons, filter them by library and category, and preview them. Administrators can add SVG icons and generate fonts for compatible libraries; they can also download a ZIP as an alternative.
-
-    ![Explore, search and select icons, add your own SVGs and generate fonts for project libraries.](../../docs_assets/images/Versions/Version10_0/icon-browser.png)
-- **Create Flexygo applications through a conversation with an AI assistant connected to the Flexygo MCP.** The assistant gathers the requirements, proposes the design and organizes the work before creating the application. You can then review and test the result in the browser, while a board displays the tasks, decisions, history and quality checks.
-
-    ![Create Flexygo applications through a conversation with an AI assistant connected to the Flexygo MCP.](../../docs_assets/images/Versions/Version10_0/mcp-product-building.png)
-- **Create external objects that query and update data through REST services and extend their compatibility with Flexygo.** The object assistant can analyze the service and suggest its properties. These objects can be used in lists, forms, calendars, Kanban boards and HTML reports; lists support pagination, and forms show the source of their selection fields. The key generated by the external WebAPI when records are inserted is also captured, and assistants can query totals and measures; the MCP server can display its data in dashboards. The export preserves settings modified during installation as updates, except for environment-specific settings.
-- **Add sliders with a visible value to your applications.** The value is confirmed when you release the control, and you can also respond while it is being dragged. The control is available among the shared elements.
-- **Create tabbed interfaces with the new shared controls.** Tabs and their content are linked by a value. This lets you manage which section is active.
-- **Create, name and manage tabs from the designer's tab strip.** The strip appears even when the object has no tabs yet, so you can add the first one directly. From each tab, you can change its name or icon and delete it; the first tab groups the object's initial content.
-- **Configure properties from a larger quick settings panel in the Object Bank.** When you edit a property, the panel opens next to the Object Bank and you can close it without expanding the navigation again. Fields have more space, and scrolling stays within the panel.
-- **Developers can subscribe to DataManager's SQL informational messages.** This option lets you receive these messages from external code that uses DataManager. This makes it possible to check its notifications while using that code.
-- **Run GET queries with flexygo.ajax.get.** This function lets you access operations that require this type of query. It also restores the version query used by the footer.
-- **The WebAPI getView operation applies the corresponding default values.** When you query a view through this operation, its default values are included. The issue that returned incorrect default values is also fixed.
-- **Default values are applied to friendly URLs.** These addresses are now resolved using default values. This makes it possible to resolve them while taking those values into account.
-- **Create guided tours by pointing directly to elements on each screen.** The editor groups steps by screen, lets you reorder them and displays the selected element for each step before saving. You can also customize the welcome card with an image or the Flexygo brand, which can be displayed with a typing animation; selected images are displayed as static illustrations.
-- **The 2026 skin adds tabs to processes and reports, object wizards, and document and image managers.** Image managers can display content as a gallery or a list. Tabs extend the organization of properties beyond object editing.
-- **The 2026 skin lets you select a source or close the dialog without changing it.** The current source is highlighted, and the options are distinguished by a color badge. The selector displays the four sources in two columns, keeps the addon out of that list and lets you close the dialog with the corresponding button or Esc; the active label updates when you change sources.
-- **Start creating an object directly from the object catalog access point.** The plus button opens the assistant without activating the catalog access point that contains it. On hover, the symbol stands out with more contrast and its own background.
-- **In development mode, a module's menu provides access to its object's configuration.** The options are grouped at the end of the menu. They are not displayed in the classic skin.
-- **Organize a page's modules directly from the page, without going to the module manager.** You can move modules between zones, choose another layout and create modules from the organizer. Before saving, it warns you if a layout change would leave positions unassigned or if the page comes from a distribution and would be reverted by an update.
-- **Integrate Flexygo with other systems using webhooks.** Developers can use this feature to connect their applications with other systems. This lets integrated systems exchange information through webhooks.
-- **Change package optimization from the development menu.** This option lets you toggle the setting without leaving the menu. This lets you change optimization from the development tools.
-
-### Installation
-
-- **Configure Flexygo from the login screen with a wizard that guides you through setup and lets you resume it.** The wizard brings together the connection, databases, project, email, and publishing, and lets you configure pending data connections for each installation. It checks the values, shows progress, and keeps each step available so you can fix errors or try again; if you leave, you can continue from the first pending step. It is only available while installation is pending and replaces the previous installer.
-
-    ![Configure Flexygo from the login screen with a wizard that guides you through setup and lets you resume it.](../../docs_assets/images/Versions/Version10_0/setup-wizard.png)
-- **You can configure an unattended installation to complete automatically when the backend starts.** It lets you create, update, or reuse databases, as well as set the project name and administrator password. If a step fails, the installation reports it with a failed startup.
-- **You can install a database and check deployment progress from the configurator.** The configurator shows the connection when the database is already configured and reports the deployment stages. This option also works in development environments.
-- **Initial setup introduces a new flow for configuring Flexygo and registering users.** The process includes project, database, and email settings. It also handles states without a title and an empty project name.
-- **Install and update Flexygo from the configuration screens, including updates to the application and database.** The new update process is managed from the configurator and downloads and installs the packages needed to deploy the new version. It also accounts for operations affected by locked files or resources.
-- **You can install and update Flexygo from the initial configuration screens.** The wizard brings together the application installation and update options. This lets you perform these tasks from within the application itself.
-
 ### Artificial Intelligence
 
 - **New GPT models are added for artificial intelligence features.** The available models are updated for use in the artificial intelligence settings. You can select the available models for these features there.
@@ -124,7 +125,7 @@ Renews the application with the Flexygo 2026 skin, adds AI assistants to query d
 
 ### Email
 
-- **The webmail integration can renew its access credentials.** A notification has been added to manage authentication, and the credential renewal process has been fixed.
+- **The webmail integration lets you refresh access credentials.** A notification is displayed to manage authentication. The credential refresh process is also fixed.
 
 ### Filters
 
@@ -385,15 +386,16 @@ Renews the application with the Flexygo 2026 skin, adds AI assistants to query d
 
 ### Skins
 
-- **The 2026 skin improves the contrast and readability of menus, controls, notifications and fields.** The adjustments apply to light and dark modes, from the Apply button in dialogs and danger options to cards, wizard steps and planner notifications. Process buttons, muted links and error messages are also easier to distinguish, with errors displayed next to the field label.
-- **Field and toggle controls in the 2026 skin retain a consistent appearance outside edit forms.** Fields retain the appropriate style when they appear on other screens. Disabled toggles that are switched on retain a solid accent color.
-- **In the 2026 skin, processes with visible text remain on the toolbar.** Processes without text remain grouped in the three-dot menu. This keeps named actions readily available without cluttering the toolbar.
-- **In the 2026 skin, filters and the actions menu take up less space above the content.** These controls are placed next to the module title. If there are no filters to show, the empty row disappears.
-- **The 2026 skin uses the Geist typeface instead of IBM Plex.** This changes the appearance of text and reduces the size of the font files used by this skin.
-- **From the 2026 skin header, you can open the module organizer using a button or keyboard shortcut.** The button appears next to notifications, and the shortcut is Ctrl+Shift+M. Access respects design permissions.
-- **You can show a different logo depending on the interface mode.** The application looks for the logo variant that corresponds to the active mode. This lets you adapt its appearance to each mode.
-- **The default Flexygo logo has a gray background instead of a white one.** The change applies to the logo image included by default.
-- **You can access skin variables without distinguishing between uppercase and lowercase letters.** Variable lookup also works when they are entered with different capitalization.
+- **The 2026 skin's field and toggle controls keep a consistent appearance outside edit forms.** Fields retain the appropriate style when displayed on other screens. Also, disabled toggles that are on keep a solid accent color.
+- **You can display a different logo for each interface mode.** The application selects the variant for the active mode. This lets you adapt the logo's appearance to each mode.
+- **The 2026 skin improves the contrast and readability of various controls and text.** The Apply button in the sorting dialog and the button for running processes are easier to distinguish. Text for danger options, cards, wizard steps, and scheduler alerts and controls is also adjusted in light and dark modes.
+- **The 2026 skin uses the Geist font instead of IBM Plex.** This changes the appearance of text in this skin. It also reduces the size of the font files it uses.
+- **In the 2026 skin, processes with visible text remain in the toolbar.** Processes without text remain grouped in the three-dot menu. This keeps the toolbar tidy without hiding processes that include a visible description.
+- **In the 2026 skin, filters and the actions menu take up less space above the content.** The controls appear next to the module title. If there are no filters to show, the empty row disappears.
+- **Fields that fail validation are easier to identify in the 2026 skin.** The error message appears next to the field label. This prevents it from being cut off or overlapping the next row.
+- **You can open the module organizer from the 2026 skin header using a button or keyboard shortcut.** The button is next to the notifications, and the shortcut is Ctrl+Shift+M. Access respects design permissions.
+- **The default Flexygo logo has a gray background instead of a white one.** This change applies to the logo image included by default.
+- **You can access skin variables without distinguishing between uppercase and lowercase letters.** The search finds a variable even if it is typed with different capitalization. You do not need to match the capitalization when locating it.
 
 ### Updater
 
@@ -466,6 +468,10 @@ Renews the application with the Flexygo 2026 skin, adds AI assistants to query d
 - **Downloads through the proxy respect the configured deletion after download and work across different servers.** When the corresponding option is enabled, the file is deleted after it is downloaded. Encryption for requests between servers has also been fixed.
 - **The preservation of document and image paths and names when saving and managing them through the proxy has been fixed.** The original path is preserved when saving files. In proxy operations, documents keep the correct name and path so they can be located by the processes that receive or manage them.
 - **The image control works when saving files to an external folder.** You can use the image control even when files are saved outside the application's usual folders.
+
+### Email
+
+- **Calendar invitations use the system email account if the user does not have their own.** The system address is also set as the organizer's address.
 
 ### Filters
 
@@ -552,8 +558,10 @@ Renews the application with the Flexygo 2026 skin, adds AI assistants to query d
 
 ### Skins
 
-- **The email editing footer buttons no longer cover the Save button in the 2026 skin.** Those editing an email can access the Save button without the other footer controls covering it.
-- **The path is fixed so that the main logo is displayed.** With this adjustment, the main logo is displayed correctly in the application again.
+- **In the 2026 skin, the email editor's footer buttons no longer cover Save.** When editing an email, you can access the Save button without it being covered by the footer controls.
+- **In the 2026 skin, list links follow the muted color defined by their template.** This improves the readability of muted text, such as “No address”. It applies to both light and dark modes.
+- **Errors when loading styles because a variable is missing are prevented.** Style loading no longer fails if a LESS variable is missing from the CSS variables. This prevents errors when applying the affected styles.
+- **The path is fixed so that the main logo is displayed.** Flexygo uses the corrected path to locate the logo. This allows the configured main logo to be displayed.
 
 ### Updater
 
