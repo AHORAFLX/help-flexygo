@@ -1,0 +1,10191 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1TryIt/">
+      
+      
+        <link rel="next" href="../../MCP/1Prerequisites/">
+      
+      
+      <link rel="icon" href="../../../docs_assets/images/logos/fl-favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Exportar la aplicación como proyecto 10.0+ - Flexygo Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom-colors.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/base.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/code-highlighting.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/css-class-components.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/404-error.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-modal.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-copy.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-namepropagator.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/fh-structural/components/fh-versions.css">
+    
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flags/flags.css">
+    
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flexygo/utils.css">
+    
+      <link rel="stylesheet" href="../../../docs_assets/fh-structural/fonts/flexygo/flexygo-icons.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/main-flexygo-styles.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/cols.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flexygo-styles/list-groups.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exportar-la-aplicacion-como-proyecto-100" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Flexygo Docs" class="md-header__button md-logo" aria-label="Flexygo Docs" data-md-component="logo">
+      
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+
+      Docs
+    </a>
+    <fh-versions></fh-versions>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+          </span>
+        </div>
+      </div>
+    </div>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options fh-search-shortcut" aria-label="Buscar">
+        CTRL + K
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <span onclick="changeLanguage('en')" class="md-select__link">
+              English
+            </span>
+          </li>
+        
+          <li class="md-select__item">
+            <span onclick="changeLanguage('es')" class="md-select__link">
+              Español
+            </span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="darkmode" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0M8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0M3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8m13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8m-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13m3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061M2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.75.75 0 0 1-.018 1.042.75.75 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="fh-sidebar md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="fh-sidebarheader">
+                  <a href="../../.." title="Flexygo Docs" class="md-header__button md-logo" aria-label="Flexygo Docs" data-md-component="logo">
+                    
+  <img src="../../../docs_assets/images/logos/fl.svg" alt="logo">
+
+                    Docs
+                  </a>
+                  <fh-versions></fh-versions>
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+    
+    <ul class="md-nav__list" data-md-scrollfix="">
+        
+            
+            
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción a Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Despliegue
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Despliegue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arquitectura de Flexygo 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/SystemRequirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requisitos del sistema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Instalador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Instalador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/1Installer/Deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalador: Modo Despliegue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/1Installer/Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalador: Modo Desarrollo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/1Installer/Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalador de Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/1Installer/Migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalador: Modo Migración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/1Installer/Uninstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalador: Modo Desinstalar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Asistente de configuración
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Asistente de configuración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/2ConfigWizard/AppSettingsReference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referencia: appsettings.json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/2ConfigWizard/Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/2ConfigWizard/EncryptedSettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cifrado de los appsettings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Actualizador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Actualizador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/3Updater/DockerUpdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía de actualización en contenedores (modo mantenimiento)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/3Updater/UpdateFlow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actualizador de Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1Deployment/3Updater/UpgradeNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qué tener en cuenta al actualizar 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../1Deployment/4Docker/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../1Deployment/5Kestrel/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Kestrel
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Kestrel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../1Deployment/6ReverseProxy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Proxy inverso
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Proxy inverso
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Desarrollo de producto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desarrollo de producto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1Requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2Template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plantilla
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3ProductManagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de producto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5IDEExtensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensiones IDE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6Customization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personalización de Assets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7Addons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crear un addon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exportar como proyecto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Exportar como proyecto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1TryIt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruébalo: de aplicación instalada a proyecto que compila y arranca 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Exportar la aplicación como proyecto 10.0+
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exportar la aplicación como proyecto 10.0+
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-antes-de-exportar-un-origen-propio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Antes de exportar: un origen propio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-donde-esta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dónde está
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lo-que-ensena-antes-de-empezar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lo que enseña antes de empezar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Lo que enseña antes de empezar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-la-carpeta-custom-se-elige-que-viaja" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 La carpeta custom: se elige qué viaja
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-el-modelo-de-datos-lo-deciden-las-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. El modelo de datos lo deciden las conexiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. El modelo de datos lo deciden las conexiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-los-datos-maestros-las-tablas-que-viajan-con-sus-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Los datos maestros: las tablas que viajan con sus filas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mientras-corre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Mientras corre
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-al-terminar" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Al terminar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-las-dll-sin-codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Las DLL sin código fuente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-lo-que-hay-que-hacer-con-el-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Lo que hay que hacer con el zip
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-lo-que-no-viaja" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Lo que no viaja
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MCP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            MCP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/1Prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerrequisitos del servidor MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/2Usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso básico del servidor MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/3Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración del servidor MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/4Tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Herramientas y recursos MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/5BestPractices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/6Workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flujo de trabajo con comandos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP/7PanelAndBoard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Panel y tablero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    CI/CD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CI/CD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3CICD/1Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CI/CD — Visión general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3CICD/2TeamCity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TeamCity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3CICD/3GitHubGitLab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub Actions y GitLab CI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Solución de Problemas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Solución de Problemas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4Troubleshooting/1Deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solución de Problemas: Despliegue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4Troubleshooting/2MCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solución de Problemas: MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ayuda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ayuda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Formación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/1Training/Courses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/1Training/VideoTutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VideoTutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Asistentes de IA (MCP)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Asistentes de IA (MCP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AIAssistants/1TryIt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruébalo: un asistente de IA trabajando con tu aplicación (MCP) 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AIAssistants/2Reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Asistentes de IA conectados a la aplicación (MCP) 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AIAssistants/3Decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aprobar decisiones desde el chat 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AIAssistants/4ClientRegistration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cómo se registran los asistentes (CIMD) 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Addons
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Addons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Addons/Addons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Información
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Addons/WhatsApp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WhatsApp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4">
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Administración
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Administración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/AdminDashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pantalla de inicio del administrador (skin2026) 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/ControlPanel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Panel de control 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/HealthPanel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Panel de salud 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/Skin2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Novedades de la interfaz skin2026 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_5">
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_5" id="__nav_6_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seguridad (roles y permisos)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Seguridad (roles y permisos)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/RolesAndPermissions/1Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seguridad: cómo decide Flexygo quién puede qué 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/RolesAndPermissions/2Screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    La pantalla de seguridad 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/RolesAndPermissions/3Rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Las reglas, una por una 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/RolesAndPermissions/4WebAPIMCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    La web API y los asistentes de IA 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/RolesAndPermissions/5TryIt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruébalo: un rol «Comercial» en 15 minutos 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Administration/RolesAndPermissions/6Mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Errores típicos y cómo comprobar 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5">
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ahora Business Hub
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ahora Business Hub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AhoraBusinessHub/AbhSign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firma Abh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AhoraBusinessHub/AbhSms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abh Sms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/AhoraBusinessHub/AbhTicket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ticket Abh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Conectores
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Conectores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/AhoraERP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Ahora ERP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/AzureADIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Azure AD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/AzureFormRecognizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure Form Recognizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/ClaveAuthentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autenticación Cl@ve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/FaceRecognition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reconocimiento Facial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/Google/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Google
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/GoogleAPIKey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google API Key
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/GooglePlaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Places
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/MailChimp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con MailChimp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/MailChimpProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procesos de ejemplo de MailChimp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/Office365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Office 365
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/OpenAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con ChatGPT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/OtherflexygoIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/Passbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Passbook
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/PowerBI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Power BI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/PushNotifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notificaciones Push
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/RedSys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RedSys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/Scales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Básculas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/SendinBlue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con SendinBlue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Connectors/WacomSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración con Wacom SDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7">
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Información
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Información
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/FriendlyURLs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    URLs amigables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/GoodPractices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/MFA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flexygo MFA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/MailAccountsSettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ajustes de cuenta de email
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/Navigator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modulo de navegación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/PageHierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Page Hierarchy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Information/Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8">
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Módulos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Chart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/ChartII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chart II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Chatter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chatter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/DocAndImageManager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document Manager And Image Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/ECharts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficas con ECharts: flx-echart frente a flx-chart 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/EasyInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Easy info: tarjetas, enlaces y períodos 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Funnel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funnel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Kanban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kanban
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Map
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/ModuleManagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Módulos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/ObjectFilters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filtros de Objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/PlannerModule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planificador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/Popover/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Popover y Tooltip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/SchedulerCalendar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programador y Calendario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/SchedulerCalendarV10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Calendarios con FullCalendar 6 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/TimelineModule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Línea de tiempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Modules/WebMail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Mail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9">
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    App Offline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            App Offline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/AccessandDescription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descripción de la App Offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/DesignEnvironment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entorno de diseño
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/DesigningApp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diseñar la App offline de flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/NavigationOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Opciones de navegación offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/OfflineAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IA offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/OfflineAndEmulatordifferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diferencias entre emulador y app
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/OfflineDatabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Base de datos offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/ReturnDataProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso de retorno de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/Trackingconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración del seguimiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/UsefulTokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Useful tokens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9_11">
+        
+          
+          <label class="md-nav__link" for="__nav_6_9_11" id="__nav_6_9_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funciones JS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Funciones JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Camera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cámara
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Exports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exportaciones (Exports)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formularios (Forms)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Location/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GPS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mensages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/NFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NFC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navegación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Online-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navegación online
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Parser
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/OfflineApp/JSFunctions/Zebra-Printer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zebra Printer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10">
+        
+          
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            Programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ActionsOnSave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acciones al guardar 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ActionsOnSaveTryIt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruébalo: una regla de tres pasos 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ApprovalsAndWebhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aprobaciones, tareas humanas y webhooks de salida 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ApprovalsAndWebhooksTryIt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruébalo: una decisión y un webhook de salida 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/CommonFunctions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones Comunes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ContextVariables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variables de Contexto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/Controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controles de formulario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/CustomDLL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DLL Personalizada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/CustomStored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procedimiento Almacenado Personalizado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/DatabaseScriptJobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trabajo de script de base de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/Events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eventos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ExternalEntities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entidades externas (objetos sobre una API REST)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/ExternalEntitiesTryIt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruébalo: un objeto que vive en una API REST
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/FormValidators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validadores de Formulario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/Imports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/LinkedServers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Servidores Vinculados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/NoticesSentences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sentencia de Notificación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatización de tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/UpdateTypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tipos de Actualización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/WebAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Web
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/WebAPISecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seguridad de la WebAPI: lo que el rol no puede, la API tampoco 10.0+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Programming/WebComponent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componente Web
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11">
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Informes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            Informes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Reporting/Newsandversionnotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Noticias y notas de versión
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12">
+        
+          
+          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estilos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
+            <span class="md-nav__icon md-icon"></span>
+            Estilos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Style/CSSAndTypography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tipografía y Estilos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Style/FlagIcons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Íconos de Banderas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Style/GridOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Opciones de la cuadrícula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Style/Icon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iconos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Style/Timeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronología
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_13">
+        
+          
+          <label class="md-nav__link" for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plantillas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_13">
+            <span class="md-nav__icon md-icon"></span>
+            Plantillas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Templates/Formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formatos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Templates/NavigationButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Botón de navegación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Templates/ObjectTemplates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plantillas de Objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Templates/Skeletons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Esqueletos de carga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Help/Templates/Targets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+            
+            
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Más información
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Más información
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Preguntas frecuentes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Preguntas frecuentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/AIDataHandling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tratamiento de datos en IA Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/AndroidWebApiCertificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error al conectar a la WebApi desde la App Offline en dispositivos Android 12/13
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/BeforeOpeningTicket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Antes de abrir un ticket
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/ComboAllowNewCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de función de retorno en combo con botón de permitir nuevo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/DataManagerInLibraryProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso de DataManager en procesos de librerías
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/DecryptWebConfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Cómo descifrar y volver a cifrar la configuración?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/DllNotRecognized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    He generado una DLL y no la reconoce Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/DocumentManagementConsiderations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Qué aspectos debo tener en cuenta para la gestión documental?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/FlexygoNews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Dónde puedo encontrar noticias sobre Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/ForeignKeyConflict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estoy actualizando versión, obtengo error de conflicto Foreign Key
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/GmailMailbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cómo configurar el buzón de correos con una cuenta de Gmail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/IISOptimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sugerencias para optimización del IIS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/Installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación de Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/MailAccountTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprobar el funcionamiento de una cuenta de correo para utilizarla en cualquiera de nuestras plataformas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/MinimumRequirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requisitos mínimos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/MobileSyncAlgorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algoritmo de actualización de datos en aplicaciones móviles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/ModuleAsFilter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Cómo utilizar un módulo como filtro de otro?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/ModulesHighCodingExamples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Dónde puedo encontrar ejemplos de módulos y high-coding?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/ObjectSecurityConfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Cómo configurar la seguridad de los objetos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/OriginIdChangeScript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desarrollando: script para cambiar el OriginId de todas nuestras modificaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/OriginIdExplained/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cómo funciona el OriginId en 4 pasos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/PartialOfflineSync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cómo hacer una sincronización parcial en Flexygo Offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/SecurityRecommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recomendaciones de seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/VCalendarSending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Realizar un envío de estándar VCalendar en un proceso de librería
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/1FAQ/WhereDoIStart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Dónde empiezo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Versiones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Versiones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version10_0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 10.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version6_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 6.10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version7_0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 7.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version8_0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 8.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version8_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 8.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version8_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 8.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version8_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 8.3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version8_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 8.4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version8_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 8.5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version9_0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 9.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version9_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 9.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/2Versions/Version9_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versión 9.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3">
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sabías que
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sabías que
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIAgentRAG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes habilitar la funcionalidad RAG a un agente IA?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIAssistantAccess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes usar la IA en la app de Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIAutocompleteText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes autocompletar cualquier texto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AICreateObjects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes crear objetos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIDefaultPrompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes establecer prompts por defecto en un agente IA?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIExplainSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que la IA de Flexygo puede explicarte una consulta SQL?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIGenerateDataModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes generar tu modelo de datos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIGoogleSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes buscar información en Google?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIInsertRecords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes insertar registros de un objeto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIQueryWithoutSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes consultar datos sin saber SQL?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIRunProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que con la IA de Flexygo puedes ejecutar procesos desde una conversación?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AITokenLimits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes establecer límites de uso para los asistentes IA de Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AITokenUsage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes ver el uso mensual del token para los asistentes IA de Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIToolbarAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes asociar un agente de IA a una toolbar de Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AIVoiceInteraction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que a la IA de la app puedes hablarle directamente?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/APICollections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que la API de Flexygo puede recibir colecciones?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AccentInsensitiveSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes hacer que las búsquedas en Flexygo no distingan acentos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/AltShowPropertyNames/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que pulsando ALT podrás visualizar los nombres de las propiedades?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/BILinkIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes enlazar Flexygo con un BI o cualquier otro sistema de forma muy sencilla?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/BrowserWindowTitlePattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que dispones de un parámetro para establecer el patrón del título de la ventana del navegador?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/BufferSize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes modificar de cuántos en cuántos registros se trae la app un objeto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ChatterMentions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes mencionar a otros usuarios en el chatter?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ClaveAuthentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que en Flexygo puedes establecer el sistema Cl@ve como método de autenticación?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CloneDependenciesToCollection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes clonar las dependencias de un objeto a las de la colección?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CloneObjectFromAnother/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes clonar un objeto en base a otro objeto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ComboObjectSecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes aplicar la seguridad de un objeto a una combo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CombosAllowNewValues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes configurar los combos para que permitan valores nuevos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CompareDatabasesVisualStudio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes comparar dos bases de datos tanto en estructura como en datos usando Visual Studio?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ConfigTableChanges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes obtener las modificaciones de las tablas de configuración directamente desde Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CrossDatabaseViews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes hacer vistas con información de distintas bases de datos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CrudViaJS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes ver, crear, editar o eliminar objetos mediante JS?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/CustomPropertyFromExisting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes convertir una propiedad en una propiedad personalizada?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/DefaultFilterRemovedAfterSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes establecer un filtro por defecto a un listado y que se quite automáticamente tras la primera búsqueda?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/DefaultUserPassword/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que podemos crear usuarios con una contraseña predeterminada?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/DeleteConfirmationText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes establecer un texto para confirmar el borrado de un registro?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/DirectScreenLink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes abrir cualquier pantalla de Flexygo directamente desde un enlace?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/DisableModuleEvents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que podemos deshabilitar eventos de los módulos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/EmergencyStopMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que Flexygo tiene un modo de parada de emergencia?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ExcelExportColumns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes elegir las columnas que quieres exportar a Excel?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ExcelImportExport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes importar/exportar Excel de manera sencilla?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/FieldFormatWizard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes dar formato a un campo sin necesidad de memorizar todos los tipos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/GenericObjectSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que Flexygo dispone de un buscador genérico para todos los objetos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/HTMLReports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que podemos generar informes en HTML?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/IPAccessRestriction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes limitar el acceso a Flexygo según la IP?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ImportRoleUserSecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que podemos importar la seguridad de roles y usuarios?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/JSEventHandling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes manejar eventos de Flexygo por JavaScript?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/JSFileInclude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes añadir JavaScript a la aplicación offline directamente desde un archivo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/JSFunctionsInTemplates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes llamar funciones JavaScript desde las propias plantillas de Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/JSONCrudProcedures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes gestionar acciones de inserción, actualización y eliminación de objetos con procedimientos JSON?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/KanbanBoards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que todos los Flexygo disponen de un kanban para gestionar tableros personalizados?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/KanbanFixedOrder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes establecer un orden fijo para las tarjetas de un Kanban?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/KeyboardShortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que Flexygo dispone de atajos de teclado?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/MaintenanceMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que existe un modo para realizar labores de mantenimiento en la aplicación?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/MenuSecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes añadir seguridad a los menús del App?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/MultipleDatabases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes usar múltiples BBDD en Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/MultipleMobileAccounts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes tener más de una cuenta en Flexygo Mobile?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/NodeEnableSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes habilitar y deshabilitar nodos a través de una consulta SQL?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/OAuthMailAccounts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que ahora puedes configurar las cuentas de correo y Web Mail de las aplicaciones con el protocolo OAuth 2.0?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/OfflineBackupRestore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes crear y restaurar copias de seguridad de la aplicación offline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/OfflineDatabaseQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes consultar la base de datos de la aplicación offline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/OfflineImageResize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes redimensionar las imágenes provenientes del offline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/OfflineSyncHistoryList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes acceder al listado del historial de sincronizaciones de la app offline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/OfflineSyncTimeout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que en Flexygo puedes establecer el tiempo de espera de sincronización en la app offline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/PresetsToggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes activar/desactivar presets vinculados a objetos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ProfilerAnywhere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes activar el profiler en la App Offline desde cualquier lugar?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ProfilerQueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes utilizar un profiler para las consultas de la App Offline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/PublishDatabaseDoubleClick/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes publicar la base de datos con solo doble clic?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/QRCodeGeneration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes generar códigos QR con Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/RadioAndMultiCheckbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que Flexygo dispone de controles de tipo Radio y Multiple checkbox?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/RelationEnableSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes habilitar y deshabilitar la relación de un objeto a través de una consulta SQL?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ScaleIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes integrar Flexygo con balanzas?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/ServerToClientEvents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes enviar eventos desde el servidor a los navegadores?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/SharedDocumentManagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que dos aplicaciones Flexygo pueden compartir una sola gestión documental?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/SidebarObjectConfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes acceder a la configuración de cualquier objeto desde el acceso rápido?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/SimultaneousUsersViewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que dispones de una opción para ver los usuarios que están viendo a la vez el mismo módulo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/SqlConnectionAppName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes identificar el origen de una conexión SQL por aplicación?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/SqllistTemplates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que los componentes sqllist de la app offline permiten importar templates?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/StickyToolbar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes fijar la barra de herramientas?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/SyncHistory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes revisar las sincronizaciones de la App Offline desde Flexygo?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/TemplateGroupingsUserSelectable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes crear agrupaciones de plantillas que pueden ser seleccionadas y reordenadas por el usuario?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/TestEnvironmentSingleUserMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes preparar un entorno de pruebas sin preocuparte de la licencia?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/TextToSpeech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que la app offline puede leer mensajes en voz alta?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/UnattendedInstallCLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes instalar Flexygo de forma desatendida?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/WacomSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que Flexygo ha añadido un nuevo control para firmas integrado con las tabletas Wacom?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/WebApiReuseToken/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que puedes reutilizar los tokens de autorización de la WebAPI?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/3DidYouKnow/Webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Sabías que Flexygo dispone de webhooks?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4">
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seguridad
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/4Security/SBOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Qué es el SBOM de Flexygo y por qué lo publicamos?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/4Security/SecureConfigurationGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía de Configuración Segura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/4Security/SecureDevelopmentGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía de Desarrollo Seguro en Flexygo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/4Security/SecureSDLC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ciclo de Vida de Desarrollo Seguro (SDLC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/4Security/VulnerabilityManagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de vulnerabilidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../MoreInformation/5Certification/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Certificación
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Certificación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6">
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CI/CD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            CI/CD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/6CICD/GenerateHotfix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Cómo generar un HOTFIX?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/6CICD/GenerateRelease/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Cómo generar una RELEASE?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MoreInformation/6CICD/GitCommitConventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Cómo desarrollar en GIT?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+        
+    </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="fh-maincontainer">
+              
+                <div class="md-content" data-md-component="content">
+                  <article class="md-content__inner md-typeset">
+                    
+                      
+
+
+
+<h1 id="exportar-la-aplicacion-como-proyecto-100">Exportar la aplicación como proyecto <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span><a class="headerlink" href="#exportar-la-aplicacion-como-proyecto-100" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Novedad en la versión 10.0</p>
+<p>El asistente de exportación muestra la plantilla y la versión elegidas, explica qué se incluirá y permite seguir el progreso hasta descargar el ZIP. Puedes elegir los archivos y carpetas personalizados y modificar la plantilla. De forma predeterminada, usa la plantilla del producto instalado y excluye los repositorios de documentos e imágenes y otros archivos grandes. Admite proyectos de más de 2 GB y comprueba que haya espacio suficiente. También registra las exportaciones y los errores.</p>
+<p>La exportación no incluye usuarios y guarda los secretos en un archivo local que no se comparte. Si el origen activo está reservado, el asistente avisa y propone el primer destino disponible. Solo pueden usarlo los administradores autorizados.</p>
+<p></p>
+</div>
+<p>Una aplicación Flexygo puede nacer configurándola a mano sobre el core —objetos, páginas, procesos, hojas de estilo— sin que exista ningún proyecto detrás. Cuando esa aplicación crece y hace falta <strong>desarrollarla y mantenerla con integración continua</strong>, <strong>Exportar como proyecto</strong> la convierte en un proyecto de la <a href="../../2Template/">plantilla de producto</a>: la misma solución que genera <code>dotnet new flexygoproduct</code>, con la configuración, el modelo de datos, los ficheros estáticos y las DLL de la instalación ya dentro, en un zip listo para abrir con Visual Studio y subir a un repositorio.</p>
+<p>¿Quieres hacerlo de principio a fin con una aplicación tuya? <a href="../1TryIt/">Pruébalo: de aplicación instalada a proyecto que compila y arranca</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Qué es y qué no es</p>
+<p>La exportación <strong>genera</strong> el proyecto; no compila ni publica nada en el servidor. Compilar, publicar las bases y arrancar el producto es trabajo del desarrollador, en su equipo, con lo que describe <a href="../../2Template/">Crear un producto con Flexygo</a>. La aplicación de la que se exporta <strong>no cambia</strong>: ni sus datos, ni sus orígenes, ni sus ficheros.</p>
+</div>
+<hr>
+<h2 id="1-antes-de-exportar-un-origen-propio">1. Antes de exportar: un origen propio<a class="headerlink" href="#1-antes-de-exportar-un-origen-propio" title="Permanent link">¶</a></h2>
+<p>Todo lo que es del proyecto tiene que estar en un <strong>origen</strong> distinto del 0, que es el core. Se exportan las filas de configuración del <strong>origen activo</strong> (el que se ve en el panel de control, <strong>Active origin</strong>, y en el que el equipo ha construido la aplicación); lo que se creó con el origen activo en 0 no se distingue del core y <strong>no viaja</strong>.</p>
+<p>Con el origen activo en 0 la ventana lo dice y no deja exportar:</p>
+<figure>
+  
+<br>
+<figcaption>Con el origen 0 activo: «Nothing of the core is exported». Se activa el origen del proyecto y se vuelve a abrir la ventana</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">El origen de destino: 1 para un producto, 2 para el hijo de un producto</p>
+<p>En los guiones del proyecto las filas viajan con el <strong>origen de destino</strong> que se elige en la ventana, no con el activo. Un producto que nace del core va como <strong>1 (Product)</strong>: el post-deploy de la plantilla deja a cada instalación trabajando en el 2 (Project), así que un producto cuyos <code>MERGE</code> fueran de origen 2 borraría las personalizaciones del cliente en cada actualización. Un producto que es <strong>hijo de otro producto</strong> (su padre ya ocupa el 1) va como <strong>2</strong>, y así sucesivamente. La conversión se hace <strong>solo en los guiones</strong>: la aplicación conserva su origen activo. El 0 no se ofrece como destino.</p>
+</div>
+<hr>
+<h2 id="2-donde-esta">2. Dónde está<a class="headerlink" href="#2-donde-esta" title="Permanent link">¶</a></h2>
+<p>En el <strong>panel de control</strong>, en la lista de acciones: <strong>Exportar como proyecto</strong> (el icono de la carpeta con la flecha). Abre una ventana propia que lleva la exportación de principio a fin: lo que se va a hacer, los pasos mientras corre y el resultado.</p>
+<ul>
+<li>Solo la usan los <strong>administradores</strong>.</li>
+<li><strong>Una exportación a la vez</strong> en la instalación. Si hay una en marcha, la ventana dice quién la lanzó y a qué hora, y ofrece <strong>Follow it</strong> para seguirla.</li>
+</ul>
+<hr>
+<h2 id="3-lo-que-ensena-antes-de-empezar">3. Lo que enseña antes de empezar<a class="headerlink" href="#3-lo-que-ensena-antes-de-empezar" title="Permanent link">¶</a></h2>
+<p>Nada más abrirse, la ventana lee la instalación y dice qué se va a llevar. Las líneas cambian con lo que se elige: el origen de destino y lo que se marca de la carpeta <code>custom</code> (3.1).</p>
+<figure>
+  
+<br>
+<figcaption>La vista previa con el origen 2 activo y el producto CRMCore: la configuración que viaja, el modelo de datos, los estáticos, la carpeta custom, las DLL, el SDK y la plantilla</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Línea</th>
+<th>Qué dice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The configuration of origin N</strong></td>
+<td>Cuántas filas y de cuántas tablas viajan como guiones <code>MERGE</code> del proyecto <code>Conf.Database</code>: las del origen activo más las que ya estén en el de destino. Y, si las hay, cuántas filas de <strong>otros orígenes se quedan fuera</strong> y de qué tablas</td>
+</tr>
+<tr>
+<td><strong>The data model</strong></td>
+<td>Qué conexiones llevan su esquema al proyecto y a qué proyecto va cada una (4), o <strong>none marked</strong> si no hay ninguna</td>
+</tr>
+<tr>
+<td><strong>Static files</strong></td>
+<td>Cuántos CSS y JS registra el origen, y cuántos de ellos <strong>no están en disco</strong></td>
+</tr>
+<tr>
+<td><strong>The custom folder</strong></td>
+<td>Cuántas carpetas y ficheros de la carpeta <code>custom</code> del Frontend viajan, de cuántos, con su tamaño, y cuánto se queda fuera; o que el Frontend no tiene carpeta <code>custom</code> (3.1)</td>
+</tr>
+<tr>
+<td><strong>Process DLLs</strong></td>
+<td>Cuántas DLL de procesos del origen no son del core, cuántas <strong>no están en <code>bin</code></strong> y cuántas son de un addon (solo se listan)</td>
+</tr>
+<tr>
+<td><strong>.NET SDK</strong></td>
+<td>Si el servidor tiene SDK (<strong>found</strong>, con la versión) o no (<strong>not on this server</strong>: la primera exportación lo descarga en una carpeta privada del Backend, sin permisos de administrador; necesita internet y tarda unos minutos más). Y la <strong>plantilla</strong>: si ya está instalada y en qué versión, o que se descargará del feed del actualizador la primera vez</td>
+</tr>
+</tbody>
+</table>
+<p>Debajo, lo que se pide:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product name</strong></td>
+<td>Identificador .NET (letras, dígitos y guion bajo, empezando por letra). Nombra la solución y cada proyecto: <code>CRMCore.Backend</code>, <code>CRMCore.Conf.Database</code>…</td>
+</tr>
+<tr>
+<td><strong>Scripts travel as origin</strong></td>
+<td>El origen de destino (1). 1 · Product por defecto</td>
+</tr>
+<tr>
+<td><strong>Template package</strong> y <strong>Template short name</strong></td>
+<td>La plantilla sobre la que se genera el proyecto. Salen solas del espacio de nombres del producto (<code>AutoUpdatePackageNamespace</code>): <code>Flexygo.Product.Template</code> y <code>flexygoproduct</code> para Flexygo. Solo se pueden cambiar encendiendo <strong>Custom template</strong>, para generar el proyecto sobre la plantilla de otro producto</td>
+</tr>
+</tbody>
+</table>
+<p>Los <strong>ficheros estáticos</strong> y las <strong>DLL</strong> viajan <strong>siempre</strong>, porque las filas que los nombran viajan y sin ellos el proyecto apuntaría a nada:</p>
+<ul>
+<li><strong>Ficheros estáticos</strong>: los que el origen registra en <code>Skins_Css</code>, <code>Plugins</code> e <code>Interfaces_Types_JS</code>, copiados bajo <code>wwwroot</code> del Frontend del proyecto en la <strong>misma ruta</strong> (<code>~/crm/css/crm.css</code> → <code>wwwroot/crm/css/crm.css</code>), para que las filas valgan tal cual.</li>
+<li><strong>DLL de procesos</strong>: las que ejecutan los procesos del origen y no son del core, como referencia binaria del proyecto <code>Processes</code> (7).</li>
+</ul>
+<p><strong>Export</strong> se enciende cuando el nombre es válido, el origen activo no es el 0 y no hay otra exportación en marcha. Al pie, un recordatorio: aquí no se compila nada; el zip es para el equipo de un desarrollador.</p>
+<h3 id="31-la-carpeta-custom-se-elige-que-viaja">3.1 La carpeta custom: se elige qué viaja<a class="headerlink" href="#31-la-carpeta-custom-se-elige-que-viaja" title="Permanent link">¶</a></h3>
+<p>La carpeta <code>wwwroot/custom</code> del Frontend suele mezclar <strong>proyecto</strong> (JS, CSS e imágenes propias) con <strong>datos</strong> (lo que la gente adjunta, fotos, exportaciones). Por eso no viaja entera: <strong>Choose what travels</strong> despliega sus carpetas y ficheros de primer nivel, con cuántos ficheros tiene cada uno y su tamaño, un buscador y dos atajos, <strong>Suggested</strong> (lo que sale marcado de serie) y <strong>None</strong>. <strong>Solo viaja lo marcado</strong>, copiado tal cual.</p>
+<figure>
+  
+<br>
+<figcaption>Lo que es dato o pesa mucho sale desmarcado, con su motivo</figcaption>
+</figure>
+<p>Salen <strong>desmarcados de serie</strong>, con una etiqueta que dice por qué:</p>
+<table>
+<thead>
+<tr>
+<th>Etiqueta</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>documents</em> / <em>images</em></td>
+<td>Las carpetas en las que la configuración guarda documentos o imágenes (las rutas de los gestores de documentos y de imágenes de los objetos), se llamen como se llamen</td>
+</tr>
+<tr>
+<td><em>run time</em></td>
+<td>Las que la instalación escribe mientras funciona: <code>images</code>, <code>documents</code>, <code>avatars</code>, <code>temp</code> y <code>Scripting</code></td>
+</tr>
+<tr>
+<td><em>Left out for its size</em></td>
+<td>Cualquier carpeta o fichero de <strong>más de 100 MB</strong>. Si se marca, la fila avisa y la línea cuenta los grandes que viajan; la lista se abre sola cuando hay alguno</td>
+</tr>
+</tbody>
+</table>
+<p>La línea de la vista previa resume lo elegido (por ejemplo, <em>1 of 8 folders, 3 of 3 files · 1 KB</em> y <em>176.9 MB left out</em>). Cada vez que se abre la ventana se vuelve a proponer con estas reglas: la elección no se guarda.</p>
+<hr>
+<h2 id="4-el-modelo-de-datos-lo-deciden-las-conexiones">4. El modelo de datos lo deciden las conexiones<a class="headerlink" href="#4-el-modelo-de-datos-lo-deciden-las-conexiones" title="Permanent link">¶</a></h2>
+<p>Ya no hay un «incluir el modelo de datos» en la ventana. Viaja el esquema (tablas, vistas, procedimientos, funciones, tipos y triggers) de las conexiones activas marcadas para <strong>actualizar su modelo de datos</strong>: la misma marca con la que el actualizador sabe qué bases de datos tiene que actualizar. La de configuración nunca cuenta, y una base de un ERP no se marca, así que no viaja.</p>
+<p>Dónde cae cada una lo dice su nombre de paquete (<code>PackageDbName</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Conexión marcada</th>
+<th>Proyecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Con <code>PackageDbName</code> = <code>Data</code></td>
+<td><code>{Producto}.Data.Database</code>, el proyecto de datos de la plantilla</td>
+</tr>
+<tr>
+<td>Con otro nombre, por ejemplo <code>Crm</code></td>
+<td><code>{Producto}.Crm.Database</code>: una copia del de datos añadida a la solución, bajo la carpeta <code>Database</code>. El informe avisa de que las pipelines y los ficheros de Docker de la plantilla solo construyen <code>Data.Database</code>: los demás hay que añadirlos a mano</td>
+</tr>
+<tr>
+<td><strong>Ninguna marcada</strong></td>
+<td><code>{Producto}.Data.Database</code> queda <strong>vacío</strong> y el informe lo dice (una aplicación sobre un ERP, o con sus tablas por script). Si el producto no tiene tablas propias, se quita como explica el <code>DOCKER.md</code> de la plantilla</td>
+</tr>
+</tbody>
+</table>
+<p>Una conexión marcada se salta, y el informe lo dice, si su <code>PackageDbName</code> no vale como nombre de proyecto, si la instalación no tiene su cadena de conexión, si apunta a la propia base de configuración o si otra marcada ya ocupa el mismo proyecto.</p>
+<h3 id="41-los-datos-maestros-las-tablas-que-viajan-con-sus-filas">4.1 Los datos maestros: las tablas que viajan con sus filas<a class="headerlink" href="#41-los-datos-maestros-las-tablas-que-viajan-con-sus-filas" title="Permanent link">¶</a></h3>
+<p>El esquema solo no basta para que el proyecto <strong>funcione</strong>: las tablas suelen tener claves ajenas obligatorias a catálogos (estados, tipos, categorías), y sin sus filas no se puede dar de alta nada. Por eso, bajo <strong>The data model</strong>, <strong>Choose the tables that travel with their rows</strong> despliega las tablas de cada conexión marcada con sus filas, un buscador y dos atajos, <strong>Catalogs only</strong> y <strong>None</strong>. La línea de la sección dice cuántas tablas y filas viajan, y cuántos avisos hay.</p>
+<figure>
+  
+<br>
+<figcaption>Los catálogos salen marcados; el resto se marca a mano</figcaption>
+</figure>
+<ul>
+<li><strong>Salen marcados los catálogos</strong>: tablas pequeñas (hasta 500 filas, con clave primaria) a las que apuntan otras y que no apuntan a ninguna. La ventana lo explica bajo el título, y la etiqueta <em>catalog</em> lo repite al pasar el ratón. Cada vez que se abre la ventana se vuelve a proponer con esa regla: la elección no se guarda.</li>
+<li>Cada tabla elegida viaja como un <strong><code>MERGE</code> sin borrado</strong> en <code>scripts\post\&lt;tabla&gt;.sql</code> del proyecto de datos, en el orden de sus claves ajenas, desde el post-deploy de la plantilla. Publicar el proyecto <strong>añade y actualiza</strong> esas filas; no borra las que la base de destino ya tenga.</li>
+<li><strong>Avisos</strong>, que no paran la exportación y ponen el paso <em>Data model</em> en amarillo: una tabla que apunta a otra que no viaja (la publicación la rechazará salvo que la base ya tenga esas filas), una tabla sin clave, una de más de 500 filas o un usuario de base de datos que no puede crear procedimientos (entonces el proyecto viaja sin filas). Una tabla vacía se deja fuera.</li>
+<li>El <code>README.md</code> de la raíz del zip lista las tablas de datos maestros, y el registro de acciones las guarda con sus filas.</li>
+</ul>
+<hr>
+<h2 id="5-mientras-corre">5. Mientras corre<a class="headerlink" href="#5-mientras-corre" title="Permanent link">¶</a></h2>
+<p>Al pulsar <strong>Export</strong> la ventana pasa a los pasos: arriba «Step N of 10» con una barra y el tiempo, y cada paso con su tiempo y una línea de lo que ha hecho. El interruptor <strong>Show log</strong> enseña la salida de <code>dotnet</code> y de cada operación.</p>
+<table>
+<thead>
+<tr>
+<th>Paso</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Origin</strong></td>
+<td>Comprueba el nombre y los orígenes, y cuenta las filas por tabla</td>
+</tr>
+<tr>
+<td>2. <strong>.NET SDK</strong></td>
+<td>Busca el SDK en el servidor y, si no hay ninguno, lo instala una vez en una carpeta privada del Backend</td>
+</tr>
+<tr>
+<td>3. <strong>Product template</strong></td>
+<td>Instala la plantilla del producto, <code>{Namespace}.Product.Template</code> según su <code>AutoUpdatePackageNamespace</code> (<code>Flexygo.Product.Template</code> en Flexygo), o la elegida con <strong>Custom template</strong>, del mismo feed y con las mismas credenciales que el actualizador, en la <strong>versión de la aplicación</strong>; si el feed no la tiene, la mayor por debajo (el paso dice cuál ha usado), y si no, la última. No vuelve a bajarla mientras sea la misma. Si el feed no contesta y hay una instalada de antes, usa esa y el paso sale en <strong>amarillo</strong></td>
+</tr>
+<tr>
+<td>4. <strong>Solution</strong></td>
+<td>Genera la solución con <code>dotnet new flexygoproduct</code>, la misma plantilla que usa un desarrollador o TeamCity</td>
+</tr>
+<tr>
+<td>5. <strong>Configuration scripts</strong></td>
+<td>Un <code>MERGE</code> por tabla, como los de <em>Generate scripts</em>, en <code>scripts\staticdata</code> de <code>Conf.Database</code>, referenciados desde el post-deploy. Y los <strong>ajustes</strong> que la instalación cambió respecto al core, como <code>UPDATE</code> al final de <code>scripts\config.sql</code> (ver 9)</td>
+</tr>
+<tr>
+<td>6. <strong>Data model</strong></td>
+<td>El esquema de cada conexión marcada (4), una línea por conexión con los objetos que lleva</td>
+</tr>
+<tr>
+<td>7. <strong>Static files</strong></td>
+<td>Copia los estáticos registrados</td>
+</tr>
+<tr>
+<td>8. <strong>Custom folder</strong></td>
+<td>Copia lo marcado de la carpeta <code>custom</code> (3.1)</td>
+</tr>
+<tr>
+<td>9. <strong>Process DLLs</strong></td>
+<td>Copia las DLL ajenas al core a <code>Processes\lib</code> y las referencia desde el <code>.csproj</code></td>
+</tr>
+<tr>
+<td>10. <strong>Zip and download</strong></td>
+<td>Comprueba que el zip cabe en el disco del servidor, lo escribe en disco (sin <code>bin</code>, <code>obj</code> ni <code>.vs</code>) y lo descarga</td>
+</tr>
+</tbody>
+</table>
+<p>Si no se marca nada de la carpeta <code>custom</code>, el paso 8 sale como <strong>skipped</strong>. No hay botón de cancelar: cerrar la ventana mientras corre <strong>pregunta antes</strong>, porque la exportación sigue en el servidor y el zip solo se recoge volviendo a abrir la ventana antes de que termine (y pulsando <strong>Follow it</strong>).</p>
+<hr>
+<h2 id="6-al-terminar">6. Al terminar<a class="headerlink" href="#6-al-terminar" title="Permanent link">¶</a></h2>
+<p><strong>Si sale bien</strong>, el zip se descarga solo y la ventana se queda con lo que merece atención:</p>
+<ul>
+<li>el nombre y el tamaño del zip, y <strong>Download again</strong>;</li>
+<li><strong>Worth a look</strong>: primero lo que hay que arreglar (ficheros registrados que no estaban en disco, DLL que no estaban en <code>bin</code>, conexiones marcadas que no se exportaron…) y después lo que conviene saber (el modelo de datos vacío, las DLL que viajan sin código fuente…);</li>
+<li>los pasos, con los cuatro primeros resumidos en una línea cuando todo fue bien;</li>
+<li><strong>The full report</strong>, desplegable, con todo lo que se hizo y lo que se quedó, tabla a tabla.</li>
+</ul>
+<p>La exportación y su zip se guardan <strong>una hora</strong> en el servidor; después se borran solos y <strong>Download again</strong> deja de servir: se exporta de nuevo.</p>
+<p>Antes de escribir el zip se comprueba el espacio: si no cabe, la exportación para con un mensaje que dice cuánto ocupa el proyecto y cuánto espacio libre queda en ese disco. Se libera espacio y se vuelve a exportar.</p>
+<p><strong>Si falla</strong>, la ventana dice «… could not be exported» y «Stopped at step N of 10 · nothing was downloaded, nothing changed»: el paso que falló sale en <strong>rojo</strong> con el error, el registro se abre solo, <strong>Copy details</strong> copia el error y el registro para pasárselos a quien corresponda, y <strong>Try again</strong> vuelve a la vista previa.</p>
+<hr>
+<h2 id="7-las-dll-sin-codigo-fuente">7. Las DLL sin código fuente<a class="headerlink" href="#7-las-dll-sin-codigo-fuente" title="Permanent link">¶</a></h2>
+<p>Un proceso puede ejecutar una DLL compilada aparte (<code>Processes.File</code> fuera de <code>~/bin/flx*.dll</code>). El proyecto exportado la lleva en <code>Processes\lib\</code> y la referencia como binario, para que <strong>compile y funcione como la instalación</strong>; <code>lib\README.md</code> lista cada una. Son una deuda del proyecto: el equipo debe <strong>sustituir cada referencia por su código fuente</strong> en cuanto lo tenga. Una DLL que se llame igual que el propio ensamblado <code>Processes</code> del proyecto no se referencia (chocaría con él): se copia y se anota.</p>
+<p>Las DLL de un <strong>addon</strong> (<code>~/custom/&lt;addon&gt;/</code>) no son del proyecto: se listan y no se copian; el addon se instala en la aplicación destino.</p>
+<hr>
+<h2 id="8-lo-que-hay-que-hacer-con-el-zip">8. Lo que hay que hacer con el zip<a class="headerlink" href="#8-lo-que-hay-que-hacer-con-el-zip" title="Permanent link">¶</a></h2>
+<ol>
+<li>Descomprimirlo y abrir la solución con Visual Studio (o <code>dotnet build</code>).</li>
+<li>Publicar las bases desde sus proyectos <code>.sqlproj</code> (<a href="../../../1Deployment/1Installer/Development/">instalación en desarrollo</a>).</li>
+<li>Configurar <code>appsettings.json</code> del Backend: la plantilla lo deja con las cadenas de conexión vacías y el <code>PackageId</code> del producto.</li>
+<li>Subirlo a un repositorio y seguir con la <a href="../../3ProductManagement/">gestión de producto</a> y la <a href="../../../3CICD/1Overview/">integración continua</a>.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">La versión de la plantilla y la del core tienen que casar</p>
+<p>El proyecto referencia los paquetes <code>Flexygo.*</code> de la versión de la plantilla que se instaló (la de la aplicación). Si la aplicación va por delante de cualquier paquete publicado —solo pasa en un entorno de desarrollo del core—, la base de configuración exportada no publicará hasta que exista el paquete de esa versión.</p>
+</div>
+<hr>
+<h2 id="9-lo-que-no-viaja">9. Lo que no viaja<a class="headerlink" href="#9-lo-que-no-viaja" title="Permanent link">¶</a></h2>
+<ul>
+<li>Las filas creadas con el origen activo en <strong>0</strong> (indistinguibles del core) y las de <strong>otros orígenes</strong> distintos del activo y del de destino: la vista previa y el informe las cuentan por tabla.</li>
+<li>Los <strong>datos</strong> de las bases, salvo las tablas que se elijan como datos maestros (4.1): del resto, solo el esquema, y solo el de las conexiones marcadas (4).</li>
+<li>Los <strong>ajustes del entorno</strong>: los ajustes que la instalación cambió viajan como <code>UPDATE</code> en <code>config.sql</code> (el MCP o la web API encendidos, <code>ApplicationDescription</code>…), pero no los que son de cada instalación: los de tipo contraseña, los del actualizador (<code>flx-version</code>), la telemetría, las rutas y los de integraciones con credenciales (<code>flx-azure</code>, <code>flx-google</code>, <code>flx-office</code>, <code>flx-payments</code>, <code>flx-passbook</code>, <code>flx-clave</code>, <code>flx-sendinblue</code>, <code>flx-abh</code>), ni <code>BundleGUID</code>. La ventana lista en <em>Worth a look</em> los que viajan.</li>
+<li>Lo que se deje <strong>sin marcar</strong> en la carpeta <code>custom</code> (3.1). De serie: los repositorios de documentos e imágenes, las carpetas de ejecución (<code>images</code>, <code>documents</code>, <code>avatars</code>, <code>temp</code>, <code>Scripting</code>) y lo que pase de 100 MB.</li>
+<li>Un fichero que una fila registra y <strong>no está en disco</strong>: la fila viaja y el informe lo avisa.</li>
+<li>Una DLL que un proceso nombra y <strong>no está en <code>bin</code></strong>: el proceso viaja y el informe lo avisa.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Frontend y Backend en servidores distintos</p>
+<p>La exportación corre en el Backend. Las DLL están en él; los ficheros del Frontend (los registrados y la carpeta <code>custom</code>) se piden al Frontend por su API interna de ficheros. No hace falta compartir carpetas ni copiar nada a mano. En ese caso la vista previa no puede mirar uno a uno qué estáticos faltan: lo dice el informe al terminar. Y el zip, que el Backend entrega al Frontend, admite como mucho <strong>700 MB</strong>: si ocupa más, la exportación lo dice y hay que volver a exportar con menos ficheros de <code>custom</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                  </article>
+                </div>
+              
+              
+                
+                <div class="fh-rightsidebar md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                  <div class="md-sidebar__scrollwrap">
+                    <div class="md-sidebar__inner">
+                      
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-antes-de-exportar-un-origen-propio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Antes de exportar: un origen propio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-donde-esta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dónde está
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lo-que-ensena-antes-de-empezar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lo que enseña antes de empezar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Lo que enseña antes de empezar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-la-carpeta-custom-se-elige-que-viaja" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 La carpeta custom: se elige qué viaja
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-el-modelo-de-datos-lo-deciden-las-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. El modelo de datos lo deciden las conexiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. El modelo de datos lo deciden las conexiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-los-datos-maestros-las-tablas-que-viajan-con-sus-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Los datos maestros: las tablas que viajan con sus filas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mientras-corre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Mientras corre
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-al-terminar" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Al terminar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-las-dll-sin-codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Las DLL sin código fuente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-lo-que-hay-que-hacer-con-el-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Lo que hay que hacer con el zip
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-lo-que-no-viaja" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Lo que no viaja
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.indexes", "navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/utils.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-modal.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-copy.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-popover.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-namepropagator.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/fh-versions.js"></script>
+      
+        <script src="../../../javascripts/fh-structural/components/flx-navbutton.js"></script>
+      
+        <script src="../../../javascripts/cultures/default_language.js"></script>
+      
+        <script src="../../../javascripts/cultures/es.js"></script>
+      
+        <script src="../../../javascripts/cultures/en.js"></script>
+      
+        <script src="../../../javascripts/search-shortcut.js"></script>
+      
+    
+    <dialog id="navigation-dialog" closedby="any">
+      <p class="input-group">
+        <label>Your flexys URL:</label>
+        <input type="text" id="navigation-dialog-flexy-url" value="https://">
+      </p>
+      <div class="button-container">
+        <button class="button" onclick="_nav(document.getElementById('navigation-dialog-flexy-url').value)">Confirm</button>
+      </div>
+    </dialog>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "zoom"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
