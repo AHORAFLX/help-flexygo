@@ -183,10 +183,10 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Processes
 
-- **Configure rules to automate actions and manage decisions and webhooks from different parts of the application.** From the object configuration, you can create rules with actions such as sending emails, displaying alerts, logging information or starting processes, and test them with a real record. Decisions can be started when saving, have deadlines and be escalated; you can review them from the inbox, notifications, chat or record page, and resolve them through the WebAPI as well. Each person can view their own decisions and those of their roles, while administrators can view them all; decisions must be assigned to a person or a role, take effect after one minute and can be undone. Webhooks can be sent when records are saved or deleted, with retries and a test option; existing decision rules and webhooks are migrated to the new system during an update. In addition, the MCP dashboard displays amounts with their currency and its own palette, and adapts to the available width.
-- **The scheduler, agenda views and kanban boards display new records without switching screens.** Cards appear in the corresponding cell, day or column, with a notification in the module bar when applicable. Filters and permissions are applied before the records are displayed. New cards are temporarily highlighted and, if they are outside the visible area, an indicator lets you scroll to them. When saving, only the changes are updated and the rest of the view is preserved, including its position, selection and scroll; when applicable, the usual full refresh is applied. The calendar updates the visible period and objects without going blank, and this improvement is available in the 2026 skin.
-- **Administrators can start creating a guided tour from its record.** Creation opens the first step's page and displays the configuration panel; if there are no steps, this is indicated. Invitations appear on the page where the tour starts, and users' responses are retained.
-- **Integrated processes and active modules are available in the application context.** This information can be accessed from the context to work with processes and modules. Errors when searching for paths to processes that do not exist are also avoided, and the displayed colors are adjusted.
+- **Configure rules for objects and manage decisions and webhooks from different areas of Flexygo.** From the object workbench, you can define actions to run when records are saved, such as sending emails, notifications, logs, decisions, webhooks or processes, and test them with a real record. Decisions can be viewed from notifications, chat, the inbox or the record page; they can also be opened and resolved through the WebAPI, and rules let you set deadlines and escalate them. Each person can see decisions assigned to them or their roles, while administrators can view them all; unauthorized users cannot create, edit or delete decision tasks. Decisions can be undone, take effect after one minute, and existing decision and webhook rules are migrated to the new system during the update. Webhooks can be configured for saving or deleting, with retries and a test option; in addition, the MCP dashboard displays amounts with their currency and its own color palette, and adapts to the available width.
+- **The scheduler, agenda views and kanban board display new records without changing screens.** When you create or save a card, the corresponding cell, day or column is updated, applying the user's filters and permissions. New cards are temporarily marked; if they appear outside the visible area, an indicator helps you find them. When refreshing, the position, selection and scroll position are preserved, and the calendar does not go blank while reloading. In compatible skins, unchanged content is preserved; calendar updates are available in the 2026 skin.
+- **Administrators can start creating a guided tour from a tour record.** The first step's page opens alongside the configuration panel; if the tour has no steps, a message is displayed. Invitations appear on the page where the tour begins, and users' responses are retained.
+- **Integrated processes and active modules are available in the application context.** This lets you work with this information from the application context. Displayed colors are also adjusted, and errors are avoided when searching for paths to processes that do not exist.
 
 ### Reports
 
@@ -369,8 +369,8 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Processes
 
-- **ABH Sign can read documents through the application's proxy.** This lets you manage documents when the signature process and the application are on different servers.
-- **When reviewing errors, you can also view chained exceptions from processes.** The error trace displays information about exceptions that occur within chained processes.
+- **ABH Sign interprets signing credit information and can read documents through the application proxy.** Correctly reading the credits prevents errors when processing them. Accessing documents through the proxy lets you manage them when the signing process and the application are on different servers.
+- **When reviewing errors, you can also view chained exceptions from processes.** The error information shows exceptions that occur within chained processes, making it easier to review what happened.
 - **Process and report parameters are retained when saving their configuration.** This keeps the values associated with processes and reports when saving changes.
 
 ### Scheduled Tasks
@@ -526,14 +526,13 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Processes
 
-- **The ERP process that runs after login also runs for guest users.** This means guest logins follow the same flow as other users after logging in.
-- **Document downloads from integrated processes correctly handle decoding and references.** The fix applies to the handling of documents downloaded from an integrated process.
-- **ABH Sign correctly interprets information about signing credits.** This prevents errors when processing credits received from the signing service.
-- **The Excel import template downloads and the import process works correctly.** You can download the template from the process icon and upload data from Excel without the issues fixed in this version.
-- **Jobs in an error state can be restarted to run again.** This lets you restart jobs that did not finish successfully.
-- **Translation and serialization errors when using the application offline are fixed.** Data is now processed correctly in offline mode.
+- **The post-login ERP process also runs for the guest user.** This means guest user logins follow the same post-login flow.
+- **Downloads from integrated processes correctly handle documents and their references.** This fix improves decoding and reference handling when downloading documents from an integrated process.
+- **Downloading the template and importing data from Excel work correctly.** You can get the template from the download icon in the import process and load data from Excel without encountering the issues that have been fixed.
+- **Jobs in an error state can be restarted to run again.** This lets you restart jobs that did not complete successfully.
+- **Translation and data handling errors when using the application offline are fixed.** Data is processed correctly in offline mode.
 - **The Redsys integration is fixed.** The integration processes its operations correctly again.
-- **Parameter creation processes can find libraries even when they are in different paths.** This fixes the issue that prevented the required library from being found when it was not in the expected path.
+- **Processes that create parameters can find the required libraries even when they are in different paths.** This fixes the issue that prevented them from being found when they were not in the expected path.
 - **Errors when running processes with C# code are fixed.** Processes that include C# code can run without the errors fixed in this version.
 
 ### Reports

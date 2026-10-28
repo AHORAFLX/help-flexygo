@@ -190,10 +190,10 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Procesos
 
-- **Configura reglas para automatizar acciones y gestiona decisiones y webhooks desde distintos puntos de la aplicación.** Desde la configuración del objeto puedes crear reglas con acciones como enviar correos, mostrar avisos, registrar información o iniciar procesos, y probarlas con un registro real. Las decisiones pueden iniciarse al guardar, tener plazos y escalarse; puedes revisarlas desde la bandeja de entrada, las notificaciones, el chat o la ficha del registro, y resolverlas también mediante la WebAPI. Cada persona consulta las decisiones propias y las de sus roles, mientras que los administradores pueden verlas todas; las decisiones deben asignarse a una persona o un rol, se aplican tras un minuto y pueden deshacerse. Los webhooks pueden enviarse al guardar o eliminar registros, con reintentos y opción de prueba; las reglas de decisión y los webhooks existentes se trasladan al nuevo sistema al actualizar. Además, el dashboard MCP muestra los importes con su moneda y una paleta propia, y se adapta al ancho disponible.
-- **El planificador, las vistas de agenda y los tableros kanban muestran los registros nuevos sin cambiar de pantalla.** Las tarjetas aparecen en la celda, el día o la columna correspondientes, con un aviso en la barra del módulo cuando procede. Se aplican los filtros y permisos antes de mostrar los registros. Las tarjetas nuevas quedan marcadas temporalmente y, si están fuera de la zona visible, un indicador permite desplazarse hasta ellas. Al guardar, se actualizan solo los cambios y se conserva el resto de la vista, incluida la posición, la selección y el desplazamiento; cuando corresponde, se aplica la actualización completa habitual. El calendario actualiza el periodo y los objetos visibles sin quedarse en blanco, y esta mejora está disponible en la skin 2026.
-- **Los administradores pueden iniciar la creación de un recorrido guiado desde su registro.** La creación abre la página del primer paso y muestra el panel de configuración; si no hay pasos, se informa de ello. Las invitaciones aparecen en la página donde comienza el recorrido y se conservan las respuestas de los usuarios.
-- **Los procesos integrados y los módulos activos están disponibles en el contexto de la aplicación.** Esta información puede consultarse desde el contexto para trabajar con procesos y módulos. También se evitan errores al buscar rutas de procesos que no existen y se ajustan los colores mostrados.
+- **Configura reglas para los objetos y gestiona decisiones y webhooks desde distintos puntos de Flexygo.** Desde el banco de trabajo del objeto puedes definir acciones al guardar registros, como enviar correos, avisos, registros, decisiones, webhooks o procesos, y probarlas con un registro real. Las decisiones se consultan desde las notificaciones, el chat, la bandeja de entrada o la ficha del registro; también pueden abrirse y resolverse mediante la WebAPI, y las reglas permiten fijar plazos y escalarlas. Cada persona ve las decisiones asignadas a ella o a sus roles, mientras que los administradores pueden consultarlas todas; los usuarios no autorizados no pueden crear, editar ni eliminar tareas de decisión. Las decisiones pueden deshacerse, se aplican tras un minuto y las reglas existentes de decisiones y webhooks se trasladan al nuevo sistema al actualizar. Los webhooks pueden configurarse para el guardado o la eliminación, con reintentos y opción de prueba; además, el dashboard MCP muestra importes con su moneda y una paleta propia y se adapta al ancho disponible.
+- **El planificador, las vistas de agenda y el tablero kanban muestran los registros nuevos sin cambiar de pantalla.** Al crear o guardar una tarjeta, se actualiza la celda, el día o la columna correspondiente y se aplican los filtros y permisos del usuario. Las tarjetas nuevas quedan marcadas temporalmente; si aparecen fuera de la zona visible, un indicador permite localizarlas. Al actualizar, se conservan la posición, la selección y el desplazamiento, y el calendario no se queda en blanco durante la recarga. En las skins compatibles se conserva el contenido que no ha cambiado; la actualización del calendario está disponible en la skin 2026.
+- **Los administradores pueden iniciar la creación de un recorrido guiado desde un registro de recorrido.** Se abre la página del primer paso junto con el panel de configuración; si el recorrido no tiene pasos, se informa de ello. Las invitaciones aparecen en la página donde comienza el recorrido y se conservan las respuestas de los usuarios.
+- **Los procesos integrados y los módulos activos están disponibles en el contexto de la aplicación.** Esto permite trabajar con esa información desde el contexto de la aplicación. También se ajustan los colores mostrados y se evitan errores al buscar rutas de procesos que no existen.
 
 ### Seguridad
 
@@ -376,8 +376,8 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Procesos
 
-- **ABH Sign puede leer documentos a través del proxy de la aplicación.** Esto permite gestionar documentos cuando el proceso de firma y la aplicación están en servidores distintos.
-- **Al revisar errores, también puedes consultar las excepciones encadenadas de los procesos.** La traza del error muestra la información de las excepciones que se producen dentro de procesos encadenados.
+- **ABH Sign interpreta la información de créditos de firma y puede leer documentos a través del proxy de la aplicación.** La lectura correcta de los créditos evita errores al procesarlos. El acceso a documentos mediante el proxy permite gestionarlos cuando el proceso de firma y la aplicación están en servidores distintos.
+- **Al revisar errores, también puedes consultar las excepciones encadenadas de los procesos.** La información del error muestra las excepciones que se producen dentro de procesos encadenados, lo que facilita revisar qué ha ocurrido.
 - **Los parámetros de procesos e informes se conservan al guardar su configuración.** Así se mantienen los valores asociados a procesos e informes al guardar los cambios.
 
 ### Rendimiento
@@ -531,14 +531,13 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Procesos
 
-- **El proceso ERP posterior al inicio de sesión también se ejecuta para usuarios invitados.** Así, los accesos de invitados siguen el mismo flujo que los demás usuarios después de iniciar sesión.
-- **Las descargas de documentos desde procesos integrados gestionan correctamente la descodificación y las referencias.** La corrección se aplica a la gestión de documentos descargados desde un proceso integrado.
-- **ABH Sign interpreta correctamente la información de los créditos de firma.** Así se evitan errores al procesar los créditos recibidos por el servicio de firma.
-- **La plantilla de importación de Excel se descarga y el proceso de importación funciona correctamente.** Puedes descargar la plantilla desde el icono del proceso y cargar los datos desde Excel sin los fallos corregidos en esta versión.
-- **Los trabajos en estado de error pueden reiniciarse para volver a ejecutarse.** Así puedes poner de nuevo en marcha los trabajos que no terminaron correctamente.
-- **Se corrigen errores de traducción y serialización al usar la aplicación sin conexión.** Los datos se procesan correctamente en el modo sin conexión.
+- **El proceso ERP posterior al inicio de sesión también se ejecuta para el usuario invitado.** Así, los accesos de usuarios invitados siguen el mismo flujo posterior al inicio de sesión.
+- **Las descargas desde procesos integrados gestionan correctamente los documentos y sus referencias.** La corrección mejora la descodificación y el tratamiento de las referencias al descargar documentos desde un proceso integrado.
+- **La descarga de la plantilla y la importación de datos desde Excel funcionan correctamente.** Puedes obtener la plantilla desde el icono de descarga del proceso de importación y cargar los datos desde Excel sin los fallos corregidos.
+- **Los trabajos en estado de error se pueden reiniciar para volver a ejecutarse.** Así puedes poner de nuevo en marcha los trabajos que no terminaron correctamente.
+- **Se corrigen errores de traducción y tratamiento de datos al usar la aplicación sin conexión.** Los datos se procesan correctamente en el modo sin conexión.
 - **Se corrige el funcionamiento de la integración de Redsys.** La integración vuelve a procesar correctamente sus operaciones.
-- **Los procesos de creación de parámetros encuentran las bibliotecas aunque estén en distintas rutas.** Se corrige el problema que impedía localizar la biblioteca necesaria cuando no estaba en la ruta esperada.
+- **Los procesos que crean parámetros encuentran las bibliotecas necesarias aunque estén en distintas rutas.** Se corrige el fallo que impedía localizarlas cuando no estaban en la ruta esperada.
 - **Se corrigen errores al ejecutar procesos con código C#.** Los procesos que incorporan código C# pueden ejecutarse sin los errores corregidos en esta versión.
 
 ### Rendimiento
