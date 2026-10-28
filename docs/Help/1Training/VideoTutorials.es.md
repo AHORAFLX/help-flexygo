@@ -24,6 +24,9 @@ Genera aplicaciones desconectadas para iOS.
 ### Instalación de Flexygo
 Paso a paso para descargar e instalar Flexygo.
 
+!!! warning "Anterior a la versión 10"
+    Este vídeo muestra el instalador de versiones anteriores. Para la versión 10, consulta [Instalador de Flexygo](../../1Deployment/1Installer/Introduction.md) y [Configuración](../../1Deployment/2ConfigWizard/Configuration.md).
+
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/qWzScOz0CXU" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -294,6 +297,9 @@ Cambia los estilos del sistema utilizando skins.
 ### Identidad corporativa - Login
 Personaliza la pantalla de inicio de sesión.
 
+!!! warning "Anterior a la versión 10"
+    Este vídeo muestra la pantalla de inicio de sesión de versiones anteriores. Para la versión 10, consulta [Inicio de sesión en las notas de la versión 10.0](../../MoreInformation/2Versions/Version10_0.md#inicio-de-sesion).
+
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -347,6 +353,9 @@ Crea barras de herramientas personalizadas.
 
 ### Actualizaciones de Flexygo
 Actualiza Flexygo paso a paso.
+
+!!! warning "Anterior a la versión 10"
+    Este vídeo muestra el proceso de actualización de versiones anteriores. Para la versión 10, consulta [Actualizador de Flexygo](../../1Deployment/3Updater/UpdateFlow.md).
 
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/NUwus1Mp_Aw" frameborder="0" allowfullscreen></iframe>

@@ -1,6 +1,6 @@
 # API Web
 
-Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde el panel de control ubicado en Área de Trabajo de Administrador > Seguridad > WebAPI o simplemente haz clic aquí. 
+Flexygo API Web es una interfaz de programación de aplicaciones para acceder a objetos y procesos autorizados externamente desde la herramienta *WebAPI* del área **Security** del [panel de control](../Administration/ControlPanel.md) (en la skin flexy2022: *Admin Work Area > Security > WebAPI*) o simplemente haz clic aquí. 
 
 Esta API sigue la [Iniciativa OpenAPI](https://www.openapis.org/) y se pueden generar SDK con [Swagger Codegen](https://swagger.io/) utilizando la definición de esquema de tu aplicación, disponible en `https://<tu-aplicacion>/webapi`. 
 

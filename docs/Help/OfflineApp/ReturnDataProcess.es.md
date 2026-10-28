@@ -4,7 +4,7 @@
 
 Configura el proceso de devolución de datos para sincronizar el dispositivo y el modelo de datos.
 
-1.  Agregalo al flexygo repositorio de procedimientos almacenados en **Área de trabajo de administrador** > **Logica y Reglas** > **Procedimientos Almacenados de DB**.
+1.  Agregalo al flexygo repositorio de procedimientos almacenados en el panel de control → área **Logic and rules** → *DB Stored Procedures* (en la skin flexy2022: *Admin Work Area > Logic and Rules > DB Stored Procedures*).
     
     ![Create Stored](../../docs_assets/images/offline/CreateStored.png "Image 1. Create Stored")
     

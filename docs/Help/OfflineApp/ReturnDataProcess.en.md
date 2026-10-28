@@ -4,7 +4,7 @@
 
 Configure return data process to synchronize device and data model.
 
-1.  Add it to **flexygo** stored procedure repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures**.
+1.  Add it to **flexygo** stored procedure repository at the control panel → **Logic and rules** area → *DB Stored Procedures* (in the flexy2022 skin: *Admin Work Area > Logic and Rules > DB Stored Procedures*).
     
     ![Create Stored](../../docs_assets/images/offline/CreateStored.png "Image 1. Create Stored")
     

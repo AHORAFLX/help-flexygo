@@ -22,7 +22,7 @@ Además de registrar la aplicación en Azure, asegúrate de **habilitar permisos
 
 ![](../../docs_assets/images/Office365/Office365ContPermissions.png "Image 4. Office 365 API Contacts Permissions")
 
-Indica la URL base de tu aplicación + `/Webhooks/OfficeToken.aspx` como Redirect URL.  
+Indica la URL base de tu aplicación + `/Webhooks/OfficeToken` como Redirect URL.  
 Rellena los campos de configuración de Office con tu **client id**, **tenant id** y el **secret** generado.
 
 ### Opción obsoleta

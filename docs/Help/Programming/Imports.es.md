@@ -1,6 +1,6 @@
 # Importaciones
 
-Las importaciones nos permiten transferir información desde archivos al sistema, por ejemplo, desde un archivo de Excel. Se puede configurar desde el panel de control ubicado en Área de Trabajo de Administración > Otras Herramientas > Importaciones o simplemente haga <flx-navbutton class="link" type="openPage" pagetypeid="list" objectname="sysImportSettings">clic aquí</flx-navbutton>.
+Las importaciones nos permiten transferir información desde archivos al sistema, por ejemplo, desde un archivo de Excel. Se configura en la herramienta *Imports* del área **Other tools** del [panel de control](../Administration/ControlPanel.md) (en la skin flexy2022: *Admin Work Area > Other Tools > Imports*) o simplemente haga <flx-navbutton class="link" type="openPage" pagetypeid="list" objectname="sysImportSettings">clic aquí</flx-navbutton>.
 
 ## Creando configuración
 
@@ -32,7 +32,7 @@ Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas si
 
 ## Ejemplo de Proceso
 
-1.  Agregarlo al repositorio de procesos de flexygo en **Área de Trabajo de Administración** > **Lógica y Reglas** > **Procedimientos Almacenados de DB o Dll de Servidor**.
+1.  Agregarlo al repositorio de procesos de flexygo: panel de control → área **Logic and rules** → *DB Stored Procedures* o *Server Dll* (en la skin flexy2022: *Admin Work Area > Logic and Rules*).
     
 ![Create Process](../../docs_assets/images/Imports/process.png "Image 3. Create Process")
     
@@ -42,7 +42,9 @@ Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas si
 
 ## Ejecutar importación
 
-Para ejecutar la importación se encuentra en el menú superior Herramientas->Importar.
+La importación se ejecuta desde la entrada **Importar** del menú lateral (en la skin flexy2022, desde el menú superior **Tools > Import**): salen los objetos con alguna configuración activa y, dentro de cada uno, sus configuraciones.
+
+Cada configuración ejecuta el proceso **sysImportsSettings** con su `ImportId` como valor por defecto. Si no hay ninguna configuración, la entrada muestra *No import settings found.*
 
 En la ventana del proceso aparece un botón para descargar la plantilla del archivo que se ha colocado previamente en la creación de la configuración.
 
@@ -94,38 +96,46 @@ END CATCH
 END
 ```
 
-```vbnet { #fhmodal_dll }
-Imports System.Web.Script.Serialization
-    
-    Public Shared Function Importacion(Entity As EntityObject, JSONVALUE As String, Ret As ProcessHelper) As Boolean
-        Try
-            Dim Table As Object = New JavaScriptSerializer().Deserialize(Of Object)(JSONVALUE)
+```csharp { #fhmodal_dll }
+using System;
+using FLEXYGO.Objects;
+using FLEXYGO.Objects.Settings;
+using Newtonsoft.Json.Linq;
+using static FLEXYGO.Processing.ProcessManager;
 
-            For Each Row As Object In Table("Hoja1")
-                Dim ImportacionObj As New EntityObject("Importacion", Ret.ConfToken)
-                ImportacionObj("Campo1") = Row("Campo1")
-                ImportacionObj("Campo2") = Row("Campo2")
-                ImportacionObj("Campo3") = Row("Campo3")
-                ImportacionObj("Campo4") = Row("Campo4")
-                ImportacionObj("Campo5") = Row("Campo5")
+public static bool Importacion(EntityObject Entity, string JSONVALUE, ref ProcessHelper Ret)
+{
+    try
+    {
+        JObject table = JObject.Parse(JSONVALUE);
 
-                ImportacionObj.InsertProcess(ImportacionObj.TableName, Settings.ObjectSettings.eUpdateType.Standard, "")
+        foreach (JObject row in table["Hoja1"])
+        {
+            EntityObject importacionObj = new EntityObject("Importacion", Ret.ConfToken);
+            importacionObj["Campo1"] = (string)row["Campo1"];
+            importacionObj["Campo2"] = (string)row["Campo2"];
+            importacionObj["Campo3"] = (string)row["Campo3"];
+            importacionObj["Campo4"] = (string)row["Campo4"];
+            importacionObj["Campo5"] = (string)row["Campo5"];
 
-            Next
-            
-            For Each Row As Object In Table("Hoja2")
-                ...
-            Next
+            importacionObj.InsertProcess(importacionObj.TableName, ObjectSettings.eUpdateType.Standard, "");
+        }
 
-            Ret.Success = True
-            Return Ret.Success
+        foreach (JObject row in table["Hoja2"])
+        {
+            // ...
+        }
 
-        Catch ex As Exception
-            Ret.Success = False
-            Ret.LastException = ex
-            Return False
-        End Try
-    End Function
+        Ret.Success = true;
+        return Ret.Success;
+    }
+    catch (Exception ex)
+    {
+        Ret.Success = false;
+        Ret.LastException = ex;
+        return false;
+    }
+}
 ```
 
 ```json { #fhmodal_json }

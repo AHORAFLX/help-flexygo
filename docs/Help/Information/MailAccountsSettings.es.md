@@ -1,16 +1,16 @@
 # Ajustes de cuenta de email
 
-Configura cuentas de correo para usuarios y perfiles sobrescribiendo las opciones SMTP del **web.config**.  
+Configura cuentas de correo para usuarios y perfiles sobrescribiendo la configuración SMTP de la sección `MailSettings` del `appsettings.json` del **Backend**.  
 Si configuras una cuenta de correo para un usuario, se usará esa configuración para enviar los correos.  
 Si la configuras para un perfil, se usará la del perfil.  
 Si ambos están relacionados, prevalece la configuración del usuario.  
-Si no existe ninguna configuración personalizada, la aplicación usará la configuración SMTP del *web.config*.
+Si no existe ninguna configuración personalizada, la aplicación usará la configuración SMTP de `MailSettings` (ver [Referencia: appsettings.json](../../1Deployment/2ConfigWizard/AppSettingsReference.md)).
 
 ## Create Mail Account
 
-Puedes gestionar la configuración de cuentas de correo desde: **Admin Panel Area > Security > Mail Account**.
+Puedes gestionar la configuración de cuentas de correo desde el panel de control → área **Seguridad** → *Cuentas Mail* (en la skin flexy2022: *Admin Work Area > Security > Mail Accounts*).
 
-![](../../docs_assets/images/MailAccountsSettings/AdminWorkArea.PNG "Image 1. Admin Work Area")
+![Área Seguridad del panel de control](../../docs_assets/images/MailAccountsSettings/control-panel-security-2026.png "Imagen 1. Área Seguridad del panel de control")
 
 Completa la información del servidor de correo y los datos de la cuenta para enviar correos con una configuración específica.
 
@@ -18,11 +18,11 @@ Completa la información del servidor de correo y los datos de la cuenta para en
 
 ## Link Mail Account
 
-Puedes vincular configuraciones de correo a usuarios desde: **Admin Work Area > Security > Users**.
+Puedes vincular configuraciones de correo a usuarios desde el panel de control → área **Security** → *Users* (en la skin flexy2022: *Admin Work Area > Security > Users*).
 
 ![](../../docs_assets/images/MailAccountsSettings/MailAccountUsers.PNG "Image 3. Mail Account Users")
 
-También puedes vincular configuraciones de correo a perfiles desde: **Admin Work Area > Security > Profiles**.
+También puedes vincular configuraciones de correo a perfiles desde el panel de control → área **Security** → *Profiles* (en la skin flexy2022: *Admin Work Area > Security > Profiles*).
 
 ![](../../docs_assets/images/MailAccountsSettings/MailAccountProfiles.PNG "Image 4. Mail Account Profiles")
 

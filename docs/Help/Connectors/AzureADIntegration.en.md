@@ -46,7 +46,7 @@ Once you have obtained all required keys and established redirect and logout URL
 
 ## Settings
 
-You can enable the registration of new users in your **flexygo** application using their Azure account. Set the following configurations in Admin Area -> Environment -> Settings -> Security or by clicking here
+You can enable the registration of new users in your **flexygo** application using their Azure account. Set the following configurations in the control panel → **Environment** area → *Settings*, *Security* group (in the flexy2022 skin: *Admin Work Area > Environment > Settings > Security*) or by clicking here
 
 Once the user pass through registration, it activates Register Process called "NewUserFromAAD" which create a new user, applying values of profile, role, language by default and sends email confirmation. These parameters can be modified by Admin.
 

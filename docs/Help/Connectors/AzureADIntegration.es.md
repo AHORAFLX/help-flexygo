@@ -53,7 +53,7 @@ Una vez tengas todas las claves necesarias y configuradas las URLs de redirecci�
 ## Configuración
 
 Puedes habilitar el registro de nuevos usuarios en tu aplicación **flexygo** usando su cuenta de Azure.  
-Configura lo siguiente desde Admin Area → Environment → Settings → Security o haciendo clic aquí.
+Configura lo siguiente desde el panel de control → área **Environment** → *Settings*, grupo *Security* (en la skin flexy2022: *Admin Work Area > Environment > Settings > Security*) o haciendo clic aquí.
 
 Cuando el usuario completa el registro, se ejecuta el proceso “NewUserFromAAD”, que crea un nuevo usuario aplicando perfil, rol y lenguaje por defecto, además de enviar un email de confirmación.  
 Estos valores pueden ser modificados por el administrador.

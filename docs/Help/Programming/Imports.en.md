@@ -1,6 +1,6 @@
 # Imports
 
-Imports allow us to transfer information from files to the system, for example from an Excel file. It can be configured from the control panel located at Admin Work Area > Other Tools > Imports or just <flx-navbutton class="link" type="openPage" pagetypeid="list" objectname="sysImportSettings">click here</flx-navbutton>.
+Imports allow us to transfer information from files to the system, for example from an Excel file. It is configured in the *Imports* tool of the **Other tools** area of the [control panel](../Administration/ControlPanel.md) (in the flexy2022 skin: *Admin Work Area > Other Tools > Imports*) or just <flx-navbutton class="link" type="openPage" pagetypeid="list" objectname="sysImportSettings">click here</flx-navbutton>.
 
 ## Creating setting
 
@@ -34,7 +34,7 @@ More than one sheet can be added as in the example, the name of the sheets follo
 
 ## Process example
 
-1.  Add it to **flexygo** process repository at **Admin Work Area** > **Logic and Rules** > **DB Stored Procedures or Server Dll**.
+1.  Add it to **flexygo** process repository: control panel → **Logic and rules** area → *DB Stored Procedures* or *Server Dll* (in the flexy2022 skin: *Admin Work Area > Logic and Rules*).
     
 ![Create Process](../../docs_assets/images/Imports/process.png "Image 3. Create Process")
     
@@ -44,7 +44,9 @@ More than one sheet can be added as in the example, the name of the sheets follo
 
 ## Execute import
 
-To execute the import it is found in the upper menu Tools->Import.
+The import is executed from the **Import** entry of the side menu (in the flexy2022 skin, from the upper menu **Tools > Import**): it lists the objects with an active setting and, inside each one, its settings.
+
+Each setting executes the **sysImportsSettings** process with its `ImportId` as default value. When there are no settings, the entry shows *No import settings found.*
 
 In the process window a button appears to download the template of the file that has been previously placed in the creation of the setting.
 
@@ -96,38 +98,46 @@ END CATCH
 END
 ```
 
-```vbnet { #fhmodal_dll }
-Imports System.Web.Script.Serialization
-    
-    Public Shared Function Importacion(Entity As EntityObject, JSONVALUE As String, Ret As ProcessHelper) As Boolean
-        Try
-            Dim Table As Object = New JavaScriptSerializer().Deserialize(Of Object)(JSONVALUE)
+```csharp { #fhmodal_dll }
+using System;
+using FLEXYGO.Objects;
+using FLEXYGO.Objects.Settings;
+using Newtonsoft.Json.Linq;
+using static FLEXYGO.Processing.ProcessManager;
 
-            For Each Row As Object In Table("Hoja1")
-                Dim ImportacionObj As New EntityObject("Importacion", Ret.ConfToken)
-                ImportacionObj("Campo1") = Row("Campo1")
-                ImportacionObj("Campo2") = Row("Campo2")
-                ImportacionObj("Campo3") = Row("Campo3")
-                ImportacionObj("Campo4") = Row("Campo4")
-                ImportacionObj("Campo5") = Row("Campo5")
+public static bool Importacion(EntityObject Entity, string JSONVALUE, ref ProcessHelper Ret)
+{
+    try
+    {
+        JObject table = JObject.Parse(JSONVALUE);
 
-                ImportacionObj.InsertProcess(ImportacionObj.TableName, Settings.ObjectSettings.eUpdateType.Standard, "")
+        foreach (JObject row in table["Hoja1"])
+        {
+            EntityObject importacionObj = new EntityObject("Importacion", Ret.ConfToken);
+            importacionObj["Campo1"] = (string)row["Campo1"];
+            importacionObj["Campo2"] = (string)row["Campo2"];
+            importacionObj["Campo3"] = (string)row["Campo3"];
+            importacionObj["Campo4"] = (string)row["Campo4"];
+            importacionObj["Campo5"] = (string)row["Campo5"];
 
-            Next
-            
-            For Each Row As Object In Table("Hoja2")
-                ...
-            Next
+            importacionObj.InsertProcess(importacionObj.TableName, ObjectSettings.eUpdateType.Standard, "");
+        }
 
-            Ret.Success = True
-            Return Ret.Success
+        foreach (JObject row in table["Hoja2"])
+        {
+            // ...
+        }
 
-        Catch ex As Exception
-            Ret.Success = False
-            Ret.LastException = ex
-            Return False
-        End Try
-    End Function
+        Ret.Success = true;
+        return Ret.Success;
+    }
+    catch (Exception ex)
+    {
+        Ret.Success = false;
+        Ret.LastException = ex;
+        return false;
+    }
+}
 ```
 
 ```json { #fhmodal_json }

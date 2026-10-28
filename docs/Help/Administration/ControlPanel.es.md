@@ -55,7 +55,7 @@ Una fila de accesos directos a las listas más usadas, cada uno con su cifra:
 
 ### Áreas
 
-A la izquierda, las áreas de configuración —**Pages and modules**, **Objects**, **Security**, **Logic and rules**, **Reports**, **Environment**, **Other tools**, **Offline app**—, cada una con el número de herramientas que tiene. El número cuenta **lo que el usuario puede ver**: con otra seguridad, otro número. Al elegir un área, a su derecha salen sus herramientas; en **Environment** está, por ejemplo, el [panel de salud](HealthPanel.md).
+A la izquierda, las áreas de configuración —**Pages and modules**, **Objects**, **Security**, **Logic and rules**, **Reports**, **Environment**, **Other tools**, **Offline app**, **Connectors**—, cada una con el número de herramientas que tiene. El número cuenta **lo que el usuario puede ver**: con otra seguridad, otro número. Al elegir un área, a su derecha salen sus herramientas; en **Environment** está, por ejemplo, el [panel de salud](HealthPanel.md).
 
 ### Tu trabajo reciente (*Your recent work*)
 

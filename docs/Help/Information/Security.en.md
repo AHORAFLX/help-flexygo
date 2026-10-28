@@ -40,21 +40,7 @@ In the case of wanting to allow unregistered access to our solution without the 
 *   Processes
 *   Reports
 
-If we want to use unregistered access, we must make sure that our **web.config** contains a series of entries:
-
-1\.  Set authentication from Forms to None: 
-
-```xml
-<authentication mode="None">
-```
-
-2\.  Comment the authorization deny block:
-
-```xml
-<authorization> <deny users="?"/> </authorization> 
-```
-
-3\.  Set **AllowGuest** setting to **true** in Admin Work Area **\>** Environment **\>** Settings
+To allow unregistered access, turn on the **AllowGuest** setting (*Security* group) in the control panel → **Environment** area → *Settings* (in the flexy2022 skin: *Admin Work Area > Environment > Settings*). The **web.config** is no longer edited: with **AllowGuest** on, whoever arrives without a session is signed in automatically with the **guest** user; otherwise they go to the login page.
 
 | To what can we apply security? | On Roles group | On User |
 | --- | --- | --- |
@@ -75,13 +61,15 @@ To guarantee that they cannot see anything else we could remove the Can view sec
 
 ## LDAP Authentication
 
-**flexygo** can authenticate users against Active Directory. Just create a new user on Security **\>** Users using format MyDomain**\\**MyUserName If you want an LDAP autologin with current windows user, open **flexygo** and follow this steps:
+**flexygo** can authenticate users against Active Directory. Just create a new user on Security **\>** Users using format MyDomain**\\**MyUserName
 
-1.  Open IIS
-2.  Enable **Windows Autentication** option on Autentication menu
-3.  Disable **anonymous authentication** option on Autentication menu
-4.  Set **EnableLDAPAutoLogin** setting to **true** in Admin Work Area > Environment > Settings
-5.  Edit web.config file and set authentication from Forms to Windows
+If you want an LDAP autologin with current windows user, follow these steps:
+
+1.  In IIS, on the Frontend site, enable **Windows Authentication** and **keep** **Anonymous Authentication** enabled as well (both are needed).
+2.  In the **Frontend** `appsettings.json`, set `"EnableWindowsAuth": true` (see [Reference: appsettings.json](../../1Deployment/2ConfigWizard/AppSettingsReference.md)) and restart the application.
+3.  Turn on the **LDAPAutoLogin** setting (*Security* group) in the control panel → **Environment** area → *Settings* (in the flexy2022 skin: *Admin Work Area > Environment > Settings*).
+
+If the browser cannot authenticate with Windows (a computer outside the domain), the login form is shown.
 
 ## Password Strength
 

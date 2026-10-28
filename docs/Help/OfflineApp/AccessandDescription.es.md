@@ -6,7 +6,22 @@ Permite generar una App que se instalará en el dispositivo móvil y se conectar
 
 ## Acceso al entorno de Apps Offline
 
-El acceso a la sección de Apps Offline en el entorno de **flexygo** se realiza de la siguiente manera:
+En la skin 2026, con un usuario administrador:
+
+1. Enciende el **modo desarrollo** (**Modo Desarrollo**, en el menú lateral).
+2. Abre el [panel de control](../Administration/ControlPanel.md) (menú lateral → **Administración** → **Panel de control**) y elige el área **aplicación sin conexión**.
+3. Desde allí abres las apps ya diseñadas o **Nueva aplicación** para diseñar y configurar una nueva aplicación offline. El atajo **App offline** del panel de control lleva también a la lista de apps.
+
+Cada app se abre en una pantalla organizada por secciones (objetos, menús, páginas, código y recursos, y sincronización), con el emulador siempre a la vista. Ver [Entorno de diseño](DesignEnvironment.md).
+
+<figure markdown="span">
+  ![Área de la app offline en el panel de control](../../docs_assets/images/offline/control-panel-offline-2026.png)
+  <figcaption>El área de la app offline en el panel de control: <b>Nueva aplicación</b> y las apps ya creadas</figcaption>
+</figure>
+
+### Skin flexy2022
+
+El acceso a la sección de Apps Offline se realiza de la siguiente manera:
 
 1. Con un usuario administrador (admin), dentro de la sección Tools haremos clic en la opción Develop Mode  
    

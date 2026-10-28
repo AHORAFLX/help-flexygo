@@ -48,7 +48,7 @@ openPageName(pagename: string, objectname: string, objectwhere: string, defaults
 
 ## Ejecutar proceso
 
-Podemos ejecutar cualquier proceso en el repositorio de flexygo utilizando el método **flexygo.nav.executeProcess** e indicando el proceso y la entidad o colección.
+Podemos ejecutar cualquier proceso en el repositorio de flexygo utilizando el método **flexygo.nav.execProcess** e indicando el proceso y la entidad o colección.
 
 ```ts
 /**

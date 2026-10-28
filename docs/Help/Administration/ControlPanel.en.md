@@ -55,7 +55,7 @@ A row of shortcuts to the most used lists, each with its figure:
 
 ### Areas
 
-On the left, the configuration areas —**Pages and modules**, **Objects**, **Security**, **Logic and rules**, **Reports**, **Environment**, **Other tools**, **Offline app**—, each with the number of tools it contains. The number counts **what the user can see**: with different security, a different number. When you choose an area, its tools appear to its right; **Environment** contains, for example, the [health panel](HealthPanel.md).
+On the left, the configuration areas —**Pages and modules**, **Objects**, **Security**, **Logic and rules**, **Reports**, **Environment**, **Other tools**, **Offline app**, **Connectors**—, each with the number of tools it contains. The number counts **what the user can see**: with different security, a different number. When you choose an area, its tools appear to its right; **Environment** contains, for example, the [health panel](HealthPanel.md).
 
 ### Your recent work
 

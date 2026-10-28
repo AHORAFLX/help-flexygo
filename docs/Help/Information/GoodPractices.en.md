@@ -10,11 +10,17 @@ Creating custom folder it is a fundamental step in developing your **flexygo** p
 
 ## Login
 
-**Flexygo** has a **default login.css, which shouldn't be changed or moved** from its default folder, because it will be overwritten the next time a version update takes place. 
+The native styles and scripts of the account pages (login, register, forgot password, two-step authentication…) **shouldn't be changed**, because they are overwritten the next time a version update takes place.
 
-**Create a css folder in your custom folder** and place a login.css file which will overwrite the original login.less file. This way you can change the class or id you want on your login screen. 
+To customize them, create your own files with the same path in the Frontend `custom/` folder (or in your product folder). **flexygo** looks for them in cascade —`custom/` → product → native— and loads all it finds, so yours win. For example:
 
-You can also create a js folder in the custom folder and add a login.js to add any client-side logic to your login form. In addition to this, you can customize the language of the login screen, modifying Login Language Setting in the **Admin Work Area** > **Enviroment** > **Settings Section** with 4 possible languages: _es-ES | ca-ES | fr-FR | de-DE_
+*   `custom/css/views/account/account.css` and `custom/js/views/account/account.js` for every account page.
+*   `custom/css/views/account/login/login.css` and `custom/js/views/account/login/login.js` for the login only.
+*   `custom/css/views/account/authentication/authentication.css` for the authentication page only.
+
+All the paths and theme variables are in [Asset customization](../../2ProductDevelopment/6Customization.md).
+
+In addition to this, you can set the language of the login screen with the **LoginLanguage** setting (*Security* group) in the control panel → **Environment** area → *Settings* (in the flexy2022 skin: *Admin Work Area > Environment > Settings*). It accepts 7 languages: _ca-ES | de-DE | en-GB | es-ES | fr-FR | it-IT | pt-PT_. If it is empty, the login uses the browser language.
 
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -59,7 +65,7 @@ It is important to note that in the case of **confirmation -> confirm** and **re
 
 ## DLL Processes
 
-**Create a bin folder inside the custom folder** and add your personalizade dll into it. You can see how to create you dll process by looking at the Custom dll tutorial. Don’t place dll directly into **flexygo** bin folder or you will loose then on the next version update.
+**Place your custom dll files in the `custom/bin` folder of the Backend.** You can see how to create your dll process by looking at the [Custom DLL](../Programming/CustomDLL.md) tutorial. Don’t place dll files directly into the Backend folder next to the **flexygo** ones or you will lose them on the next version update.
 
 ## Favicon
 

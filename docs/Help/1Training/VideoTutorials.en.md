@@ -24,6 +24,9 @@ Generate disconnected applications for iOS.
 ### Flexygo Installation
 Step by step how to download and install Flexygo.
 
+!!! warning "Prior to version 10"
+    This video shows the installer of earlier versions. For version 10, see [Flexygo Installer](../../1Deployment/1Installer/Introduction.md) and [Configuration](../../1Deployment/2ConfigWizard/Configuration.md).
+
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/qWzScOz0CXU" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -294,6 +297,9 @@ Change system styles using skins.
 ### Corporate Identity - Login
 Customize the login screen.
 
+!!! warning "Prior to version 10"
+    This video shows the login screen of earlier versions. For version 10, see [Login in the version 10.0 release notes](../../MoreInformation/2Versions/Version10_0.md#login).
+
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -347,6 +353,9 @@ Create custom toolbars.
 
 ### Flexygo Updates
 Update Flexygo step by step.
+
+!!! warning "Prior to version 10"
+    This video shows the update process of earlier versions. For version 10, see [Flexygo Updater](../../1Deployment/3Updater/UpdateFlow.md).
 
 <div class="video-wrapper">
   <iframe src="https://www.youtube.com/embed/NUwus1Mp_Aw" frameborder="0" allowfullscreen></iframe>

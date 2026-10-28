@@ -32,7 +32,7 @@ Tras completar el registro como SP y definir el certificado electrónico para va
 ## Configuración
 
 Puedes habilitar el registro de nuevos usuarios en tu aplicación **flexygo** utilizando su cuenta Cl@ve.  
-Configura los siguientes parámetros en: **Admin Area → Environment → Settings → Security** o haciendo clic en: <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton>
+Configura los siguientes parámetros en el panel de control → área **Environment** → *Settings*, grupo *Security* (en la skin flexy2022: *Admin Work Area > Environment > Settings > Security*) o haciendo clic en: <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">aquí</flx-navbutton>
 
 Una vez que el usuario completa el registro mediante Cl@ve, se ejecuta el proceso **NewUserFromClave**, que crea un nuevo usuario aplicando los valores de perfil, rol y lenguaje por defecto.  
 Estos parámetros pueden ser modificados por el Administrador.

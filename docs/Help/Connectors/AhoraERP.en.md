@@ -6,7 +6,7 @@
 
 ## Settings
 
-1.  Configure the **Reference** and **Subreference** fields for user registration (you can find it in Admin Work Area > Security > Users), so they have drop-downs of the **employee** table and the **delegation** table respectively
+1.  Configure the **Reference** and **Subreference** fields for user registration (you can find it in the control panel → **Security** area → *Users*; in the flexy2022 skin, *Admin Work Area > Security > Users*), so they have drop-downs of the **employee** table and the **delegation** table respectively
     
     ![Reference and Subreference configuration](../../docs_assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")
     

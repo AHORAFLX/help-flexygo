@@ -22,7 +22,7 @@ Following the successful registration as an SP with Cl@ve and the definition of 
 
 ## Settings
 
-You can enable the registration of new users in your **flexygo** application using their Cl@ve account. Set the following configurations in Admin Area -> Environment -> Settings -> Security or by clicking <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">here</flx-navbutton>
+You can enable the registration of new users in your **flexygo** application using their Cl@ve account. Set the following configurations in the control panel → **Environment** area → *Settings*, *Security* group (in the flexy2022 skin: *Admin Work Area > Environment > Settings > Security*) or by clicking <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[SettingName] in ('aadRegistrationEnabled','aadRegistrationDefaultProfile','aadRegistrationDefaultRole','aadDefaultCultureId'))" showprogress="false">here</flx-navbutton>
 
 Once the user pass through registration, it activates Register Process called "NewUserFromClave" which create a new user, applying values of profile, role, language by default. These parameters can be modified by Admin.
 
