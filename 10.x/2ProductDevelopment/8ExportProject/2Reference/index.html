@@ -9707,7 +9707,7 @@
 <p class="admonition-title">Novedad en la versión 10.0</p>
 <p>El asistente de exportación muestra la plantilla y la versión elegidas, explica qué se incluirá y permite seguir el progreso hasta descargar el ZIP. Puedes elegir los archivos y carpetas personalizados y modificar la plantilla. De forma predeterminada, usa la plantilla del producto instalado y excluye los repositorios de documentos e imágenes y otros archivos grandes. Admite proyectos de más de 2 GB y comprueba que haya espacio suficiente. También registra las exportaciones y los errores.</p>
 <p>La exportación no incluye usuarios y guarda los secretos en un archivo local que no se comparte. Si el origen activo está reservado, el asistente avisa y propone el primer destino disponible. Solo pueden usarlo los administradores autorizados.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/2Reference/export-as-project.png" data-desc-position="bottom"><img alt="Novedad en la versión 10.0" src="../../../docs_assets/images/2Reference/export-as-project.png"></a></p>
 </div>
 <p>Una aplicación Flexygo puede nacer configurándola a mano sobre el core —objetos, páginas, procesos, hojas de estilo— sin que exista ningún proyecto detrás. Cuando esa aplicación crece y hace falta <strong>desarrollarla y mantenerla con integración continua</strong>, <strong>Exportar como proyecto</strong> la convierte en un proyecto de la <a href="../../2Template/">plantilla de producto</a>: la misma solución que genera <code>dotnet new flexygoproduct</code>, con la configuración, el modelo de datos, los ficheros estáticos y las DLL de la instalación ya dentro, en un zip listo para abrir con Visual Studio y subir a un repositorio.</p>
 <p>¿Quieres hacerlo de principio a fin con una aplicación tuya? <a href="../1TryIt/">Pruébalo: de aplicación instalada a proyecto que compila y arranca</a>.</p>
@@ -9720,7 +9720,7 @@
 <p>Todo lo que es del proyecto tiene que estar en un <strong>origen</strong> distinto del 0, que es el core. Se exportan las filas de configuración del <strong>origen activo</strong> (el que se ve en el panel de control, <strong>Active origin</strong>, y en el que el equipo ha construido la aplicación); lo que se creó con el origen activo en 0 no se distingue del core y <strong>no viaja</strong>.</p>
 <p>Con el origen activo en 0 la ventana lo dice y no deja exportar:</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/origen-0.png" data-desc-position="bottom"><img alt="La ventana con el origen activo en 0" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/origen-0.png"></a>
 <br>
 <figcaption>Con el origen 0 activo: «Nothing of the core is exported». Se activa el origen del proyecto y se vuelve a abrir la ventana</figcaption>
 </figure>
@@ -9739,7 +9739,7 @@
 <h2 id="3-lo-que-ensena-antes-de-empezar">3. Lo que enseña antes de empezar<a class="headerlink" href="#3-lo-que-ensena-antes-de-empezar" title="Permanent link">¶</a></h2>
 <p>Nada más abrirse, la ventana lee la instalación y dice qué se va a llevar. Las líneas cambian con lo que se elige: el origen de destino y lo que se marca de la carpeta <code>custom</code> (3.1).</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/formulario.png" data-desc-position="bottom"><img alt="La ventana de exportación con la vista previa" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/formulario.png"></a>
 <br>
 <figcaption>La vista previa con el origen 2 activo y el producto CRMCore: la configuración que viaja, el modelo de datos, los estáticos, la carpeta custom, las DLL, el SDK y la plantilla</figcaption>
 </figure>
@@ -9809,7 +9809,7 @@
 <h3 id="31-la-carpeta-custom-se-elige-que-viaja">3.1 La carpeta custom: se elige qué viaja<a class="headerlink" href="#31-la-carpeta-custom-se-elige-que-viaja" title="Permanent link">¶</a></h3>
 <p>La carpeta <code>wwwroot/custom</code> del Frontend suele mezclar <strong>proyecto</strong> (JS, CSS e imágenes propias) con <strong>datos</strong> (lo que la gente adjunta, fotos, exportaciones). Por eso no viaja entera: <strong>Choose what travels</strong> despliega sus carpetas y ficheros de primer nivel, con cuántos ficheros tiene cada uno y su tamaño, un buscador y dos atajos, <strong>Suggested</strong> (lo que sale marcado de serie) y <strong>None</strong>. <strong>Solo viaja lo marcado</strong>, copiado tal cual.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/carpeta-custom.png" data-desc-position="bottom"><img alt="La lista de la carpeta custom, con lo que sale desmarcado de serie" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/carpeta-custom.png" width="640"></a>
 <br>
 <figcaption>Lo que es dato o pesa mucho sale desmarcado, con su motivo</figcaption>
 </figure>
@@ -9867,7 +9867,7 @@
 <h3 id="41-los-datos-maestros-las-tablas-que-viajan-con-sus-filas">4.1 Los datos maestros: las tablas que viajan con sus filas<a class="headerlink" href="#41-los-datos-maestros-las-tablas-que-viajan-con-sus-filas" title="Permanent link">¶</a></h3>
 <p>El esquema solo no basta para que el proyecto <strong>funcione</strong>: las tablas suelen tener claves ajenas obligatorias a catálogos (estados, tipos, categorías), y sin sus filas no se puede dar de alta nada. Por eso, bajo <strong>The data model</strong>, <strong>Choose the tables that travel with their rows</strong> despliega las tablas de cada conexión marcada con sus filas, un buscador y dos atajos, <strong>Catalogs only</strong> y <strong>None</strong>. La línea de la sección dice cuántas tablas y filas viajan, y cuántos avisos hay.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" data-desc-position="bottom"><img alt="La lista de tablas de la conexión de datos, con los catálogos marcados" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" width="640"></a>
 <br>
 <figcaption>Los catálogos salen marcados; el resto se marca a mano</figcaption>
 </figure>

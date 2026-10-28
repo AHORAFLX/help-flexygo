@@ -9674,7 +9674,7 @@
 <hr>
 <h2 id="que-cambia-para-el-administrador">Qué cambia para el administrador<a class="headerlink" href="#que-cambia-para-el-administrador" title="Permanent link">¶</a></h2>
 <p><strong>Una fila por asistente, no por conexión.</strong> Antes, Claude creaba un cliente nuevo cada vez que alguien conectaba desde cero, y la lista <strong>Asistentes MCP</strong> se llenaba de «Claude» repetidos. Ahora Claude es una sola fila, Codex otra y Claude Code otra, conecte quien conecte y cuantas veces sea.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/clientes-cimd-es.png" data-desc-position="bottom"><img alt="Asistentes MCP: Claude y Codex por CIMD, MCP Inspector por registro dinámico" src="../../../docs_assets/images/AIAssistants/clientes-cimd-es.png"></a></p>
 <p>En la imagen, <strong>Claude</strong> y <strong>Codex</strong> han entrado con CIMD: tienen las direcciones de vuelta que publica su ficha (<code>claude.ai/api/mcp/auth_callback</code>; <code>127.0.0.1</code> y <code>localhost</code> en Codex, que recibe el acceso en el propio equipo). <strong>MCP Inspector</strong> se ha registrado al conectar.</p>
 <p>Por eso:</p>
 <ul>
@@ -9683,7 +9683,7 @@
 <li><strong>La purga no borra las filas CIMD.</strong> El job <code>ClearMcpClients</code> sigue borrando los clientes de registro dinámico sin uso en <code>MCP_ClientPurgeDays</code> días, pero no toca los CIMD: si los borrara, uno bloqueado volvería a entrar aprobado al conectarse otra vez.</li>
 <li><strong>Cada conexión sigue siendo de una persona</strong>: en <strong>Sesiones MCP</strong> se ve quién, con qué asistente y con qué permisos, y <strong>Revoke</strong> corta solo esa sesión.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/sesiones-cimd-es.png" data-desc-position="bottom"><img alt="Sesiones MCP: cada conexión con su persona y su asistente" src="../../../docs_assets/images/AIAssistants/sesiones-cimd-es.png"></a></p>
 <h3 id="distinguir-una-fila-cimd">Distinguir una fila CIMD<a class="headerlink" href="#distinguir-una-fila-cimd" title="Permanent link">¶</a></h3>
 <p>La pantalla no enseña el identificador del cliente. Está en la tabla <code>MCP_Clients</code>, columna <code>ClientId</code>:</p>
 <table>
@@ -9733,7 +9733,7 @@
 <li><strong>claude.ai</strong> para Claude y <strong>chatgpt.com</strong> para ChatGPT.</li>
 <li><strong>127.0.0.1</strong> o <strong>localhost</strong> para los clientes que viven en el propio equipo (Claude Code, Codex). Es lo correcto: el acceso no sale de la máquina de esa persona.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/consentimiento-codex-es.png" data-desc-position="bottom"><img alt="El consentimiento de Codex: el acceso va a 127.0.0.1" src="../../../docs_assets/images/AIAssistants/consentimiento-codex-es.png" width="360"></a></p>
 <hr>
 <h2 id="seguridad">Seguridad<a class="headerlink" href="#seguridad" title="Permanent link">¶</a></h2>
 <p>La ficha de un asistente es una dirección de internet, así que la aplicación la descarga con cuidado:</p>

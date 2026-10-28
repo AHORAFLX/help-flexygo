@@ -9561,7 +9561,7 @@
 
 <h1 id="sabias-que-puedes-identificar-el-origen-de-una-conexion-sql-por-aplicacion">¿Sabías que puedes identificar el origen de una conexión SQL por aplicación?<a class="headerlink" href="#sabias-que-puedes-identificar-el-origen-de-una-conexion-sql-por-aplicacion" title="Permanent link">¶</a></h1>
 <p>Para analizar el origen de las conexiones a tu base de datos, es posible filtrar utilizando el nombre de la aplicación.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/DidYouKnow/SqlConnectionAppName/1.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/DidYouKnow/SqlConnectionAppName/1.png"></a></p>
 <p>El asistente de configuración no añade este atributo: si no lo indicas, SQL Server muestra el nombre genérico del proveedor de datos. Para identificar tu aplicación, añade el atributo <strong>Application Name</strong> a cada cadena de conexión de la sección <code>ConnectionStrings</code> del <code>appsettings.json</code> del Backend:</p>
 <div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">"ConnectionStrings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"ConfConnectionString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Source=MiServidor;Initial Catalog=MiApp_IC;User ID=sa;Password=...;TrustServerCertificate=True;Application Name=MiApp"</span><span class="p">,</span>

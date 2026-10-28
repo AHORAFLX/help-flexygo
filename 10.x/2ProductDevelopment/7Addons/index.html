@@ -9677,7 +9677,7 @@
 <p>Un <strong>addon</strong> es una extensión que se instala sobre un producto Flexygo ya desplegado, con su propio ciclo de versiones independiente del producto (ver <a href="../3ProductManagement/#c-empaquetar-addons">Empaquetar addons</a>). Puedes crear un addon nuevo directamente desde el <strong>Instalador de Flexygo</strong>, sin necesidad de recurrir a la plantilla por línea de comandos (<code>dotnet new flexygoaddon</code>).</p>
 <h2 id="1-crear-el-addon-desde-el-instalador">1. Crear el addon desde el Instalador<a class="headerlink" href="#1-crear-el-addon-desde-el-instalador" title="Permanent link">¶</a></h2>
 <p>En el Instalador, ve a la sección <strong>Desarrollo</strong> y selecciona <strong>Crear addon</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/1Instalador.png" data-desc-position="bottom"><img alt="Sección Desarrollo del instalador, con la opción Crear addon" src="../../docs_assets/images/CoreProductDevelopment/Addons/1Instalador.png"></a></p>
 <p>En la pantalla <strong>Crear addon</strong> completa:</p>
 <ul>
 <li><strong>Carpeta del producto</strong>: la carpeta raíz del producto sobre el que se creará el addon.<ul>
@@ -9687,7 +9687,7 @@
 </li>
 <li><strong>Nombre del addon</strong>: el identificador del addon (por ejemplo, <code>AddonFlexy</code>). Debe ser distinto del nombre del producto, usar solo letras, números y guiones bajos, y no puede empezar por un número. Este identificador es el que se usa siempre para referirse al addon — por ejemplo, en la ruta <code>custom/NombreAddon</code> del Backend, o al activarlo durante el desarrollo (ver más abajo).</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/2CrearAddon.png" data-desc-position="bottom"><img alt="Pantalla Crear addon con los campos Carpeta del producto y Nombre del addon" src="../../docs_assets/images/CoreProductDevelopment/Addons/2CrearAddon.png"></a></p>
 <p>Pulsa <strong>Crear Addon</strong>. El instalador genera automáticamente todos los proyectos necesarios (configuración de base de datos, modelo de datos, procesos), ya vinculados entre sí y con la plantilla del producto — no hace falta crearlos ni configurarlos a mano.</p>
 <div class="admonition warning">
 <p class="admonition-title">Dónde van los ficheros del addon</p>
@@ -9703,24 +9703,24 @@
 <div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- Todas las dlls del addon en una sola carpeta custom/&lt;Addon&gt;/dll --&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;OutputPath&gt;</span>..\..\{Producto}.Backend\custom\{NombreAddon}\dll\<span class="nt">&lt;/OutputPath&gt;</span>
 </span></code></pre></div>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/3DLL.png" data-desc-position="bottom"><img alt="Fichero .csproj del proyecto Processes del addon, con la ruta de salida resaltada" src="../../docs_assets/images/CoreProductDevelopment/Addons/3DLL.png"></a></p>
 <p>Comprueba que esta ruta apunta realmente a <code>custom/{NombreAddon}</code> dentro del proyecto <strong>Backend</strong> de tu producto, especialmente si el nombre del producto o del addon no coinciden con los que generó la plantilla por defecto, o si mueves el addon a otra carpeta.</p>
 <h2 id="3-desarrollar-el-addon">3. Desarrollar el addon<a class="headerlink" href="#3-desarrollar-el-addon" title="Permanent link">¶</a></h2>
 <p>El resto de la configuración (proyectos de base de datos, referencias entre proyectos) la gestiona el instalador automáticamente. Lo único que queda a tu cargo es el desarrollo del addon en sí.</p>
 <h3 id="activar-el-modo-addon">Activar el modo Addon<a class="headerlink" href="#activar-el-modo-addon" title="Permanent link">¶</a></h3>
 <p>Para desarrollar el addon, primero selecciona el origen sobre el que vas a trabajar y elige la opción <strong>Addon</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/4.png" data-desc-position="bottom"><img alt="Selector de origen con la opción Addon resaltada" src="../../docs_assets/images/CoreProductDevelopment/Addons/4.png"></a></p>
 <p>A continuación, indica el <strong>Origin Addon Id</strong> (el identificador de tu addon, por ejemplo <code>AddonFlexy</code>) y pulsa <strong>Activate</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/5.png" data-desc-position="bottom"><img alt="Campo Origin Addon Id y botón Activate" src="../../docs_assets/images/CoreProductDevelopment/Addons/5.png"></a></p>
 <p>Con el modo Addon activo, ya puedes desarrollar con normalidad: todo lo que crees o modifiques quedará registrado con el origen de tu addon.</p>
 <h3 id="generar-los-scripts-del-addon">Generar los scripts del addon<a class="headerlink" href="#generar-los-scripts-del-addon" title="Permanent link">¶</a></h3>
 <p>Una vez completado el desarrollo, genera los scripts de base de datos del addon pulsando el icono de base de datos de la barra superior, visible mientras el modo Addon está activo (indicador <strong>ADDON MODE</strong>).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/6.png" data-desc-position="bottom"><img alt="Icono de generar scripts en la barra superior, con el indicador ADDON MODE" src="../../docs_assets/images/CoreProductDevelopment/Addons/6.png"></a></p>
 <p>Con los scripts generados, continúa con <a href="#4-empaquetar-el-addon-como-nuget">Empaquetar el addon como NuGet</a> para preparar el manifiesto y el <code>.nuspec</code> del addon.</p>
 <h2 id="4-empaquetar-el-addon-como-nuget">4. Empaquetar el addon como NuGet<a class="headerlink" href="#4-empaquetar-el-addon-como-nuget" title="Permanent link">¶</a></h2>
 <h3 id="fichero-modulejson">Fichero module.json<a class="headerlink" href="#fichero-modulejson" title="Permanent link">¶</a></h3>
 <p>Dentro de la carpeta <code>config</code> de tu addon encontrarás el fichero <code>module.json</code>, donde se definen las acciones que se deben realizar al instalar el addon.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/7.png" data-desc-position="bottom"><img alt="Fichero config/module.json de un addon" src="../../docs_assets/images/CoreProductDevelopment/Addons/7.png"></a></p>
 <p>Su definición es la misma de siempre, con una única novedad: el <code>scope</code> de un recurso ahora también puede ser <code>backend</code>, que es donde van las DLLs del addon.</p>
 <p><strong>General</strong></p>
 <table>
@@ -9840,7 +9840,7 @@
 </table>
 <h3 id="fichero-nuspec">Fichero .nuspec<a class="headerlink" href="#fichero-nuspec" title="Permanent link">¶</a></h3>
 <p>El proyecto de tu addon ya incluye, generado automáticamente, un fichero <code>.nuspec</code> con los ficheros y rutas necesarios para el empaquetado: el manifiesto <code>module.json</code>, los <code>.dacpac</code> de las bases de datos, la DLL del Backend y, si tu addon aporta estáticos, la sección de Frontend (comentada por defecto).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/Addons/8.png" data-desc-position="bottom"><img alt="Fichero .nuspec generado para el addon" src="../../docs_assets/images/CoreProductDevelopment/Addons/8.png"></a></p>
 <p>Revisa especialmente la entrada del Backend: la ruta <code>src</code> debe apuntar a la misma carpeta que configuraste como <code>OutputPath</code> en el paso 2. Si tu addon incluye estáticos (JS, CSS, imágenes), descomenta la entrada de Frontend — de lo contrario, <code>nuget pack</code> fallará si esos ficheros no existen.</p>
 <p>Con el <code>module.json</code> y el <code>.nuspec</code> listos, genera el paquete NuGet del addon siguiendo el proceso descrito en <a href="../3ProductManagement/#c-empaquetar-addons">Empaquetar addons</a>.</p>
 

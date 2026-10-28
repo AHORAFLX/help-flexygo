@@ -9707,7 +9707,7 @@
 </tbody>
 </table>
 <p>Save. It can also be created without leaving the wizard, with the <strong>+</strong> next to the <em>Service</em> field in step 2, and the link button beside it opens the chosen service to review or change it.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-02-servicio.png" data-desc-position="bottom"><img alt="An external service" src="../../../../docs_assets/images/ExternalEntities/ext-02-servicio.png"></a></p>
 <h2 id="2-create-the-object-with-the-wizard">2. Create the object with the wizard<a class="headerlink" href="#2-create-the-object-with-the-wizard" title="Permanent link">¶</a></h2>
 <p>Open <strong>Objects</strong> in the administration menu and click the wand button, top right (<strong>New object</strong>).</p>
 <p><strong>Step 1, Identity</strong>: the name of the record and of the collection (<code>NwProduct</code> and <code>NwProducts</code>), their titles (<code>{{ProductName}}</code> for the record, <em>Northwind products</em> for the collection) and an icon for each. <strong>Continue</strong>.</p>
@@ -9735,12 +9735,12 @@
 </tbody>
 </table>
 <p>Click <strong>Probe the API</strong>. The probe calls the list once, <strong>without saving anything</strong>, and shows what it answered and the properties it proposes.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/pruebalo-sonda.png" data-desc-position="bottom"><img alt="The probe: 77 records, a sample and the proposed properties" src="../../../../docs_assets/images/ExternalEntities/pruebalo-sonda.png"></a></p>
 <p><strong>Check</strong>: <em>✓ Answered 77 records</em>, a sample of three products and <strong>10 properties</strong> with <code>ProductID</code> as the key. You can change the label or type of any of them, or remove it. The protocol's control data (such as <code>@odata.etag</code>) are not proposed: the probe lists them separately as skipped.</p>
 <p><strong>Step 3, Review</strong>: what is going to be created (the object, the collection, the properties and a list view). <strong>Create object</strong>. When it finishes, the new object's workbench opens.</p>
 <h2 id="3-use-it-like-any-other-object">3. Use it like any other object<a class="headerlink" href="#3-use-it-like-any-other-object" title="Permanent link">¶</a></h2>
 <p>Open the <strong>NwProducts</strong> list (from the workbench, or by adding it to the menu like any collection).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/pruebalo-lista.png" data-desc-position="bottom"><img alt="The product list, read from the API" src="../../../../docs_assets/images/ExternalEntities/pruebalo-lista.png"></a></p>
 <p><strong>Check</strong>:</p>
 <ul>
 <li><strong>77 products</strong>, paged. Each page is an API call (<code>$top</code>/<code>$skip</code>), not 77 rows fetched all at once.</li>
@@ -9754,7 +9754,7 @@
 <li>With the wizard (step 2), another object with <strong>List path</strong> <code>Category_Sales_for_1997</code>: the probe answers 8 records and proposes <code>CategoryName</code> (key) and <code>CategorySales</code>.</li>
 <li>A <strong>Chart (ECharts)</strong> module of type <code>pie</code>, with that object's <strong>collection</strong> as the module's object, <strong>empty SQL</strong>, and <em>Series</em> and <em>Labels</em> = <code>CategoryName</code>, <em>Value</em> = <code>CategorySales</code>.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/pruebalo-grafica.png" data-desc-position="bottom"><img alt="A pie chart drawn from an endpoint, without SQL" src="../../../../docs_assets/images/ExternalEntities/pruebalo-grafica.png"></a></p>
 <p>The endpoint must already return the chart rows: Flexygo does not aggregate. See <a href="../ExternalEntities/#6-charts-from-an-endpoint">§6 of the reference</a>.</p>
 <hr>
 <h2 id="if-something-goes-wrong">If something goes wrong<a class="headerlink" href="#if-something-goes-wrong" title="Permanent link">¶</a></h2>

@@ -9732,7 +9732,7 @@
 <li>Go to the <strong>Extensions</strong> view (<kbd>Ctrl+Shift+X</kbd>).</li>
 <li>Search for <code>Flexygo Developer Tools</code> and click <strong>Install</strong>.</li>
 </ol>
-<p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/flxExtension.png" data-desc-position="bottom"><img alt="Flexygo Developer Tools extension in the VS Code marketplace" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/flxExtension.png"></a>
    <em class="caption">Flexygo Developer Tools extension in the VS Code marketplace</em></p>
 <p>The extension activates when you open a folder that contains a solution (<code>.sln</code>). It needs the <strong>.NET SDK</strong>: with it, it installs and updates the tools it uses on its own (<code>Flexygo.Tools.Product</code> and SqlPackage), so you don't have to install them by hand. To open the databases from the panel you also need Microsoft's <strong>SQL Server (mssql)</strong> extension.</p>
 <h2 id="the-flexygo-panel">The Flexygo panel<a class="headerlink" href="#the-flexygo-panel" title="Permanent link">¶</a></h2>
@@ -9744,7 +9744,7 @@
 <li><strong>Any other folder</strong>: a warning that it is not a Flexygo project.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-en.png" data-desc-position="bottom"><img alt="Flexygo panel with a solution open" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-en.png"></a>
   <figcaption>Flexygo panel: project status at the top and the actions grouped below</figcaption>
 </figure><p></p>
 <h3 id="project-status">Project status<a class="headerlink" href="#project-status" title="Permanent link">¶</a></h3>
@@ -9781,12 +9781,12 @@
 <li><strong>Edit connection string</strong>: asks in four steps for the server, the database, the user and the password, and saves the connection string in <code>appsettings.Development.json</code>. It suggests the values already there; when there are none, <code>localhost</code>, <code>sa</code> and the solution name (<code>&lt;Prefix&gt;_IC</code> for the configuration database).</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-configure-connection-en.png" data-desc-position="bottom"><img alt="First step of editing the connection string" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-configure-connection-en.png"></a>
   <figcaption>First of the four steps: the SQL Server host</figcaption>
 </figure><p></p>
 <p>The <strong>Change</strong> button of the active origin lists the origins in the <code>Origins</code> table and activates the one you pick, the same as the origin selector of the application's develop mode. If the data database also has its own <code>Origins</code> table, it is kept the same as the configuration one.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-change-origin-en.png" data-desc-position="bottom"><img alt="Choosing the active origin" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-change-origin-en.png"></a>
   <figcaption>The ticked origin is the active one</figcaption>
 </figure><p></p>
 <h3 id="run-actions">Run actions<a class="headerlink" href="#run-actions" title="Permanent link">¶</a></h3>
@@ -9804,7 +9804,7 @@
 <li><strong>Keep Data</strong>: publishes only the changes and keeps what is already there.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-database-confirm-en.png" data-desc-position="bottom"><img alt="Question before publishing over a database that already exists" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-database-confirm-en.png"></a>
   <figcaption>Question before publishing over a database that already exists</figcaption>
 </figure><p></p>
 <div class="admonition danger">
@@ -9814,7 +9814,7 @@
 <h3 id="deploy-actions">Deploy actions<a class="headerlink" href="#deploy-actions" title="Permanent link">¶</a></h3>
 <p><strong>Generate NuGets</strong> creates the product's NuGet packages. It asks for the package version (for example <code>1.2.3</code>, <code>1.2.3.4</code> or <code>1.2.3-beta.1</code>) and builds the packages in Release with <code>flexygo-product nuget</code>. The <strong>Flexygo Core</strong> output channel says which folder they were written to.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-generate-nugets-en.png" data-desc-position="bottom"><img alt="NuGet package version" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-generate-nugets-en.png"></a>
   <figcaption>Version of the packages to generate</figcaption>
 </figure><p></p>
 <p>If the solution has the <code>&lt;Prefix&gt;-version.json</code> file of the product templates, it suggests the same version continuous integration would calculate for the branch: <code>X.Y.0.N</code> on <code>main</code> or <code>master</code>, <code>X.Y.N-beta.1</code> on <code>develop</code> and <code>-alpha</code> on the rest.</p>
@@ -9824,17 +9824,17 @@
 </div>
 <p><strong>Update Flexygo Version</strong> updates the solution to another Flexygo version with <code>flexygo-product update</code>. It lists the stable versions in the feed, newest first, and asks for confirmation before starting.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-update-version-en.png" data-desc-position="bottom"><img alt="Flexygo version picker" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-update-version-en.png"></a>
   <figcaption>Available versions; the first option is always the latest</figcaption>
 </figure><p></p>
 <p><strong>Clear NuGet Cache</strong> deletes every local NuGet cache (<code>dotnet nuget locals all --clear</code>), after you confirm it. It helps when a package you just published isn't downloaded or an old version sticks around.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-clear-nuget-cache-en.png" data-desc-position="bottom"><img alt="Confirmation to clear the NuGet cache" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-clear-nuget-cache-en.png"></a>
   <figcaption>Confirmation before clearing the cache</figcaption>
 </figure><p></p>
 <p><strong>Build &amp; Run Docker</strong> asks for a Docker Compose project name and runs <code>docker compose -p &lt;name&gt; up</code> in a VS Code terminal, which shows the log as it goes. To stop it, stop it from that terminal.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-build-run-docker-en.png" data-desc-position="bottom"><img alt="Docker Compose project name" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-build-run-docker-en.png"></a>
   <figcaption>Docker Compose project name</figcaption>
 </figure><p></p>
 <h3 id="publish-actions">Publish actions<a class="headerlink" href="#publish-actions" title="Permanent link">¶</a></h3>
@@ -9845,12 +9845,12 @@
 <li>The feed's API key. It can be saved for next time; it is stored encrypted in the operating system's credential store.</li>
 </ol>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-nugets-url-en.png" data-desc-position="bottom"><img alt="NuGet feed URL to publish to" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-nugets-url-en.png"></a>
   <figcaption>Second step: the NuGet feed the packages are published to</figcaption>
 </figure><p></p>
 <p><strong>Build &amp; Publish Docker Images</strong> builds the images of the <code>docker-compose</code> services that have a <code>build</code> section and pushes them to a registry. It asks for the registry URL (<code>docker.io</code> by default, optionally with the repository path), the user, the password or token and the image tag, which defaults to the product version. The credentials can also be saved encrypted.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-docker-images-en.png" data-desc-position="bottom"><img alt="Docker registry URL" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-docker-images-en.png"></a>
   <figcaption>First step: the registry the images are published to</figcaption>
 </figure><p></p>
 <p>To delete the saved API key and credentials, use the <strong>Flexygo: Forget Saved Publish Credentials</strong> command from the Command Palette. When the extension uses saved credentials, it says so and offers to forget them in case they are no longer valid.</p>
@@ -9861,7 +9861,7 @@
 <li><strong>Publish</strong>: shows the progress of each step. If a test deployment was requested, it creates a test customer and application, waits for them to install and lets you open the application to check it; <strong>Clean up and finish</strong> deletes them afterwards.</li>
 </ol>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-deploy-product-en.png" data-desc-position="bottom"><img alt="First step of Deploy Product: connection to Cenit" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-deploy-product-en.png"></a>
   <figcaption>First step: connection to the Cenit platform</figcaption>
 </figure><p></p>
 <h3 id="need-help">Need help?<a class="headerlink" href="#need-help" title="Permanent link">¶</a></h3>
@@ -9872,27 +9872,27 @@
 <li><strong>Check Updates</strong>: opens a window with the installed version of the extension and of the tools it uses (<code>Flexygo.Tools.Product</code> and <code>flexygo-mcp</code>), with a button to update each tool. When there is an update, the button shows an orange dot.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-check-updates-en.png" data-desc-position="bottom"><img alt="Check Updates window" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-check-updates-en.png"></a>
   <figcaption>Installed and available versions of the extension and its tools</figcaption>
 </figure><p></p>
 <h2 id="create-a-new-product">Create a new product<a class="headerlink" href="#create-a-new-product" title="Permanent link">¶</a></h2>
 <p>With an empty folder open, the panel offers <strong>Create New Product</strong>:</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-empty-en.png" data-desc-position="bottom"><img alt="Flexygo panel with an empty folder" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-empty-en.png"></a>
   <figcaption>With an empty folder, the panel only offers to create a product</figcaption>
 </figure><p></p>
 <ol>
 <li>
 <p>Pick the product template. The list comes from the templates published in the NuGet feed, with their version.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-template-en.png" data-desc-position="bottom"><img alt="Choosing the product template" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-template-en.png"></a>
   <figcaption>Available product templates</figcaption>
 </figure><p></p>
 </li>
 <li>
 <p>Type the product name: letters, numbers and <code>_</code>, starting with a letter. By default it suggests the folder name.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-name-en.png" data-desc-position="bottom"><img alt="Name of the new product" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-name-en.png"></a>
   <figcaption>Product name</figcaption>
 </figure><p></p>
 </li>
@@ -9903,7 +9903,7 @@
 <h2 id="migrate-an-old-project">Migrate an old project<a class="headerlink" href="#migrate-an-old-project" title="Permanent link">¶</a></h2>
 <p>If the open folder is a Flexygo product for .NET Framework (with the <code>Flexygo</code> package in a <code>packages.config</code>), the panel shows the version it uses and offers <strong>Migrate to Flexygo Core</strong>:</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-framework-en.png" data-desc-position="bottom"><img alt="Flexygo panel with an old project" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-framework-en.png"></a>
   <figcaption>Outdated version warning, with the project's Flexygo version</figcaption>
 </figure><p></p>
 <p>The button opens a window with two paths:</p>
@@ -9912,7 +9912,7 @@
 <li><strong>Without AI</strong>: download the Flexygo installer and follow the steps the window shows, with this project's path. The installer's migration mode is explained in <a href="../../1Deployment/1Installer/Migration/">Installer: Migration Mode</a>.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-migrate-en.png" data-desc-position="bottom"><img alt="Migrate to Flexygo Core window" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-migrate-en.png"></a>
   <figcaption>The two ways to migrate: with Claude Code or with the installer</figcaption>
 </figure><p></p>
 <div class="admonition warning">
@@ -9922,12 +9922,12 @@
 <h2 id="other-ways-to-run-the-commands">Other ways to run the commands<a class="headerlink" href="#other-ways-to-run-the-commands" title="Permanent link">¶</a></h2>
 <p>Every action is also in the <strong>Command Palette</strong> (<kbd>Ctrl+Shift+P</kbd>), starting with <code>Flexygo:</code>. Some are only there, such as <strong>Forget Saved Publish Credentials</strong>.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-command-palette-en.png" data-desc-position="bottom"><img alt="Flexygo commands in the Command Palette" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-command-palette-en.png"></a>
   <figcaption>Flexygo commands in the Command Palette</figcaption>
 </figure><p></p>
 <p>The most common ones are also in the Explorer's <strong>context menu</strong> (right-click on any folder or file):</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-context-menu-en.png" data-desc-position="bottom"><img alt="Flexygo commands in the Explorer context menu" src="../../../docs_assets/images/CoreProductDevelopment/vsCode/ext-context-menu-en.png"></a>
   <figcaption>Flexygo commands at the end of the context menu</figcaption>
 </figure><p></p>
 <h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">¶</a></h2>
@@ -9966,38 +9966,38 @@
 <li>Restart Visual Studio to complete the installation.</li>
 </ol>
 <p>Once installed, you'll find the toolbar under <strong>View</strong> → <strong>Toolbars</strong> → <strong>Flexygo Tools Product</strong>.</p>
-<p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/update/toolbar.png" data-desc-position="bottom"><img alt="Flexygo toolbar in Visual Studio" src="../../../docs_assets/images/CoreProductDevelopment/extension/update/toolbar.png"></a>
 <em class="caption">Toolbar with the update and generate NuGets buttons</em></p>
-<p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/update/buttons.png" data-desc-position="bottom"><img alt="Extension buttons" src="../../../docs_assets/images/CoreProductDevelopment/extension/update/buttons.png"></a>
 <em class="caption">Update button (left) and generate NuGets button (right)</em></p>
 <h2 id="updating-the-product">Updating the product<a class="headerlink" href="#updating-the-product" title="Permanent link">¶</a></h2>
 <ol>
 <li>Click the update button on the toolbar.</li>
 <li>Select the version you want to update to; the latest available is shown by default.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/update/versionUpdate.png" data-desc-position="bottom"><img alt="Selecting the update version" src="../../../docs_assets/images/CoreProductDevelopment/extension/update/versionUpdate.png"></a></p>
 <ol>
 <li>Confirm the update in the confirmation window.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/update/updateConfirm.png" data-desc-position="bottom"><img alt="Update confirmation" src="../../../docs_assets/images/CoreProductDevelopment/extension/update/updateConfirm.png"></a></p>
 <ol>
 <li>Follow the progress in the output tab.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/update/progressUpdate.png" data-desc-position="bottom"><img alt="Update progress" src="../../../docs_assets/images/CoreProductDevelopment/extension/update/progressUpdate.png"></a></p>
 <h2 id="generating-nugets">Generating NuGets<a class="headerlink" href="#generating-nugets" title="Permanent link">¶</a></h2>
 <ol>
 <li>Click the generate NuGets button on the toolbar.</li>
 <li>Enter the version of the NuGet package you want to generate.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/nuget/versionNuget.png" data-desc-position="bottom"><img alt="Entering the NuGet version" src="../../../docs_assets/images/CoreProductDevelopment/extension/nuget/versionNuget.png"></a></p>
 <ol>
 <li>Confirm the generation in the confirmation window.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/nuget/confirmNuget.png" data-desc-position="bottom"><img alt="NuGet generation confirmation" src="../../../docs_assets/images/CoreProductDevelopment/extension/nuget/confirmNuget.png"></a></p>
 <ol>
 <li>Follow the progress in the output tab. When finished, the folder with the generated packages will open.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/extension/nuget/progressNuget.png" data-desc-position="bottom"><img alt="NuGet generation progress" src="../../../docs_assets/images/CoreProductDevelopment/extension/nuget/progressNuget.png"></a></p>
 </div>
 </div>
 </div>

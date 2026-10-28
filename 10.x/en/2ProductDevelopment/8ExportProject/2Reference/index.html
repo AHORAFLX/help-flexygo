@@ -9707,7 +9707,7 @@
 <p class="admonition-title">New in version 10.0</p>
 <p>The export assistant shows the selected template and version, explains what will be included, and lets you follow the progress until the ZIP downloads. You can choose custom files and folders and modify the template. By default, it uses the installed product’s template and excludes the document and image repositories and other large files. It supports projects larger than 2 GB and checks that there is enough disk space. It also records exports and errors.</p>
 <p>Users are not included in the export, and secrets are kept in a local file that is not shared. If the active origin is reserved, the assistant warns you and suggests the first available destination. Only authorized administrators can use it.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/2Reference/export-as-project.png" data-desc-position="bottom"><img alt="New in version 10.0" src="../../../../docs_assets/images/2Reference/export-as-project.png"></a></p>
 </div>
 <p>A Flexygo application can start out configured by hand on top of the core —objects, pages, processes, style sheets— without any project behind it. When that application grows and it needs to be <strong>developed and maintained with continuous integration</strong>, <strong>Export as project</strong> turns it into a project of the <a href="../../2Template/">product template</a>: the same solution that <code>dotnet new flexygoproduct</code> generates, with the installation's configuration, data model, static files and DLLs already inside, in a zip ready to open with Visual Studio and push to a repository.</p>
 <p>Want to do it end to end with an application of your own? <a href="../1TryIt/">Try it: from installed application to a project that builds and runs</a>.</p>
@@ -9720,7 +9720,7 @@
 <p>Everything that belongs to the project has to be in an <strong>origin</strong> other than 0, which is the core. The configuration rows of the <strong>active origin</strong> are exported (the one shown in the control panel, <strong>Active origin</strong>, and in which the team has built the application); what was created with the active origin at 0 cannot be told apart from the core and <strong>does not travel</strong>.</p>
 <p>With the active origin at 0 the window says so and does not allow exporting:</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/origen-0.png" data-desc-position="bottom"><img alt="The window with the active origin at 0" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/origen-0.png"></a>
 <br>
 <figcaption>With origin 0 active: "Nothing of the core is exported". Activate the project's origin and reopen the window</figcaption>
 </figure>
@@ -9739,7 +9739,7 @@
 <h2 id="3-what-it-shows-before-starting">3. What it shows before starting<a class="headerlink" href="#3-what-it-shows-before-starting" title="Permanent link">¶</a></h2>
 <p>As soon as it opens, the window reads the installation and says what it is going to take. The lines change with what is chosen: the target origin and what is ticked in the <code>custom</code> folder (3.1).</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/formulario.png" data-desc-position="bottom"><img alt="The export window with the preview" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/formulario.png"></a>
 <br>
 <figcaption>The preview with origin 2 active and the CRMCore product: the configuration that travels, the data model, the static files, the custom folder, the DLLs, the SDK and the template</figcaption>
 </figure>
@@ -9809,7 +9809,7 @@
 <h3 id="31-the-custom-folder-choosing-what-travels">3.1 The custom folder: choosing what travels<a class="headerlink" href="#31-the-custom-folder-choosing-what-travels" title="Permanent link">¶</a></h3>
 <p>The Frontend's <code>wwwroot/custom</code> folder usually mixes <strong>project</strong> (your own JS, CSS and images) with <strong>data</strong> (what people attach, photos, exports). That is why it does not travel in full: <strong>Choose what travels</strong> expands its top-level folders and files, with how many files each one holds and its size, a search box and two shortcuts, <strong>Suggested</strong> (what comes ticked by default) and <strong>None</strong>. <strong>Only what is ticked travels</strong>, copied as it is.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/carpeta-custom.png" data-desc-position="bottom"><img alt="The custom folder list, with what comes unticked by default" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/carpeta-custom.png" width="640"></a>
 <br>
 <figcaption>What is data or weighs a lot comes unticked, with its reason</figcaption>
 </figure>
@@ -9867,7 +9867,7 @@
 <h3 id="41-master-data-the-tables-that-travel-with-their-rows">4.1 Master data: the tables that travel with their rows<a class="headerlink" href="#41-master-data-the-tables-that-travel-with-their-rows" title="Permanent link">¶</a></h3>
 <p>The schema alone is not enough for the project to <strong>work</strong>: tables usually have required foreign keys to catalogs (statuses, types, categories), and without their rows nothing can be created. That is why, under <strong>The data model</strong>, <strong>Choose the tables that travel with their rows</strong> expands the tables of each marked connection with their rows, a search box and two shortcuts, <strong>Catalogs only</strong> and <strong>None</strong>. The section line says how many tables and rows travel, and how many warnings there are.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" data-desc-position="bottom"><img alt="The list of tables of the data connection, with the catalogs checked" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" width="640"></a>
 <br>
 <figcaption>The catalogs come checked; the rest are checked by hand</figcaption>
 </figure>

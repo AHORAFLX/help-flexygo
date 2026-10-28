@@ -9743,8 +9743,8 @@ El sistema de integración continua (CI/CD) documenta y ejecuta más de 30 pasos
 <li><strong>Cobertura de código</strong>: el sistema utiliza <strong>JetBrains dotCover</strong> para recopilar métricas de cobertura, lo que permite medir el grado de validación del código mediante pruebas. Este paso sólo se ejecuta si la compilación es exitosa, evitando reportes sobre versiones inconsistentes.</li>
 <li>
 <p><strong>Análisis estático de código (SonarQube)</strong>: aunque algunos análisis aparecen deshabilitados en las imágenes, el proceso SDLC considera su ejecución como parte del ciclo completo. Los módulos para TypeScript, T-SQL y C# se auditan en busca de vulnerabilidades, malas prácticas o código inseguro. Esto aporta evidencia de cumplimiento con los <strong>controles de análisis estático del OWASP SAMM y ISO/IEC 27034</strong>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/SecureSDLC/1.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/SecureSDLC/1.png"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/SecureSDLC/2.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/SecureSDLC/2.png"></a></p>
 </li>
 </ul>
 <h3 id="34-generacion-de-artefactos-y-documentacion-pasos-1622">3.4. Generación de artefactos y documentación (pasos 16–22)<a class="headerlink" href="#34-generacion-de-artefactos-y-documentacion-pasos-1622" title="Permanent link">¶</a></h3>
@@ -9780,7 +9780,7 @@ El sistema de integración continua (CI/CD) documenta y ejecuta más de 30 pasos
 <li><strong>Eliminar base de datos de pruebas</strong>: como última fase, se elimina de forma segura la base de datos utilizada durante los test, preservando la confidencialidad y evitando exposición de información.</li>
 </ol>
 <p>Este proceso constituye una evidencia clave de seguridad operativa, demostrando que Flexygo aplica controles activos de detección temprana de vulnerabilidades antes de liberar versiones.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/SecureSDLC/3.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/SecureSDLC/3.png"></a></p>
 <h3 id="37-publicacion-de-artefactos-y-control-de-distribucion">3.7. Publicación de artefactos y control de distribución<a class="headerlink" href="#37-publicacion-de-artefactos-y-control-de-distribucion" title="Permanent link">¶</a></h3>
 <p>El flujo de publicación final incluye la validación y despliegue de paquetes NuGet en repositorios autenticados:</p>
 <ol>

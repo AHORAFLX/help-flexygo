@@ -9711,12 +9711,12 @@
 <hr>
 <h2 id="1-turn-on-the-web-api-and-mcp">1. Turn on the web API and MCP<a class="headerlink" href="#1-turn-on-the-web-api-and-mcp" title="Permanent link">¶</a></h2>
 <p>In the control panel, <strong>Security → WebAPI</strong> area, turn on <strong>Enable WebAPI</strong> and <strong>Enable MCP</strong>. They are off by default.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/interruptor-mcp.png" data-desc-position="bottom"><img alt="Enable WebAPI and Enable MCP in the WebAPI tool" src="../../../../docs_assets/images/AIAssistants/interruptor-mcp.png"></a></p>
 <p><strong>Check</strong>: your profile menu shows <strong>Connect an assistant</strong> and <strong>Connected assistants</strong>. If they do not appear, log out and back in.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/menu-perfil.png" data-desc-position="bottom"><img alt="The profile menu with the two MCP entries" src="../../../../docs_assets/images/AIAssistants/menu-perfil.png" width="320"></a></p>
 <h2 id="2-give-yourself-permission-to-connect-an-assistant">2. Give yourself permission to connect an assistant<a class="headerlink" href="#2-give-yourself-permission-to-connect-an-assistant" title="Permanent link">¶</a></h2>
 <p>On the same screen, <strong>Authorized People</strong> panel, <strong>Authorized Roles</strong> tab: tick the <strong>robot column</strong> for your role (for example <em>Admins</em>). It is a permission separate from the web API one (the eye): for this test you do not need the eye.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/permiso-mcp.png" data-desc-position="bottom"><img alt="Authorized People: the robot column is the MCP permission" src="../../../../docs_assets/images/AIAssistants/permiso-mcp.png"></a></p>
 <p><strong>Check</strong>: <strong>Connect an assistant</strong> opens a page with your application's address to copy. If it says you do not have permission, the robot is missing from your role (or from your user, <em>Authorized Users</em> tab).</p>
 <h2 id="3-show-the-assistant-what-it-can-use">3. Show the assistant what it can use<a class="headerlink" href="#3-show-the-assistant-what-it-can-use" title="Permanent link">¶</a></h2>
 <p>In the <strong>Authorized Data</strong> panel, <strong>Authorized Objects</strong> tab, tick the <strong>eye</strong> (view a record) and the <strong>list</strong> (view the collection) on your object. If you want it to be able to modify too, tick create or edit; for a first test reading is enough.</p>
@@ -9746,7 +9746,7 @@
 </div>
 </div>
 <p>In the browser <strong>you log in with your usual user</strong> and see the consent page: who is asking, with which user and what is granted. Press <strong>Allow</strong> (you can untick <em>Modify data</em> so that it only reads).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/consentimiento.png" data-desc-position="bottom"><img alt="The consent page" src="../../../../docs_assets/images/AIAssistants/consentimiento.png"></a></p>
 <p><strong>Check</strong>: the assistant says it is connected (in Claude Code, <code>/mcp</code> shows it as <em>connected</em>).</p>
 <h2 id="6-ask-it">6. Ask it<a class="headerlink" href="#6-ask-it" title="Permanent link">¶</a></h2>
 <p>Some questions to see each thing, with your names instead of the ones in the example:</p>
@@ -9790,10 +9790,10 @@
 <li><strong>MCP usage</strong>: calls per day (answered and rejected), per tool and per person, and the reason for each rejection.</li>
 <li><strong>MCP sessions</strong>: your live connection, with whom, since when and what it can do.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/uso.png" data-desc-position="bottom"><img alt="MCP usage after the test" src="../../../../docs_assets/images/AIAssistants/uso.png"></a></p>
 <h2 id="8-cut-the-connection">8. Cut the connection<a class="headerlink" href="#8-cut-the-connection" title="Permanent link">¶</a></h2>
 <p>Profile menu → <strong>Connected assistants</strong> → <strong>Revoke</strong> on the row. The assistant's next question gets a refusal. To come back, connect again (step 5).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/asistentes-conectados.png" data-desc-position="bottom"><img alt="Connected assistants, with Revoke in the row menu" src="../../../../docs_assets/images/AIAssistants/asistentes-conectados.png"></a></p>
 <p>And if you turn off <strong>Enable MCP</strong> (step 1), <code>/mcp</code> stops existing for everyone immediately.</p>
 <hr>
 <h2 id="if-something-does-not-work">If something does not work<a class="headerlink" href="#if-something-does-not-work" title="Permanent link">¶</a></h2>

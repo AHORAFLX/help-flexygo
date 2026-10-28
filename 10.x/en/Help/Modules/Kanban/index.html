@@ -9681,7 +9681,7 @@
 <h1 id="kanban">Kanban<a class="headerlink" href="#kanban" title="Permanent link">¶</a></h1>
 <p>Kanban is a project management method that helps teams visualize workload and workflow. The <strong>Flexygo</strong> Kanban module lets you define a board using any type of object.</p>
 <p>There is a Kanban example in Flexygo. <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Board" objectwhere="([Kanban_Boards].[BoardName] = 'Flexygo_Task_List')" showprogress="false">Click here</flx-navbutton> to open it, and check its <flx-navbutton class="link" type="openPage" pagetypeid="view" objectname="sysKanban_Setting" objectwhere="KanbanSettingsName='sysFlexygo_Kanban'" showprogress="false">configuration</flx-navbutton>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/kanban2.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/kanban2.png" title="Image 1. Kanban"></a></p>
 <h2 id="module-settings">Module Settings<a class="headerlink" href="#module-settings" title="Permanent link">¶</a></h2>
 <p>When you select in a module the type <strong>Kanban Panel</strong> you will need to set the <strong>object</strong> and its <strong>object where</strong>. To understand which object you have to choose you need to know how the kanban works.</p>
 <p>The kanban is going to need two different objects, the <strong>board object</strong> and the <strong>cards object</strong>. The <strong>board</strong> one is going to be the parent of the <strong>cards</strong> so for example a <strong>delivery driver</strong> (board) has multiple <strong>deliveries</strong> (cards). Here in the module you need to set the <strong>board</strong> one as your object.</p>
@@ -9694,7 +9694,7 @@ For example one specific driver and that driver's deliveries. If you need a boar
 <p>After selecting the  <strong>Object</strong> and <strong>Object Where</strong>, create your own <strong>Kanban Settings</strong> from the field shown at the bottom-right of the form. You will configure the following sections:</p>
 <h3 id="board-settings">Board Settings<a class="headerlink" href="#board-settings" title="Permanent link">¶</a></h3>
 <p>Defines the basic board behavior and labels.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/KanbanSettings1.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/KanbanSettings1.png" title="Image 1. Kanban Settings"></a></p>
 <table>
 <thead>
 <tr>
@@ -9723,7 +9723,7 @@ For example one specific driver and that driver's deliveries. If you need a boar
 </table>
 <h3 id="column-settings">Column Settings<a class="headerlink" href="#column-settings" title="Permanent link">¶</a></h3>
 <p>Here you define the view that determines how many columns the Kanban has and how they are named and styled:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/KanbanSettings2.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/KanbanSettings2.png" title="Image 2. Kanban Settings"></a></p>
 <table>
 <thead>
 <tr>
@@ -9761,7 +9761,7 @@ This is common when columns come from a master table that stores state <strong>I
 </div>
 <h3 id="card-settings">Card Settings<a class="headerlink" href="#card-settings" title="Permanent link">¶</a></h3>
 <p>Here you define the <strong>card object</strong>, the <strong>view</strong> used to load card data, and the fields used to render each card:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/KanbanSettings3.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/KanbanSettings3.png" title="Image 3. Kanban Settings"></a></p>
 <table>
 <thead>
 <tr>
@@ -9798,7 +9798,7 @@ This is common when columns come from a master table that stores state <strong>I
 </table>
 <h3 id="archive-settings">Archive Settings<a class="headerlink" href="#archive-settings" title="Permanent link">¶</a></h3>
 <p>Configures the archive area. Archiving means changing the card state to the configured <strong>Archived State ID</strong>. Archived cards are not shown in the Kanban board.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/KanbanSettings4.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/KanbanSettings4.png" title="Image 4. Kanban Settings"></a></p>
 <table>
 <thead>
 <tr>
@@ -9827,7 +9827,7 @@ This is common when columns come from a master table that stores state <strong>I
 </table>
 <h3 id="event-settings">Event Settings<a class="headerlink" href="#event-settings" title="Permanent link">¶</a></h3>
 <p>Defines which processes run when Kanban events are triggered.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/KanbanSettings5.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/KanbanSettings5.png" title="Image 5. Kanban Settings"></a></p>
 <table>
 <thead>
 <tr>
@@ -9852,7 +9852,7 @@ This is common when columns come from a master table that stores state <strong>I
 </table>
 <h2 id="add-the-kanban-on-your-page">Add the kanban on your page<a class="headerlink" href="#add-the-kanban-on-your-page" title="Permanent link">¶</a></h2>
 <p>Drag the module to your page from the module manager and complete the following fields:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ModulesConf/kanbanConf.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/ModulesConf/kanbanConf.png" title="Image 6. Kanban Settings"></a></p>
 <table>
 <thead>
 <tr>

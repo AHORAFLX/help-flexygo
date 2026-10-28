@@ -9760,16 +9760,16 @@
 </div>
 <h2 id="2-entra-y-deja-marcada-la-escritura">2. Entra y deja marcada la escritura<a class="headerlink" href="#2-entra-y-deja-marcada-la-escritura" title="Permanent link">¶</a></h2>
 <p>Se abre la aplicación en el navegador. Entras con tu usuario de siempre y ves la página de consentimiento.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/consentimiento-escritura-es.png" data-desc-position="bottom"><img alt="Consentimiento con «Modificar datos» marcado" src="../../../docs_assets/images/AIAssistants/consentimiento-escritura-es.png" width="420"></a></p>
 <p><strong>Deja marcado <em>Modificar datos</em>.</strong> Ver las decisiones solo pide leer, pero <strong>tomarlas es escribir</strong>. Con la casilla quitada, el asistente enseña la lista y cualquier aprobación o rechazo se rechaza con una frase que lo explica. Para arreglarlo, quita el conector y vuelve a conectarlo con la casilla marcada.</p>
 <div class="admonition note">
 <p class="admonition-title">Codex dice 127.0.0.1</p>
 <p>Codex recibe el acceso en un puerto de tu propio equipo, así que el consentimiento enseña <strong>127.0.0.1</strong> como destino. Es lo correcto: el acceso no sale de tu máquina. Claude enseña <strong>claude.ai</strong> y ChatGPT, <strong>chatgpt.com</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/consentimiento-codex-es.png" data-desc-position="bottom"><img alt="Consentimiento de Codex: el acceso va a 127.0.0.1" src="../../../docs_assets/images/AIAssistants/consentimiento-codex-es.png" width="360"></a></p>
 </div>
 <h2 id="3-pide-la-lista">3. Pide la lista<a class="headerlink" href="#3-pide-la-lista" title="Permanent link">¶</a></h2>
 <p>Escribe, con tus palabras: «¿Qué decisiones tengo pendientes?», «¿hay algo que tenga que aprobar?».</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/decisiones-lista-es.png" data-desc-position="bottom"><img alt="El widget de decisiones: Mías y De mi rol, la primera abierta" src="../../../docs_assets/images/AIAssistants/decisiones-lista-es.png" width="560"></a></p>
 <ul>
 <li><strong>Arriba</strong>: cuántas hay pendientes y cuántas están vencidas (o aplicándose).</li>
 <li><strong>Mías</strong>: las asignadas a ti. <strong>De mi rol</strong>: las asignadas a un rol que tienes, con el nombre del rol. Las demás no salen.</li>
@@ -9785,7 +9785,7 @@
 </ul>
 <h2 id="5-un-minuto-para-deshacer">5. Un minuto para deshacer<a class="headerlink" href="#5-un-minuto-para-deshacer" title="Permanent link">¶</a></h2>
 <p>Tomar la decisión <strong>no la aplica todavía</strong>: queda <strong>aplicándose</strong> durante 60 segundos.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/decisiones-deshacer-es.png" data-desc-position="bottom"><img alt="Aprobada: se aplica en 0:45, con Deshacer" src="../../../docs_assets/images/AIAssistants/decisiones-deshacer-es.png" width="560"></a></p>
 <ul>
 <li>La tira negra dice qué elegiste (✓ verde para aprobar, ✕ roja para rechazar), cuánto falta y tiene <strong>Deshacer</strong>.</li>
 <li><strong>Dentro del minuto no ha pasado nada</strong>: ni el proceso, ni el aviso al sistema externo, ni el registro. <strong>Deshacer</strong> la devuelve a pendiente, como si no se hubiera tocado, y se puede volver a decidir.</li>
@@ -9801,12 +9801,12 @@
 <li>Se encola el aviso de vuelta al sistema que la pidió (<code>CallbackUrl</code>), si tiene.</li>
 <li>El aviso de la campana desaparece para todos.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/decisiones-aplicada-es.png" data-desc-position="bottom"><img alt="Aplicada: ya no se puede deshacer" src="../../../docs_assets/images/AIAssistants/decisiones-aplicada-es.png" width="560"></a></p>
 <p><strong>Aplicada</strong> quiere decir eso: ya ha ocurrido y <strong>no se puede deshacer</strong>. El botón desaparece, y si alguien lo intenta (por ejemplo, reabriendo una tarjeta antigua del chat), el servidor lo rechaza. Para darle la vuelta hace falta otra decisión o corregir el registro en la aplicación.</p>
 <hr>
 <h2 id="en-la-aplicacion-el-mismo-minuto">En la aplicación, el mismo minuto<a class="headerlink" href="#en-la-aplicacion-el-mismo-minuto" title="Permanent link">¶</a></h2>
 <p>El plazo no es solo del chat. La tarjeta <strong>Decisión pendiente</strong> de la ficha (en las dos pieles) funciona igual: al aprobar sale «Aprobar por admin · Se aplica en un minuto» con <strong>Deshacer</strong>, y un aviso lo recuerda.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/decisiones-tarjeta-app-es.png" data-desc-position="bottom"><img alt="La tarjeta de la ficha mientras se aplica, con Deshacer" src="../../../docs_assets/images/AIAssistants/decisiones-tarjeta-app-es.png"></a></p>
 <p>Quien decide por la API (<code>sysTaskResolve</code>) también espera ese minuto, y puede deshacer con <code>sysTaskUndo</code> dentro de él. Los estados y los procesos están en <a href="../../Programming/ApprovalsAndWebhooks/#que-pasa-al-decidir">Decisiones y webhooks</a>.</p>
 <h2 id="las-herramientas-del-mcp">Las herramientas del MCP<a class="headerlink" href="#las-herramientas-del-mcp" title="Permanent link">¶</a></h2>
 <p>Para quien quiera saber qué llama el asistente, o probarlo desde otro cliente:</p>

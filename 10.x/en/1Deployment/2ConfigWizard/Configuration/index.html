@@ -9665,7 +9665,7 @@
 <p class="admonition-title">New in version 10.0</p>
 <p>Initial setup is now handled by a wizard on the Login screen. Press <strong>Empezar</strong> to begin. The wizard checks the values and shows progress as it publishes and creates the databases. You can use a dacpac file or a NuGet feed as the schema source.</p>
 <p>If you leave or an error occurs, you can return to the first pending step and retry without losing your progress. Credential errors identify the fields to check. If mail is already configured, the wizard skips that step. When setup is complete, press <strong>Ir al inicio de sesión</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Configuration/setup-wizard.png" data-desc-position="bottom"><img alt="New in version 10.0" src="../../../../docs_assets/images/Configuration/setup-wizard.png"></a></p>
 </div>
 <p>The Configuration Wizard gets a new installation ready before the first sign-in. It connects the frontend with the backend, creates, updates or reuses the databases, names the project, sets the admin user's password and configures mail. Everything is saved to <code>appsettings.json</code> and to the configuration database, with no need to edit any file by hand.</p>
 <div class="admonition info">
@@ -9676,7 +9676,7 @@
 <h2 id="configuration-wizard">Configuration Wizard<a class="headerlink" href="#configuration-wizard" title="Permanent link">¶</a></h2>
 <p>The wizard opens automatically when you access the application while the installation is not configured. The start screen sums up what you are going to set up and, under the <strong>Start</strong> button, shows the Flexygo version and the address of the application.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-welcome.png" data-desc-position="bottom"><img alt="Configuration wizard start" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-welcome.png"></a>
 <br>
 <figcaption>Wizard start screen</figcaption>
 </figure>
@@ -9690,7 +9690,7 @@
 </ul>
 <p>Click <strong>Check connection</strong>. If the backend answers, <strong>Backend reachable</strong> appears and, when you click <strong>Continue</strong>, the URL is saved and the session keys are synced between the frontend and the backend.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-connection.png" data-desc-position="bottom"><img alt="Backend connection" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-connection.png"></a>
 <br>
 <figcaption>Step 1 — The backend has answered</figcaption>
 </figure>
@@ -9726,7 +9726,7 @@
 </table>
 <p>If you change any value after checking, the wizard checks it again. If the user or the password is wrong, or the database exists but is not a Flexygo configuration database, it says so on the field.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-configuration-database.png" data-desc-position="bottom"><img alt="Configuration database" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-configuration-database.png"></a>
 <br>
 <figcaption>Step 2 — The database does not exist and will be created from the local dacpac</figcaption>
 </figure>
@@ -9744,7 +9744,7 @@
 <p>When you click the button, the wizard deploys the database and shows each phase: reading the dacpac or downloading the package, creating the database, deploying the schema, loading the data models and saving the connection string. Below it you can see the detail of what is being deployed and the elapsed time.</p>
 <p>Do not close the window while it runs. If something fails, the changes are rolled back: click <strong>View details</strong> to see the error, fix the cause and click <strong>Retry</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-deploy.png" data-desc-position="bottom"><img alt="Creating the configuration database" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-deploy.png"></a>
 <br>
 <figcaption>Step 2 — Progress of the database creation</figcaption>
 </figure>
@@ -9757,7 +9757,7 @@
 </ul>
 <p>Click <strong>Save and continue</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-project.png" data-desc-position="bottom"><img alt="Project and administrator" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-project.png"></a>
 <br>
 <figcaption>Step 3 — Project name and administrator password</figcaption>
 </figure>
@@ -9797,7 +9797,7 @@
 <p>If the connection is to an AHORA ERP database, it must exist: the wizard does not create ERP databases. If it is not found, restore or create it and check again, or fix the name.</p>
 </div>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-data-database.png" data-desc-position="bottom"><img alt="Data databases" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-data-database.png"></a>
 <br>
 <figcaption>Step 4 — The data database does not exist and there is no schema, so it will be created empty</figcaption>
 </figure>
@@ -9836,7 +9836,7 @@
 </table>
 <p>Click <strong>Save and finish</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-mail.png" data-desc-position="bottom"><img alt="Outgoing mail" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-mail.png"></a>
 <br>
 <figcaption>Step 5 — Outgoing mail server</figcaption>
 </figure>
@@ -9845,13 +9845,13 @@
 <p>When it finishes, the wizard shows <strong>Flexygo is ready</strong> with a summary of what was set up: the backend, the configuration database, the project, each data database and mail. Each one shows what was done (<strong>Created</strong>, <strong>Updated</strong>, <strong>Existing</strong>, <strong>Empty</strong>, <strong>New</strong>, <strong>Skipped</strong>…).</p>
 <p>If the application runs on IIS, it is recycled to apply the changes.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/setup-done.png" data-desc-position="bottom"><img alt="Configuration completed" src="../../../../docs_assets/images/CoreDeployment/Asistente/setup-done.png"></a>
 <br>
 <figcaption>Configuration summary</figcaption>
 </figure>
 <p>Click <strong>Go to sign in</strong>. If the project is new, sign in as <code>admin</code> with the password from step 3; if it already existed, with your usual project user.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/Asistente/login.png" data-desc-position="bottom"><img alt="Login screen" src="../../../../docs_assets/images/CoreDeployment/Asistente/login.png"></a>
 <br>
 <figcaption>Application login screen</figcaption>
 </figure>

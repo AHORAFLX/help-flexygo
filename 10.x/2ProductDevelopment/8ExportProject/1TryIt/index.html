@@ -9706,7 +9706,7 @@
 <hr>
 <h2 id="1-abre-la-ventana-y-lee-la-vista-previa">1. Abre la ventana y lee la vista previa<a class="headerlink" href="#1-abre-la-ventana-y-lee-la-vista-previa" title="Permanent link">¶</a></h2>
 <p>Panel de control → lista de acciones → <strong>Exportar como proyecto</strong>. La ventana lee la instalación y dice qué se va a llevar.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-ventana.png" data-desc-position="bottom"><img alt="La ventana: configuración, modelo de datos, estáticos, carpeta custom, DLL, SDK y plantilla" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-ventana.png"></a></p>
 <p><strong>Comprueba</strong>:</p>
 <ul>
 <li><em>The configuration of origin N</em>: el origen es el de tu proyecto, no el 0 (con el 0 la ventana lo dice y no deja exportar).</li>
@@ -9716,11 +9716,11 @@
 </ul>
 <h2 id="2-elige-los-datos-maestros">2. Elige los datos maestros<a class="headerlink" href="#2-elige-los-datos-maestros" title="Permanent link">¶</a></h2>
 <p>Despliega <strong>Choose the tables that travel with their rows</strong>. Salen marcados los <strong>catálogos</strong> (tablas pequeñas a las que apuntan otras: estados, tipos, categorías): sin sus filas no se podría dar de alta nada en el proyecto. Marca además lo que necesites para probar. Si marcas una tabla grande, o una que apunta a otra que no viaja, la ventana avisa en amarillo; no impide exportar.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" data-desc-position="bottom"><img alt="Los catálogos, marcados de serie" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" width="640"></a></p>
 <h2 id="3-exporta">3. Exporta<a class="headerlink" href="#3-exporta" title="Permanent link">¶</a></h2>
 <p>Escribe el <strong>Product name</strong> (letras, dígitos y guion bajo; nombra la solución y cada proyecto: <code>SalesExamples.Backend</code>, <code>SalesExamples.Conf.Database</code>…), deja <strong>Scripts travel as origin</strong> en <em>1 · Product</em> y pulsa <strong>Export</strong>.</p>
 <p>La ventana enseña los pasos con su tiempo y, al terminar, descarga el zip.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-resultado.png" data-desc-position="bottom"><img alt="El resultado: el zip, lo que conviene mirar y los pasos" src="../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-resultado.png"></a></p>
 <p><strong>Comprueba</strong>: <em>exported</em>, todos los pasos en verde (o en amarillo con su motivo en <em>Worth a look</em>) y un zip de unos pocos MB. En una aplicación pequeña tarda uno o dos minutos; la primera vez algo más, porque instala la plantilla.</p>
 <h2 id="4-compilalo-en-tu-equipo">4. Compílalo en tu equipo<a class="headerlink" href="#4-compilalo-en-tu-equipo" title="Permanent link">¶</a></h2>
 <p>Descomprime el zip y, en su carpeta:</p>

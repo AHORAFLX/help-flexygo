@@ -9732,7 +9732,7 @@
 <li>Ve a la vista <strong>Extensiones</strong> (<kbd>Ctrl+Shift+X</kbd>).</li>
 <li>Busca <code>Flexygo Developer Tools</code> y haz clic en <strong>Instalar</strong>.</li>
 </ol>
-<p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/flxExtension.png" data-desc-position="bottom"><img alt="Extensión Flexygo Developer Tools en el marketplace de VS Code" src="../../docs_assets/images/CoreProductDevelopment/vsCode/flxExtension.png"></a>
    <em class="caption">Extensión Flexygo Developer Tools en el marketplace de VS Code</em></p>
 <p>La extensión se activa al abrir una carpeta que contenga una solución (<code>.sln</code>). Necesita el <strong>SDK de .NET</strong>: con él instala y actualiza sola las herramientas que usa (<code>Flexygo.Tools.Product</code> y SqlPackage), así que no hay que instalarlas a mano. Para abrir las bases de datos desde el panel hace falta además la extensión <strong>SQL Server (mssql)</strong> de Microsoft.</p>
 <h2 id="el-panel-de-flexygo">El panel de Flexygo<a class="headerlink" href="#el-panel-de-flexygo" title="Permanent link">¶</a></h2>
@@ -9744,7 +9744,7 @@
 <li><strong>Cualquier otra carpeta</strong>: un aviso de que no es un proyecto Flexygo.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel.png" data-desc-position="bottom"><img alt="Panel de Flexygo con una solución abierta" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel.png"></a>
   <figcaption>Panel de Flexygo: estado del proyecto arriba y acciones agrupadas debajo</figcaption>
 </figure><p></p>
 <h3 id="estado-del-proyecto">Estado del proyecto<a class="headerlink" href="#estado-del-proyecto" title="Permanent link">¶</a></h3>
@@ -9781,12 +9781,12 @@
 <li><strong>Editar cadena de conexión</strong>: pide en cuatro pasos el servidor, la base de datos, el usuario y la contraseña, y guarda la cadena en <code>appsettings.Development.json</code>. Propone los valores que ya hubiera; si no hay ninguno, <code>localhost</code>, <code>sa</code> y el nombre de la solución (<code>&lt;Prefijo&gt;_IC</code> para la base de configuración).</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-configure-connection.png" data-desc-position="bottom"><img alt="Primer paso de la edición de la cadena de conexión" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-configure-connection.png"></a>
   <figcaption>Primer paso de los cuatro: el servidor SQL Server</figcaption>
 </figure><p></p>
 <p>El botón <strong>Cambiar</strong> del origen activo muestra los orígenes de la tabla <code>Origins</code> y activa el que elijas, igual que el selector de origen del modo desarrollo de la aplicación. Si la base de datos de datos tiene también su tabla <code>Origins</code>, la deja igual que la de configuración.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-change-origin.png" data-desc-position="bottom"><img alt="Selección del origen activo" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-change-origin.png"></a>
   <figcaption>El origen marcado es el activo</figcaption>
 </figure><p></p>
 <h3 id="acciones-de-ejecucion">Acciones de ejecución<a class="headerlink" href="#acciones-de-ejecucion" title="Permanent link">¶</a></h3>
@@ -9804,7 +9804,7 @@
 <li><strong>Mantener datos</strong>: publica solo los cambios y conserva lo que ya hay.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-database-confirm.png" data-desc-position="bottom"><img alt="Pregunta antes de publicar sobre una base de datos que ya existe" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-database-confirm.png"></a>
   <figcaption>Pregunta antes de publicar sobre una base que ya existe</figcaption>
 </figure><p></p>
 <div class="admonition danger">
@@ -9814,7 +9814,7 @@
 <h3 id="acciones-de-despliegue">Acciones de despliegue<a class="headerlink" href="#acciones-de-despliegue" title="Permanent link">¶</a></h3>
 <p><strong>Generar NuGets</strong> crea los paquetes NuGet del producto. Pide la versión del paquete (por ejemplo <code>1.2.3</code>, <code>1.2.3.4</code> o <code>1.2.3-beta.1</code>) y genera los paquetes en Release con <code>flexygo-product nuget</code>. El canal de salida <strong>Flexygo Core</strong> indica la carpeta donde se han dejado.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-generate-nugets.png" data-desc-position="bottom"><img alt="Versión de los paquetes NuGet" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-generate-nugets.png"></a>
   <figcaption>Versión de los paquetes que se van a generar</figcaption>
 </figure><p></p>
 <p>Si la solución tiene el fichero <code>&lt;Prefijo&gt;-version.json</code> de las plantillas de producto, propone la misma versión que calcularía la integración continua según la rama: <code>X.Y.0.N</code> en <code>main</code> o <code>master</code>, <code>X.Y.N-beta.1</code> en <code>develop</code> y <code>-alpha</code> en el resto.</p>
@@ -9824,17 +9824,17 @@
 </div>
 <p><strong>Actualizar versión de Flexygo</strong> actualiza la solución a otra versión de Flexygo con <code>flexygo-product update</code>. Muestra las versiones estables del feed, con la más reciente arriba, y pide confirmación antes de empezar.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-update-version.png" data-desc-position="bottom"><img alt="Selector de versión de Flexygo" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-update-version.png"></a>
   <figcaption>Versiones disponibles; la primera opción es siempre la última</figcaption>
 </figure><p></p>
 <p><strong>Vaciar caché de NuGet</strong> borra todas las cachés locales de NuGet (<code>dotnet nuget locals all --clear</code>), después de confirmarlo. Sirve cuando un paquete recién publicado no se descarga o se queda una versión antigua.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-clear-nuget-cache.png" data-desc-position="bottom"><img alt="Confirmación para vaciar la caché de NuGet" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-clear-nuget-cache.png"></a>
   <figcaption>Confirmación antes de vaciar la caché</figcaption>
 </figure><p></p>
 <p><strong>Compilar y ejecutar Docker</strong> pide un nombre para el proyecto de Docker Compose y lanza <code>docker compose -p &lt;nombre&gt; up</code> en un terminal de VS Code, que va mostrando el log. Para pararlo, se detiene desde ese terminal.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-build-run-docker.png" data-desc-position="bottom"><img alt="Nombre del proyecto de Docker Compose" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-build-run-docker.png"></a>
   <figcaption>Nombre del proyecto de Docker Compose</figcaption>
 </figure><p></p>
 <h3 id="acciones-de-publicacion">Acciones de publicación<a class="headerlink" href="#acciones-de-publicacion" title="Permanent link">¶</a></h3>
@@ -9845,12 +9845,12 @@
 <li>La API key del feed. Se puede guardar para la próxima vez; se guarda cifrada en el almacén de credenciales del sistema operativo.</li>
 </ol>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-nugets-url.png" data-desc-position="bottom"><img alt="URL del feed NuGet en el que publicar" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-nugets-url.png"></a>
   <figcaption>Segundo paso: el feed NuGet en el que se publican los paquetes</figcaption>
 </figure><p></p>
 <p><strong>Compilar y publicar imágenes Docker</strong> compila las imágenes de los servicios del <code>docker-compose</code> que tienen sección <code>build</code> y las sube a un registry. Pide la URL del registry (por defecto <code>docker.io</code>, opcionalmente con la ruta del repositorio), el usuario, la contraseña o el token y la etiqueta de las imágenes, que por defecto es la versión del producto. Las credenciales también se pueden guardar cifradas.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-docker-images.png" data-desc-position="bottom"><img alt="URL del registry Docker" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-docker-images.png"></a>
   <figcaption>Primer paso: el registry en el que se publican las imágenes</figcaption>
 </figure><p></p>
 <p>Para borrar la API key y las credenciales guardadas, usa el comando <strong>Flexygo: Olvidar credenciales de publicación guardadas</strong> de la paleta de comandos. Cuando la extensión usa unas credenciales guardadas, lo avisa y ofrece olvidarlas por si ya no son válidas.</p>
@@ -9861,7 +9861,7 @@
 <li><strong>Publicación</strong>: muestra el progreso de cada paso. Si se ha pedido un despliegue de prueba, crea un cliente y una aplicación de prueba, espera a que se instalen y deja abrirla para comprobarla; <strong>Limpiar y terminar</strong> los borra después.</li>
 </ol>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-deploy-product.png" data-desc-position="bottom"><img alt="Primer paso de Desplegar producto: conexión con Cenit" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-deploy-product.png"></a>
   <figcaption>Primer paso: conexión con la plataforma Cenit</figcaption>
 </figure><p></p>
 <h3 id="necesitas-ayuda">¿Necesitas ayuda?<a class="headerlink" href="#necesitas-ayuda" title="Permanent link">¶</a></h3>
@@ -9872,27 +9872,27 @@
 <li><strong>Comprobar actualizaciones</strong>: abre una ventana con la versión instalada de la extensión y de las herramientas que usa (<code>Flexygo.Tools.Product</code> y <code>flexygo-mcp</code>), con un botón para actualizar cada herramienta. Cuando hay alguna actualización, el botón lleva un punto naranja.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-check-updates.png" data-desc-position="bottom"><img alt="Ventana Comprobar actualizaciones" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-check-updates.png"></a>
   <figcaption>Versiones instaladas y disponibles de la extensión y sus herramientas</figcaption>
 </figure><p></p>
 <h2 id="crear-un-producto-nuevo">Crear un producto nuevo<a class="headerlink" href="#crear-un-producto-nuevo" title="Permanent link">¶</a></h2>
 <p>Con una carpeta vacía abierta, el panel ofrece <strong>Crear nuevo producto</strong>:</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-empty.png" data-desc-position="bottom"><img alt="Panel de Flexygo con una carpeta vacía" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-empty.png"></a>
   <figcaption>Con una carpeta vacía, el panel solo ofrece crear un producto</figcaption>
 </figure><p></p>
 <ol>
 <li>
 <p>Elige la plantilla de producto. La lista sale de las plantillas publicadas en el feed NuGet, con su versión.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-template.png" data-desc-position="bottom"><img alt="Selección de la plantilla de producto" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-template.png"></a>
   <figcaption>Plantillas de producto disponibles</figcaption>
 </figure><p></p>
 </li>
 <li>
 <p>Escribe el nombre del producto: letras, números y <code>_</code>, empezando por una letra. Por defecto propone el nombre de la carpeta.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-name.png" data-desc-position="bottom"><img alt="Nombre del producto nuevo" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-create-name.png"></a>
   <figcaption>Nombre del producto</figcaption>
 </figure><p></p>
 </li>
@@ -9903,7 +9903,7 @@
 <h2 id="migrar-un-proyecto-antiguo">Migrar un proyecto antiguo<a class="headerlink" href="#migrar-un-proyecto-antiguo" title="Permanent link">¶</a></h2>
 <p>Si la carpeta abierta es un producto de Flexygo para .NET Framework (con el paquete <code>Flexygo</code> en un <code>packages.config</code>), el panel avisa de la versión que usa y ofrece <strong>Migrar a Flexygo Core</strong>:</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-framework.png" data-desc-position="bottom"><img alt="Panel de Flexygo con un proyecto antiguo" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-panel-framework.png"></a>
   <figcaption>Aviso de versión obsoleta, con la versión de Flexygo del proyecto</figcaption>
 </figure><p></p>
 <p>El botón abre una ventana con dos caminos:</p>
@@ -9912,7 +9912,7 @@
 <li><strong>Sin IA</strong>: descarga el instalador de Flexygo y sigue los pasos que indica la ventana, con la ruta de este proyecto. El modo migración del instalador se explica en <a href="../../1Deployment/1Installer/Migration/">Instalador: Modo Migración</a>.</li>
 </ul>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-migrate.png" data-desc-position="bottom"><img alt="Ventana Migrar a Flexygo Core" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-migrate.png"></a>
   <figcaption>Los dos caminos para migrar: con Claude Code o con el instalador</figcaption>
 </figure><p></p>
 <div class="admonition warning">
@@ -9922,12 +9922,12 @@
 <h2 id="otras-formas-de-lanzar-los-comandos">Otras formas de lanzar los comandos<a class="headerlink" href="#otras-formas-de-lanzar-los-comandos" title="Permanent link">¶</a></h2>
 <p>Todas las acciones están también en la <strong>paleta de comandos</strong> (<kbd>Ctrl+Shift+P</kbd>), empezando por <code>Flexygo:</code>. Algunas solo están ahí, como <strong>Olvidar credenciales de publicación guardadas</strong>.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-command-palette.png" data-desc-position="bottom"><img alt="Comandos de Flexygo en la paleta de comandos" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-command-palette.png"></a>
   <figcaption>Comandos de Flexygo en la paleta de comandos</figcaption>
 </figure><p></p>
 <p>Las más habituales están además en el <strong>menú contextual</strong> del explorador (clic derecho sobre cualquier carpeta o fichero):</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-context-menu.png" data-desc-position="bottom"><img alt="Comandos de Flexygo en el menú contextual del explorador" src="../../docs_assets/images/CoreProductDevelopment/vsCode/ext-context-menu.png"></a>
   <figcaption>Comandos de Flexygo al final del menú contextual</figcaption>
 </figure><p></p>
 <h2 id="configuracion">Configuración<a class="headerlink" href="#configuracion" title="Permanent link">¶</a></h2>
@@ -9966,38 +9966,38 @@
 <li>Reinicia Visual Studio para completar la instalación.</li>
 </ol>
 <p>Una vez instalada, encontrarás la barra de herramientas en <strong>Ver</strong> → <strong>Barras de herramientas</strong> → <strong>Flexygo Tools Product</strong>.</p>
-<p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/update/toolbar.png" data-desc-position="bottom"><img alt="Barra de herramientas Flexygo en Visual Studio" src="../../docs_assets/images/CoreProductDevelopment/extension/update/toolbar.png"></a>
 <em class="caption">Barra de herramientas con los botones de actualizar y generar NuGets</em></p>
-<p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/update/buttons.png" data-desc-position="bottom"><img alt="Botones de la extensión" src="../../docs_assets/images/CoreProductDevelopment/extension/update/buttons.png"></a>
 <em class="caption">Botón de actualizar (izquierda) y generar NuGets (derecha)</em></p>
 <h2 id="actualizar-el-producto">Actualizar el producto<a class="headerlink" href="#actualizar-el-producto" title="Permanent link">¶</a></h2>
 <ol>
 <li>Haz clic en el botón de actualizar en la barra de herramientas.</li>
 <li>Selecciona la versión a la que deseas actualizar; por defecto aparece la última disponible.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/update/versionUpdate.png" data-desc-position="bottom"><img alt="Seleccionar versión de actualización" src="../../docs_assets/images/CoreProductDevelopment/extension/update/versionUpdate.png"></a></p>
 <ol>
 <li>Confirma la actualización en la ventana de confirmación.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/update/updateConfirm.png" data-desc-position="bottom"><img alt="Confirmación de actualización" src="../../docs_assets/images/CoreProductDevelopment/extension/update/updateConfirm.png"></a></p>
 <ol>
 <li>Sigue el progreso en la pestaña de salida.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/update/progressUpdate.png" data-desc-position="bottom"><img alt="Progreso de actualización" src="../../docs_assets/images/CoreProductDevelopment/extension/update/progressUpdate.png"></a></p>
 <h2 id="generar-nugets">Generar NuGets<a class="headerlink" href="#generar-nugets" title="Permanent link">¶</a></h2>
 <ol>
 <li>Haz clic en el botón de generar NuGets en la barra de herramientas.</li>
 <li>Introduce la versión del paquete NuGet que quieres generar.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/nuget/versionNuget.png" data-desc-position="bottom"><img alt="Introducir versión de NuGet" src="../../docs_assets/images/CoreProductDevelopment/extension/nuget/versionNuget.png"></a></p>
 <ol>
 <li>Confirma la generación en la ventana de confirmación.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/nuget/confirmNuget.png" data-desc-position="bottom"><img alt="Confirmación de generación de NuGet" src="../../docs_assets/images/CoreProductDevelopment/extension/nuget/confirmNuget.png"></a></p>
 <ol>
 <li>Sigue el progreso en la pestaña de salida. Al finalizar se abrirá la carpeta con los paquetes generados.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../docs_assets/images/CoreProductDevelopment/extension/nuget/progressNuget.png" data-desc-position="bottom"><img alt="Progreso de generación de NuGet" src="../../docs_assets/images/CoreProductDevelopment/extension/nuget/progressNuget.png"></a></p>
 </div>
 </div>
 </div>

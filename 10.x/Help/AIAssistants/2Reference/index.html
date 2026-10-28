@@ -9683,7 +9683,7 @@
 <p class="admonition-title">Novedad en la versión 10.0</p>
 <p>Desde el menú del perfil, puedes conectar un asistente y elegir si tendrá permiso solo para consultar o también para modificar datos. En <strong>Asistentes conectados</strong> puedes revisar las conexiones y desconectarlas. El administrador activa <strong>Enable WebAPI</strong> y <strong>Enable MCP</strong> en <strong>Administración &gt; Seguridad &gt; WebAPI</strong>, y asigna el permiso MCP a los usuarios o roles autorizados. Las herramientas del asistente indican si consultan datos, los modifican o permiten reintentos.</p>
 <p>También se admiten procesos que duran más de diez minutos. El registro de asistentes usa sus metadatos para evitar duplicados y mantiene disponible el registro dinámico de clientes.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/2Reference/mcp-assistant-panel.png" data-desc-position="bottom"><img alt="Novedad en la versión 10.0" src="../../../docs_assets/images/2Reference/mcp-assistant-panel.png"></a></p>
 </div>
 <p>Desde la versión 10, <strong>cada aplicación Flexygo es también un servidor MCP</strong>: un asistente de IA (Claude, ChatGPT, Gemini, Claude Code o cualquier otro cliente que hable el <em>Model Context Protocol</em>) se conecta a la aplicación con el usuario de siempre y <strong>ve y hace exactamente lo que ese usuario puede ver y hacer, nada más</strong>. No hay que programar nada en la aplicación: el asistente lee los objetos, las vistas, los procesos y los informes que ya existen, con sus descripciones, y trabaja con ellos en el idioma del usuario.</p>
 <p>¿Quieres probarlo en quince minutos? <a href="../1TryIt/">Pruébalo: un asistente de IA trabajando con tu aplicación</a>.</p>
@@ -9905,12 +9905,12 @@
 <li>
 <p><strong>Activar la web API y el punto MCP</strong> en la herramienta <strong>WebAPI</strong> (área <em>Seguridad</em> del <a href="../../Administration/ControlPanel/">panel de control</a>): interruptores <strong>Enable WebAPI</strong> y <strong>Enable MCP</strong>, que son los ajustes <code>WebAPI_Enabled</code> y <code>MCP_Enabled</code> (también en <em>Ajustes</em>, grupo <em>WebAPI</em>). Los dos vienen apagados: exponer la aplicación a asistentes es una decisión del equipo. Sin <code>MCP_Enabled</code>, la ruta <code>/mcp</code> y sus documentos de descubrimiento responden 404, como si no existieran; el cambio vale al momento, sin reiniciar. Van separados a propósito: la web API sirve a integraciones (un ERP, una app, otro sistema con su token) y el MCP a los asistentes de las personas, que es otro público; se puede tener la primera sin el segundo, no al revés.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/interruptor-mcp.png" data-desc-position="bottom"><img alt="La fila de ajustes de la herramienta WebAPI, con Enable WebAPI y Enable MCP" src="../../../docs_assets/images/AIAssistants/interruptor-mcp.png"></a>
   <figcaption>Enable MCP, junto a Enable WebAPI</figcaption>
 </figure>
 2. <strong>Dar el permiso MCP</strong> a los roles o a los usuarios que puedan conectar un asistente: en la herramienta <strong>WebAPI</strong> (área <em>Seguridad</em> del <a href="../../Administration/ControlPanel/">panel de control</a>), panel <em>Authorized People</em>, la <strong>columna del robot</strong>. Es un permiso <strong>aparte</strong> del de la web API (la columna del ojo): un rol puede tener asistentes sin la API REST, o la API para sus integraciones sin asistentes. Como siempre, el usuario manda sobre su rol. Quitar el permiso <strong>corta al instante</strong> las conexiones vivas de esa persona; un usuario sin permiso ve la negativa al intentar conectar.<p></p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/permiso-mcp.png" data-desc-position="bottom"><img alt="El panel Authorized People: por rol, la web API (ojo) y los asistentes MCP (robot)" src="../../../docs_assets/images/AIAssistants/permiso-mcp.png"></a>
   <figcaption>Por rol (o por usuario, en la otra pestaña): la web API y los asistentes, cada uno con su interruptor</figcaption>
 </figure>
 3. <strong>Exponer los objetos</strong> en la web API (<em>WebAPI objects</em>): qué objetos, vistas y procesos ve el asistente, y si puede <strong>editar</strong>, <strong>crear</strong> o <strong>imprimir</strong> cada objeto. Lo no expuesto no existe para él.
@@ -9924,18 +9924,18 @@
 <h2 id="3-conectar-un-asistente-usuario">3. Conectar un asistente (usuario)<a class="headerlink" href="#3-conectar-un-asistente-usuario" title="Permanent link">¶</a></h2>
 <p>Con <code>MCP_Enabled</code> encendido, el <strong>menú de perfil</strong> de cada persona tiene dos entradas nuevas: <strong>Connect an assistant</strong> y <strong>Connected assistants</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/menu-perfil.png" data-desc-position="bottom"><img alt="El menú de perfil con «Connect an assistant» y «Connected assistants»" src="../../../docs_assets/images/AIAssistants/menu-perfil.png"></a>
 <br>
 <figcaption>Las dos entradas solo aparecen si la instalación tiene el punto MCP encendido</figcaption>
 </figure>
 <p><strong>Connect an assistant</strong> abre la página <code>/mcp/setup</code>: la dirección de la aplicación lista para copiar, con quién entrará el asistente y qué podrá hacer, y dónde se pega en cada asistente (Claude, Claude Code con la línea de comandos ya escrita, ChatGPT, Gemini y cualquier otro). Si la persona no tiene el permiso MCP, la página se lo dice y no enseña la dirección.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/conectar.png" data-desc-position="bottom"><img alt="La página «Conectar un asistente»: la dirección, qué se concede y dónde pegarla en cada asistente" src="../../../docs_assets/images/AIAssistants/conectar.png" width="420"></a>
 <br>
 <figcaption>La página habla en el idioma del navegador</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/conectar-sin-permiso.png" data-desc-position="bottom"><img alt="La misma página para alguien sin el permiso MCP" src="../../../docs_assets/images/AIAssistants/conectar-sin-permiso.png" width="420"></a>
 <br>
 <figcaption>Sin el permiso MCP: la negativa y a quién pedirlo</figcaption>
 </figure>
@@ -9974,7 +9974,7 @@
 </table>
 <p>Al conectar, el asistente abre el navegador en la aplicación. La persona <strong>entra con su usuario de siempre</strong> (con el SSO y la verificación en dos pasos que tenga configurados) y ve la página de consentimiento:</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/consentimiento.png" data-desc-position="bottom"><img alt="La página de consentimiento: la aplicación a la izquierda, el asistente a la derecha, y lo que se concede" src="../../../docs_assets/images/AIAssistants/consentimiento.png"></a>
 <br>
 <figcaption>La página de consentimiento: quién pide, como quién, a dónde va el acceso y qué se concede</figcaption>
 </figure>
@@ -9985,14 +9985,14 @@
 <li><strong>Qué se concede</strong>: <em>Leer datos</em> siempre; <em>Modificar datos</em> (ejecutar procesos, editar y crear registros) solo si el asistente lo pidió, y la persona puede <strong>quitar la casilla</strong>. Una conexión de solo lectura rechaza cualquier escritura con una frase clara y sigue funcionando para todo lo demás.</li>
 </ul>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/alerta-seguridad.png" data-desc-position="bottom"><img alt="La alerta de seguridad: se hace llamar Claude, pero el acceso iría a otro sitio" src="../../../docs_assets/images/AIAssistants/alerta-seguridad.png"></a>
 <br>
 <figcaption>Si el nombre pasa por un asistente conocido y el acceso iría a otro sitio, la página lo dice y Denegar pasa a ser el botón principal</figcaption>
 </figure>
 <p>Después del <em>Permitir</em>, el asistente queda conectado: el acceso dura <strong>8 horas y se renueva solo</strong> mientras se use; una conexión sin uso durante <strong>30 días</strong> caduca y hay que volver a conectar.</p>
 <p>Para desconectar, la persona tiene <strong>Connected assistants</strong> en su menú de perfil: sus conexiones (solo las suyas), con el asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer; <strong>Revoke</strong>, en el menú de la fila, la corta. También se puede eliminar el conector en el propio asistente, y un administrador puede revocar cualquier sesión (§6).</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/asistentes-conectados.png" data-desc-position="bottom"><img alt="«Connected assistants»: las conexiones de la persona, con Revoke en el menú de cada fila" src="../../../docs_assets/images/AIAssistants/asistentes-conectados.png"></a>
 <br>
 <figcaption>Cada persona ve y corta sus propias conexiones</figcaption>
 </figure>
@@ -10118,19 +10118,19 @@ Las pantallas de administración están en el área <strong>Entorno</strong> del
 </ul>
 <p><strong>Asistentes MCP</strong>: los asistentes que se han registrado en la aplicación (se registran solos al conectar por primera vez; tabla <code>MCP_Clients</code>; los que usan CIMD ocupan una sola fila por producto, ver <a href="../4ClientRegistration/">Cómo se registran los asistentes</a>), con sus dominios de redirección, la fecha de alta, las sesiones vivas y el interruptor <strong>Approved</strong>. Quitar <em>Approved</em> <strong>bloquea al asistente al instante</strong>: sus sesiones dejan de funcionar en la siguiente llamada y nadie puede volver a conectarlo hasta que se apruebe de nuevo. Borrar un asistente se lleva sus sesiones. Con <code>MCP_RequireApprovedClients</code> encendido (§5), cada asistente nuevo aparece aquí sin aprobar y se aprueba a mano antes de que nadie lo use.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/clientes.png" data-desc-position="bottom"><img alt="Asistentes MCP: nombre, dominios de redirección, alta, sesiones vivas y Approved" src="../../../docs_assets/images/AIAssistants/clientes.png"></a>
 <br>
 <figcaption>Un asistente aprobado con una sesión viva y otro bloqueado</figcaption>
 </figure>
 <p><strong>Sesiones MCP</strong>: todas las conexiones vivas (tabla <code>MCP_Sessions</code>): quién, con qué asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer. <strong>Revoke</strong>, en el menú de la fila, la corta: el asistente recibe una negativa y la persona tiene que volver a conectar. Las sesiones no se crean ni se editan a mano.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/sesiones.png" data-desc-position="bottom"><img alt="Sesiones MCP con el menú de la fila abierto y Revoke" src="../../../docs_assets/images/AIAssistants/sesiones.png"></a>
 <br>
 <figcaption>Revoke corta la conexión sin tocar el resto</figcaption>
 </figure>
 <p><strong>Uso del MCP</strong>: lo que se hace con los asistentes, leído del log: llamadas por día (respondidas y rechazadas), por herramienta y por persona, con la duración media y la peor, y las últimas negativas con su motivo.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/uso.png" data-desc-position="bottom"><img alt="Uso del MCP: llamadas por día, por herramienta, por persona y negativas" src="../../../docs_assets/images/AIAssistants/uso.png"></a>
 <br>
 <figcaption>Una herramienta lenta o muy rechazada es una vista o una descripción que falta</figcaption>
 </figure>

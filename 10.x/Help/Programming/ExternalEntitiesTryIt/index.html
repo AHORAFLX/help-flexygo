@@ -9707,7 +9707,7 @@
 </tbody>
 </table>
 <p>Guarda. También se puede crear sin salir del asistente, con el <strong>+</strong> junto al campo <em>Service</em> del paso 2, y el botón del enlace, al lado, abre el servicio elegido para revisarlo o cambiarlo.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-02-servicio.png" data-desc-position="bottom"><img alt="Un servicio externo" src="../../../docs_assets/images/ExternalEntities/ext-02-servicio.png"></a></p>
 <h2 id="2-crea-el-objeto-con-el-asistente">2. Crea el objeto con el asistente<a class="headerlink" href="#2-crea-el-objeto-con-el-asistente" title="Permanent link">¶</a></h2>
 <p>Abre <strong>Objects</strong> en el menú de administración y pulsa el botón de la varita, arriba a la derecha (<strong>New object</strong>).</p>
 <p><strong>Paso 1, Identity</strong>: el nombre del registro y de la colección (<code>NwProduct</code> y <code>NwProducts</code>), sus títulos (<code>{{ProductName}}</code> para el registro, <em>Northwind products</em> para la colección) y un icono para cada uno. <strong>Continue</strong>.</p>
@@ -9735,12 +9735,12 @@
 </tbody>
 </table>
 <p>Pulsa <strong>Probe the API</strong>. La sonda llama una vez a la lista, <strong>sin guardar nada</strong>, y enseña lo que ha contestado y las propiedades que propone.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/pruebalo-sonda.png" data-desc-position="bottom"><img alt="La sonda: 77 registros, una muestra y las propiedades propuestas" src="../../../docs_assets/images/ExternalEntities/pruebalo-sonda.png"></a></p>
 <p><strong>Comprueba</strong>: <em>✓ Answered 77 records</em>, una muestra de tres productos y <strong>10 propiedades</strong> con <code>ProductID</code> como clave. Puedes cambiar la etiqueta o el tipo de cualquiera, o quitarla. Los datos de control del protocolo (como <code>@odata.etag</code>) no se proponen: la sonda los lista aparte como saltados.</p>
 <p><strong>Paso 3, Review</strong>: lo que se va a crear (el objeto, la colección, las propiedades y una vista de lista). <strong>Create object</strong>. Al terminar se abre el banco de trabajo del objeto nuevo.</p>
 <h2 id="3-usalo-como-cualquier-otro-objeto">3. Úsalo como cualquier otro objeto<a class="headerlink" href="#3-usalo-como-cualquier-otro-objeto" title="Permanent link">¶</a></h2>
 <p>Abre la lista de <strong>NwProducts</strong> (desde el banco de trabajo, o añadiéndola al menú como cualquier colección).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/pruebalo-lista.png" data-desc-position="bottom"><img alt="La lista de productos, leída de la API" src="../../../docs_assets/images/ExternalEntities/pruebalo-lista.png"></a></p>
 <p><strong>Comprueba</strong>:</p>
 <ul>
 <li><strong>77 productos</strong>, paginados. Cada página es una llamada a la API (<code>$top</code>/<code>$skip</code>), no 77 filas traídas de golpe.</li>
@@ -9754,7 +9754,7 @@
 <li>Con el asistente (paso 2), otro objeto con <strong>List path</strong> <code>Category_Sales_for_1997</code>: la sonda contesta 8 registros y propone <code>CategoryName</code> (clave) y <code>CategorySales</code>.</li>
 <li>Un módulo <strong>Chart (ECharts)</strong> de tipo <code>pie</code>, con la <strong>colección</strong> de ese objeto como objeto del módulo, <strong>SQL vacío</strong>, y <em>Series</em> y <em>Labels</em> = <code>CategoryName</code>, <em>Value</em> = <code>CategorySales</code>.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/pruebalo-grafica.png" data-desc-position="bottom"><img alt="Una tarta pintada desde un endpoint, sin SQL" src="../../../docs_assets/images/ExternalEntities/pruebalo-grafica.png"></a></p>
 <p>El endpoint tiene que devolver ya las filas de la gráfica: Flexygo no agrega. Ver <a href="../ExternalEntities/#6-graficas-desde-un-endpoint">§6 de la referencia</a>.</p>
 <hr>
 <h2 id="si-algo-no-sale">Si algo no sale<a class="headerlink" href="#si-algo-no-sale" title="Permanent link">¶</a></h2>

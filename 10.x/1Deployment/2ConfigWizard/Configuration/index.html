@@ -9665,7 +9665,7 @@
 <p class="admonition-title">Novedad en la versión 10.0</p>
 <p>La configuración inicial ahora se hace con un asistente desde la pantalla de inicio de sesión. Pulsa <strong>Empezar</strong> para iniciar el proceso. El asistente comprueba los valores y muestra el avance de la publicación y la creación de las bases de datos. Puedes usar un archivo dacpac o un feed de NuGet como origen del esquema.</p>
 <p>Si sales o se produce un error, puedes volver al primer paso pendiente y reintentarlo sin perder el contexto. Los errores de credenciales señalan los campos que debes revisar. Si el correo ya está configurado, el asistente omite ese paso. Al terminar, pulsa <strong>Ir al inicio de sesión</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/Configuration/setup-wizard.png" data-desc-position="bottom"><img alt="Novedad en la versión 10.0" src="../../../docs_assets/images/Configuration/setup-wizard.png"></a></p>
 </div>
 <p>El Asistente de Configuración deja lista una instalación nueva antes del primer inicio de sesión. Conecta el frontend con el backend, crea, actualiza o reutiliza las bases de datos, da nombre al proyecto y contraseña al usuario admin, y configura el correo. Todo se guarda en <code>appsettings.json</code> y en la base de datos de configuración, sin editar ningún archivo a mano.</p>
 <div class="admonition info">
@@ -9676,7 +9676,7 @@
 <h2 id="asistente-de-configuracion">Asistente de configuración<a class="headerlink" href="#asistente-de-configuracion" title="Permanent link">¶</a></h2>
 <p>El asistente se abre automáticamente al entrar en la aplicación mientras la instalación no está configurada. La pantalla de inicio resume lo que vas a configurar y, debajo del botón <strong>Empezar</strong>, muestra la versión de Flexygo y la dirección de la aplicación.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-welcome.png" data-desc-position="bottom"><img alt="Inicio del asistente de configuración" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-welcome.png"></a>
 <br>
 <figcaption>Pantalla de inicio del asistente</figcaption>
 </figure>
@@ -9690,7 +9690,7 @@
 </ul>
 <p>Pulsa <strong>Comprobar conexión</strong>. Si el backend responde, aparece <strong>Backend accesible</strong> y, al pulsar <strong>Continuar</strong>, se guarda la URL y se sincronizan las claves de sesión entre el frontend y el backend.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-connection.png" data-desc-position="bottom"><img alt="Conexión con el backend" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-connection.png"></a>
 <br>
 <figcaption>Paso 1 — El backend ha respondido</figcaption>
 </figure>
@@ -9726,7 +9726,7 @@
 </table>
 <p>Si cambias algún dato después de comprobar, el asistente vuelve a comprobarlo. Si el usuario o la contraseña son incorrectos, o la base de datos existe pero no es de configuración de Flexygo, lo indica en el campo correspondiente.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-configuration-database.png" data-desc-position="bottom"><img alt="Base de datos de configuración" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-configuration-database.png"></a>
 <br>
 <figcaption>Paso 2 — La base de datos no existe y se creará con el dacpac local</figcaption>
 </figure>
@@ -9744,7 +9744,7 @@
 <p>Al pulsar el botón, el asistente despliega la base de datos y muestra cada fase: lectura del dacpac o descarga del paquete, creación de la base de datos, despliegue del esquema, carga de los modelos de datos y guardado de la cadena de conexión. Debajo se ve el detalle de lo que se está desplegando y el tiempo transcurrido.</p>
 <p>No cierres la ventana mientras dura. Si algo falla, se revierten los cambios: pulsa <strong>Ver detalles</strong> para ver el error, corrige la causa y pulsa <strong>Reintentar</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-deploy.png" data-desc-position="bottom"><img alt="Creando la base de datos de configuración" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-deploy.png"></a>
 <br>
 <figcaption>Paso 2 — Progreso de la creación de la base de datos</figcaption>
 </figure>
@@ -9757,7 +9757,7 @@
 </ul>
 <p>Pulsa <strong>Guardar y continuar</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-project.png" data-desc-position="bottom"><img alt="Proyecto y administrador" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-project.png"></a>
 <br>
 <figcaption>Paso 3 — Nombre del proyecto y contraseña del administrador</figcaption>
 </figure>
@@ -9797,7 +9797,7 @@
 <p>Si la conexión es de una base de datos de AHORA ERP, debe existir: el asistente no crea bases de datos del ERP. Si no la encuentra, restáurala o créala y vuelve a comprobar, o corrige el nombre.</p>
 </div>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-data-database.png" data-desc-position="bottom"><img alt="Bases de datos de datos" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-data-database.png"></a>
 <br>
 <figcaption>Paso 4 — La base de datos de datos no existe y no hay esquema, así que se creará vacía</figcaption>
 </figure>
@@ -9836,7 +9836,7 @@
 </table>
 <p>Pulsa <strong>Guardar y terminar</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-mail.png" data-desc-position="bottom"><img alt="Correo saliente" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-mail.png"></a>
 <br>
 <figcaption>Paso 5 — Servidor de correo saliente</figcaption>
 </figure>
@@ -9845,13 +9845,13 @@
 <p>Al terminar, el asistente muestra <strong>Flexygo está listo</strong> con el resumen de lo configurado: el backend, la base de datos de configuración, el proyecto, cada base de datos de datos y el correo. Cada uno indica qué se ha hecho (<strong>Creada</strong>, <strong>Actualizada</strong>, <strong>Existente</strong>, <strong>Vacía</strong>, <strong>Nuevo</strong>, <strong>Omitido</strong>…).</p>
 <p>Si la aplicación corre en IIS, se recicla para aplicar los cambios.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/setup-done.png" data-desc-position="bottom"><img alt="Configuración completada" src="../../../docs_assets/images/CoreDeployment/Asistente/setup-done.png"></a>
 <br>
 <figcaption>Resumen de la configuración</figcaption>
 </figure>
 <p>Pulsa <strong>Ir al inicio de sesión</strong>. Si el proyecto es nuevo, entra como <code>admin</code> con la contraseña del paso 3; si ya existía, con tu usuario habitual del proyecto.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreDeployment/Asistente/login.png" data-desc-position="bottom"><img alt="Pantalla de login" src="../../../docs_assets/images/CoreDeployment/Asistente/login.png"></a>
 <br>
 <figcaption>Pantalla de acceso a la aplicación</figcaption>
 </figure>

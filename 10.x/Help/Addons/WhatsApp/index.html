@@ -9868,7 +9868,7 @@
 <h3 id="1-anadir-dominios">1. Añadir dominios<a class="headerlink" href="#1-anadir-dominios" title="Permanent link">¶</a></h3>
 <p>Primero, añade tus <strong>dominios</strong> en la configuración de la aplicación.</p>
 <p>Escríbelos en el apartado de Información Básica dentro de la <strong>Configuración de la aplicación</strong> de <a href="https://developers.facebook.com/apps" target="_blank">tu aplicación de WhatsApp Business</a>:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_conf.png" data-desc-position="bottom"><img alt="Configuración de WhatsApp Business" src="../../../docs_assets/images/WhatsApp/whatsapp_conf.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Política de privacidad</p>
 <p>Debes proporcionar una URL para la <strong>Política de privacidad</strong> y los <strong>Términos del servicio</strong>.</p>
@@ -9880,9 +9880,9 @@
 <li>URL de callback: <strong>Tu dominio</strong> + <code>/webhook/guest/FlxWhatsapp</code></li>
 <li>ID de verificación: Introduce una contraseña que usaremos más adelante. (Lo vemos en el siguiente punto)</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png" data-desc-position="bottom"><img alt="Configuración del Webhook" src="../../../docs_assets/images/WhatsApp/whatsapp_webhook_conf.png"></a></p>
 <p>Asegúrate de estar suscrito al campo <strong>messages</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png" data-desc-position="bottom"><img alt="Campos del Webhook" src="../../../docs_assets/images/WhatsApp/whatsapp_webhook_fields_conf.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Configuración en Flexygo</p>
 <p>Antes de hacer clic en Verificar y guardar, <strong>completa primero la configuración en Flexygo</strong> y, cuando esté lista, vuelve para verificar.</p>
@@ -9913,18 +9913,18 @@ Dejarlo vacío supondrá:</p>
 <ul>
 <li>Generar un <strong>Identificador de Acceso del Sistema</strong> desde <a href="https://business.facebook.com/latest/settings" target="_blank">Meta Business Suite</a>, lo puedes hacer en el apartado Usuarios del sistema.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png" data-desc-position="bottom"><img alt="Token de Acceso" src="../../../docs_assets/images/WhatsApp/whatsapp_access_token_conf.png"></a></p>
 <h3 id="id-de-la-aplicacion">ID de la Aplicación<a class="headerlink" href="#id-de-la-aplicacion" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppAccountId</code>)</p>
 <p>Necesario para refrescar el token mediante OAuth.</p>
 <h3 id="client-secret">Client Secret<a class="headerlink" href="#client-secret" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppClientSecret</code>)</p>
 <p>Necesario para verificar la firma de los webhooks. Este y el anterior, puedes encontrarlos en el apartado de Información Básica dentro de la <strong>Configuración de la aplicación</strong> de <a href="https://developers.facebook.com/apps" target="_blank">tu aplicación de WhatsApp Business</a>:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png" data-desc-position="bottom"><img alt="ApplicationId y Client Secret" src="../../../docs_assets/images/WhatsApp/whatsapp_client_secret_conf.png"></a></p>
 <h3 id="id-de-la-cuenta-e-id-del-telefono">ID de la Cuenta e ID del Teléfono<a class="headerlink" href="#id-de-la-cuenta-e-id-del-telefono" title="Permanent link">¶</a></h3>
 <p>(Identificados como <code>WhatsAppApplicationId</code> y <code>WhatsAppPhoneId</code>)</p>
 <p>Necesarios para enviar mensajes. En tu aplicación, ve a <strong>Products</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>API Setup</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png" data-desc-position="bottom"><img alt="Phone ID" src="../../../docs_assets/images/WhatsApp/whatsapp_phoneid_accountid_conf.png"></a></p>
 <h3 id="id-de-verificacion">ID de Verificación<a class="headerlink" href="#id-de-verificacion" title="Permanent link">¶</a></h3>
 <p>(Identificado como <code>WhatsAppVerificationId</code>)</p>
 <p>Necesario para verificar ante WhatsApp tu endpoint de Webhooks. Debe ser <strong>el mismo que indicaste en el <a href="./#2-endpoint-de-webhooks">Apartado de Webhooks</a></strong>.</p>
@@ -9953,7 +9953,7 @@ Dejarlo vacío supondrá:</p>
 </ul>
 <h2 id="uso-basico">Uso básico<a class="headerlink" href="#uso-basico" title="Permanent link">¶</a></h2>
 <p>Una vez configurado, puedes enviar y recibir mensajes desde <flx-navbutton class="link" type="openpagename" pagetypeid="list" pagename="7df84455-fa8e-4e90-a99c-ccce9dede1e7" objectname="" objectwhere="" defaults="" targetid="popup1500x2000" excludehist="false"> <a>la página de WhatsApp de Flexygo</a> </flx-navbutton>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_flexygo_page.png" data-desc-position="bottom"><img alt="Página de WhatsApp" src="../../../docs_assets/images/WhatsApp/whatsapp_flexygo_page.png"></a></p>
 <ol>
 <li><strong>Opciones de la barra de navegación</strong>. Puedes abrir la ayuda, crear un nuevo contacto y alternar entre conversaciones activas y archivadas.</li>
 <li><strong>Listado de para poder cambiar entre conversaciones</strong>.</li>
@@ -9983,7 +9983,7 @@ Dejarlo vacío supondrá:</p>
 <li><strong>Manualmente</strong>, en cuyo caso deberás indicar un número, un nombre y una plantilla de mensaje (Esto se debe a que WhatsApp Business solo permite iniciar una conversación enviando un plantilla aprobada).</li>
 </ol>
 <p>Una vez creado, puedes archivar la conversación o editar el contacto: </p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png" data-desc-position="bottom"><img alt="Editar conversación" src="../../../docs_assets/images/WhatsApp/whatsapp_conversation_edit.png"></a></p>
 <h2 id="tipos-de-mensajes">Tipos de mensajes<a class="headerlink" href="#tipos-de-mensajes" title="Permanent link">¶</a></h2>
 <p>WhatsApp admite varios tipos de mensajes, agrupados por patrón de uso. Podemos dividirlos en 4 tipos:</p>
 <h3 id="archivos">Archivos<a class="headerlink" href="#archivos" title="Permanent link">¶</a></h3>
@@ -10025,7 +10025,7 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
 <h3 id="plantillas">Plantillas<a class="headerlink" href="#plantillas" title="Permanent link">¶</a></h3>
 <p>Son mensajes predefinidos que deben ser creados desde <a href="https://business.facebook.com/latest/settings" target="_blank">Meta Business Suite</a> y aprobados por Meta.</p>
 <p>Algunos aceptan variables, así que se deberan rellenar siempre antes de enviarlas.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png" data-desc-position="bottom"><img alt="Botones de mensajes" src="../../../docs_assets/images/WhatsApp/whatsapp_messages_buttons.png"></a></p>
 <h2 id="flujo-basico">Flujo básico<a class="headerlink" href="#flujo-basico" title="Permanent link">¶</a></h2>
 <p><strong>Recibir mensajes</strong>:</p>
 <pre class="mermaid"><code>flowchart LR
@@ -10041,7 +10041,7 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
 <li>Los asistentes de IA dentro del ámbito de WhatsApp:<ul>
 <li>Reciben automáticamente la capacidad de <strong>generar los tipos de mensajes soportados</strong>.</li>
 <li>Pueden detectar cuando el usuario prefiere hablar con un humano y <strong>auto-desactivarse</strong>. Se envía una notificación avisando cuando el usuario prefiere hablar con un humano.
-</li>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_human.png" data-desc-position="bottom"><img alt="Aviso" src="../../../docs_assets/images/WhatsApp/whatsapp_human.png"></a></li>
 </ul>
 </li>
 <li>Al archivar una conversación, la conversación se <strong>cambia siempre</strong> a modo automático y se activa su asistente de IA (si tiene).</li>
@@ -10068,7 +10068,7 @@ Para este tipo de mensajes, es <strong>obligatorio crear el mensaje como objeto 
 <ul>
 <li>Comprueba en <a href="https://developers.facebook.com/apps" target="_blank">tu aplicación de WhatsApp Business</a> dentro de <strong>Productos</strong> &gt; <strong>WhatsApp</strong> &gt; <strong>Tests de la API</strong> &gt; <strong>7. Consulta los eventos del webhook</strong> que webhooks le están llegando a la plataforma en lo que respecta a nuestra actividad.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png" data-desc-position="bottom"><img alt="Consulta de eventos de webhook" src="../../../docs_assets/images/WhatsApp/whatsapp_troubleshooting.png"></a></p>
 <p>Causas comunes de fallos en envío/recepción:</p>
 <table>
 <thead>

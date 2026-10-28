@@ -9611,7 +9611,7 @@
 
 <h1 id="estoy-actualizando-version-obtengo-error-de-conflicto-foreign-key">Estoy actualizando versión, obtengo error de conflicto Foreign Key<a class="headerlink" href="#estoy-actualizando-version-obtengo-error-de-conflicto-foreign-key" title="Permanent link">¶</a></h1>
 <p>Si durante una actualización se muestra un error parecido a este:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/FAQ/ForeignKeyConflict/1.jpg" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/FAQ/ForeignKeyConflict/1.jpg"></a></p>
 <p>El problema reside en que se han añadido registros en objetos nuevos de Flexygo (objetos, vistas, módulos, páginas...) con <code>OriginId</code> incorrecto; es decir, ciertas personalizaciones se han marcado como sistema o producto por error (normalmente por copiar y pegar). El efecto es que el sistema, en sus merges, no los va a añadir, y dará errores en otras tablas relacionadas.</p>
 <p>El script <a href="../readme/utils/CambiarOriginId.sql">CambiarOriginId.sql</a>, disponible en <a href="../OriginIdChangeScript/">Desarrollando: script para cambiar el OriginId de todas nuestras modificaciones</a>, informa de todos los registros que tienen un origen de sistema o producto y deberían tenerlo de cliente.</p>
 <h2 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">¶</a></h2>

@@ -9601,25 +9601,25 @@
 
 
 <h1 id="como-generar-un-hotfix">¿Cómo generar un HOTFIX?<a class="headerlink" href="#como-generar-un-hotfix" title="Permanent link">¶</a></h1>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/1.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/1.png"></a></p>
 <h2 id="procedimiento-completo">Procedimiento completo<a class="headerlink" href="#procedimiento-completo" title="Permanent link">¶</a></h2>
 <p>Antes de empezar a realizar el hotfix, hacemos un pull de <code>develop</code> y <code>master</code> y nos aseguramos de estar al día:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/2.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/2.png"></a></p>
 <p>Hacemos clic en <strong>GitFlow &gt; Start new hotfix</strong></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/3.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/3.png"></a></p>
 <p>Definimos el nombre empezando por <code>HOTFIX_</code> (en mayúsculas) seguido de una breve descripción que sirva como identificador de la rama. Pulsamos OK.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/4.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/4.png"></a></p>
 <p>Publicamos las bases de datos del proyecto, establecemos el origin correcto, realizamos el arreglo y descargamos los cambios, tal y como lo haríamos en una nueva funcionalidad.</p>
 <p>Revisamos los cambios pendientes y marcamos aquellos que correspondan con el arreglo.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/5.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/5.png"></a></p>
 <p>Realizamos un commit empezando el mensaje por la etiqueta <code>FIX:</code> seguido de la descripción del arreglo (el síntoma que veía el usuario). Las notas de la versión solo recogen los commits <code>FT:</code>, <code>FIX:</code>, <code>HL:</code> y <code>DEP:</code>; ver <a href="../GitCommitConventions/">¿Cómo desarrollar en GIT?</a>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/6.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/6.png"></a></p>
 <p>Hacemos un fetch y revisamos que no tengamos ningún pull pendiente; en caso contrario, nos situamos en la rama correspondiente, realizamos un pull y volvemos a la rama del hotfix.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/7.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/7.png"></a></p>
 <p>Pulsamos en <strong>Git Flow &gt; Finish Hotfix</strong></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/8.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/8.png"></a></p>
 <p>Realizamos push en <code>develop</code>, nos situamos en <code>master</code> y realizamos push de <code>master</code>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CICD/GenerateHotfix/9.png" data-desc-position="bottom"><img alt="" src="../../../docs_assets/images/CICD/GenerateHotfix/9.png"></a></p>
 
 
 

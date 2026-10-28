@@ -9601,25 +9601,25 @@
 
 
 <h1 id="how-do-i-generate-a-hotfix">How do I generate a HOTFIX?<a class="headerlink" href="#how-do-i-generate-a-hotfix" title="Permanent link">¶</a></h1>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/1.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/1.png"></a></p>
 <h2 id="full-procedure">Full procedure<a class="headerlink" href="#full-procedure" title="Permanent link">¶</a></h2>
 <p>Before starting the hotfix, we pull <code>develop</code> and <code>master</code> and make sure we're up to date:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/2.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/2.png"></a></p>
 <p>We click <strong>GitFlow &gt; Start new hotfix</strong></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/3.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/3.png"></a></p>
 <p>We name the branch starting with <code>HOTFIX_</code> (uppercase) followed by a short description that identifies it. We click OK.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/4.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/4.png"></a></p>
 <p>We publish the project's databases, set the correct origin, make the fix and download the changes, the same way we would for a new feature.</p>
 <p>We review the pending changes and mark the ones that belong to the fix.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/5.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/5.png"></a></p>
 <p>We make a commit starting the message with the <code>FIX:</code> tag, followed by the description of the fix (the symptom users saw). The release notes only pick up <code>FT:</code>, <code>FIX:</code>, <code>HL:</code> and <code>DEP:</code> commits; see <a href="../GitCommitConventions/">How do I develop in GIT?</a>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/6.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/6.png"></a></p>
 <p>We fetch and check that we have no pending pulls; if we do, we switch to the corresponding branch, pull, and go back to the hotfix branch.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/7.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/7.png"></a></p>
 <p>We click <strong>Git Flow &gt; Finish Hotfix</strong></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/8.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/8.png"></a></p>
 <p>We push <code>develop</code>, switch to <code>master</code> and push <code>master</code> as well.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CICD/GenerateHotfix/9.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/CICD/GenerateHotfix/9.png"></a></p>
 
 
 

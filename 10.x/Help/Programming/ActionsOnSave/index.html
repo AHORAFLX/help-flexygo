@@ -9669,7 +9669,7 @@
 <p class="admonition-title">La configuración de pasos está en la piel 2026</p>
 <p>Las reglas se <strong>ejecutan</strong> igual en las dos pieles, pero los pasos se <strong>configuran</strong> desde skin2026. En flexy2022 solo se configuran las decisiones y los webhooks, con sus pantallas propias; para los demás pasos (correo, aviso, crear o modificar un registro, proceso), cambia el perfil a 2026.</p>
 </div>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ActionsOnSave/lista.png" data-desc-position="bottom"><img alt="La lista de reglas de un objeto" src="../../../docs_assets/images/ActionsOnSave/lista.png"></a></p>
 <p>La lista enseña cada regla en una fila: cuándo se ejecuta, su disparador, su condición, los pasos que hace en orden y si está activa. El interruptor <strong>On / Off</strong> la activa o la desactiva sin abrirla.</p>
 <div class="admonition note">
 <p class="admonition-title">Nunca deshacen el guardado</p>
@@ -9678,7 +9678,7 @@
 <hr>
 <h2 id="1-crear-una-regla">1. Crear una regla<a class="headerlink" href="#1-crear-una-regla" title="Permanent link">¶</a></h2>
 <p>El botón <strong>New ▾</strong> de la sección abre la lista de tipos de paso. Se elige el primero y se abre la ficha de una regla nueva con ese paso ya puesto, para que una regla de un solo paso sea una sola pantalla.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ActionsOnSave/menu-nuevo.png" data-desc-position="bottom"><img alt="El menú New con los tipos de paso" src="../../../docs_assets/images/ActionsOnSave/menu-nuevo.png"></a></p>
 <p>Los tipos están agrupados:</p>
 <ul>
 <li><strong>Los que solo se configuran</strong>: correo, aviso, crear un registro y modificar un registro.</li>
@@ -9686,7 +9686,7 @@
 <li><strong>El personalizado</strong>: ejecutar un proceso. Es la única puerta a código propio del proyecto.</li>
 </ul>
 <p>La ficha de la regla tiene tres partes: <strong>When</strong> (cuándo), <strong>Then, in this order</strong> (sus pasos) y <strong>Last runs</strong> (sus últimas ejecuciones).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ActionsOnSave/regla.png" data-desc-position="bottom"><img alt="La ficha de una regla con tres pasos" src="../../../docs_assets/images/ActionsOnSave/regla.png"></a></p>
 <hr>
 <h2 id="2-cuando-se-ejecuta">2. Cuándo se ejecuta<a class="headerlink" href="#2-cuando-se-ejecuta" title="Permanent link">¶</a></h2>
 <table>
@@ -9777,7 +9777,7 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ActionsOnSave/paso-crear.png" data-desc-position="bottom"><img alt="La ficha de un paso «crear un registro»" src="../../../docs_assets/images/ActionsOnSave/paso-crear.png"></a></p>
 <p>En cualquier texto de un paso se puede usar <strong><code>{{Campo}}</code></strong> del registro que se guardó, y también <code>{{currentUserId}}</code> o <code>{{now}}</code>. En el cuerpo del correo, los valores del registro entran <strong>como texto</strong>: un <code>&lt;</code> o un enlace se ven tal cual; los campos de tipo HTML entran como están.</p>
 <div class="admonition warning">
 <p class="admonition-title">Campos obligatorios al crear un registro</p>
@@ -9799,7 +9799,7 @@
 <h2 id="5-probar-con-un-registro">5. Probar con un registro<a class="headerlink" href="#5-probar-con-un-registro" title="Permanent link">¶</a></h2>
 <p><strong>Test with a record</strong> (al pie de la ficha) enseña qué haría cada paso con un registro real <strong>sin hacer nada</strong>: no guarda, no envía y no crea. Si la regla tiene cambios sin guardar, se guarda antes de probarla. Funciona también con la regla desactivada, que es justo cuando hace falta.</p>
 <p>Se elige el evento (<em>On create</em>, <em>On update</em>, <em>On delete</em>) y un registro de la lista, que se puede buscar; o se escribe el <code>where</code> de uno.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ActionsOnSave/probar.png" data-desc-position="bottom"><img alt="Probar una regla con un registro" src="../../../docs_assets/images/ActionsOnSave/probar.png"></a></p>
 <p>Cada paso sale con todos sus valores <strong>resueltos</strong>: el asunto con el título del registro, los usuarios y los roles <strong>por su nombre</strong>, y lo que usa de un paso anterior ya puesto (<em>Follow-up created: Follow-up of Quarterly audit</em>). Un valor que un paso anterior solo conoce al ejecutarse (el número de un registro nuevo) se indica como tal. Un paso que fallaría lo dice, con el motivo, y los que dependen de él salen como saltados.</p>
 <div class="admonition note">
 <p class="admonition-title">El disparador no se comprueba al probar</p>
@@ -9808,7 +9808,7 @@
 <hr>
 <h2 id="6-ultimas-ejecuciones">6. Últimas ejecuciones<a class="headerlink" href="#6-ultimas-ejecuciones" title="Permanent link">¶</a></h2>
 <p>Cada vez que una regla se ejecuta deja una fila por paso: hecho, falló o saltado, con el mensaje. La ficha enseña las últimas en <strong>Last runs</strong>: cuándo, sobre qué registro, una marca por paso (✓ hecho, ✕ falló, – saltado) y el resultado.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ActionsOnSave/ultimas.png" data-desc-position="bottom"><img alt="Las últimas ejecuciones de una regla" src="../../../docs_assets/images/ActionsOnSave/ultimas.png"></a></p>
 <p>No cuenta como fallo de la regla lo que tiene su propia cola: un correo que se encoló bien y luego no sale (se reintenta), o un webhook que se encoló y luego falla (se ve en sus envíos).</p>
 <hr>
 <h2 id="7-para-desarrolladores">7. Para desarrolladores<a class="headerlink" href="#7-para-desarrolladores" title="Permanent link">¶</a></h2>

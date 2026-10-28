@@ -9683,7 +9683,7 @@
 <p class="admonition-title">New in version 10.0</p>
 <p>From the profile menu, you can connect an assistant and choose whether it can only read data or also make changes. <strong>Connected assistants</strong> lets you review and disconnect connections. An administrator enables <strong>Enable WebAPI</strong> and <strong>Enable MCP</strong> in <strong>Administration &gt; Security &gt; WebAPI</strong>, and assigns the MCP permission to the authorized users or roles. The assistant's tools indicate whether they read data, make changes, or allow retries.</p>
 <p>Processes that take more than ten minutes are also supported. Assistant registration uses its metadata to avoid duplicates and keeps dynamic client registration available.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/2Reference/mcp-assistant-panel.png" data-desc-position="bottom"><img alt="New in version 10.0" src="../../../../docs_assets/images/2Reference/mcp-assistant-panel.png"></a></p>
 </div>
 <p>Since version 10, <strong>every Flexygo application is also an MCP server</strong>: an AI assistant (Claude, ChatGPT, Gemini, Claude Code or any other client that speaks the <em>Model Context Protocol</em>) connects to the application with the usual user and <strong>sees and does exactly what that user can see and do, nothing more</strong>. Nothing has to be programmed in the application: the assistant reads the objects, views, processes and reports that already exist, with their descriptions, and works with them in the user's language.</p>
 <p>Want to try it in fifteen minutes? <a href="../1TryIt/">Try it: an AI assistant working with your application</a>.</p>
@@ -9905,12 +9905,12 @@
 <li>
 <p><strong>Enable the web API and the MCP endpoint</strong> in the <strong>WebAPI</strong> tool (<em>Security</em> area of the <a href="../../Administration/ControlPanel/">control panel</a>): the <strong>Enable WebAPI</strong> and <strong>Enable MCP</strong> switches, which are the <code>WebAPI_Enabled</code> and <code>MCP_Enabled</code> settings (also in <em>Settings</em>, <em>WebAPI</em> group). Both are off by default: exposing the application to assistants is a team decision. Without <code>MCP_Enabled</code>, the <code>/mcp</code> route and its discovery documents return 404, as if they did not exist; the change takes effect immediately, without restarting. They are separate on purpose: the web API serves integrations (an ERP, an app, another system with its token) and MCP serves people's assistants, which is a different audience; you can have the first without the second, not the other way round.</p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/interruptor-mcp.png" data-desc-position="bottom"><img alt="The settings row of the WebAPI tool, with Enable WebAPI and Enable MCP" src="../../../../docs_assets/images/AIAssistants/interruptor-mcp.png"></a>
   <figcaption>Enable MCP, next to Enable WebAPI</figcaption>
 </figure>
 2. <strong>Grant the MCP permission</strong> to the roles or users who may connect an assistant: in the <strong>WebAPI</strong> tool (<em>Security</em> area of the <a href="../../Administration/ControlPanel/">control panel</a>), <em>Authorized People</em> panel, the <strong>robot column</strong>. It is a permission <strong>separate</strong> from the web API one (the eye column): a role can have assistants without the REST API, or the API for its integrations without assistants. As always, the user overrides their role. Removing the permission <strong>instantly cuts</strong> that person's live connections; a user without permission sees the refusal when trying to connect.<p></p>
 <p></p><figure markdown="span">
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/permiso-mcp.png" data-desc-position="bottom"><img alt="The Authorized People panel: per role, the web API (eye) and the MCP assistants (robot)" src="../../../../docs_assets/images/AIAssistants/permiso-mcp.png"></a>
   <figcaption>Per role (or per user, in the other tab): the web API and the assistants, each with its own switch</figcaption>
 </figure>
 3. <strong>Expose the objects</strong> in the web API (<em>WebAPI objects</em>): which objects, views and processes the assistant sees, and whether it can <strong>edit</strong>, <strong>create</strong> or <strong>print</strong> each object. What is not exposed does not exist for it.
@@ -9924,18 +9924,18 @@
 <h2 id="3-connecting-an-assistant-user">3. Connecting an assistant (user)<a class="headerlink" href="#3-connecting-an-assistant-user" title="Permanent link">¶</a></h2>
 <p>With <code>MCP_Enabled</code> on, each person's <strong>profile menu</strong> has two new entries: <strong>Connect an assistant</strong> and <strong>Connected assistants</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/menu-perfil.png" data-desc-position="bottom"><img alt="The profile menu with &quot;Connect an assistant&quot; and &quot;Connected assistants&quot;" src="../../../../docs_assets/images/AIAssistants/menu-perfil.png"></a>
 <br>
 <figcaption>The two entries only appear if the installation has the MCP endpoint turned on</figcaption>
 </figure>
 <p><strong>Connect an assistant</strong> opens the <code>/mcp/setup</code> page: the application's address ready to copy, who the assistant will log in as and what it will be able to do, and where to paste it in each assistant (Claude, Claude Code with the command line already written, ChatGPT, Gemini and any other). If the person does not have the MCP permission, the page says so and does not show the address.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/conectar.png" data-desc-position="bottom"><img alt="The &quot;Connect an assistant&quot; page: the address, what is granted and where to paste it in each assistant" src="../../../../docs_assets/images/AIAssistants/conectar.png" width="420"></a>
 <br>
 <figcaption>The page speaks the browser's language</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/conectar-sin-permiso.png" data-desc-position="bottom"><img alt="The same page for someone without the MCP permission" src="../../../../docs_assets/images/AIAssistants/conectar-sin-permiso.png" width="420"></a>
 <br>
 <figcaption>Without the MCP permission: the refusal and whom to ask</figcaption>
 </figure>
@@ -9974,7 +9974,7 @@
 </table>
 <p>When connecting, the assistant opens the browser on the application. The person <strong>logs in with their usual user</strong> (with whatever SSO and two-step verification they have configured) and sees the consent page:</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/consentimiento.png" data-desc-position="bottom"><img alt="The consent page: the application on the left, the assistant on the right, and what is granted" src="../../../../docs_assets/images/AIAssistants/consentimiento.png"></a>
 <br>
 <figcaption>The consent page: who is asking, as whom, where the access goes and what is granted</figcaption>
 </figure>
@@ -9985,14 +9985,14 @@
 <li><strong>What is granted</strong>: <em>Read data</em> always; <em>Modify data</em> (run processes, edit and create records) only if the assistant asked for it, and the person can <strong>untick the box</strong>. A read-only connection rejects any write with a clear sentence and keeps working for everything else.</li>
 </ul>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/alerta-seguridad.png" data-desc-position="bottom"><img alt="The security alert: it calls itself Claude, but the access would go elsewhere" src="../../../../docs_assets/images/AIAssistants/alerta-seguridad.png"></a>
 <br>
 <figcaption>If the name passes itself off as a known assistant and the access would go elsewhere, the page says so and Deny becomes the main button</figcaption>
 </figure>
 <p>After <em>Allow</em>, the assistant is connected: the access lasts <strong>8 hours and renews itself</strong> while it is used; a connection unused for <strong>30 days</strong> expires and you have to connect again.</p>
 <p>To disconnect, the person has <strong>Connected assistants</strong> in their profile menu: their connections (only theirs), with the assistant, when it connected, the last time it was used, when it expires and what it can do; <strong>Revoke</strong>, in the row menu, cuts it. The connector can also be removed in the assistant itself, and an administrator can revoke any session (§6).</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/asistentes-conectados.png" data-desc-position="bottom"><img alt="&quot;Connected assistants&quot;: the person's connections, with Revoke in each row's menu" src="../../../../docs_assets/images/AIAssistants/asistentes-conectados.png"></a>
 <br>
 <figcaption>Each person sees and cuts their own connections</figcaption>
 </figure>
@@ -10118,19 +10118,19 @@ The administration screens are in the <strong>Environment</strong> area of the <
 </ul>
 <p><strong>MCP assistants</strong>: the assistants that have registered in the application (they register themselves the first time they connect; <code>MCP_Clients</code> table; those using CIMD take a single row per product, see <a href="../4ClientRegistration/">How assistants register</a>), with their redirect domains, registration date, live sessions and the <strong>Approved</strong> switch. Removing <em>Approved</em> <strong>blocks the assistant instantly</strong>: its sessions stop working on the next call and nobody can connect it again until it is approved again. Deleting an assistant takes its sessions with it. With <code>MCP_RequireApprovedClients</code> on (§5), each new assistant appears here unapproved and is approved manually before anyone uses it.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/clientes.png" data-desc-position="bottom"><img alt="MCP assistants: name, redirect domains, registration, live sessions and Approved" src="../../../../docs_assets/images/AIAssistants/clientes.png"></a>
 <br>
 <figcaption>An approved assistant with one live session and another one blocked</figcaption>
 </figure>
 <p><strong>MCP sessions</strong>: all live connections (<code>MCP_Sessions</code> table): who, with which assistant, when they connected, the last time it was used, when it expires and what it can do. <strong>Revoke</strong>, in the row menu, cuts it: the assistant gets a refusal and the person has to connect again. Sessions are not created or edited manually.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/sesiones.png" data-desc-position="bottom"><img alt="MCP sessions with the row menu open and Revoke" src="../../../../docs_assets/images/AIAssistants/sesiones.png"></a>
 <br>
 <figcaption>Revoke cuts the connection without touching anything else</figcaption>
 </figure>
 <p><strong>MCP usage</strong>: what is done with the assistants, read from the log: calls per day (answered and rejected), per tool and per person, with the average and worst duration, and the latest refusals with their reason.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/uso.png" data-desc-position="bottom"><img alt="MCP usage: calls per day, per tool, per person and refusals" src="../../../../docs_assets/images/AIAssistants/uso.png"></a>
 <br>
 <figcaption>A slow or frequently rejected tool means a missing view or description</figcaption>
 </figure>

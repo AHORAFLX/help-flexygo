@@ -9669,7 +9669,7 @@
 <p class="admonition-title">Steps are configured in skin2026</p>
 <p>Rules <strong>run</strong> the same in both skins, but steps are <strong>configured</strong> from skin2026. In flexy2022 only decisions and webhooks are configured, with their own screens; for the other steps (e-mail, notification, create or change a record, process), switch the profile to 2026.</p>
 </div>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ActionsOnSave/lista.png" data-desc-position="bottom"><img alt="The list of rules of an object" src="../../../../docs_assets/images/ActionsOnSave/lista.png"></a></p>
 <p>The list shows each rule in a row: when it runs, its trigger, its condition, the steps it does in order and whether it is enabled. The <strong>On / Off</strong> switch turns it on or off without opening it.</p>
 <div class="admonition note">
 <p class="admonition-title">They never undo the save</p>
@@ -9678,7 +9678,7 @@
 <hr>
 <h2 id="1-creating-a-rule">1. Creating a rule<a class="headerlink" href="#1-creating-a-rule" title="Permanent link">¶</a></h2>
 <p>The <strong>New ▾</strong> button of the section opens the list of step types. Choose the first one and the form of a new rule opens with that step already in it, so a one-step rule is a single screen.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ActionsOnSave/menu-nuevo.png" data-desc-position="bottom"><img alt="The New menu with the step types" src="../../../../docs_assets/images/ActionsOnSave/menu-nuevo.png"></a></p>
 <p>The types are grouped:</p>
 <ul>
 <li><strong>The ones you only configure</strong>: e-mail, notification, create a record and change a record.</li>
@@ -9686,7 +9686,7 @@
 <li><strong>The custom one</strong>: run a process. It is the only door to the project's own code.</li>
 </ul>
 <p>The form of the rule has three parts: <strong>When</strong>, <strong>Then, in this order</strong> (its steps) and <strong>Last runs</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ActionsOnSave/regla.png" data-desc-position="bottom"><img alt="The form of a rule with three steps" src="../../../../docs_assets/images/ActionsOnSave/regla.png"></a></p>
 <hr>
 <h2 id="2-when-it-runs">2. When it runs<a class="headerlink" href="#2-when-it-runs" title="Permanent link">¶</a></h2>
 <table>
@@ -9777,7 +9777,7 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ActionsOnSave/paso-crear.png" data-desc-position="bottom"><img alt="The form of a «create a record» step" src="../../../../docs_assets/images/ActionsOnSave/paso-crear.png"></a></p>
 <p>Any text of a step can use <strong><code>{{Field}}</code></strong> of the record that was saved, and also <code>{{currentUserId}}</code> or <code>{{now}}</code>. In the body of an e-mail, the record's values go in <strong>as text</strong>: a <code>&lt;</code> or a link shows as it is; HTML fields go in as they are.</p>
 <div class="admonition warning">
 <p class="admonition-title">Required fields when creating a record</p>
@@ -9799,7 +9799,7 @@
 <h2 id="5-testing-with-a-record">5. Testing with a record<a class="headerlink" href="#5-testing-with-a-record" title="Permanent link">¶</a></h2>
 <p><strong>Test with a record</strong> (at the foot of the form) shows what each step would do with a real record <strong>without doing anything</strong>: it saves nothing, sends nothing and creates nothing. If the rule has unsaved changes, it is saved before the test. It also works with the rule disabled, which is exactly when you need it.</p>
 <p>Choose the event (<em>On create</em>, <em>On update</em>, <em>On delete</em>) and a record from the list, which you can search; or write the <code>where</code> of one.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ActionsOnSave/probar.png" data-desc-position="bottom"><img alt="Testing a rule with a record" src="../../../../docs_assets/images/ActionsOnSave/probar.png"></a></p>
 <p>Each step comes with all its values <strong>resolved</strong>: the subject with the record's title, users and roles <strong>by their name</strong>, and what it uses from an earlier step already filled in (<em>Follow-up created: Follow-up of Quarterly audit</em>). A value an earlier step only knows once it runs (the number of a new record) is shown as such. A step that would fail says so, with the reason, and the ones that depend on it show as skipped.</p>
 <div class="admonition note">
 <p class="admonition-title">The trigger is not checked in a test</p>
@@ -9808,7 +9808,7 @@
 <hr>
 <h2 id="6-last-runs">6. Last runs<a class="headerlink" href="#6-last-runs" title="Permanent link">¶</a></h2>
 <p>Each time a rule runs it leaves one row per step: done, failed or skipped, with its message. The form shows the latest in <strong>Last runs</strong>: when, on which record, one mark per step (✓ done, ✕ failed, – skipped) and the result.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ActionsOnSave/ultimas.png" data-desc-position="bottom"><img alt="The last runs of a rule" src="../../../../docs_assets/images/ActionsOnSave/ultimas.png"></a></p>
 <p>What has its own queue does not count as a failure of the rule: an e-mail that was queued and then does not go out (it is retried), or a webhook that was queued and then fails (see its deliveries).</p>
 <hr>
 <h2 id="7-for-developers">7. For developers<a class="headerlink" href="#7-for-developers" title="Permanent link">¶</a></h2>

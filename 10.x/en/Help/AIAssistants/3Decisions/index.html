@@ -9760,16 +9760,16 @@
 </div>
 <h2 id="2-sign-in-and-leave-writing-ticked">2. Sign in and leave writing ticked<a class="headerlink" href="#2-sign-in-and-leave-writing-ticked" title="Permanent link">¶</a></h2>
 <p>The application opens in the browser. You sign in with your usual user and see the consent page.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/consentimiento-escritura-en.png" data-desc-position="bottom"><img alt="Consent with &quot;Change data&quot; ticked" src="../../../../docs_assets/images/AIAssistants/consentimiento-escritura-en.png" width="420"></a></p>
 <p><strong>Leave <em>Change data</em> ticked.</strong> Seeing the decisions only needs reading, but <strong>taking them is writing</strong>. With the box cleared, the assistant shows the list and any approval or rejection is refused with a sentence that explains why. To fix it, remove the connector and connect again with the box ticked.</p>
 <div class="admonition note">
 <p class="admonition-title">Codex says 127.0.0.1</p>
 <p>Codex receives the access on a port of your own computer, so the consent page shows <strong>127.0.0.1</strong> as the destination. That is right: the access does not leave your machine. Claude shows <strong>claude.ai</strong> and ChatGPT <strong>chatgpt.com</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/consentimiento-codex-en.png" data-desc-position="bottom"><img alt="Codex's consent: the access goes to 127.0.0.1" src="../../../../docs_assets/images/AIAssistants/consentimiento-codex-en.png" width="360"></a></p>
 </div>
 <h2 id="3-ask-for-the-list">3. Ask for the list<a class="headerlink" href="#3-ask-for-the-list" title="Permanent link">¶</a></h2>
 <p>Write, in your own words: "What decisions are waiting for me?", "is there anything I have to approve?".</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/decisiones-lista-en.png" data-desc-position="bottom"><img alt="The decisions widget: Mine and My role's, the first one open" src="../../../../docs_assets/images/AIAssistants/decisiones-lista-en.png" width="560"></a></p>
 <ul>
 <li><strong>At the top</strong>: how many are waiting and how many are overdue (or applying).</li>
 <li><strong>Mine</strong>: the ones assigned to you. <strong>My role's</strong>: the ones assigned to a role you hold, with the role's name. No others show up.</li>
@@ -9785,7 +9785,7 @@
 </ul>
 <h2 id="5-one-minute-to-undo">5. One minute to undo<a class="headerlink" href="#5-one-minute-to-undo" title="Permanent link">¶</a></h2>
 <p>Taking the decision <strong>does not apply it yet</strong>: it stays <strong>applying</strong> for 60 seconds.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/decisiones-deshacer-en.png" data-desc-position="bottom"><img alt="Approved: applies in 0:45, with Undo" src="../../../../docs_assets/images/AIAssistants/decisiones-deshacer-en.png" width="560"></a></p>
 <ul>
 <li>The black strip says what you chose (green ✓ for approve, red ✕ for reject), how long is left, and has <strong>Undo</strong>.</li>
 <li><strong>Within the minute nothing has happened</strong>: not the process, not the call to the external system, not the log. <strong>Undo</strong> puts it back to pending, as if it had not been touched, and it can be decided again.</li>
@@ -9801,12 +9801,12 @@
 <li>The callback to the system that asked for it (<code>CallbackUrl</code>) is queued, if it has one.</li>
 <li>The bell notice goes away for everyone.</li>
 </ol>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/decisiones-aplicada-en.png" data-desc-position="bottom"><img alt="Applied: it can no longer be undone" src="../../../../docs_assets/images/AIAssistants/decisiones-aplicada-en.png" width="560"></a></p>
 <p><strong>Applied</strong> means exactly that: it has happened and <strong>cannot be undone</strong>. The button goes away, and if someone tries (for example, by reopening an old card in the chat), the server refuses it. Turning it around takes another decision or fixing the record in the application.</p>
 <hr>
 <h2 id="in-the-application-the-same-minute">In the application, the same minute<a class="headerlink" href="#in-the-application-the-same-minute" title="Permanent link">¶</a></h2>
 <p>The window is not only the chat's. The <strong>Pending decision</strong> card on the record (in both skins) works the same way: approving shows "Approve by admin · Applies in a minute" with <strong>Undo</strong>, and a notice reminds you.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/decisiones-tarjeta-app-en.png" data-desc-position="bottom"><img alt="The record's card while it applies, with Undo" src="../../../../docs_assets/images/AIAssistants/decisiones-tarjeta-app-en.png"></a></p>
 <p>Whoever decides through the API (<code>sysTaskResolve</code>) waits that minute too, and can undo with <code>sysTaskUndo</code> within it. The statuses and processes are in <a href="../../Programming/ApprovalsAndWebhooks/#what-happens-on-decision">Decisions and webhooks</a>.</p>
 <h2 id="the-mcp-tools">The MCP tools<a class="headerlink" href="#the-mcp-tools" title="Permanent link">¶</a></h2>
 <p>For whoever wants to know what the assistant calls, or to try it from another client:</p>

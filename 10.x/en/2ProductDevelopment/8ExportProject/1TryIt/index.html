@@ -9706,7 +9706,7 @@
 <hr>
 <h2 id="1-open-the-window-and-read-the-preview">1. Open the window and read the preview<a class="headerlink" href="#1-open-the-window-and-read-the-preview" title="Permanent link">¶</a></h2>
 <p>Control panel → action list → <strong>Export as project</strong>. The window reads the installation and says what it is going to take.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-ventana.png" data-desc-position="bottom"><img alt="The window: configuration, data model, static files, custom folder, DLLs, SDK and template" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-ventana.png"></a></p>
 <p><strong>Check</strong>:</p>
 <ul>
 <li><em>The configuration of origin N</em>: the origin is your project's, not 0 (with 0 the window says so and does not allow exporting).</li>
@@ -9716,11 +9716,11 @@
 </ul>
 <h2 id="2-choose-the-master-data">2. Choose the master data<a class="headerlink" href="#2-choose-the-master-data" title="Permanent link">¶</a></h2>
 <p>Expand <strong>Choose the tables that travel with their rows</strong>. The <strong>catalogs</strong> come checked (small tables that others point to: statuses, types, categories): without their rows nothing could be created in the project. Also check whatever you need for testing. If you check a large table, or one that points to another that does not travel, the window warns in yellow; it does not prevent exporting.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" data-desc-position="bottom"><img alt="The catalogs, checked by default" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/datos-maestros.png" width="640"></a></p>
 <h2 id="3-export">3. Export<a class="headerlink" href="#3-export" title="Permanent link">¶</a></h2>
 <p>Type the <strong>Product name</strong> (letters, digits and underscore; it names the solution and each project: <code>SalesExamples.Backend</code>, <code>SalesExamples.Conf.Database</code>…), leave <strong>Scripts travel as origin</strong> at <em>1 · Product</em> and click <strong>Export</strong>.</p>
 <p>The window shows the steps with their time and, when finished, downloads the zip.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-resultado.png" data-desc-position="bottom"><img alt="The result: the zip, what is worth a look and the steps" src="../../../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-resultado.png"></a></p>
 <p><strong>Check</strong>: <em>exported</em>, all steps in green (or in yellow with their reason in <em>Worth a look</em>) and a zip of a few MB. In a small application it takes one or two minutes; the first time somewhat longer, because it installs the template.</p>
 <h2 id="4-build-it-on-your-machine">4. Build it on your machine<a class="headerlink" href="#4-build-it-on-your-machine" title="Permanent link">¶</a></h2>
 <p>Unzip the file and, in its folder:</p>

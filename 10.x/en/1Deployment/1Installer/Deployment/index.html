@@ -9726,13 +9726,13 @@
 <hr>
 <h2 id="1-product-selection">1. Product selection<a class="headerlink" href="#1-product-selection" title="Permanent link">¶</a></h2>
 <p>The first step is choosing which product you want to install. The installer shows the available solutions (Flexygo, SAT, CRM…) and the <strong>Custom</strong> option, which lets you manually specify the NuGet package to install and its source.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/Inicio.png" data-desc-position="bottom"><img alt="Selecting the product to install" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/Inicio.png"></a></p>
 <p>If you select <strong>Custom</strong>, you must specify the NuGet package name and where to look for it: a remote feed URL or a local physical path. The package name must follow the <a href="../../../2ProductDevelopment/2Template/#nuget-naming-convention">Flexygo naming convention</a> so that the installer can detect it correctly.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionPersonalizada.png" data-desc-position="bottom"><img alt="Configuring the custom NuGet package" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionPersonalizada.png"></a></p>
 <hr>
 <h2 id="2-installation-mode">2. Installation mode<a class="headerlink" href="#2-installation-mode" title="Permanent link">¶</a></h2>
 <p>Once the product is selected, choose the installation mode according to your environment:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/tipoDespliegue.png" data-desc-position="bottom"><img alt="Selecting the installation mode" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/tipoDespliegue.png"></a></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Basic IIS</label><label for="__tabbed_1_2">Advanced IIS</label><label for="__tabbed_1_3">Docker (via Installer)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -9740,23 +9740,23 @@
 <p>Installs Frontend and Backend on the <strong>same server and IIS site</strong>. Ideal for testing, demos, or small environments.</p>
 <h3 id="site-configuration">Site configuration<a class="headerlink" href="#site-configuration" title="Permanent link">¶</a></h3>
 <p>Choose the project name, select an existing website or create a new one, set the virtual <em>path</em> (if desired), and the physical directory where the application will be installed.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionBasica.png" data-desc-position="bottom"><img alt="Basic IIS site configuration" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionBasica.png"></a></p>
 </div>
 <div class="tabbed-block">
 <h2 id="advanced-installation">Advanced installation<a class="headerlink" href="#advanced-installation" title="Permanent link">¶</a></h2>
 <p>Lets you install <strong>Frontend and Backend on different servers</strong>, or install only one of the two components. Suitable for customized production installations.</p>
 <h3 id="component-selection">Component selection<a class="headerlink" href="#component-selection" title="Permanent link">¶</a></h3>
 <p>Choose whether to install only <strong>Frontend</strong>, only <strong>Backend</strong>, or both. You can also install IIS and/or SQL Server if your environment doesn't have them yet, and choose to install a specific version of the product.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaComponentes.png" data-desc-position="bottom"><img alt="Selecting components: Frontend, Backend, and IIS/SQL" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaComponentes.png"></a></p>
 <h3 id="specific-version">Specific version<a class="headerlink" href="#specific-version" title="Permanent link">¶</a></h3>
 <p>If you selected installing a specific version, specify the package name and its source (remote feed URL or physical path). The wizard will search for the available versions so you can choose the one you need.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaVersionEspecifica.png" data-desc-position="bottom"><img alt="Specific product version selector" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaVersionEspecifica.png"></a></p>
 <h3 id="frontend-configuration">Frontend configuration<a class="headerlink" href="#frontend-configuration" title="Permanent link">¶</a></h3>
 <p>Choose the project name, IIS site, virtual <em>path</em>, and physical directory where the Frontend will be installed.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaFront.png" data-desc-position="bottom"><img alt="Frontend site configuration" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaFront.png"></a></p>
 <h3 id="backend-configuration">Backend configuration<a class="headerlink" href="#backend-configuration" title="Permanent link">¶</a></h3>
 <p>Choose the project name, IIS site, virtual <em>path</em>, and physical directory where the Backend will be installed.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaBack.png" data-desc-position="bottom"><img alt="Backend site configuration" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionAvanzadaBack.png"></a></p>
 </div>
 <div class="tabbed-block">
 <h2 id="docker-installation">Docker installation<a class="headerlink" href="#docker-installation" title="Permanent link">¶</a></h2>
@@ -9768,7 +9768,7 @@ You can download it from <a href="https://www.docker.com/products/docker-desktop
 </div>
 <h3 id="docker-deployment-configuration">Docker deployment configuration<a class="headerlink" href="#docker-deployment-configuration" title="Permanent link">¶</a></h3>
 <p>Configure the container parameters: ports, volumes, and deployment options for Frontend and Backend.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionDocker.png" data-desc-position="bottom"><img alt="Docker deployment configuration" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionDocker.png"></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Result</p>
 <p>Once the configuration is confirmed, the installer brings up the containers directly in Docker Desktop. You can access the application from Docker Desktop itself or through the configured port.</p>
@@ -9780,8 +9780,8 @@ You can download it from <a href="https://www.docker.com/products/docker-desktop
 <h2 id="3-progress-and-completion">3. Progress and completion<a class="headerlink" href="#3-progress-and-completion" title="Permanent link">¶</a></h2>
 <p><em>(Basic IIS and Advanced IIS modes only)</em></p>
 <p>You'll see the installation progress step by step. Once finished, the wizard shows a summary and offers to open the application directly in the browser.</p>
-<p></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/progresoInstalacion.png" data-desc-position="bottom"><img alt="Installation progress" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/progresoInstalacion.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionCompletada.png" data-desc-position="bottom"><img alt="Installation completed" src="../../../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionCompletada.png"></a></p>
 
 
 

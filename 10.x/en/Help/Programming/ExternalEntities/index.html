@@ -9827,12 +9827,12 @@
 <p>The API is registered once in <strong>External services</strong>: control panel → <strong>Objects</strong> area → <em>External services</em> (in flexy2022, <em>Admin Work Area → Object Management → External services</em>), the search box (<strong>Ctrl K</strong>), or from the object wizard, with the <strong>+</strong> next to the service; the link button beside it opens the chosen service. Each external object points to a service.</p>
 <p>Want to try it end to end with a public API? <a href="../ExternalEntitiesTryIt/">Try it: an object that lives in a REST API</a>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-01-servicios.png" data-desc-position="bottom"><img alt="List of external services" src="../../../../docs_assets/images/ExternalEntities/ext-01-servicios.png"></a>
 <br>
 <figcaption>External services: each one is an API that one or more objects point to</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-02-servicio.png" data-desc-position="bottom"><img alt="Form of an external service" src="../../../../docs_assets/images/ExternalEntities/ext-02-servicio.png"></a>
 <br>
 <figcaption>A service with API key authentication: the header and, next to it, the secret, whose label says what it holds</figcaption>
 </figure>
@@ -9891,18 +9891,18 @@
 <h2 id="2-create-the-object-with-the-wizard">2. Create the object with the wizard<a class="headerlink" href="#2-create-the-object-with-the-wizard" title="Permanent link">¶</a></h2>
 <p>From the <strong>Objects</strong> list, with the wand button (<strong>New object</strong>), in the <strong>Source</strong> step choose <strong>An external API</strong>. The service and the list path are enough; the record path (<code>{key}</code> is replaced by the key) makes the record view faster, and the array and total paths are for APIs that wrap the response.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-03-asistente-origen.png" data-desc-position="bottom"><img alt="Wizard Source step with the external API option" src="../../../../docs_assets/images/ExternalEntities/ext-03-asistente-origen.png"></a>
 <br>
 <figcaption>Step 2 — the "External API" source: service, list path and record path</figcaption>
 </figure>
 <p><strong>Probe the API</strong> calls the list once, without saving anything, and shows a sample of the records and the <strong>proposed properties</strong>: name, label, inferred type, which one is the key and whether it is mandatory (a long text, such as a base64 image, is never proposed as mandatory). Protocol annotations (<code>@odata.etag</code>, <code>Field@odata.mediaReadLink</code>, <code>@id</code>) are not record data: they are listed separately as skipped. They can be removed, renamed or have their type changed before creating.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-04-asistente-sonda.png" data-desc-position="bottom"><img alt="Probe result with the proposed properties" src="../../../../docs_assets/images/ExternalEntities/ext-04-asistente-sonda.png"></a>
 <br>
 <figcaption>The probe: 100 records, a sample and four proposed properties with their key</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-05-asistente-revision.png" data-desc-position="bottom"><img alt="Review step before creating" src="../../../../docs_assets/images/ExternalEntities/ext-05-asistente-revision.png"></a>
 <br>
 <figcaption>Step 3 — what is going to be created: the object, the collection, the properties and a default list view</figcaption>
 </figure>
@@ -9915,13 +9915,13 @@
 <h2 id="3-fine-tune-in-the-workbench">3. Fine-tune in the workbench<a class="headerlink" href="#3-fine-tune-in-the-workbench" title="Permanent link">¶</a></h2>
 <p>For an external object, the object's workbench shows the <strong>API</strong> section. There you find the <strong>insert, update and delete</strong> paths (empty, the object is read-only: the list does not offer <em>New</em>, the record view does not offer <em>Edit</em> or <em>Delete</em>, and each action appears once its path is set, or if it is written with a custom process), the update method (<code>PUT</code> or <code>PATCH</code>), the body format (<code>JSON</code>), the array and total paths, and the filter and sort templates for APIs with their own convention. The <strong>Probe</strong> button probes the API again and offers to add any missing properties.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-06-banco-api.png" data-desc-position="bottom"><img alt="API section of the workbench" src="../../../../docs_assets/images/ExternalEntities/ext-06-banco-api.png"></a>
 <br>
 <figcaption>The API section of the workbench, with the probe: the four properties already exist</figcaption>
 </figure>
 <p>In each <strong>property</strong>'s form there are two fields that only make sense in an external object: <strong>Is key</strong> (the record's key in the API) and <strong>External name</strong> (the JSON path of the field when it has a different name in the API, for example <code>address.city</code>).</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-07-propiedad.png" data-desc-position="bottom"><img alt="Property form with Is key and External name" src="../../../../docs_assets/images/ExternalEntities/ext-07-propiedad.png"></a>
 <br>
 <figcaption>The `id` property: it is the key and its external name matches, so it is left empty</figcaption>
 </figure>
@@ -9985,17 +9985,17 @@
 <h2 id="4-use-the-object">4. Use the object<a class="headerlink" href="#4-use-the-object" title="Permanent link">¶</a></h2>
 <p>From then on it is just another object: it is placed on pages, given permissions, related to others. The list pages, sorts and filters through the API; the record view and the form read and write the record; the before and after insert, update and delete processes and auditing run the same way.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-08-lista.png" data-desc-position="bottom"><img alt="List of an external object" src="../../../../docs_assets/images/ExternalEntities/ext-08-lista.png"></a>
 <br>
 <figcaption>The list of the newly created object, read from the API</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-09-ficha.png" data-desc-position="bottom"><img alt="Record view of an external object with a related list of another external object" src="../../../../docs_assets/images/ExternalEntities/ext-09-ficha.png"></a>
 <br>
 <figcaption>A record view with a related list: both objects are external (a customer and their orders)</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-11-edicion.png" data-desc-position="bottom"><img alt="Edit form of an external object" src="../../../../docs_assets/images/ExternalEntities/ext-11-edicion.png"></a>
 <br>
 <figcaption>The edit form: saving is an API call, and its error, if any, reaches the form</figcaption>
 </figure>
@@ -10116,7 +10116,7 @@
 </tbody>
 </table>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-10-rechazo.png" data-desc-position="bottom"><img alt="Rejection message of a SQL list and a chart over an external object" src="../../../../docs_assets/images/ExternalEntities/ext-10-rechazo.png"></a>
 <br>
 <figcaption>A SQL list and a chart pointed at an external object: the message states the object, the module and the alternative</figcaption>
 </figure>
@@ -10213,7 +10213,7 @@
 </tbody>
 </table>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ExternalEntities/ext-12-grafica-endpoint.png" data-desc-position="bottom"><img alt="Chart fed by an endpoint" src="../../../../docs_assets/images/ExternalEntities/ext-12-grafica-endpoint.png"></a>
 <br>
 <figcaption>A flx-echart without SQL over an external object: two series and two categories, exactly as the API returns them</figcaption>
 </figure>

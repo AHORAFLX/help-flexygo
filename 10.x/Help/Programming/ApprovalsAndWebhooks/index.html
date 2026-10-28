@@ -9791,7 +9791,7 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png" data-desc-position="bottom"><img alt="Logic and rules en el panel de control de skin2026" src="../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png"></a></p>
 <hr>
 <h2 id="1-tareas-humanas-decisiones">1. Tareas humanas (decisiones)<a class="headerlink" href="#1-tareas-humanas-decisiones" title="Permanent link">¶</a></h2>
 <p>Una <strong>tarea</strong> es una pregunta con opciones —por defecto <em>Approve</em> / <em>Reject</em>— dirigida a un rol, a una persona, o a una persona dentro de un rol, sobre un registro o sin él. Vive en la tabla <code>Tasks</code> (objeto <code>sysTask</code>), con su historial en <code>Tasks_Log</code>.</p>
@@ -9825,8 +9825,8 @@
 </tr>
 </tbody>
 </table>
-<p></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png" data-desc-position="bottom"><img alt="La bandeja de decisiones" src="../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png" data-desc-position="bottom"><img alt="La tarjeta de decisión en la ficha por defecto de un registro" src="../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Lo que cuesta la tarjeta</p>
 <p>Abrir una ficha por defecto hace una consulta más, la de las tareas pendientes del registro, apoyada en el índice <code>IX_Tasks_Status_Object</code> de <code>Tasks</code>. Medido con 50.000 tareas en la tabla: entre 44 y 57 ms por apertura. Las listas no la llevan.</p>
@@ -9881,7 +9881,7 @@
 <hr>
 <h2 id="2-reglas-de-decision">2. Reglas de decisión<a class="headerlink" href="#2-reglas-de-decision" title="Permanent link">¶</a></h2>
 <p>Una <strong>regla</strong> (una regla de <code>Objects_Rules</code> con un paso de decisión en <code>Objects_Actions</code>; objeto <code>sysTaskRule</code>, nodo <em>Decision rules</em> / <em>Reglas de decisión</em> bajo <em>Logic and rules</em>, y sección <em>Rules and actions</em> del banco de trabajo del objeto) abre una tarea cuando se guarda un registro del objeto, sin código. Se evalúa después de confirmar el guardado, venga de una pantalla o de la web API; quien guarda no necesita permiso sobre los procesos de tareas.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/regla.png" data-desc-position="bottom"><img alt="La ficha de una regla de decisión" src="../../../docs_assets/images/ApprovalsAndWebhooks/regla.png"></a></p>
 <table>
 <thead>
 <tr>
@@ -9951,7 +9951,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Probar con un registro</p>
 <p>En la ficha de la regla, el proceso <strong>Test with a record</strong> pide un <code>WHERE</code> que nombre un registro (<code>Id = 'admins'</code>) y enseña <strong>sin crearla</strong> la tarea que abriría: título rendido, asignado, prioridad, vencimiento, escalado y eventos. La respuesta sale en un diálogo con el nombre de la regla, que se cierra con <strong>OK</strong>. Si el registro no cumple la condición, o la regla está apagada, lo dice. Por la web API, el mismo texto llega en <code>Data.Message</code>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" data-desc-position="bottom"><img alt="Test with a record: la tarea que abriría" src="../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" width="600"></a></p>
 </div>
 <p>Las reglas de un objeto se leen una vez con su configuración y se recargan al guardar o borrar una regla desde la ficha: no hace falta reiniciar. Un objeto sin reglas no paga nada al guardar.</p>
 <hr>
@@ -10112,7 +10112,7 @@ for this record»</em>. Solo <code>sysTaskCreate</code>, que no cuelga de ningú
 <h2 id="4-webhooks-de-salida">4. Webhooks de salida<a class="headerlink" href="#4-webhooks-de-salida" title="Permanent link">¶</a></h2>
 <p>Una <strong>suscripción</strong> (una regla de <code>Objects_Rules</code> con un paso webhook en <code>Objects_Actions</code>; objeto <code>sysWebhookSubscription</code>) manda un <code>POST</code> a una URL cuando se guarda o borra un registro del objeto. El guardado <strong>nunca espera al receptor</strong>: la entrega se encola (<code>WebHooks_Deliveries</code>) y el job <strong><code>flxWebhookDispatcher</code></strong> (cada minuto, proceso <code>SendPendingWebhooks</code>) la envía.</p>
 <p>Las suscripciones y sus envíos viven en <strong>una sola pantalla</strong>, <em>Outgoing webhooks</em> / <em>Webhooks de salida</em>, con dos pestañas: <strong>Subscriptions</strong> (<em>Suscripciones</em>) y <strong>Deliveries</strong> (<em>Envíos</em>), el registro de todo lo que se ha mandado. Es la misma en las dos pieles. También se llega desde la sección <em>Webhooks</em> del banco de trabajo del objeto.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png" data-desc-position="bottom"><img alt="Webhooks de salida, pestaña Subscriptions" src="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Webhooks de salida y de entrada</p>
 <p>Esta pantalla es la de <strong>salida</strong>: Flexygo avisa a otro sistema. Los webhooks de <strong>entrada</strong> (otro sistema llama a Flexygo, <code>/webhook/{id}</code>, objeto <code>sysWebHook</code>) son de la web API y no tienen nodo en el menú.</p>
@@ -10163,7 +10163,7 @@ for this record»</em>. Solo <code>sysTaskCreate</code>, que no cuelga de ningú
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png" data-desc-position="bottom"><img alt="La ficha de una suscripción, con el secreto enmascarado" src="../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png"></a></p>
 <p>Las suscripciones de un objeto se leen una vez con su configuración y se recargan al guardar una suscripción desde la ficha. Un objeto sin suscripciones no paga nada al guardar.</p>
 <h3 id="el-cuerpo">El cuerpo<a class="headerlink" href="#el-cuerpo" title="Permanent link">¶</a></h3>
 <p>Con <code>record</code> y <code>keys</code>, el cuerpo es un sobre fijo con el registro en <code>data</code> (los campos binarios se omiten):</p>
@@ -10251,7 +10251,7 @@ for this record»</em>. Solo <code>sysTaskCreate</code>, que no cuelga de ningú
 </tbody>
 </table>
 <p>Todas las entregas, también las de los callbacks de tareas (§5), están en la pestaña <strong>Deliveries</strong> (<em>Envíos</em>). En la ficha de una entrega <code>failed</code> o <code>dead</code>, el proceso <strong>Retry</strong> la vuelve a encolar ahora mismo (un fallo la deja <code>dead</code> otra vez).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png" data-desc-position="bottom"><img alt="Webhooks de salida, pestaña Deliveries" src="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png"></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Send a test</p>
 <p>En la ficha de la suscripción, <strong>Send a test</strong> pide un <code>WHERE</code> que nombre un registro y encola una <strong>entrega real</strong> con <code>event: test</code>, aunque la suscripción esté apagada o el registro no cumpla la condición —el mensaje dice si un guardado la habría disparado—. Sale al minuto y queda en la pestaña <strong>Deliveries</strong>.</p>

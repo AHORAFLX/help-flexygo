@@ -9738,7 +9738,7 @@
 </table>
 <p><strong>Cómo:</strong> familia <strong>Objetos</strong>, busca el objeto y pulsa la celda del permiso. Por ejemplo, para que Comercial no borre clientes, la celda <strong>Borrar</strong> de la fila del objeto.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-02-borrar-denegado.png" data-desc-position="bottom"><img alt="Borrar denegado para el rol" src="../../../../docs_assets/images/Security2026/es-02-borrar-denegado.png"></a>
 <br>
 <figcaption>Un clic en «Borrar» crea la regla: el resto queda concedido (verde) y borrar, denegado (rojo)</figcaption>
 </figure>
@@ -9749,12 +9749,12 @@
 <p><strong>Cómo comprobarlo:</strong> entra con un usuario del rol y abre un registro. En el menú <strong>⋮</strong> de la ficha ya no está <strong>Eliminar</strong>. Por la API, borrar responde <code>403</code>.</p>
 <div class="grid">
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-26-admin-procesos.png" data-desc-position="bottom"><img alt="El menú de la ficha como administrador" src="../../../../docs_assets/images/Security2026/es-26-admin-procesos.png"></a>
 <br>
 <figcaption>Como administrador: «Eliminar» y el proceso «Send price list» están</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-24d-usuario-procesos.png" data-desc-position="bottom"><img alt="El menú de la ficha como usuario del rol" src="../../../../docs_assets/images/Security2026/es-24d-usuario-procesos.png"></a>
 <br>
 <figcaption>Como usuario del rol: ni «Eliminar» ni el proceso</figcaption>
 </figure>
@@ -9783,7 +9783,7 @@
 <li><strong>Guardar la condición</strong>. La celda queda con un <strong>punto</strong>.</li>
 </ol>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-04-condicion-probada.png" data-desc-position="bottom"><img alt="El asistente de condición, probado como un usuario" src="../../../../docs_assets/images/Security2026/es-04-condicion-probada.png"></a>
 <br>
 <figcaption>«Ver la colección» solo cuando SalesRep es el login del usuario: probado como la comercial, deja pasar 4 de las 8 filas</figcaption>
 </figure>
@@ -9816,13 +9816,13 @@
 </table>
 <p><strong>Cómo:</strong> familia <strong>Propiedades</strong>, busca el campo (las filas van agrupadas por objeto) y pulsa <strong>Visible</strong> o <strong>Editable</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-06-propiedad-oculta.png" data-desc-position="bottom"><img alt="El campo Cost, no visible para el rol" src="../../../../docs_assets/images/Security2026/es-06-propiedad-oculta.png"></a>
 <br>
 <figcaption>«Cost» deja de ser visible para el rol</figcaption>
 </figure>
 <p><strong>Cómo comprobarlo:</strong> como usuario del rol, abre un registro: el campo no está en la ficha.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-24-usuario-ficha.png" data-desc-position="bottom"><img alt="La ficha sin el campo oculto" src="../../../../docs_assets/images/Security2026/es-24-usuario-ficha.png"></a>
 <br>
 <figcaption>La ficha del usuario del rol: no aparece «Cost»</figcaption>
 </figure>
@@ -9831,7 +9831,7 @@
 <p><strong>Para qué:</strong> que un rol no pueda ejecutar un proceso de un objeto (<em>Enviar tarifa</em>, <em>Facturar</em>, <em>Anular</em>…).</p>
 <p><strong>Cómo:</strong> familia <strong>Procesos</strong>. Cada fila es un par <strong>objeto + proceso</strong>, con el texto del botón como etiqueta. Pulsa <strong>Ejecutar el proceso</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-07-proceso-denegado.png" data-desc-position="bottom"><img alt="Un proceso de objeto denegado" src="../../../../docs_assets/images/Security2026/es-07-proceso-denegado.png"></a>
 <br>
 <figcaption>El proceso «Send price list» del objeto Customer, denegado</figcaption>
 </figure>
@@ -9857,12 +9857,12 @@
 <p>Cualquier otra cosa que no sea 1 o verdadero (0, vacío, sin filas) <strong>impide</strong> ejecutarlo. Puedes usar las variables del usuario: <code>{{currentUserLogin}}</code>, <code>{{currentUserId}}</code>, <code>{{currentRoleId}}</code>, <code>{{currentReference}}</code>, las de fecha y las variables de contexto de la aplicación. No puedes usar campos del registro ni parámetros del proceso.</p>
 <div class="grid">
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-08-proceso-global.png" data-desc-position="bottom"><img alt="La fila de un proceso global con SQL" src="../../../../docs_assets/images/Security2026/es-08-proceso-global.png"></a>
 <br>
 <figcaption>El proceso concedido y con condición SQL (el punto)</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-09-proceso-global-sql.png" data-desc-position="bottom"><img alt="La regla con su SQL habilitado" src="../../../../docs_assets/images/Security2026/es-09-proceso-global-sql.png"></a>
 <br>
 <figcaption>La regla: el proceso, el rol, la conexión y la consulta</figcaption>
 </figure>
@@ -9873,7 +9873,7 @@
 <p><strong>Para qué:</strong> que una entrada del menú lateral no aparezca para el rol.</p>
 <p><strong>Cómo:</strong> familia <strong>Entradas de menú</strong>. La etiqueta de cada fila dice dónde está (<em>Work Area 2026 › Sales</em>). Pulsa <strong>Mostrar en el menú</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-10-menu.png" data-desc-position="bottom"><img alt="Las entradas de menú" src="../../../../docs_assets/images/Security2026/es-10-menu.png"></a>
 <br>
 <figcaption>Cada entrada con su ruta en el menú</figcaption>
 </figure>
@@ -9888,7 +9888,7 @@
 <p><strong>Cómo:</strong> familia <strong>Módulos</strong>, pulsa <strong>Mostrar el módulo</strong>. La etiqueta de cada fila dice el tipo de módulo y su objeto. También se llega desde el propio módulo, en modo desarrollo: menú <strong>⋮ › Seguridad del módulo</strong>.</p>
 <p>La condición de un módulo se comprueba contra el objeto de la página donde está: la pantalla la ejecuta antes de guardarla, y si no se puede ejecutar no la guarda (<em>«La condición no se ejecuta, así que no se ha guardado»</em>). Se aplica a partir del siguiente inicio de sesión de cada persona.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-11-modulos.png" data-desc-position="bottom"><img alt="La familia Módulos" src="../../../../docs_assets/images/Security2026/es-11-modulos.png"></a>
 <br>
 <figcaption>Cada módulo con su tipo y su objeto</figcaption>
 </figure>
@@ -9897,7 +9897,7 @@
 <p><strong>Para qué:</strong> que el rol no pueda abrir una página.</p>
 <p><strong>Cómo:</strong> familia <strong>Páginas</strong>, pulsa <strong>Abrir la página</strong>. La etiqueta dice el tipo de página y su objeto.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-12-paginas.png" data-desc-position="bottom"><img alt="La familia Páginas" src="../../../../docs_assets/images/Security2026/es-12-paginas.png"></a>
 <br>
 <figcaption>Cada página con su tipo y su objeto</figcaption>
 </figure>
@@ -9906,7 +9906,7 @@
 <p><strong>Para qué:</strong> que el rol no use una plantilla concreta de un objeto (una forma de pintar la lista o la ficha).</p>
 <p><strong>Cómo:</strong> familia <strong>Plantillas</strong>, pulsa <strong>Usar la plantilla</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-12b-plantillas.png" data-desc-position="bottom"><img alt="La familia Plantillas" src="../../../../docs_assets/images/Security2026/es-12b-plantillas.png"></a>
 <br>
 <figcaption>Las plantillas, con su tipo</figcaption>
 </figure>
@@ -9915,7 +9915,7 @@
 <p><strong>Para qué:</strong> que el rol no pueda imprimir un informe concreto.</p>
 <p><strong>Cómo:</strong> familia <strong>Informes</strong>, pulsa <strong>Imprimir el informe</strong>. La etiqueta dice el tipo de informe (HTML, Crystal Reports…). Para quitar <strong>todos</strong> los informes de un objeto, deniega <strong>Imprimir</strong> en <strong>Objetos</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/Security2026/es-12c-informes.png" data-desc-position="bottom"><img alt="La familia Informes" src="../../../../docs_assets/images/Security2026/es-12c-informes.png"></a>
 <br>
 <figcaption>Los informes, con su tipo</figcaption>
 </figure>

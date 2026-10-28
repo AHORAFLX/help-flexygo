@@ -9738,7 +9738,7 @@
 </table>
 <p><strong>How:</strong> <strong>Objects</strong> family, find the object and click the permission's cell. For instance, so that Sales rep cannot delete customers, the <strong>Delete</strong> cell of the object's row.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-02-borrar-denegado.png" data-desc-position="bottom"><img alt="Delete denied for the role" src="../../../../../docs_assets/images/Security2026/en-02-borrar-denegado.png"></a>
 <br>
 <figcaption>One click on «Delete» creates the rule: the rest stays granted (green) and delete, denied (red)</figcaption>
 </figure>
@@ -9749,12 +9749,12 @@
 <p><strong>How to check it:</strong> sign in as a user of the role and open a record. <strong>Delete</strong> is no longer in the record's <strong>⋮</strong> menu. Through the API, deleting answers <code>403</code>.</p>
 <div class="grid">
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-26-admin-procesos.png" data-desc-position="bottom"><img alt="The record's menu as administrator" src="../../../../../docs_assets/images/Security2026/en-26-admin-procesos.png"></a>
 <br>
 <figcaption>As administrator: «Delete» and the «Send price list» process are there</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-24d-usuario-procesos.png" data-desc-position="bottom"><img alt="The record's menu as a user of the role" src="../../../../../docs_assets/images/Security2026/en-24d-usuario-procesos.png"></a>
 <br>
 <figcaption>As a user of the role: neither «Delete» nor the process</figcaption>
 </figure>
@@ -9783,7 +9783,7 @@
 <li><strong>Save condition</strong>. The cell gets a <strong>dot</strong>.</li>
 </ol>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-04-condicion-probada.png" data-desc-position="bottom"><img alt="The condition wizard, tested as a user" src="../../../../../docs_assets/images/Security2026/en-04-condicion-probada.png"></a>
 <br>
 <figcaption>«View collection» only when SalesRep is the user's login: tested as the sales rep, it lets 4 of the 8 rows through</figcaption>
 </figure>
@@ -9816,13 +9816,13 @@
 </table>
 <p><strong>How:</strong> <strong>Properties</strong> family, find the field (rows are grouped by object) and click <strong>Visible</strong> or <strong>Editable</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-06-propiedad-oculta.png" data-desc-position="bottom"><img alt="The Cost field, not visible for the role" src="../../../../../docs_assets/images/Security2026/en-06-propiedad-oculta.png"></a>
 <br>
 <figcaption>«Cost» is no longer visible for the role</figcaption>
 </figure>
 <p><strong>How to check it:</strong> as a user of the role, open a record: the field is not on it.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-24-usuario-ficha.png" data-desc-position="bottom"><img alt="The record without the hidden field" src="../../../../../docs_assets/images/Security2026/en-24-usuario-ficha.png"></a>
 <br>
 <figcaption>The record as a user of the role: «Cost» is not there</figcaption>
 </figure>
@@ -9831,7 +9831,7 @@
 <p><strong>What for:</strong> a role that cannot run one of an object's processes (<em>Send price list</em>, <em>Invoice</em>, <em>Cancel</em>…).</p>
 <p><strong>How:</strong> <strong>Processes</strong> family. Each row is an <strong>object + process</strong> pair, tagged with the button's text. Click <strong>Run the process</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-07-proceso-denegado.png" data-desc-position="bottom"><img alt="An object's process denied" src="../../../../../docs_assets/images/Security2026/en-07-proceso-denegado.png"></a>
 <br>
 <figcaption>The «Send price list» process of the Customer object, denied</figcaption>
 </figure>
@@ -9857,12 +9857,12 @@
 <p>Anything other than 1 or true (0, empty, no rows) <strong>stops</strong> it from running. You can use the user's variables: <code>{{currentUserLogin}}</code>, <code>{{currentUserId}}</code>, <code>{{currentRoleId}}</code>, <code>{{currentReference}}</code>, the date ones and the application's context variables. You cannot use the record's fields or the process's parameters.</p>
 <div class="grid">
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-08-proceso-global.png" data-desc-position="bottom"><img alt="A global process row with SQL" src="../../../../../docs_assets/images/Security2026/en-08-proceso-global.png"></a>
 <br>
 <figcaption>The process granted and with an SQL condition (the dot)</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-09-proceso-global-sql.png" data-desc-position="bottom"><img alt="The rule with its SQL Enabled" src="../../../../../docs_assets/images/Security2026/en-09-proceso-global-sql.png"></a>
 <br>
 <figcaption>The rule: the process, the role, the connection and the query</figcaption>
 </figure>
@@ -9873,7 +9873,7 @@
 <p><strong>What for:</strong> an entry of the side menu that does not appear for the role.</p>
 <p><strong>How:</strong> <strong>Menu entries</strong> family. Each row's tag says where it is (<em>Work Area 2026 › Sales</em>). Click <strong>Show in the menu</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-10-menu.png" data-desc-position="bottom"><img alt="Menu entries" src="../../../../../docs_assets/images/Security2026/en-10-menu.png"></a>
 <br>
 <figcaption>Each entry with its path in the menu</figcaption>
 </figure>
@@ -9888,7 +9888,7 @@
 <p><strong>How:</strong> <strong>Modules</strong> family, click <strong>Show the module</strong>. Each row's tag gives the module's type and its object. You can also get here from the module itself, in develop mode: <strong>⋮ › Module security</strong>.</p>
 <p>A module's condition is checked against the object of the page it is on: the screen runs it before saving it, and if it cannot run it does not save it (<em>«The condition does not run, so it has not been saved»</em>). It applies from each person's next sign-in.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-11-modulos.png" data-desc-position="bottom"><img alt="The Modules family" src="../../../../../docs_assets/images/Security2026/en-11-modulos.png"></a>
 <br>
 <figcaption>Each module with its type and its object</figcaption>
 </figure>
@@ -9897,7 +9897,7 @@
 <p><strong>What for:</strong> a role that cannot open a page.</p>
 <p><strong>How:</strong> <strong>Pages</strong> family, click <strong>Open the page</strong>. The tag gives the page's type and its object.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-12-paginas.png" data-desc-position="bottom"><img alt="The Pages family" src="../../../../../docs_assets/images/Security2026/en-12-paginas.png"></a>
 <br>
 <figcaption>Each page with its type and its object</figcaption>
 </figure>
@@ -9906,7 +9906,7 @@
 <p><strong>What for:</strong> a role that does not use one of an object's templates (one way of drawing the list or the record).</p>
 <p><strong>How:</strong> <strong>Templates</strong> family, click <strong>Use the template</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-12b-plantillas.png" data-desc-position="bottom"><img alt="The Templates family" src="../../../../../docs_assets/images/Security2026/en-12b-plantillas.png"></a>
 <br>
 <figcaption>The templates, with their type</figcaption>
 </figure>
@@ -9915,7 +9915,7 @@
 <p><strong>What for:</strong> a role that cannot print one specific report.</p>
 <p><strong>How:</strong> <strong>Reports</strong> family, click <strong>Print the report</strong>. The tag gives the report's type (HTML, Crystal Reports…). To take away <strong>all</strong> of an object's reports, deny <strong>Print</strong> in <strong>Objects</strong>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../../docs_assets/images/Security2026/en-12c-informes.png" data-desc-position="bottom"><img alt="The Reports family" src="../../../../../docs_assets/images/Security2026/en-12c-informes.png"></a>
 <br>
 <figcaption>The reports, with their type</figcaption>
 </figure>

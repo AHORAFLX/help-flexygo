@@ -9791,7 +9791,7 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png" data-desc-position="bottom"><img alt="Logic and rules in the skin2026 control panel" src="../../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png"></a></p>
 <hr>
 <h2 id="1-human-tasks-decisions">1. Human tasks (decisions)<a class="headerlink" href="#1-human-tasks-decisions" title="Permanent link">¶</a></h2>
 <p>A <strong>task</strong> is a question with options —<em>Approve</em> / <em>Reject</em> by default— addressed to a role, to a person, or to a person within a role, about a record or without one. It lives in the <code>Tasks</code> table (<code>sysTask</code> object), with its history in <code>Tasks_Log</code>.</p>
@@ -9825,8 +9825,8 @@
 </tr>
 </tbody>
 </table>
-<p></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png" data-desc-position="bottom"><img alt="The decisions inbox" src="../../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png" data-desc-position="bottom"><img alt="The decision card on the default record view of a record" src="../../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">What the card costs</p>
 <p>Opening a default record view runs one more query, the record's pending tasks, backed by the <code>IX_Tasks_Status_Object</code> index on <code>Tasks</code>. Measured with 50,000 tasks in the table: between 44 and 57 ms per opening. Lists do not carry it.</p>
@@ -9881,7 +9881,7 @@
 <hr>
 <h2 id="2-decision-rules">2. Decision rules<a class="headerlink" href="#2-decision-rules" title="Permanent link">¶</a></h2>
 <p>A <strong>rule</strong> (a rule of <code>Objects_Rules</code> with a decision step in <code>Objects_Actions</code>; <code>sysTaskRule</code> object, <em>Decision rules</em> / <em>Reglas de decisión</em> node under <em>Logic and rules</em>, and the <em>Rules and actions</em> section of the object's workbench) opens a task when a record of the object is saved, with no code. It is evaluated after the save is committed, whether it comes from a screen or from the web API; whoever saves does not need permission on the task processes.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/regla.png" data-desc-position="bottom"><img alt="The record view of a decision rule" src="../../../../docs_assets/images/ApprovalsAndWebhooks/regla.png"></a></p>
 <table>
 <thead>
 <tr>
@@ -9951,7 +9951,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Test with a record</p>
 <p>In the rule's record view, the <strong>Test with a record</strong> process asks for a <code>WHERE</code> that names a record (<code>Id = 'admins'</code>) and shows, <strong>without creating it</strong>, the task it would open: rendered title, assignee, priority, due date, escalation and events. The answer comes up in a dialog titled with the rule's name, closed with <strong>OK</strong>. If the record does not meet the condition, or the rule is disabled, it says so. Through the web API, the same text arrives in <code>Data.Message</code>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" data-desc-position="bottom"><img alt="Test with a record: the task it would open" src="../../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" width="600"></a></p>
 </div>
 <p>An object's rules are read once along with its configuration and are reloaded when a rule is saved or deleted from its record view: no restart is needed. An object without rules pays nothing on save.</p>
 <hr>
@@ -10112,7 +10112,7 @@ for this record»</em>. Only <code>sysTaskCreate</code>, which hangs from no obj
 <h2 id="4-outbound-webhooks">4. Outbound webhooks<a class="headerlink" href="#4-outbound-webhooks" title="Permanent link">¶</a></h2>
 <p>A <strong>subscription</strong> (a rule of <code>Objects_Rules</code> with a webhook step in <code>Objects_Actions</code>; <code>sysWebhookSubscription</code> object) sends a <code>POST</code> to a URL when a record of the object is saved or deleted. The save <strong>never waits for the receiver</strong>: the delivery is queued (<code>WebHooks_Deliveries</code>) and the <strong><code>flxWebhookDispatcher</code></strong> job (every minute, <code>SendPendingWebhooks</code> process) sends it.</p>
 <p>Subscriptions and their deliveries live on <strong>a single screen</strong>, <em>Outgoing webhooks</em> / <em>Webhooks de salida</em>, with two tabs: <strong>Subscriptions</strong> (<em>Suscripciones</em>) and <strong>Deliveries</strong> (<em>Envíos</em>), the log of everything that has been sent. It is the same in both skins. It can also be reached from the <em>Webhooks</em> section of the object's workbench.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png" data-desc-position="bottom"><img alt="Outgoing webhooks, Subscriptions tab" src="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Outbound and inbound webhooks</p>
 <p>This screen is the <strong>outbound</strong> one: Flexygo notifies another system. <strong>Inbound</strong> webhooks (another system calls Flexygo, <code>/webhook/{id}</code>, <code>sysWebHook</code> object) belong to the web API and have no menu node.</p>
@@ -10163,7 +10163,7 @@ for this record»</em>. Only <code>sysTaskCreate</code>, which hangs from no obj
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png" data-desc-position="bottom"><img alt="A subscription's record view, with the secret masked" src="../../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png"></a></p>
 <p>An object's subscriptions are read once along with its configuration and are reloaded when a subscription is saved from its record view. An object without subscriptions pays nothing on save.</p>
 <h3 id="the-body">The body<a class="headerlink" href="#the-body" title="Permanent link">¶</a></h3>
 <p>With <code>record</code> and <code>keys</code>, the body is a fixed envelope with the record in <code>data</code> (binary fields are omitted):</p>
@@ -10251,7 +10251,7 @@ for this record»</em>. Only <code>sysTaskCreate</code>, which hangs from no obj
 </tbody>
 </table>
 <p>All deliveries, including task callbacks (§5), are on the <strong>Deliveries</strong> tab (<em>Envíos</em>). In the record view of a <code>failed</code> or <code>dead</code> delivery, the <strong>Retry</strong> process queues it again right away (a failure leaves it <code>dead</code> again).</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png" data-desc-position="bottom"><img alt="Outgoing webhooks, Deliveries tab" src="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png"></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Send a test</p>
 <p>In the subscription's record view, <strong>Send a test</strong> asks for a <code>WHERE</code> that names a record and queues a <strong>real delivery</strong> with <code>event: test</code>, even if the subscription is disabled or the record does not meet the condition —the message says whether a save would have fired it—. It goes out within a minute and stays on the <strong>Deliveries</strong> tab.</p>

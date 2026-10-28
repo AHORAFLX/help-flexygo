@@ -9827,12 +9827,12 @@
 <p>En <strong>Servicios externos</strong> se da de alta la API una sola vez: panel de control → área <strong>Objetos</strong> → <em>Servicios externos</em> (en flexy2022, <em>Admin Work Area → Object Management → External services</em>), el buscador (<strong>Ctrl K</strong>), o desde el asistente de objetos, con el <strong>+</strong> junto al servicio; el botón del enlace, a su lado, abre el servicio elegido. Cada objeto externo apunta a un servicio.</p>
 <p>¿Quieres probarlo de principio a fin con una API pública? <a href="../ExternalEntitiesTryIt/">Pruébalo: un objeto que vive en una API REST</a>.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-01-servicios.png" data-desc-position="bottom"><img alt="Lista de servicios externos" src="../../../docs_assets/images/ExternalEntities/ext-01-servicios.png"></a>
 <br>
 <figcaption>Los servicios externos: cada uno es una API a la que apuntan uno o varios objetos</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-02-servicio.png" data-desc-position="bottom"><img alt="Formulario de un servicio externo" src="../../../docs_assets/images/ExternalEntities/ext-02-servicio.png"></a>
 <br>
 <figcaption>Un servicio con autenticación por API key: la cabecera y, al lado, el secreto, cuyo rótulo dice qué guarda</figcaption>
 </figure>
@@ -9891,18 +9891,18 @@
 <h2 id="2-crear-el-objeto-con-el-asistente">2. Crear el objeto con el asistente<a class="headerlink" href="#2-crear-el-objeto-con-el-asistente" title="Permanent link">¶</a></h2>
 <p>Desde la lista <strong>Objects</strong>, con el botón de la varita (<strong>New object</strong>), en el paso <strong>Origen</strong> se elige <strong>An external API</strong>. Basta el servicio y la ruta de la lista; la ruta del registro (<code>{key}</code> se sustituye por la clave) hace la ficha más rápida, y las rutas del array y del total sirven para APIs que envuelven la respuesta.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-03-asistente-origen.png" data-desc-position="bottom"><img alt="Paso Origen del asistente con la opción API externa" src="../../../docs_assets/images/ExternalEntities/ext-03-asistente-origen.png"></a>
 <br>
 <figcaption>Paso 2 — el origen «API externa»: servicio, ruta de la lista y del registro</figcaption>
 </figure>
 <p><strong>Probe the API</strong> llama a la lista una vez, sin guardar nada, y enseña una muestra de los registros y las <strong>propiedades propuestas</strong>: nombre, etiqueta, tipo deducido, cuál es la clave y si es obligatoria (un texto largo, como una imagen en base64, nunca se propone obligatorio). Las anotaciones del protocolo (<code>@odata.etag</code>, <code>Campo@odata.mediaReadLink</code>, <code>@id</code>) no son datos del registro: se listan aparte como saltadas. Se pueden quitar, renombrar o cambiar de tipo antes de crear.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-04-asistente-sonda.png" data-desc-position="bottom"><img alt="Resultado de la sonda con las propiedades propuestas" src="../../../docs_assets/images/ExternalEntities/ext-04-asistente-sonda.png"></a>
 <br>
 <figcaption>La sonda: 100 registros, una muestra y cuatro propiedades propuestas con su clave</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-05-asistente-revision.png" data-desc-position="bottom"><img alt="Paso de revisión antes de crear" src="../../../docs_assets/images/ExternalEntities/ext-05-asistente-revision.png"></a>
 <br>
 <figcaption>Paso 3 — lo que se va a crear: el objeto, la colección, las propiedades y una vista de lista por defecto</figcaption>
 </figure>
@@ -9915,13 +9915,13 @@
 <h2 id="3-afinar-en-el-banco-de-trabajo">3. Afinar en el banco de trabajo<a class="headerlink" href="#3-afinar-en-el-banco-de-trabajo" title="Permanent link">¶</a></h2>
 <p>El banco de trabajo del objeto muestra, para un objeto externo, la sección <strong>API</strong>. Ahí están las rutas de <strong>insertar, actualizar y borrar</strong> (vacías, el objeto es de solo lectura: la lista no ofrece <em>New</em>, la ficha no ofrece <em>Edit</em> ni <em>Delete</em>, y cada acción aparece al poner su ruta, o si se escribe con un proceso propio), el método de actualización (<code>PUT</code> o <code>PATCH</code>), el formato del cuerpo (<code>JSON</code>), las rutas del array y del total, y las plantillas de filtro y orden para APIs con convención propia. El botón <strong>Probe</strong> vuelve a sondar la API y ofrece añadir las propiedades que falten.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-06-banco-api.png" data-desc-position="bottom"><img alt="Sección API del banco de trabajo" src="../../../docs_assets/images/ExternalEntities/ext-06-banco-api.png"></a>
 <br>
 <figcaption>La sección API del banco de trabajo, con la sonda: las cuatro propiedades ya existen</figcaption>
 </figure>
 <p>En el formulario de cada <strong>propiedad</strong> hay dos campos que solo tienen sentido en un objeto externo: <strong>Is key</strong> (la clave del registro en la API) y <strong>External name</strong> (la ruta JSON del campo cuando en la API se llama distinto, por ejemplo <code>address.city</code>).</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-07-propiedad.png" data-desc-position="bottom"><img alt="Formulario de una propiedad con Is key y External name" src="../../../docs_assets/images/ExternalEntities/ext-07-propiedad.png"></a>
 <br>
 <figcaption>La propiedad `id`: es la clave y su nombre externo coincide, así que va vacío</figcaption>
 </figure>
@@ -9985,17 +9985,17 @@
 <h2 id="4-usar-el-objeto">4. Usar el objeto<a class="headerlink" href="#4-usar-el-objeto" title="Permanent link">¶</a></h2>
 <p>A partir de ahí es un objeto más: se coloca en páginas, se le dan permisos, se relaciona con otros. La lista pagina, ordena y filtra a través de la API; la ficha y el formulario leen y escriben el registro; los procesos antes y después de insertar, actualizar y borrar y la auditoría se ejecutan igual.</p>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-08-lista.png" data-desc-position="bottom"><img alt="Lista de un objeto externo" src="../../../docs_assets/images/ExternalEntities/ext-08-lista.png"></a>
 <br>
 <figcaption>La lista del objeto recién creado, leída de la API</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-09-ficha.png" data-desc-position="bottom"><img alt="Ficha de un objeto externo con una lista relacionada de otro objeto externo" src="../../../docs_assets/images/ExternalEntities/ext-09-ficha.png"></a>
 <br>
 <figcaption>Una ficha con una lista relacionada: los dos objetos son externos (un cliente y sus pedidos)</figcaption>
 </figure>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-11-edicion.png" data-desc-position="bottom"><img alt="Formulario de edición de un objeto externo" src="../../../docs_assets/images/ExternalEntities/ext-11-edicion.png"></a>
 <br>
 <figcaption>El formulario de edición: guardar es una llamada a la API, y su error, si lo hay, llega al formulario</figcaption>
 </figure>
@@ -10116,7 +10116,7 @@
 </tbody>
 </table>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-10-rechazo.png" data-desc-position="bottom"><img alt="Mensaje de rechazo de una lista SQL y un gráfico sobre un objeto externo" src="../../../docs_assets/images/ExternalEntities/ext-10-rechazo.png"></a>
 <br>
 <figcaption>Una lista SQL y un gráfico apuntados a un objeto externo: el mensaje dice el objeto, el módulo y la alternativa</figcaption>
 </figure>
@@ -10213,7 +10213,7 @@
 </tbody>
 </table>
 <figure>
-  
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ExternalEntities/ext-12-grafica-endpoint.png" data-desc-position="bottom"><img alt="Gráfica alimentada por un endpoint" src="../../../docs_assets/images/ExternalEntities/ext-12-grafica-endpoint.png"></a>
 <br>
 <figcaption>Un flx-echart sin SQL sobre un objeto externo: dos series y dos categorías, tal como las devuelve la API</figcaption>
 </figure>

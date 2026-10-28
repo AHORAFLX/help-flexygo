@@ -9543,7 +9543,7 @@
 
 <h1 id="how-to-fix-the-damaged-central-directory-error-when-updating-the-application">How to fix the "Damaged central directory" error when updating the application<a class="headerlink" href="#how-to-fix-the-damaged-central-directory-error-when-updating-the-application" title="Permanent link">¶</a></h1>
 <p>The problem comes from corrupted NuGet files: an incomplete download leaves the file corrupted, the same way a zip file can't be unzipped when the download didn't finish.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/FAQ/CorruptedCentralDirectory/1.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/FAQ/CorruptedCentralDirectory/1.png"></a></p>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">¶</a></h2>
 <p>Delete the files in the <code>downloads</code> and <code>packages</code> folders of the <code>FlexygoService</code> service on the server, then restart the update process.</p>
 

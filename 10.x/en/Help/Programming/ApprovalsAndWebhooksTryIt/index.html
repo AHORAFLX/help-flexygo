@@ -9717,7 +9717,7 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png" data-desc-position="bottom"><img alt="Logic and rules in the control panel" src="../../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png"></a></p>
 <p><strong>New</strong>, and fill in:</p>
 <table>
 <thead>
@@ -9758,20 +9758,20 @@
 </tbody>
 </table>
 <p>Leave <strong>Options</strong> empty (they will be <em>Approve</em> / <em>Reject</em>) and <strong>Only if</strong> empty (every new role). Save.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/regla.png" data-desc-position="bottom"><img alt="The rule's record view" src="../../../../docs_assets/images/ApprovalsAndWebhooks/regla.png"></a></p>
 <p><strong>Check</strong>: in the record view's menu, <strong>Test with a record</strong>, with <code>Id = 'admins'</code>. A dialog shows the task it would open (rendered title, to whom, priority, due date), <strong>without creating it</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" data-desc-position="bottom"><img alt="Test with a record" src="../../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" width="600"></a></p>
 <h2 id="2-creating-a-role">2. Creating a role<a class="headerlink" href="#2-creating-a-role" title="Permanent link">¶</a></h2>
 <p>Open the roles list (in skin2026, the <strong>Roles</strong> shortcut in the control panel; in flexy2022, under <strong>Admin › Seguridad</strong>) and press <strong>New</strong>: Id <code>salestest</code>, name <em>Sales test</em>. Save.</p>
 <p><strong>Check</strong>: the <strong>Decisions</strong> menu node (<em>Decisiones</em>) raises its counter by one, and there is a notice in the bell. If you do not see it straight away, reload the page.</p>
 <h2 id="3-deciding">3. Deciding<a class="headerlink" href="#3-deciding" title="Permanent link">¶</a></h2>
 <p>Open <strong>Decisions</strong>. The task <em>Approve the new role Sales test</em> is among yours, assigned to <em>Admins</em> («anyone in the role»), with its deadline and the link to the role. The segments at the top separate what is yours, what belongs to your roles, everything open and what is resolved.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png" data-desc-position="bottom"><img alt="The decisions inbox" src="../../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png"></a></p>
 <p>Press <strong>Approve</strong> on the row. <strong>Check</strong>: the row moves to <strong>Resolved</strong>, with who decided and when.</p>
 <div class="admonition tip">
 <p class="admonition-title">The card on the record's record view</p>
 <p>On objects that use the <strong>default record view</strong>, the same decision shows at the top of the record's record view, with its comment and its history. It is the most direct way to decide while looking at the record. Roles has its own record view, so it does not show there: the <code>sysmod-task-decision-2026</code> module is placed by hand, like any other.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png" data-desc-position="bottom"><img alt="The decision card" src="../../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png"></a></p>
 </div>
 <h2 id="4-creating-an-outbound-webhook">4. Creating an outbound webhook<a class="headerlink" href="#4-creating-an-outbound-webhook" title="Permanent link">¶</a></h2>
 <table>
@@ -9789,7 +9789,7 @@
 </tbody>
 </table>
 <p>It is one screen with two tabs: <strong>Subscriptions</strong> (<em>Suscripciones</em>), what is being watched, and <strong>Deliveries</strong> (<em>Envíos</em>), everything that has been sent.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png" data-desc-position="bottom"><img alt="Outgoing webhooks" src="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png"></a></p>
 <p>On <strong>Subscriptions</strong>, <strong>New</strong>:</p>
 <table>
 <thead>
@@ -9826,7 +9826,7 @@
 </tbody>
 </table>
 <p>Save. The secret is masked in the record view.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png" data-desc-position="bottom"><img alt="A subscription's record view" src="../../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png"></a></p>
 <p><strong>Check</strong>: in the record view's menu, <strong>Send a test</strong>, with <code>Id = 'admins'</code>. It queues a real delivery with <code>event: test</code>. In less than a minute it shows on the <strong>Deliveries</strong> tab as <code>sent</code> with status <code>200</code>, and your receiver shows the <code>POST</code>.</p>
 <h2 id="5-watching-it-arrive-for-real">5. Watching it arrive for real<a class="headerlink" href="#5-watching-it-arrive-for-real" title="Permanent link">¶</a></h2>
 <p>Edit the <em>Sales test</em> role (change the name) and save. The save does not wait for the receiver: the delivery is queued and goes out within the next minute.</p>
@@ -9835,7 +9835,7 @@
 <li>on <strong>Deliveries</strong> there is a new row, event <code>update</code>, <code>sent</code>, <code>200</code>;</li>
 <li>the receiver gets the envelope with the whole role in <code>data</code>, and the headers <code>X-Flexygo-Event: update</code> and <code>X-Flexygo-Signature: sha256=…</code>.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png" data-desc-position="bottom"><img alt="The Deliveries tab" src="../../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png"></a></p>
 <p>To check the signature with the secret from step 4, the code is in the reference: <a href="../ApprovalsAndWebhooks/#headers-and-signature">Headers and signature</a>.</p>
 <h2 id="6-going-further-an-orchestrator-waiting-for-the-decision">6. Going further: an orchestrator waiting for the decision<a class="headerlink" href="#6-going-further-an-orchestrator-waiting-for-the-decision" title="Permanent link">¶</a></h2>
 <p>The two pieces come together when an orchestrator (n8n, Make…) opens the task through the web API and <strong>waits</strong> for someone to decide:</p>

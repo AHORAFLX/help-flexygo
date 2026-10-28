@@ -9611,7 +9611,7 @@
 
 <h1 id="im-updating-the-version-and-i-get-a-foreign-key-conflict-error">I'm updating the version and I get a Foreign Key conflict error<a class="headerlink" href="#im-updating-the-version-and-i-get-a-foreign-key-conflict-error" title="Permanent link">¶</a></h1>
 <p>If an update shows an error similar to this one:</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/FAQ/ForeignKeyConflict/1.jpg" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/FAQ/ForeignKeyConflict/1.jpg"></a></p>
 <p>The problem is that records have been added to new Flexygo objects (objects, views, modules, pages...) with the wrong <code>OriginId</code> — meaning certain customizations were marked as system or product by mistake (usually from copy-pasting). As a result, the system won't add them during merges, and it will throw errors in other related tables.</p>
 <p>The <a href="../../../../MoreInformation/1FAQ/readme/utils/CambiarOriginId.sql">CambiarOriginId.sql</a> script, available from <a href="../OriginIdChangeScript/">Developing: script to change the OriginId of all our modifications</a>, reports every record whose origin is marked as system or product but should be marked as customer.</p>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">¶</a></h2>

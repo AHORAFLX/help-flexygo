@@ -9561,7 +9561,7 @@
 
 <h1 id="did-you-know-you-can-identify-the-source-of-a-sql-connection-by-application">Did you know you can identify the source of a SQL connection by application?<a class="headerlink" href="#did-you-know-you-can-identify-the-source-of-a-sql-connection-by-application" title="Permanent link">¶</a></h1>
 <p>To analyze the source of the connections to your database, you can filter using the application's name.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/DidYouKnow/SqlConnectionAppName/1.png" data-desc-position="bottom"><img alt="" src="../../../../docs_assets/images/DidYouKnow/SqlConnectionAppName/1.png"></a></p>
 <p>The configuration wizard doesn't add this attribute: if you don't set it, SQL Server shows the data provider's generic name. To identify your application, add the <strong>Application Name</strong> attribute to each connection string in the <code>ConnectionStrings</code> section of the Backend's <code>appsettings.json</code>:</p>
 <div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">"ConnectionStrings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"ConfConnectionString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Source=MyServer;Initial Catalog=MyApp_IC;User ID=sa;Password=...;TrustServerCertificate=True;Application Name=MyApp"</span><span class="p">,</span>

@@ -9717,7 +9717,7 @@
 </tr>
 </tbody>
 </table>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png" data-desc-position="bottom"><img alt="Logic and rules en el panel de control" src="../../../docs_assets/images/ApprovalsAndWebhooks/panel-logica.png"></a></p>
 <p><strong>New</strong>, y rellena:</p>
 <table>
 <thead>
@@ -9758,20 +9758,20 @@
 </tbody>
 </table>
 <p>Deja <strong>Options</strong> vacío (serán <em>Approve</em> / <em>Reject</em>) y <strong>Only if</strong> vacío (todos los roles nuevos). Guarda.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/regla.png" data-desc-position="bottom"><img alt="La ficha de la regla" src="../../../docs_assets/images/ApprovalsAndWebhooks/regla.png"></a></p>
 <p><strong>Comprueba</strong>: en el menú de la ficha, <strong>Test with a record</strong>, con <code>Id = 'admins'</code>. Sale un diálogo con la tarea que abriría (título rendido, a quién, prioridad, vencimiento), <strong>sin crearla</strong>.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" data-desc-position="bottom"><img alt="Test with a record" src="../../../docs_assets/images/ApprovalsAndWebhooks/probar-regla.png" width="600"></a></p>
 <h2 id="2-da-de-alta-un-rol">2. Da de alta un rol<a class="headerlink" href="#2-da-de-alta-un-rol" title="Permanent link">¶</a></h2>
 <p>Abre la lista de roles (en skin2026, el acceso <strong>Roles</strong> del panel de control; en flexy2022, en <strong>Admin › Seguridad</strong>) y pulsa <strong>New</strong>: Id <code>salestest</code>, nombre <em>Sales test</em>. Guarda.</p>
 <p><strong>Comprueba</strong>: el nodo <strong>Decisions</strong> (<em>Decisiones</em>) del menú sube su contador en uno, y en la campana hay un aviso. Si no lo ves al momento, recarga la página.</p>
 <h2 id="3-decide">3. Decide<a class="headerlink" href="#3-decide" title="Permanent link">¶</a></h2>
 <p>Abre <strong>Decisions</strong>. La tarea <em>Approve the new role Sales test</em> está entre las tuyas, asignada a <em>Admins</em> («anyone in the role»), con su plazo y el enlace al rol. Los segmentos de arriba separan lo tuyo, lo de tus roles, todo lo abierto y lo resuelto.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png" data-desc-position="bottom"><img alt="La bandeja de decisiones" src="../../../docs_assets/images/ApprovalsAndWebhooks/bandeja.png"></a></p>
 <p>Pulsa <strong>Approve</strong> en la fila. <strong>Comprueba</strong>: la fila pasa a <strong>Resolved</strong>, con quién decidió y cuándo.</p>
 <div class="admonition tip">
 <p class="admonition-title">La tarjeta en la ficha del registro</p>
 <p>En los objetos que usan la <strong>ficha por defecto</strong>, la misma decisión sale arriba de la ficha del registro, con su comentario y su historial. Es la forma más directa de decidir mientras miras el registro. Roles tiene ficha propia, así que ahí no sale: se coloca el módulo <code>sysmod-task-decision-2026</code> a mano, como cualquier otro.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png" data-desc-position="bottom"><img alt="La tarjeta de decisión" src="../../../docs_assets/images/ApprovalsAndWebhooks/tarjeta.png"></a></p>
 </div>
 <h2 id="4-crea-un-webhook-de-salida">4. Crea un webhook de salida<a class="headerlink" href="#4-crea-un-webhook-de-salida" title="Permanent link">¶</a></h2>
 <table>
@@ -9789,7 +9789,7 @@
 </tbody>
 </table>
 <p>Es una pantalla con dos pestañas: <strong>Subscriptions</strong> (<em>Suscripciones</em>), lo que se vigila, y <strong>Deliveries</strong> (<em>Envíos</em>), todo lo que se ha mandado.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png" data-desc-position="bottom"><img alt="Webhooks de salida" src="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-suscripciones.png"></a></p>
 <p>En <strong>Subscriptions</strong>, <strong>New</strong>:</p>
 <table>
 <thead>
@@ -9826,7 +9826,7 @@
 </tbody>
 </table>
 <p>Guarda. El secreto queda enmascarado en la ficha.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png" data-desc-position="bottom"><img alt="La ficha de una suscripción" src="../../../docs_assets/images/ApprovalsAndWebhooks/suscripcion.png"></a></p>
 <p><strong>Comprueba</strong>: en el menú de la ficha, <strong>Send a test</strong>, con <code>Id = 'admins'</code>. Encola una entrega real con <code>event: test</code>. En menos de un minuto aparece en la pestaña <strong>Deliveries</strong> como <code>sent</code> con estado <code>200</code>, y tu receptor enseña el <code>POST</code>.</p>
 <h2 id="5-miralo-llegar-de-verdad">5. Míralo llegar de verdad<a class="headerlink" href="#5-miralo-llegar-de-verdad" title="Permanent link">¶</a></h2>
 <p>Edita el rol <em>Sales test</em> (cambia el nombre) y guarda. El guardado no espera al receptor: la entrega se encola y sale en el minuto siguiente.</p>
@@ -9835,7 +9835,7 @@
 <li>en <strong>Deliveries</strong> hay una fila nueva, evento <code>update</code>, <code>sent</code>, <code>200</code>;</li>
 <li>en el receptor llega el sobre con el rol entero en <code>data</code>, y las cabeceras <code>X-Flexygo-Event: update</code> y <code>X-Flexygo-Signature: sha256=…</code>.</li>
 </ul>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png" data-desc-position="bottom"><img alt="La pestaña Deliveries" src="../../../docs_assets/images/ApprovalsAndWebhooks/webhooks-envios.png"></a></p>
 <p>Para comprobar la firma con el secreto del paso 4, el código está en la referencia: <a href="../ApprovalsAndWebhooks/#cabeceras-y-firma">Cabeceras y firma</a>.</p>
 <h2 id="6-si-quieres-mas-que-un-orquestador-espere-la-decision">6. Si quieres más: que un orquestador espere la decisión<a class="headerlink" href="#6-si-quieres-mas-que-un-orquestador-espere-la-decision" title="Permanent link">¶</a></h2>
 <p>Las dos piezas se juntan cuando un orquestador (n8n, Make…) abre la tarea por la web API y <strong>espera</strong> a que alguien decida:</p>
