@@ -177,8 +177,8 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Notifications
 
-- **Receive real-time notifications when records are created, and configure which users can see them.** You can define in the object configuration which records generate notifications; list filters and security conditions are applied for each recipient. The notification appears in the lower-right corner and lets you open the record or its list. If several records of the same type are created, the notification is updated instead of accumulating.
-- **Enable notifications to track changes to the records you want.** Notifications report inserts, modifications, and deletions in configured objects. Each user receives notifications according to their own session and permissions.
+- **Configure real-time alerts for new records and limit them to records each user can view.** Define filters for each object; filters and conditions on lists are also taken into account, as well as each recipient’s permissions. Alerts appear when records are created from another screen and let you open the record or its list. Saving is not blocked while checking who should receive them, even when filters or row-level security apply, and a connection issue that prevented them from being received correctly is fixed.
+- **Enable alerts for insertions, modifications, and deletions of the objects you want to track.** Each user receives alerts using their own session and permissions. This ensures the information is tailored to what each person can view.
 - **The application includes a push notification service.** The service integrates with the application's offline features.
 
 ### Processes
@@ -357,7 +357,7 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Notifications
 
-- **The decision card appears only when appropriate, and the bell updates when notifications change.** This way, notifications show when there is a decision to address and avoid unnecessary updates to the bell.
+- **The decision card appears when appropriate, and the bell immediately reflects changes and unread emails.** You can open unread emails from the bell. When you do, the bell closes and the counter decreases without waiting for a later task.
 - **Error and warning messages can remain on screen until the user closes them.** This option is useful when a message needs to be read carefully and should not disappear automatically.
 
 ### Performance
@@ -519,9 +519,7 @@ Simplifies installation and updates with wizards, refreshes the application with
 
 ### Notifications
 
-- **You can open unread emails from the bell and see its counter update immediately.** When you open an email, the bell closes and the unread message counter decreases without waiting for a later task.
-- **Notification sounds no longer repeat continuously when many notifications arrive at once.** This correction prevents continuous ringing while scheduled processes are running.
-- **A connection issue that prevented real-time notifications from being received correctly is corrected.** The change affects the connection the application uses to receive live updates.
+- **The notification sound no longer repeats continuously when many notifications arrive at once.** This fix prevents the chime from ringing nonstop while scheduled processes are running.
 
 ### Performance
 

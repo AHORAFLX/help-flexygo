@@ -184,8 +184,8 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Notificaciones
 
-- **Recibe avisos en tiempo real cuando se crean registros y configura qué usuarios pueden verlos.** Puedes definir en la configuración del objeto qué registros generan avisos; se aplican los filtros y las condiciones de seguridad de la lista para cada destinatario. El aviso aparece en la esquina inferior derecha y permite abrir el registro o su lista. Si se crean varios registros del mismo tipo, el aviso se actualiza en lugar de acumularse.
-- **Activa avisos para seguir los cambios de los registros que quieras.** Los avisos informan de inserciones, modificaciones y eliminaciones en los objetos configurados. Cada usuario recibe el aviso según su propia sesión y sus permisos.
+- **Configura avisos en tiempo real de nuevos registros y limita su envío a los registros que cada usuario puede consultar.** Define filtros para cada objeto; también se tienen en cuenta los filtros y las condiciones de las listas, además de los permisos de cada destinatario. Los avisos aparecen al crear registros desde otra pantalla y permiten abrir el registro o su lista. El guardado no se bloquea al comprobar quién debe recibirlos, incluso cuando hay filtros o seguridad por fila, y se corrige un fallo de conexión que impedía recibirlos correctamente.
+- **Activa avisos para las inserciones, modificaciones y eliminaciones de los objetos que quieras seguir.** Cada usuario recibe los avisos con su propia sesión y permisos. Así, la información se ajusta a lo que puede consultar cada persona.
 - **La aplicación incorpora un servicio de notificaciones push.** El servicio se integra con las funciones de uso sin conexión de la aplicación.
 
 ### Procesos
@@ -370,8 +370,8 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Notificaciones
 
-- **La tarjeta de decisión solo aparece cuando corresponde y la campana se actualiza al cambiar las notificaciones.** Así, las notificaciones reflejan cuándo hay una decisión que atender y evitan actualizaciones innecesarias de la campana.
-- **Los avisos de error y advertencia pueden permanecer en pantalla hasta que el usuario los cierre.** Esta opción resulta útil cuando el mensaje necesita leerse con atención y no debe desaparecer automáticamente.
+- **La tarjeta de decisión aparece cuando corresponde y la campana refleja al momento los cambios y los correos no leídos.** Puedes abrir desde la campana los correos no leídos. Al hacerlo, la campana se cierra y el contador disminuye sin esperar a una tarea posterior.
+- **Los avisos de error y de advertencia pueden permanecer en pantalla hasta que el usuario los cierre.** Esta opción resulta útil cuando el mensaje necesita leerse con atención y no debe desaparecer automáticamente.
 
 ### Procesos
 
@@ -528,9 +528,7 @@ Facilita la instalación y las actualizaciones con asistentes, renueva la aplica
 
 ### Notificaciones
 
-- **Puedes abrir desde la campana los correos no leídos y ver cómo su contador se actualiza al momento.** Al abrir un correo, la campana se cierra y el contador de mensajes no leídos disminuye sin esperar a una tarea posterior.
-- **El sonido de las notificaciones deja de repetirse continuamente cuando llegan muchas a la vez.** La corrección evita el timbre continuo durante la ejecución de procesos programados.
-- **Se corrige un fallo de conexión que impedía recibir correctamente las notificaciones en tiempo real.** El ajuste afecta a la conexión que utiliza la aplicación para recibir actualizaciones en directo.
+- **El sonido de las notificaciones deja de repetirse continuamente cuando llegan muchas a la vez.** La corrección evita que el timbre suene sin parar durante la ejecución de procesos programados.
 
 ### Procesos
 
