@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Azure DevOps (Azure Pipelines)
 
 Azure Pipelines supports two modes:  
@@ -16,6 +21,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  productName: 'MiProducto'   # prefix of the solution projects
+
 stages:
 - stage: Build
   displayName: Build & Test
@@ -33,11 +41,17 @@ stages:
       displayName: Build
     - script: dotnet test --configuration Release --no-build
       displayName: Test
-    - script: dotnet publish src/Backend/Backend.csproj -c Release -o out
-      displayName: Publish
+    - script: dotnet publish $(productName).Frontend/$(productName).Frontend.csproj -c Release -o out/frontend
+      displayName: Publish Frontend
+    - script: dotnet publish $(productName).Backend/$(productName).Backend.csproj -c Release -o out/backend
+      displayName: Publish Backend
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: 'out'
+        pathToPublish: 'out/frontend'
+        artifactName: 'frontend-drop'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: 'out/backend'
         artifactName: 'backend-drop'
 - stage: Deploy
   dependsOn: Build
@@ -49,15 +63,24 @@ stages:
         deploy:
           steps:
           - download: current
+            artifact: frontend-drop
+          - download: current
             artifact: backend-drop
           # Requires the agent to be registered in a Deployment Group with the target IIS server
           - task: IISWebAppDeploymentOnMachineGroup@0
-            displayName: Deploy to IIS
+            displayName: Deploy Backend to IIS
             inputs:
               WebSiteName: 'FlexygoBackend'
               Package: '$(Pipeline.Workspace)/backend-drop'
               TakeAppOfflineFlag: true
-              XmlVariableSubstitution: true
+              JSONFiles: '**/conf/appsettings.json'
+          - task: IISWebAppDeploymentOnMachineGroup@0
+            displayName: Deploy Frontend to IIS
+            inputs:
+              WebSiteName: 'FlexygoFrontend'
+              Package: '$(Pipeline.Workspace)/frontend-drop'
+              TakeAppOfflineFlag: true
+              JSONFiles: '**/conf/appsettings.json'
 ```
 
 ---
@@ -69,16 +92,20 @@ Define these variables in **Pipelines → {your pipeline} → Edit → Variables
 | Variable | Description | Scope |
 |---|---|---|
 | `ASPNETCORE_ENVIRONMENT` | Execution environment (`Production`, `Staging`) | Deployment |
-| `ConnectionStrings__Default` | Database connection string | Deployment |
+| `ConnectionStrings.ConfConnectionString` | Connection string of the configuration database (Backend) | Deployment |
+| `ConnectionStrings.DataConnectionString` | Connection string of the data database (Backend) | Deployment |
+| `BackendEndpoint` | Backend URL used by the Frontend, ending in `/api/backend/` | Deployment |
 | `WebSiteName` | Target IIS site name | Deployment |
 
 > Mark sensitive variables as **Secret** so they are masked in the pipeline logs.
+
+The deployment substitutes these variables in each application's `conf/appsettings.json` (`JSONFiles`); JSON levels are separated with a dot. In IIS the application encrypts the connection strings on its next startup (see [Encrypted appsettings](../1Deployment/2ConfigWizard/EncryptedSettings.md)). As environment variables, for example in the *App settings* of an Azure Web App, they are written with a double underscore: `ConnectionStrings__ConfConnectionString`, `ConnectionStrings__DataConnectionString`.
 
 ---
 
 ## Alternative: Deploying to Azure Web App
 
-If you deploy to Azure App Service instead of IIS, replace the `IISWebAppDeploymentOnMachineGroup@0` task with:
+If you deploy to Azure App Service instead of IIS, replace each `IISWebAppDeploymentOnMachineGroup@0` task with one like this (the Frontend's with `frontend-drop` and its own app):
 
 ```yaml
           - task: AzureWebApp@1
@@ -113,7 +140,7 @@ If your target is a Docker host, add this alternative job to the Deploy stage:
       inputs:
         command: buildAndPush
         repository: 'your-registry/flexygo-backend'
-        dockerfile: 'src/Backend/Dockerfile'
+        dockerfile: '$(productName).Backend/Dockerfile'
         tags: |
           $(Build.BuildId)
           latest

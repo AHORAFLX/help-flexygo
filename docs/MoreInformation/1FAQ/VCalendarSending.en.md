@@ -4,21 +4,21 @@ Flexygo has a function you can call from library processes that sends an email w
 
 You need to fill in the corresponding parameters and pass them to the `FLEXYGO.Vcalendar` function.
 
-```vb
-Public Sub New(aStartDate As Date, aEnddate As Date, aLocation As String, aOrganizerName As String, aOrganizerEmail As String, aSummary As String, aSubject As String, aAttendeeEmail As String, aguid As String, Optional aBody As String = "", Optional aReminder As Boolean = False)
+```csharp
+public Vcalendar(DateTime aStartDate, DateTime aEnddate, string aLocation, string aOrganizerName, string aOrganizerEmail, string aSummary, string aSubject, string aAttendeeEmail, string aguid, string aBody = "", bool aReminder = false, bool aDefaultBodyText = true, dynamic aReminderDate = null)
 ```
 
 Example showing the instance and call to then send the email:
 
-```vb
-Dim vcal As New FLEXYGO.Vcalendar(pStartDate, pEndDate, pLocation, pCreatedByName, pEmail, pObservations, pSubject, pEmail, pCalendarIdentificator, pBodyTextMail)
+```csharp
+var vcal = new FLEXYGO.Vcalendar(pStartDate, pEndDate, pLocation, pCreatedByName, pEmail, pObservations, pSubject, pEmail, pCalendarIdentificator, pBodyTextMail);
 
-vcal.Send()
+vcal.Send();
 ```
 
 If the user sending it has an associated mail account, that account will be used. Otherwise, the default sending account defined in the system will be used.
 
-The system account is the one entered during installation, and it's stored in the `web.config` file, in the `mailSettings` section.
+The system account is the one entered in the **Outgoing mail** step of the [configuration wizard](../../1Deployment/2ConfigWizard/Configuration.md#5-outgoing-mail), and it's stored in the `MailSettings` section of the Backend's `appsettings.json`.
 
 ## See also
 

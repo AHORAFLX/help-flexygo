@@ -18,6 +18,16 @@ El sistema SQL Live Data permite al chat generar respuestas a partir de consulta
 * **Generación segura de consultas:** la API de OpenAI no tiene acceso real ni directo a la base de datos. En cambio, crea consultas T-SQL específicas que luego se ejecutan en Flexygo.
 * **Privacidad en las consultas:** las consultas generadas por OpenAI son estrictamente de lectura, lo que imposibilita modificaciones en la base de datos. Al chat solo se envían los resultados específicos y limitados de dichas consultas, garantizando así la privacidad. Estos resultados aislados carecen de contexto completo, lo que incrementa aún más la protección de los datos —por ejemplo, proporcionando solo un dato aislado como "32" sin contexto adicional—. Los usuarios también pueden visualizar las consultas ejecutadas por el chat para asegurar la transparencia y la confianza en el proceso.
 
+## Asistentes de IA conectados mediante MCP <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
+
+A partir de la versión 10, Flexygo incluye un servidor MCP para que cada usuario conecte su propio asistente de IA, por ejemplo Claude o ChatGPT. En este caso los datos no pasan por OpenAI: los resultados de las consultas se envían al asistente que conecta el usuario y se tratan según la política de privacidad de su proveedor.
+
+* **Desactivado por defecto:** el administrador activa el MCP en **Administración > Seguridad > WebAPI** y asigna el permiso a los usuarios o roles autorizados.
+* **Con los permisos del usuario:** el asistente solo ve y hace lo que puede hacer el usuario que lo conecta. Al conectarlo, el usuario decide si tendrá acceso de solo lectura o también podrá modificar datos.
+* **Bajo control del usuario:** desde **Asistentes conectados**, en el menú del perfil, puede revisar las conexiones y desconectarlas.
+
+Consulta [Asistentes de IA conectados a la aplicación (MCP)](../../Help/AIAssistants/2Reference.md).
+
 ## Política de privacidad de OpenAI
 
 Toda la comunicación y el envío de datos a la API de OpenAI desde Flexygo se realiza conforme a la [política de privacidad de OpenAI](https://openai.com/es-ES/policies/row-privacy-policy).

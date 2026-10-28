@@ -1,6 +1,6 @@
 # ¿Sabías que dispones de un parámetro para establecer el patrón del título de la ventana del navegador?
 
-A partir de la versión 4.9.0.x, Flexygo ofrece una nueva configuración llamada **WindowsNameStructure** que permite personalizar el título de la ventana del navegador mediante patrones específicos.
+A partir de la versión 4.9.0.x, Flexygo ofrece una nueva configuración llamada **WindowsNameStructure** que permite personalizar el título de la ventana del navegador mediante patrones específicos. El título se actualiza solo mientras navegas por la aplicación.
 
 ## Palabras comodín disponibles
 
@@ -8,7 +8,7 @@ El setting acepta las siguientes variables:
 
 * **{{ObjectDescrip}}**: muestra la descripción del objeto, si existe
 * **{{PageDescrip}}**: muestra la descripción del objeto o, en su defecto, la descripción de la página
-* **{{ProyectName}}**: indica el nombre del proyecto
+* **{{ProjectName}}**: indica el nombre del proyecto
 
 ## Beneficio
 

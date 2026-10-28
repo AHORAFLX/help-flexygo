@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # Updating Flexygo products or applications from old versions
 
 ## Prerequisites

@@ -11,6 +11,7 @@ Recommendations for optimizing IIS (version 10) at the server, IIS, application 
 
 ### General
 
+* .NET CLR version: **No Managed Code**. Starting with version 10, Flexygo runs on .NET 9 and the application pool doesn't load .NET Framework
 * Start mode: `AlwaysRunning`
 * Adjust the queue length for applications with many concurrent users
 

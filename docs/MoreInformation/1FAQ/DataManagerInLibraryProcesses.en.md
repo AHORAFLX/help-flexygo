@@ -4,15 +4,15 @@ The `DataManager` object lets you query and execute SQL statements against Flexy
 
 ## Instantiation
 
-```vb
-'Against the configuration database
-Dim dmConf As DataManager = New DataManager("ConfConnectionString")
+```csharp
+// Against the configuration database
+DataManager dmConf = new DataManager("ConfConnectionString");
 
-'Using ProcessHelper (security context)
-Dim dmData As DataManager = New DataManager(Ret.ConfToken.UserSecurity.ConnectionStrings("DataConnectionString"))
+// Using ProcessHelper (security context)
+DataManager dmData = new DataManager(Ret.ConfToken.UserSecurity.ConnectionStrings["DataConnectionString"]);
 
-'Against the data database
-Dim dmData As DataManager = New DataManager("DataConnectionString")
+// Against the data database
+DataManager dmDataNoContext = new DataManager("DataConnectionString");
 ```
 
 You can also use the `DataManager` from the `EntityObject` object.
@@ -23,19 +23,20 @@ You can also use the `DataManager` from the `EntityObject` object.
 
 Gets a single value from a SQL query:
 
-```vb
-Dim Ne As Integer = dm.GetValue("SELECT Max(IdEjercicio)+1 As NewEjercicio FROM Conta_Ejercicios", "NewEjercicio")
+```csharp
+int ne = Convert.ToInt32(dm.GetValue("SELECT Max(IdEjercicio)+1 As NewEjercicio FROM Conta_Ejercicios", "NewEjercicio"));
 ```
 
 ### DataTable
 
 Queries and iterates over record sets:
 
-```vb
-Dim dt As DataTable = dmData.DataTable("Select script as field1, field2 from table")
-For Each row As DataRow In dt.Rows
-    'Process each row
-Next
+```csharp
+DataTable dt = dmData.DataTable("Select script as field1, field2 from table");
+foreach (DataRow row in dt.Rows)
+{
+    // Process each row
+}
 ```
 
 Includes transactional control:
@@ -48,34 +49,36 @@ Includes transactional control:
 
 Executes `INSERT`, `UPDATE`, `DELETE` SQL statements:
 
-```vb
-Dim sql As String = "Insert into table (f1, f2, f3, f4) Values ('1','2',3,'4')"
-Entity.DataManager.ExecuteSql(sql)
+```csharp
+string sql = "Insert into table (f1, f2, f3, f4) Values ('1','2',3,'4')";
+Entity.DataManager.ExecuteSql(sql);
 ```
 
 ### ExecuteStored
 
 Executes stored procedures with parameters:
 
-```vb
-Dim params As New BaseCollection
-params.Add("IdEjercicio1", IdEjercicio)
-params.Add("IdEjercicio2", Ne)
+```csharp
+BaseCollection parameters = new BaseCollection();
+parameters.Add("IdEjercicio1", idEjercicio);
+parameters.Add("IdEjercicio2", ne);
 
-If dm.ExecuteStored("Ejercicios_Trasvase", params) Then
-    'Success - OUTPUT parameters updated in the collection
-End If
+if (dm.ExecuteStored("Ejercicios_Trasvase", parameters))
+{
+    // Success: OUTPUT parameters updated in the collection
+}
 ```
 
 ### ExecuteStoredResult
 
 Executes stored procedures that return result sets:
 
-```vb
-Dim ds As DataSet
-If Not dm.ExecuteStoredResult("_testdata", params, ds, "Cli,Emp", True) Then
-    Throw New InvalidOperationException("Error", dm.LastException)
-End If
+```csharp
+DataSet ds = null;
+if (!dm.ExecuteStoredResult("_testdata", parameters, ref ds, "Cli,Emp"))
+{
+    throw new InvalidOperationException("Error", dm.LastException);
+}
 ```
 
 ## Resources

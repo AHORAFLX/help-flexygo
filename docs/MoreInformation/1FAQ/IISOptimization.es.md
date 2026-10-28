@@ -11,6 +11,7 @@ Recomendaciones para optimizar IIS (versión 10) a nivel de servidor, IIS, grupo
 
 ### General
 
+* Versión de .NET CLR: **Sin código administrado**. A partir de la versión 10, Flexygo funciona sobre .NET 9 y el grupo de aplicaciones no carga .NET Framework
 * Modo de inicio: `AlwaysRunning`
 * Ajustar la longitud de cola para aplicaciones con muchos usuarios concurrentes
 

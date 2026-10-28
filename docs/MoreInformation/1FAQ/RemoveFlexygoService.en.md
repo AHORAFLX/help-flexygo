@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # How do I remove the Flexygo service, force its update, or install it without installing a Flexygo instance on that machine?
 
 Download the attached zip and extract it into a folder on the server, for example `C:\FlexygoServiceHelper`.

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Aviso: nuevas URLs para la actualización de las aplicaciones Flexygo y actualización de paquete Flexygo en Desarrollos
 
 Por motivos de un nuevo despliegue/migración del servidor de paquetes NuGet de Flexygo, se recomienda lo siguiente:

@@ -6,8 +6,11 @@ Flexygo can work with multiple databases at the same time through different conn
 
 To add additional connection strings, you need to:
 
-* Add them to the `web.config` file
+* Add them to the `ConnectionStrings` section of the Backend's `appsettings.json`
 * Create an entry in the `DbConnectionStrings` system table
+
+!!! note "Encrypted strings"
+    In IIS and in a production container, connection strings are stored encrypted (`enc:v1:...`). You can write the new one in plain text: the application encrypts it on the next start. To change an existing one, see [Changing an encrypted value by hand](../../1Deployment/2ConfigWizard/EncryptedSettings.md#changing-an-encrypted-value-by-hand).
 
 ## Cross-database queries
 

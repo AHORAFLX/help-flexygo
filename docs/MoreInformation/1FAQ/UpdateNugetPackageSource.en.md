@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Notice: new URLs for updating Flexygo applications and updating the Flexygo package in Developments
 
 Due to a new deployment/migration of the Flexygo NuGet package server, we recommend the following:

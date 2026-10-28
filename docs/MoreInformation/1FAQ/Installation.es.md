@@ -2,4 +2,4 @@
 
 Primero descárgate el instalable desde la [web de Flexygo](https://www.flexygo.com).
 
-Aunque el instalador es relativamente sencillo, este [vídeo tutorial](https://www.youtube.com/watch?v=qWzScOz0CXU) cubre el proceso completo de instalación con información detallada sobre todos sus aspectos.
+El instalador hace todo el despliegue en IIS: consulta [Instalador](../../1Deployment/1Installer/Introduction.md) para los modos de instalación y [Asistente de configuración](../../1Deployment/2ConfigWizard/Configuration.md) para lo que se configura al abrir la aplicación por primera vez.

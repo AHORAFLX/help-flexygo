@@ -28,6 +28,11 @@ use_directory_urls: true
 # Pages that are built (reachable by direct link) but hidden from the navigation
 not_in_nav: |
   /2ProductDevelopment/4Migration131*.md
+  /MoreInformation/1FAQ/RemoveFlexygoService*.md
+  /MoreInformation/1FAQ/UpdateFromOldVersions*.md
+  /MoreInformation/1FAQ/CorruptedCentralDirectory*.md
+  /MoreInformation/1FAQ/UpdateNugetPackageSource*.md
+  /3CICD/4AzureDevOps*.md
 extra:
   version:
     provider: mike
