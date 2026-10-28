@@ -14,7 +14,7 @@ Guía de diagnóstico para los problemas más frecuentes al configurar y poner e
 
 **Solución:**
 
-1. Abre el `confppsettings.json` del Frontend en el directorio de instalación.
+1. Abre el `conf\appsettings.json` del Frontend en el directorio de instalación.
 2. Localiza la clave `BackendEndpoint` y verifica que apunta a la URL correcta del Backend, terminada en `/api/backend/`:
    ```json
    {
@@ -37,7 +37,7 @@ Guía de diagnóstico para los problemas más frecuentes al configurar y poner e
 
 **Solución:**
 
-1. Abre el `confppsettings.json` del Backend en el directorio de instalación.
+1. Abre el `conf\appsettings.json` del Backend en el directorio de instalación.
 2. Localiza las claves `ConnectionStrings.ConfConnectionString` (base de datos de configuración) y `ConnectionStrings.DataConnectionString` (base de datos de datos) y verifica cada parte:
    ```json
    {

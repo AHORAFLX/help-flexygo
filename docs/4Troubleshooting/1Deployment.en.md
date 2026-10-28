@@ -14,7 +14,7 @@ Diagnostic guide for the most common problems when configuring and starting up F
 
 **Solution:**
 
-1. Open the Frontend's `confppsettings.json` in the installation directory.
+1. Open the Frontend's `conf\appsettings.json` in the installation directory.
 2. Locate the `BackendEndpoint` key and verify that it points to the correct Backend URL, ending in `/api/backend/`:
    ```json
    {
@@ -37,7 +37,7 @@ Diagnostic guide for the most common problems when configuring and starting up F
 
 **Solution:**
 
-1. Open the Backend's `confppsettings.json` in the installation directory.
+1. Open the Backend's `conf\appsettings.json` in the installation directory.
 2. Locate the `ConnectionStrings.ConfConnectionString` (configuration database) and `ConnectionStrings.DataConnectionString` (data database) keys and check each part:
    ```json
    {
