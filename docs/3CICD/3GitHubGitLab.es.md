@@ -1,259 +1,172 @@
-# GitHub Actions y GitLab CI (YAML)
+# GitHub Actions y GitLab CI
 
-## GitHub Actions — `.github/workflows/ci.yml`
+La [plantilla de producto](../2ProductDevelopment/2Template.md) trae los pipelines para **GitHub Actions** y para **GitLab CI**, listos pero **desactivados**. Cada uno tiene dos flujos: uno genera los NuGets del producto y otro sus imágenes Docker. Las dos herramientas hacen lo mismo, con la misma versión.
 
-```yaml
-name: Core Product Test (mínimo)
+Los pasos siguen el mismo orden que la plantilla de [TeamCity](2TeamCity.md): restaurar, publicar, bases de datos, pruebas y NuGets; estos pipelines añaden la release y las imágenes Docker. Las diferencias están en [Diferencias con TeamCity](#diferencias-con-teamcity). Para la idea general del pipeline, consulta la [visión general](1Overview.md).
 
-on:
-  workflow_dispatch:
-  push:
-    branches: [ "master" ]
+!!! note "Nombres de proyecto"
+    Los ejemplos usan `<ProductName>` como nombre del producto: el prefijo de los proyectos de la solución (`<ProductName>.Frontend`, `<ProductName>.Backend`, `<ProductName>.Conf.Database`, `<ProductName>.Data.Database`…). En tu producto, la plantilla ya lo ha sustituido.
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+---
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+## Activarlos
 
-      # SDK
-      - name: Setup .NET 9
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '9.x'
+Los ficheros vienen con la extensión `.disabled` para que un producto nuevo no lance builds hasta que lo decidas. Para activarlos, quita esa extensión:
 
-      - name: Generar versión
-        shell: bash
-        run: |
-          base="1.0.0"
-          ver="$base.${GITHUB_RUN_NUMBER}"
-          echo "VERSION=$ver" >> $GITHUB_ENV
-          echo "INFOVER=$ver+${GITHUB_SHA}" >> $GITHUB_ENV
-      - name: NuGet.Config (feeds privados)
-        shell: bash
-        run: |
-          cat > $GITHUB_WORKSPACE/NuGet.Config <<EOF
-          <?xml version="1.0" encoding="utf-8"?>
-          <configuration>
-            <packageSources>
-              <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
-              <add key="Flexygo" value="https://nuget.ahorabh.com/v3/index.json" />
-            </packageSources>
-          </configuration>
-          EOF
-      - name: Restore
-        run: dotnet restore ./CoreProductTC/CoreProductTC.sln --configfile NuGet.Config
-        
-      # ---- PUBLICAR FRONTEND (.NET 9) ----
-      - name: Publish Frontend
-        run: >
-          dotnet publish ./CoreProductTC/CoreProductTC.Frontend/CoreProductTC.Frontend.csproj
-          -c Release
-          -o $GITHUB_WORKSPACE/publish/CoreProductTC/CoreProductTC.Frontend
-          /p:Version=$VERSION
-          /p:FileVersion=$VERSION
-          /p:InformationalVersion=$INFOVER
+| Herramienta | Ficheros | Qué renombrar |
+|---|---|---|
+| GitHub Actions | `.github/workflows/<ProductName>-nugets.yml.disabled` y `<ProductName>-docker.yml.disabled` | Quita `.disabled` a los dos, o solo al que quieras. |
+| GitLab CI | `.gitlab-ci.yml.disabled`, que incluye `.gitlab/workflows/<ProductName>-nugets.yml` y `<ProductName>-docker.yml` | Quita `.disabled` a `.gitlab-ci.yml`. Para quedarte con uno solo de los dos flujos, quita su línea `include`. |
 
-      # ---- PUBLICAR BACKEND (.NET 9) ----
-      - name: Publish Backend
-        run: >
-          dotnet publish ./CoreProductTC/CoreProductTC.Backend/CoreProductTC.Backend.csproj
-          -c Release
-          -o $GITHUB_WORKSPACE/publish/CoreProductTC/CoreProductTC.Backend
-          /p:Version=$VERSION
-          /p:FileVersion=$VERSION
-          /p:InformationalVersion=$INFOVER
+---
 
-      # ---- COMPILAR BBDD CONF ----
-      - name: Build Conf Database
-        run: >
-          dotnet build ./CoreProductTC/CoreProductTC.Conf.Database/CoreProductTC.Conf.Database.sqlproj
-          -c Release
-          /p:DacVersion=$VERSION
+## Cuándo se lanzan
 
-      # ---- COMPILAR BBDD DATA ----
-      - name: Build Data Database
-        run: >
-          dotnet build ./CoreProductTC/CoreProductTC.Data.Database/CoreProductTC.Data.Database.sqlproj
-          -c Release
-          /p:DacVersion=$VERSION
-          
-      # Zip lo publicado y sube artifacts (FE/BE + DACPACs)
-      - name: Empaquetar publish + dacpacs
-        run: |
-          mkdir -p artifacts
-          # Zips de publish
-          (cd $GITHUB_WORKSPACE/publish/CoreProductTC && \
-            zip -r ../../artifacts/CoreProductTC.Frontend.zip CoreProductTC.Frontend && \
-            zip -r ../../artifacts/CoreProductTC.Backend.zip  CoreProductTC.Backend)
-          # DACPACs (Conf/Data)
-          find ./CoreProductTC -type f -name "*.dacpac" -print -exec cp {} artifacts/ \;
-      
-      - name: Subir artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: coreproduct-build-${{ env.VERSION }}
-          path: |
-            artifacts/CoreProductTC.Frontend.zip
-            artifacts/CoreProductTC.Backend.zip
-            artifacts/*.dacpac
-          retention-days: 30
+- **GitHub Actions:** en cada push a cualquier rama, en cada etiqueta `v*` y a mano (*Run workflow*).
+- **GitLab CI:** en cada pipeline del proyecto, para cualquier rama.
+
+Qué se publica depende de la rama:
+
+| Rama | NuGets | Release | Publica los NuGets | Publica las imágenes |
+|---|---|---|---|---|
+| `main` o `master` | Sí | Sí | Sí | Sí |
+| `develop` | Sí | Sí | No | No |
+| Cualquier otra | Sí | No | No | No |
+
+En todas las ramas, los NuGets y las imágenes quedan como artefactos de la ejecución.
+
+---
+
+## La versión
+
+La versión sale de `<ProductName>-version.json`, que guarda el *major* y el *minor*:
+
+```json
+{
+  "major": 1,
+  "minor": 0
+}
 ```
-## GitLab CI — `.gitlab-ci.yml`
 
-```yaml
-image: mcr.microsoft.com/dotnet/sdk:9.0
+El resto lo calcula el pipeline contando commits desde el último que tocó ese fichero:
 
-workflow:
-  rules:
-    - if: $CI_COMMIT_BRANCH == "master"        # ejecuta en pushes a master
-    - if: $CI_PIPELINE_SOURCE == "web"         # permite lanzarlo manualmente desde UI
+| Rama | Versión del paquete | Ejemplo |
+|---|---|---|
+| `main` o `master` | `Major.Minor.0.N`, con N = commits desde el último cambio de versión + 1 | `1.0.0.7` |
+| `develop` | `Major.Minor.N.1-beta`, con N = commits desde el último cambio de versión | `1.0.23.1-beta` |
+| Cualquier otra | `Major.Minor.N.1-alpha.K`, con N = los commits de `develop` en el punto en que salió la rama y K = los commits propios de la rama | `1.0.23.1-alpha.4` |
 
-stages:
-  - prepare
-  - build
-  - publish
-  - package
+Para subir de versión, cambia el *major* o el *minor* en el fichero: el contador vuelve a empezar solo. Los ensamblados, la `DacVersion` de los dacpac, los NuGets y las imágenes llevan el mismo número; los ensamblados, sin el sufijo `-beta` o `-alpha`.
 
-# ==== Variables y cache (estilo del template) ====
-variables:
-  BUILD_CONFIG: "Release"
-  BASE_VERSION: "1.0.0"
-  # Cache estilo template
-  OBJECTS_DIRECTORY: "obj"
-  NUGET_PACKAGES_DIRECTORY: ".nuget/packages"
-  SOURCE_CODE_PATH: "CoreProductTC/**/"
-  # Rutas de solución y proyectos
-  SOLUTION_PATH: "CoreProductTC/CoreProductTC.sln"
-  FE_PROJ: "CoreProductTC/CoreProductTC.Frontend/CoreProductTC.Frontend.csproj"
-  BE_PROJ: "CoreProductTC/CoreProductTC.Backend/CoreProductTC.Backend.csproj"
-  DB_CONF_PROJ: "CoreProductTC/CoreProductTC.Conf.Database/CoreProductTC.Conf.Database.sqlproj"
-  DB_DATA_PROJ: "CoreProductTC/CoreProductTC.Data.Database/CoreProductTC.Data.Database.sqlproj"
+Los dos flujos necesitan el historial completo de git para contar: GitHub lo descarga con `fetch-depth: 0` y GitLab con `GIT_DEPTH: "0"`.
 
-cache:
-  key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
-  paths:
-    - "$SOURCE_CODE_PATH$OBJECTS_DIRECTORY/project.assets.json"
-    - "$SOURCE_CODE_PATH$OBJECTS_DIRECTORY/*.csproj.nuget.*"
-    - "$NUGET_PACKAGES_DIRECTORY"
-  policy: pull-push
+---
 
-# ==== before_script: NuGet.Config + Restore (como en el template) ====
-before_script:
-  - dotnet --info
-  - |
-    echo "==> Generar NuGet.Config (feeds privados)"
-    cat > "$CI_PROJECT_DIR/NuGet.Config" <<EOF
-    <?xml version="1.0" encoding="utf-8"?>
-    <configuration>
-      <packageSources>
-        <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
-        <add key="Flexygo" value="https://nuget.ahorabh.com/v3/index.json" />
-      </packageSources>
-    </configuration>
-    EOF
-  - |
-    echo "==> Restore con cache local"
-    dotnet restore "$SOLUTION_PATH" \
-      --configfile NuGet.Config \
-      --packages "$NUGET_PACKAGES_DIRECTORY"
+## Los pasos
 
-# ==== PREPARE: calcular VERSION/INFOVER y compartirlo con el resto de jobs ====
-prepare_version:
-  stage: prepare
-  script:
-    - |
-      VERSION="${BASE_VERSION}.${CI_PIPELINE_IID}"
-      INFOVER="${VERSION}+${CI_COMMIT_SHA}"
-      echo "VERSION=$VERSION"   >> version.env
-      echo "INFOVER=$INFOVER"   >> version.env
-      echo "Generadas variables: VERSION=$VERSION, INFOVER=$INFOVER"
-  artifacts:
-    reports:
-      dotenv: version.env
+El flujo de los NuGets hace los pasos 1 a 6; el de las imágenes, el 7.
 
-# ==== BUILD: compilar solución y BBDD (DACPACs) ====
-build_solution:
-  stage: build
-  needs: ["prepare_version"]
-  script:
-    - dotnet build "$SOLUTION_PATH" -c "$BUILD_CONFIG" --no-restore
+### 1. Restaurar
 
-build_db_conf:
-  stage: build
-  needs: ["prepare_version"]
-  script:
-    - dotnet build "$DB_CONF_PROJ" -c "$BUILD_CONFIG" --no-restore /p:DacVersion="$VERSION"
+`dotnet restore <ProductName>.sln`, con los orígenes del `nuget.config` del producto: nuget.org y los dos feeds de Flexygo, el estable y el beta.
 
-build_db_data:
-  stage: build
-  needs: ["prepare_version"]
-  rules:
-    - exists:
-        - "$DB_DATA_PROJ"
-  script:
-    - dotnet build "$DB_DATA_PROJ" -c "$BUILD_CONFIG" --no-restore /p:DacVersion="$VERSION"
+!!! warning "Paquetes de DevExpress"
+    El `nuget.config` de la plantilla no incluye el feed de DevExpress. Si tu producto necesita sus paquetes, añade su origen antes de restaurar, con la clave guardada como secreto (por ejemplo `DEVEXPRESS_API`), nunca escrita en el fichero.
 
-# ==== PUBLISH: publicar Frontend y Backend (mismas rutas que en GitHub) ====
-publish_frontend:
-  stage: publish
-  needs: ["build_solution", "prepare_version"]
-  script:
-    - >
-      dotnet publish "$FE_PROJ"
-      -c "$BUILD_CONFIG"
-      -o "$CI_PROJECT_DIR/publish/CoreProductTC/CoreProductTC.Frontend"
-      /p:Version="$VERSION"
-      /p:FileVersion="$VERSION"
-      /p:InformationalVersion="$INFOVER"
+### 2. Publicar
 
-publish_backend:
-  stage: publish
-  needs: ["build_solution", "prepare_version"]
-  script:
-    - >
-      dotnet publish "$BE_PROJ"
-      -c "$BUILD_CONFIG"
-      -o "$CI_PROJECT_DIR/publish/CoreProductTC/CoreProductTC.Backend"
-      /p:Version="$VERSION"
-      /p:FileVersion="$VERSION"
-      /p:InformationalVersion="$INFOVER"
+`dotnet publish` en Release del Frontend y del Backend a `publish/<ProductName>/`, con la versión, la versión de fichero y la versión informativa (la del paquete más el commit). Genera las DLL que empaquetan los NuGets.
 
-# ==== PACKAGE: zips de publish + recoger DACPACs como artifacts ====
-package_artifacts:
-  stage: package
-  needs:
-    - job: publish_frontend
-      artifacts: true
-    - job: publish_backend
-      artifacts: true
-    - job: build_db_conf
-      artifacts: true
-    - job: build_db_data
-      optional: true
-      artifacts: true
-    - job: prepare_version
-      artifacts: true
-  script:
-    - apt-get update && apt-get install -y --no-install-recommends zip ca-certificates
-    - mkdir -p artifacts
-    - |
-      echo "==> Empaquetar publish (Frontend/Backend)"
-      (cd "$CI_PROJECT_DIR/publish/CoreProductTC" && \
-        zip -r "$CI_PROJECT_DIR/artifacts/CoreProductTC.Frontend.zip" CoreProductTC.Frontend && \
-        zip -r "$CI_PROJECT_DIR/artifacts/CoreProductTC.Backend.zip"  CoreProductTC.Backend)
-    - |
-      echo "==> Recoger DACPACs"
-      find ./CoreProductTC -type f -name "*.dacpac" -print -exec cp {} artifacts/ \;
-  artifacts:
-    name: "coreproduct-build-$VERSION"
-    expire_in: 30 days
-    when: always
-    paths:
-      - artifacts/CoreProductTC.Frontend.zip
-      - artifacts/CoreProductTC.Backend.zip
-      - artifacts/*.dacpac
+!!! warning "Node.js"
+    El Frontend compila TypeScript con `node`. Los ejecutores de GitHub (`ubuntu-latest`) ya lo traen; el flujo de GitLab lo instala en su `before_script`. Sin él, la publicación del Frontend falla con `MSB6003`.
 
+### 3. Bases de datos
+
+`dotnet build` de `<ProductName>.Conf.Database.sqlproj` y de `<ProductName>.Data.Database.sqlproj` en Release, con `-p:NetCoreBuild=true` y `/p:DacVersion=<versión>`. Genera los dacpac que empaquetan los NuGets de base de datos.
+
+### 4. Pruebas
+
+Estos pipelines no ejecutan pruebas: van de las bases de datos directamente a los NuGets. Consulta [Las pruebas](#las-pruebas).
+
+### 5. NuGets
+
+Un `dotnet pack` de `tools/pack.csproj` por cada `.nuspec` del producto, a `publish/nuget`: Frontend, Library, Backend, Conf.Database y Data.Database. `tools/pack.csproj` no compila nada: existe solo porque `dotnet pack` necesita un proyecto.
+
+```bash
+dotnet pack tools/pack.csproj -o publish/nuget -p:NuspecProperties="version=<versión>" \
+  -p:NuspecFile=$PWD/<ProductName>.Frontend/<ProductName>.Frontend.nuspec \
+  -p:NuspecBasePath=$PWD/<ProductName>.Frontend
 ```
+
+Los `.nupkg` se guardan como artefacto de la ejecución en todas las ramas.
+
+### 6. Release y publicación
+
+En `main`, `master` y `develop` se crea una release `v<versión>`:
+
+- **GitHub:** con las notas generadas y los `.nupkg` adjuntos.
+- **GitLab:** con `glab release create`. Si la release ya existe, por ejemplo al relanzar el pipeline, se actualiza en lugar de fallar.
+
+Después se publican los NuGets, solo en `main` o `master`:
+
+- **GitHub:** a GitHub Packages del propietario del repositorio.
+- **GitLab:** al *Package Registry* del proyecto.
+
+Si el paquete ya existe con esa versión, se salta.
+
+### 7. Imágenes Docker
+
+Construye tres imágenes con la misma versión que los NuGets: **frontend**, **backend** y **db**, la base de datos con los dos catálogos. Cada una:
+
+1. se construye con la etiqueta de su versión;
+2. se exporta con `docker save` a `publish/docker/<ProductName>-<imagen>-<versión>.tar.gz` y se guarda como artefacto de la ejecución;
+3. en `main` o `master`, se sube al registro con su versión y con `latest`: **GHCR** (`ghcr.io/<propietario>/…`) en GitHub y el *Container Registry* del proyecto en GitLab.
+
+En GitLab, si la instancia no tiene el *Container Registry* habilitado, se salta la subida y el resto sigue. Este flujo no crea release: ya la crea el de los NuGets.
+
+Para generar las mismas imágenes en tu equipo: `pwsh tools/build-docker-images.ps1`.
+
+---
+
+## Diferencias con TeamCity
+
+| | GitHub Actions y GitLab CI | [TeamCity](2TeamCity.md) |
+|---|---|---|
+| Activación | Ficheros `.disabled` en el producto; se activan quitando la extensión | Configuración creada desde la plantilla **Template flexygo products core** |
+| Versión | `<ProductName>-version.json` y la rama: `Major.Minor.0.N`, `-beta` o `-alpha.K` | `1.0.%build.counter%.1` |
+| Restaurar | Los orígenes del `nuget.config` del producto | Cuatro orígenes, DevExpress incluido |
+| Bases de datos | Solo se compilan | Se compilan y se publican en bases de prueba con sqlpackage |
+| Pruebas | No hay | Arranca la aplicación y ejecuta los tests del núcleo, los del producto y los de interfaz |
+| NuGets | `dotnet pack` de `tools/pack.csproj` por cada `.nuspec` | NuGet Pack con NuGet.CommandLine 6.12.2 |
+| Release | Sí, en `main`, `master` y `develop` | No |
+| Imágenes Docker | Frontend, backend y db, publicadas en `main` o `master` | No las construye |
+
+---
+
+## Secretos y variables
+
+No hace falta dar de alta ningún secreto para publicar:
+
+- **GitHub** usa `GITHUB_TOKEN`, que crea la propia ejecución, con permiso `packages: write`.
+- **GitLab** usa `CI_JOB_TOKEN`, que también se genera solo.
+
+Lo que sí hay que preparar:
+
+- **GitLab:** habilitar el *Package Registry* y, para las imágenes, el *Container Registry* en *Settings › General › Visibility, project features, permissions*. El flujo de imágenes necesita un ejecutor `docker` en modo privilegiado, porque usa el servicio `docker:dind`.
+- **Las claves que añadas**, como la de DevExpress: como *secret* en GitHub, que las enmascara solo, o como variable **Masked** en GitLab. Una variable normal sale tal cual en el log.
+
+---
+
+## Las pruebas
+
+**Estos pipelines no ejecutan pruebas hoy**: compilan, empaquetan y publican. Los tests unitarios se lanzan en tu equipo contra la imagen de base de datos del producto:
+
+```powershell
+pwsh tools/run-tests-with-db.ps1 -Version 1.0.1.1
+```
+
+El script levanta la imagen de base de datos, espera a que responda, apunta los tests a ella, los ejecuta y lo limpia todo al acabar, también si fallan. La contraseña de `sa` del contenedor se toma de la variable de entorno `SQL_PASSWORD`, y `SQL_PORT` cambia el puerto si el 1433 ya está ocupado por un SQL Server de tu equipo. Necesita Docker.
+
+`pwsh tools/dev-pipeline.ps1` encadena en local la restauración, la publicación, la imagen de base de datos, los tests y el empaquetado, sin publicar nada.
+
+En Windows sin PowerShell 7, cambia `pwsh` por `powershell -NoProfile -ExecutionPolicy Bypass -File`.
