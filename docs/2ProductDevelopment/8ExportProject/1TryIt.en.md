@@ -12,7 +12,7 @@ What travels and what doesn't, every option in the window and every server step 
 |---|---|
 | **A version 10 application with your project's origin active** | What travels is what belongs to the **active origin** (for example, 2 · Project). What was created with origin 0 active is indistinguishable from the core and does not travel. |
 | **An administrator user** | Only administrators use the window. |
-| **On the server**: access to the updater's NuGet feed | The export installs the `Flexygo.Product.Template` template of the **same version** as the application. If there is no .NET SDK, it downloads it the first time. |
+| **On the server**: access to the updater's NuGet feed | The export installs the product's template (`{Namespace}.Product.Template`, from the `AutoUpdatePackageNamespace` setting; `Flexygo.Product.Template` for Flexygo) of the **same version** as the application. If there is no .NET SDK, it downloads it the first time. |
 | **On your machine**: .NET SDK, SQL Server and `sqlpackage` | To build, publish the databases and run. And access to the same NuGet feeds (the project's `nuget.config`). |
 
 ---

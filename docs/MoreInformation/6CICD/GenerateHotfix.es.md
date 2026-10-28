@@ -22,7 +22,7 @@ Revisamos los cambios pendientes y marcamos aquellos que correspondan con el arr
 
 ![](../../docs_assets/images/CICD/GenerateHotfix/5.png)
 
-Realizamos un commit empezando el mensaje por la etiqueta `HOTFIX:` seguido de la descripción del arreglo.
+Realizamos un commit empezando el mensaje por la etiqueta `FIX:` seguido de la descripción del arreglo (el síntoma que veía el usuario). Las notas de la versión solo recogen los commits `FT:`, `FIX:`, `HL:` y `DEP:`; ver [¿Cómo desarrollar en GIT?](GitCommitConventions.md).
 
 ![](../../docs_assets/images/CICD/GenerateHotfix/6.png)
 

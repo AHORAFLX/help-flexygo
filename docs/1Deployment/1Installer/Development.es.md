@@ -1,13 +1,13 @@
 # Instalador: Modo Desarrollo
 
-El modo **Desarrollo** del instalador está orientado a desarrolladores que trabajan con proyectos Flexygo en Visual Studio o VS Code. Ofrece dos operaciones: crear un nuevo producto desde la plantilla oficial, o gestionar productos ya existentes en el workspace.
+El modo **Desarrollo** del instalador está orientado a desarrolladores que trabajan con proyectos Flexygo en Visual Studio o VS Code. Ofrece tres operaciones: crear un nuevo producto desde la plantilla oficial, crear un addon (en los productos que los admiten, como Flexygo) o gestionar productos ya existentes en el workspace.
 
 !!! warning "Requisito previo para VS Code: Node.js en PATH global"
     Si vas a trabajar con el proyecto desde **VS Code**, necesitas tener **Node.js** instalado y disponible en el **PATH global** del sistema. Si no está en el PATH, la compilación del Frontend fallará. Consulta los [requisitos de desarrollo](../../2ProductDevelopment/1Requirements.md).
 
 <figure markdown="span">
   ![Pantalla principal del instalador — sección Desarrollo](../../docs_assets/images/CoreDeployment/installer/Desarrollo/Inicio.png)
-  <figcaption>Pantalla principal: el modo Desarrollo ofrece 2 opciones</figcaption>
+  <figcaption>Pantalla principal del modo Desarrollo</figcaption>
 </figure>
 
 ---
@@ -37,6 +37,14 @@ El modo **Desarrollo** del instalador está orientado a desarrolladores que trab
 
     !!! tip "Alternativa por línea de comandos"
         También puedes crear un producto usando la plantilla directamente con `dotnet new`. Consulta la guía de [Plantilla de producto](../../2ProductDevelopment/2Template.md).
+
+=== "Crear addon"
+
+    ## Crear un addon
+
+    La opción **Crear addon** solo aparece en los productos que admiten addons, como Flexygo. Genera la solución de un addon con la plantilla de addon del producto: pide la carpeta del producto y el nombre del addon, que tiene que ser distinto del del producto. Si la carpeta está vacía, crea primero el producto y después el addon.
+
+    El proceso completo, desde la creación hasta el empaquetado como NuGet, está en [Crear un addon](../../2ProductDevelopment/7Addons.md).
 
 === "Gestionar productos"
 
@@ -77,7 +85,7 @@ El modo **Desarrollo** del instalador está orientado a desarrolladores que trab
     </figure>
 
     !!! warning "No actualices manualmente los paquetes NuGet"
-        El actualizador realiza pasos adicionales (sincronización de recursos, merge de `appsettings`…) que no ocurren con una actualización manual de NuGet desde Visual Studio o VS Code.
+        El actualizador realiza pasos adicionales (sincronización de recursos, sustitución de los `appsettings` conservando tus `ConnectionStrings`, `DatabaseNuget` y `MailSettings`…; ver [Gestión de productos](../../2ProductDevelopment/3ProductManagement.md)) que no ocurren con una actualización manual de NuGet desde Visual Studio o VS Code.
 
     ### Generar NuGets del producto
 

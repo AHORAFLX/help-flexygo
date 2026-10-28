@@ -14,10 +14,12 @@ To start the frontend and backend applications using Kestrel, you have two optio
 
 If you published the project with `dotnet publish`, you'll find `.exe` files for each application:
 
-- Double-click `Flexygo.WebApp.Frontend.exe`
-- Double-click `Flexygo.WebApp.Backend.exe`
+- Double-click `Flexygo.Frontend.exe`
+- Double-click `Flexygo.Backend.exe`
 
-This will bring up the applications on their respective ports (for example `http://localhost:5000` and `http://localhost:5001`).
+In a product they are called `{Product}.Frontend.exe` and `{Product}.Backend.exe`.
+
+This will bring up the applications on the ports set in `Kestrel:Endpoints` in each one's `conf/appsettings.json`: by default `http://localhost:7111` for the Frontend and `http://localhost:7110` for the Backend.
 
 ### Option 2: Using `dotnet run`
 
@@ -47,37 +49,16 @@ This will build and start both applications directly.
 
 ## Running as a system service
 
-For Kestrel to start automatically with the operating system and restart after failures, configure it as a service.
-
-### Windows Service
-
-1. Publish the application for Windows:
-
-```powershell
-dotnet publish src/Backend/Backend.csproj -c Release -r win-x64 --self-contained false -o C:\inetpub\flexygo\backend
-```
-
-2. Install the service:
-
-```powershell
-sc.exe create FlexygoBackend binPath="C:\inetpub\flexygo\backend\Backend.exe" start=auto
-sc.exe start FlexygoBackend
-```
-
-3. Check that the service is running:
-
-```powershell
-sc.exe query FlexygoBackend
-```
-
-> To uninstall: `sc.exe stop FlexygoBackend` followed by `sc.exe delete FlexygoBackend`.
+For Kestrel to start automatically with the operating system on Linux and restart after failures, configure it as a systemd service. On Windows, use the [installer with IIS](../1Installer/Introduction.md).
 
 ### Linux (systemd)
+
+The steps are the same for the Backend and the Frontend; the example is the Backend's.
 
 1. Publish the application for Linux:
 
 ```bash
-dotnet publish src/Backend/Backend.csproj -c Release -r linux-x64 --self-contained false -o /opt/flexygo/backend
+dotnet publish {Product}.Backend/{Product}.Backend.csproj -c Release -r linux-x64 --self-contained false -o /opt/flexygo/backend
 ```
 
 2. Create the unit file at `/etc/systemd/system/flexygo-backend.service`:
@@ -91,11 +72,11 @@ After=network.target
 Type=simple
 User=www-data
 WorkingDirectory=/opt/flexygo/backend
-ExecStart=/opt/flexygo/backend/Backend
+ExecStart=/opt/flexygo/backend/{Product}.Backend
 Restart=always
 RestartSec=10
 Environment=ASPNETCORE_ENVIRONMENT=Production
-Environment=ASPNETCORE_URLS=http://localhost:5001
+Environment=Kestrel__Endpoints__Http__Url=http://localhost:7110
 
 [Install]
 WantedBy=multi-user.target
@@ -109,6 +90,8 @@ sudo systemctl enable flexygo-backend
 sudo systemctl start flexygo-backend
 sudo systemctl status flexygo-backend
 ```
+
+For the Frontend, create `flexygo-frontend.service` with `/opt/flexygo/frontend`, the `{Product}.Frontend` executable and port `7111`. The Frontend reaches the Backend through the `BackendEndpoint` key in its `conf/appsettings.json`; with both on the same machine, `http://localhost:7110/api/backend/`.
 
 ---
 
@@ -127,6 +110,8 @@ sudo apt update && sudo apt install nginx -y
 
 ### Virtual host configuration
 
+The browser, the WebAPI (`/webapi`, `/token`) and the MCP server (`/mcp`) only talk to the **Frontend**, and the Frontend is the one that calls the Backend. So nginx sends everything to the Frontend and the Backend keeps listening on `localhost`, without being published. Don't rewrite paths: the Frontend serves routes starting with `/api/` (`api/frontend/...`, `api/updater/status`, `api/Sys/...`), and the Backend expects its own with the `/api/backend/` prefix.
+
 Create the file `/etc/nginx/sites-available/flexygo`:
 
 ```nginx
@@ -134,20 +119,8 @@ server {
     listen 80;
     server_name your-domain.com;
 
-    location /api/ {
-        proxy_pass         http://localhost:5001/;
-        proxy_http_version 1.1;
-        proxy_set_header   Upgrade $http_upgrade;
-        proxy_set_header   Connection keep-alive;
-        proxy_set_header   Host $host;
-        proxy_set_header   X-Real-IP $remote_addr;
-        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header   X-Forwarded-Proto $scheme;
-        proxy_cache_bypass $http_upgrade;
-    }
-
     location / {
-        proxy_pass         http://localhost:5000/;
+        proxy_pass         http://localhost:7111;
         proxy_http_version 1.1;
         proxy_set_header   Upgrade $http_upgrade;
         proxy_set_header   Connection keep-alive;
@@ -177,12 +150,4 @@ sudo certbot --nginx -d your-domain.com
 
 Certbot will automatically update the nginx configuration to add the `listen 443` blocks and the renewable certificate.
 
-> **Forwarding headers:** When traffic reaches Kestrel through nginx, add the following configuration in `appsettings.json` so the application recognizes the client's real protocol:
->
-> ```json
-> {
->   "ForwardedHeaders": {
->     "ForwardedHeaders": "XForwardedFor, XForwardedProto"
->   }
-> }
-> ```
+> **Forwarding headers:** Flexygo always honours `X-Forwarded-Proto` and `X-Forwarded-For` without any setting in `appsettings.json`. With nginx on the same machine the headers in the example are enough; if nginx runs on another machine, declare its address in `ForwardedHeaders:KnownProxies`. The details are in [Deploying behind a reverse proxy](../6ReverseProxy/index.md#trusted-proxies).

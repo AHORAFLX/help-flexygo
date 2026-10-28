@@ -44,8 +44,10 @@ services:
     image: flexygo-frontend
     restart: unless-stopped
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - MAINT_TOKEN=${MAINT_TOKEN}
+    secrets:
+      - flexygo_config_key
     ports:
       - "${FRONTEND_PORT}:8080"
     volumes:
@@ -61,8 +63,10 @@ services:
     image: flexygo-backend
     restart: unless-stopped
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - FLEXYGO_PACKAGES_ROOT=/var/lib/flexygo/packages
+    secrets:
+      - flexygo_config_key
     volumes:
       - flx-back-conf:/app/conf
       - flx-back-custom:/app/custom
@@ -85,7 +89,12 @@ volumes:
     flx-front-custom:
     flx-back-conf:
     flx-back-custom:
+secrets:
+  flexygo_config_key:
+    file: ./flexygo_config_key.txt
 ```
+
+With `ASPNETCORE_ENVIRONMENT=Production` the containers keep the passwords and keys of their `appsettings` encrypted. The `flexygo_config_key` secret gives them the key: create the `flexygo_config_key.txt` file **before the first `docker compose up`** (`openssl rand -base64 32 > flexygo_config_key.txt`) and keep it safe. The details are in [Encrypted appsettings](../2ConfigWizard/EncryptedSettings.md#8-docker).
 
 ---
 
@@ -113,7 +122,7 @@ volumes:
 ## 5) Quick diagnostic checklist
 
 #### DbConnectionStrings
-- `PackageId` correct (without `.Database`)
+- `PackageDbName` correct: only the middle part, without the namespace or `.Database` (e.g. `Conf`)
 - `Active = 1` and `UpdateDataModel = 1`
 
 ### Settings

@@ -29,20 +29,20 @@ Cada fase incorpora controles y evidencias verificables que demuestran la aplica
 
 ### 3.1. Preparación del entorno (pasos 1–2)
 
-* **Limpieza de cadenas de conexión en web.config**: el proceso automatizado ejecuta un script PowerShell que elimina o enmascara las cadenas de conexión sensibles antes de iniciar la compilación, previniendo exposición accidental de credenciales. Este control asegura el cumplimiento de principios de **minimización de información sensible en entornos de desarrollo**.
+* **Limpieza de cadenas de conexión en los `appsettings.json`** (en las instalaciones se guardan cifradas): el proceso automatizado ejecuta un script PowerShell que elimina o enmascara las cadenas de conexión sensibles antes de iniciar la compilación, previniendo exposición accidental de credenciales. Este control asegura el cumplimiento de principios de **minimización de información sensible en entornos de desarrollo**.
 * **Backup del código fuente**: antes de compilar, se realiza un respaldo automatizado del código fuente, preservando un punto de restauración en caso de alteraciones o errores posteriores. El mecanismo de copia está condicionado al éxito de los pasos previos, garantizando que sólo versiones válidas sean almacenadas.
 
 ### 3.2. Compilación y gestión de dependencias (pasos 3–6)
 
 * **Restauración de paquetes NuGet**: los paquetes se obtienen desde fuentes controladas, con versiones verificadas y bloqueadas para asegurar la **reproducibilidad y la integridad del entorno de compilación**.
-* **Compilación de solución (.NET / MSBuild)**: el proyecto se compila de forma automatizada mediante MSBuild, garantizando trazabilidad completa desde el código fuente hasta el binario generado.
+* **Compilación de solución (.NET)**: el proyecto se compila y publica de forma automatizada con `dotnet build` y `dotnet publish`, garantizando trazabilidad completa desde el código fuente hasta el binario generado.
 * **Publicación de configuraciones y bases de datos (BBDD CONFIG y BBDD DATOS)**: los scripts de publicación utilizan SQLPACKAGE y ejecutan procesos de compilación controlados, validados sólo si los pasos anteriores fueron exitosos, aplicando el principio de **integridad de la cadena de construcción**.
 
 ### 3.3. Pruebas, validación y auditoría técnica (pasos 11–14, 23–25, 30)
 
 * **Compilación y ejecución de pruebas de servicio e interfaz**: se realizan pruebas unitarias mediante **Visual Studio Test (VSTest)**, integradas en el pipeline. Estas pruebas verifican la funcionalidad de los módulos principales y la interoperabilidad entre servicios. Los resultados de las pruebas se recopilan y analizan automáticamente para evaluar el cumplimiento de los criterios de calidad.
 * **Cobertura de código**: el sistema utiliza **JetBrains dotCover** para recopilar métricas de cobertura, lo que permite medir el grado de validación del código mediante pruebas. Este paso sólo se ejecuta si la compilación es exitosa, evitando reportes sobre versiones inconsistentes.
-* **Análisis estático de código (SonarQube)**: aunque algunos análisis aparecen deshabilitados en las imágenes, el proceso SDLC considera su ejecución como parte del ciclo completo. Los módulos para TypeScript, T-SQL y VB se auditan en busca de vulnerabilidades, malas prácticas o código inseguro. Esto aporta evidencia de cumplimiento con los **controles de análisis estático del OWASP SAMM y ISO/IEC 27034**.
+* **Análisis estático de código (SonarQube)**: aunque algunos análisis aparecen deshabilitados en las imágenes, el proceso SDLC considera su ejecución como parte del ciclo completo. Los módulos para TypeScript, T-SQL y C# se auditan en busca de vulnerabilidades, malas prácticas o código inseguro. Esto aporta evidencia de cumplimiento con los **controles de análisis estático del OWASP SAMM y ISO/IEC 27034**.
 
     ![](../../docs_assets/images/SecureSDLC/1.png)
     ![](../../docs_assets/images/SecureSDLC/2.png)
@@ -53,7 +53,7 @@ Cada fase incorpora controles y evidencias verificables que demuestran la aplica
 * **Empaquetado seguro (ZIP APP, ZIP DOCU, paquete NuGet)**: los artefactos se empaquetan de forma automatizada y versionada, con inclusión de número de compilación y firma digital interna. Este proceso garantiza el no repudio y la integridad de los artefactos distribuidos.
 * **Generación automática de documentación técnica**: se generan tres tipos de documentación:
     * **JS**: mediante Node.js (YUIDoc)
-    * **VB**: mediante GhostDoc
+    * **C#**: mediante GhostDoc
     * **SQL**: mediante TeamCity SQLDoc
 
     Esto asegura la coherencia documental y la trazabilidad técnica entre código y documentación.

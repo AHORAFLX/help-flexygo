@@ -212,7 +212,7 @@ Esto descargará las imágenes necesarias y levantará todo automáticamente.
 Una vez finalizado el arranque:
 
 - **Frontend**: [http://localhost:${FRONTEND_PORT}](http://localhost:${FRONTEND_PORT})
-- **Backend (API)**: [http://localhost:60952/swagger](http://localhost:60952/swagger)
+- **Backend (API)**: [http://localhost:60952/scalar/v1](http://localhost:60952/scalar/v1), la referencia de la API en Scalar (el puerto es el que publiques para `flx-backend`)
 - **Base de datos (SQL Server)**: usuario `sa`, contraseña la que hayas definido
 
 ---
@@ -228,7 +228,7 @@ docker compose down
 Para ver los logs del backend:
 
 ```bash
-docker logs flexygo-backend
+docker compose logs flx-backend
 ```
 
 
@@ -237,13 +237,9 @@ docker logs flexygo-backend
 ## ⚙️ Configuración adicional para producción
 
 !!! warning "Deshabilitar actualizaciones automáticas en Docker"
-    En entornos Docker en producción, establece la variable de entorno `AutoUpdateEnable` a `false` para evitar reinicios inesperados del contenedor durante una actualización automática:
+    En entornos Docker en producción, pon el ajuste `AutoUpdateEnable` a `false` para evitar reinicios inesperados del contenedor durante una actualización automática.
 
-    ```yaml
-    environment:
-      - AutoUpdateEnable=false
-    ```
-    Añade esta variable al servicio `flx-frontend` y `flx-backend` en tu `docker-compose.yml`.
+    No es una variable de entorno, así que no sirve ponerlo en el `docker-compose.yml`: es una fila de la tabla `Settings` de la base de datos de configuración, y se cambia desde los ajustes (*Settings*) de Flexygo.
 
 ### Llave de cifrado como secreto de Docker
 

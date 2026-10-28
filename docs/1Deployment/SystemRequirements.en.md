@@ -36,3 +36,18 @@ Go to **Control Panel → Programs → Turn Windows features on or off** and mak
 
 !!! danger "Flexygo 10 requires SQL Server 2022 or later"
     Starting with Flexygo 10, the minimum SQL Server version is **SQL Server 2022**. The application's databases must be on a SQL Server 2022 or later server; if the server is older, upgrade it before installing, updating or migrating the application.
+
+---
+
+## :material-chart-line: Sizing guide
+
+For around **100 simultaneous users**, it is recommended to run the application and SQL Server on separate machines:
+
+| | SQL Server machine | Application machine (IIS) |
+|---|---|---|
+| Operating system | Windows Server 2016 Standard or later | Windows Server 2016 Standard or later |
+| Processor | Intel Xeon (reference: E5-2650 v4 @ 2.20GHz) | Intel Xeon (reference: E5-2650 v4 @ 2.20GHz) |
+| Memory | 16 GB RAM (expandable) | 8 GB RAM (expandable) |
+| Disk | 500 GB | 500 GB |
+
+Disk space depends on the project; for large-scale document or image management an external NAS is recommended. More users are spread over several application machines behind a load balancer. For databases over 30 GB, see [this article on SQL Server memory](https://www.brentozar.com/archive/2018/11/how-much-memory-is-normal-for-sql-servers/).

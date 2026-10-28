@@ -12,7 +12,7 @@ Qué viaja y qué no, cada opción de la ventana y cada paso del servidor están
 |---|---|
 | **Una aplicación de la versión 10 con el origen de tu proyecto activo** | Lo que viaja es lo del **origen activo** (por ejemplo, el 2 · Project). Lo creado con el origen 0 activo es indistinguible del core y no viaja. |
 | **Un usuario administrador** | La ventana solo la usan administradores. |
-| **En el servidor**: acceso al feed NuGet del actualizador | La exportación instala la plantilla `Flexygo.Product.Template` de la **misma versión** que la aplicación. Si no hay SDK de .NET, lo descarga la primera vez. |
+| **En el servidor**: acceso al feed NuGet del actualizador | La exportación instala la plantilla del producto (`{Namespace}.Product.Template`, según el ajuste `AutoUpdatePackageNamespace`; `Flexygo.Product.Template` en Flexygo) de la **misma versión** que la aplicación. Si no hay SDK de .NET, lo descarga la primera vez. |
 | **En tu equipo**: .NET SDK, SQL Server y `sqlpackage` | Para compilar, publicar las bases y arrancar. Y acceso a los mismos feeds NuGet (`nuget.config` del proyecto). |
 
 ---

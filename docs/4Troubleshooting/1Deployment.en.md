@@ -14,14 +14,14 @@ Diagnostic guide for the most common problems when configuring and starting up F
 
 **Solution:**
 
-1. Open the Frontend component's `appsettings.json` in the installation directory.
-2. Locate the `ApiUrl` key (or equivalent) and verify that it points to the correct Backend URL:
+1. Open the Frontend's `confppsettings.json` in the installation directory.
+2. Locate the `BackendEndpoint` key and verify that it points to the correct Backend URL, ending in `/api/backend/`:
    ```json
    {
-     "ApiUrl": "http://myserver/flexygo-backend"
+     "BackendEndpoint": "http://localhost:7110/api/backend/"
    }
    ```
-3. Make sure the URL includes the protocol (`http://` or `https://`) and the virtual path, if any.
+3. Make sure the URL includes the protocol (`http://` or `https://`) and the virtual path, if any. If the Frontend and the Backend are on the same server, use a local address (`localhost`), not the public domain.
 4. If you use HTTPS, verify that the SSL certificate is valid and trusted.
 5. Restart the Frontend's application pool in IIS.
 
@@ -37,15 +37,17 @@ Diagnostic guide for the most common problems when configuring and starting up F
 
 **Solution:**
 
-1. Open the Backend component's `appsettings.json` in the installation directory.
-2. Locate the `ConnectionStrings.DefaultConnection` key and check each part:
+1. Open the Backend's `confppsettings.json` in the installation directory.
+2. Locate the `ConnectionStrings.ConfConnectionString` (configuration database) and `ConnectionStrings.DataConnectionString` (data database) keys and check each part:
    ```json
    {
      "ConnectionStrings": {
-       "DefaultConnection": "Server=SERVER_NAME;Database=DATABASE_NAME;User Id=USER;Password=PASSWORD;"
+       "ConfConnectionString": "Data Source=SERVER_NAME;Initial Catalog=CONF_DATABASE;User ID=USER;Password=PASSWORD;Encrypt=False;Trust Server Certificate=True",
+       "DataConnectionString": "Data Source=SERVER_NAME;Initial Catalog=DATA_DATABASE;User ID=USER;Password=PASSWORD;Encrypt=False;Trust Server Certificate=True"
      }
    }
    ```
+   In IIS and in a production container the connection strings are encrypted (they start with `enc:v1:`). To read or change them, decrypt them with `Flexygo.Backend.exe config decrypt`, edit them and restart; they are encrypted again on startup. See [How do I decrypt and re-encrypt the configuration?](../MoreInformation/1FAQ/DecryptWebConfig.md) and [Encrypted appsettings](../1Deployment/2ConfigWizard/EncryptedSettings.md).
 3. Check that you can connect with those credentials from SQL Server Management Studio or `sqlcmd`.
 4. If you use Windows authentication, make sure the application pool account has access to the database.
 5. Restart the Backend's application pool.
@@ -151,15 +153,10 @@ The Flexygo project requires **.NET 9** for the backend/frontend. The MCP server
 
 1. Check the container logs:
    ```bash
-   docker compose logs flexygo-backend
+   docker compose logs flx-backend
    ```
 2. Check that the `.env` file exists next to `docker-compose.yml` and defines all the required variables (at minimum `SQL_PASSWORD` and `FRONTEND_PORT`/`BACKEND_PORT`).
-3. Verify that `AutoUpdateEnable` is set to `false` in production (see the [Docker guide](../1Deployment/4Docker/index.md)):
-   ```yaml
-   environment:
-     AutoUpdateEnable: "false"
-   ```
-4. Make sure the ports are not already in use by another process:
+3. Make sure the ports are not already in use by another process:
    ```bash
    netstat -ano | findstr "8080"
    ```

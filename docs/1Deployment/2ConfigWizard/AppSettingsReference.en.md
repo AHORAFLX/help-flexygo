@@ -25,14 +25,14 @@ In IIS and in a production container, the passwords and keys in this file are st
     },
     "EventLog": {
       "LogLevel": {
-        "Default": "Information",
+        "Default": "Warning",
         "Microsoft.AspNetCore": "Warning"
       }
     }
   },
   "ConnectionStrings": { // (4)!
-    "ConfConnectionString": "Data Source=localhost;Initial Catalog=RENAME;User ID=sa;Password=pass;Encrypt=False;Trust Server Certificate=True",
-    "DataConnectionString": "Data Source=localhost;Initial Catalog=RENAME;User ID=sa;Password=pass;Encrypt=False;Trust Server Certificate=True"
+    "ConfConnectionString": "Data Source=localhost;Initial Catalog=RENAME;User ID=sa;Password=;Encrypt=False;Trust Server Certificate=True",
+    "DataConnectionString": "Data Source=localhost;Initial Catalog=RENAME;User ID=sa;Password=;Encrypt=False;Trust Server Certificate=True"
   },
   "MailSettings": { // (5)!
     "From": "",
@@ -41,7 +41,7 @@ In IIS and in a production container, the passwords and keys in this file are st
     "Ssl": false,
     "UserName": "",
     "Password": "",
-    "Configured": true
+    "Configured": false
   },
   "DatabaseNuget": { // (6)!
     "PackageId": "Flexygo.Conf.Database",
@@ -50,7 +50,7 @@ In IIS and in a production container, the passwords and keys in this file are st
   },
   "DisableCronJobs": false, // (7)!
   "DisableScriptJobs": false,
-  "FrontendEndpoint": "http://localhost:7111", // (8)!
+  "FrontendEndpoint": "", // (8)!
   "AllowedHosts": "*",
   "WebApiOrigins": "*", // (9)!
   "DebugUpdater": false // (10)!
@@ -61,10 +61,10 @@ In IIS and in a production container, the passwords and keys in this file are st
 2. **ProjectName** — Name of the project/product. The installer fills it in with the name of the installed product.
 3. **Logging** — Log levels for the application and the Windows Event Log. The default values are suitable for production.
 4. **ConnectionStrings** — Connection strings for the two databases. The Configuration Wizard generates and updates these automatically. `ConfConnectionString` points to the configuration database and `DataConnectionString` to the data database.
-5. **MailSettings** — SMTP server parameters. Configured by the wizard. The `Configured: true` key indicates that the wizard has already gone through this step; if set to `false`, the wizard will ask for the mail configuration again when the application starts.
+5. **MailSettings** — SMTP server parameters. Configured by the wizard. The `Configured` key is `false` in the template and the wizard sets it to `true` when the mail is saved; while it is `false`, the wizard asks for the mail configuration again.
 6. **DatabaseNuget** — NuGet source from which the system checks for updates to the configuration database. Do not modify unless you use your own corporate NuGet feed.
 7. **DisableCronJobs** and **DisableScriptJobs** — `DisableCronJobs` disables Flexygo's internal scheduled tasks (*Cron Jobs*) and `DisableScriptJobs`, the [database script jobs](../../Help/Programming/DatabaseScriptJobs.md) launched at startup. Useful in test environments, in copies pointing to a shared database or when there are several Backend instances. Only the value `true` turns them off. **They are read from this file**, which overrides any other place (the settings table does not count), and **only at startup**: after changing them, restart the Backend.
-8. **FrontendEndpoint** — URL of the Frontend as known by the Backend. Configured automatically by the installer. Only change it if the domain or port changes after installation.
+8. **FrontendEndpoint** — URL of the Frontend as known by the Backend. It is empty in the template and the installer sets it automatically (for example, `http://localhost:7111`). Only change it if the domain or port changes after installation.
 9. **WebApiOrigins** — Allowed origins for CORS requests to the API. `"*"` allows any origin. Restrict it in production if required.
 10. **DebugUpdater** — Enables the updater's debug mode. For diagnostics only; keep it set to `false` in production.
 
@@ -102,27 +102,25 @@ These keys do not appear in the file until the first startup and are invisible t
     },
     "EventLog": {
       "LogLevel": {
-        "Default": "Information",
+        "Default": "Warning",
         "Microsoft.AspNetCore": "Warning"
       }
     }
   },
-  "BackendEndpoint": "http://localhost:7110/api/backend/", // (3)!
+  "BackendEndpoint": "", // (3)!
   "AllowedHosts": "*",
   "WebApiOrigins": "*", // (4)!
   "DebugUpdater": false, // (5)!
-  "EnableWindowsAuth": false, // (6)!
-  "HttpsRedirection": true // (7)!
+  "EnableWindowsAuth": false // (6)!
 }
 ```
 
 1. **Kestrel** — Port the Frontend listens on. Configured by the installer. Only change it if you manually change the port.
 2. **Logging** — Log levels. Identical to the Backend; the default values are suitable for production.
-3. **BackendEndpoint** — URL of the Backend API consumed by the Frontend. Configured automatically by the installer. Only change it if the domain or port changes after installation.
+3. **BackendEndpoint** — URL of the Backend API consumed by the Frontend. It is empty in the template and the installer sets it automatically (for example, `http://localhost:7110/api/backend/`). Only change it if the domain or port changes after installation.
 4. **WebApiOrigins** — Allowed origins for CORS. `"*"` allows any origin. Restrict it in production if required.
 5. **DebugUpdater** — Enables the updater's debug mode in the Frontend. Keep it set to `false` in production.
 6. **EnableWindowsAuth** — Enables integrated Windows sign-in (NTLM/Kerberos). Requires IIS to have both anonymous and Windows authentication enabled. Keep it set to `false` unless automatic sign-in against LDAP is used.
-7. **HttpsRedirection** — Redirects requests that arrive over `http` to `https`. Enabled by default. Set it to `false` only when a reverse proxy in front already enforces `https`; see [Deployment behind a reverse proxy](../6ReverseProxy/index.md).
 
 ## Optional keys (Frontend and Backend)
 
@@ -131,6 +129,7 @@ They are not included in the template and are only added when needed:
 | Key | Purpose |
 |-------|-----------|
 | `ForwardedHeaders.KnownProxies` | IP addresses of the trusted reverse proxies, so the application accepts the real client IP from them. See [Deployment behind a reverse proxy](../6ReverseProxy/index.md) |
+| `HttpsRedirection` (Frontend only) | Redirects requests that arrive over `http` to `https`. When it is missing, it is `true`. Set it to `false` only when a reverse proxy in front already enforces `https`; see [Deployment behind a reverse proxy](../6ReverseProxy/index.md#https-redirection) |
 
 ## Automatically generated keys (Frontend)
 

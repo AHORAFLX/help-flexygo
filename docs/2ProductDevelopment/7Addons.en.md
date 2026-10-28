@@ -81,8 +81,8 @@ Its definition is the same as always, with one new addition: a resource's `scope
 | `name` | `"AddonFlexy"` | Our addon's identifier. |
 | `description` | `"Description."` | Brief description of the addon's purpose or functionality. |
 | `type` | `"Flexygo"` | Currently always Flexygo. |
-| `flexygoVersionMin` | `"4.0.0.6"` | Minimum Flexygo version required to install the addon. |
-| `flexygoVersionMax` | `"8.4.0.6"` | Maximum Flexygo version required to install the addon. |
+| `flexygoVersionMin` | `"10.0.0"` | Minimum Flexygo version required to install the addon. |
+| `flexygoVersionMax` | `"10.9.0"` | Maximum Flexygo version the addon can be installed on. It is optional: if the installed version is higher, the installation is rejected. |
 | `productVersionMin` | `"4.0.0.6"` | Minimum product version required to install the addon. |
 | `productVersionMax` | `"8.4.0.6"` | Maximum product version required to install the addon. |
 | `resources` | `[ ... ]` | List of resources included in the addon and how they should be handled. |

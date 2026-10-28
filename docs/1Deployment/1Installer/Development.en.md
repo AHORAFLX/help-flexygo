@@ -1,13 +1,13 @@
 # Installer: Development Mode
 
-The installer's **Development** mode is aimed at developers working with Flexygo projects in Visual Studio or VS Code. It offers two operations: creating a new product from the official template, or managing existing products in the workspace.
+The installer's **Development** mode is aimed at developers working with Flexygo projects in Visual Studio or VS Code. It offers three operations: creating a new product from the official template, creating an addon (in the products that support them, such as Flexygo), or managing existing products in the workspace.
 
 !!! warning "Prerequisite for VS Code: Node.js in the global PATH"
     If you're going to work with the project from **VS Code**, you need **Node.js** installed and available in the system's **global PATH**. If it isn't in the PATH, the Frontend build will fail. See the [development requirements](../../2ProductDevelopment/1Requirements.md).
 
 <figure markdown="span">
   ![Installer main screen — Development section](../../docs_assets/images/CoreDeployment/installer/Desarrollo/Inicio.png)
-  <figcaption>Main screen: Development mode offers 2 options</figcaption>
+  <figcaption>Main screen of Development mode</figcaption>
 </figure>
 
 ---
@@ -37,6 +37,14 @@ The installer's **Development** mode is aimed at developers working with Flexygo
 
     !!! tip "Command-line alternative"
         You can also create a product using the template directly with `dotnet new`. See the [Product Template](../../2ProductDevelopment/2Template.md) guide.
+
+=== "Create addon"
+
+    ## Create an addon
+
+    The **Create addon** option only appears for the products that support addons, such as Flexygo. It generates an addon solution with the product's addon template: it asks for the product folder and the addon name, which must be different from the product's. If the folder is empty, it creates the product first and then the addon.
+
+    The whole process, from creation to packaging as a NuGet, is in [Create an addon](../../2ProductDevelopment/7Addons.md).
 
 === "Manage products"
 
@@ -77,7 +85,7 @@ The installer's **Development** mode is aimed at developers working with Flexygo
     </figure>
 
     !!! warning "Don't update the NuGet packages manually"
-        The updater performs additional steps (resource synchronization, merging `appsettings`…) that do not happen with a manual NuGet update from Visual Studio or VS Code.
+        The updater performs additional steps (resource synchronization, replacing the `appsettings` while keeping your `ConnectionStrings`, `DatabaseNuget` and `MailSettings`…; see [Product management](../../2ProductDevelopment/3ProductManagement.md)) that do not happen with a manual NuGet update from Visual Studio or VS Code.
 
     ### Generating the product's NuGets
 
