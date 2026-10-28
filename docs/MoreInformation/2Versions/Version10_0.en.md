@@ -142,8 +142,8 @@ Includes assistants for configuring and updating the application, creating appli
 
 ### Home
 
-- **Lowdy guides users through system tours with clearer instructions and highlighting that follows each element.** Lowdy appears in the invitation, accompanies the cards for each step, and says goodbye when the tour ends. The outline keeps the shape of the highlighted element, even near the edges of the screen. Instructions about the home page, search, notifications, and account are clearer, and two unnecessary steps have been removed; project and addon tours keep their usual appearance.
-- **In skin 2026, you can customize the modules on each page and view a redesigned home dashboard.** Each user can reorder, pin, and collapse modules, or restore the layout defined by the administrator. The dashboard brings together cards with information about errors, tasks, users, license, activity, and other application data. The license card now shows the expiry date correctly.
+- **The welcome tour has been renewed: it is offered to administrators on their first access, and Lowdy guides them along the way.** It is shown only once, and administrators can postpone it or choose not to see it again. The guidance on the home page, search, notifications, and account is clearer, and two steps have been removed. Lowdy guides users through the cards and highlights each item with a complete outline; project and add-on tours retain their usual appearance.
+- **In skin 2026, customize the modules on each page and view a revamped home dashboard with application information.** Each user can reorder, pin, and collapse modules, or restore the administrator's layout. The dashboard brings together cards about errors, tasks, users, the license, activity, and other data; the license card also displays the expiration date correctly.
 
 ### Interface
 
@@ -301,7 +301,8 @@ Includes assistants for configuring and updating the application, creating appli
 
 ### Home
 
-- **The home page and control panel organize information better and let you access records from their indicators.** On the home page, lists and blocks use space better, errors are grouped by cause, and status indicators open their records, including job execution results. In the control panel, shortcuts and recent activity are presented more compactly, with more useful information about objects and modules. List links and totals match their content.
+- **The home page and control panel make better use of space and highlight more useful information for taking action.** On the home page, lists and information blocks are arranged to reduce gaps, and errors are grouped by cause. On the dashboard, shortcuts and recent activity take up less space; object and module counts are also displayed, and the indicators have been revised.
+- **The home page status indicators open related lists and show consistent counts.** You can access the related records from the indicators, including job execution results. List links take you to the corresponding destination, and their totals match the content shown.
 
 ### Interface
 
