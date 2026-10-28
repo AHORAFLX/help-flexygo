@@ -145,8 +145,8 @@ Incluye asistentes para configurar y actualizar la aplicación, crear aplicacion
 
 ### Inicio
 
-- **Lowdy acompaña las visitas guiadas del sistema con indicaciones más claras y un resaltado que sigue cada elemento.** Lowdy aparece en la invitación, acompaña las tarjetas de cada paso y se despide al terminar la visita. El contorno mantiene la forma del elemento señalado, incluso junto a los límites de la pantalla. Las indicaciones sobre la página inicial, la búsqueda, las notificaciones y la cuenta son más claras, y se han eliminado dos pasos innecesarios; las visitas de proyectos y complementos conservan su aspecto habitual.
-- **En skin 2026, puedes personalizar los módulos de cada página y consultar un panel de inicio renovado.** Cada usuario puede ordenar, fijar y contraer módulos, o recuperar la distribución definida por el administrador. El panel reúne tarjetas con información sobre errores, tareas, usuarios, licencia, actividad y otros datos de la aplicación. La tarjeta de licencia muestra correctamente la fecha de caducidad.
+- **La visita guiada de bienvenida se renueva: se ofrece al administrador en su primer acceso y Lowdy acompaña sus pasos.** Se muestra una sola vez y el administrador puede posponerla o elegir que no vuelva a aparecer. Las indicaciones sobre la página de inicio, la búsqueda, las notificaciones y la cuenta son más claras, y se han eliminado dos pasos. Lowdy acompaña las tarjetas y señala cada elemento con un contorno completo; las visitas de proyectos y complementos mantienen su aspecto habitual.
+- **En skin 2026, personaliza los módulos de cada página y consulta un panel de inicio renovado con información de la aplicación.** Cada usuario puede ordenar, fijar y contraer módulos, o recuperar la distribución del administrador. El panel reúne tarjetas sobre errores, tareas, usuarios, licencia, actividad y otros datos; además, la tarjeta de licencia muestra correctamente la fecha de caducidad.
 
 ### Inicio de sesión
 
@@ -314,7 +314,8 @@ Incluye asistentes para configurar y actualizar la aplicación, crear aplicacion
 
 ### Inicio
 
-- **La página de inicio y el panel de control organizan mejor la información y permiten acceder a los registros desde sus indicadores.** En la página de inicio, las listas y los bloques ocupan mejor el espacio, los errores se agrupan por causa y los indicadores de estado abren sus registros, incluidos los resultados de ejecución de trabajos. En el panel de control, los accesos y la actividad reciente se presentan de forma más compacta, con información más útil sobre objetos y módulos. Los enlaces y totales de las listas corresponden a su contenido.
+- **La página de inicio y el panel de control aprovechan mejor el espacio y destacan información más útil para actuar.** En la página de inicio, las listas y los bloques informativos se distribuyen para reducir los huecos, y los errores se agrupan por causa. En el panel, los accesos y la actividad reciente quedan más compactos; también se muestran recuentos de objetos y módulos y se revisan los indicadores.
+- **Los indicadores de estado de la página de inicio abren las listas relacionadas y muestran recuentos coherentes.** Puedes acceder desde los indicadores a sus registros, incluidos los resultados de ejecución de trabajos. Los enlaces de las listas llevan al destino correspondiente y sus totales coinciden con el contenido mostrado.
 
 ### Inicio de sesión
 
