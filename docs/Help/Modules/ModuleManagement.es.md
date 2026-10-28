@@ -18,6 +18,27 @@ La configuración de la página se abre con el botón **Ajustes de la página** 
   <figcaption>Colocar módulos: la barra de arriba y, a la derecha, el panel <b>Módulos</b></figcaption>
 </figure>
 
+## Skin 2026: que cada usuario ordene los módulos
+
+Puedes dejar que cada usuario ordene a su gusto los módulos de una página. Se activa página a página y viene apagado:
+
+1. Abre la página, pulsa **Ctrl Mayús M** y, en la barra **Colocando módulos**, abre **Ajustes de la página**.
+2. Marca **Los usuarios pueden reordenar** y guarda.
+
+Desde ese momento, cada usuario puede:
+
+- **mover** un módulo arrastrándolo por su cabecera, a otra zona o a otro puesto de la misma; en una página con **Disposición libre**, a otra celda de la rejilla;
+- **fijar** un módulo en su sitio con la chincheta de su cabecera, para que los demás se muevan a su alrededor;
+- **volver a tu disposición** con la línea que sale al pie de la página en cuanto ha movido algo.
+
+Lo que no puede hacer: cambiar el tamaño de los módulos, mostrarlos u ocultarlos, ni añadir o quitar ninguno. Eso sigue siendo cosa tuya.
+
+Cada cambio se guarda en cuanto el usuario suelta el módulo, solo para él. Se guarda la zona, el orden, si el módulo está plegado o fijado y, en una página con disposición libre, su celda. Si después apagas la opción, todos vuelven a ver tu disposición, y lo que cada uno tenía guardado se conserva por si la vuelves a encender.
+
+Solo funciona en la skin 2026, y en la página principal: no en los diálogos. En el ancho de móvil no hay nada que ordenar, porque los módulos se apilan; una página con disposición libre se ordena a partir de 1280 px de ancho. Mientras colocas módulos, el orden de cada usuario queda en pausa.
+
+Cómo lo ve el usuario: [Ordenar los módulos de una página](../Administration/Skin2026.md#7-ordenar-los-modulos-de-una-pagina).
+
 ## Skin flexy2022: Page config y Module Manager
 
 En la skin flexy2022, es necesario acceder a la página, hacer clic en la pestaña **Page config** situada a la derecha de la pantalla y acceder al **Module Manager**. En la *imagen 1* se pueden visualizar las distintas posibilidades de diseño que existen para dividir la pantalla.
