@@ -23,7 +23,7 @@ Marca **Turn on modern authentication…** para los flujos OAuth y las opciones 
 
 ![](../../docs_assets/images/ModulesConf/MailOffice6.png "Image 3. Modern authentication")
 
-Luego ve a la pantalla **Users**:
+Luego ve a la pantalla **Usuarios**:
 
 ![](../../docs_assets/images/ModulesConf/MailOffice7.png "Image 4. Users")
 

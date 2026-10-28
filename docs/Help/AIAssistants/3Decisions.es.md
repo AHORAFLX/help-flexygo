@@ -130,7 +130,7 @@ Para quien quiera saber qué llama el asistente, o probarlo desde otro cliente:
 | `flexygo_decide` | Toma una decisión: `taskId`, `outcome` (el `id` de la opción) y `comment`. Deja la decisión aplicándose 60 segundos. | Escritura; avisa fuera si la decisión tiene vuelta |
 | `flexygo_decide_undo` | La deshace mientras no se ha aplicado. | Escritura, idempotente |
 
-Las tres devuelven también el texto para los clientes sin widget, y cada llamada queda en **MCP usage** como el resto.
+Las tres devuelven también el texto para los clientes sin widget, y cada llamada queda en **Uso del MCP** como el resto.
 
 ## Si algo no sale
 

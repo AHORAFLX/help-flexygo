@@ -4,7 +4,7 @@
 
 MailChimp es una plataforma de automatización de marketing que te ayuda a compartir campañas de correo y publicidad con clientes y otros usuarios.
 
-El área de integración con MailChimp se abre con este enlace: <flx-navbutton class="link" type="openPageName" pagename="syspage-generic-mailchimpcampaigns">MailChimp</flx-navbutton>. También está en el área **Connectors** del [panel de control](../Administration/ControlPanel.md): *MailChimp > MailChimp Work Area* (en la skin flexy2022: *Admin Work Area > Connectors > MailChimp > MailChimp Work Area*).
+El área de integración con MailChimp se abre con este enlace: <flx-navbutton class="link" type="openPageName" pagename="syspage-generic-mailchimpcampaigns">MailChimp</flx-navbutton>. También está en el área **Conectores** del [panel de control](../Administration/ControlPanel.md): *MailChimp > Área de trabajo de MailChimp* (en la skin flexy2022: *Admin Work Area > Connectors > MailChimp > MailChimp Work Area*).
 
 Es necesario un **API Key** para poder conectar con la API de MailChimp, por lo que el primer paso será configurarlo. Si necesitas más información, puedes consultar la [documentación de Mailchimp](https://mailchimp.com/es/help/about-api-keys/).
 {: .flx-warning-card }

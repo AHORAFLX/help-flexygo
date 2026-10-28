@@ -11,7 +11,7 @@
 
 ## 1. Dónde está y quién lo ve
 
-- En el **panel de control**, área **Environment** → **Health and resources**.
+- En el **panel de control**, área **Entorno** → **Salud y recursos**.
 - Desde la pantalla de inicio del administrador, la tarjeta **Health** → **Health and resources** ([Pantalla de inicio del administrador](AdminDashboard.md)).
 
 Es una pantalla de **administradores**: los datos solo se sirven a un usuario con rol de administrador. La entrada del panel de control está en skin2026.

@@ -44,7 +44,7 @@ Todo pasa por la seguridad del usuario que se conectó: sus roles, los objetos y
 Además, el asistente recibe:
 
 - **Recursos**: la descripción de la aplicación (`flexygo://application`), el esquema de cada objeto (`flexygo://{objeto}/schema`) y cualquier registro (`flexygo://{objeto}/{id}`).
-- **Prompts**: las tareas típicas que el equipo escribe en la pantalla **MCP prompts** («resumen de un cliente», «pipeline del mes»…), que el cliente ofrece como atajos.
+- **Prompts**: las tareas típicas que el equipo escribe en la pantalla **Prompts MCP** («resumen de un cliente», «pipeline del mes»…), que el cliente ofrece como atajos.
 - **Autocompletado** de nombres de objetos, vistas y procesos.
 
 !!! tip "El asistente es tan bueno como las descripciones"
@@ -68,7 +68,7 @@ El asistente no ve las pantallas: ve **los metadatos** de la configuración. Est
 | Recomendable | Qué es cada informe | `Reports` · **`ReportDescrip`** | Ficha del informe | Elegir el informe al pedir un PDF o un Excel |
 | Recomendable | Cómo se busca cada objeto por texto | `Objects_Search` (`Generic` = 1) y `Objects_Search_Properties` | Búsquedas genéricas del objeto | `flexygo_search` («busca García») solo encuentra en los objetos con búsqueda genérica |
 | Recomendable | Campos que no deben salir | `Objects_Properties` · **`WebApiHidden`** | Ficha de la propiedad | Lo oculto no se lista ni se describe al asistente |
-| Opcional | Tareas típicas, como atajos | `MCP_Prompts` (`PromptName`, `Title`, `Descrip`, `Template`) | *MCP prompts* | El cliente los ofrece como botones: «resumen del mes», «cliente en riesgo» |
+| Opcional | Tareas típicas, como atajos | `MCP_Prompts` (`PromptName`, `Title`, `Descrip`, `Template`) | *Prompts MCP* | El cliente los ofrece como botones: «resumen del mes», «cliente en riesgo» |
 | Opcional | Etiquetas legibles | `Objects` · `Descrip`; `Objects_Properties` · `Label` | Fichas del objeto y de la propiedad | Lo que ve en los resultados en lugar de los nombres técnicos |
 
 Todo esto es configuración del producto: se escribe con el **origen del proyecto** activo para que viaje en sus guiones. `ApplicationDescription` es un ajuste del core, y viaja como `UPDATE` en el `config.sql` del proyecto exportado ([Exportar como proyecto](../../2ProductDevelopment/8ExportProject/2Reference.md)).
@@ -114,20 +114,20 @@ Reglas del guion:
 
 ## 2. Ponerlo en marcha (administrador)
 
-1. **Activar la web API y el punto MCP** en la herramienta **WebAPI** (área *Security* del [panel de control](../Administration/ControlPanel.md)): interruptores **Enable WebAPI** y **Enable MCP**, que son los ajustes `WebAPI_Enabled` y `MCP_Enabled` (también en *Ajustes*, grupo *WebAPI*). Los dos vienen apagados: exponer la aplicación a asistentes es una decisión del equipo. Sin `MCP_Enabled`, la ruta `/mcp` y sus documentos de descubrimiento responden 404, como si no existieran; el cambio vale al momento, sin reiniciar. Van separados a propósito: la web API sirve a integraciones (un ERP, una app, otro sistema con su token) y el MCP a los asistentes de las personas, que es otro público; se puede tener la primera sin el segundo, no al revés.
+1. **Activar la web API y el punto MCP** en la herramienta **WebAPI** (área *Seguridad* del [panel de control](../Administration/ControlPanel.md)): interruptores **Enable WebAPI** y **Enable MCP**, que son los ajustes `WebAPI_Enabled` y `MCP_Enabled` (también en *Ajustes*, grupo *WebAPI*). Los dos vienen apagados: exponer la aplicación a asistentes es una decisión del equipo. Sin `MCP_Enabled`, la ruta `/mcp` y sus documentos de descubrimiento responden 404, como si no existieran; el cambio vale al momento, sin reiniciar. Van separados a propósito: la web API sirve a integraciones (un ERP, una app, otro sistema con su token) y el MCP a los asistentes de las personas, que es otro público; se puede tener la primera sin el segundo, no al revés.
 
     <figure markdown="span">
       ![La fila de ajustes de la herramienta WebAPI, con Enable WebAPI y Enable MCP](../../docs_assets/images/AIAssistants/interruptor-mcp.png)
       <figcaption>Enable MCP, junto a Enable WebAPI</figcaption>
     </figure>
-2. **Dar el permiso MCP** a los roles o a los usuarios que puedan conectar un asistente: en la herramienta **WebAPI** (área *Security* del [panel de control](../Administration/ControlPanel.md)), panel *Authorized People*, la **columna del robot**. Es un permiso **aparte** del de la web API (la columna del ojo): un rol puede tener asistentes sin la API REST, o la API para sus integraciones sin asistentes. Como siempre, el usuario manda sobre su rol. Quitar el permiso **corta al instante** las conexiones vivas de esa persona; un usuario sin permiso ve la negativa al intentar conectar.
+2. **Dar el permiso MCP** a los roles o a los usuarios que puedan conectar un asistente: en la herramienta **WebAPI** (área *Seguridad* del [panel de control](../Administration/ControlPanel.md)), panel *Authorized People*, la **columna del robot**. Es un permiso **aparte** del de la web API (la columna del ojo): un rol puede tener asistentes sin la API REST, o la API para sus integraciones sin asistentes. Como siempre, el usuario manda sobre su rol. Quitar el permiso **corta al instante** las conexiones vivas de esa persona; un usuario sin permiso ve la negativa al intentar conectar.
 
     <figure markdown="span">
       ![El panel Authorized People: por rol, la web API (ojo) y los asistentes MCP (robot)](../../docs_assets/images/AIAssistants/permiso-mcp.png)
       <figcaption>Por rol (o por usuario, en la otra pestaña): la web API y los asistentes, cada uno con su interruptor</figcaption>
     </figure>
 3. **Exponer los objetos** en la web API (*WebAPI objects*): qué objetos, vistas y procesos ve el asistente, y si puede **editar**, **crear** o **imprimir** cada objeto. Lo no expuesto no existe para él.
-4. **Escribir las descripciones** (ver la nota de arriba) y, si se quiere, los prompts en la pantalla **MCP prompts**.
+4. **Escribir las descripciones** (ver la nota de arriba) y, si se quiere, los prompts en la pantalla **Prompts MCP**.
 5. **Revisar las búsquedas genéricas** de los objetos (las del buscador global de la aplicación): son las que usa el asistente para buscar un texto; un objeto sin búsqueda genérica no aparece en `flexygo_search`.
 6. Opcional: ajustar los topes (§5).
 
@@ -207,7 +207,7 @@ Para desconectar, la persona tiene **Connected assistants** en su menú de perfi
 | Medida | Qué hace |
 |---|---|
 | **OAuth 2.1 con la aplicación como servidor de autorización** | Login propio (SSO y 2FA incluidos), consentimiento explícito, PKCE obligatorio, tokens de 8 horas con renovación rotatoria. Las tablas guardan solo el hash de los tokens: una copia de la base no abre ninguna sesión. |
-| **Permiso propio** | Conectar un asistente pide el permiso MCP del usuario o de su rol, aparte del de la web API (§2). Quitarlo, o bloquear el asistente en *MCP assistants*, corta las conexiones vivas al instante. |
+| **Permiso propio** | Conectar un asistente pide el permiso MCP del usuario o de su rol, aparte del de la web API (§2). Quitarlo, o bloquear el asistente en *Asistentes MCP*, corta las conexiones vivas al instante. |
 | **La seguridad del usuario, siempre** | Cada llamada corre con el usuario que consintió: roles, objetos, vistas, procesos, filtros de seguridad. El MCP no añade permisos. |
 | **Filtros acotados** | Un filtro SQL del asistente solo puede nombrar tablas de objetos que el rol ve; lo demás se rechaza con palabras. |
 | **Scopes de lectura y escritura** | `flexygo:read` y `flexygo:write`; la persona decide en el consentimiento. |
@@ -227,7 +227,7 @@ Todos en *Ajustes*, grupo *WebAPI*:
 | Ajuste | Por defecto | Qué hace |
 |---|---|---|
 | `MCP_Enabled` | `false` | Abre el punto `/mcp` a los asistentes. Necesita también `WebAPI_Enabled`. Es el interruptor **Enable MCP** de la herramienta WebAPI. |
-| `MCP_RequireApprovedClients` | `false` | Con `true`, cada asistente que se registra nace **sin aprobar** y nadie puede conectarlo hasta que un administrador marque *Approved* en **MCP assistants** (§6). Con `false`, un asistente se aprueba al registrarse y se puede bloquear después. |
+| `MCP_RequireApprovedClients` | `false` | Con `true`, cada asistente que se registra nace **sin aprobar** y nadie puede conectarlo hasta que un administrador marque *Approved* en **Asistentes MCP** (§6). Con `false`, un asistente se aprueba al registrarse y se puede bloquear después. |
 | `MCP_CallsPerMinute` | `60` | Llamadas a herramientas que una sesión puede hacer por minuto; `0` = sin tope. |
 | `MCP_CallsPerDay` | `0` | Lo mismo por día natural; `0` = sin tope. |
 | `MCP_QueryTimeoutSeconds` | `30` | Segundos que puede tardar una consulta de una herramienta; `0` = el de SQL Server. |
@@ -240,30 +240,30 @@ Todos en *Ajustes*, grupo *WebAPI*:
 ## 6. Registro, sesiones y auditoría
 
 - **Log**: cada llamada a una herramienta y cada lectura de un recurso queda en `WebAPI_Logs` con `PetitionType = MCP`: usuario, herramienta (`FunctionName`), objeto, argumentos (`Body`), estado (200; 403 negativa por rol o por scope; 404 registro que no existe; 400 argumento, filtro o consulta agotada; 429 tope de llamadas; 500 fallo) y duración. Se purga con `ClearWebApiLogDays`, como el resto del log.
-Las pantallas de administración están en el área **Environment** del [panel de control](../Administration/ControlPanel.md) (en flexy2022, *Admin Work Area › Environment*): **MCP assistants**, **MCP sessions**, **MCP prompts** y **MCP usage**.
+Las pantallas de administración están en el área **Entorno** del [panel de control](../Administration/ControlPanel.md) (en flexy2022, *Admin Work Area › Environment*): **Asistentes MCP**, **Sesiones MCP**, **Prompts MCP** y **Uso del MCP**.
 
-**MCP assistants**: los asistentes que se han registrado en la aplicación (se registran solos al conectar por primera vez; tabla `MCP_Clients`; los que usan CIMD ocupan una sola fila por producto, ver [Cómo se registran los asistentes](4ClientRegistration.md)), con sus dominios de redirección, la fecha de alta, las sesiones vivas y el interruptor **Approved**. Quitar *Approved* **bloquea al asistente al instante**: sus sesiones dejan de funcionar en la siguiente llamada y nadie puede volver a conectarlo hasta que se apruebe de nuevo. Borrar un asistente se lleva sus sesiones. Con `MCP_RequireApprovedClients` encendido (§5), cada asistente nuevo aparece aquí sin aprobar y se aprueba a mano antes de que nadie lo use.
+**Asistentes MCP**: los asistentes que se han registrado en la aplicación (se registran solos al conectar por primera vez; tabla `MCP_Clients`; los que usan CIMD ocupan una sola fila por producto, ver [Cómo se registran los asistentes](4ClientRegistration.md)), con sus dominios de redirección, la fecha de alta, las sesiones vivas y el interruptor **Approved**. Quitar *Approved* **bloquea al asistente al instante**: sus sesiones dejan de funcionar en la siguiente llamada y nadie puede volver a conectarlo hasta que se apruebe de nuevo. Borrar un asistente se lleva sus sesiones. Con `MCP_RequireApprovedClients` encendido (§5), cada asistente nuevo aparece aquí sin aprobar y se aprueba a mano antes de que nadie lo use.
 
 <figure markdown="span">
-  ![MCP assistants: nombre, dominios de redirección, alta, sesiones vivas y Approved](../../docs_assets/images/AIAssistants/clientes.png)
+  ![Asistentes MCP: nombre, dominios de redirección, alta, sesiones vivas y Approved](../../docs_assets/images/AIAssistants/clientes.png)
   <figcaption>Un asistente aprobado con una sesión viva y otro bloqueado</figcaption>
 </figure>
 
-**MCP sessions**: todas las conexiones vivas (tabla `MCP_Sessions`): quién, con qué asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer. **Revoke**, en el menú de la fila, la corta: el asistente recibe una negativa y la persona tiene que volver a conectar. Las sesiones no se crean ni se editan a mano.
+**Sesiones MCP**: todas las conexiones vivas (tabla `MCP_Sessions`): quién, con qué asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer. **Revoke**, en el menú de la fila, la corta: el asistente recibe una negativa y la persona tiene que volver a conectar. Las sesiones no se crean ni se editan a mano.
 
 <figure markdown="span">
-  ![MCP sessions con el menú de la fila abierto y Revoke](../../docs_assets/images/AIAssistants/sesiones.png)
+  ![Sesiones MCP con el menú de la fila abierto y Revoke](../../docs_assets/images/AIAssistants/sesiones.png)
   <figcaption>Revoke corta la conexión sin tocar el resto</figcaption>
 </figure>
 
-**MCP usage**: lo que se hace con los asistentes, leído del log: llamadas por día (respondidas y rechazadas), por herramienta y por persona, con la duración media y la peor, y las últimas negativas con su motivo.
+**Uso del MCP**: lo que se hace con los asistentes, leído del log: llamadas por día (respondidas y rechazadas), por herramienta y por persona, con la duración media y la peor, y las últimas negativas con su motivo.
 
 <figure markdown="span">
-  ![MCP usage: llamadas por día, por herramienta, por persona y negativas](../../docs_assets/images/AIAssistants/uso.png)
+  ![Uso del MCP: llamadas por día, por herramienta, por persona y negativas](../../docs_assets/images/AIAssistants/uso.png)
   <figcaption>Una herramienta lenta o muy rechazada es una vista o una descripción que falta</figcaption>
 </figure>
 
-**MCP prompts** (objeto `sysMcpPrompt`, tabla `MCP_Prompts`): nombre, descripción, argumentos y el texto de cada prompt que el asistente ofrece como atajo.
+**Prompts MCP** (objeto `sysMcpPrompt`, tabla `MCP_Prompts`): nombre, descripción, argumentos y el texto de cada prompt que el asistente ofrece como atajo.
 
 ---
 
@@ -272,5 +272,5 @@ Las pantallas de administración están en el área **Environment** del [panel d
 - **Describe antes de exponer.** Una descripción de IA en cada objeto expuesto, las propiedades de negocio con su descripción y sus valores, y `ApplicationDescription` con el vocabulario del equipo. Es lo que hace que el asistente elija bien la herramienta y no invente.
 - **Expón lo justo.** Solo los objetos que un asistente necesita; edición y creación solo donde tenga sentido; el resto, lectura.
 - **Deja que las personas quiten *Modificar datos*.** Para la mayoría de usos (preguntar, resumir, tableros) basta con leer.
-- **Mira el uso.** La pantalla **MCP usage** (o `WebAPI_Logs` con `PetitionType = MCP`) dice qué pregunta la gente, qué se rechaza y cuánto tarda; una consulta que agota el tope es una vista que falta.
+- **Mira el uso.** La pantalla **Uso del MCP** (o `WebAPI_Logs` con `PetitionType = MCP`) dice qué pregunta la gente, qué se rechaza y cuánto tarda; una consulta que agota el tope es una vista que falta.
 - **En Claude Desktop, sin diálogo de confirmación** hasta que el cliente lo atienda; y ten en cuenta que Desktop **guarda la lista de herramientas** con la que nació cada chat y **cachea el widget**: tras un cambio en el servidor, hay que quitar y volver a añadir el conector.

@@ -6,7 +6,7 @@ Cuando un asistente de IA se conecta al MCP de la aplicación, la aplicación ti
 |---|---|---|
 | Cómo se presenta | Con una **dirección https propia** que publica su ficha: nombre y direcciones de vuelta | Se registra al conectar y recibe un identificador nuevo |
 | Quién lo usa | Claude (web, escritorio y móvil), Claude Code, ChatGPT, Codex… | Clientes que todavía no usan CIMD (MCP Inspector, desarrollos propios…) |
-| Filas en **MCP assistants** | **Una por producto**, siempre la misma | Una por registro: un cliente que se registra en cada conexión deja una fila cada vez |
+| Filas en **Asistentes MCP** | **Una por producto**, siempre la misma | Una por registro: un cliente que se registra en cada conexión deja una fila cada vez |
 
 Los asistentes que saben usar CIMD lo eligen solos: la aplicación anuncia que lo admite y no hay nada que configurar ni que tocar en el asistente.
 
@@ -14,9 +14,9 @@ Los asistentes que saben usar CIMD lo eligen solos: la aplicación anuncia que l
 
 ## Qué cambia para el administrador
 
-**Una fila por asistente, no por conexión.** Antes, Claude creaba un cliente nuevo cada vez que alguien conectaba desde cero, y la lista **MCP assistants** se llenaba de «Claude» repetidos. Ahora Claude es una sola fila, Codex otra y Claude Code otra, conecte quien conecte y cuantas veces sea.
+**Una fila por asistente, no por conexión.** Antes, Claude creaba un cliente nuevo cada vez que alguien conectaba desde cero, y la lista **Asistentes MCP** se llenaba de «Claude» repetidos. Ahora Claude es una sola fila, Codex otra y Claude Code otra, conecte quien conecte y cuantas veces sea.
 
-![MCP assistants: Claude y Codex por CIMD, MCP Inspector por registro dinámico](../../docs_assets/images/AIAssistants/clientes-cimd-es.png)
+![Asistentes MCP: Claude y Codex por CIMD, MCP Inspector por registro dinámico](../../docs_assets/images/AIAssistants/clientes-cimd-es.png)
 
 En la imagen, **Claude** y **Codex** han entrado con CIMD: tienen las direcciones de vuelta que publica su ficha (`claude.ai/api/mcp/auth_callback`; `127.0.0.1` y `localhost` en Codex, que recibe el acceso en el propio equipo). **MCP Inspector** se ha registrado al conectar.
 
@@ -25,9 +25,9 @@ Por eso:
 - **Aprobar o bloquear vale para todo el producto.** Quitar *Approved* en la fila de **Claude** corta a Claude para toda la plantilla (web, escritorio y móvil, que comparten fila), en la siguiente llamada. Claude Code tiene su propia fila y no se ve afectado.
 - **Con `MCP_RequireApprovedClients` encendido**, cada asistente se aprueba **una vez**. Antes había que aprobar cada nuevo registro de Claude.
 - **La purga no borra las filas CIMD.** El job `ClearMcpClients` sigue borrando los clientes de registro dinámico sin uso en `MCP_ClientPurgeDays` días, pero no toca los CIMD: si los borrara, uno bloqueado volvería a entrar aprobado al conectarse otra vez.
-- **Cada conexión sigue siendo de una persona**: en **MCP sessions** se ve quién, con qué asistente y con qué permisos, y **Revoke** corta solo esa sesión.
+- **Cada conexión sigue siendo de una persona**: en **Sesiones MCP** se ve quién, con qué asistente y con qué permisos, y **Revoke** corta solo esa sesión.
 
-![MCP sessions: cada conexión con su persona y su asistente](../../docs_assets/images/AIAssistants/sesiones-cimd-es.png)
+![Sesiones MCP: cada conexión con su persona y su asistente](../../docs_assets/images/AIAssistants/sesiones-cimd-es.png)
 
 ### Distinguir una fila CIMD
 
@@ -81,7 +81,7 @@ La ficha de un asistente es una dirección de internet, así que la aplicación 
 |---|---|---|
 | El consentimiento dice que la ficha del cliente no se pudo descargar | El Backend no llega al dominio del asistente | Abre la salida https del Backend a ese dominio |
 | El consentimiento dice que la dirección de vuelta no es de la ficha | El asistente pide volver a una dirección que su ficha no declara | Es una protección: avisa al proveedor del asistente |
-| Un asistente aprobado sale sin aprobar | `MCP_RequireApprovedClients` está encendido y es la primera vez que entra | Apruébalo una vez en **MCP assistants** |
+| Un asistente aprobado sale sin aprobar | `MCP_RequireApprovedClients` está encendido y es la primera vez que entra | Apruébalo una vez en **Asistentes MCP** |
 | Siguen saliendo filas repetidas de un asistente | Ese asistente usa registro dinámico, no CIMD | Se purgan solas tras `MCP_ClientPurgeDays` días sin uso |
 
 Los ajustes, el registro de llamadas y el resto de pantallas están en la referencia: [Asistentes de IA (MCP)](2Reference.md).

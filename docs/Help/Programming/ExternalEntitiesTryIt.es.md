@@ -20,7 +20,7 @@ La prueba usa **Northwind**, un servicio público de ejemplo (OData v4, sin clav
 
 Un **servicio externo** es la API: su dirección, cómo se autentica y cómo pagina y filtra. Se da de alta una vez y lo usan todos los objetos que lean de ella.
 
-Abre **External services**: panel de control → área **Objects** → *External services* (en flexy2022, *Admin Work Area → Object Management → External services*; en las dos, también con el buscador, **Ctrl K**). Pulsa **New** y rellena:
+Abre **Servicios externos**: panel de control → área **Objetos** → *Servicios externos* (en flexy2022, *Admin Work Area → Object Management → External services*; en las dos, también con el buscador, **Ctrl K**). Pulsa **New** y rellena:
 
 | Campo | Valor |
 |---|---|

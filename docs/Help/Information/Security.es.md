@@ -44,7 +44,7 @@ También debemos establecer una página por defecto para la seguridad del invita
 * Processes  
 * Reports  
 
-Para permitir el acceso no registrado, activa el ajuste **AllowGuest** (grupo *Security*) en el panel de control → área **Environment** → *Settings* (en la skin flexy2022: *Admin Work Area > Environment > Settings*). Ya no se toca el **web.config**: con **AllowGuest** activo, quien entra sin sesión inicia sesión automáticamente con el usuario **guest**; si no, va a la pantalla de login.
+Para permitir el acceso no registrado, activa el ajuste **AllowGuest** (grupo *Seguridad*) en el panel de control → área **Entorno** → *Parámetros* (en la skin flexy2022: *Admin Work Area > Environment > Settings*). Ya no se toca el **web.config**: con **AllowGuest** activo, quien entra sin sesión inicia sesión automáticamente con el usuario **guest**; si no, va a la pantalla de login.
 
 | ¿A qué podemos aplicar seguridad? | En Roles | En Usuario |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ Para garantizar que no puedan ver nada más, podemos retirar el permiso **Can vi
 ## LDAP Authentication
 
 **flexygo** puede autenticar usuarios contra Active Directory.  
-Solo debemos crear un nuevo usuario en Security > Users usando el formato:
+Solo debemos crear un nuevo usuario en Seguridad > Usuarios usando el formato:
 
 **MiDominio\\MiUsuario**
 
@@ -74,7 +74,7 @@ Si queremos un autologin LDAP con el usuario actual de Windows, seguimos estos p
 
 1. En IIS, en el sitio del Frontend, habilitar **Windows Authentication** y **mantener habilitada** también **Anonymous Authentication** (hacen falta las dos).  
 2. En el `appsettings.json` del **Frontend**, poner `"EnableWindowsAuth": true` (ver [Referencia: appsettings.json](../../1Deployment/2ConfigWizard/AppSettingsReference.md)) y reiniciar la aplicación.  
-3. Activar el ajuste **LDAPAutoLogin** (grupo *Security*) en el panel de control → área **Environment** → *Settings* (en la skin flexy2022: *Admin Work Area > Environment > Settings*).  
+3. Activar el ajuste **LDAPAutoLogin** (grupo *Seguridad*) en el panel de control → área **Entorno** → *Parámetros* (en la skin flexy2022: *Admin Work Area > Environment > Settings*).  
 
 Si el navegador no puede autenticarse con Windows (un equipo fuera del dominio), se muestra el formulario de login.
 

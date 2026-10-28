@@ -21,7 +21,7 @@ Para personalizarlas, crea tus propios ficheros con la misma ruta en la carpeta 
 
 Tienes todas las rutas y las variables de tema en [Personalización de assets](../../2ProductDevelopment/6Customization.md).
 
-Además, puedes fijar el idioma de la pantalla de login con el ajuste **LoginLanguage** (grupo *Security*) en el panel de control → área **Environment** → *Settings* (en la skin flexy2022: *Admin Work Area > Environment > Settings*). Admite 7 idiomas: _ca-ES | de-DE | en-GB | es-ES | fr-FR | it-IT | pt-PT_. Si se deja vacío, el login usa el idioma del navegador.
+Además, puedes fijar el idioma de la pantalla de login con el ajuste **LoginLanguage** (grupo *Seguridad*) en el panel de control → área **Entorno** → *Parámetros* (en la skin flexy2022: *Admin Work Area > Environment > Settings*). Admite 7 idiomas: _ca-ES | de-DE | en-GB | es-ES | fr-FR | it-IT | pt-PT_. Si se deja vacío, el login usa el idioma del navegador.
 
 <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/wcsCSw3GMIA" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>

@@ -72,7 +72,7 @@ Este módulo tiene las mismas funcionalidades que el document manager, pero no p
 
 ## Todos los documentos del sistema
 
-También tienes acceso a ver todos los documentos de tu proyecto flexygo. Ve a el panel de control → área **Reports** → *Document Viewer* (en la skin flexy2022: *Admin Work Area > Reporting > Document Viewer*).
+También tienes acceso a ver todos los documentos de tu proyecto flexygo. Ve a el panel de control → área **Informes** → *Visor De Documentos* (en la skin flexy2022: *Admin Work Area > Reporting > Document Viewer*).
 
 ![](../../docs_assets/images/ModulesConf/DocumentManager.png "Image 7. Document Manager")
 

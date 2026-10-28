@@ -1,6 +1,6 @@
 # Importaciones
 
-Las importaciones nos permiten transferir información desde archivos al sistema, por ejemplo, desde un archivo de Excel. Se configura en la herramienta *Imports* del área **Other tools** del [panel de control](../Administration/ControlPanel.md) (en la skin flexy2022: *Admin Work Area > Other Tools > Imports*) o simplemente haga <flx-navbutton class="link" type="openPage" pagetypeid="list" objectname="sysImportSettings">clic aquí</flx-navbutton>.
+Las importaciones nos permiten transferir información desde archivos al sistema, por ejemplo, desde un archivo de Excel. Se configura en la herramienta *Importaciones* del área **Otras herramientas** del [panel de control](../Administration/ControlPanel.md) (en la skin flexy2022: *Admin Work Area > Other Tools > Imports*) o simplemente haga <flx-navbutton class="link" type="openPage" pagetypeid="list" objectname="sysImportSettings">clic aquí</flx-navbutton>.
 
 ## Creando configuración
 
@@ -32,7 +32,7 @@ Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas si
 
 ## Ejemplo de Proceso
 
-1.  Agregarlo al repositorio de procesos de flexygo: panel de control → área **Logic and rules** → *DB Stored Procedures* o *Server Dll* (en la skin flexy2022: *Admin Work Area > Logic and Rules*).
+1.  Agregarlo al repositorio de procesos de flexygo: panel de control → área **Lógica y reglas** → *DB Stored Procedures* o *Dll de servidor* (en la skin flexy2022: *Admin Work Area > Logic and Rules*).
     
 ![Create Process](../../docs_assets/images/Imports/process.png "Image 3. Create Process")
     

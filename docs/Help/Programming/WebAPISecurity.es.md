@@ -8,7 +8,7 @@ Esta página es para quien integra con la aplicación (n8n, un ERP, un script) y
 
 ## 1. Quién entra en la API
 
-Se configura en la herramienta **WebAPI** del área **Security** del [panel de control](../Administration/ControlPanel.md) (en flexy2022, *Admin Work Area › Security › WebAPI*):
+Se configura en la herramienta **WebAPI** del área **Seguridad** del [panel de control](../Administration/ControlPanel.md) (en flexy2022, *Admin Work Area › Security › WebAPI*):
 
 <figure markdown="span">
   ![La pantalla WebAPI: interruptor general, datos autorizados y personas autorizadas](../../docs_assets/images/WebAPISecurity/configuracion.png)
@@ -126,7 +126,7 @@ Y lo que se anuncia, se describe mejor:
 
 ## 5. Bloqueo por IP, con ámbito
 
-La aplicación tiene una lista de direcciones bloqueadas (**IP Lockouts**, en el área **Security** del panel de control; tabla `Security_IP_Lockout`). En la versión 10 **vuelve a bloquear**: una dirección bloqueada recibe `401 Unauthorized` en todo lo que pasa por el Backend, login incluido.
+La aplicación tiene una lista de direcciones bloqueadas (**Bloqueos de IP**, en el área **Seguridad** del panel de control; tabla `Security_IP_Lockout`). En la versión 10 **vuelve a bloquear**: una dirección bloqueada recibe `401 Unauthorized` en todo lo que pasa por el Backend, login incluido.
 
 Cada bloqueo tiene un **ámbito** (`Scope`):
 

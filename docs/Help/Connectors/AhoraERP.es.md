@@ -7,7 +7,7 @@
 ## Configuración
 
 1. Configura los campos **Reference** y **Subreference** para el registro de usuarios  
-   (ubicado en el panel de control → área **Security** → *Users*; en la skin flexy2022, *Admin Work Area > Security > Users*)  
+   (ubicado en el panel de control → área **Seguridad** → *Usuarios*; en la skin flexy2022, *Admin Work Area > Security > Users*)  
    de modo que dispongan de desplegables de la tabla **employee** y la tabla **delegation** respectivamente.
     
     ![Reference and Subreference configuration](../../docs_assets/images/AhoraERP/ReferenceSubreference.png "Image 1. Reference and Subreference configuration")

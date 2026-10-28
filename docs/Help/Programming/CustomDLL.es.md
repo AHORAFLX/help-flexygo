@@ -55,7 +55,7 @@ Cuando guardas tu proceso C# en flexygo, se compila para verificar si hay errore
 
 Para comenzar a depurar un proceso C#: 
 
-1.  Activa el ajuste **DebugProcesses**: panel de control → área **Environment** → *Settings*, grupo *System* (en la skin flexy2022: *Admin Work Area > Environment > Settings*).
+1.  Activa el ajuste **DebugProcesses**: panel de control → área **Entorno** → *Parámetros*, grupo *Sistema* (en la skin flexy2022: *Admin Work Area > Environment > Settings*).
 2.  Para establecer un punto de interrupción en una ubicación específica de tu código C#, puedes insertar:
 ```csharp
 System.Diagnostics.Debugger.Break();

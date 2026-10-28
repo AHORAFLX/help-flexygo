@@ -23,7 +23,7 @@ Esta página es el **camino corto para probarlo**. Qué hace cada tipo de paso, 
 
 ## 1. Abre las reglas del objeto Role
 
-En el panel de control, **Objects**, busca **sysRole** y ábrelo: es el banco de trabajo del objeto. En el carril, al final, **Rules and actions**.
+En el panel de control, **Objetos**, busca **sysRole** y ábrelo: es el banco de trabajo del objeto. En el carril, al final, **Reglas y acciones**.
 
 ## 2. Crea la regla con su primer paso
 

@@ -90,12 +90,12 @@ Algunas preguntas para ver cada cosa, con tus nombres en lugar de los del ejempl
 
 ## 7. Mira lo que ha pasado
 
-En el panel de control, área **Environment**:
+En el panel de control, área **Entorno**:
 
-- **MCP usage**: llamadas por día (respondidas y rechazadas), por herramienta y por persona, y el motivo de cada rechazo.
-- **MCP sessions**: tu conexión viva, con quién, desde cuándo y qué puede hacer.
+- **Uso del MCP**: llamadas por día (respondidas y rechazadas), por herramienta y por persona, y el motivo de cada rechazo.
+- **Sesiones MCP**: tu conexión viva, con quién, desde cuándo y qué puede hacer.
 
-![MCP usage después de la prueba](../../docs_assets/images/AIAssistants/uso.png)
+![Uso del MCP después de la prueba](../../docs_assets/images/AIAssistants/uso.png)
 
 ## 8. Corta la conexión
 
@@ -117,6 +117,6 @@ Y si apagas **Enable MCP** (paso 1), `/mcp` deja de existir para todos al moment
 | Contesta, pero confunde campos o estados | Faltan descripciones | Paso 4 |
 | Claude web o escritorio no llega a la aplicación | No es accesible desde internet con HTTPS | Paso 5: túnel o proxy inverso |
 | Las escrituras se rechazan | Sin editar/crear en *Authorized Data*, o *Modificar datos* desmarcado al conectar | Es lo esperado: márcalo y vuelve a conectar si quieres probarlas |
-| El asistente no aparece en *MCP assistants* como aprobado | `MCP_RequireApprovedClients` está encendido | Apruébalo en **MCP assistants** |
+| El asistente no aparece en *Asistentes MCP* como aprobado | `MCP_RequireApprovedClients` está encendido | Apruébalo en **Asistentes MCP** |
 
 Para todo lo demás —topes de llamadas, prompts, auditoría, buenas prácticas— la referencia: [Asistentes de IA (MCP)](2Reference.md).

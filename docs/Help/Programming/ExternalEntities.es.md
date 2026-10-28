@@ -24,7 +24,7 @@ Los filtros de las listas, las búsquedas y las condiciones de seguridad se trad
 
 ## 1. Dar de alta el servicio
 
-En **External services** se da de alta la API una sola vez: panel de control → área **Objects** → *External services* (en flexy2022, *Admin Work Area → Object Management → External services*), el buscador (**Ctrl K**), o desde el asistente de objetos, con el **+** junto al servicio; el botón del enlace, a su lado, abre el servicio elegido. Cada objeto externo apunta a un servicio.
+En **Servicios externos** se da de alta la API una sola vez: panel de control → área **Objetos** → *Servicios externos* (en flexy2022, *Admin Work Area → Object Management → External services*), el buscador (**Ctrl K**), o desde el asistente de objetos, con el **+** junto al servicio; el botón del enlace, a su lado, abre el servicio elegido. Cada objeto externo apunta a un servicio.
 
 ¿Quieres probarlo de principio a fin con una API pública? [Pruébalo: un objeto que vive en una API REST](ExternalEntitiesTryIt.md).
 

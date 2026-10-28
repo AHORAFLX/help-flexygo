@@ -19,7 +19,7 @@ Qué viaja y qué no, cada opción de la ventana y cada paso del servidor están
 
 ## 1. Abre la ventana y lee la vista previa
 
-Panel de control → lista de acciones → **Export as project**. La ventana lee la instalación y dice qué se va a llevar.
+Panel de control → lista de acciones → **Exportar como proyecto**. La ventana lee la instalación y dice qué se va a llevar.
 
 ![La ventana: configuración, modelo de datos, estáticos, carpeta custom, DLL, SDK y plantilla](../../docs_assets/images/CoreProductDevelopment/ExportProject/pruebalo-ventana.png)
 

@@ -239,7 +239,7 @@ docker compose logs flx-backend
 !!! warning "Deshabilitar actualizaciones automáticas en Docker"
     En entornos Docker en producción, pon el ajuste `AutoUpdateEnable` a `false` para evitar reinicios inesperados del contenedor durante una actualización automática.
 
-    No es una variable de entorno, así que no sirve ponerlo en el `docker-compose.yml`: es una fila de la tabla `Settings` de la base de datos de configuración, y se cambia desde los ajustes (*Settings*) de Flexygo.
+    No es una variable de entorno, así que no sirve ponerlo en el `docker-compose.yml`: es una fila de la tabla `Settings` de la base de datos de configuración, y se cambia desde los parámetros de Flexygo (panel de control → área **Entorno** → *Parámetros*).
 
 ### Llave de cifrado como secreto de Docker
 

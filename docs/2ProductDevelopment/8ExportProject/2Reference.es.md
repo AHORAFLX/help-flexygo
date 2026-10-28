@@ -35,7 +35,7 @@ Con el origen activo en 0 la ventana lo dice y no deja exportar:
 
 ## 2. Dónde está
 
-En el **panel de control**, en la lista de acciones: **Export as project** (el icono de la carpeta con la flecha). Abre una ventana propia que lleva la exportación de principio a fin: lo que se va a hacer, los pasos mientras corre y el resultado.
+En el **panel de control**, en la lista de acciones: **Exportar como proyecto** (el icono de la carpeta con la flecha). Abre una ventana propia que lleva la exportación de principio a fin: lo que se va a hacer, los pasos mientras corre y el resultado.
 
 - Solo la usan los **administradores**.
 - **Una exportación a la vez** en la instalación. Si hay una en marcha, la ventana dice quién la lanzó y a qué hora, y ofrece **Follow it** para seguirla.

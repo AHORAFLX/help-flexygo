@@ -18,11 +18,11 @@ Completa la información del servidor de correo y los datos de la cuenta para en
 
 ## Link Mail Account
 
-Puedes vincular configuraciones de correo a usuarios desde el panel de control → área **Security** → *Users* (en la skin flexy2022: *Admin Work Area > Security > Users*).
+Puedes vincular configuraciones de correo a usuarios desde el panel de control → área **Seguridad** → *Usuarios* (en la skin flexy2022: *Admin Work Area > Security > Users*).
 
 ![](../../docs_assets/images/MailAccountsSettings/MailAccountUsers.PNG "Image 3. Mail Account Users")
 
-También puedes vincular configuraciones de correo a perfiles desde el panel de control → área **Security** → *Profiles* (en la skin flexy2022: *Admin Work Area > Security > Profiles*).
+También puedes vincular configuraciones de correo a perfiles desde el panel de control → área **Seguridad** → *Perfiles* (en la skin flexy2022: *Admin Work Area > Security > Profiles*).
 
 ![](../../docs_assets/images/MailAccountsSettings/MailAccountProfiles.PNG "Image 4. Mail Account Profiles")
 
