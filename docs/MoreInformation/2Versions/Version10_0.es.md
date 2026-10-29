@@ -143,6 +143,10 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Lista de errores** filtrable, con el detalle de cada uno.
 - **Depuración** con source maps y optimización de paquetes desde el menú de desarrollo.
 
+### En actualizaciones posteriores
+
+- **Interfaz:** El pie de la barra lateral muestra la versión completa instalada, incluidas las versiones beta.
+
 ## Correcciones
 
 ??? note "Ver las correcciones de esta versión"
@@ -157,3 +161,4 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Inteligencia artificial:** se corrigen las búsquedas vectoriales, las solicitudes a ChatGPT y la presentación en distintos tamaños de pantalla.
     - **Interfaz:** se corrigen detalles de presentación en el kanban, los calendarios, el modo oscuro y la rejilla de módulos.
     - **Notificaciones y conversaciones:** las menciones vuelven a notificar y el sonido no se repite cuando llegan muchas notificaciones a la vez.
+    - **Seguridad:** Las instalaciones nuevas de productos asignan al administrador el perfil 2026admin.

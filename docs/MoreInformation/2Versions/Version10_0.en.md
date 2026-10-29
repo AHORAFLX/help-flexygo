@@ -143,6 +143,10 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **Error list** you can filter, with the details of each error.
 - **Debugging** with source maps, and bundle optimisation from the development menu.
 
+### In later updates
+
+- **Interface:** The sidebar footer shows the full installed version, including beta versions.
+
 ## Fixes
 
 ??? note "See the fixes in this version"
@@ -157,3 +161,4 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Artificial intelligence:** vector searches, ChatGPT requests and the layout on different screen sizes are fixed.
     - **Interface:** layout details in the kanban board, the calendars, dark mode and the module grid are fixed.
     - **Notifications and conversations:** mentions notify again and the sound no longer repeats when many notifications arrive at once.
+    - **Security:** New product installations assign the 2026admin profile to the administrator.
