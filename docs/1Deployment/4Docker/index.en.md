@@ -256,6 +256,12 @@ The template already passes it: `tools/build-docker-images.ps1` takes it from `-
 ### What deploying them needs
 
 - **Container names**: `<prefix>-frontend`, `<prefix>-backend` and `<prefix>-db` (in Flexygo, `flx-…`), or those names as aliases on the network. The images expect the frontend to find the backend at `BackendEndpoint` and the backend to find the frontend at `FrontendEndpoint`, and **the backend only hands its keys to the `FrontendEndpoint` host**. If the containers have other names, pass those two variables as environment variables.
+
+    Each product's prefix is the one its image carries: `flx-` in Flexygo, `flexygocrm-` in CRM and `flxsat-` in SAT. To see it in any image, look at its `FrontendEndpoint`:
+
+    ```bash
+    docker run --rm --entrypoint cat <registry>/<product>-backend:<version> /app/conf/appsettings.json
+    ```
 - **The backend's `conf` volume must be persistent**: it keeps the connection strings, the keys and the installation-done mark. If it is lost, the installation starts from scratch.
 - **Passwords go in a `.env`** next to the compose, out of git, and the compose uses them with `${...}`. Never written in the compose.
 - **The database image already runs SQL Server Express.** `MSSQL_PID` is only needed to switch to a licensed edition.
@@ -356,6 +362,9 @@ When it comes up, the backend log (`docker compose logs flx-backend`) shows `Una
 
 The backend does not need `MSSQL_SA_PASSWORD`: the password is already in its connection strings.
 
+!!! warning "Not for products whose data is in an ERP (CRM, SAT)"
+    These products query configuration tables (`<Product>_IC.dbo.…`) from the ERP database, and SQL Server only resolves that when both are on the **same server**. With the configuration in a container and the ERP outside, the application starts and you can sign in, but modules such as the CRM home dashboard fail ("Invalid object name 'FlexygoCRM_IC.dbo.TRANSLATE'"). Create the configuration database on the ERP's SQL Server, as in example 2.
+
 ### Example 2: SQL Server outside Docker and the wizard
 
 For production, with the database on your own SQL Server. The compose has no connection strings: the first time, the [setup wizard](../2ConfigWizard/Configuration.md) opens, asks for them and saves them in the `conf` volume.
@@ -418,7 +427,7 @@ The wizard suggests `host.docker.internal` as the server (the machine running Do
 - **If the configuration database already exists** because it comes in the database image (the compose with a database and without the `Setup__…` variables, or a product such as CRM or SAT with its configuration database in a container), the wizard skips that step. You sign in with user **`admin`** and password **`-aZ123456`**, and the application forces a change at the first sign-in.
 
 !!! note "Products whose data is in an external ERP (CRM, SAT)"
-    With the configuration database in a container, in the **data databases** step the wizard suggests the configuration container's server (e.g. `flxsat-db`). Change it to the ERP's SQL Server as seen from the container: `host.docker.internal` if it is on the same machine as Docker, or its name or IP on the network.
+    The configuration database must be on the same SQL Server as the ERP (see the example 1 warning). With example 2, in the **data databases** step the wizard suggests the same server you gave for the configuration: the ERP's, as seen from the container (`host.docker.internal` if it is on the same machine as Docker, or its name or IP on the network).
 
 ---
 

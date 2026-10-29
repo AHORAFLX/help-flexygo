@@ -256,6 +256,12 @@ En la plantilla ya se pasa sola: `tools/build-docker-images.ps1` la toma del `-T
 ### Lo imprescindible al desplegarlas
 
 - **Nombres de los contenedores**: `<prefijo>-frontend`, `<prefijo>-backend` y `<prefijo>-db` (en Flexygo, `flx-…`), o esos nombres como alias en la red. Las imágenes traen apuntado que el frontend busca al backend en `BackendEndpoint` y el backend al frontend en `FrontendEndpoint`, y **el backend solo le entrega las claves al host de `FrontendEndpoint`**. Si los contenedores se llaman de otra forma, pasa esas dos variables por entorno.
+
+    El prefijo de cada producto es el que trae su imagen: `flx-` en Flexygo, `flexygocrm-` en CRM y `flxsat-` en SAT. Para verlo en cualquier imagen, mira su `FrontendEndpoint`:
+
+    ```bash
+    docker run --rm --entrypoint cat <registro>/<producto>-backend:<versión> /app/conf/appsettings.json
+    ```
 - **El volumen `conf` del backend tiene que ser persistente**: guarda las cadenas de conexión, las claves y la marca de instalación hecha. Si se pierde, la instalación empieza de cero.
 - **Las contraseñas van en un `.env`** junto al compose, fuera de git, y el compose las usa con `${...}`. Nunca escritas en el compose.
 - **La imagen de base de datos ya es SQL Server Express.** `MSSQL_PID` solo hace falta para cambiar a una edición con licencia.
@@ -356,6 +362,9 @@ Al levantarlo, el log del backend (`docker compose logs flx-backend`) dice `Unat
 
 El backend no necesita `MSSQL_SA_PASSWORD`: la contraseña ya va en sus cadenas de conexión.
 
+!!! warning "No sirve para productos cuyos datos están en un ERP (CRM, SAT)"
+    Estos productos consultan desde la base del ERP tablas de la de configuración (`<Producto>_IC.dbo.…`), y SQL Server solo lo resuelve si las dos están en el **mismo servidor**. Con la configuración en un contenedor y el ERP fuera, la aplicación arranca y se puede entrar, pero fallan módulos como el panel de inicio del CRM («El nombre de objeto 'FlexygoCRM_IC.dbo.TRANSLATE' no es válido»). Crea la base de configuración en el SQL Server del ERP, como en el ejemplo 2.
+
 ### Ejemplo 2: SQL Server fuera de Docker y asistente
 
 Para producción, con la base de datos en un SQL Server propio. El compose no lleva cadenas de conexión: la primera vez se abre el [asistente de configuración](../2ConfigWizard/Configuration.md), que las pide y las guarda en el volumen `conf`.
@@ -418,7 +427,7 @@ El asistente propone `host.docker.internal` como servidor (el equipo donde corre
 - **Si la base de configuración ya existe** porque viene en la imagen de base de datos (el compose con BD sin las variables `Setup__…`, o un producto como CRM o SAT con su base de configuración en contenedor), el asistente se salta ese paso. Se entra con el usuario **`admin`** y la contraseña **`-aZ123456`**, y la aplicación obliga a cambiarla en el primer inicio de sesión.
 
 !!! note "Productos con los datos en un ERP externo (CRM, SAT)"
-    Con la base de configuración en contenedor, en el paso de **bases de datos de datos** el asistente propone como servidor el del contenedor de configuración (p. ej. `flxsat-db`). Cámbialo por el SQL Server del ERP tal como se ve desde el contenedor: `host.docker.internal` si está en el mismo equipo que Docker, o su nombre o IP en la red.
+    La base de configuración tiene que estar en el mismo SQL Server que el ERP (ver el aviso del ejemplo 1). Con el ejemplo 2, en el paso de **bases de datos de datos** el asistente propone el mismo servidor que pusiste para la configuración: el del ERP, visto desde el contenedor (`host.docker.internal` si está en el mismo equipo que Docker, o su nombre o IP en la red).
 
 ---
 
