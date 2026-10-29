@@ -24,4 +24,5 @@ Incluye mejoras para crear recorridos y organizar módulos, gestionar nodos del 
 
 ### Instalación
 
-- **El asistente de instalación permite definir la contraseña de administrador al crear una base de configuración.** El paso del proyecto se muestra aunque ya se haya indicado el nombre del proyecto durante la instalación. En instalaciones existentes, no se puede volver a abrir este paso.
+- **La instalación avisa si la versión de SQL Server no es compatible.** El aviso muestra la versión detectada y permite volver a comprobarla. En la instalación desatendida, indica qué versión impide continuar.
+- **La instalación no acepta conexiones a la base de datos si el servidor no es accesible.** El paso de conexión indica que el servidor no está accesible, en lugar de dar la conexión por válida. En la configuración de la aplicación se muestra el motivo real del fallo.

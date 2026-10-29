@@ -24,4 +24,5 @@ Includes improvements for creating tours and organizing modules, managing menu n
 
 ### Installation
 
-- **The installation wizard lets you define the administrator password when creating a configuration database.** The project step is shown even if the project name was already specified during installation. In existing installations, this step cannot be opened again.
+- **The installation warns if the SQL Server version is not compatible.** The warning shows the detected version and lets you check it again. In unattended installation, it indicates which version prevents you from continuing.
+- **The installation does not accept database connections if the server is inaccessible.** The connection step indicates that the server is inaccessible instead of treating the connection as valid. The application configuration shows the actual reason for the failure.
