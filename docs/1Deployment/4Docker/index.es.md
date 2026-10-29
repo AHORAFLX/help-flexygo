@@ -65,7 +65,6 @@ services:
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: "${SQL_PASSWORD}"
-      MSSQL_PID: "Evaluation"
     networks:
       - flx-back-network
     volumes:
@@ -89,6 +88,9 @@ volumes:
     flx-db-secrets:
 ```
 > 🔐 **Usa contraseñas complejas**. SQL Server impone requisitos de complejidad.
+
+La imagen de la base de datos ya trae SQL Server Express. Si tienes licencia de otra edición, añade `MSSQL_PID` (por ejemplo `Standard`, `Enterprise` o una clave de producto) al `environment` del servicio `flx-db`.
+
 ### Conectar a SQL Server del contenedor desde tu Management (SSMS/Azure Data Studio)
 
 Si quieres entrar a la BD del contenedor desde tu equipo (SSMS, Azure Data Studio, etc.), publica el puerto del contenedor:
@@ -231,6 +233,48 @@ Para ver los logs del backend:
 docker compose logs flx-backend
 ```
 
+
+---
+
+## 🤖 Instalación desatendida (sin asistente)
+
+Con la base de datos en su propio contenedor (el compose **con BD**), el backend puede configurarse solo en el primer arranque, sin pasar por el asistente de instalación. Basta con añadir estas variables de entorno al servicio `flx-backend`:
+
+| Variable | Qué es |
+|---|---|
+| `Setup__Unattended` | `true` para activar la instalación desatendida. |
+| `Setup__ProjectName` | Nombre del proyecto. No puede ir vacío ni ser `RENAME`. |
+| `Setup__AdminPassword` | Contraseña del usuario `admin`. Se pone tal cual, sin obligar a cambiarla al entrar por primera vez. |
+| `ConnectionStrings__ConfConnectionString` | Cadena de la base de configuración, p. ej. `Server=flx-db;Initial Catalog=Flexygo_IC;User ID=sa;Password=${SQL_PASSWORD};Encrypt=False;TrustServerCertificate=True` |
+| `ConnectionStrings__DataConnectionString` | Cadena de la base de datos: el mismo servidor con `Initial Catalog=Flexygo_I`. Pon una `ConnectionStrings__<id>` por cada conexión de datos activa del producto. |
+| Ajustes de correo | Opcionales; si no se ponen, el correo se configura más tarde. |
+
+Los valores van en el `.env` que está junto al compose y se usan con `${...}`; ese fichero **no se sube a git**.
+
+```yaml
+  flx-backend:
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      MSSQL_SA_PASSWORD: "${SQL_PASSWORD}"
+      Setup__Unattended: "true"
+      Setup__ProjectName: "${SETUP_PROJECT_NAME}"
+      Setup__AdminPassword: "${SETUP_ADMIN_PASSWORD}"
+      ConnectionStrings__ConfConnectionString: "Server=flx-db;Initial Catalog=Flexygo_IC;User ID=sa;Password=${SQL_PASSWORD};Encrypt=False;TrustServerCertificate=True"
+      ConnectionStrings__DataConnectionString: "Server=flx-db;Initial Catalog=Flexygo_I;User ID=sa;Password=${SQL_PASSWORD};Encrypt=False;TrustServerCertificate=True"
+```
+
+```dotenv
+SQL_PASSWORD=<contraseña-de-sa>
+SETUP_PROJECT_NAME=MiProyecto
+SETUP_ADMIN_PASSWORD=<contraseña-del-admin>
+```
+
+Qué pasa al levantarlo:
+
+- En el log del backend (`docker compose logs flx-backend`) aparece `Unattended setup started` y, al acabar, `completed`.
+- La aplicación abre directamente la pantalla de inicio de sesión, sin asistente ni página de mantenimiento. El usuario `admin` entra con la contraseña de `Setup__AdminPassword`.
+- **Se hace una sola vez**: deja apuntado `Setup:UnattendedCompleted` en el volumen de la `conf` y no se repite al reiniciar el contenedor.
+- Si falta una variable obligatoria, el backend se para con un mensaje como `Unattended setup failed: Define Setup__AdminPassword.` y, con `restart: unless-stopped`, se reinicia una y otra vez hasta que se corrija.
 
 ---
 
