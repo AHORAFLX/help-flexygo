@@ -118,7 +118,7 @@ Si el paquete ya existe con esa versión, se salta.
 
 Construye tres imágenes con la misma versión que los NuGets: **frontend**, **backend** y **db**, la base de datos con los dos catálogos. Cada una:
 
-1. se construye con la etiqueta de su versión;
+1. se construye con la etiqueta de su versión; la de **db** recibe además esa versión como `DAC_VERSION`, para que el backend no actualice el esquema en el primer arranque;
 2. se exporta con `docker save` a `publish/docker/<ProductName>-<imagen>-<versión>.tar.gz` y se guarda como artefacto de la ejecución;
 3. en `main` o `master`, se sube al registro con su versión y con `latest`: **GHCR** (`ghcr.io/<propietario>/…`) en GitHub y el *Container Registry* del proyecto en GitLab.
 
