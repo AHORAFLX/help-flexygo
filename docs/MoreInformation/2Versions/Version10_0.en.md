@@ -146,6 +146,9 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 ### In later updates
 
 - **Interface:** The sidebar footer shows the full installed version, including beta versions.
+- **Deployment:** Docker uses SQL Server Express and respects the version and edition settings of the database image.
+- **Installation:** The frontend gets the shared keys from the configured backend, even during installation.
+- **Installation:** The wizard lets you set the administration password even if you have already entered the project name.
 
 ## Fixes
 
@@ -162,3 +165,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Interface:** layout details in the kanban board, the calendars, dark mode and the module grid are fixed.
     - **Notifications and conversations:** mentions notify again and the sound no longer repeats when many notifications arrive at once.
     - **Security:** New product installations assign the 2026admin profile to the administrator.
+
+## Deprecated
+
+- **Installation:** The configuration database requires SQL Server 2022 or later.
