@@ -42,3 +42,4 @@ Este apartado resume un flujo **genérico** de CI/CD aplicable a GitHub Actions,
         - `dotnet pack ProjectName.Data.Database.sqlproj -c Release --no-build`
 13. **Generación de imágenes docker**:
     - `docker build -t Repositorio/Nombre:Version -f Dockerfile PublicacionProjectName`
+    - La de base de datos, además con `--build-arg DAC_VERSION=Version` ([por qué](../1Deployment/4Docker/index.md)).

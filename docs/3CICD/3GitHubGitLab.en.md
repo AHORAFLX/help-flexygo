@@ -118,7 +118,7 @@ If the package already exists with that version, it is skipped.
 
 It builds three images with the same version as the NuGets: **frontend**, **backend** and **db**, the database with both catalogues. Each one:
 
-1. is built with its version's tag;
+1. is built with its version's tag; the **db** one also gets that version as `DAC_VERSION`, so the backend does not update the schema on the first start;
 2. is exported with `docker save` to `publish/docker/<ProductName>-<image>-<version>.tar.gz` and kept as an artifact of the run;
 3. on `main` or `master`, is pushed to the registry with its version and with `latest`: **GHCR** (`ghcr.io/<owner>/…`) on GitHub and the project's *Container Registry* on GitLab.
 

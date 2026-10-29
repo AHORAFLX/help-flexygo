@@ -29,16 +29,26 @@ services:
     environment:
       Setup__Unattended: "true"
       Setup__ProjectName: "NombreCliente_CRM"
-      Setup__AdminPassword: "MyAdminPassword"
-      ConnectionStrings__ConfConnectionString: "Data Source=sqlserver;Initial Catalog=CRM_IC;User ID=sa;Password=MyPassword;TrustServerCertificate=True"
-      ConnectionStrings__DataConnectionString: "Data Source=sqlserver;Initial Catalog=CRM_Data;User ID=sa;Password=MyPassword;TrustServerCertificate=True"
+      Setup__AdminPassword: "${ADMIN_PASSWORD}"
+      ConnectionStrings__ConfConnectionString: "Data Source=sqlserver;Initial Catalog=CRM_IC;User ID=sa;Password=${SQL_PASSWORD};TrustServerCertificate=True"
+      ConnectionStrings__DataConnectionString: "Data Source=sqlserver;Initial Catalog=CRM_Data;User ID=sa;Password=${SQL_PASSWORD};TrustServerCertificate=True"
       MailSettings__Host: "mail.mycompany.com"
       MailSettings__Port: "25"
       MailSettings__Ssl: "true"
       MailSettings__From: "admin@mycompany.com"
       MailSettings__UserName: "MymailUser"
-      MailSettings__Password: "MyMailPassword"
+      MailSettings__Password: "${MAIL_PASSWORD}"
 ```
+
+Las contraseñas van en el `.env` que está junto al compose, entre comillas simples para que se tomen tal cual, y ese fichero no se sube a git:
+
+```dotenv
+ADMIN_PASSWORD='<contraseña del admin>'
+SQL_PASSWORD='<contraseña de SQL Server>'
+MAIL_PASSWORD='<contraseña del correo>'
+```
+
+Un compose completo, con la base de datos en contenedor, en [Despliegue con Docker](../../1Deployment/4Docker/index.md).
 
 ## Cómo funciona
 

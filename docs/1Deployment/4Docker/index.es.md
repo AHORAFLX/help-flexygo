@@ -236,45 +236,179 @@ docker compose logs flx-backend
 
 ---
 
-## 🤖 Instalación desatendida (sin asistente)
+## 📦 Generar y desplegar las imágenes Docker de tu producto <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
 
-Con la base de datos en su propio contenedor (el compose **con BD**), el backend puede configurarse solo en el primer arranque, sin pasar por el asistente de instalación. Basta con añadir estas variables de entorno al servicio `flx-backend`:
+Las imágenes de Flexygo (`flexygo/flexygo-frontend`, `-backend` y `-db`) y las de un producto hecho con la [plantilla](../../2ProductDevelopment/2Template.md) funcionan igual. Esta sección es lo que hay que saber para generarlas bien y desplegarlas en otro equipo.
 
-| Variable | Qué es |
+### Generar las imágenes
+
+La imagen de la base de datos lleva sellada la versión del producto. Se le pasa al construirla:
+
+```bash
+docker build --build-arg DAC_VERSION=1.2.3.4 -f <Producto>.Conf.Database/Dockerfile .
+```
+
+**Sin `DAC_VERSION` la imagen dice `1.0.0.0`**: el backend cree que la base está desactualizada y, en el primer arranque, actualiza el esquema. Con la instalación desatendida solo tarda más; con el asistente se queda en la página de mantenimiento pidiendo el `MAINT_TOKEN`.
+
+En la plantilla ya se pasa sola: `tools/build-docker-images.ps1` la toma del `-Tag` (cuando son cuatro números) o de `-DacVersion`, `docker compose build` la lee de la variable `DAC_VERSION` y los pipelines de [GitHub y GitLab](../../3CICD/3GitHubGitLab.md) le dan la versión que calculan. El `DOCKER.md` del producto lo explica con detalle.
+
+### Lo imprescindible al desplegarlas
+
+- **Nombres de los contenedores**: `<prefijo>-frontend`, `<prefijo>-backend` y `<prefijo>-db` (en Flexygo, `flx-…`), o esos nombres como alias en la red. Las imágenes traen apuntado que el frontend busca al backend en `BackendEndpoint` y el backend al frontend en `FrontendEndpoint`, y **el backend solo le entrega las claves al host de `FrontendEndpoint`**. Si los contenedores se llaman de otra forma, pasa esas dos variables por entorno.
+- **El volumen `conf` del backend tiene que ser persistente**: guarda las cadenas de conexión, las claves y la marca de instalación hecha. Si se pierde, la instalación empieza de cero.
+- **Las contraseñas van en un `.env`** junto al compose, fuera de git, y el compose las usa con `${...}`. Nunca escritas en el compose.
+- **La imagen de base de datos ya es SQL Server Express.** `MSSQL_PID` solo hace falta para cambiar a una edición con licencia.
+
+### Variables del backend
+
+| Variable | Para qué |
 |---|---|
-| `Setup__Unattended` | `true` para activar la instalación desatendida. |
-| `Setup__ProjectName` | Nombre del proyecto. No puede ir vacío ni ser `RENAME`. |
-| `Setup__AdminPassword` | Contraseña del usuario `admin`. Se pone tal cual, sin obligar a cambiarla al entrar por primera vez. |
-| `ConnectionStrings__ConfConnectionString` | Cadena de la base de configuración, p. ej. `Server=flx-db;Initial Catalog=Flexygo_IC;User ID=sa;Password=${SQL_PASSWORD};Encrypt=False;TrustServerCertificate=True` |
-| `ConnectionStrings__DataConnectionString` | Cadena de la base de datos: el mismo servidor con `Initial Catalog=Flexygo_I`. Pon una `ConnectionStrings__<id>` por cada conexión de datos activa del producto. |
-| Ajustes de correo | Opcionales; si no se ponen, el correo se configura más tarde. |
+| `Setup__Unattended`, `Setup__ProjectName`, `Setup__AdminPassword` | Instalan sin asistente en el primer arranque, una sola vez. Si falta una, el backend se para con un error que dice cuál (`Define Setup__AdminPassword.`) y, con `restart: unless-stopped`, lo reintenta hasta que se corrija. |
+| `ConnectionStrings__ConfConnectionString` | Base de datos de configuración: cadena completa, con usuario de SQL Server. |
+| `ConnectionStrings__<id>` | Una por cada conexión de datos activa (en Flexygo, `DataConnectionString`), igual de completa. |
+| `MailSettings__Host`, `__Port`, `__Ssl`, `__From`, `__UserName`, `__Password` | Correo saliente. Opcional. |
 
-Los valores van en el `.env` que está junto al compose y se usan con `${...}`; ese fichero **no se sube a git**.
+El detalle de cada una, en [Instalación desatendida](../../MoreInformation/3DidYouKnow/UnattendedInstallCLI.md).
+
+### Ejemplo 1: base de datos en contenedor e instalación desatendida
+
+Todo en Docker y sin asistente: al levantarlo, el backend crea las bases, pone el nombre del proyecto y la contraseña del `admin`, y abre directamente el inicio de sesión. Es lo que monta el [instalador](../1Installer/Deployment.md) con la opción de base de datos interna.
 
 ```yaml
-  flx-backend:
+services:
+  flx-frontend:
+    image: flexygo/flexygo-frontend:${FLEXYGO_TAG}
+    restart: unless-stopped
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
-      MSSQL_SA_PASSWORD: "${SQL_PASSWORD}"
+      MAINT_TOKEN: "${MAINT_TOKEN}"
+    ports:
+      - "${FRONTEND_PORT}:8080"
+    volumes:
+      - flx-front-conf:/app/conf
+      - flx-front-custom:/app/custom
+    networks:
+      - flx-front-network
+    depends_on:
+      - flx-backend
+
+  flx-backend:
+    image: flexygo/flexygo-backend:${FLEXYGO_TAG}
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
       Setup__Unattended: "true"
-      Setup__ProjectName: "${SETUP_PROJECT_NAME}"
-      Setup__AdminPassword: "${SETUP_ADMIN_PASSWORD}"
+      Setup__ProjectName: "${Setup__ProjectName}"
+      Setup__AdminPassword: "${Setup__AdminPassword}"
       ConnectionStrings__ConfConnectionString: "Server=flx-db;Initial Catalog=Flexygo_IC;User ID=sa;Password=${SQL_PASSWORD};Encrypt=False;TrustServerCertificate=True"
       ConnectionStrings__DataConnectionString: "Server=flx-db;Initial Catalog=Flexygo_I;User ID=sa;Password=${SQL_PASSWORD};Encrypt=False;TrustServerCertificate=True"
+    volumes:
+      - flx-back-conf:/app/conf
+      - flx-back-custom:/app/custom
+    networks:
+      - flx-front-network
+      - flx-back-network
+    depends_on:
+      flx-db:
+        condition: service_healthy
+
+  flx-db:
+    image: flexygo/flexygo-db:${FLEXYGO_TAG}
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "${SQL_PASSWORD}"
+    volumes:
+      - flx-db-data:/var/opt/mssql/data/
+      - flx-db-log:/var/opt/mssql/log/
+      - flx-db-secrets:/var/opt/mssql/secrets/
+    networks:
+      - flx-back-network
+
+networks:
+  flx-front-network:
+  flx-back-network:
+
+volumes:
+  flx-front-conf:
+  flx-front-custom:
+  flx-back-conf:
+  flx-back-custom:
+  flx-db-data:
+  flx-db-log:
+  flx-db-secrets:
 ```
 
 ```dotenv
-SQL_PASSWORD=<contraseña-de-sa>
-SETUP_PROJECT_NAME=MiProyecto
-SETUP_ADMIN_PASSWORD=<contraseña-del-admin>
+FLEXYGO_TAG=10.0.0.19
+FRONTEND_PORT=8080
+SQL_PASSWORD='<contraseña de sa>'
+Setup__ProjectName='MiProyecto'
+Setup__AdminPassword='<contraseña del admin>'
+MAINT_TOKEN='<token para las actualizaciones>'
 ```
 
-Qué pasa al levantarlo:
+Entre comillas simples, Docker Compose toma el valor tal cual, también con `$` o `#` dentro.
 
-- En el log del backend (`docker compose logs flx-backend`) aparece `Unattended setup started` y, al acabar, `completed`.
-- La aplicación abre directamente la pantalla de inicio de sesión, sin asistente ni página de mantenimiento. El usuario `admin` entra con la contraseña de `Setup__AdminPassword`.
-- **Se hace una sola vez**: deja apuntado `Setup:UnattendedCompleted` en el volumen de la `conf` y no se repite al reiniciar el contenedor.
-- Si falta una variable obligatoria, el backend se para con un mensaje como `Unattended setup failed: Define Setup__AdminPassword.` y, con `restart: unless-stopped`, se reinicia una y otra vez hasta que se corrija.
+Al levantarlo, el log del backend (`docker compose logs flx-backend`) dice `Unattended setup started` y, al acabar, `completed`. La marca `Setup:UnattendedCompleted` queda en el volumen `conf` y no se repite al reiniciar.
+
+El backend no necesita `MSSQL_SA_PASSWORD`: la contraseña ya va en sus cadenas de conexión.
+
+### Ejemplo 2: SQL Server fuera de Docker y asistente
+
+Para producción, con la base de datos en un SQL Server propio. El compose no lleva cadenas de conexión: la primera vez se abre el [asistente de configuración](../2ConfigWizard/Configuration.md), que las pide y las guarda en el volumen `conf`.
+
+```yaml
+services:
+  flx-frontend:
+    image: flexygo/flexygo-frontend:${FLEXYGO_TAG}
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      MAINT_TOKEN: "${MAINT_TOKEN}"
+    ports:
+      - "${FRONTEND_PORT}:8080"
+    volumes:
+      - flx-front-conf:/app/conf
+      - flx-front-custom:/app/custom
+    networks:
+      - flx-front-network
+    depends_on:
+      - flx-backend
+
+  flx-backend:
+    image: flexygo/flexygo-backend:${FLEXYGO_TAG}
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+    volumes:
+      - flx-back-conf:/app/conf
+      - flx-back-custom:/app/custom
+    networks:
+      - flx-front-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  flx-front-network:
+
+volumes:
+  flx-front-conf:
+  flx-front-custom:
+  flx-back-conf:
+  flx-back-custom:
+```
+
+```dotenv
+FLEXYGO_TAG=10.0.0.19
+FRONTEND_PORT=8080
+MAINT_TOKEN='<token para las actualizaciones>'
+```
+
+El asistente propone `host.docker.internal` como servidor (el equipo donde corre Docker) y `<Proyecto>_IC` como base de configuración; cámbialos si tu SQL Server está en otro sitio.
+
+!!! warning "No pases las cadenas de conexión por entorno con el asistente"
+    Una variable de entorno manda sobre lo que guarda el asistente: si el compose lleva `ConnectionStrings__…`, el valor que elijas en el asistente no se usará.
 
 ---
 
