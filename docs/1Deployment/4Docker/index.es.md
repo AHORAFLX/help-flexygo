@@ -411,6 +411,14 @@ El asistente propone `host.docker.internal` como servidor (el equipo donde corre
 !!! warning "No pases las cadenas de conexión por entorno con el asistente"
     Una variable de entorno manda sobre lo que guarda el asistente: si el compose lleva `ConnectionStrings__…`, el valor que elijas en el asistente no se usará.
 
+### Sin instalación desatendida: el usuario `admin`
+
+- **Si el asistente crea la base de configuración** (base nueva en tu SQL Server, como en el ejemplo 2), te pide en ese momento el nombre del proyecto y la contraseña del `admin`.
+- **Si la base de configuración ya existe** porque viene en la imagen de base de datos (el compose con BD sin las variables `Setup__…`, o un producto como CRM o SAT con su base de configuración en contenedor), el asistente se salta ese paso. Se entra con el usuario **`admin`** y la contraseña **`-aZ123456`**, y la aplicación obliga a cambiarla en el primer inicio de sesión.
+
+!!! note "Productos con los datos en un ERP externo (CRM, SAT)"
+    Con la base de configuración en contenedor, en el paso de **bases de datos de datos** el asistente propone como servidor el del contenedor de configuración (p. ej. `flxsat-db`). Cámbialo por el SQL Server del ERP tal como se ve desde el contenedor: `host.docker.internal` si está en el mismo equipo que Docker, o su nombre o IP en la red.
+
 ---
 
 ## ⚙️ Configuración adicional para producción
