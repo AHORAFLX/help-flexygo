@@ -186,15 +186,16 @@ BACKEND_PORT=60952
 ASPNETCORE_ENVIRONMENT=Development
 
 # DB en contenedor (solo demos)
-SQL_PASSWORD=TuPasswordSegura123!
+SQL_PASSWORD='<contraseña de sa>'
 
 # DB externa (si usas connection strings directas)
-ConnectionStrings__ConfConnectionString=Server=host.docker.internal;Initial Catalog=DatabaseName_IC;User ID=sa;Password=-a123456;TrustServerCertificate=True;Encrypt=False;
-ConnectionStrings__DataConnectionString=Server=host.docker.internal;Initial Catalog=DatabaseName_I;User ID=sa;Password=-a123456;TrustServerCertificate=True;Encrypt=False;
+ConnectionStrings__ConfConnectionString='Server=host.docker.internal;Initial Catalog=DatabaseName_IC;User ID=sa;Password=<contraseña de SQL Server>;TrustServerCertificate=True;Encrypt=False;'
+ConnectionStrings__DataConnectionString='Server=host.docker.internal;Initial Catalog=DatabaseName_I;User ID=sa;Password=<contraseña de SQL Server>;TrustServerCertificate=True;Encrypt=False;'
 
 # Token mantenimiento (necesario para actualizar la BD)
-MAINT_TOKEN=-aZ123456
+MAINT_TOKEN='<token de mantenimiento>'
 ```
+
 ---
 
 ## ▶️ Paso 3: Levantar todo el entorno
