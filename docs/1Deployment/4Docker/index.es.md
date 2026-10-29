@@ -258,6 +258,7 @@ En la plantilla ya se pasa sola: `tools/build-docker-images.ps1` la toma del `-T
 - **El volumen `conf` del backend tiene que ser persistente**: guarda las cadenas de conexión, las claves y la marca de instalación hecha. Si se pierde, la instalación empieza de cero.
 - **Las contraseñas van en un `.env`** junto al compose, fuera de git, y el compose las usa con `${...}`. Nunca escritas en el compose.
 - **La imagen de base de datos ya es SQL Server Express.** `MSSQL_PID` solo hace falta para cambiar a una edición con licencia.
+- **Los ejemplos usan `ASPNETCORE_ENVIRONMENT: "Development"` para probar.** En una instalación real pon `Production` y dale la llave de cifrado desde el primer arranque (ver [Configuración adicional para producción](#configuracion-adicional-para-produccion)).
 
 ### Variables del backend
 
@@ -272,7 +273,7 @@ El detalle de cada una, en [Instalación desatendida](../../MoreInformation/3Did
 
 ### Ejemplo 1: base de datos en contenedor e instalación desatendida
 
-Todo en Docker y sin asistente: al levantarlo, el backend crea las bases, pone el nombre del proyecto y la contraseña del `admin`, y abre directamente el inicio de sesión. Es lo que monta el [instalador](../1Installer/Deployment.md) con la opción de base de datos interna.
+Todo en Docker y sin asistente: al levantarlo, el backend crea las bases, pone el nombre del proyecto y la contraseña del `admin`, y abre directamente el inicio de sesión. El [instalador](../1Installer/Deployment.md), con la opción de base de datos interna, monta un compose como este, pero sin `MAINT_TOKEN`: si vas a actualizar desde la página de mantenimiento, añádelo tú.
 
 ```yaml
 services:
@@ -348,7 +349,7 @@ Setup__AdminPassword='<contraseña del admin>'
 MAINT_TOKEN='<token para las actualizaciones>'
 ```
 
-Entre comillas simples, Docker Compose toma el valor tal cual, también con `$` o `#` dentro.
+Entre comillas simples, Docker Compose toma el valor tal cual, también con `$` o `#` dentro. El `MAINT_TOKEN` lo eliges tú: es la clave que pide la página de mantenimiento para lanzar una [actualización](../3Updater/DockerUpdate.md).
 
 Al levantarlo, el log del backend (`docker compose logs flx-backend`) dice `Unattended setup started` y, al acabar, `completed`. La marca `Setup:UnattendedCompleted` queda en el volumen `conf` y no se repite al reiniciar.
 

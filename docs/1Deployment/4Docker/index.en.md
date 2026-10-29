@@ -258,6 +258,7 @@ The template already passes it: `tools/build-docker-images.ps1` takes it from `-
 - **The backend's `conf` volume must be persistent**: it keeps the connection strings, the keys and the installation-done mark. If it is lost, the installation starts from scratch.
 - **Passwords go in a `.env`** next to the compose, out of git, and the compose uses them with `${...}`. Never written in the compose.
 - **The database image already runs SQL Server Express.** `MSSQL_PID` is only needed to switch to a licensed edition.
+- **The examples use `ASPNETCORE_ENVIRONMENT: "Development"` for testing.** In a real installation set `Production` and give it the encryption key from the first start (see [Additional configuration for production](#additional-configuration-for-production)).
 
 ### Backend variables
 
@@ -272,7 +273,7 @@ Each one in detail, in [Unattended installation](../../MoreInformation/3DidYouKn
 
 ### Example 1: database in a container and unattended installation
 
-Everything in Docker and no wizard: when it comes up, the backend creates the databases, sets the project name and the `admin` password, and goes straight to the sign-in page. It is what the [installer](../1Installer/Deployment.md) sets up with the internal database option.
+Everything in Docker and no wizard: when it comes up, the backend creates the databases, sets the project name and the `admin` password, and goes straight to the sign-in page. The [installer](../1Installer/Deployment.md), with the internal database option, sets up a compose like this one, but without `MAINT_TOKEN`: if you are going to update from the maintenance page, add it yourself.
 
 ```yaml
 services:
@@ -348,7 +349,7 @@ Setup__AdminPassword='<admin password>'
 MAINT_TOKEN='<token for updates>'
 ```
 
-In single quotes, Docker Compose takes the value as is, even with `$` or `#` in it.
+In single quotes, Docker Compose takes the value as is, even with `$` or `#` in it. You choose the `MAINT_TOKEN`: it is the key the maintenance page asks for to start an [update](../3Updater/DockerUpdate.md).
 
 When it comes up, the backend log (`docker compose logs flx-backend`) shows `Unattended setup started` and, when it finishes, `completed`. The `Setup:UnattendedCompleted` mark stays in the `conf` volume and it does not run again on restart.
 
