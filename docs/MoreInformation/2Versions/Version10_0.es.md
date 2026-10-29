@@ -146,6 +146,9 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 ### En actualizaciones posteriores
 
 - **Interfaz:** El pie de la barra lateral muestra la versión completa instalada, incluidas las versiones beta.
+- **Despliegue:** Docker utiliza SQL Server Express y respeta la configuración de versión y edición de la imagen de base de datos.
+- **Instalación:** El frontend obtiene las claves compartidas del backend configurado, incluso durante la instalación.
+- **Instalación:** El asistente permite definir la contraseña de administración aunque ya se haya indicado el nombre del proyecto.
 
 ## Correcciones
 
@@ -162,3 +165,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Interfaz:** se corrigen detalles de presentación en el kanban, los calendarios, el modo oscuro y la rejilla de módulos.
     - **Notificaciones y conversaciones:** las menciones vuelven a notificar y el sonido no se repite cuando llegan muchas notificaciones a la vez.
     - **Seguridad:** Las instalaciones nuevas de productos asignan al administrador el perfil 2026admin.
+
+## Obsoleto
+
+- **Instalación:** La base de datos de configuración requiere SQL Server 2022 o posterior.
