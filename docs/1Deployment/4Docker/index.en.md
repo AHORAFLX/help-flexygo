@@ -411,6 +411,14 @@ The wizard suggests `host.docker.internal` as the server (the machine running Do
 !!! warning "Do not pass the connection strings as environment variables with the wizard"
     An environment variable wins over what the wizard saves: if the compose has `ConnectionStrings__…`, the value you choose in the wizard is not used.
 
+### Without the unattended installation: the `admin` user
+
+- **If the wizard creates the configuration database** (a new database on your SQL Server, as in example 2), it asks for the project name and the `admin` password at that point.
+- **If the configuration database already exists** because it comes in the database image (the compose with a database and without the `Setup__…` variables, or a product such as CRM or SAT with its configuration database in a container), the wizard skips that step. You sign in with user **`admin`** and password **`-aZ123456`**, and the application forces a change at the first sign-in.
+
+!!! note "Products whose data is in an external ERP (CRM, SAT)"
+    With the configuration database in a container, in the **data databases** step the wizard suggests the configuration container's server (e.g. `flxsat-db`). Change it to the ERP's SQL Server as seen from the container: `host.docker.internal` if it is on the same machine as Docker, or its name or IP on the network.
+
 ---
 
 ## ⚙️ Additional configuration for production
