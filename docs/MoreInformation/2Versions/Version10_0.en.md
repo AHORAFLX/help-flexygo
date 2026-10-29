@@ -149,6 +149,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **Deployment:** Docker uses SQL Server Express and respects the version and edition settings of the database image.
 - **Installation:** The frontend gets the shared keys from the configured backend, even during installation.
 - **Installation:** The wizard lets you set the administration password even if you have already entered the project name.
+- **Deployment:** The container recognizes the configuration database even if the capitalization changes.
 
 ## Fixes
 

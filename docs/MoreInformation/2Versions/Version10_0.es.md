@@ -149,6 +149,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Despliegue:** Docker utiliza SQL Server Express y respeta la configuración de versión y edición de la imagen de base de datos.
 - **Instalación:** El frontend obtiene las claves compartidas del backend configurado, incluso durante la instalación.
 - **Instalación:** El asistente permite definir la contraseña de administración aunque ya se haya indicado el nombre del proyecto.
+- **Despliegue:** El contenedor reconoce la base de datos de configuración aunque cambie el uso de mayúsculas.
 
 ## Correcciones
 
