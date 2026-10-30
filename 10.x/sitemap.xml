@@ -232,6 +232,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/2ProductDevelopment/MCP/7PanelAndBoard/"/>
     </url>
     <url>
+        <loc>None2ProductDevelopment/MCP/8Flexygo10/</loc>
+        <lastmod>2026-10-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="None2ProductDevelopment/MCP/8Flexygo10/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/2ProductDevelopment/MCP/8Flexygo10/"/>
+    </url>
+    <url>
         <loc>None3CICD/1Overview/</loc>
         <lastmod>2026-10-30</lastmod>
         <changefreq>daily</changefreq>
@@ -2372,6 +2379,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/2ProductDevelopment/MCP/7PanelAndBoard/"/>
         <xhtml:link rel="alternate" hreflang="es" href="None2ProductDevelopment/MCP/7PanelAndBoard/"/>
+    </url>
+    <url>
+        <loc>Noneen/2ProductDevelopment/MCP/8Flexygo10/</loc>
+        <lastmod>2026-10-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/2ProductDevelopment/MCP/8Flexygo10/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="None2ProductDevelopment/MCP/8Flexygo10/"/>
     </url>
     <url>
         <loc>Noneen/3CICD/1Overview/</loc>
