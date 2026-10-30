@@ -362,8 +362,8 @@ When it comes up, the backend log (`docker compose logs flx-backend`) shows `Una
 
 The backend does not need `MSSQL_SA_PASSWORD`: the password is already in its connection strings.
 
-!!! warning "Not for products whose data is in an ERP (CRM, SAT)"
-    These products query configuration tables (`<Product>_IC.dbo.…`) from the ERP database, and SQL Server only resolves that when both are on the **same server**. With the configuration in a container and the ERP outside, the application starts and you can sign in, but modules such as the CRM home dashboard fail ("Invalid object name 'FlexygoCRM_IC.dbo.TRANSLATE'"). Create the configuration database on the ERP's SQL Server, as in example 2.
+!!! warning "Not for products that query an ERP (CRM, SAT, Recognizer)"
+    These products cross, in a single query, from the ERP database to the configuration one (`<Product>_IC.dbo.…`) or the other way round, and SQL Server only resolves that when both are on the **same server**. With the configuration in a container and the ERP outside, the application starts and you can sign in, but modules such as the CRM home dashboard fail ("Invalid object name 'FlexygoCRM_IC.dbo.TRANSLATE'"). Create the configuration database on the ERP's SQL Server, as in example 2. Recognizer keeps its data next to the configuration but also reads the ERP: its configuration and data databases go on the ERP's SQL Server. That is why, for CRM, SAT and Recognizer, the installer only offers the external database.
 
 ### Example 2: SQL Server outside Docker and the wizard
 
@@ -424,9 +424,9 @@ The wizard suggests `host.docker.internal` as the server (the machine running Do
 ### Without the unattended installation: the `admin` user
 
 - **If the wizard creates the configuration database** (a new database on your SQL Server, as in example 2), it asks for the project name and the `admin` password at that point.
-- **If the configuration database already exists** because it comes in the database image (the compose with a database and without the `Setup__…` variables, or a product such as CRM or SAT with its configuration database in a container), the wizard skips that step. You sign in with user **`admin`** and password **`-aZ123456`**, and the application forces a change at the first sign-in.
+- **If the configuration database already exists** because it comes in the database image (the compose with a database and without the `Setup__…` variables), the wizard skips that step. You sign in with user **`admin`** and password **`-aZ123456`**, and the application forces a change at the first sign-in.
 
-!!! note "Products whose data is in an external ERP (CRM, SAT)"
+!!! note "Products that query an ERP (CRM, SAT, Recognizer)"
     The configuration database must be on the same SQL Server as the ERP (see the example 1 warning). With example 2, in the **data databases** step the wizard suggests the same server you gave for the configuration: the ERP's, as seen from the container (`host.docker.internal` if it is on the same machine as Docker, or its name or IP on the network).
 
 ---

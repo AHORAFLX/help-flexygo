@@ -362,8 +362,8 @@ Al levantarlo, el log del backend (`docker compose logs flx-backend`) dice `Unat
 
 El backend no necesita `MSSQL_SA_PASSWORD`: la contraseña ya va en sus cadenas de conexión.
 
-!!! warning "No sirve para productos cuyos datos están en un ERP (CRM, SAT)"
-    Estos productos consultan desde la base del ERP tablas de la de configuración (`<Producto>_IC.dbo.…`), y SQL Server solo lo resuelve si las dos están en el **mismo servidor**. Con la configuración en un contenedor y el ERP fuera, la aplicación arranca y se puede entrar, pero fallan módulos como el panel de inicio del CRM («El nombre de objeto 'FlexygoCRM_IC.dbo.TRANSLATE' no es válido»). Crea la base de configuración en el SQL Server del ERP, como en el ejemplo 2.
+!!! warning "No sirve para productos que consultan un ERP (CRM, SAT, Recognizer)"
+    Estos productos cruzan en una misma consulta de la base del ERP a la de configuración (`<Producto>_IC.dbo.…`) o al revés, y SQL Server solo lo resuelve si las dos están en el **mismo servidor**. Con la configuración en un contenedor y el ERP fuera, la aplicación arranca y se puede entrar, pero fallan módulos como el panel de inicio del CRM («El nombre de objeto 'FlexygoCRM_IC.dbo.TRANSLATE' no es válido»). Crea la base de configuración en el SQL Server del ERP, como en el ejemplo 2. Recognizer, aunque guarda sus datos junto a la configuración, también lee el ERP: su base de configuración y la de datos van en el SQL Server del ERP. Por eso el instalador, para CRM, SAT y Recognizer, solo ofrece la base de datos externa.
 
 ### Ejemplo 2: SQL Server fuera de Docker y asistente
 
@@ -424,9 +424,9 @@ El asistente propone `host.docker.internal` como servidor (el equipo donde corre
 ### Sin instalación desatendida: el usuario `admin`
 
 - **Si el asistente crea la base de configuración** (base nueva en tu SQL Server, como en el ejemplo 2), te pide en ese momento el nombre del proyecto y la contraseña del `admin`.
-- **Si la base de configuración ya existe** porque viene en la imagen de base de datos (el compose con BD sin las variables `Setup__…`, o un producto como CRM o SAT con su base de configuración en contenedor), el asistente se salta ese paso. Se entra con el usuario **`admin`** y la contraseña **`-aZ123456`**, y la aplicación obliga a cambiarla en el primer inicio de sesión.
+- **Si la base de configuración ya existe** porque viene en la imagen de base de datos (el compose con BD sin las variables `Setup__…`), el asistente se salta ese paso. Se entra con el usuario **`admin`** y la contraseña **`-aZ123456`**, y la aplicación obliga a cambiarla en el primer inicio de sesión.
 
-!!! note "Productos con los datos en un ERP externo (CRM, SAT)"
+!!! note "Productos que consultan un ERP (CRM, SAT, Recognizer)"
     La base de configuración tiene que estar en el mismo SQL Server que el ERP (ver el aviso del ejemplo 1). Con el ejemplo 2, en el paso de **bases de datos de datos** el asistente propone el mismo servidor que pusiste para la configuración: el del ERP, visto desde el contenedor (`host.docker.internal` si está en el mismo equipo que Docker, o su nombre o IP en la red).
 
 ---
