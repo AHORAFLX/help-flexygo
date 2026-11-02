@@ -34,3 +34,7 @@ The 2022 skin adapts the configuration and health panels; Lowdy lets you rotate 
 ### Notifications
 
 - **Unread notifications are displayed again with a white background, blue bar, and blue text in the 2022 skin.** Unread notifications in the bell have regained their expected visual style.
+
+### Reports
+
+- **You can generate Crystal Reports reports on databases with Windows authentication.** Authentication also applies to subreports. If generation fails, the message includes the reason indicated by Crystal Reports.

@@ -26,6 +26,10 @@ La skin 2022 adapta los paneles de configuración y salud; Lowdy permite girar p
 
 ## Correcciones
 
+### Informes
+
+- **Puedes generar informes de Crystal Reports en bases de datos con autenticación de Windows.** La autenticación se aplica también a los subinformes. Si falla la generación, el mensaje incluye el motivo indicado por Crystal Reports.
+
 ### Instalación
 
 - **La instalación avisa si la versión de SQL Server no es compatible.** El aviso muestra la versión detectada y permite volver a comprobarla. En la instalación desatendida, indica qué versión impide continuar.
