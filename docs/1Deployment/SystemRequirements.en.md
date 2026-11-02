@@ -9,7 +9,7 @@ This page lists the requirements needed to install Flexygo in a Windows environm
 Before you begin, make sure your environment has:
 
 - **IIS** installed and configured (the installer can install it if it isn't)
-- **SQL Server 2022 or later** (can also optionally be installed from the installer)
+- **SQL Server 2017 or later** (can also optionally be installed from the installer)
 - **.NET Hosting Bundle** (installed automatically by the installer if its absence is detected)
 - **Administrator permissions** on the machine
 
@@ -34,8 +34,8 @@ Go to **Control Panel → Programs → Turn Windows features on or off** and mak
 
 ## :material-database: SQL Server
 
-!!! danger "Flexygo 10 requires SQL Server 2022 or later"
-    Starting with Flexygo 10, the minimum SQL Server version is **SQL Server 2022**. The application's databases must be on a SQL Server 2022 or later server; if the server is older, upgrade it before installing, updating or migrating the application.
+!!! danger "Flexygo 10 requires SQL Server 2017 or later"
+    Starting with Flexygo 10, the minimum SQL Server version is **SQL Server 2017**. The application's databases must be on a SQL Server 2017 or later server; if the server is older, upgrade it before installing, updating or migrating the application.
 
 ---
 

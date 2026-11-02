@@ -9,7 +9,7 @@ Esta página recoge los requisitos necesarios para instalar Flexygo en un entorn
 Antes de comenzar, asegúrate de que el entorno dispone de:
 
 - **IIS** instalado y configurado (el instalador puede instalarlo si no lo está)
-- **SQL Server 2022 o superior** (opcionalmente instalable también desde el instalador)
+- **SQL Server 2017 o superior** (opcionalmente instalable también desde el instalador)
 - **.NET Hosting Bundle** (instalado automáticamente por el instalador si se detecta su ausencia)
 - **Permisos de administrador** en el equipo
 
@@ -34,8 +34,8 @@ Ve a **Panel de control → Programas → Activar o desactivar las característi
 
 ## :material-database: SQL Server
 
-!!! danger "Flexygo 10 requiere SQL Server 2022 o superior"
-    A partir de Flexygo 10, la versión mínima de SQL Server es **SQL Server 2022**. Las bases de datos de la aplicación deben estar en un servidor SQL Server 2022 o posterior; si el servidor es anterior, actualízalo antes de instalar, actualizar o migrar la aplicación.
+!!! danger "Flexygo 10 requiere SQL Server 2017 o superior"
+    A partir de Flexygo 10, la versión mínima de SQL Server es **SQL Server 2017**. Las bases de datos de la aplicación deben estar en un servidor SQL Server 2017 o posterior; si el servidor es anterior, actualízalo antes de instalar, actualizar o migrar la aplicación.
 
 ---
 
