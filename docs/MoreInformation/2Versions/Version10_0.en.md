@@ -170,6 +170,8 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Security:** New product installations assign the 2026admin profile to the administrator.
     - **Development Tools:** Page management works again in SQL Server 2017 and 2019.
     - **Notifications:** Unread notifications are displayed again with a white background and a blue bar and text.
+    - **Interface:** Searching in dropdowns and enabling schedules based on the start time now work correctly.
+    - **Performance:** Lists and home modules load without incorrect queries and respect pagination and result order.
 
 ## Deprecated
 

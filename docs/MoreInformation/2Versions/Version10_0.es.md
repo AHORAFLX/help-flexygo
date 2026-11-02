@@ -170,6 +170,8 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Seguridad:** Las instalaciones nuevas de productos asignan al administrador el perfil 2026admin.
     - **Herramientas de desarrollo:** La administración de páginas vuelve a funcionar en SQL Server 2017 y 2019.
     - **Notificaciones:** Las notificaciones sin leer vuelven a mostrarse con fondo blanco y una barra y texto azules.
+    - **Interfaz:** La búsqueda en desplegables y la activación de horarios según la hora de inicio ya funcionan correctamente.
+    - **Rendimiento:** Las listas y los módulos de inicio cargan sin consultas erróneas y respetan la paginación y el orden de los resultados.
 
 ## Obsoleto
 
