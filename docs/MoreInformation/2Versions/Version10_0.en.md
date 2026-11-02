@@ -150,6 +150,8 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **Installation:** The frontend gets the shared keys from the configured backend, even during installation.
 - **Installation:** The wizard lets you set the administration password even if you have already entered the project name.
 - **Deployment:** The container recognizes the configuration database even if the capitalization changes.
+- **Configuration:** The 2022 skin displays application settings and Salud y recursos in the control panel menu.
+- **Installation:** The installation wizard checks the SQL Server version and access, and identifies unsupported versions and connection errors.
 
 ## Fixes
 
@@ -166,6 +168,8 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Interface:** layout details in the kanban board, the calendars, dark mode and the module grid are fixed.
     - **Notifications and conversations:** mentions notify again and the sound no longer repeats when many notifications arrive at once.
     - **Security:** New product installations assign the 2026admin profile to the administrator.
+    - **Development Tools:** Page management works again in SQL Server 2017 and 2019.
+    - **Notifications:** Unread notifications are displayed again with a white background and a blue bar and text.
 
 ## Deprecated
 
