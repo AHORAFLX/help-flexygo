@@ -150,6 +150,8 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Instalación:** El frontend obtiene las claves compartidas del backend configurado, incluso durante la instalación.
 - **Instalación:** El asistente permite definir la contraseña de administración aunque ya se haya indicado el nombre del proyecto.
 - **Despliegue:** El contenedor reconoce la base de datos de configuración aunque cambie el uso de mayúsculas.
+- **Configuración:** La skin 2022 muestra la configuración de la aplicación y Salud y recursos en el menú del panel de control.
+- **Instalación:** El asistente de instalación comprueba la versión y el acceso a SQL Server, e identifica las versiones no compatibles y los errores de conexión.
 
 ## Correcciones
 
@@ -166,6 +168,8 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Interfaz:** se corrigen detalles de presentación en el kanban, los calendarios, el modo oscuro y la rejilla de módulos.
     - **Notificaciones y conversaciones:** las menciones vuelven a notificar y el sonido no se repite cuando llegan muchas notificaciones a la vez.
     - **Seguridad:** Las instalaciones nuevas de productos asignan al administrador el perfil 2026admin.
+    - **Herramientas de desarrollo:** La administración de páginas vuelve a funcionar en SQL Server 2017 y 2019.
+    - **Notificaciones:** Las notificaciones sin leer vuelven a mostrarse con fondo blanco y una barra y texto azules.
 
 ## Obsoleto
 
