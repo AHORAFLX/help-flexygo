@@ -26,11 +26,6 @@ The 2022 skin adapts the configuration and health panels; Lowdy lets you rotate 
 
 ## Fixes
 
-### Installation
-
-- **The installation warns if the SQL Server version is not compatible.** The warning shows the detected version and lets you check it again. In unattended installation, it indicates which version prevents you from continuing.
-- **The installation does not accept database connections if the server is inaccessible.** The connection step indicates that the server is inaccessible instead of treating the connection as valid. The application configuration shows the actual reason for the failure.
-
 ### Notifications
 
 - **Unread notifications are displayed again with a white background, blue bar, and blue text in the 2022 skin.** Unread notifications in the bell have regained their expected visual style.
