@@ -169,4 +169,4 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 
 ## Deprecated
 
-- **Installation:** The configuration database requires SQL Server 2022 or later.
+- **Installation:** The configuration database requires SQL Server 2017 or later.
