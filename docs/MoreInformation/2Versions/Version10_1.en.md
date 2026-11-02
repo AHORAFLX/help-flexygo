@@ -1,6 +1,6 @@
 # Version 10.1
 
-Includes improvements for creating tours and organizing modules, managing menu nodes in skin 2026, and automatically enabling Development Mode for designers; Lowdy lets you rotate the character.
+The 2022 skin adapts the configuration and health panels; Lowdy lets you rotate characters, and the development tools make it easier to edit routes, modules, and menus.
 
 ## New features
 
@@ -10,6 +10,10 @@ Includes improvements for creating tours and organizing modules, managing menu n
 - **In skin 2026, you can manage menu nodes by right-clicking.** The context menu lets you edit, add, configure the visibility of, or delete nodes. You can add them inside or below another node, and open the full menu manager from there. The welcome tour explains how to use these options.
 
 ## Improvements
+
+### Configuration
+
+- **The 2022 skin displays the configuration and health panels with a clear design adapted to its colors.** Both panels appear in the control panel menu. Their flat, clear appearance follows the theme colors.
 
 ### Development Tools
 
@@ -26,3 +30,7 @@ Includes improvements for creating tours and organizing modules, managing menu n
 
 - **The installation warns if the SQL Server version is not compatible.** The warning shows the detected version and lets you check it again. In unattended installation, it indicates which version prevents you from continuing.
 - **The installation does not accept database connections if the server is inaccessible.** The connection step indicates that the server is inaccessible instead of treating the connection as valid. The application configuration shows the actual reason for the failure.
+
+### Notifications
+
+- **Unread notifications are displayed again with a white background, blue bar, and blue text in the 2022 skin.** Unread notifications in the bell have regained their expected visual style.
