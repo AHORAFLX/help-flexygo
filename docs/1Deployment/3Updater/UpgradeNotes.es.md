@@ -8,7 +8,7 @@ Está ordenada por quién lo nota. Si solo tienes un minuto, empieza por la list
 
 | | Revisa | Si… |
 |---|---|---|
-| ☐ | [SQL Server 2022 o superior](#3-configuracion-y-despliegue) | el servidor SQL es anterior a SQL Server 2022 |
+| ☐ | [SQL Server 2017 o superior](#3-configuracion-y-despliegue) | el servidor SQL es anterior a SQL Server 2017 |
 | ☐ | [Llamadas a procesos por la WebAPI](#1-integraciones-por-la-webapi) | tienes integraciones que ejecutan procesos con `/webapi/exec` |
 | ☐ | [Columnas que lee una integración](#solo-se-sirven-las-propiedades-definidas) | una integración lee columnas que no son propiedad del objeto |
 | ☐ | [Proxy inverso y bloqueo de IP](#bloqueo-de-ip-por-intentos-fallidos-de-token) | la aplicación está detrás de un proxy o un balanceador |
@@ -88,7 +88,7 @@ Las reglas **generales** son nuevas: se ponen por proceso (por rol, usuario o fa
 
 | Qué | Ahora | Qué hacer |
 |---|---|---|
-| Servidor SQL | El requisito mínimo es **SQL Server 2022** o superior | Actualiza el servidor SQL antes de actualizar la aplicación. Ver [Requisitos del sistema](../SystemRequirements.md) |
+| Servidor SQL | El requisito mínimo es **SQL Server 2017** o superior | Actualiza el servidor SQL antes de actualizar la aplicación. Ver [Requisitos del sistema](../SystemRequirements.md) |
 | Fichero de configuración | Se carga `appsettings.{Environment}.json`; `appsettings.Development.json` no se publica | Comprueba en qué fichero está tu configuración |
 | Paquetes del actualizador | En `C:\ProgramData\Flexygo\Packages` (manda `FLEXYGO_PACKAGES_ROOT` si existe) | Permisos y espacio en la ruta nueva |
 | Modo mantenimiento | Se activa desde el panel de la aplicación y deja fuera a todos salvo al administrador que lo activó. Se retiran los procesos de sistema `EnableMaintenanceMode` y `DisableMaintenanceMode` | Si los llamabas desde un botón o una integración, usa el panel |
