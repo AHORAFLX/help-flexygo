@@ -169,4 +169,4 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 
 ## Obsoleto
 
-- **Instalación:** La base de datos de configuración requiere SQL Server 2022 o posterior.
+- **Instalación:** La base de datos de configuración requiere SQL Server 2017 o posterior.
