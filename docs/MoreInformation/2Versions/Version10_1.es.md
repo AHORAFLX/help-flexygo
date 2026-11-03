@@ -30,6 +30,10 @@ La skin 2022 adapta los paneles de configuración y salud; Lowdy permite girar p
 
 - **Puedes generar informes de Crystal Reports en bases de datos con autenticación de Windows.** La autenticación se aplica también a los subinformes. Si falla la generación, el mensaje incluye el motivo indicado por Crystal Reports.
 
+### Interfaz
+
+- **Vuelven a mostrarse las imágenes de cinco diseños de página en instalaciones Linux y Docker.** Las rutas corregidas evitan que las imágenes fallen en sistemas que distinguen entre mayúsculas y minúsculas. Las bases de datos existentes reciben la ruta actualizada en su siguiente actualización.
+
 ### Notificaciones
 
 - **Las notificaciones sin leer vuelven a mostrarse con fondo blanco, barra azul y texto azul en la skin 2022.** En la campana, las notificaciones sin leer recuperan el estilo visual esperado.

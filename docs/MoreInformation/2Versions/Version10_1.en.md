@@ -26,6 +26,10 @@ The 2022 skin adapts the configuration and health panels; Lowdy lets you rotate 
 
 ## Fixes
 
+### Interface
+
+- **Images for five page designs are displayed again in Linux and Docker installations.** The corrected paths prevent images from failing on systems that distinguish between uppercase and lowercase letters. Existing databases receive the updated path in their next update.
+
 ### Notifications
 
 - **Unread notifications are displayed again with a white background, blue bar, and blue text in the 2022 skin.** Unread notifications in the bell have regained their expected visual style.
