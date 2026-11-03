@@ -1,6 +1,6 @@
 # Version 10.1
 
-The 2022 skin adapts the configuration and health panels; Lowdy lets you rotate characters, and the development tools make it easier to edit routes, modules, and menus.
+The update prepares the next version every night; development tools have also been improved to make it easier to edit routes and modules, manage the menu, and design skins.
 
 ## New features
 
@@ -8,6 +8,10 @@ The 2022 skin adapts the configuration and health panels; Lowdy lets you rotate 
 
 - **The Lowdy plugin lets you rotate the character to any angle.** Developers using the plugin can show it from the side when it opens. They can also change its orientation using the rotation function.
 - **In skin 2026, you can manage menu nodes by right-clicking.** The context menu lets you edit, add, configure the visibility of, or delete nodes. You can add them inside or below another node, and open the full menu manager from there. The welcome tour explains how to use these options.
+
+### Updater
+
+- **It prepares the next version in the background every night to speed up its download and records the result in the log.** Preparation uses the project version and runs at 1:00, updating the updater itself first. It does not run if another update is in progress or outside IIS. In the log, you can check what the task did, why it did not run, and whether it finished with errors.
 
 ## Improvements
 

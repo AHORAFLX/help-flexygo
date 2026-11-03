@@ -1,8 +1,12 @@
 # Versión 10.1
 
-La skin 2022 adapta los paneles de configuración y salud; Lowdy permite girar personajes, y las herramientas de desarrollo facilitan editar recorridos, módulos y menús.
+La actualización prepara cada noche la siguiente versión; además, mejoran las herramientas de desarrollo para editar recorridos y módulos, gestionar el menú y diseñar skins con mayor facilidad.
 
 ## Novedades
+
+### Actualizador
+
+- **Prepara cada noche en segundo plano la siguiente versión para agilizar su descarga y deja constancia del resultado en el registro.** La preparación usa la versión del proyecto y se ejecuta a la 1:00, actualizando primero el propio actualizador. No se ejecuta si hay otra actualización en curso ni fuera de IIS. En el registro puedes consultar qué hizo la tarea, por qué no actuó y si terminó con errores.
 
 ### Herramientas de desarrollo
 
