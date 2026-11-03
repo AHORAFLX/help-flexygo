@@ -172,6 +172,8 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Notifications:** Unread notifications are displayed again with a white background and a blue bar and text.
     - **Interface:** Searching in dropdowns and enabling schedules based on the start time now work correctly.
     - **Performance:** Lists and home modules load without incorrect queries and respect pagination and result order.
+    - **Configuration:** New and updated databases detect damaged pages using checksums.
+    - **Configuration:** New databases use SIMPLE recovery, and updates preserve the existing model.
 
 ## Deprecated
 

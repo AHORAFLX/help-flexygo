@@ -172,6 +172,8 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Notificaciones:** Las notificaciones sin leer vuelven a mostrarse con fondo blanco y una barra y texto azules.
     - **Interfaz:** La búsqueda en desplegables y la activación de horarios según la hora de inicio ya funcionan correctamente.
     - **Rendimiento:** Las listas y los módulos de inicio cargan sin consultas erróneas y respetan la paginación y el orden de los resultados.
+    - **Configuración:** Las bases de datos nuevas y actualizadas detectan páginas dañadas mediante sumas de comprobación.
+    - **Configuración:** Las bases de datos nuevas usan recuperación SIMPLE y las actualizaciones conservan el modelo existente.
 
 ## Obsoleto
 
