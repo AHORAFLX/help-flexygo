@@ -1,6 +1,6 @@
 # Version 10.1
 
-The Updater prepares the next version overnight and records the results; the route editor, Lowdy, menu management, and configuration panels have been improved.
+The Updater prepares the next version overnight and records results; development tools are improved, with Lowdy rotation and menu node management.
 
 ## New features
 
@@ -23,6 +23,10 @@ The Updater prepares the next version overnight and records the results; the rou
 
 - **The tour editor keeps markers next to the selected item and makes it easier to identify modules and reorder steps.** Each module label shows its identifier, as when it is placed. When you move a step, a line indicates where it will be inserted.
 - **You can place modules by right-clicking or dragging them, and change the layout from a clearer toolbar.** When you drag a module, a line shows where it will be placed. Free layout works as a toggle, and when you turn it off, the previous layout is restored.
+
+### Processes
+
+- **You can leave generic process buttons without an icon.** This way, the play icon is not displayed on these buttons.
 
 ### Skins
 

@@ -1,6 +1,6 @@
 # Versión 10.1
 
-El Actualizador prepara la siguiente versión por la noche y registra resultados; mejoran el editor de recorridos, Lowdy, la gestión del menú y los paneles de configuración.
+El Actualizador prepara por la noche la siguiente versión y registra resultados; las herramientas de desarrollo mejoran, con giro de Lowdy y gestión de nodos del menú.
 
 ## Novedades
 
@@ -27,6 +27,10 @@ El Actualizador prepara la siguiente versión por la noche y registra resultados
 
 - **El editor de recorridos mantiene las marcas junto al elemento seleccionado y facilita identificar módulos y reordenar pasos.** La etiqueta de cada módulo muestra su identificador, como cuando se coloca. Al mover un paso, una línea indica dónde se insertará.
 - **Puedes colocar módulos con el botón derecho o arrastrándolos, y cambiar la distribución desde una barra más clara.** Al arrastrar un módulo, una línea señala dónde quedará. La distribución libre funciona como un interruptor y, al desactivarla, recuperas la distribución anterior.
+
+### Procesos
+
+- **Puedes dejar sin icono los botones genéricos de proceso.** Así, no se muestra el icono de reproducción en estos botones.
 
 ### Skins
 
