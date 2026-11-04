@@ -174,6 +174,8 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Rendimiento:** Las listas y los módulos de inicio cargan sin consultas erróneas y respetan la paginación y el orden de los resultados.
     - **Configuración:** Las bases de datos nuevas y actualizadas detectan páginas dañadas mediante sumas de comprobación.
     - **Configuración:** Las bases de datos nuevas usan recuperación SIMPLE y las actualizaciones conservan el modelo existente.
+    - **Actualizador:** Las actualizaciones ya no se bloquean si SQL Server no admite copias de seguridad comprimidas.
+    - **Seguridad de la WebAPI:** La WebAPI funciona tras una instalación nueva en Docker sin tener que reiniciar la aplicación.
 
 ## Obsoleto
 

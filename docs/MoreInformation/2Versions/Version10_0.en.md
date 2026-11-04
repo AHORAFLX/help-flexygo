@@ -174,6 +174,8 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Performance:** Lists and home modules load without incorrect queries and respect pagination and result order.
     - **Configuration:** New and updated databases detect damaged pages using checksums.
     - **Configuration:** New databases use SIMPLE recovery, and updates preserve the existing model.
+    - **Updater:** Updates are no longer blocked if SQL Server does not support compressed backups.
+    - **WebAPI Security:** The WebAPI works after a new installation in Docker without having to restart the application.
 
 ## Deprecated
 
