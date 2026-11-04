@@ -1,12 +1,12 @@
 # Versión 10.1
 
-La actualización prepara cada noche la siguiente versión; además, mejoran las herramientas de desarrollo para editar recorridos y módulos, gestionar el menú y diseñar skins con mayor facilidad.
+El Actualizador prepara la siguiente versión por la noche y registra resultados; mejoran el editor de recorridos, Lowdy, la gestión del menú y los paneles de configuración.
 
 ## Novedades
 
 ### Actualizador
 
-- **Prepara cada noche en segundo plano la siguiente versión para agilizar su descarga y deja constancia del resultado en el registro.** La preparación usa la versión del proyecto y se ejecuta a la 1:00, actualizando primero el propio actualizador. No se ejecuta si hay otra actualización en curso ni fuera de IIS. En el registro puedes consultar qué hizo la tarea, por qué no actuó y si terminó con errores.
+- **La preparación nocturna deja lista la siguiente versión y registra el resultado, incluidos los errores o los motivos por los que no actuó.** Se ejecuta a la 1:00 y utiliza la versión del proyecto, no la del Actualizador. Primero actualiza el propio Actualizador; no se ejecuta si hay otra actualización en curso ni fuera de IIS. Consulta el registro de tareas programadas para saber qué versión preparó o por qué no actuó.
 
 ### Herramientas de desarrollo
 
@@ -14,6 +14,10 @@ La actualización prepara cada noche la siguiente versión; además, mejoran las
 - **En la skin 2026, puedes gestionar los nodos del menú con el botón derecho.** El menú contextual permite editar, añadir, configurar la visibilidad o eliminar nodos. Puedes añadirlos dentro de otro nodo o debajo de él, y abrir desde allí el administrador del menú completo. El recorrido de bienvenida explica cómo usar estas opciones.
 
 ## Mejoras
+
+### Actualizador
+
+- **La descripción de la precarga del Actualizador está disponible en catalán, alemán, español, francés, italiano y portugués.** Así, quienes consulten el proceso pueden entender su propósito en cualquiera de esos idiomas.
 
 ### Configuración
 

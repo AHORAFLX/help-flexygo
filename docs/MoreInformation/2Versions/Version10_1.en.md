@@ -1,6 +1,6 @@
 # Version 10.1
 
-The update prepares the next version every night; development tools have also been improved to make it easier to edit routes and modules, manage the menu, and design skins.
+The Updater prepares the next version overnight and records the results; the route editor, Lowdy, menu management, and configuration panels have been improved.
 
 ## New features
 
@@ -11,7 +11,7 @@ The update prepares the next version every night; development tools have also be
 
 ### Updater
 
-- **It prepares the next version in the background every night to speed up its download and records the result in the log.** Preparation uses the project version and runs at 1:00, updating the updater itself first. It does not run if another update is in progress or outside IIS. In the log, you can check what the task did, why it did not run, and whether it finished with errors.
+- **The overnight preparation gets the next version ready and records the result, including any errors or reasons why it did not run.** It runs at 1:00 and uses the project version, not the Updater version. It updates the Updater itself first; it does not run if another update is in progress or outside IIS. Check the scheduled tasks log to see which version it prepared or why it did not run.
 
 ## Improvements
 
@@ -27,6 +27,10 @@ The update prepares the next version every night; development tools have also be
 ### Skins
 
 - **Designers enter Development Mode when they log in, without needing to open it from the menu.** The Development Mode option no longer appears in the skin2026 menu. The mode is automatically enabled for designers in every session.
+
+### Updater
+
+- **The description of the Updater preload is available in Catalan, German, Spanish, French, Italian, and Portuguese.** This allows people who consult the process to understand its purpose in any of those languages.
 
 ## Fixes
 
