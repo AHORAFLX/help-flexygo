@@ -1,51 +1,39 @@
 # Versión 10.1
 
-El Actualizador prepara por la noche la siguiente versión y registra resultados; las herramientas de desarrollo mejoran, con giro de Lowdy y gestión de nodos del menú.
+Flexygo 10.1 agiliza las actualizaciones y mejora las herramientas de diseño y la navegación en la skin 2026. También incorpora ajustes en el diseño de módulos y corrige problemas en informes, seguridad, imágenes y notificaciones.
 
-## Novedades
+## Otras novedades
 
-### Actualizador
+### Instalación y actualizaciones
 
-- **La preparación nocturna deja lista la siguiente versión y registra el resultado, incluidos los errores o los motivos por los que no actuó.** Se ejecuta a la 1:00 y utiliza la versión del proyecto, no la del Actualizador. Primero actualiza el propio Actualizador; no se ejecuta si hay otra actualización en curso ni fuera de IIS. Consulta el registro de tareas programadas para saber qué versión preparó o por qué no actuó.
+- **Actualización en Docker:** un asistente guía el proceso y permite revisar el resultado y las diferencias personalizadas pendientes. [Más información](../../1Deployment/3Updater/DockerUpdate.md)
+- **Preparación de versiones:** la siguiente versión queda lista en segundo plano durante la noche; la descripción de la precarga está disponible en más idiomas. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
 
-### Herramientas de desarrollo
+### Skin y configuración
 
-- **El plugin Lowdy permite girar el personaje a cualquier ángulo.** Quienes desarrollan con el plugin pueden mostrarlo de lado al abrirlo. También pueden cambiar su orientación mediante la función de giro.
-- **En la skin 2026, puedes gestionar los nodos del menú con el botón derecho.** El menú contextual permite editar, añadir, configurar la visibilidad o eliminar nodos. Puedes añadirlos dentro de otro nodo o debajo de él, y abrir desde allí el administrador del menú completo. El recorrido de bienvenida explica cómo usar estas opciones.
+- **Paneles en la skin 2022:** los paneles de configuración y salud adoptan un diseño claro que se ajusta a sus colores. [Más información](../../Help/Administration/ControlPanel.md)
+- **Modo de desarrollo:** los diseñadores entran en este modo al iniciar sesión, sin tener que abrirlo desde el menú.
 
-## Mejoras
+### Menú y navegación
 
-### Actualizador
+- **Nodos del menú:** en la skin 2026, puedes gestionarlos con el botón derecho. [Más información](../../Help/Administration/Skin2026.md)
+- **Búsquedas y accesos rápidos:** en la skin 2026, pulsa / para buscar en la lista visible o Ctrl+K para abrir favoritos, páginas recientes y atajos. [Más información](../../Help/Administration/Skin2026.md)
 
-- **La descripción de la precarga del Actualizador está disponible en catalán, alemán, español, francés, italiano y portugués.** Así, quienes consulten el proceso pueden entender su propósito en cualquiera de esos idiomas.
+### Herramientas de diseño
 
-### Configuración
+- **Lowdy:** el plugin permite girar el personaje a cualquier ángulo.
+- **Editor de recorridos:** mantiene las marcas junto al elemento seleccionado y facilita identificar módulos y reordenar pasos.
 
-- **La skin 2022 muestra los paneles de configuración y salud con un diseño claro adaptado a sus colores.** Ambos paneles aparecen en el menú del panel de control. Su aspecto plano y claro sigue los colores del tema.
+### Módulos y procesos
 
-### Herramientas de desarrollo
-
-- **El editor de recorridos mantiene las marcas junto al elemento seleccionado y facilita identificar módulos y reordenar pasos.** La etiqueta de cada módulo muestra su identificador, como cuando se coloca. Al mover un paso, una línea indica dónde se insertará.
-- **Puedes colocar módulos con el botón derecho o arrastrándolos, y cambiar la distribución desde una barra más clara.** Al arrastrar un módulo, una línea señala dónde quedará. La distribución libre funciona como un interruptor y, al desactivarla, recuperas la distribución anterior.
-
-### Procesos
-
-- **Puedes dejar sin icono los botones genéricos de proceso.** Así, no se muestra el icono de reproducción en estos botones.
-
-### Skins
-
-- **Los diseñadores entran en modo de desarrollo al iniciar sesión, sin necesidad de abrirlo desde el menú.** La opción Modo de desarrollo deja de aparecer en el menú de skin2026. El modo se activa automáticamente para los diseñadores en cada sesión.
+- **Colocación de módulos:** puedes añadirlos con el botón derecho o arrastrándolos, y cambiar la distribución desde una barra más clara. [Más información](../../Help/Modules/ModuleManagement.md)
+- **Botones de proceso:** puedes dejar sin icono los botones genéricos.
 
 ## Correcciones
 
-### Informes
+??? note "Ver las correcciones de esta versión"
 
-- **Puedes generar informes de Crystal Reports en bases de datos con autenticación de Windows.** La autenticación se aplica también a los subinformes. Si falla la generación, el mensaje incluye el motivo indicado por Crystal Reports.
-
-### Interfaz
-
-- **Vuelven a mostrarse las imágenes de cinco diseños de página en instalaciones Linux y Docker.** Las rutas corregidas evitan que las imágenes fallen en sistemas que distinguen entre mayúsculas y minúsculas. Las bases de datos existentes reciben la ruta actualizada en su siguiente actualización.
-
-### Notificaciones
-
-- **Las notificaciones sin leer vuelven a mostrarse con fondo blanco, barra azul y texto azul en la skin 2022.** En la campana, las notificaciones sin leer recuperan el estilo visual esperado.
+    - **Informes:** vuelve a ser posible generar informes de Crystal Reports con bases de datos que usan autenticación de Windows.
+    - **Seguridad de MCP:** la aplicación MCP incorpora una versión del SDK que incluye una corrección de seguridad.
+    - **Diseños de página en Linux y Docker:** vuelven a mostrarse las imágenes de cinco diseños.
+    - **Notificaciones en la skin 2022:** las notificaciones sin leer recuperan el fondo blanco, la barra azul y el texto azul.

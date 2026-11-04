@@ -1,51 +1,39 @@
 # Version 10.1
 
-The Updater prepares the next version overnight and records results; development tools are improved, with Lowdy rotation and menu node management.
+Flexygo 10.1 speeds up updates and improves design tools and navigation in the 2026 skin. It also adds adjustments to module layout and fixes issues with reports, security, images and notifications.
 
-## New features
+## Other new features
 
-### Development Tools
+### Installation and updates
 
-- **The Lowdy plugin lets you rotate the character to any angle.** Developers using the plugin can show it from the side when it opens. They can also change its orientation using the rotation function.
-- **In skin 2026, you can manage menu nodes by right-clicking.** The context menu lets you edit, add, configure the visibility of, or delete nodes. You can add them inside or below another node, and open the full menu manager from there. The welcome tour explains how to use these options.
+- **Docker updates:** a wizard guides the process and lets you review the result and any pending custom differences. [More information](../../1Deployment/3Updater/DockerUpdate.md)
+- **Version preparation:** the next version is prepared in the background overnight, and the description of the preload process is available in more languages. [More information](../../1Deployment/3Updater/UpdateFlow.md)
 
-### Updater
+### Skin and settings
 
-- **The overnight preparation gets the next version ready and records the result, including any errors or reasons why it did not run.** It runs at 1:00 and uses the project version, not the Updater version. It updates the Updater itself first; it does not run if another update is in progress or outside IIS. Check the scheduled tasks log to see which version it prepared or why it did not run.
+- **Panels in the 2022 skin:** the settings and health panels use a clear design that matches its colours. [More information](../../Help/Administration/ControlPanel.md)
+- **Development mode:** designers enter this mode when they sign in, without having to open it from the menu.
 
-## Improvements
+### Menu and navigation
 
-### Configuration
+- **Menu nodes:** in the 2026 skin, you can manage them with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
+- **Search and quick access:** in the 2026 skin, press / to search the visible list or Ctrl+K to open favourites, recent pages and shortcuts. [More information](../../Help/Administration/Skin2026.md)
 
-- **The 2022 skin displays the configuration and health panels with a clear design adapted to its colors.** Both panels appear in the control panel menu. Their flat, clear appearance follows the theme colors.
+### Design tools
 
-### Development Tools
+- **Lowdy:** the plugin lets you rotate the character to any angle.
+- **Tour editor:** keeps markers beside the selected item and makes it easier to identify modules and reorder steps.
 
-- **The tour editor keeps markers next to the selected item and makes it easier to identify modules and reorder steps.** Each module label shows its identifier, as when it is placed. When you move a step, a line indicates where it will be inserted.
-- **You can place modules by right-clicking or dragging them, and change the layout from a clearer toolbar.** When you drag a module, a line shows where it will be placed. Free layout works as a toggle, and when you turn it off, the previous layout is restored.
+### Modules and processes
 
-### Processes
-
-- **You can leave generic process buttons without an icon.** This way, the play icon is not displayed on these buttons.
-
-### Skins
-
-- **Designers enter Development Mode when they log in, without needing to open it from the menu.** The Development Mode option no longer appears in the skin2026 menu. The mode is automatically enabled for designers in every session.
-
-### Updater
-
-- **The description of the Updater preload is available in Catalan, German, Spanish, French, Italian, and Portuguese.** This allows people who consult the process to understand its purpose in any of those languages.
+- **Module placement:** add modules with the right mouse button or by dragging them, and change the layout from a clearer toolbar. [More information](../../Help/Modules/ModuleManagement.md)
+- **Process buttons:** you can leave generic buttons without an icon.
 
 ## Fixes
 
-### Interface
+??? note "See the fixes in this version"
 
-- **Images for five page designs are displayed again in Linux and Docker installations.** The corrected paths prevent images from failing on systems that distinguish between uppercase and lowercase letters. Existing databases receive the updated path in their next update.
-
-### Notifications
-
-- **Unread notifications are displayed again with a white background, blue bar, and blue text in the 2022 skin.** Unread notifications in the bell have regained their expected visual style.
-
-### Reports
-
-- **You can generate Crystal Reports reports on databases with Windows authentication.** Authentication also applies to subreports. If generation fails, the message includes the reason indicated by Crystal Reports.
+    - **Reports:** you can once again generate Crystal Reports reports with databases that use Windows authentication.
+    - **MCP security:** the MCP application now includes an SDK version with a security fix.
+    - **Page layouts on Linux and Docker:** images for five layouts are displayed again.
+    - **Notifications in the 2022 skin:** unread notifications once again have a white background, blue bar and blue text.
