@@ -124,6 +124,12 @@ La extensión **Flexygo Developer Tools** está disponible para VS Code y Visual
     2. La URL del feed (`.../v3/index.json`). Propone la última que se usó.
     3. La API key del feed. Se puede guardar para la próxima vez; se guarda cifrada en el almacén de credenciales del sistema operativo.
 
+    En este vídeo lo tienes paso a paso:
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/6Fk-ZF9THX4" title="Genera y publica los paquetes NuGet de tu producto Flexygo con un solo botón" frameborder="0" allowfullscreen></iframe>
+    </div>
+
     <figure markdown="span">
       ![URL del feed NuGet en el que publicar](../docs_assets/images/CoreProductDevelopment/vsCode/ext-publish-nugets-url.png)
       <figcaption>Segundo paso: el feed NuGet en el que se publican los paquetes</figcaption>

@@ -2,6 +2,12 @@
 
 Once the [prerequisites](./1Prerequisites.md) are met, the project already includes everything needed to work with the MCP server from **Claude Code**.
 
+This video shows the whole journey, from creating the product with the installer to building the application with `/flx-setup` and `/flx-build-product` (in Spanish):
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/wlQOwgZJAR4" title="Crea un producto Flexygo con tu asistente de IA y el servidor MCP" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## Opening the project in Claude Code

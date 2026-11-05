@@ -17,6 +17,12 @@ Si seleccionas **Personalizado**, deberás indicar el nombre del paquete NuGet y
 
 ![Configuración del paquete NuGet personalizado](../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionPersonalizada.png)
 
+En este vídeo tienes el modo **Personalizado** paso a paso:
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/oiaUIqf9PLc" title="Instala tu propio producto Flexygo desde sus paquetes NuGet" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## 2. Modo de instalación
