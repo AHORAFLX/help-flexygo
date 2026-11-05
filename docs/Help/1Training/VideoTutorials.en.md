@@ -1,6 +1,13 @@
 ## Flexygo 10
 
-Short videos for version 10: how to migrate, create, publish and install your products. The videos are in Spanish.
+Short videos for version 10: what's new in the version and how to migrate, create, publish and install your products. The videos are in Spanish.
+
+### What's new in Flexygo 10.0
+.NET 9, the Flexygo 2026 skin and the AI assistants, in one minute. The details are in the [version 10.0 notes](../../MoreInformation/2Versions/Version10_0.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/zkW9lwx7XXk" title="Flexygo 10.0 estrena .NET 9, la skin Flexygo 2026 y asistentes de IA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Migrating your application from .NET Framework to .NET 9
 Migrate an application deployed in IIS with the installer's **Migration** mode. More information in [Installer: Migration Mode](../../1Deployment/1Installer/Migration.md).

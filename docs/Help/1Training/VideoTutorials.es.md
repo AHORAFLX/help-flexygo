@@ -1,6 +1,13 @@
 ## Flexygo 10
 
-Vídeos cortos de la versión 10: cómo migrar, crear, publicar e instalar tus productos.
+Vídeos cortos de la versión 10: lo nuevo de la versión y cómo migrar, crear, publicar e instalar tus productos.
+
+### Novedades de Flexygo 10.0
+.NET 9, la skin Flexygo 2026 y los asistentes de IA, en un minuto. Tienes el detalle en las [notas de la versión 10.0](../../MoreInformation/2Versions/Version10_0.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/zkW9lwx7XXk" title="Flexygo 10.0 estrena .NET 9, la skin Flexygo 2026 y asistentes de IA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Migrar tu aplicación de .NET Framework a .NET 9
 Migra una aplicación desplegada en IIS con el modo **Migración** del instalador. Más información en [Instalador: Modo Migración](../../1Deployment/1Installer/Migration.md).
