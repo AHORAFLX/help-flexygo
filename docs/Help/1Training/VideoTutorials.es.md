@@ -1,3 +1,44 @@
+## Flexygo 10
+
+Vídeos cortos de la versión 10: lo nuevo de la versión y cómo migrar, crear, publicar e instalar tus productos.
+
+### Novedades de Flexygo 10.0
+.NET 9, la skin Flexygo 2026 y los asistentes de IA, en un minuto. Tienes el detalle en las [notas de la versión 10.0](../../MoreInformation/2Versions/Version10_0.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/zkW9lwx7XXk" title="Flexygo 10.0 estrena .NET 9, la skin Flexygo 2026 y asistentes de IA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Migrar tu aplicación de .NET Framework a .NET 9
+Migra una aplicación desplegada en IIS con el modo **Migración** del instalador. Más información en [Instalador: Modo Migración](../../1Deployment/1Installer/Migration.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/cClDqheVsCc" title="Cómo migrar tu aplicación Flexygo de .NET Framework a .NET 9" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Crear un producto con tu asistente de IA y el servidor MCP
+Crea el producto con el instalador y construye la aplicación con Claude Code y el servidor MCP de Flexygo. Más información en [Uso básico del servidor MCP](../../2ProductDevelopment/MCP/2Usage.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/wlQOwgZJAR4" title="Crea un producto Flexygo con tu asistente de IA y el servidor MCP" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Generar y publicar los NuGets de tu producto
+Genera los paquetes de tu producto y súbelos a tu servidor NuGet con un solo botón desde Visual Studio Code. Más información en [Extensiones IDE](../../2ProductDevelopment/5IDEExtensions.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/6Fk-ZF9THX4" title="Genera y publica los paquetes NuGet de tu producto Flexygo con un solo botón" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Instalar tu producto desde sus NuGets
+Instala tu propio producto con el modo **Personalizado** del instalador. Más información en [Instalador: Modo Despliegue](../../1Deployment/1Installer/Deployment.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/oiaUIqf9PLc" title="Instala tu propio producto Flexygo desde sus paquetes NuGet" frameborder="0" allowfullscreen></iframe>
+</div>
+
+**Autor:** Flexygo
+
 ## Tutorial Básico
 
 Aprende todos los conceptos básicos de Flexygo en solo unos pocos pasos. Aquí puedes encontrar todos los conceptos esenciales sobre el desarrollo de aplicaciones Flexygo,  

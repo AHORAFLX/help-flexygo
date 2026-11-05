@@ -1,3 +1,44 @@
+## Flexygo 10
+
+Short videos for version 10: what's new in the version and how to migrate, create, publish and install your products. The videos are in Spanish.
+
+### What's new in Flexygo 10.0
+.NET 9, the Flexygo 2026 skin and the AI assistants, in one minute. The details are in the [version 10.0 notes](../../MoreInformation/2Versions/Version10_0.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/zkW9lwx7XXk" title="Flexygo 10.0 estrena .NET 9, la skin Flexygo 2026 y asistentes de IA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Migrating your application from .NET Framework to .NET 9
+Migrate an application deployed in IIS with the installer's **Migration** mode. More information in [Installer: Migration Mode](../../1Deployment/1Installer/Migration.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/cClDqheVsCc" title="Cómo migrar tu aplicación Flexygo de .NET Framework a .NET 9" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Creating a product with your AI assistant and the MCP server
+Create the product with the installer and build the application with Claude Code and the Flexygo MCP server. More information in [Basic use of the MCP server](../../2ProductDevelopment/MCP/2Usage.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/wlQOwgZJAR4" title="Crea un producto Flexygo con tu asistente de IA y el servidor MCP" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Generating and publishing your product's NuGets
+Generate your product's packages and push them to your NuGet server with a single button from Visual Studio Code. More information in [IDE Extensions](../../2ProductDevelopment/5IDEExtensions.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/6Fk-ZF9THX4" title="Genera y publica los paquetes NuGet de tu producto Flexygo con un solo botón" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### Installing your product from its NuGets
+Install your own product with the installer's **Custom** mode. More information in [Installer: Deployment Mode](../../1Deployment/1Installer/Deployment.md).
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/oiaUIqf9PLc" title="Instala tu propio producto Flexygo desde sus paquetes NuGet" frameborder="0" allowfullscreen></iframe>
+</div>
+
+**Author:** Flexygo
+
 ## Basic Tutorial
 
 Learn all the flexygo basics in just a few steps. Here you can find all essencial concepts about developing flexygo application  
