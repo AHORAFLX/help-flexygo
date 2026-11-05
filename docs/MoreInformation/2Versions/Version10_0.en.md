@@ -152,6 +152,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **Deployment:** The container recognizes the configuration database even if the capitalization changes.
 - **Configuration:** The 2022 skin displays application settings and Salud y recursos in the control panel menu.
 - **Installation:** The installation wizard checks the SQL Server version and access, and identifies unsupported versions and connection errors.
+- **WebAPI Security:** You can request the WebAPI token using the email address, in addition to the username.
 
 ## Fixes
 

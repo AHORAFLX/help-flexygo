@@ -152,6 +152,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Despliegue:** El contenedor reconoce la base de datos de configuración aunque cambie el uso de mayúsculas.
 - **Configuración:** La skin 2022 muestra la configuración de la aplicación y Salud y recursos en el menú del panel de control.
 - **Instalación:** El asistente de instalación comprueba la versión y el acceso a SQL Server, e identifica las versiones no compatibles y los errores de conexión.
+- **Seguridad de la WebAPI:** Puedes solicitar el token de la WebAPI usando el correo electrónico, además del nombre de usuario.
 
 ## Correcciones
 
