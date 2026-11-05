@@ -17,6 +17,12 @@ If you select **Custom**, you must specify the NuGet package name and where to l
 
 ![Configuring the custom NuGet package](../../docs_assets/images/CoreDeployment/installer/Despliegue/instalacionPersonalizada.png)
 
+This video walks through the **Custom** mode step by step (in Spanish):
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/oiaUIqf9PLc" title="Instala tu propio producto Flexygo desde sus paquetes NuGet" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## 2. Installation mode

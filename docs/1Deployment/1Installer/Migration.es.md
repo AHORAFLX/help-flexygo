@@ -100,6 +100,12 @@ El modo **Migración** del instalador permite trasladar proyectos y aplicaciones
 
     Esta opción detecta las aplicaciones Flexygo de .NET Framework desplegadas en IIS y las migra a .NET Core en su lugar.
 
+    En este vídeo tienes la migración de una aplicación paso a paso:
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/cClDqheVsCc" title="Cómo migrar tu aplicación Flexygo de .NET Framework a .NET 9" frameborder="0" allowfullscreen></iframe>
+    </div>
+
     ### Aplicaciones encontradas
 
     El instalador lista las aplicaciones IIS de Flexygo Framework detectadas en el sistema.
