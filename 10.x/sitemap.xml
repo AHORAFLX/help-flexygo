@@ -1632,6 +1632,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/BufferSize/"/>
     </url>
     <url>
+        <loc>NoneMoreInformation/3DidYouKnow/BuildProductWithAI/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/BuildProductWithAI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/BuildProductWithAI/"/>
+    </url>
+    <url>
         <loc>NoneMoreInformation/3DidYouKnow/ChatterMentions/</loc>
         <lastmod>2026-11-05</lastmod>
         <changefreq>daily</changefreq>
@@ -1800,6 +1807,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/ImportRoleUserSecurity/"/>
     </url>
     <url>
+        <loc>NoneMoreInformation/3DidYouKnow/InstallOwnProduct/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/InstallOwnProduct/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/InstallOwnProduct/"/>
+    </url>
+    <url>
         <loc>NoneMoreInformation/3DidYouKnow/JSEventHandling/</loc>
         <lastmod>2026-11-05</lastmod>
         <changefreq>daily</changefreq>
@@ -1861,6 +1875,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/MenuSecurity/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/MenuSecurity/"/>
+    </url>
+    <url>
+        <loc>NoneMoreInformation/3DidYouKnow/MigrateApplicationInstaller/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/MigrateApplicationInstaller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/MigrateApplicationInstaller/"/>
     </url>
     <url>
         <loc>NoneMoreInformation/3DidYouKnow/MultipleDatabases/</loc>
@@ -1952,6 +1973,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/PublishDatabaseDoubleClick/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/PublishDatabaseDoubleClick/"/>
+    </url>
+    <url>
+        <loc>NoneMoreInformation/3DidYouKnow/PublishNugetsOneClick/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/PublishNugetsOneClick/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/PublishNugetsOneClick/"/>
     </url>
     <url>
         <loc>NoneMoreInformation/3DidYouKnow/QRCodeGeneration/</loc>
@@ -3781,6 +3809,13 @@
         <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/BufferSize/"/>
     </url>
     <url>
+        <loc>Noneen/MoreInformation/3DidYouKnow/BuildProductWithAI/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/BuildProductWithAI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/BuildProductWithAI/"/>
+    </url>
+    <url>
         <loc>Noneen/MoreInformation/3DidYouKnow/ChatterMentions/</loc>
         <lastmod>2026-11-05</lastmod>
         <changefreq>daily</changefreq>
@@ -3949,6 +3984,13 @@
         <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/ImportRoleUserSecurity/"/>
     </url>
     <url>
+        <loc>Noneen/MoreInformation/3DidYouKnow/InstallOwnProduct/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/InstallOwnProduct/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/InstallOwnProduct/"/>
+    </url>
+    <url>
         <loc>Noneen/MoreInformation/3DidYouKnow/JSEventHandling/</loc>
         <lastmod>2026-11-05</lastmod>
         <changefreq>daily</changefreq>
@@ -4010,6 +4052,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/MenuSecurity/"/>
         <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/MenuSecurity/"/>
+    </url>
+    <url>
+        <loc>Noneen/MoreInformation/3DidYouKnow/MigrateApplicationInstaller/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/MigrateApplicationInstaller/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/MigrateApplicationInstaller/"/>
     </url>
     <url>
         <loc>Noneen/MoreInformation/3DidYouKnow/MultipleDatabases/</loc>
@@ -4101,6 +4150,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/PublishDatabaseDoubleClick/"/>
         <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/PublishDatabaseDoubleClick/"/>
+    </url>
+    <url>
+        <loc>Noneen/MoreInformation/3DidYouKnow/PublishNugetsOneClick/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/MoreInformation/3DidYouKnow/PublishNugetsOneClick/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneMoreInformation/3DidYouKnow/PublishNugetsOneClick/"/>
     </url>
     <url>
         <loc>Noneen/MoreInformation/3DidYouKnow/QRCodeGeneration/</loc>
