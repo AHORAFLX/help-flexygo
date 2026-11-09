@@ -172,4 +172,4 @@ flexygo-product addon  --help
 ---
 
 !!! tip "Convención de nombres NuGet"
-    Para que el instalador detecte correctamente los paquetes de tu producto deben seguir la convención de nombres estándar. Consulta la sección [Convención de nombres NuGet](./2Template.md#convencion-de-nombres-nuget) en la guía de creación de producto.
+    Para que el instalador detecte correctamente los paquetes de tu producto deben seguir la convención de nombres estándar. Consulta la sección [Convención de nombres NuGet](./2Template.md#convencion-de-nombres-nuget) en la guía de creación de producto. Para que las instalaciones se actualicen con tus paquetes, configura también [el namespace y el feed de tu producto](./2Template.md#el-namespace-y-el-feed-de-tu-producto) (`AutoUpdatePackageNamespace` y `AutoUpdateURL`).

@@ -73,7 +73,7 @@ El modo **Migración** del instalador permite trasladar proyectos y aplicaciones
 
         - Abre el proyecto `Conf.Database` y revisa el fichero de configuración y la integridad del script **postdeploy** migrado.
         - Revisa también los scripts de **staticdata** para asegurarte de que se han migrado correctamente y no contienen referencias obsoletas.
-        - Verifica también el fichero **config.sql** y comprueba su integridad. El migrador reemplaza automáticamente `AutoUpdatePackageId` por `AutoUpdatePackageNamespace` en este fichero, pero si tienes este valor configurado en algún otro script deberás reemplazarlo manualmente.
+        - Verifica también el fichero **config.sql** y comprueba su integridad. El migrador reemplaza automáticamente `AutoUpdatePackageId` por `AutoUpdatePackageNamespace` en este fichero, pero si tienes este valor configurado en algún otro script deberás reemplazarlo manualmente. Comprueba además que `AutoUpdatePackageNamespace` tiene el namespace de tus NuGets y `AutoUpdateURL` tu feed o carpeta de paquetes; si no, las instalaciones buscarán las actualizaciones en el feed de Flexygo ([El namespace y el feed de tu producto](../../2ProductDevelopment/2Template.md#el-namespace-y-el-feed-de-tu-producto)).
 
         **Carpetas de artefactos antiguos**
 

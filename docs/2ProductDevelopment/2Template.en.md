@@ -77,6 +77,28 @@ For the installer to correctly detect your product's packages, they must follow 
 
 With this convention, the installer detects them automatically. If several versions are available, it will show a dropdown list to choose which version to install.
 
+### Your product's namespace and feed
+
+If your product has its own NuGets, installations only update to your versions when two settings (group `flx-version`) point to them:
+
+| Setting | What it holds | Value in your product |
+|---------|---------------|-----------------------|
+| `AutoUpdatePackageNamespace` | The namespace of your packages. The updater adds the package type to form each name: `{Namespace}.Frontend`, `{Namespace}.Backend`, `{Namespace}.Conf.Database`… | The `{Name}` of the table above. For example, `CRMCore` for `CRMCore.Conf.Database`. |
+| `AutoUpdateURL` | Where the packages come from. | Your feed's URL (`https://.../v3/index.json`), whether a public or private NuGet server, or the path of a folder with the `.nupkg` files (local or on the network, such as `\\server\nugets`). |
+
+Set them in the `scripts/config.sql` file of the `{Name}.Conf.Database` project, which runs every time the configuration database is published:
+
+```sql
+Update Settings set SettingValue='MyProduct' where SettingName='AutoUpdatePackageNamespace'
+Update Settings set SettingValue='https://my-server/v3/index.json' where SettingName='AutoUpdateURL'
+```
+
+The template already sets the namespace to the product name, but the `AutoUpdateURL` line is commented out and holds the Flexygo feed (`https://nuget.ahorabh.com/v3/index.json`), which doesn't have your packages: uncomment it and set your feed.
+
+!!! tip "Feed with credentials and configuration wizard"
+    - If the feed asks for a user and password, they go in the `AutoUpdateNugetUser` and `AutoUpdateNugetPassword` settings. Don't put them in `config.sql`, which travels with the repository and the packages: set them in each installation.
+    - The [Configuration wizard](../1Deployment/2ConfigWizard/Configuration.md) saves in `AutoUpdateURL` the feed of the `DatabaseNuget` section (`NugetUrl`) of the Backend's `appsettings.json`. Set your feed there too, so that a new installation doesn't go back to the Flexygo one.
+
 ---
 
 ## 4. Steps to start developing

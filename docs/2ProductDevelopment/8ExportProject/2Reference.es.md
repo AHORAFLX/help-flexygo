@@ -177,7 +177,8 @@ Las DLL de un **addon** (`~/custom/<addon>/`) no son del proyecto: se listan y n
 1. Descomprimirlo y abrir la solución con Visual Studio (o `dotnet build`).
 2. Publicar las bases desde sus proyectos `.sqlproj` ([instalación en desarrollo](../../1Deployment/1Installer/Development.md)).
 3. Configurar `appsettings.json` del Backend: la plantilla lo deja con las cadenas de conexión vacías y el `PackageId` del producto.
-4. Subirlo a un repositorio y seguir con la [gestión de producto](../3ProductManagement.md) y la [integración continua](../../3CICD/1Overview.md).
+4. Si vas a publicar los NuGets del producto, apuntar las instalaciones a ellos: en `scripts/config.sql` de `Conf.Database`, `AutoUpdatePackageNamespace` (la plantilla ya pone el **Product name**) y `AutoUpdateURL`, con tu feed o una carpeta de paquetes. Los ajustes del actualizador no viajan desde la aplicación (ver 9). Detalle en [El namespace y el feed de tu producto](../2Template.md#el-namespace-y-el-feed-de-tu-producto).
+5. Subirlo a un repositorio y seguir con la [gestión de producto](../3ProductManagement.md) y la [integración continua](../../3CICD/1Overview.md).
 
 !!! warning "La versión de la plantilla y la del core tienen que casar"
     El proyecto referencia los paquetes `Flexygo.*` de la versión de la plantilla que se instaló (la de la aplicación). Si la aplicación va por delante de cualquier paquete publicado —solo pasa en un entorno de desarrollo del core—, la base de configuración exportada no publicará hasta que exista el paquete de esa versión.
