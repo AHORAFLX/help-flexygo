@@ -30,7 +30,7 @@ Cada tarjeta dice su dato y, al pie, los enlaces a lo que hay detrás.
 | **Modules not placed** | Módulos que no están en ninguna página, de cuántos hay, con su barra, y las páginas sin módulos | Modules, Empty pages |
 | **Version** | La versión instalada y, si la hay, la nueva disponible | What is new, Update |
 | **Licence** | El estado de la licencia, su tipo, los usuarios y la caducidad | Licence |
-| **Health** | El peor estado del [panel de salud](HealthPanel.md) (alarma, aviso o correcto), cuántas notas tiene el panel, la memoria libre, el disco más lleno y cómo está SQL Server | Health and resources |
+| **Health** | El peor estado del [panel de la aplicación](HealthPanel.md) (alarma, aviso o correcto), cuántas notas tiene el panel, la memoria libre, el disco más lleno y cómo está SQL Server | Health and resources |
 | **Origin** | El origen activo y cuántos objetos, páginas, módulos y procesos tiene, cada cifra con su enlace | Change origin, Generate scripts |
 | **Latest logins** | Los cinco últimos inicios de sesión: quién, cuándo, desde dónde y con qué navegador | See all |
 | **Activity** | Acciones y errores de cada día de las dos últimas semanas, en una gráfica | |

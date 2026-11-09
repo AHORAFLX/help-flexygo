@@ -30,7 +30,7 @@ Each card gives its figure and, at the bottom, the links to what lies behind it.
 | **Modules not placed** | Modules not on any page, out of how many there are, with their bar, and pages without modules | Modules, Empty pages |
 | **Version** | The installed version and, if there is one, the new version available | What is new, Update |
 | **Licence** | The licence status, its type, the users and the expiry date | Licence |
-| **Health** | The worst state of the [health panel](HealthPanel.md) (alarm, warning or correct), how many notes the panel has, free memory, the fullest disk and how SQL Server is doing | Health and resources |
+| **Health** | The worst state of the [application panel](HealthPanel.md) (alarm, warning or correct), how many notes the panel has, free memory, the fullest disk and how SQL Server is doing | Health and resources |
 | **Origin** | The active origin and how many objects, pages, modules and processes it has, each figure with its link | Change origin, Generate scripts |
 | **Latest logins** | The last five logins: who, when, from where and with which browser | See all |
 | **Activity** | Actions and errors for each day of the last two weeks, in a chart | |
