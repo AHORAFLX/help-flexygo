@@ -172,4 +172,4 @@ Useful if you integrate the tool into a CI *pipeline*:
 ---
 
 !!! tip "NuGet naming convention"
-    For the installer to correctly detect your product's packages they must follow the standard naming convention. See the [NuGet naming convention](./2Template.md#nuget-naming-convention) section in the product creation guide.
+    For the installer to correctly detect your product's packages they must follow the standard naming convention. See the [NuGet naming convention](./2Template.md#nuget-naming-convention) section in the product creation guide. For installations to update with your packages, also set [your product's namespace and feed](./2Template.md#your-products-namespace-and-feed) (`AutoUpdatePackageNamespace` and `AutoUpdateURL`).
