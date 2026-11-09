@@ -177,7 +177,8 @@ The DLLs of an **addon** (`~/custom/<addon>/`) do not belong to the project: the
 1. Unzip it and open the solution with Visual Studio (or `dotnet build`).
 2. Publish the databases from their `.sqlproj` projects ([development installation](../../1Deployment/1Installer/Development.md)).
 3. Configure the Backend's `appsettings.json`: the template leaves it with empty connection strings and the product's `PackageId`.
-4. Push it to a repository and continue with [product management](../3ProductManagement.md) and [continuous integration](../../3CICD/1Overview.md).
+4. If you are going to publish the product's NuGets, point the installations to them: in `scripts/config.sql` of `Conf.Database`, `AutoUpdatePackageNamespace` (the template already sets the **Product name**) and `AutoUpdateURL`, with your feed or a folder of packages. The updater settings don't travel from the application (see 9). Details in [Your product's namespace and feed](../2Template.md#your-products-namespace-and-feed).
+5. Push it to a repository and continue with [product management](../3ProductManagement.md) and [continuous integration](../../3CICD/1Overview.md).
 
 !!! warning "The template version and the core version must match"
     The project references the `Flexygo.*` packages of the version of the template that was installed (the application's). If the application is ahead of any published package —which only happens in a core development environment—, the exported configuration database will not publish until the package for that version exists.
