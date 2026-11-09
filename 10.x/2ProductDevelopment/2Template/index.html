@@ -1228,6 +1228,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#el-namespace-y-el-feed-de-tu-producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      El namespace y el feed de tu producto
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9902,6 +9911,41 @@
 </tbody>
 </table>
 <p>Con esta convención el instalador los detecta automáticamente. Si hay varias versiones disponibles, mostrará una lista desplegable para elegir la versión a instalar.</p>
+<h3 id="el-namespace-y-el-feed-de-tu-producto">El namespace y el feed de tu producto<a class="headerlink" href="#el-namespace-y-el-feed-de-tu-producto" title="Permanent link">¶</a></h3>
+<p>Si tu producto tiene sus propios NuGets, las instalaciones solo se actualizarán a tus versiones si dos ajustes (grupo <code>flx-version</code>) apuntan a ellos:</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué guarda</th>
+<th>Valor en tu producto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AutoUpdatePackageNamespace</code></td>
+<td>El namespace de tus paquetes. El actualizador le añade el tipo de paquete para formar cada nombre: <code>{Namespace}.Frontend</code>, <code>{Namespace}.Backend</code>, <code>{Namespace}.Conf.Database</code>…</td>
+<td>El <code>{Nombre}</code> de la tabla anterior. Por ejemplo, <code>CRMCore</code> para <code>CRMCore.Conf.Database</code>.</td>
+</tr>
+<tr>
+<td><code>AutoUpdateURL</code></td>
+<td>El origen de los paquetes.</td>
+<td>La URL de tu feed (<code>https://.../v3/index.json</code>), sea un servidor NuGet público o privado, o la ruta de una carpeta con los <code>.nupkg</code> (local o de red, como <code>\\servidor\nugets</code>).</td>
+</tr>
+</tbody>
+</table>
+<p>Ponlos en el fichero <code>scripts/config.sql</code> del proyecto <code>{Nombre}.Conf.Database</code>, que se ejecuta en cada publicación de la base de configuración:</p>
+<div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">Update</span><span class="w"> </span><span class="n">Settings</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">SettingValue</span><span class="o">=</span><span class="s1">'MiProducto'</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SettingName</span><span class="o">=</span><span class="s1">'AutoUpdatePackageNamespace'</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">Update</span><span class="w"> </span><span class="n">Settings</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">SettingValue</span><span class="o">=</span><span class="s1">'https://mi-servidor/v3/index.json'</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SettingName</span><span class="o">=</span><span class="s1">'AutoUpdateURL'</span>
+</span></code></pre></div>
+<p>La plantilla ya deja el namespace con el nombre del producto, pero la línea de <code>AutoUpdateURL</code> está comentada y con el feed de Flexygo (<code>https://nuget.ahorabh.com/v3/index.json</code>), que no tiene tus paquetes: descoméntala y pon tu feed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Feed con credenciales y asistente de configuración</p>
+<ul>
+<li>Si el feed pide usuario y contraseña, van en los ajustes <code>AutoUpdateNugetUser</code> y <code>AutoUpdateNugetPassword</code>. No los pongas en <code>config.sql</code>, que viaja con el repositorio y los paquetes: configúralos en cada instalación.</li>
+<li>El <a href="../../1Deployment/2ConfigWizard/Configuration/">Asistente de configuración</a> guarda en <code>AutoUpdateURL</code> el feed de la sección <code>DatabaseNuget</code> (<code>NugetUrl</code>) del <code>appsettings.json</code> del Backend. Pon también ahí tu feed para que una instalación nueva no vuelva al de Flexygo.</li>
+</ul>
+</div>
 <hr>
 <h2 id="4-pasos-para-comenzar-a-desarrollar">4. Pasos para comenzar a desarrollar<a class="headerlink" href="#4-pasos-para-comenzar-a-desarrollar" title="Permanent link">¶</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">VS Code <em>(recomendado)</em></label><label for="__tabbed_1_2">Visual Studio 2022</label></div>
@@ -10058,6 +10102,15 @@
   <a href="#convencion-de-nombres-nuget" class="md-nav__link">
     <span class="md-ellipsis">
       Convención de nombres NuGet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-namespace-y-el-feed-de-tu-producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      El namespace y el feed de tu producto
     </span>
   </a>
   

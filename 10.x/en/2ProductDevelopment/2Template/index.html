@@ -1228,6 +1228,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#your-products-namespace-and-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your product's namespace and feed
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9902,6 +9911,41 @@
 </tbody>
 </table>
 <p>With this convention, the installer detects them automatically. If several versions are available, it will show a dropdown list to choose which version to install.</p>
+<h3 id="your-products-namespace-and-feed">Your product's namespace and feed<a class="headerlink" href="#your-products-namespace-and-feed" title="Permanent link">¶</a></h3>
+<p>If your product has its own NuGets, installations only update to your versions when two settings (group <code>flx-version</code>) point to them:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it holds</th>
+<th>Value in your product</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AutoUpdatePackageNamespace</code></td>
+<td>The namespace of your packages. The updater adds the package type to form each name: <code>{Namespace}.Frontend</code>, <code>{Namespace}.Backend</code>, <code>{Namespace}.Conf.Database</code>…</td>
+<td>The <code>{Name}</code> of the table above. For example, <code>CRMCore</code> for <code>CRMCore.Conf.Database</code>.</td>
+</tr>
+<tr>
+<td><code>AutoUpdateURL</code></td>
+<td>Where the packages come from.</td>
+<td>Your feed's URL (<code>https://.../v3/index.json</code>), whether a public or private NuGet server, or the path of a folder with the <code>.nupkg</code> files (local or on the network, such as <code>\\server\nugets</code>).</td>
+</tr>
+</tbody>
+</table>
+<p>Set them in the <code>scripts/config.sql</code> file of the <code>{Name}.Conf.Database</code> project, which runs every time the configuration database is published:</p>
+<div class="language-sql highlight"><span class="filename">SQL</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">Update</span><span class="w"> </span><span class="n">Settings</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">SettingValue</span><span class="o">=</span><span class="s1">'MyProduct'</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SettingName</span><span class="o">=</span><span class="s1">'AutoUpdatePackageNamespace'</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">Update</span><span class="w"> </span><span class="n">Settings</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">SettingValue</span><span class="o">=</span><span class="s1">'https://my-server/v3/index.json'</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">SettingName</span><span class="o">=</span><span class="s1">'AutoUpdateURL'</span>
+</span></code></pre></div>
+<p>The template already sets the namespace to the product name, but the <code>AutoUpdateURL</code> line is commented out and holds the Flexygo feed (<code>https://nuget.ahorabh.com/v3/index.json</code>), which doesn't have your packages: uncomment it and set your feed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Feed with credentials and configuration wizard</p>
+<ul>
+<li>If the feed asks for a user and password, they go in the <code>AutoUpdateNugetUser</code> and <code>AutoUpdateNugetPassword</code> settings. Don't put them in <code>config.sql</code>, which travels with the repository and the packages: set them in each installation.</li>
+<li>The <a href="../../1Deployment/2ConfigWizard/Configuration/">Configuration wizard</a> saves in <code>AutoUpdateURL</code> the feed of the <code>DatabaseNuget</code> section (<code>NugetUrl</code>) of the Backend's <code>appsettings.json</code>. Set your feed there too, so that a new installation doesn't go back to the Flexygo one.</li>
+</ul>
+</div>
 <hr>
 <h2 id="4-steps-to-start-developing">4. Steps to start developing<a class="headerlink" href="#4-steps-to-start-developing" title="Permanent link">¶</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">VS Code <em>(recommended)</em></label><label for="__tabbed_1_2">Visual Studio 2022</label></div>
@@ -10058,6 +10102,15 @@
   <a href="#nuget-naming-convention" class="md-nav__link">
     <span class="md-ellipsis">
       NuGet naming convention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-products-namespace-and-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your product's namespace and feed
     </span>
   </a>
   

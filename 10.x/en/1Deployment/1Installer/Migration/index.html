@@ -9894,7 +9894,7 @@
 <ul>
 <li>Open the <code>Conf.Database</code> project and review the configuration file and the integrity of the migrated <strong>postdeploy</strong> script.</li>
 <li>Also review the <strong>staticdata</strong> scripts to make sure they were migrated correctly and don't contain obsolete references.</li>
-<li>Also check the <strong>config.sql</strong> file and verify its integrity. The migrator automatically replaces <code>AutoUpdatePackageId</code> with <code>AutoUpdatePackageNamespace</code> in this file, but if you have this value configured in any other script you'll need to replace it manually.</li>
+<li>Also check the <strong>config.sql</strong> file and verify its integrity. The migrator automatically replaces <code>AutoUpdatePackageId</code> with <code>AutoUpdatePackageNamespace</code> in this file, but if you have this value configured in any other script you'll need to replace it manually. Also check that <code>AutoUpdatePackageNamespace</code> holds the namespace of your NuGets and <code>AutoUpdateURL</code> your feed or package folder; otherwise the installations will look for updates in the Flexygo feed (<a href="../../../2ProductDevelopment/2Template/#your-products-namespace-and-feed">Your product's namespace and feed</a>).</li>
 </ul>
 <p><strong>Old artifact folders</strong></p>
 <p>Manually delete the <code>Properties</code>, <code>obj</code>, and <code>debug</code> folders that may remain from the previous solution in the <strong>Frontend</strong>, <strong>Backend</strong>, and <strong>Processes</strong> (if it exists) projects. These folders can contain .NET Framework assemblies that are incompatible with the new solution. They will be regenerated correctly when building.</p>

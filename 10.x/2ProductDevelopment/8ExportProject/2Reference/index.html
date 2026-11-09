@@ -10078,6 +10078,7 @@
 <li>Descomprimirlo y abrir la solución con Visual Studio (o <code>dotnet build</code>).</li>
 <li>Publicar las bases desde sus proyectos <code>.sqlproj</code> (<a href="../../../1Deployment/1Installer/Development/">instalación en desarrollo</a>).</li>
 <li>Configurar <code>appsettings.json</code> del Backend: la plantilla lo deja con las cadenas de conexión vacías y el <code>PackageId</code> del producto.</li>
+<li>Si vas a publicar los NuGets del producto, apuntar las instalaciones a ellos: en <code>scripts/config.sql</code> de <code>Conf.Database</code>, <code>AutoUpdatePackageNamespace</code> (la plantilla ya pone el <strong>Product name</strong>) y <code>AutoUpdateURL</code>, con tu feed o una carpeta de paquetes. Los ajustes del actualizador no viajan desde la aplicación (ver 9). Detalle en <a href="../../2Template/#el-namespace-y-el-feed-de-tu-producto">El namespace y el feed de tu producto</a>.</li>
 <li>Subirlo a un repositorio y seguir con la <a href="../../3ProductManagement/">gestión de producto</a> y la <a href="../../../3CICD/1Overview/">integración continua</a>.</li>
 </ol>
 <div class="admonition warning">

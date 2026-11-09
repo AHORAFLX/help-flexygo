@@ -10078,6 +10078,7 @@
 <li>Unzip it and open the solution with Visual Studio (or <code>dotnet build</code>).</li>
 <li>Publish the databases from their <code>.sqlproj</code> projects (<a href="../../../1Deployment/1Installer/Development/">development installation</a>).</li>
 <li>Configure the Backend's <code>appsettings.json</code>: the template leaves it with empty connection strings and the product's <code>PackageId</code>.</li>
+<li>If you are going to publish the product's NuGets, point the installations to them: in <code>scripts/config.sql</code> of <code>Conf.Database</code>, <code>AutoUpdatePackageNamespace</code> (the template already sets the <strong>Product name</strong>) and <code>AutoUpdateURL</code>, with your feed or a folder of packages. The updater settings don't travel from the application (see 9). Details in <a href="../../2Template/#your-products-namespace-and-feed">Your product's namespace and feed</a>.</li>
 <li>Push it to a repository and continue with <a href="../../3ProductManagement/">product management</a> and <a href="../../../3CICD/1Overview/">continuous integration</a>.</li>
 </ol>
 <div class="admonition warning">
