@@ -34,6 +34,11 @@ The **How the panel works** button, on the **Overview** tab, opens the panel's h
 
 Every figure says where it comes from. When a permission is missing, the panel says which one instead of guessing or showing a zero.
 
+<figure markdown="span">
+  ![The Overview tab: open alarms and warnings, people online, recommendations and version](../../docs_assets/images/HealthPanel/resumen.png)
+  <figcaption>The Overview tab: open alarms and warnings, people online, recommendations and version</figcaption>
+</figure>
+
 ---
 
 ## 3. Health
@@ -83,6 +88,11 @@ What the Backend spends its time on, measured by itself: requests, median and 95
 
 One row per minute is kept for 2 days and one per hour for 35 days. Only the Backend is measured. The **HealthMetricsEnabled** setting (**flx-telemetry** group) turns it off within 30 seconds, without a restart.
 
+<figure markdown="span">
+  ![Metrics over the last 24 hours: requests, times, time in SQL and what is slower than the week before](../../docs_assets/images/HealthPanel/metricas.png)
+  <figcaption>Metrics over the last 24 hours: requests, times, time in SQL and what is slower than the week before</figcaption>
+</figure>
+
 ---
 
 ## 6. Investigate
@@ -95,6 +105,11 @@ To find out why something is slow or keeps waiting. You choose the period: the l
 - **The slowest queries** according to Query Store, in each database where it is on.
 - **Missing indexes** (below).
 - **Changes from this panel**: every recommendation run and every index created or dropped, written down before it runs, with who, when, where, the script and the result.
+
+<figure markdown="span">
+  ![Investigate: how many blockings, deadlocks, slow queries, missing indexes and changes there are, each with its own section](../../docs_assets/images/HealthPanel/investigar.png)
+  <figcaption>Investigate: how many blockings, deadlocks, slow queries, missing indexes and changes there are, each with its own section</figcaption>
+</figure>
 
 ### Missing indexes
 
@@ -112,6 +127,11 @@ The people online now, **one row per person** and not per tab: their role, the p
 
 A person is **idle** when they have not opened any page in 15 minutes. Only page names are counted, never the data of a record. The list lives in the Frontend's memory: it counts from when the Frontend started.
 
+<figure markdown="span">
+  ![Live users with one person opened: the pages they opened today](../../docs_assets/images/HealthPanel/usuarios.png)
+  <figcaption>Live users with one person opened: the pages they opened today</figcaption>
+</figure>
+
 ---
 
 ## 8. Configuration
@@ -119,6 +139,11 @@ A person is **idle** when they have not opened any page in 15 minutes. Only page
 The configuration of both processes, in two tabs: **Backend** and **Frontend**. Each block —network, logging, mail, scheduled jobs, each database connection— shows its values, and what may be changed from here has its **Edit** button. The connection to the configuration database is read-only. Passwords are never shown: only whether they are configured.
 
 **Check now** checks at once that what is configured answers, and while editing a block **Verify** tests it before saving. Saved changes that only take effect after restarting the process are marked **pending restart**: **Restart now** restarts it when the application is hosted in IIS; otherwise, restart it from Docker or from the service that runs it.
+
+<figure markdown="span">
+  ![The Backend Configuration: each block with its values and its Edit button](../../docs_assets/images/HealthPanel/configuracion.png)
+  <figcaption>The Backend Configuration: each block with its values and its Edit button</figcaption>
+</figure>
 
 ---
 
@@ -130,6 +155,11 @@ What is needed to size the server:
 - **The data**: the size and monthly growth of each database, and the SQL Server Express limit if that is the installed edition.
 - **The load**: the load measured now by **Metrics**, and a linear estimate for the number of people expected to use it.
 - **This server**: its processors and its memory.
+
+<figure markdown="span">
+  ![Resource calculator: what the application is and this server](../../docs_assets/images/HealthPanel/calculadora.png)
+  <figcaption>Resource calculator: what the application is and this server</figcaption>
+</figure>
 
 The hardware recommendation is pending a load test and gives no figures yet.
 

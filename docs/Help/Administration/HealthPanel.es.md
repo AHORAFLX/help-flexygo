@@ -34,6 +34,11 @@ El botón **How the panel works**, en la pestaña **Overview**, abre la ayuda de
 
 Cada cifra dice de dónde sale. Cuando falta un permiso, el panel dice cuál en lugar de suponer o poner un cero.
 
+<figure markdown="span">
+  ![La pestaña Overview: alarmas y avisos abiertos, personas conectadas, recomendaciones y versión](../../docs_assets/images/HealthPanel/resumen.png)
+  <figcaption>La pestaña Overview: alarmas y avisos abiertos, personas conectadas, recomendaciones y versión</figcaption>
+</figure>
+
 ---
 
 ## 3. Health
@@ -83,6 +88,11 @@ En qué gasta el tiempo el Backend, medido por él mismo: peticiones, mediana y 
 
 Se guarda una fila por minuto durante 2 días y una por hora durante 35 días. Solo se mide el Backend. El ajuste **HealthMetricsEnabled** (grupo **flx-telemetry**) lo apaga en 30 segundos como mucho, sin reiniciar.
 
+<figure markdown="span">
+  ![Metrics en las últimas 24 horas: peticiones, tiempos, tiempo en SQL y lo que va más lento que la semana anterior](../../docs_assets/images/HealthPanel/metricas.png)
+  <figcaption>Metrics en las últimas 24 horas: peticiones, tiempos, tiempo en SQL y lo que va más lento que la semana anterior</figcaption>
+</figure>
+
 ---
 
 ## 6. Investigate
@@ -95,6 +105,11 @@ Para buscar por qué algo va lento o se queda esperando. Se elige el periodo: la
 - **Las consultas más lentas** según Query Store, en cada base que lo tenga activado.
 - **Los índices que faltan** (abajo).
 - **Changes from this panel**: cada recomendación ejecutada y cada índice creado o quitado, apuntado antes de ejecutarse, con quién, cuándo, dónde, el guion y el resultado.
+
+<figure markdown="span">
+  ![Investigate: cuántos bloqueos, interbloqueos, consultas lentas, índices que faltan y cambios hay, cada uno con su apartado](../../docs_assets/images/HealthPanel/investigar.png)
+  <figcaption>Investigate: cuántos bloqueos, interbloqueos, consultas lentas, índices que faltan y cambios hay, cada uno con su apartado</figcaption>
+</figure>
 
 ### Los índices que faltan
 
@@ -112,6 +127,11 @@ Las personas conectadas ahora, **una fila por persona** y no por pestaña: su ro
 
 Una persona está **inactiva** cuando no ha abierto ninguna página en 15 minutos. Solo se cuentan nombres de páginas, nunca los datos de un registro. La lista vive en la memoria del Frontend: cuenta desde que arrancó.
 
+<figure markdown="span">
+  ![Live users con una persona abierta: las páginas que ha abierto hoy](../../docs_assets/images/HealthPanel/usuarios.png)
+  <figcaption>Live users con una persona abierta: las páginas que ha abierto hoy</figcaption>
+</figure>
+
 ---
 
 ## 8. Configuration
@@ -119,6 +139,11 @@ Una persona está **inactiva** cuando no ha abierto ninguna página en 15 minuto
 La configuración de los dos procesos, en dos pestañas: **Backend** y **Frontend**. Cada bloque —red, registro, correo, trabajos programados, cada conexión a base de datos— enseña sus valores, y lo que se puede cambiar desde aquí tiene su botón **Edit**. La conexión a la base de configuración es de solo lectura. Las contraseñas no se enseñan nunca: solo si están configuradas.
 
 **Check now** comprueba en el momento que lo configurado responde, y al editar un bloque **Verify** lo prueba antes de guardar. Los cambios guardados que solo valen tras reiniciar el proceso quedan marcados como **pending restart**: **Restart now** lo reinicia cuando la aplicación está alojada en IIS; si no, se reinicia desde Docker o desde el servicio que la ejecuta.
+
+<figure markdown="span">
+  ![Configuration del Backend: cada bloque con sus valores y su botón Edit](../../docs_assets/images/HealthPanel/configuracion.png)
+  <figcaption>Configuration del Backend: cada bloque con sus valores y su botón Edit</figcaption>
+</figure>
 
 ---
 
@@ -130,6 +155,11 @@ Lo que hace falta para dimensionar el servidor:
 - **Los datos**: el tamaño y el crecimiento mensual de cada base, y el límite de SQL Server Express si es la edición instalada.
 - **La carga**: la medida ahora por **Metrics**, y una estimación lineal para las personas que se espera que la usen.
 - **Este servidor**: sus procesadores y su memoria.
+
+<figure markdown="span">
+  ![Resource calculator: qué es la aplicación y este servidor](../../docs_assets/images/HealthPanel/calculadora.png)
+  <figcaption>Resource calculator: qué es la aplicación y este servidor</figcaption>
+</figure>
 
 La recomendación de hardware está pendiente de una prueba de carga y todavía no da cifras.
 
