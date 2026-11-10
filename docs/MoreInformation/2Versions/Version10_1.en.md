@@ -1,56 +1,60 @@
 # Version 10.1
 
-Flexygo 10.1 improves navigation in skin 2026 and streamlines updates and deployment. It also adds refinements for application designers and developers, along with fixes to the interface, reports and scheduled tasks.
+Flexygo 10.1 makes updates easier to manage and adds new shortcuts for navigating the 2026 skin. It also improves working with Docker, configuration, and several development tools.
 
 ## Highlights
 
-### Search and shortcuts in skin 2026
+### Scheduled updates
 
-In skin 2026, press / to search the visible list and Ctrl+K to view your favourites and recent pages. From there, you can pin pages and open them with the arrow keys and Enter, as well as check the shortcuts. Press ? to view them when you are not typing.
+Schedule, change, or cancel an update and let it run in the background. Before confirming, review the action and a preview of maintenance mode. You’ll receive notifications during the process, and maintenance mode will turn off automatically when the update is complete.
 
-[More information: skin 2026 interface](../../Help/Administration/Skin2026.md)
+[More information: Flexygo updater](../../1Deployment/3Updater/UpdateFlow.md)
+
+### 2026 skin shortcuts
+
+Press / to search the visible list, or Ctrl+K to open favorites and recent pages, pin pages, and see available shortcuts. Press ? to view shortcuts when you’re not typing. These changes are exclusive to the 2026 skin; the 2022 skin is unchanged.
+
+[More information: skin updates](../../Help/Administration/Skin2026.md)
 
 ## Other new features
 
-### Updater
+### Updates
 
-- **Updater updates:** it can update itself and complete delegated preparations and updates without the general timeout limit. [More information](../../1Deployment/3Updater/UpdateFlow.md)
-- **Overnight preparation:** gets the next project version ready in the background and records the result of each task. [More information](../../1Deployment/3Updater/UpdateFlow.md)
-- **Preloading:** the process description is available in more languages. [More information](../../1Deployment/3Updater/UpdateFlow.md)
+- **Preparation:** the updater can update itself and complete delegated preparations and updates even when they exceed the usual timeout. [More information](../../1Deployment/3Updater/UpdateFlow.md)
+- **Nightly task:** prepares the project’s next version in the background and records the result. [More information](../../1Deployment/3Updater/UpdateFlow.md)
 
-### Docker deployment
+### Docker and deployment
 
-- **Guided update:** a five-step wizard provides a final summary and lets you review pending custom differences. [More information](../../1Deployment/3Updater/DockerUpdate.md)
-- **Images and maintenance:** the help explains how to update using images and preserves customisations on the maintenance page. [More information](../../1Deployment/3Updater/DockerUpdate.md)
+- **Docker updates:** follow a five-step wizard and finish with a summary of the result. [More information](../../1Deployment/3Updater/DockerUpdate.md)
+- **Images and maintenance:** the documentation explains how to update with Docker images and keeps customizations on the maintenance page. [More information](../../1Deployment/3Updater/DockerUpdate.md)
 
 ### Development tools
 
-- **Lowdy:** the plugin lets you turn the character to any angle.
-- **Tour editor:** keeps markers beside the selected item, makes modules easier to identify and helps you reorder steps.
-- **Module layout:** you can place modules with the right mouse button or by dragging them, and change the layout from a clearer toolbar. [More information](../../Help/Modules/ModuleManagement.md)
+- **Lowdy:** rotate the character to any angle.
+- **Tour editor:** keeps markers next to the selected item, makes modules easier to identify, and helps reorder steps.
+- **Modules:** place them with the right mouse button or by dragging, and change the layout from a clearer toolbar. [More information](../../Help/Modules/ModuleManagement.md)
 
 ### Menus and navigation
 
-- **Menu nodes:** in skin 2026, you can manage them with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
+- **Menu nodes:** in the 2026 skin, manage them with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
 - **Import:** the sidebar shows this option only when an import configuration is active.
 
-### Settings
+### Configuration and skins
 
-- **Database connections:** the settings explain the “encrypt” attribute. [More information](../../1Deployment/2ConfigWizard/Configuration.md)
-- **Panels in skin 2022:** the configuration and health panels adapt their design to the skin’s colours. [More information](../../Help/Administration/ControlPanel.md)
+- **Database connections:** the configuration explains the “encrypt” attribute. [More information](../../1Deployment/2ConfigWizard/Configuration.md)
+- **2022 skin:** the configuration and health panels adapt their design to its colors. [More information](../../Help/Administration/HealthPanel.md)
 
-### Design and processes
+### Processes and design
 
-- **Designers:** when you sign in, they enter development mode without you having to open it from the menu.
-- **Generic process buttons:** you can leave them without an icon.
+- **Process buttons:** generic buttons can be left without an icon.
+- **Skin designers:** go straight into development mode when they sign in.
 
 ## Fixes
 
 ??? note "See the fixes in this version"
 
-    - **Reports:** you can generate Crystal Reports again on databases that use Windows authentication.
-    - **Security and integrations:** pages without permission display a security notice, and the MCP application includes an SDK version with a security fix.
-    - **Records:** new records display an appropriate title again.
-    - **Page layouts:** images for five layouts display again in Linux and Docker installations.
-    - **Notifications:** in skin 2022, unread notifications have their white background, blue bar and blue text again.
-    - **Scheduled tasks:** they stop correctly when the application restarts or updates in IIS.
+    - **Reports:** related reports again apply the current record and its filters, and reports work correctly with Windows authentication.
+    - **Security and integrations:** the MCP application now includes an SDK version with a security fix. [More information](../../2ProductDevelopment/MCP/1Prerequisites.md)
+    - **Interface and pages:** new records show an appropriate title, pages without permission display a security notice, and five page designs are visible again on Linux and Docker.
+    - **Notifications:** unread notifications once again have a white background, blue bar, and blue text in the 2022 skin.
+    - **Scheduled tasks:** stop correctly when the application restarts or updates in IIS.
