@@ -1,5 +1,13 @@
 # Panel de la aplicación <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
 
+!!! info "Novedad en la versión 10.1"
+
+    Ahora puedes consultar alertas y recomendaciones, detectar bloqueos, deadlocks y consultas lentas, y ver en qué emplea su tiempo la aplicación y quién está conectado. El panel también sugiere índices: revisa el script antes de crearlos y, si lo necesitas, puedes deshacerlos. Los cambios quedan registrados.
+
+    Accede desde **Administración > Entorno > Salud y recursos** o desde el **Panel de control** de la skin 2026. En **Configuración** puedes revisar los ajustes del Backend y del Frontend, y en la calculadora de recursos, dimensionar el servidor. El panel está disponible solo para administradores.
+
+    ![Novedad en la versión 10.1](../../docs_assets/images/HealthPanel/application-panel.png)
+
 El **panel de la aplicación** reúne en una pantalla, solo para administradores, cómo está la instalación, en qué gasta el tiempo y quién la está usando: la máquina, los procesos del Backend y del Frontend, SQL Server y cada base conectada; las métricas que mide la propia aplicación; los bloqueos, interbloqueos y consultas lentas; las personas conectadas; la configuración de los dos procesos, y una calculadora de recursos. Dice solo lo que ha podido medir, y cuando algo no está bien, por qué importa.
 
 <figure markdown="span">

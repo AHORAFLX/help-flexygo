@@ -1,5 +1,13 @@
 # Application panel <span class="fh-version-tag" title="Available since version 10">10.0+</span>
 
+!!! info "New in version 10.1"
+
+    You can now review alerts and recommendations, find blocking, deadlocks and slow queries, and see where the application spends its time and who is online. The panel also suggests indexes: review the script before creating one, and undo it if needed. Changes are recorded.
+
+    Open it from **Admin > Environment > Health and resources** or from the **Control panel** in skin 2026. In **Configuration**, you can review the Backend and Frontend settings; use the resource calculator to size the server. The panel is available to administrators only.
+
+    ![New in version 10.1](../../docs_assets/images/HealthPanel/application-panel.png)
+
 The **application panel** brings together on one screen, for administrators only, how the installation is doing, what it spends its time on and who is using it: the machine, the Backend and Frontend processes, SQL Server and each connected database; the metrics the application measures itself; blocking, deadlocks and slow queries; the people online; the configuration of both processes, and a resource calculator. It only reports what it has been able to measure, and when something is wrong, why it matters.
 
 <figure markdown="span">

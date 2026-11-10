@@ -1,62 +1,58 @@
 # Version 10.1
 
-Flexygo 10.1 improves update management and navigation with the 2026 skin. It also adds adjustments for development work and fixes issues with reports, security and the interface.
+Flexygo 10.1 brings together information for monitoring your application’s health and resources in a single panel. It also makes updates easier and adds practical changes to development tools and the interface.
 
 ## Highlights
 
-### Scheduled updates
+### Health and resources in one panel
 
-Schedule, change or cancel updates to run in the background, with notifications and coordinated maintenance mode. Before confirming, you can review the action and preview maintenance mode; when the update finishes, maintenance mode is turned off and administrators receive a notification.
+View alerts, recommendations, connected users and metrics in a single panel. You can also review application settings and suggestions for optimizing it; changes are recorded, and suggested indexes can be undone. The panel is available to administrators and from the skin 2026 control panel.
 
-[More information: update flow](../../1Deployment/3Updater/UpdateFlow.md)
+![Health and resources in one panel](../../docs_assets/images/Versions/Version10_1/application-panel.png)
 
-### 2026 skin shortcuts
-
-Use / to search the visible list and Ctrl+K to open favorites and recent pages. From there, you can pin pages and browse them with the arrow keys and Enter; press ? to see the shortcuts. These options do not change the 2022 skin or interfere with typing.
-
-[More information: 2026 skin](../../Help/Administration/Skin2026.md)
+[More information: application panel](../../Help/Administration/HealthPanel.md)
 
 ## Other new features
 
 ### Updates
 
-- **Version preparation:** the Updater can update itself and complete delegated preparations and updates even when they exceed the usual time limit. [More information](../../1Deployment/3Updater/UpdateFlow.md)
-- **Overnight preparation:** a task prepares the next project version in the background and records the result.
+- **Scheduling:** schedule, change or cancel updates, which run in the background with notifications and a coordinated maintenance mode. [More information](../../1Deployment/3Updater/UpdateFlow.md)
+- **Preparation:** the Updater can update itself and complete delegated preparations and updates that exceed the usual timeout. The nightly task prepares the next project version and records the result. [More information](../../1Deployment/3Updater/UpdateFlow.md)
 - **Languages:** the description of the Updater’s preload process is available in more languages. [More information](../../1Deployment/3Updater/UpdateFlow.md)
 
-### Docker and deployment
+### Docker
 
-- **Update wizard:** in Docker, follow five steps and finish with a summary of the result. [More information](../../1Deployment/3Updater/DockerUpdate.md)
-- **Docker documentation:** the version page explains how to update using images, and the maintenance page preserves customizations. [More information](../../1Deployment/3Updater/DockerUpdate.md)
+- **Update wizard:** in Docker, the update follows five steps and ends with a summary of the result. [More information](../../1Deployment/3Updater/DockerUpdate.md)
+- **Documentation:** the versions page explains how to update using images, and the maintenance page preserves customizations. [More information](../../1Deployment/3Updater/DockerUpdate.md)
 
-### Objects and modules
+### Configuration
 
-- **Collection settings:** configure them from the object workbench.
-- **Module layout:** place modules with the right-click menu or by dragging them, and change the layout from a clearer toolbar. [More information](../../Help/Modules/ModuleManagement.md)
+- **Collections:** configure their settings from the object workbench.
+- **Database connections:** the configuration explains the “encrypt” attribute. [More information](../../1Deployment/2ConfigWizard/Configuration.md)
 
 ### Development tools
 
-- **Lowdy:** rotate its character to any angle from the plugin.
 - **Tour editor:** markers follow the selected element as you scroll through the page.
-- **Development mode:** designers enter it when they sign in, without having to open it from the menu.
+- **Module layout:** place modules with the right mouse button or by dragging them, and change the layout from a clearer toolbar. [More information](../../Help/Modules/ModuleManagement.md)
 
 ### Interface and navigation
 
-- **2026 skin menu:** manage its nodes with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
-- **Side menu:** shows Import only when an import configuration is active.
-- **Configuration and health panels:** in the 2022 skin, their design uses the skin’s colors. [More information](../../Help/Administration/HealthPanel.md)
+- **Skin 2026 menu:** manage its nodes with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
+- **Search in skin 2026:** use / to search the visible list and Ctrl+K to view favorites and recent pages. [More information](../../Help/Administration/Skin2026.md)
+- **Sidebar:** shows Import only when an import configuration is active.
 
-### Configuration and processes
+### Skins and processes
 
-- **Database connections:** the `encrypt` attribute is explained when configuring them. [More information](../../1Deployment/2ConfigWizard/Configuration.md)
-- **Process buttons:** generic buttons can be shown without an icon.
+- **Skin 2022:** the configuration and health panels adapt their design to its colors. [More information](../../Help/Administration/HealthPanel.md)
+- **Designers:** when they sign in, they enter development mode automatically without having to open it from the menu.
+- **Process buttons:** you can leave generic buttons without an icon.
 
 ## Fixes
 
 ??? note "See the fixes in this version"
 
-    - **Reports:** related reports apply the current record and its filters again; Crystal Reports works with databases that use Windows authentication.
-    - **MCP and security:** the MCP application includes an SDK version with a security fix.
-    - **Interface and pages:** new records show an appropriate title, pages without permission display a warning, and five page designs appear again on Linux and Docker.
-    - **Notifications:** in the 2022 skin, unread notifications once again have a white background, blue bar and blue text.
-    - **Scheduled tasks:** they stop correctly when the application is restarted or updated in IIS.
+    - **Reports:** related reports apply the current record and its filters; Crystal Reports works with databases that use Windows authentication.
+    - **Security and integrations:** the MCP application includes an SDK version with a security fix.
+    - **Interface:** new records show an appropriate title, pages without permission display a notice, and images for five page layouts are shown again on Linux and Docker.
+    - **Notifications:** in skin 2022, unread notifications are shown again with a white background, blue bar and blue text.
+    - **Scheduled tasks:** in IIS, they stop correctly when the application restarts or updates.
