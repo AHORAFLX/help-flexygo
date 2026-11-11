@@ -344,6 +344,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Help/Administration/AdminDashboard/"/>
     </url>
     <url>
+        <loc>NoneHelp/Administration/AppSettings/</loc>
+        <lastmod>2026-11-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneHelp/Administration/AppSettings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Help/Administration/AppSettings/"/>
+    </url>
+    <url>
         <loc>NoneHelp/Administration/ControlPanel/</loc>
         <lastmod>2026-11-11</lastmod>
         <changefreq>daily</changefreq>
@@ -2519,6 +2526,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Help/Administration/AdminDashboard/"/>
         <xhtml:link rel="alternate" hreflang="es" href="NoneHelp/Administration/AdminDashboard/"/>
+    </url>
+    <url>
+        <loc>Noneen/Help/Administration/AppSettings/</loc>
+        <lastmod>2026-11-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Help/Administration/AppSettings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="NoneHelp/Administration/AppSettings/"/>
     </url>
     <url>
         <loc>Noneen/Help/Administration/ControlPanel/</loc>
