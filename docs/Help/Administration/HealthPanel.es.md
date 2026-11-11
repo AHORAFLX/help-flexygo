@@ -148,6 +148,8 @@ La configuración de los dos procesos, en dos pestañas: **Backend** y **Fronten
 
 **Check now** comprueba en el momento que lo configurado responde, y al editar un bloque **Verify** lo prueba antes de guardar. Los cambios guardados que solo valen tras reiniciar el proceso quedan marcados como **pending restart**: **Restart now** lo reinicia cuando la aplicación está alojada en IIS; si no, se reinicia desde Docker o desde el servicio que la ejecuta.
 
+Es la misma pantalla que se abre desde el panel de control; qué enseña cada bloque y cómo se cambia se explica en [Configuración de la aplicación](AppSettings.md).
+
 <figure markdown="span">
   ![Configuration del Backend: cada bloque con sus valores y su botón Edit](../../docs_assets/images/HealthPanel/configuracion.png)
   <figcaption>Configuration del Backend: cada bloque con sus valores y su botón Edit</figcaption>

@@ -148,6 +148,8 @@ The configuration of both processes, in two tabs: **Backend** and **Frontend**. 
 
 **Check now** checks at once that what is configured answers, and while editing a block **Verify** tests it before saving. Saved changes that only take effect after restarting the process are marked **pending restart**: **Restart now** restarts it when the application is hosted in IIS; otherwise, restart it from Docker or from the service that runs it.
 
+It is the same screen the control panel opens; what each block shows and how to change it is explained in [Application configuration](AppSettings.md).
+
 <figure markdown="span">
   ![The Backend Configuration: each block with its values and its Edit button](../../docs_assets/images/HealthPanel/configuracion.png)
   <figcaption>The Backend Configuration: each block with its values and its Edit button</figcaption>
