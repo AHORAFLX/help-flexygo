@@ -4,6 +4,8 @@ El archivo `appsettings.json` del **Backend** contiene toda la configuración de
 
 En IIS y en un contenedor de producción, las contraseñas y claves de este fichero se guardan cifradas: ver [Cifrado de los appsettings](EncryptedSettings.md).
 
+Los administradores pueden consultar y cambiar la mayoría de estas claves, del Backend y del Frontend, desde la propia aplicación: ver [Configuración de la aplicación](../../Help/Administration/AppSettings.md).
+
 ---
 
 ## Backend — appsettings.json completo
