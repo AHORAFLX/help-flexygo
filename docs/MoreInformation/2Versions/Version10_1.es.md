@@ -1,14 +1,14 @@
 # Versión 10.1
 
-Flexygo 10.1 reúne el estado, las métricas y la configuración de la aplicación en un panel, y facilita la gestión de las actualizaciones. También incorpora ajustes para Docker, herramientas de desarrollo y mejoras en la navegación de la skin 2026.
+Flexygo 10.1 reúne en un panel el estado y los recursos de la aplicación, y facilita la gestión de sus ajustes. También mejora las actualizaciones, el despliegue y varias herramientas de trabajo diario.
 
 ## Lo más destacado
 
-### Salud y recursos de la aplicación
+### Panel de salud y recursos
 
-Consulta desde un único panel el estado de la aplicación, sus métricas y su configuración. También encontrarás alertas, recomendaciones y usuarios conectados; podrás revisar sugerencias para optimizarla, deshacer los índices propuestos y consultar el registro de cambios. Está disponible para administradores y en el dashboard de la skin 2026.
+Consulta en un mismo panel las alertas, recomendaciones, usuarios conectados y métricas de la aplicación. También puedes revisar ajustes y sugerencias para optimizarla; los cambios quedan registrados y puedes deshacer los índices sugeridos. Está disponible para administradores y desde el panel de control de la skin 2026.
 
-![Salud y recursos de la aplicación](../../docs_assets/images/Versions/Version10_1/application-panel.png)
+![Panel de salud y recursos](../../docs_assets/images/Versions/Version10_1/application-panel.png)
 
 [Más información: salud de la aplicación](../../Help/Administration/HealthPanel.md)
 
@@ -16,42 +16,48 @@ Consulta desde un único panel el estado de la aplicación, sus métricas y su c
 
 ### Actualizaciones
 
-- **Programación:** programa, modifica o cancela actualizaciones que se ejecutan en segundo plano, con avisos y un modo de mantenimiento coordinado. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
-- **Actualizador:** puede actualizarse a sí mismo y completar preparaciones y actualizaciones delegadas que superen el tiempo de espera habitual. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
-- **Preparación nocturna:** la tarea nocturna prepara en segundo plano la siguiente versión del proyecto y deja constancia del resultado. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
+- **Programación:** programa, modifica o cancela actualizaciones; se ejecutan en segundo plano con avisos y un modo de mantenimiento coordinado. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
+- **Actualizador:** ahora puede actualizarse y completar preparaciones y actualizaciones delegadas que superen el tiempo de espera habitual. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
+- **Docker:** sigue un asistente de cinco pasos para actualizar y consulta un resumen del resultado al terminar. [Más información](../../1Deployment/3Updater/DockerUpdate.md)
+- **Preparación nocturna:** la tarea nocturna prepara la siguiente versión del proyecto en segundo plano y registra el resultado. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
+- **Precarga:** la descripción del proceso de precarga está disponible en más idiomas. [Más información](../../1Deployment/3Updater/UpdateFlow.md)
 
-### Docker y despliegue
+### Despliegue
 
-- **Actualización en Docker:** un asistente de cinco pasos guía el proceso y termina con un resumen del resultado. [Más información](../../1Deployment/3Updater/DockerUpdate.md)
-- **Exportación de productos:** al exportar un proyecto como producto, puedes elegir si incluir su base de datos de datos. [Más información](../../2ProductDevelopment/8ExportProject/2Reference.md)
-- **Documentación de Docker:** la página de versiones explica cómo actualizar mediante imágenes, y la de mantenimiento conserva las personalizaciones. [Más información](../../1Deployment/3Updater/DockerUpdate.md)
+- **Exportar productos:** al exportar un proyecto como producto, elige si quieres incluir su base de datos de datos. [Más información](../../2ProductDevelopment/8ExportProject/2Reference.md)
+- **Docker:** la página de versiones explica la actualización mediante imágenes y la página de mantenimiento conserva las personalizaciones. [Más información](../../1Deployment/3Updater/DockerUpdate.md)
 
-### Configuración y desarrollo
+### Administración y configuración
 
-- **Colecciones:** configura sus ajustes directamente desde el banco de trabajo del objeto.
-- **Conexiones de bases de datos:** la configuración explica el atributo «encrypt». [Más información](../../1Deployment/2ConfigWizard/AppSettingsReference.md)
-- **Editor de recorridos:** las marcas siguen al elemento seleccionado al desplazarte por la página.
-- **Módulos:** colócalos con el botón derecho o arrastrándolos, y cambia la distribución desde una barra más clara. [Más información](../../Help/Modules/ModuleManagement.md)
+- **Ajustes de la aplicación:** los administradores pueden consultar y modificar los ajustes desde su pantalla de configuración. [Más información](../../Help/Administration/AppSettings.md)
+- **Conexiones:** la configuración aclara la finalidad del atributo `encrypt` para las conexiones de la aplicación y las bases de datos. [Más información](../../1Deployment/2ConfigWizard/EncryptedSettings.md)
+- **Skin 2022:** los paneles de configuración y salud tienen un diseño claro acorde con sus colores.
 
-### Interfaz y navegación
+### Herramientas de desarrollo
 
-- **Menú de la skin 2026:** gestiona sus nodos con el botón derecho. [Más información](../../Help/Administration/Skin2026.md)
-- **Búsqueda rápida:** en la skin 2026, usa / para buscar en la lista visible y Ctrl+K para consultar favoritos y páginas recientes. [Más información](../../Help/Administration/Skin2026.md)
-- **Menú lateral:** Importar solo aparece cuando hay una configuración de importación activa. [Más información](../../Help/Administration/Skin2026.md)
-- **Paneles de configuración y salud:** en la skin 2022, su diseño se adapta a los colores de la interfaz. [Más información](../../Help/Administration/HealthPanel.md)
+- **Colecciones:** configura sus ajustes desde el banco de trabajo del objeto.
+- **Menús:** en la skin 2026, gestiona los nodos del menú con el botón derecho. [Más información](../../Help/Administration/Skin2026.md)
+- **Recorridos:** en el editor, las marcas acompañan al elemento seleccionado al desplazarte por la página.
+- **Módulos:** colócalos con el botón derecho o arrastrándolos, y cambia su distribución desde una barra más clara. [Más información](../../Help/Modules/ModuleManagement.md)
+- **Modo de desarrollo:** los diseñadores entran en este modo al iniciar sesión, sin tener que abrirlo desde el menú.
 
-### Inicio y diseñadores
+### Interfaz
 
-- **Avisos de inicio:** aparecen de forma ordenada y las actualizaciones de versión incluyen también parches y betas.
-- **Diseñadores:** entran en modo de desarrollo al iniciar sesión, sin necesidad de abrirlo desde el menú.
-- **Botones de proceso:** puedes dejar sin icono los botones genéricos.
+- **Búsqueda en la skin 2026:** usa `/` para buscar en la lista visible y `Ctrl+K` para consultar favoritos y páginas recientes. [Más información](../../Help/Administration/Skin2026.md)
+- **Menú lateral:** Importar solo aparece cuando hay una configuración de importación activa.
+
+### Inicio y procesos
+
+- **Avisos de inicio:** aparecen de forma ordenada; las actualizaciones de versión también incluyen parches y versiones beta.
+- **Botones de proceso:** los botones genéricos pueden mostrarse sin icono.
 
 ## Correcciones
 
 ??? note "Ver las correcciones de esta versión"
 
-    - **Informes:** los informes relacionados aplican el registro actual y sus filtros; Crystal Reports funciona con bases de datos que usan autenticación de Windows.
-    - **Seguridad e integraciones:** MCP incorpora una versión del SDK con una corrección de seguridad, y la WebAPI y MCP ejecutan cada proceso solo sobre el objeto para el que está definido. [Más información](../../Help/Administration/RolesAndPermissions/4WebAPIMCP.md)
-    - **Interfaz:** los registros nuevos muestran un título adecuado y las páginas sin permiso presentan un aviso de seguridad; también vuelven a verse cinco diseños de página en Linux y Docker.
-    - **Notificaciones:** en la skin 2022, las notificaciones sin leer vuelven a mostrarse con fondo blanco, barra azul y texto azul.
+    - **Informes:** los informes relacionados respetan el registro actual y sus filtros; Crystal Reports funciona con bases de datos que usan autenticación de Windows.
+    - **Seguridad e integraciones:** MCP incluye una versión del SDK con una corrección de seguridad, y la WebAPI y MCP ejecutan cada proceso solo sobre el objeto definido.
+    - **Interfaz:** los registros nuevos muestran un título adecuado y las páginas sin permiso avisan de la restricción.
+    - **Diseños de página:** vuelven a mostrarse las imágenes de cinco diseños en instalaciones Linux y Docker.
+    - **Notificaciones:** en la skin 2022, las notificaciones sin leer recuperan el fondo blanco, la barra azul y el texto azul.
     - **Tareas programadas:** se detienen correctamente al reiniciar o actualizar la aplicación en IIS.
