@@ -32,8 +32,8 @@ Inform the base URL of your app + `/Webhooks/OfficeToken` as your redirect URl's
 
 In the following example you can get a contact collection from the default contacts folder of the signed-in user.
 
-1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken"defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Get Office Token</flx-navbutton> 
-2.  Then get your contacts with <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts"showprogress="false">Get Office Contacts</flx-navbutton>
+1.  Firstly, get and store the required token process <flx-navbutton class="link" type="execprocess" processname="GetOfficeToken" defaults="{'service':'contacts'}" targetid="popup" showprogress="false">Get Office Token</flx-navbutton> 
+2.  Then get your contacts with <flx-navbutton class="link" type="execprocess" processname="GetOfficeContacts" showprogress="false">Get Office Contacts</flx-navbutton>
 
 ```
 Response:
