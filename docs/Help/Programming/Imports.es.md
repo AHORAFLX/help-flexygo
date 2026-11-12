@@ -44,7 +44,7 @@ Se pueden agregar más de una hoja como en el ejemplo, el nombre de las hojas si
 
 La importación se ejecuta desde la entrada **Importar** del menú lateral (en la skin flexy2022, desde el menú superior **Tools > Import**): salen los objetos con alguna configuración activa y, dentro de cada uno, sus configuraciones.
 
-Cada configuración ejecuta el proceso **sysImportsSettings** con su `ImportId` como valor por defecto. Si no hay ninguna configuración, la entrada muestra *No import settings found.*
+Cada configuración ejecuta el proceso **sysImportsSettings** con su `ImportId` como valor por defecto. En la skin 2026, la entrada **Importar** solo aparece cuando hay al menos una configuración activa <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>, y vuelve a salir en cuanto se activa una, sin reiniciar. En flexy2022, si no hay ninguna configuración, la entrada muestra *No import settings found.*
 
 En la ventana del proceso aparece un botón para descargar la plantilla del archivo que se ha colocado previamente en la creación de la configuración.
 

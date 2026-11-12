@@ -8,11 +8,14 @@ Flexygo includes several useful keyboard shortcuts:
 
 In the Flexygo 2026 skin, also:
 
-* **Ctrl + K**: opens the search
+* **Ctrl + K**: opens the search, with your favourites and your recent pages
+* **?**: shows the list of keyboard shortcuts
+* **/**: goes to the search box of the list you are looking at
+* **Ctrl + B**: folds or unfolds the sidebar
 * **Ctrl + Shift + M**: opens **Place modules**, to arrange the page's modules
 * **Ctrl + Space**: opens developer mode's **Quick access**. See [Did you know you can access any object's configuration from the sidebar?](SidebarObjectConfig.md)
 
-On a Mac, use **Cmd** instead of **Ctrl** for the last three.
+On a Mac, use **Cmd** instead of **Ctrl** for the Ctrl shortcuts.
 
 ## Screenshots
 

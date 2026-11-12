@@ -56,7 +56,7 @@ It has two tabs, **Backend** and **Frontend**, one per process. Each one shows i
 
 Some details on how the values are read:
 
-- **The connections** are the configuration one and each **active** data connection in the connections table (`DbConnectionStrings`). A third connection is one more card under **Databases**. The connection string is shown split into its parts.
+- **The connections** are the configuration one and each **active** data connection in the connections table (`DbConnectionStrings`). A third connection is one more card under **Databases**. The connection string is shown split into its parts. Next to **Encrypt**, an explanation <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>: it is the connection string attribute that forces the **communication** with SQL Server **to be encrypted**, and then the client validates the server's certificate, unless `TrustServerCertificate` says to trust it. It has nothing to do with [Encrypted appsettings](../../1Deployment/2ConfigWizard/EncryptedSettings.md), which protects the values stored in the file.
 - **Passwords** are never shown: only whether they are **Configured** or **Not configured**. The value does not reach the browser, not even while editing.
 - **Cron jobs** and **Script jobs** are shown the right way up: the file stores `DisableCronJobs` and `DisableScriptJobs`, and the screen says whether the jobs **run**. A switch that is on means the jobs are running.
 - A `*` in **Allowed hosts** or **API origins** carries the **all** mark: any value is accepted.
@@ -158,6 +158,7 @@ The notice survives a page reload: the process compares those keys with what it 
 
 ## 6. What cannot be changed from here
 
+- **The time limit of the calls to the Backend.** It is not an `appsettings` key but the **BackendCallTimeoutSeconds** setting of the application; see [A long operation is cut off after 10 minutes](../../4Troubleshooting/1Deployment.md).
 - **The connection to the configuration database** (`ConfConnectionString`). Changing it is changing the installation, and a mistake would lock the screen itself out. It is changed by hand in the Backend's `appsettings.json`.
 - **Anything that comes from an environment variable.** The file would have no effect, because the variable wins. Change the variable instead (for example, in the `docker-compose` file or the container configuration).
 - **The keys that are not on the list**, which are neither shown nor written: `Kestrel`, `ProjectName` (with the database running, the settings table governs it), `DatabaseNuget`, `JwtSettings`, `DataProtection` and the optional `ForwardedHeaders` and `HttpsRedirection`. They are edited in the file; see [Reference: appsettings.json](../../1Deployment/2ConfigWizard/AppSettingsReference.md).

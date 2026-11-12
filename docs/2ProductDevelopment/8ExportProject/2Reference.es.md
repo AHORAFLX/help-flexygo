@@ -54,7 +54,7 @@ Nada más abrirse, la ventana lee la instalación y dice qué se va a llevar. La
 | Línea | Qué dice |
 |---|---|
 | **The configuration of origin N** | Cuántas filas y de cuántas tablas viajan como guiones `MERGE` del proyecto `Conf.Database`: las del origen activo más las que ya estén en el de destino. Y, si las hay, cuántas filas de **otros orígenes se quedan fuera** y de qué tablas |
-| **The data model** | Qué conexiones llevan su esquema al proyecto y a qué proyecto va cada una (4), o **none marked** si no hay ninguna |
+| **The data model** | La casilla de `DataConnectionString` y a qué proyecto va su esquema (4) |
 | **Static files** | Cuántos CSS y JS registra el origen, y cuántos de ellos **no están en disco** |
 | **The custom folder** | Cuántas carpetas y ficheros de la carpeta `custom` del Frontend viajan, de cuántos, con su tamaño, y cuánto se queda fuera; o que el Frontend no tiene carpeta `custom` (3.1) |
 | **Process DLLs** | Cuántas DLL de procesos del origen no son del core, cuántas **no están en `bin`** y cuántas son de un addon (solo se listan) |
@@ -96,19 +96,23 @@ La línea de la vista previa resume lo elegido (por ejemplo, *1 of 8 folders, 3 
 
 ---
 
-## 4. El modelo de datos lo deciden las conexiones
+## 4. El modelo de datos: la base de `DataConnectionString`
 
-Ya no hay un «incluir el modelo de datos» en la ventana. Viaja el esquema (tablas, vistas, procedimientos, funciones, tipos y triggers) de las conexiones activas marcadas para **actualizar su modelo de datos**: la misma marca con la que el actualizador sabe qué bases de datos tiene que actualizar. La de configuración nunca cuenta, y una base de un ERP no se marca, así que no viaja.
+Desde la 10.1 <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>, en **The data model** la ventana tiene una **casilla** para la conexión **`DataConnectionString`**, marcada de entrada. Marcada, viaja el esquema de esa base (tablas, vistas, procedimientos, funciones, tipos y triggers); desmarcada, no viaja. **Ninguna otra conexión se exporta**, y la de configuración nunca cuenta: viaja aparte como `Conf.Database`.
 
-Dónde cae cada una lo dice su nombre de paquete (`PackageDbName`):
+Para exportar **ya no hace falta** marcar *Update data model* en *Connection strings*. Esa marca es la que usa el actualizador para saber qué bases tiene que actualizar: cuando el proyecto ya sea un producto, márcala en la fila de `DataConnectionString` si el actualizador debe mantener su base al día. La ventana y el informe lo recuerdan.
 
-| Conexión marcada | Proyecto |
+Una **base de un ERP** no se puede marcar, y la ventana dice por qué: su estructura es la del ERP, no la del proyecto. Se reconoce por la marca **IsERP** en *Connection strings* o porque tiene las tablas del ERP aunque no esté marcada.
+
+Dónde cae lo dice su nombre de paquete (`PackageDbName`):
+
+| `DataConnectionString` | Proyecto |
 |---|---|
 | Con `PackageDbName` = `Data` | `{Producto}.Data.Database`, el proyecto de datos de la plantilla |
 | Con otro nombre, por ejemplo `Crm` | `{Producto}.Crm.Database`: una copia del de datos añadida a la solución, bajo la carpeta `Database`. El informe avisa de que las pipelines y los ficheros de Docker de la plantilla solo construyen `Data.Database`: los demás hay que añadirlos a mano |
-| **Ninguna marcada** | `{Producto}.Data.Database` queda **vacío** y el informe lo dice (una aplicación sobre un ERP, o con sus tablas por script). Si el producto no tiene tablas propias, se quita como explica el `DOCKER.md` de la plantilla |
+| **Casilla desmarcada**, base de un ERP o sin `DataConnectionString` activa | `{Producto}.Data.Database` queda **vacío** y el informe lo dice (una aplicación sobre un ERP, o con sus tablas por script). Si el producto no tiene tablas propias, se quita como explica el `DOCKER.md` de la plantilla |
 
-Una conexión marcada se salta, y el informe lo dice, si su `PackageDbName` no vale como nombre de proyecto, si la instalación no tiene su cadena de conexión, si apunta a la propia base de configuración o si otra marcada ya ocupa el mismo proyecto.
+La conexión se salta, y el informe lo dice, si su `PackageDbName` no vale como nombre de proyecto, si la instalación no tiene su cadena de conexión o si apunta a la propia base de configuración.
 
 ### 4.1 Los datos maestros: las tablas que viajan con sus filas
 

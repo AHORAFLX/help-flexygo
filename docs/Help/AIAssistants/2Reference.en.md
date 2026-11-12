@@ -50,6 +50,11 @@ In addition, the assistant receives:
 !!! tip "The assistant is as good as the descriptions"
     What governs the model is the **metadata**: each object's AI description (*AI description*), each property's description for the API (*Description in API*, and *Show values in API* so coded values travel with their text), the descriptions of views and processes, and the **`ApplicationDescription`** setting (what this application is, and for whom). An object without a description is used badly or not at all.
 
+### Filters on views and widgets with tabs <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>
+
+- **On a view, the filter is on what the view returns.** When the assistant lists, measures or builds a dashboard on a **view**, the filter and the order work on the **columns the view returns**, by their name, also those computed or shared by two tables. A filter written with the table in front, as until now, keeps working. The view's own condition and the role's security filter always apply, and an `OR` in the filter can no longer get around them.
+- **The filter when switching tabs in a widget.** In a dashboard with tabs, the filter goes to the other tab if all its fields are there. If not, the tab shows **without the filter** and says so in orange: *Without the filter: its fields are not in this tab, so it lists every row this user may see.* Going back to a tab that takes it brings the filter back.
+
 ---
 
 ## 1 bis. What to fill in so the assistant gets it right

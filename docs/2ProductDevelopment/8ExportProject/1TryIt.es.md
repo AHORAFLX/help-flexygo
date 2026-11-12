@@ -26,7 +26,7 @@ Panel de control → lista de acciones → **Exportar como proyecto**. La ventan
 **Comprueba**:
 
 - *The configuration of origin N*: el origen es el de tu proyecto, no el 0 (con el 0 la ventana lo dice y no deja exportar).
-- *The data model*: la conexión de tus tablas (las marcadas con **Update data model** en *Connection strings*). Si dice *none marked*, el proyecto llevará el proyecto de datos vacío.
+- *The data model*: la casilla de **`DataConnectionString`**, la base de tus tablas, marcada (sale así de entrada). Desmarcada, o si es la base de un ERP, el proyecto llevará el proyecto de datos vacío.
 - *The custom folder*: despliega **Choose what travels** y mira qué carpetas y ficheros de `custom` van a viajar. Los repositorios de documentos e imágenes, las carpetas de ejecución y lo que pase de 100 MB salen desmarcados; desmarca también lo que sea dato y no proyecto ([la carpeta custom](2Reference.md#31-la-carpeta-custom-se-elige-que-viaja)).
 - *.NET SDK found* y la plantilla de la versión de tu aplicación (*already installed*, o que se descargará).
 
@@ -93,5 +93,5 @@ Vuelve a publicar las bases encima, sin borrarlas (sube `CurrentDacVersion` en l
 | El paso de la plantilla sale en amarillo, o con otra versión | El feed no tiene la de tu aplicación (pasa con versiones de desarrollo del core) | La configuración puede no publicar en el paso 5: usa una aplicación de una versión publicada |
 | La base de configuración no publica y nombra una columna | La plantilla instalada es de otra versión que la aplicación | Lo mismo: versión de la aplicación y del paquete tienen que casar |
 | El alta falla con «It would generate duplicates» | Falta una fila a la que apunta una clave ajena (un catálogo o un registro, como el empleado del administrador) | Marca esa tabla en el paso 2 y exporta de nuevo |
-| El proyecto de datos sale vacío | Ninguna conexión marcada con *Update data model* | Márcala en *Connection strings*, o deja el proyecto sin tablas |
+| El proyecto de datos sale vacío | La casilla de `DataConnectionString` estaba desmarcada, la base es de un ERP o la instalación no tiene `DataConnectionString` activa | Marca la casilla y exporta de nuevo, o deja el proyecto sin tablas |
 | Falta un ajuste que habías cambiado en la aplicación | Viajan como `UPDATE` al final de `config.sql` los ajustes cambiados, **salvo los del entorno**: los del actualizador, la telemetría, las rutas, las contraseñas y los de integraciones con credenciales (Azure, Google, Office, pagos…) | Ponlo en el `config.sql` del proyecto, o en cada instalación si es del entorno |

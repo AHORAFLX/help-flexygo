@@ -4,6 +4,9 @@ En **IIS** y en un **contenedor de producción**, los `appsettings` del Backend 
 
 Se cifra **valor a valor**: el resto del fichero sigue legible y editable.
 
+!!! note "No es el `Encrypt` de la cadena de conexión"
+    El atributo `Encrypt=True` de una cadena de conexión cifra la **comunicación** con SQL Server, y entonces el cliente valida el certificado del servidor (salvo `TrustServerCertificate=True`). Esta página trata de otra cosa: de guardar cifrados en el fichero los secretos. La pantalla de [Configuración de la aplicación](../../Help/Administration/AppSettings.md) explica `Encrypt` junto a cada conexión.
+
 ```json
 "ConnectionStrings": {
   "ConfConnectionString": "enc:v1:Xq3k…",

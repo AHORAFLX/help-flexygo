@@ -4,6 +4,9 @@ In **IIS** and in a **production container**, the Backend and Frontend `appsetti
 
 Encryption is **value by value**: the rest of the file stays readable and editable.
 
+!!! note "Not the `Encrypt` of the connection string"
+    The `Encrypt=True` attribute of a connection string encrypts the **communication** with SQL Server, and then the client validates the server's certificate (unless `TrustServerCertificate=True`). This page is about something else: keeping the secrets encrypted in the file. The [Application configuration](../../Help/Administration/AppSettings.md) screen explains `Encrypt` next to each connection.
+
 ```json
 "ConnectionStrings": {
   "ConfConnectionString": "enc:v1:Xq3k…",

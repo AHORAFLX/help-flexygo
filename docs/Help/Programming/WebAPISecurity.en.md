@@ -83,6 +83,8 @@ The full table:
 | **403** | The role cannot see that record (object permission or row filter). | `Unauthorized object {Object} for role {Role}` |
 | **403** | The role cannot run the process on that object. | `Unauthorized process {Process} on {Object} for role {Role}` |
 | **400** | Process defined on an object, requested without the object. | `Process {Process} is defined on {Object}: send the object and the record (id or filter) to run it on` |
+| **400** | Process requested on an object it is not defined on. <span class="fh-version-tag" title="Available since version 10.1">10.1+</span> | `Process {Process} is not defined on {Object}: run it on {Objects}` |
+| **400** | Process not defined on any object, requested with an object. <span class="fh-version-tag" title="Available since version 10.1">10.1+</span> | `Process {Process} is not defined on any object: run it without one` |
 | **400** | Collection process without `filter`: it would run on **all** records. | `Please send filter to select the {Object} records to run {Process} on` |
 | **404** | The process's record does not exist (or the role's row filter hides it). | `{Object} record not found: {where}` |
 | **409** | The record exists, but its state does not allow the process (*EnabledValues*, *DisabledValues*, *SQLEnabled*). | `Process {Process} is not available for this {Object} record ({where}): its state does not allow it` |
@@ -100,7 +102,9 @@ The full table:
 Two rules that close paths through which it used to be possible to act on a record without going through its security:
 
 - **A process defined on an object only runs through that object**: `POST /webapi/exec/{Process}/{Object}/{id}` or, for the collection, `POST /webapi/exec/{Process}/{Collection}?filter=…`. Without the object, 400. A process not bound to any object still runs as always, without an object.
+- **Only on the objects it is defined on** <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>. Requested on another object, or a process with no object requested with one, it answers 400 and says how to call it. Both securities are still required: the process's and the process's on that object. The same applies to the application's MCP: the assistant knows the process is not for that object before asking you for any parameter.
 - **A parameter that is a field of the record cannot be overridden from the body.** If a parameter's default value is exactly `{{Field}}` and that field belongs to the object, it is taken from the record in the path and whatever arrives in the body is ignored. That way, the state check and the process look at **the same** record. The other parameters (`{{currentDate}}`, those the user fills in…) are still sent.
+- **The caller's identity is set by the server** <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>. A parameter whose default value is, whole, an identity variable (`{{currentUserId}}`, `{{currentRoleId}}`…) always takes the server's value, even when the call sends another one. Screens do the same with **hidden or locked** parameters; a visible, editable one (an "assign to" that proposes the current user) keeps what is chosen.
 
 ---
 

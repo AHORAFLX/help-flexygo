@@ -18,6 +18,9 @@ El Token de Acceso es una credencial que puede ser utilizada por una aplicación
 
 Puedes solicitar un token de acceso utilizando dos formas: 
 
+!!! tip "Usuario o email"
+    En `username` vale el nombre de usuario o su **email** <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>: `POST /token` busca primero por nombre y, si no lo encuentra, por email, igual que el login. Si el email está repetido en varios usuarios, responde **401** (credenciales incorrectas).
+
 #### Enviando credenciales implícitas de usuario
 
 #### Solicitud:

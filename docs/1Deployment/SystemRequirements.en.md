@@ -37,6 +37,12 @@ Go to **Control Panel → Programs → Turn Windows features on or off** and mak
 !!! danger "Flexygo 10 requires SQL Server 2017 or later"
     Starting with Flexygo 10, the minimum SQL Server version is **SQL Server 2017**. The application's databases must be on a SQL Server 2017 or later server; if the server is older, upgrade it before installing, updating or migrating the application.
 
+### How the databases are created <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>
+
+- **SIMPLE recovery model.** New configuration databases, and data databases created empty (also in the Docker image), start in **SIMPLE** recovery: the transaction log does not grow without log backups. If you take log backups and want **FULL**, change it by hand in SQL Server: updating Flexygo **keeps the model** the database already has, FULL included.
+- **Page verification with CHECKSUM.** New configuration databases are created with `PAGE_VERIFY CHECKSUM`, so SQL Server detects damaged pages. Updating Flexygo or installing an addon turns it on where verification was off; databases that already verify pages (with `CHECKSUM` or `TORN_PAGE_DETECTION`) are left as they are. If the connection's user cannot change the database, the update still finishes, with a warning.
+- Installing an addon no longer changes the options of the product's databases.
+
 ---
 
 ## :material-chart-line: Sizing guide

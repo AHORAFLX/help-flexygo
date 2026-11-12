@@ -54,7 +54,7 @@ As soon as it opens, the window reads the installation and says what it is going
 | Line | What it says |
 |---|---|
 | **The configuration of origin N** | How many rows from how many tables travel as `MERGE` scripts of the `Conf.Database` project: those of the active origin plus those already in the target one. And, if any, how many rows from **other origins are left out** and from which tables |
-| **The data model** | Which connections take their schema to the project and which project each one goes to (4), or **none marked** if there are none |
+| **The data model** | The `DataConnectionString` check and which project its schema goes to (4) |
 | **Static files** | How many CSS and JS files the origin registers, and how many of them **are not on disk** |
 | **The custom folder** | How many folders and files of the Frontend's `custom` folder travel, out of how many, with their size, and how much is left out; or that the Frontend has no `custom` folder (3.1) |
 | **Process DLLs** | How many process DLLs of the origin are not from the core, how many **are not in `bin`** and how many belong to an addon (only listed) |
@@ -96,19 +96,23 @@ The preview line sums up the choice (for example, *1 of 8 folders, 3 of 3 files 
 
 ---
 
-## 4. The data model is decided by the connections
+## 4. The data model: the `DataConnectionString` database
 
-There is no longer an "include the data model" option in the window. The schema (tables, views, procedures, functions, types and triggers) of the active connections marked to **update their data model** travels: the same mark the updater uses to know which databases it has to update. The configuration connection never counts, and an ERP database is not marked, so it does not travel.
+Since 10.1 <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>, under **The data model** the window has a **check** for the **`DataConnectionString`** connection, ticked by default. Ticked, the schema of that database travels (tables, views, procedures, functions, types and triggers); unticked, it does not. **No other connection is exported**, and the configuration one never counts: it travels separately as `Conf.Database`.
 
-Where each one goes is given by its package name (`PackageDbName`):
+Exporting **no longer needs** *Update data model* ticked in *Connection strings*. That mark is the one the updater uses to know which databases it has to update: once the project is a product, tick it on the `DataConnectionString` row if the updater must keep its database up to date. The window and the report remind you.
 
-| Marked connection | Project |
+An **ERP's database** cannot be ticked, and the window says why: its structure is the ERP's, not the project's. It is recognised by the **IsERP** mark in *Connection strings*, or because it has the ERP's tables even when it is not marked.
+
+Where it goes is given by its package name (`PackageDbName`):
+
+| `DataConnectionString` | Project |
 |---|---|
 | With `PackageDbName` = `Data` | `{Product}.Data.Database`, the template's data project |
 | With another name, for example `Crm` | `{Product}.Crm.Database`: a copy of the data project added to the solution, under the `Database` folder. The report warns that the template's pipelines and Docker files only build `Data.Database`: the others have to be added by hand |
-| **None marked** | `{Product}.Data.Database` is left **empty** and the report says so (an application on top of an ERP, or with its tables created by script). If the product has no tables of its own, it is removed as explained in the template's `DOCKER.md` |
+| **Check unticked**, an ERP's database or no active `DataConnectionString` | `{Product}.Data.Database` is left **empty** and the report says so (an application on top of an ERP, or with its tables created by script). If the product has no tables of its own, it is removed as explained in the template's `DOCKER.md` |
 
-A marked connection is skipped, and the report says so, if its `PackageDbName` is not valid as a project name, if the installation does not have its connection string, if it points to the configuration database itself or if another marked one already takes the same project.
+The connection is skipped, and the report says so, if its `PackageDbName` is not valid as a project name, if the installation does not have its connection string or if it points to the configuration database itself.
 
 ### 4.1 Master data: the tables that travel with their rows
 

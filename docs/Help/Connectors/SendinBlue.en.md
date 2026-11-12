@@ -2,7 +2,7 @@
 
 ![SendinBlue](../../docs_assets/images/SendinBlue/SendinBlue_Logo.png){ .fh-image-of-title }
 
-SendinBlue is a marketing automation platform that helps you share email and advertising campaigns with customers and other stakeholders.
+SendinBlue, now **Brevo**, is a marketing automation platform that helps you share email and advertising campaigns with customers and other stakeholders.
 
 SendinBlue integration area can be accessed from <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-sendinblue')" showprogress="false">here</flx-navbutton>.
 
@@ -266,3 +266,9 @@ Public Class SampleSendinBlue
 
 End Class
 ```
+
+## Contacts of a list
+
+To add contacts to a list or remove them, use `AddContactsToList` and `DeleteContactsFromList` with the list id and the contacts **by id** (`IdsContacts`) **or by email** (`emailsContacts`). `DeleteContactsFromList` also takes `deleteAll` to empty the list.
+
+Since 10.1 <span class="fh-version-tag" title="Available since version 10.1">10.1+</span> emails alone are enough: before, without ids, both functions failed with *Id or Email contact is mandatory*.

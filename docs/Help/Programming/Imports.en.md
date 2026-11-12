@@ -46,7 +46,7 @@ More than one sheet can be added as in the example, the name of the sheets follo
 
 The import is executed from the **Import** entry of the side menu (in the flexy2022 skin, from the upper menu **Tools > Import**): it lists the objects with an active setting and, inside each one, its settings.
 
-Each setting executes the **sysImportsSettings** process with its `ImportId` as default value. When there are no settings, the entry shows *No import settings found.*
+Each setting executes the **sysImportsSettings** process with its `ImportId` as default value. In the 2026 skin, the **Import** entry only appears when there is at least one active setting <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>, and it shows again as soon as one is activated, without restarting. In flexy2022, when there are no settings, the entry shows *No import settings found.*
 
 In the process window a button appears to download the template of the file that has been previously placed in the creation of the setting.
 

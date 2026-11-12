@@ -66,6 +66,19 @@ Diagnostic guide for the most common problems when configuring and starting up F
 3. If the problem persists, stop and restart the application pool.
 
 
+### A long operation is cut off after 10 minutes <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>
+
+**Symptom:** a process, a report or an export that takes long is cut off with a timeout error, always after the same time (10 minutes by default).
+
+**Cause:** every call from the Frontend to the Backend has a time limit. It is set by the **BackendCallTimeoutSeconds** setting (*System* group), in seconds: 600 by default.
+
+**Solution:**
+
+1. In the application settings (*Settings*), find **BackendCallTimeoutSeconds** and set the seconds you need. Empty or an invalid value means 600; the maximum is 2000000.
+2. Save. The Frontend picks it up from the Backend within seconds, **without restarting**.
+
+Before raising it, see whether the operation can be made shorter: a call that takes minutes keeps a person waiting. The [application panel](../Help/Administration/HealthPanel.md) tells where the time goes.
+
 ### Infinite redirect loop behind a reverse proxy
 
 **Symptom:** The application never loads and the browser keeps redirecting. Inspecting the request shows a **307** response whose `location` header is **identical to the requested URL**. No error appears anywhere: not in the Event Viewer, not in the application logs, not in the IIS logs.

@@ -26,7 +26,7 @@ Control panel → action list → **Export as project**. The window reads the in
 **Check**:
 
 - *The configuration of origin N*: the origin is your project's, not 0 (with 0 the window says so and does not allow exporting).
-- *The data model*: the connection of your tables (those marked with **Update data model** in *Connection strings*). If it says *none marked*, the project will carry an empty data project.
+- *The data model*: the check of **`DataConnectionString`**, the database of your tables, ticked (it comes ticked by default). Unticked, or if it is an ERP's database, the project will carry an empty data project.
 - *The custom folder*: expand **Choose what travels** and look at which folders and files of `custom` will travel. The document and image repositories, the run-time folders and anything over 100 MB come unticked; untick too whatever is data and not project ([the custom folder](2Reference.md#31-the-custom-folder-choosing-what-travels)).
 - *.NET SDK found* and the template for your application's version (*already installed*, or that it will be downloaded).
 
@@ -93,5 +93,5 @@ Publish the databases again on top, without deleting them (increase `CurrentDacV
 | The template step comes out in yellow, or with another version | The feed does not have your application's version (happens with development versions of the core) | The configuration may fail to publish in step 5: use an application of a released version |
 | The configuration database does not publish and names a column | The installed template is of a different version than the application | The same: the application version and the package version must match |
 | Creating a record fails with "It would generate duplicates" | A row that a foreign key points to is missing (a catalog or a record, such as the administrator's employee) | Check that table in step 2 and export again |
-| The data project comes out empty | No connection marked with *Update data model* | Mark it in *Connection strings*, or leave the project without tables |
+| The data project comes out empty | The `DataConnectionString` check was unticked, the database is an ERP's or the installation has no active `DataConnectionString` | Tick the check and export again, or leave the project without tables |
 | A setting you had changed in the application is missing | Changed settings travel as `UPDATE` at the end of `config.sql`, **except environment ones**: those of the updater, telemetry, paths, passwords and integrations with credentials (Azure, Google, Office, payments…) | Put it in the project's `config.sql`, or in each installation if it is an environment one |

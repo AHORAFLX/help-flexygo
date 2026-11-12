@@ -83,6 +83,8 @@ La tabla completa:
 | **403** | El rol no puede ver ese registro (permiso de objeto o filtro de fila). | `Unauthorized object {Objeto} for role {Rol}` |
 | **403** | El rol no puede ejecutar el proceso sobre ese objeto. | `Unauthorized process {Proceso} on {Objeto} for role {Rol}` |
 | **400** | Proceso definido sobre un objeto, pedido sin el objeto. | `Process {Proceso} is defined on {Objeto}: send the object and the record (id or filter) to run it on` |
+| **400** | Proceso pedido sobre un objeto en el que no está definido. <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span> | `Process {Proceso} is not defined on {Objeto}: run it on {Objetos}` |
+| **400** | Proceso que no está definido sobre ningún objeto, pedido con un objeto. <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span> | `Process {Proceso} is not defined on any object: run it without one` |
 | **400** | Proceso de colección sin `filter`: correría sobre **todos** los registros. | `Please send filter to select the {Objeto} records to run {Proceso} on` |
 | **404** | El registro del proceso no existe (o el filtro de fila del rol lo oculta). | `{Objeto} record not found: {where}` |
 | **409** | El registro existe, pero su estado no permite el proceso (*EnabledValues*, *DisabledValues*, *SQLEnabled*). | `Process {Proceso} is not available for this {Objeto} record ({where}): its state does not allow it` |
@@ -100,7 +102,9 @@ La tabla completa:
 Dos reglas que cierran caminos por los que antes se podía actuar sobre un registro sin pasar por su seguridad:
 
 - **Un proceso definido sobre un objeto solo se ejecuta a través de ese objeto**: `POST /webapi/exec/{Proceso}/{Objeto}/{id}` o, para la colección, `POST /webapi/exec/{Proceso}/{Colección}?filter=…`. Sin objeto, 400. Un proceso que no está ligado a ningún objeto sigue corriendo como siempre, sin objeto.
+- **Solo sobre los objetos en los que está definido** <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>. Pedido sobre otro objeto, o un proceso sin objeto pedido con uno, responde 400 y dice cómo llamarlo. Siguen haciendo falta las dos seguridades: la del proceso y la del proceso sobre ese objeto. Lo mismo vale para el MCP de la aplicación: el asistente sabe que el proceso no es de ese objeto antes de pedirte ningún parámetro.
 - **Un parámetro que es un campo del registro no se puede pisar desde el cuerpo.** Si el valor por defecto de un parámetro es exactamente `{{Campo}}` y ese campo es del objeto, se toma del registro de la ruta y lo que llegue en el cuerpo se ignora. Así, la comprobación de estado y el proceso miran **el mismo** registro. Los demás parámetros (`{{currentDate}}`, los que el usuario rellena…) se siguen mandando.
+- **La identidad de quien llama la pone el servidor** <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>. Un parámetro cuyo valor por defecto es, entero, una variable de identidad (`{{currentUserId}}`, `{{currentRoleId}}`…) toma siempre el valor del servidor, aunque la llamada mande otro. En las pantallas pasa lo mismo con los parámetros **ocultos o bloqueados**; uno visible y editable (un «asignar a» que propone el usuario actual) conserva lo que se elija.
 
 ---
 

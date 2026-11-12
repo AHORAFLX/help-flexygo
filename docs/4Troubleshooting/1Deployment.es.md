@@ -66,6 +66,19 @@ Guía de diagnóstico para los problemas más frecuentes al configurar y poner e
 3. Si el problema persiste, detén y vuelve a iniciar el pool de aplicaciones.
 
 
+### Una operación larga se corta a los 10 minutos <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>
+
+**Síntoma:** un proceso, un informe o una exportación que tarda mucho se corta con un error de tiempo agotado, siempre al mismo tiempo (por defecto, 10 minutos).
+
+**Causa:** cada llamada del Frontend al Backend tiene un tiempo máximo. Lo fija el ajuste **BackendCallTimeoutSeconds** (grupo *System*), en segundos: 600 por defecto.
+
+**Solución:**
+
+1. En los ajustes de la aplicación (*Settings*), busca **BackendCallTimeoutSeconds** y pon los segundos que necesites. Vacío o con un valor no válido vale 600; el máximo es 2000000.
+2. Guarda. El Frontend lo recoge del Backend en unos segundos, **sin reiniciar**.
+
+Antes de subirlo, mira si la operación se puede acortar: una llamada que tarda minutos tiene a la persona esperando. El [panel de la aplicación](../Help/Administration/HealthPanel.md) dice en qué gasta el tiempo.
+
 ### Bucle de redirecciones infinito tras un proxy inverso
 
 **Síntoma:** La aplicación no llega a cargar y el navegador redirige sin parar. Al inspeccionar la petición se ve una respuesta **307** cuya cabecera `location` es **idéntica a la URL solicitada**. No aparece ningún error en ninguna parte: ni en el Visor de eventos, ni en los logs de la aplicación, ni en los de IIS.

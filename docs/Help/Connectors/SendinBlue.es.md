@@ -2,7 +2,7 @@
 
 ![SendinBlue](../../docs_assets/images/SendinBlue/SendinBlue_Logo.png){ .fh-image-of-title }
 
-SendinBlue es una plataforma de automatización de marketing que te ayuda a compartir campañas de email y publicidad con clientes y otros destinatarios.
+SendinBlue, hoy **Brevo**, es una plataforma de automatización de marketing que te ayuda a compartir campañas de email y publicidad con clientes y otros destinatarios.
 
 Puedes acceder al área de integración de SendinBlue desde <flx-navbutton class="link" type="execprocess" processname="sysEditSettings" objectname="sysSettings" objectwhere="(Settings.[GroupName]='flx-sendinblue')" showprogress="false">aquí</flx-navbutton>.
 
@@ -260,3 +260,9 @@ Public Class SampleSendinBlue
 
 End Class
 ```
+
+## Contactos de una lista
+
+Para añadir contactos a una lista o quitarlos, usa `AddContactsToList` y `DeleteContactsFromList` con el id de la lista y los contactos **por id** (`IdsContacts`) **o por email** (`emailsContacts`). `DeleteContactsFromList` admite además `deleteAll` para vaciar la lista.
+
+Desde la 10.1 <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span> basta con los emails: antes, sin ids, las dos funciones fallaban con *Id or Email contact is mandatory*.

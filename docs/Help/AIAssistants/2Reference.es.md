@@ -50,6 +50,11 @@ Además, el asistente recibe:
 !!! tip "El asistente es tan bueno como las descripciones"
     Lo que gobierna al modelo son los **metadatos**: la descripción de IA de cada objeto (*AI description*), la descripción de cada propiedad para la API (*Description in API*, y *Show values in API* para que los codificados viajen con su texto), las descripciones de vistas y procesos, y el ajuste **`ApplicationDescription`** (qué es esta aplicación, para quién). Un objeto sin descripción se usa mal o no se usa.
 
+### Filtros sobre vistas y widgets con pestañas <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>
+
+- **En una vista, se filtra por lo que la vista devuelve.** Cuando el asistente lista, mide o hace un tablero sobre una **vista**, el filtro y el orden trabajan sobre las **columnas que devuelve la vista**, por su nombre, también las calculadas o las que comparten dos tablas. Un filtro escrito con la tabla delante, como hasta ahora, sigue valiendo. La condición propia de la vista y el filtro de seguridad del rol se aplican siempre, y un `OR` del filtro ya no puede saltárselas.
+- **El filtro al cambiar de pestaña en un widget.** En un tablero con pestañas, el filtro pasa a la otra pestaña si todos sus campos están en ella. Si no, la pestaña sale **sin el filtro** y lo dice en naranja: *Sin el filtro: sus campos no están en esta pestaña, así que se ve todo lo que este usuario puede ver*. Al volver a una pestaña que lo admite, el filtro vuelve.
+
 ---
 
 ## 1 bis. Lo que hay que rellenar para que el asistente acierte

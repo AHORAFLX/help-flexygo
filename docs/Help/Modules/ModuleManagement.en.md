@@ -7,15 +7,16 @@ Each page has a layout where it is possible to add different modules related to 
 In skin 2026, with **development mode** on, modules are arranged directly on the page, without opening the module manager:
 
 1. Open the page and press **Ctrl Shift M**, or open **Quick access** (the pill at the bottom right, **Ctrl Space**) and, under **Page**, choose **Place modules**.
-2. The **Placing modules** bar appears at the top, with the page name and its zones. Drag the modules between zones and change their order; the **Modules** panel lets you search the existing modules, add them or **Create a new module**. Each module has its menu to configure it, see its security and events or remove it from the page.
-3. With **Change layout** you choose another layout, and with **Free layout** each module gets its own place and size on a 12-column grid.
-4. **Save** writes the changes; **Discard** undoes them. The bar warns about what is worth knowing before saving: modules without a zone in the new layout move to the first one, a system page (origin 0) cannot be saved while working with another origin, and saving a generic page creates a new page.
+2. The **Placing modules** bar appears at the top, with the page name, its zones and how many changes you have made. The zones are visible all the time, with a quiet outline. A module **is taken from any point**, whole, and while you drag it a **line** shows where it will land; the picked module is marked as in the tour builder and named by its **module id**. The **Modules** panel lets you search the existing modules, add them or **Create a new module**.
+3. A **right click** on a module opens its actions: **Configure module**, **Security**, **Events**, **Relation filter** and **Remove from this page**. Since 10.1 there are no three dots on each module.
+4. The bar shows the **layout in use**; clicking it opens the others to choose another one. **Free layout** is a switch: on, each module gets its own place and size on a 12-column grid; off, the page goes back to the layout it had before, with its zones.
+5. **Save** writes the changes; **Discard** undoes them. The bar warns about what is worth knowing before saving: modules without a zone in the new layout move to the first one, a system page (origin 0) cannot be saved while working with another origin, and saving a generic page creates a new page.
 
 The page configuration opens with the **Page settings** button of the same bar, next to the tools to arrange the modules.
 
 <figure markdown="span">
   ![Placing modules in skin 2026](../../docs_assets/images/ModuleManagement/module-placer-2026.png)
-  <figcaption>Placing modules: the bar at the top and, on the right, the <b>Modules</b> panel (Spanish interface)</figcaption>
+  <figcaption>Placing modules: the bar at the top with the layout in use and the <b>Free layout</b> switch, the right-click menu of a module and, on the right, the <b>Modules</b> panel</figcaption>
 </figure>
 
 ## Skin 2026: letting each user order the modules

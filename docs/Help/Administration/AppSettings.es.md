@@ -54,7 +54,7 @@ Tiene dos pestañas, **Backend** y **Frontend**, una por proceso. Cada una ense�
 
 Algunos detalles de cómo se leen los valores:
 
-- **Las conexiones** son la de configuración y cada conexión de datos **activa** de la tabla de conexiones (`DbConnectionStrings`). Una tercera conexión es una tarjeta más dentro de **Bases de datos**. La cadena de conexión se enseña desmontada en sus partes.
+- **Las conexiones** son la de configuración y cada conexión de datos **activa** de la tabla de conexiones (`DbConnectionStrings`). Una tercera conexión es una tarjeta más dentro de **Bases de datos**. La cadena de conexión se enseña desmontada en sus partes. Junto a **Encrypt**, una explicación <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>: es el atributo de la cadena que obliga a **cifrar la comunicación** con SQL Server, y entonces el cliente valida el certificado del servidor, salvo que `TrustServerCertificate` diga que se fíe de él. No tiene que ver con el [cifrado de los appsettings](../../1Deployment/2ConfigWizard/EncryptedSettings.md), que protege los valores guardados en el fichero.
 - **Las contraseñas** no se enseñan nunca: solo si están **Configurada** o **Sin configurar**. El valor no llega al navegador ni siquiera al editar.
 - **Tareas cron** y **Trabajos de script** se enseñan al derecho: el fichero guarda `DisableCronJobs` y `DisableScriptJobs`, y la pantalla dice si las tareas **se ejecutan**. El interruptor encendido significa que las tareas están en marcha.
 - Un `*` en **Hosts permitidos** u **Orígenes de la API** lleva la marca **todos**: se acepta cualquiera.
@@ -156,6 +156,7 @@ El aviso no se pierde al recargar la página: el proceso compara esas claves con
 
 ## 6. Lo que no se cambia desde aquí
 
+- **El tiempo máximo de las llamadas al Backend.** No es una clave del `appsettings`, sino el ajuste **BackendCallTimeoutSeconds** de la aplicación; ver [Una operación larga se corta a los 10 minutos](../../4Troubleshooting/1Deployment.md).
 - **La conexión a la base de configuración** (`ConfConnectionString`). Cambiarla es cambiar la instalación, y un error dejaría sin acceso a la propia pantalla. Se cambia a mano en el `appsettings.json` del Backend.
 - **Lo que viene de una variable de entorno.** El fichero no tendría efecto, porque la variable manda. Hay que cambiar la variable (por ejemplo, en el `docker-compose` o en la configuración del contenedor).
 - **Las claves que no están en la lista**, que ni se enseñan ni se pueden escribir: `Kestrel`, `ProjectName` (con la base de datos en marcha manda la tabla de ajustes), `DatabaseNuget`, `JwtSettings`, `DataProtection` y las opcionales `ForwardedHeaders` y `HttpsRedirection`. Se editan en el fichero; ver [Referencia: appsettings.json](../../1Deployment/2ConfigWizard/AppSettingsReference.md).

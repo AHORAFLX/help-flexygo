@@ -81,6 +81,10 @@ Si prefieres escribirla, el modo **SQL** acepta la condición tal cual, con las 
 
 **Cómo comprobarlo:** como usuario del rol, la lista enseña solo sus registros, y el pie dice el total que ve. La lista de la web API (y la de un asistente de IA) también sale filtrada.
 
+**En cualquier lectura de un registro** <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>. La condición en **Ver** se aplica siempre que se lee un registro por su clave, desde cualquier pantalla o llamada, no solo en su ficha: el formulario de edición, un proceso, la web API o un asistente de IA. Un registro que el usuario no puede ver tampoco se abre en edición escribiendo su dirección. El filtro fijo del propio objeto admite las mismas variables entre llaves y tampoco deja pasar otras claves.
+
+**Al guardar, también los valores nuevos** <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>. La condición en **Editar** se comprueba con el registro tal como estaba **y** con los valores que se van a guardar. Así, un usuario limitado a una obra o a una empresa no puede guardar el registro dentro de otra que no ve: el guardado se rechaza con un mensaje claro y el registro se queda como estaba. Los objetos que se guardan con un proceso .NET siguen dejando esa comprobación al proceso.
+
 !!! note "Una condición en Ver decide sola"
     En **Ver**, si escribes una condición, es la condición la que decide si se ve el registro. En **Insertar**, **Editar** y **Borrar**, la condición se suma al permiso: con el permiso denegado no hay condición que valga.
 

@@ -81,6 +81,10 @@ If you would rather write it, **SQL** mode takes the condition as it is, with th
 
 **How to check it:** as a user of the role, the list shows only their records, and the footer gives the total they see. The web API's list (and an AI assistant's) comes filtered too.
 
+**On any read of a record** <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>. The condition on **View** applies whenever a record is read by its key, from any screen or call, not only on its record page: the edit form, a process, the web API or an AI assistant. A record the user cannot see does not open in edit mode by typing its address either. The object's own fixed filter accepts the same variables in braces and does not let other keys through either.
+
+**On saving, the new values too** <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>. The condition on **Edit** is checked against the record as it was **and** against the values about to be saved. That way, a user limited to one site or company cannot save the record into another one they cannot see: the save is refused with a clear message and the record stays as it was. Objects saved through a .NET process keep leaving that check to the process.
+
 !!! note "A condition on View decides on its own"
     On **View**, if you write a condition, it is the condition that decides whether the record is seen. On **Insert**, **Edit** and **Delete**, the condition is added to the permission: with the permission denied, no condition helps.
 

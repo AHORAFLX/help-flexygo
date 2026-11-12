@@ -7,15 +7,16 @@ Cada página tiene un diseño (layout) donde es posible añadir diferentes módu
 En la skin 2026, con el **modo desarrollo** encendido, los módulos se organizan directamente sobre la página, sin abrir el gestor de módulos:
 
 1. Abre la página y pulsa **Ctrl Mayús M**, o abre **Acceso rápido** (la pastilla de abajo a la derecha, **Ctrl Espacio**) y, en **Página**, elige **Colocar módulos**.
-2. Arriba aparece la barra **Colocando módulos**, con el nombre de la página y sus zonas. Arrastra los módulos entre zonas y cambia su orden; el panel **Módulos** permite buscar los módulos existentes, añadirlos o **Crear un módulo nuevo**. Cada módulo tiene su menú para configurarlo, ver su seguridad y eventos o quitarlo de la página.
-3. Con **Cambiar disposición** eliges otro diseño, y con **Disposición libre** cada módulo tiene su sitio y su tamaño en una rejilla de 12 columnas.
-4. **Guardar** escribe los cambios; **Descartar** los deshace. La barra avisa de lo que conviene saber antes de guardar: los módulos que no tienen zona en el diseño nuevo pasan a la primera, una página del sistema (origen 0) no se puede guardar trabajando con otro origen, y guardar una página genérica crea una página nueva.
+2. Arriba aparece la barra **Colocando módulos**, con el nombre de la página, sus zonas y cuántos cambios llevas. Las zonas se ven todo el rato, con un trazo discreto. Un módulo **se coge desde cualquier punto**, entero, y mientras lo arrastras una **línea** marca dónde va a caer; el módulo elegido se marca como en el editor de recorridos y se nombra por su **id de módulo**. El panel **Módulos** permite buscar los módulos existentes, añadirlos o **Crear un módulo nuevo**.
+3. El **botón derecho** sobre un módulo abre sus acciones: **Configurar el módulo**, **Seguridad**, **Eventos**, **Filtro de relación** y **Quitar de esta página**. Desde la 10.1 ya no hay tres puntos en cada módulo.
+4. La barra enseña la **disposición en uso**; al pulsarla se abren las demás para elegir otra. **Disposición libre** es un interruptor: activada, cada módulo tiene su sitio y su tamaño en una rejilla de 12 columnas; desactivada, la página vuelve a la disposición que tenía antes, con sus zonas.
+5. **Guardar** escribe los cambios; **Descartar** los deshace. La barra avisa de lo que conviene saber antes de guardar: los módulos que no tienen zona en el diseño nuevo pasan a la primera, una página del sistema (origen 0) no se puede guardar trabajando con otro origen, y guardar una página genérica crea una página nueva.
 
 La configuración de la página se abre con el botón **Ajustes de la página** de la misma barra, junto a las herramientas para organizar los módulos.
 
 <figure markdown="span">
   ![Colocar módulos en la skin 2026](../../docs_assets/images/ModuleManagement/module-placer-2026.png)
-  <figcaption>Colocar módulos: la barra de arriba y, a la derecha, el panel <b>Módulos</b></figcaption>
+  <figcaption>Colocar módulos: la barra de arriba con la disposición en uso y el interruptor <b>Free layout</b>, el menú del botón derecho de un módulo y, a la derecha, el panel <b>Modules</b></figcaption>
 </figure>
 
 ## Skin 2026: que cada usuario ordene los módulos

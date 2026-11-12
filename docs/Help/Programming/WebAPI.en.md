@@ -18,6 +18,9 @@ The Access Token is a credential that can be used by an application to access an
 
 You can request an access token using two ways:
 
+!!! tip "User name or email"
+    `username` takes the user name or the user's **email** <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>: `POST /token` looks the user up by name first and, if it is not found, by email, like the login. If the email is repeated in several users, it answers **401** (wrong credentials).
+
 #### Sending implicit user credentials
 
 #### Request:

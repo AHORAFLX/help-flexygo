@@ -101,21 +101,36 @@ With `ASPNETCORE_ENVIRONMENT=Production` the containers keep the passwords and k
 ## 3) Behavior when bringing up a new version
 
 - Run `docker compose up -d` with the new image.
-- If the **app version** > the **DB version**, the **frontend automatically enters maintenance mode**.
+- If the **app version** > **DB version**, the **frontend enters maintenance mode** automatically. Users see the **maintenance page** (the same as on IIS, in the corporate teal and with its customizations if it has any), which tells them it **reloads by itself** when the update is done.
 
 ---
 
 ## 4) Update process
 
-1. Go to **`/maintenance/update`**.
-2. Enter the **`MAINT_TOKEN`** (same value as in the frontend's *compose*).
-3. On confirming:
-    - The `DbConnectionStrings` connections with `Active = 1` and `UpdateDataModel = 1` are read.
-    - The **NuGet** package is downloaded (using `FLEXYGO_PACKAGES_ROOT`).
-    - The **updates for all marked DBs** are applied.
-4. When finished:
-    - Maintenance mode is **disabled**.
-    - The user is **redirected** to the login page.
+1. Go to **`/maintenance/update`**. The **Update available** screen says the application is already on the new version and the database is not yet.
+2. Enter the **Maintenance token**, the value of **`MAINT_TOKEN`** in the frontend's *compose*, and press **Update**.
+3. The update goes through **five steps**, with the same look as the IIS update wizard. Do not close the window:
+
+    | Step | What it does |
+    |---|---|
+    | **Backup** | Backup of the configuration and data databases before touching anything |
+    | **Working copy** | Restores the databases under another name: the one in use is not touched |
+    | **Schema update (DACPAC)** | Applies the new version to that copy |
+    | **Customized differences** | Compares your configuration with the new version's |
+    | **Database switch** | The updated copy becomes the database in use |
+
+    The connections of `DbConnectionStrings` with `Active = 1` and `UpdateDataModel = 1` are updated, with the **NuGet** package downloaded into `FLEXYGO_PACKAGES_ROOT`. **Show log** shows the log while it runs.
+
+4. When it ends, the **result screen** sums up the database and application versions, the databases updated, the backup and the **customized differences**. If there are differences to review (fields you changed that this version changes too), **they have the new version's value until you review them**. **Review differences** opens the versions page on the resolver, through the administrator login when there is no session; **Later** leaves it for another time. They also open from the version row of the skin2026 sidebar. See [Resolving the customized differences](UpdateFlow.md).
+5. The maintenance mode is **turned off**.
+
+If a step fails, **everything is rolled back**: the databases are as they were and Flexygo is still on the previous version. The screen says which step failed, and the detail is in **Show log**, in **View error details** and in the server log. Once it is fixed, start the update again from the maintenance page.
+
+### The versions page in Docker
+
+In Docker, the versions page **explains how to update with the images** and no longer offers update, switch or delete, which make no sense in a container. The release notes of each version and the resolution of the customized differences keep working.
+
+<!-- SCREENSHOT PENDING: /maintenance/update with the five steps running and the result screen with "Review differences", on a Docker install of the branch. -->
 
 ---
 
