@@ -38,7 +38,7 @@ The **How the panel works** button, on the **Overview** tab, opens the panel's h
 | **Investigate** | What is blocked now, deadlocks, the slowest queries, missing indexes and the changes made from the panel (6) |
 | **Live users** | The people online now, one row per person (7) |
 | **Configuration** | The configuration of the Backend and the Frontend (8) |
-| **Resource calculator** | What the application is, how much it grows and what load it has, to size the server (9) |
+| **Resource calculator** | The servers for a deployment from three questions, and what the application is, how much it grows and what load it has (9) |
 
 Every figure says where it comes from. When a permission is missing, the panel says which one instead of guessing or showing a zero.
 
@@ -85,6 +85,8 @@ In skin2026, **Health** recommends what the installation is missing: backups, Qu
 | **Query Store** | Turns it on for that database, with a maximum size of 1 GB (256 MB on Express) | `ALTER DATABASE … SET QUERY_STORE = OFF` |
 | **Maintenance** | Creates a job that on Sundays at 03:00 rebuilds or reorganizes the fragmented indexes of 1,000 pages or more and updates the statistics | Delete the database's **Flexygo - Maintenance** job |
 | **SQL Server memory** | When SQL Server shares the machine with the application, sets its maximum memory to leave room for the rest | Set `max server memory` back with `sp_configure` |
+
+What takes disk (Query Store, backups, index maintenance and the indexes suggested in **Investigate**) first checks the free space of the disk it would land on, adding up every database that would land on that same disk, and says its reach: Query Store is turned on **database by database**, so it says how many databases, the cap of each and the total. If the disk would drop below 15 % free, Query Store tries a smaller cap; and if it still does not fit, the recommendation offers no button and says to free some space first. Without the **VIEW SERVER STATE** permission it cannot check the disk, and says so.
 
 On the **Express** edition, which has no SQL Server Agent, the job recommendations create nothing: they warn and say what to do. And if SQL Server Agent is **stopped**, the panel warns about it, because a backup or maintenance job created would never run.
 
@@ -159,19 +161,34 @@ It is the same screen the control panel opens; what each block shows and how to 
 
 ## 9. Resource calculator
 
-What is needed to size the server:
+At the top, **Servers for a deployment** says which servers the deployment you describe needs, which may not be the current one. Answer three questions; everything else has a sensible default:
+
+- **How many people will work at the same time**: the ones working in the same minute, not the users with an account. By default, the busiest day measured here plus 25 %, or 40 when nothing is measured yet.
+- **Where the database will be**: on the same server as Flexygo or on another one.
+- **How they will use it**: light (lists and forms), medium (some reports and processes) or heavy (large data, big Excel files, long processes).
+
+**More options**, folded, lets you change the number of Flexygo applications on that server, the size of the data (by default, this installation's), the SQL Server edition, the **operating system** of the servers (Windows Server with desktop, Server Core, Windows 10/11 or Linux, each with its memory reserve), other databases sharing that SQL Server, the frontend and the backend on separate servers, and text search in very large lists. Its folded line says what you changed.
+
+The result shows below, at once: the total and **one card per server** with its **vCPU**, its **memory** (the whole server’s: the system, Flexygo with its margin and SQL Server) and its **disk**. Where SQL Server runs, the card also says what to set its **max server memory** to, which should always be set. **How it is calculated** shows each line of the sum marked **Measured** (measured in a load test of Flexygo) or **Estimated** (estimated where the test could not reach: the step from a desktop PC to a server, memory from the data size, the disk, the medium use). One-line warnings show when they matter: text search in huge lists (more hardware does not fix it), SQL Server Express that is not enough, or more than 6 vCPU for Flexygo (measure first).
+
+Under the cards, **Recommendations so it runs better** lists what to do for what was chosen: set max server memory, move SQL Server apart from 100 people on, the antivirus exclusions, the IIS application pool, fixed memory on virtual machines and, with Linux, each container’s limits. With Windows 10/11 it warns that it is not for production: IIS runs at most 10 requests at once.
+
+**Copy** leaves the result as text to paste wherever you want. Nothing is saved: when the panel is opened again, the questions return to their defaults.
+
+**This installation against the recommendations** checks those recommendations on this installation, with the application’s normal permissions: SQL Server’s memory cap, SQL Server on another server from 100 people, the IIS application pool, the antivirus exclusions, the power plan, fixed memory on a virtual machine and the remote desktop sessions. Each one says whether it is **met**, **not met** or **cannot be read** (and how to check it by hand). Only SQL Server’s memory cap is applied from here, with confirmation, recorded and with **Undo**; it needs the ALTER SETTINGS permission. What belongs to Windows and IIS is offered as a PowerShell script for an administrator to review and run: the application never runs as administrator.
+
+Below comes what the calculator takes from this installation:
 
 - **What the application is**: objects, pages, processes and tasks.
 - **The data**: the size and monthly growth of each database, and the SQL Server Express limit if that is the installed edition.
-- **The load**: the load measured now by **Metrics**, and a linear estimate for the number of people expected to use it.
-- **This server**: its processors and its memory.
+- **The load**: the load measured now by **Metrics**, and a linear estimate for the people of the deployment.
 
 <figure markdown="span">
-  ![Resource calculator: what the application is and this server](../../docs_assets/images/HealthPanel/calculadora.png)
-  <figcaption>Resource calculator: what the application is and this server</figcaption>
+  ![Resource calculator: the servers for 100 people with the database on another server](../../docs_assets/images/HealthPanel/calculadora.png)
+  <figcaption>Servers for a deployment: 100 people at the same time, database on another server, light use</figcaption>
 </figure>
 
-The hardware recommendation is pending a load test and gives no figures yet.
+Guide figures for 50, 100 and 200 people are in [System requirements](../../1Deployment/SystemRequirements.md).
 
 ---
 

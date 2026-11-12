@@ -38,7 +38,7 @@ El botón **How the panel works**, en la pestaña **Overview**, abre la ayuda de
 | **Investigate** | Lo que está bloqueado ahora, los interbloqueos, las consultas más lentas, los índices que faltan y los cambios hechos desde el panel (6) |
 | **Live users** | Las personas conectadas ahora, una fila por persona (7) |
 | **Configuration** | La configuración del Backend y del Frontend (8) |
-| **Resource calculator** | Qué es la aplicación, cuánto crece y qué carga tiene, para dimensionar el servidor (9) |
+| **Resource calculator** | Los servidores para un despliegue a partir de tres preguntas, y qué es la aplicación, cuánto crece y qué carga tiene (9) |
 
 Cada cifra dice de dónde sale. Cuando falta un permiso, el panel dice cuál en lugar de suponer o poner un cero.
 
@@ -85,6 +85,8 @@ En skin2026, **Health** recomienda lo que le falta a la instalación: copias de 
 | **Query Store** | Lo activa en esa base, con un tamaño máximo de 1 GB (256 MB en Express) | `ALTER DATABASE … SET QUERY_STORE = OFF` |
 | **Mantenimiento** | Crea una tarea que los domingos a las 03:00 reconstruye o reorganiza los índices fragmentados de 1.000 páginas o más y actualiza las estadísticas | Borrar la tarea **Flexygo - Maintenance** de la base |
 | **Memoria de SQL Server** | Cuando SQL Server comparte la máquina con la aplicación, fija su memoria máxima para dejar sitio al resto | Volver a poner `max server memory` con `sp_configure` |
+
+Lo que ocupa disco (Query Store, las copias, el mantenimiento de índices y los índices sugeridos en **Investigate**) mira antes el espacio libre del disco donde caería, sumando todas las bases que caerían en ese mismo disco, y dice su alcance: Query Store se activa **base a base**, así que dice cuántas bases, el tope de cada una y el total. Si el disco quedaría por debajo del 15 % libre, Query Store prueba un tope menor; y si aun así no cabe, la recomendación no ofrece el botón y dice que hay que liberar espacio antes. Sin el permiso **VIEW SERVER STATE** no puede mirar el disco, y lo dice.
 
 Si la edición es **Express**, que no tiene SQL Server Agent, las recomendaciones de tareas no crean nada: avisan y dicen qué hacer. Y si SQL Server Agent está **parado**, el panel lo advierte, porque una tarea de copia o de mantenimiento creada no llegaría a ejecutarse.
 
@@ -159,19 +161,34 @@ Es la misma pantalla que se abre desde el panel de control; qué enseña cada bl
 
 ## 9. Resource calculator
 
-Lo que hace falta para dimensionar el servidor:
+Arriba, **Servers for a deployment** dice qué servidores hacen falta para el despliegue que describas, que puede no ser el de ahora. Responde tres preguntas; todo lo demás tiene un valor razonable:
+
+- **Cuántas personas trabajarán a la vez**: las que trabajan en el mismo minuto, no los usuarios dados de alta. Por defecto, el día con más gente medido aquí más un 25 %, o 40 si aún no hay medida.
+- **Dónde estará la base de datos**: en el mismo servidor que Flexygo o en otro.
+- **Qué uso harán**: ligero (listas y fichas), intermedio (algunos informes y procesos) o pesado (datos grandes, Excel grandes, procesos largos).
+
+**More options**, plegado, deja cambiar el número de aplicaciones Flexygo en ese servidor, el tamaño de los datos (por defecto, el de esta instalación), la edición de SQL Server, el **sistema operativo** de los servidores (Windows Server con escritorio, Server Core, Windows 10/11 o Linux, cada uno con su reserva de memoria), otras bases que compartan ese SQL Server, el frontend y el backend en servidores separados, y la búsqueda de texto en listas muy grandes. Su línea plegada dice qué has cambiado.
+
+El resultado sale debajo, al momento: el total y **una tarjeta por servidor** con sus **vCPU**, su **memoria** (la del servidor entero: el sistema, Flexygo con su margen y SQL Server) y su **disco**. Donde corre SQL Server, la tarjeta dice además en cuánto fijar su **max server memory**, que hay que fijar siempre. **How it is calculated** enseña cada línea de la cuenta marcada como **Measured** (medida en una prueba de carga de Flexygo) o **Estimated** (estimada donde la prueba no llegó: el paso de un PC de sobremesa a un servidor, la memoria por tamaño de datos, el disco, el uso intermedio). Salen avisos de una línea cuando importan: la búsqueda de texto en listas enormes (más hardware no la arregla), SQL Server Express que no llega, o más de 6 vCPU para Flexygo (hay que medir antes).
+
+Debajo de las tarjetas, **Recommendations so it runs better** lista lo que conviene hacer para lo elegido: fijar el max server memory, separar SQL Server a partir de 100 personas, las exclusiones del antivirus, el grupo de aplicaciones de IIS, la memoria fija en máquinas virtuales y, con Linux, los límites de cada contenedor. Con Windows 10/11 avisa de que no es para producción: IIS atiende como mucho 10 peticiones a la vez.
+
+**Copy** deja el resultado como texto para pegarlo donde quieras. No se guarda nada: al volver a abrir el panel, las preguntas vuelven a sus valores por defecto.
+
+**This installation against the recommendations** comprueba esas recomendaciones en esta instalación, con los permisos normales de la aplicación: el tope de memoria de SQL Server, SQL Server en otro servidor a partir de 100 personas, el grupo de aplicaciones de IIS, las exclusiones del antivirus, el plan de energía, la memoria fija en máquina virtual y las sesiones de escritorio remoto. Cada una dice si **se cumple**, **no se cumple** o **no se puede leer** (y cómo comprobarla a mano). Solo el tope de memoria de SQL Server se aplica desde aquí, con confirmación, registrado y con **Undo**; necesita el permiso ALTER SETTINGS. Lo de Windows e IIS se ofrece como script de PowerShell para que lo revise y lo ejecute un administrador: la aplicación nunca se ejecuta como administrador.
+
+Debajo sigue lo que la calculadora toma de esta instalación:
 
 - **Qué es la aplicación**: objetos, páginas, procesos y tareas.
 - **Los datos**: el tamaño y el crecimiento mensual de cada base, y el límite de SQL Server Express si es la edición instalada.
-- **La carga**: la medida ahora por **Metrics**, y una estimación lineal para las personas que se espera que la usen.
-- **Este servidor**: sus procesadores y su memoria.
+- **La carga**: la medida ahora por **Metrics**, y una estimación lineal para las personas del despliegue.
 
 <figure markdown="span">
-  ![Resource calculator: qué es la aplicación y este servidor](../../docs_assets/images/HealthPanel/calculadora.png)
-  <figcaption>Resource calculator: qué es la aplicación y este servidor</figcaption>
+  ![Resource calculator: los servidores para 100 personas con la base de datos en otro servidor](../../docs_assets/images/HealthPanel/calculadora.png)
+  <figcaption>Servers for a deployment: 100 personas a la vez, base de datos en otro servidor, uso ligero</figcaption>
 </figure>
 
-La recomendación de hardware está pendiente de una prueba de carga y todavía no da cifras.
+Las cifras orientativas para 50, 100 y 200 personas están en [Requisitos del sistema](../../1Deployment/SystemRequirements.md).
 
 ---
 
