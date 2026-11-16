@@ -40,6 +40,9 @@ flowchart TD
 !!! warning "Permisos para detener procesos"
     Además de los permisos de escritura, el usuario del **Application Pool** necesita permisos para **detener procesos** (*kill process*) durante la actualización. Sin estos permisos, el actualizador no podrá detener la aplicación en ejecución antes de reemplazar los archivos binarios.
 
+!!! warning ".NET 10 para actualizar a la 10.1"
+    Desde la versión 10.1, Flexygo funciona sobre **.NET 10**. Antes de actualizar desde la 10.0, instala el Hosting Bundle de ASP.NET Core 10 en los servidores del frontend y del backend: el asistente lo comprueba en sus requisitos y no deja continuar sin él. Ver [Instalar .NET 10 antes de actualizar a la 10.1](Net10Runtime.md).
+
 ## Resolver las diferencias personalizadas <span class="fh-version-tag" title="Disponible desde la versión 10">10.0+</span>
 
 Si habías cambiado valores de la configuración que la versión nueva también trae cambiados, la actualización los deja como **diferencias para revisar** (*Update conflicts · Modified values that differ from the new version*). Se abren con el botón **Conflicts** de la versión instalada en **Version management** o, en skin2026, desde la fila de la versión del menú lateral (*n differences to review*).

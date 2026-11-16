@@ -79,6 +79,14 @@ Diagnostic guide for the most common problems when configuring and starting up F
 
 Before raising it, see whether the operation can be made shorter: a call that takes minutes keeps a person waiting. The [application panel](../Help/Administration/HealthPanel.md) tells where the time goes.
 
+### After updating, the application answers error 500.31 <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>
+
+**Symptom:** after updating to 10.1 or later, IIS answers with **HTTP Error 500.31** (*Failed to load ASP.NET Core runtime*).
+
+**Cause:** from 10.1 on, Flexygo runs on .NET 10 and the server does not have **ASP.NET Core 10**. The version wizard checks it before updating, but it cannot see it if the update was done some other way or if it was uninstalled afterwards.
+
+**Solution:** install the ASP.NET Core 10 Hosting Bundle and restart IIS. See [Install .NET 10 before updating to 10.1](../1Deployment/3Updater/Net10Runtime.md).
+
 ### Infinite redirect loop behind a reverse proxy
 
 **Symptom:** The application never loads and the browser keeps redirecting. Inspecting the request shows a **307** response whose `location` header is **identical to the requested URL**. No error appears anywhere: not in the Event Viewer, not in the application logs, not in the IIS logs.
@@ -144,7 +152,7 @@ dotnet --version
 dotnet --list-sdks
 ```
 
-The Flexygo project requires **.NET 9** for the backend/frontend. The MCP server requires **.NET 10**. If either is missing, download it from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
+The Flexygo project requires **.NET 10** for the backend/frontend from version 10.1 on (**.NET 9** with 10.0). The MCP server requires **.NET 10**. If either is missing, download it from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
 
 **Solution B — Open the correct directory:**
 

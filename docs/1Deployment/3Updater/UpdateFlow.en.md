@@ -40,6 +40,9 @@ flowchart TD
 !!! warning "Permissions to stop processes"
     In addition to write permissions, the **Application Pool** user needs permissions to **stop processes** (*kill process*) during the update. Without these permissions, the updater will not be able to stop the running application before replacing the binary files.
 
+!!! warning ".NET 10 to update to 10.1"
+    From version 10.1 on, Flexygo runs on **.NET 10**. Before updating from 10.0, install the ASP.NET Core 10 Hosting Bundle on the frontend and backend servers: the wizard checks it among its requirements and does not let you continue without it. See [Install .NET 10 before updating to 10.1](Net10Runtime.md).
+
 ## Resolving the customized differences <span class="fh-version-tag" title="Available since version 10">10.0+</span>
 
 If you had changed configuration values that the new version also changes, the update leaves them as **differences to review** (*Update conflicts · Modified values that differ from the new version*). They open with the **Conflicts** button of the installed version in **Version management** or, in skin2026, from the version row of the sidebar (*n differences to review*).

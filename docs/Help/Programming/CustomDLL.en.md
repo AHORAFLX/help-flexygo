@@ -2,7 +2,7 @@
 
 In some cases it's necessary to program functionalities which **flexygo** doesn't have. For this, it's possible to customize our own DLLs. It's necessary:
 
-1.  Create a new C# class library for **.NET 9** (`net9.0`, the same version as the **flexygo** libraries), for example with `dotnet new classlib -f net9.0`.
+1.  Create a new C# class library for the same .NET version as the **flexygo** libraries: **.NET 10** (`net10.0`) from version 10.1 on, or **.NET 9** (`net9.0`) with 10.0. For example, `dotnet new classlib -f net10.0`.
 2.  Add a reference to the **Flexygo.Library** NuGet package, which brings the **flexygo** libraries (Table 1). Use the same **flexygo** version as the application:
 
      ```xml

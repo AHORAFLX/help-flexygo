@@ -49,7 +49,7 @@ Flexygo is an AI Low-Code platform to build products fast thanks to it's easy to
 
 ## 🔄 Architecture evolution
 
-Flexygo has evolved from the classic .NET Framework-based model into a completely new architecture based on **.NET 9**.
+Flexygo has evolved from the classic .NET Framework-based model into a completely new architecture based on **.NET** (.NET 10 from version 10.1 on).
 
 Until now, the Flexygo model consisted of a **single web application** that contained the frontend, the backend and all its libraries within the same site.
 
@@ -64,7 +64,7 @@ This modular approach serves several key goals:
 - **Security**: by separating the components, you can host the frontend on a different server than the backend and the database. If the frontend server were compromised, there would be **no direct access to the data** or the internal logic.
 - **Scalability**: you can distribute the parts of the system across different physical or virtual environments.
 - **Flexibility**: it allows deploying customized solutions adapted to each customer or environment.
-- **Performance and maintenance**: using .NET 9 lets us work with the latest improvements in the .NET ecosystem in terms of performance, cross-platform support and ease of deployment.
+- **Performance and maintenance**: using .NET lets us work with the latest improvements in the .NET ecosystem in terms of performance, cross-platform support and ease of deployment.
 
 Building on this foundation, Flexygo keeps modernizing its whole ecosystem, securing its future and adapting it to today's enterprise development standards.
 

@@ -11,7 +11,7 @@
 El Asistente de Configuración deja lista una instalación nueva antes del primer inicio de sesión. Conecta el frontend con el backend, crea, actualiza o reutiliza las bases de datos, da nombre al proyecto y contraseña al usuario admin, y configura el correo. Todo se guarda en `appsettings.json` y en la base de datos de configuración, sin editar ningún archivo a mano.
 
 !!! info "De web.config a appsettings.json"
-    A diferencia de las aplicaciones .NET Framework donde la configuración residía en `web.config`, en Flexygo (basado en .NET 9) toda la configuración se gestiona a través de `appsettings.json`. El asistente se encarga de escribir y actualizar este archivo automáticamente.
+    A diferencia de las aplicaciones .NET Framework donde la configuración residía en `web.config`, en Flexygo (basado en .NET) toda la configuración se gestiona a través de `appsettings.json`. El asistente se encarga de escribir y actualizar este archivo automáticamente.
 
 ---
 

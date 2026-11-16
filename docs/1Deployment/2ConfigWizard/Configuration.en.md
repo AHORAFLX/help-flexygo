@@ -11,7 +11,7 @@
 The Configuration Wizard gets a new installation ready before the first sign-in. It connects the frontend with the backend, creates, updates or reuses the databases, names the project, sets the admin user's password and configures mail. Everything is saved to `appsettings.json` and to the configuration database, with no need to edit any file by hand.
 
 !!! info "From web.config to appsettings.json"
-    Unlike .NET Framework applications where the configuration lived in `web.config`, in Flexygo (based on .NET 9) all configuration is managed through `appsettings.json`. The wizard takes care of writing and updating this file automatically.
+    Unlike .NET Framework applications where the configuration lived in `web.config`, in Flexygo (based on .NET) all configuration is managed through `appsettings.json`. The wizard takes care of writing and updating this file automatically.
 
 ---
 

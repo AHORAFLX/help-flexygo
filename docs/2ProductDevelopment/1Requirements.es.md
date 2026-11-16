@@ -7,7 +7,7 @@ Antes de empezar a trabajar con un producto generado por la plantilla **Flexygo*
 ---
 
 !!! note "Versiones de .NET"
-    Los proyectos Flexygo requieren **.NET 9 SDK**. Si además vas a usar el servidor MCP (`flexygo-mcp`), este requiere **.NET 10 SDK** — consulta la sección [MCP › Prerrequisitos](./MCP/1Prerequisites.md) para más detalle.
+    Los proyectos Flexygo requieren el **.NET 10 SDK** desde la versión 10.1 (con la 10.0, el **.NET 9 SDK**). El servidor MCP (`flexygo-mcp`) también requiere el **.NET 10 SDK** — consulta la sección [MCP › Prerrequisitos](./MCP/1Prerequisites.md) para más detalle.
 
     Descarga desde [dotnet.microsoft.com](https://dotnet.microsoft.com/download).
 

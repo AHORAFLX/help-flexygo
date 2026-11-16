@@ -10,7 +10,7 @@ Before you begin, make sure your environment has:
 
 - **IIS** installed and configured (the installer can install it if it isn't)
 - **SQL Server 2017 or later** (can also optionally be installed from the installer)
-- **.NET Hosting Bundle** (installed automatically by the installer if its absence is detected)
+- **.NET Hosting Bundle**: the **ASP.NET Core 10** one from version 10.1 on (10.0 uses the .NET 9 one). The installer installs it if it is missing; to update an application you already have, see [Install .NET 10 before updating to 10.1](3Updater/Net10Runtime.md)
 - **Administrator permissions** on the machine
 
 ---

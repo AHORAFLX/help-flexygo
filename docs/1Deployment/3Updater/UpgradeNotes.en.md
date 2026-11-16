@@ -9,6 +9,7 @@ It is ordered by who notices it. If you only have a minute, start with the check
 | | Check | If… |
 |---|---|---|
 | ☐ | [SQL Server 2017 or later](#3-configuration-and-deployment) | the SQL server is older than SQL Server 2017 |
+| ☐ | [.NET 10 on the servers](Net10Runtime.md) | you are updating to 10.1 or later |
 | ☐ | [Process calls through the WebAPI](#1-integrations-through-the-webapi) | you have integrations that run processes with `/webapi/exec` |
 | ☐ | [Columns an integration reads](#only-the-defined-properties-are-served) | an integration reads columns that are not properties of the object |
 | ☐ | [Reverse proxy and IP lockout](#ip-lockout-after-failed-token-attempts) | the application is behind a proxy or a load balancer |
@@ -89,6 +90,7 @@ The **general** rules are new: they are set per process (by role, user or facult
 | What | Now | What to do |
 |---|---|---|
 | SQL server | The minimum requirement is **SQL Server 2017** or later | Update the SQL server before updating the application. See [System requirements](../SystemRequirements.md) |
+| The servers' .NET | From 10.1 on, Flexygo runs on **.NET 10** | Install the ASP.NET Core 10 Hosting Bundle before updating. See [Install .NET 10 before updating to 10.1](Net10Runtime.md) |
 | Configuration file | `appsettings.{Environment}.json` is loaded; `appsettings.Development.json` is not published | Check which file holds your configuration |
 | Updater packages | In `C:\ProgramData\Flexygo\Packages` (`FLEXYGO_PACKAGES_ROOT` wins if it exists) | Permissions and space on the new path |
 | Maintenance mode | It is turned on from the application's panel and keeps everyone out except the administrator who turned it on. The system processes `EnableMaintenanceMode` and `DisableMaintenanceMode` are withdrawn | If you called them from a button or an integration, use the panel |

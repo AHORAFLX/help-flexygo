@@ -4,7 +4,7 @@ Al generar los parámetros de la función cuyo proceso queremos añadir al entor
 
 ## Comprueba el framework y la ubicación
 
-A partir de la versión 10, los procesos se ejecutan en el Backend, que funciona sobre .NET 9. La DLL debe compilarse para .NET 9 (`<TargetFramework>net9.0</TargetFramework>` en el `.csproj`). Una DLL compilada para .NET Framework no se carga, aunque esté generada como `AnyCPU` o `x86`.
+A partir de la versión 10, los procesos se ejecutan en el Backend, que funciona sobre .NET: .NET 9 en la 10.0 y .NET 10 desde la 10.1. La DLL debe compilarse para la versión de .NET de tu Flexygo (`<TargetFramework>net10.0</TargetFramework>` en el `.csproj` desde la 10.1, `net9.0` en la 10.0). Una DLL `net9.0` también se carga en la 10.1. Una DLL compilada para .NET Framework no se carga, aunque esté generada como `AnyCPU` o `x86`.
 
 Copia la DLL en la carpeta del Backend. En la ruta del archivo del proceso, `~` es la carpeta del Backend (por ejemplo, `~/bin/MiLibreria.dll`); si la DLL no está en `bin`, Flexygo la busca en la raíz de esa carpeta.
 

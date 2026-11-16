@@ -12,7 +12,7 @@ This section summarizes a **generic** CI/CD flow applicable to GitHub Actions, G
 1. **Trigger**: on `push`, `pull_request`, or `merge`.
 2. **Checkout the repo**.
 3. **Prepare the environment**:
-    - In our case, .NET 9 SDK.
+    - In our case, the .NET 10 SDK (with 10.0, the .NET 9 SDK).
 4. **Restore dependencies**:
     - `dotnet restore`
 5. **Build the Solution**:

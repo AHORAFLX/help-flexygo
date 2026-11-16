@@ -109,7 +109,7 @@ The configuration collects:
 
 - `publish\<ProductName>.v<build number>.zip`, the published product;
 - `publish\DockerCompose<build number>.zip`, to deploy it with Docker;
-- `<ProductName>.InterfaceTest\bin\Debug\net9.0\tracing`, the interface tests' traces, to see what happened when one fails.
+- `<ProductName>.InterfaceTest\bin\Debug\net10.0\tracing` (`net9.0` with 10.0), the interface tests' traces, to see what happened when one fails.
 
 They are downloaded from each build's **Artifacts** tab.
 
@@ -134,7 +134,7 @@ They are downloaded from each build's **Artifacts** tab.
 
 ## What the agent needs
 
-- The **.NET 9 SDK**, to build and publish, and the **.NET 6 SDK**, for the test steps.
+- The **.NET 10 SDK** (with 10.0, the .NET 9 one), to build and publish, and the **.NET 6 SDK**, for the test steps.
 - **Node.js**, for the Frontend's TypeScript.
 - **sqlpackage**, to publish the databases.
 - A **SQL Server** where the test databases are created.

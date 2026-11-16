@@ -1,10 +1,10 @@
 # Flexygo architecture <span class="fh-version-tag" title="Available since version 10">10.0+</span>
 
-Since version 10, Flexygo runs on **.NET 9**, the current Microsoft platform, instead of .NET Framework. It is faster and safer, and it keeps receiving updates from Microsoft.
+Since version 10, Flexygo runs on **.NET**, the current Microsoft platform, instead of .NET Framework: 10.0 on .NET 9 and, from 10.1 on, on **.NET 10**. It is faster and safer, and it keeps receiving updates from Microsoft.
 
 The application is split into three parts that can run **together on one server or each on its own**:
 
-![Flexygo architecture: users, frontend, backend and SQL Server](../docs_assets/images/Architecture/net9-architecture-en.png)
+![Flexygo architecture: users, frontend, backend and SQL Server](../docs_assets/images/Architecture/net10-architecture-en.png)
 
 | Part | What it does |
 | --- | --- |
@@ -24,4 +24,4 @@ Before installing, check the [system requirements](SystemRequirements.md).
 
 ## Updating
 
-Flexygo is updated from the application itself with the version wizard, which checks the requirements before it starts and can undo an update. See [Flexygo Updater](3Updater/UpdateFlow.md).
+Flexygo is updated from the application itself with the version wizard, which checks the requirements before it starts and can undo an update. See [Flexygo Updater](3Updater/UpdateFlow.md). To go from 10.0 to 10.1, install .NET 10 on the servers first: see [Install .NET 10 before updating to 10.1](3Updater/Net10Runtime.md).
