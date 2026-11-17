@@ -1,84 +1,79 @@
 # Version 10.1
 
-Flexygo 10.1 brings the application’s health, metrics and settings together in one panel, and makes updates easier to manage. It also improves development tools, the interface, performance and security.
+Flexygo 10.1 helps you understand and optimize your application's health, and makes updates and deployments easier to manage. It also improves security, development workflows and the interface experience.
 
 ## Highlights
 
-### Health and resources panel
+### Application health and resources
 
-View alerts, recommendations, connected users and metrics, alongside application settings, in one panel. You can also review optimization suggestions, undo suggested indexes and check the change log. The panel is available to administrators and from the skin 2026 dashboard.
+View your application's alerts, recommendations, connected users, metrics and settings in one panel. You can also review optimization suggestions, undo suggested indexes and check the recorded changes; the panel is available to administrators and from the skin 2026 dashboard.
 
-![Health and resources panel](../../docs_assets/images/Versions/Version10_1/application-panel.png)
+![Application health and resources](../../docs_assets/images/Versions/Version10_1/application-panel.png)
 
-[More information: health panel](../../Help/Administration/HealthPanel.md)
+[More information: application health](../../Help/Administration/HealthPanel.md)
 
 ## Other new features
 
-### Updates and deployment
+### Installation and updates
 
-- **Schedule updates:** schedule, change or cancel them; they run in the background with notifications and a coordinated maintenance mode. [More information](../../1Deployment/3Updater/UpdateFlow.md)
-- **Background preparation:** the Updater can update itself and complete delegated preparations and updates even when they exceed the usual timeout; the nightly task prepares the next version and records the result. [More information](../../1Deployment/3Updater/UpdateFlow.md)
-- **Docker updates:** a wizard guides the update in five steps and shows a summary of the result. The version page explains how to update using images, and the maintenance page preserves customizations. [More information](../../1Deployment/3Updater/DockerUpdate.md)
-- **Resource calculator:** work out the recommended servers for a deployment based on expected usage, and check how your installation matches its recommendations.
-- **Export as a product:** when exporting a project, choose whether to include its data database. [More information](../../2ProductDevelopment/8ExportProject/2Reference.md)
+- **Scheduled updates:** schedule, change or cancel them; they run in the background with notifications and a coordinated maintenance mode. [More information](../../1Deployment/3Updater/UpdateFlow.md)
+- **Version preparation:** the Updater can update itself, complete delegated tasks that exceed the usual timeout and prepare the project's next version in the background. [More information](../../1Deployment/3Updater/UpdateFlow.md)
+- **Docker updates:** follow a five-step wizard and review a summary of the result when it finishes. [More information](../../1Deployment/3Updater/DockerUpdate.md)
 
-### Settings
+### Deployment
 
-- **Changes during development:** configuration changes take effect on the next request without reloading the cache.
-- **Timeout:** set how long frontend calls to the backend can last in the application settings. [More information](../../Help/Administration/AppSettings.md)
-- **Application settings:** administrators can view and change settings from the application settings screen. [More information](../../Help/Administration/AppSettings.md)
-- **Database connections:** the settings explain what the `encrypt` attribute means. [More information](../../1Deployment/2ConfigWizard/EncryptedSettings.md)
+- **Recommended resources:** calculate recommended servers for a deployment based on usage, and check how your installation compares with those recommendations.
+- **Product exports:** when exporting a project as a product, you can choose whether to include its data database. [More information](../../2ProductDevelopment/8ExportProject/2Reference.md)
+
+### Configuration and administration
+
+- **Applying changes:** in development, configuration, designer and MCP changes take effect on the next request without reloading the cache. [More information](../../Help/Administration/AppSettings.md)
+- **Application settings:** set how long frontend-to-backend calls can run, and view or change settings from the application settings screen. [More information](../../Help/Administration/AppSettings.md)
+- **Database connections:** the meaning of the `encrypt` attribute is explained when you configure them.
 
 ### Development tools
 
 - **C# 14:** built-in processes and views recompiled at runtime support this version.
 - **Collections:** configure them from the object workbench.
-- **Skin 2026 menu:** manage menu nodes with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
-- **Designer and MCP:** their changes take effect on the next request, without clearing the cache when data is saved.
-- **Tour editor:** markers follow the selected element as you scroll through the page.
-- **Module placement:** place modules with the right mouse button or by dragging them, and change the layout from a clearer toolbar. [More information](../../Help/Modules/ModuleManagement.md)
+- **Scripts:** they respect the user's culture and can wait for processes to finish.
+- **Tour and module designers:** markers follow the selected element as you scroll; place modules with the right mouse button or by dragging them, and change their layout from a clearer toolbar.
 
 ### AI and integrations
 
-- **Views for AI assistants:** assistants can query views with typed parameters and check that submitted values are valid. [More information](../../Help/AIAssistants/2Reference.md)
-- **Chat interactions:** the assistant can interact with Flexygo screens when the user approves. [More information](../../Help/AIAssistants/3Decisions.md)
 - **Brevo:** add or remove contacts from a list using only their email address. [More information](../../Help/Connectors/SendinBlue.md)
+- **AI queries:** assistants can query views with typed parameters and validate that submitted values are correct. [More information](../../Help/AIAssistants/2Reference.md)
+- **Actions from chat:** the assistant can interact with Flexygo screens if the user approves the action. [More information](../../Help/AIAssistants/3Decisions.md)
 
-### Interface
+### Interface and skins
 
-- **Quick search:** brings together favorites, recent pages and shortcuts; in skin 2026, search the active list with /. [More information](../../Help/Administration/Skin2026.md)
-- **Sidebar:** shows Import only when an import configuration is active.
-- **Skin 2022:** displays the settings and health panels with a clear design adapted to its colors. [More information](../../Help/Administration/HealthPanel.md)
-- **Skin 2026:** pages refresh and navigate with fewer delays and jumps; development mode starts automatically when designers sign in. [More information](../../Help/Administration/Skin2026.md)
+- **Quick search:** brings together favorites, recent pages and shortcuts; in the skin 2026, press / to search the active list. [More information](../../Help/Administration/Skin2026.md)
+- **Skin 2026 menu:** manage its nodes with the right mouse button. [More information](../../Help/Administration/Skin2026.md)
+- **Navigation and development:** skin 2026 pages navigate with fewer waits and jumps, and its development mode turns on automatically when designers sign in. [More information](../../Help/Administration/Skin2026.md)
+- **Startup notices:** they appear in an orderly way, and version updates include patches and betas.
 
 ### Reports and performance
 
-- **Report designer text:** more text is translated into Spanish, Catalan, French, Italian, Portuguese and German.
-- **Excel export:** export reports and lists at the same time without the files getting mixed up.
-- **Page and process loading:** they open faster by reusing their definitions in memory.
-- **Loading and updates:** settings and several screens load faster; database updates show progress through their stages and tables.
+- **Excel exports:** export reports and lists at the same time without their files getting mixed up.
+- **Faster loading:** pages, modules, processes, settings and several screens reuse definitions in memory to open sooner.
+- **Database updates:** show the progress of their phases and tables.
 
-### Security
+### Security and processes
 
-- **Role-based editing:** role restrictions also apply when saving values. [More information](../../Help/Administration/RolesAndPermissions/1Overview.md)
-- **Visibility filters:** they apply when reading records by key from any screen or call. [More information](../../Help/Administration/RolesAndPermissions/1Overview.md)
-
-### Processes and scripts
-
-- **Process buttons:** generic process buttons can be set up without an icon.
-- **Scripts:** respect the user's culture settings and can wait for processes to finish.
+- **Process parameters:** configured values are retained for hidden or locked parameters.
+- **Edit permissions:** role restrictions also apply when saving values. [More information](../../Help/Administration/RolesAndPermissions/1Overview.md)
+- **Record visibility:** filters apply when reading records by key from any screen or call. [More information](../../Help/Administration/RolesAndPermissions/1Overview.md)
 
 ## Fixes
 
 ??? note "See the fixes in this version"
 
-    - **Settings:** database connection handling, immediate saving when the cache is disabled, and sending diagnostic and product logs are corrected.
-    - **Form designer:** you can resize fields again after adding or removing them, or switching tabs.
-    - **Reports:** related reports use the correct record and filters; Crystal Reports also works with Windows authentication.
-    - **Home:** the Health, Version and License cards keep their content while refreshing.
-    - **Sign-in:** LDAP validates the password against the directory again.
-    - **Integrations:** external connections to MySQL 8.0 and later, an issue with the certificate key password, and a security vulnerability in the MCP application SDK are fixed.
-    - **AI assistants:** filtering and sorting by columns work again, including calculated and shared columns.
-    - **Interface:** issues with pages, menus and views after a busy sign-in, notification counts, titles, security notices, and several images and styles are fixed.
-    - **Security:** entered data is displayed as safe text and does not run template code; the WebAPI and MCP only run processes on the objects they are defined for. [More information](../../Help/Administration/RolesAndPermissions/4WebAPIMCP.md)
-    - **Processes and scheduled tasks:** processes on filtered lists with composite keys work again, and scheduled tasks stop correctly when the application is restarted or updated in IIS.
+    - **Configuration:** it no longer displays or accepts database connections, saves settings immediately when the cache is disabled, and sends diagnostic and product logs again.
+    - **Filters and conditions:** filters, searches and conditions accept values with quotation marks, accents or braces; additional conditions for lists, charts, kanban, planners and records are validated before being applied.
+    - **Forms:** resizing designer fields works again after adding or removing items, or switching tabs.
+    - **Reports:** related reports use the correct record and filters, and Crystal Reports can be generated from databases using Windows authentication.
+    - **Sign-in:** LDAP access validates the password against the directory again.
+    - **Integrations:** external connections work with MySQL 8.0 and later, an issue with the certificate key password is fixed, and MCP includes an SDK version with a security fix.
+    - **AI assistant:** it can filter and sort by each view's columns, including calculated and shared columns.
+    - **Interface and notifications:** pages, menus and views work after a busy sign-in; fixes cover notice counts, duplicate columns, new record titles, security notices, layout images and the appearance of unread notifications in skin 2022.
+    - **Processes and scheduled tasks:** processes on filtered lists support objects with composite keys and no unique identifier; tasks stop correctly when the application restarts or updates in IIS.
+    - **Security:** data entered in records is displayed as safe text and does not run template code; the WebAPI and MCP run each process only on the object it is defined for. [More information](../../Help/Administration/RolesAndPermissions/4WebAPIMCP.md)
