@@ -177,6 +177,13 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Configuration:** New databases use SIMPLE recovery, and updates preserve the existing model.
     - **Updater:** Updates are no longer blocked if SQL Server does not support compressed backups.
     - **WebAPI Security:** The WebAPI works after a new installation in Docker without having to restart the application.
+    - **Configuration:** View parameters clearly indicate when a value is not of the expected type.
+    - **Filters:** Filters and searches find text containing quotation marks, accents, or braces.
+    - **Forms:** You can continue resizing designer fields after adding, deleting, or moving tabs.
+    - **Interface:** Invalid page conditions display a clear message instead of a database error.
+    - **Processes:** Hidden or locked process parameters retain the configured values.
+    - **Processes:** Processes can be run on collections whose objects do not have a unique identifier field.
+    - **Security:** Templates display saved data as text, without executing code.
 
 ## Deprecated
 
