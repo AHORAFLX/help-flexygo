@@ -177,6 +177,13 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Configuración:** Las bases de datos nuevas usan recuperación SIMPLE y las actualizaciones conservan el modelo existente.
     - **Actualizador:** Las actualizaciones ya no se bloquean si SQL Server no admite copias de seguridad comprimidas.
     - **Seguridad de la WebAPI:** La WebAPI funciona tras una instalación nueva en Docker sin tener que reiniciar la aplicación.
+    - **Configuración:** Los parámetros de vista indican claramente cuando un valor no es del tipo esperado.
+    - **Filtros:** Los filtros y las búsquedas encuentran textos con comillas, tildes o llaves.
+    - **Formularios:** Puedes seguir redimensionando campos del diseñador después de añadir, eliminar o mover pestañas.
+    - **Interfaz:** Las condiciones de página no válidas muestran un mensaje claro en lugar de un error de base de datos.
+    - **Procesos:** Los parámetros de proceso ocultos o bloqueados conservan los valores configurados.
+    - **Procesos:** Los procesos pueden ejecutarse en colecciones cuyos objetos no tienen un campo identificador único.
+    - **Seguridad:** Las plantillas muestran los datos guardados como texto, sin ejecutar código.
 
 ## Obsoleto
 
