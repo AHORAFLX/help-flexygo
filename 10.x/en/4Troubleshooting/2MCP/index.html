@@ -1340,6 +1340,8 @@
       
         
       
+        
+      
     
     
     
@@ -1372,6 +1374,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2ProductDevelopment/MCP/0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1875,6 +1900,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-agent-cannot-save-a-module-a-plugin-or-a-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The agent cannot save a module, a plugin or a process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-development-does-not-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      The development does not close
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-flexygo-panel-does-not-show" class="md-nav__link">
     <span class="md-ellipsis">
       The Flexygo panel does not show
@@ -1887,6 +1930,24 @@
   <a href="#after-an-update-the-agent-does-not-see-what-is-new" class="md-nav__link">
     <span class="md-ellipsis">
       After an update, the agent does not see what is new
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-flexygo-mcp-fails-because-the-file-is-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating flexygo-mcp fails because the file is in use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-agent-cannot-check-the-application-in-the-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      The agent cannot check the application in the browser
     </span>
   </a>
   
@@ -9842,7 +9903,7 @@ or in PowerShell:
 </li>
 <li>
 <p>If it is not there, install it manually:
-   </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp
+   </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp<span class="w"> </span>--add-source<span class="w"> </span>https://nuget.ahorabh.com/v3/index.json
 </span></code></pre></div><p></p>
 </li>
 <li>
@@ -9857,8 +9918,10 @@ or in PowerShell:
 </div>
 <h2 id="the-flx-commands-do-not-show">The <code>/flx-*</code> commands do not show<a class="headerlink" href="#the-flx-commands-do-not-show" title="Permanent link">¶</a></h2>
 <p><strong>Symptom:</strong> The server is connected, but typing <code>/flx-</code> shows no command.</p>
-<p><strong>Cause:</strong> The server installs the commands in the project when it starts, and the chat was opened before that.</p>
-<p><strong>Solution:</strong> Open a new chat in the project. If they still do not show, ask the agent to sync the Flexygo commands and open a chat again.</p>
+<p><strong>Cause:</strong> The server installs the commands in the project when it starts, and the session was opened before that.</p>
+<p><strong>Solution:</strong> Reopen the project in Claude Code (in VS Code, <em>Developer: Reload Window</em>), which picks up the commands and the project's instructions. If they still do not show, install them from a terminal opened in the project folder and reopen it:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flexygo-mcp<span class="w"> </span>--sync-skills<span class="w"> </span>.
+</span></code></pre></div>
 <h2 id="the-tools-fail-with-database-errors">The tools fail with database errors<a class="headerlink" href="#the-tools-fail-with-database-errors" title="Permanent link">¶</a></h2>
 <p><strong>Symptom:</strong> The tools show, but all of them return connection errors or say there are no connection strings.</p>
 <p><strong>Cause A:</strong> The Backend's <code>appsettings</code> has no <code>ConfConnectionString</code> and <code>DataConnectionString</code>.</p>
@@ -9869,22 +9932,42 @@ or in PowerShell:
 <p><strong>Cause:</strong> The running application keeps the object definitions in memory and does not read them again. What the agent writes is in the database, but the application does not see it yet. It is not a configuration error.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>The first time, the agent asks for your Flexygo password to reload the cache. It is kept in memory only, for that session, and from then on the cache reloads by itself after each change.</li>
+<li>After each change, the server reloads the cache by itself. For that it signs in with a user allowed to do it: if the project keeps the password of a test user who is, it uses it; if not, the agent asks you for yours once. It is kept in memory only, for that session.</li>
 <li>If the Backend is on another computer, the agent tells you its name and asks before sending your credentials to it. See <a href="../../2ProductDevelopment/MCP/3Configuration/#security-checks">Security checks</a>.</li>
 <li>If you would rather not give the password, use the <strong>Reload Cache</strong> button in the users list, or restart the Backend.</li>
 <li>If you had the screen open in the browser, load it again.</li>
 </ol>
+<h2 id="the-agent-cannot-save-a-module-a-plugin-or-a-process">The agent cannot save a module, a plugin or a process<a class="headerlink" href="#the-agent-cannot-save-a-module-a-plugin-or-a-process" title="Permanent link">¶</a></h2>
+<p><strong>Symptom:</strong> The agent says the server refused an HTML module, a plugin, a process parameter, a procedure or a view.</p>
+<p><strong>Cause:</strong> What it tried to save is something the server will not let it build: loading code by hand or from a CDN, putting inline code (<code>onclick</code> and the like) in an HTML module, deciding by comparing with the <code>'admins'</code> role, taking the user or the role from the browser, or building SQL at run time without your permission.</p>
+<p><strong>Solution:</strong> The refusal says what to use instead, and the agent does it that way. It is not a fault: see <a href="../../2ProductDevelopment/MCP/6Workflow/#what-the-agent-does-not-build">What the agent does not build</a>.</p>
+<h2 id="the-development-does-not-close">The development does not close<a class="headerlink" href="#the-development-does-not-close" title="Permanent link">¶</a></h2>
+<p><strong>Symptom:</strong> Everything is built and verified, but the status keeps asking for <code>/flx-security</code>, <code>/flx-quality</code> or <code>/flx-release</code>.</p>
+<p><strong>Cause A:</strong> A security rule lacks its try as the role. A rule that takes something away only passes if the attempt was <strong>refused</strong>.</p>
+<p><strong>Cause B:</strong> A quality quota is over its limit and has no reason recorded.</p>
+<p><strong>Cause C:</strong> The security audit of <code>/flx-release</code> has a high finding open. A fix built after the audit reopens it, and <code>/flx-release</code> audits again what changed.</p>
+<p><strong>Cause D:</strong> The final check came out red: a test that fails, a walk that did not get to run, or demo data that does not load on a new database. The <code>&lt;database&gt;_release</code> databases are kept so you can look at what happened.</p>
+<p><strong>Solution:</strong> Type <code>/flx-status</code>: it says which rule, quota, finding or part of the final check fails. Fix the rule and try it again; bring each quota under its limit or say why it stays that way; close each high finding by fixing it or accepting it yourself; and let the fix for the final check be built as one more task of the last block, with <code>/flx-execute</code>, before going back to <code>/flx-release</code>. The audit is not made by the chat that built the application, but by a separate agent. See <a href="../../2ProductDevelopment/MCP/6Workflow/#security-who-may-do-what">Security: who may do what</a>, <a href="../../2ProductDevelopment/MCP/6Workflow/#the-security-audit">The security audit</a>, <a href="../../2ProductDevelopment/MCP/6Workflow/#the-quality-quotas">The quality quotas</a> and <a href="../../2ProductDevelopment/MCP/6Workflow/#the-final-check-flx-release">The final check</a>.</p>
 <h2 id="the-flexygo-panel-does-not-show">The Flexygo panel does not show<a class="headerlink" href="#the-flexygo-panel-does-not-show" title="Permanent link">¶</a></h2>
 <p><strong>Symptom:</strong> You see neither the band above the chat nor the side pane.</p>
-<p><strong>Cause A:</strong> The one-time step <code>flexygo-mcp --enable-panel</code> has not been run on this computer.</p>
+<p><strong>Cause A:</strong> Claude Code does not know where the panel is on this computer: the one-time step <code>flexygo-mcp --enable-panel</code> has not been run.</p>
 <p><strong>Cause B:</strong> The chat was opened before turning it on: the panel shows when you open a new chat or session.</p>
 <p><strong>Cause C:</strong> The project has the panel turned off in its <code>.claude/settings.json</code>.</p>
 <p><strong>Cause D:</strong> You are using Claude Code with no interface (<code>claude -p</code>), where there is no panel.</p>
 <p><strong>Solution:</strong> See <a href="../../2ProductDevelopment/MCP/7PanelAndBoard/#how-to-turn-on-the-panel-and-the-board">How to turn on the panel and the board</a>.</p>
 <h2 id="after-an-update-the-agent-does-not-see-what-is-new">After an update, the agent does not see what is new<a class="headerlink" href="#after-an-update-the-agent-does-not-see-what-is-new" title="Permanent link">¶</a></h2>
 <p><strong>Symptom:</strong> You updated the server with <code>dotnet tool update -g flexygo-mcp</code>, but the agent does not use the new tools or parameters.</p>
-<p><strong>Cause:</strong> A chat already under way keeps the list of tools it received when it started.</p>
+<p><strong>Cause:</strong> A chat already under way keeps the server and the list of tools it received when it started. The status line says so: <code>server X runs, Y installed → new chat</code>.</p>
 <p><strong>Solution:</strong> Open a new chat.</p>
+<h2 id="updating-flexygo-mcp-fails-because-the-file-is-in-use">Updating <code>flexygo-mcp</code> fails because the file is in use<a class="headerlink" href="#updating-flexygo-mcp-fails-because-the-file-is-in-use" title="Permanent link">¶</a></h2>
+<p><strong>Symptom:</strong> <code>dotnet tool update -g flexygo-mcp</code> fails with <code>Access to the path ... is denied</code> or says the file is in use.</p>
+<p><strong>Cause:</strong> The server is running: Claude Code, VS Code or another client has it open.</p>
+<p><strong>Solution:</strong> Close the sessions of Claude Code and of the other clients that use the server, update, and reopen the project.</p>
+<h2 id="the-agent-cannot-check-the-application-in-the-browser">The agent cannot check the application in the browser<a class="headerlink" href="#the-agent-cannot-check-the-application-in-the-browser" title="Permanent link">¶</a></h2>
+<p><strong>Symptom:</strong> The agent says it cannot open the browser, or the <code>playwright</code> server does not show as connected in <code>/mcp</code>.</p>
+<p><strong>Cause A:</strong> Node.js (with <code>npx</code>) or Google Chrome is missing on the computer.</p>
+<p><strong>Cause B:</strong> The <code>playwright</code> entry was just added to <code>.mcp.json</code>, and a session already running keeps the servers it started with.</p>
+<p><strong>Solution:</strong> Install what is missing (see the <a href="../../2ProductDevelopment/MCP/1Prerequisites/#nodejs-and-google-chrome">prerequisites</a>) and reopen the project (in VS Code, <em>Developer: Reload Window</em>). If Claude Code asks whether to use the project's <code>playwright</code> server, accept.</p>
 
 
 
@@ -9967,6 +10050,24 @@ or in PowerShell:
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-agent-cannot-save-a-module-a-plugin-or-a-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The agent cannot save a module, a plugin or a process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-development-does-not-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      The development does not close
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-flexygo-panel-does-not-show" class="md-nav__link">
     <span class="md-ellipsis">
       The Flexygo panel does not show
@@ -9979,6 +10080,24 @@ or in PowerShell:
   <a href="#after-an-update-the-agent-does-not-see-what-is-new" class="md-nav__link">
     <span class="md-ellipsis">
       After an update, the agent does not see what is new
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-flexygo-mcp-fails-because-the-file-is-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating flexygo-mcp fails because the file is in use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-agent-cannot-check-the-application-in-the-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      The agent cannot check the application in the browser
     </span>
   </a>
   

@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1590,9 +1615,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#split-the-phases-when-the-task-is-complex" class="md-nav__link">
+  <a href="#let-the-flow-split-the-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Split the phases when the task is complex
+      Let the flow split the work
     </span>
   </a>
   
@@ -1602,15 +1627,6 @@
   <a href="#ask-for-a-review-before-running-data-changes" class="md-nav__link">
     <span class="md-ellipsis">
       Ask for a review before running data changes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#give-context-at-the-start-of-each-conversation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Give context at the start of each conversation
     </span>
   </a>
   
@@ -1640,9 +1656,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-a-checkpoint-commit-before-iterating" class="md-nav__link">
+  <a href="#accept-each-blocks-commit" class="md-nav__link">
     <span class="md-ellipsis">
-      Make a checkpoint commit before iterating
+      Accept each block's commit
     </span>
   </a>
   
@@ -9874,17 +9890,18 @@
 
 
 <h1 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h1>
-<p>These recommendations assume the <code>flexygo-mcp</code> server is connected to Claude Code. If you haven't set it up yet, see <a href="../2Usage/">Basic use</a> first.</p>
+<p>These recommendations assume the <code>flexygo-mcp</code> server is connected to Claude Code. If you haven't set it up yet, see <a href="../2Usage/">Basic use</a> first. To see how to work by talking to the assistant, see the <a href="../0Guide/">Guide</a>.</p>
 <hr>
 <h2 id="recommended-model">Recommended model<a class="headerlink" href="#recommended-model" title="Permanent link">¶</a></h2>
-<p>Use a current Claude model. For thinking and deciding (<code>/flx-context</code>, <code>/flx-plan</code>, <code>/flx-discuss</code>), use the most capable model you have; for executing a block already decided (<code>/flx-execute</code>, <code>/flx-verify</code>), a faster and cheaper one is enough.</p>
+<p>Use a current Claude model. For thinking and deciding (<code>/flx-plan</code>, <code>/flx-discuss</code>, <code>/flx-review</code>, <code>/flx-quality</code> and the security audit of <code>/flx-release</code>), use the most capable model you have; for building and checking (<code>/flx-context</code>, <code>/flx-execute</code>, <code>/flx-security</code>, <code>/flx-help</code>, <code>/flx-api</code>, <code>/flx-release</code>…), a faster and cheaper one is enough. The agent recommends the one for each phase: see <a href="../6Workflow/#the-model-for-each-phase">The model for each phase</a>.</p>
 <hr>
 <h2 id="managing-the-context-window">Managing the context window<a class="headerlink" href="#managing-the-context-window" title="Permanent link">¶</a></h2>
 <p>This is the factor that most affects the quality of the work with the agent. As the conversation grows, the agent starts to lose coherence, forgets earlier instructions and makes mistakes it wouldn't make with a clean context. Every message in a long conversation also costs more.</p>
 <p><strong>Practical rules:</strong></p>
 <ul>
 <li><strong>A new chat for each phase or block.</strong> The server keeps a checkpoint of each development, so a new chat resumes the work without rereading the previous conversation: type <code>/flx-status</code> or the next command. See <a href="../6Workflow/#resuming-without-paying-for-the-whole-conversation">Resuming the work</a>.</li>
-<li><strong>Heed the status line's warning.</strong> When the context fills up, the Flexygo status line says so with <code>context N% → new chat</code>.</li>
+<li><strong>Heed the status line's warning.</strong> When the context fills up, the Flexygo status line says so with <code>context N% → new chat</code>, from 80 %.</li>
+<li><strong>Accept the new chat the agent offers.</strong> In a very long chat, when a task or a block closes, it proposes going on in a new one and gives you the message to start it.</li>
 <li><strong>Don't use the same conversation to plan and to execute.</strong> The analysis or discussion phase uses up context that is then needed for the execution.</li>
 <li><strong>For <code>/flx-build-product</code>, always start with a clean context.</strong></li>
 </ul>
@@ -9900,7 +9917,7 @@
 </div>
 <hr>
 <h2 id="follow-the-command-flow">Follow the command flow<a class="headerlink" href="#follow-the-command-flow" title="Permanent link">¶</a></h2>
-<p>The <code>/flx-*</code> commands take the work phase by phase: context, plan, decisions, execution block by block, review, verification, tests, quality, help and, if needed, the API. Each phase is the gate to the next, so you don't need to remember what comes next: the agent, the panel and <code>/flx-status</code> tell you. See the <a href="../6Workflow/">whole flow</a>.</p>
+<p>The <code>/flx-*</code> commands take the work phase by phase: context, plan, decisions, execution block by block (each block is checked in the browser and tested in its own chat), review, security, quality, help, the API if needed, and the final check (<code>/flx-release</code>: security audit, delivery documents and the product published from scratch with all its tests). Each phase is the gate to the next, so you don't need to remember what comes next: the agent, the panel and <code>/flx-status</code> tell you. See the <a href="../6Workflow/">whole flow</a>.</p>
 <hr>
 <h2 id="how-to-give-effective-instructions">How to give effective instructions<a class="headerlink" href="#how-to-give-effective-instructions" title="Permanent link">¶</a></h2>
 <h3 id="always-identify-the-object-youre-working-on">Always identify the object you're working on<a class="headerlink" href="#always-identify-the-object-youre-working-on" title="Permanent link">¶</a></h3>
@@ -9925,47 +9942,22 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Use the Color Picker MCP App. Don't modify anything else about the style.
 </span></code></pre></div>
 <hr>
-<h3 id="split-the-phases-when-the-task-is-complex">Split the phases when the task is complex<a class="headerlink" href="#split-the-phases-when-the-task-is-complex" title="Permanent link">¶</a></h3>
-<p>If a task has several parts, ask for them in steps and wait for confirmation between them. Don't throw everything into a single prompt.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">A prompt that can spiral out of control</label><label for="__tabbed_2_2">Same work, under control</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Create the Order entity, add the relationship with Customer, generate the
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>creation form, and update the navigation menu
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<p></p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Step 1: Create the Order entity with the fields: id, date, total, customerId (FK to Customer).
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Once you have it, confirm and wait.
-</span></code></pre></div>
-<em>(After confirmation)</em>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Step 2: Generate the creation form for the Order entity.
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Once you have it, confirm and wait.
-</span></code></pre></div><p></p>
-</div>
-</div>
-</div>
+<h3 id="let-the-flow-split-the-work">Let the flow split the work<a class="headerlink" href="#let-the-flow-split-the-work" title="Permanent link">¶</a></h3>
+<p>If a task has several parts (a new entity, its relation, its form and its menu option), don't split it into messages yourself: ask for it with <code>/flx-new-development</code> and <code>/flx-plan</code>, which split it into blocks sized to a chat and ask you first whatever needs deciding.</p>
+<p>Nor do you need to describe the state of the project to the agent: before changing something, it reads its configuration. Naming the object you work on is enough.</p>
 <hr>
 <h3 id="ask-for-a-review-before-running-data-changes">Ask for a review before running data changes<a class="headerlink" href="#ask-for-a-review-before-running-data-changes" title="Permanent link">¶</a></h3>
 <p>For any operation that modifies the database, ask the agent to describe what it's going to do before executing it:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Before running any change to the database, explain exactly which
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>operations you're going to perform and wait for my confirmation.
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Before running any change to the database, explain exactly which
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>operations you're going to perform and wait for my confirmation.
 </span></code></pre></div>
-<hr>
-<h3 id="give-context-at-the-start-of-each-conversation">Give context at the start of each conversation<a class="headerlink" href="#give-context-at-the-start-of-each-conversation" title="Permanent link">¶</a></h3>
-<p>If the task starts from a specific state of the project, orient the agent before asking for anything:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>I'm in the "OrderManagement" module. The Order entity has the fields:
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>id, date, total, status (enum: Pending/Shipped/Delivered), customerId.
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>I want to add a status filter in the main listing.
-</span></code></pre></div>
-<p>The agent will work on what you describe to it — don't assume it "knows" the current state of your project.</p>
 <hr>
 <h2 id="tips-for-using-claude-code">Tips for using Claude Code<a class="headerlink" href="#tips-for-using-claude-code" title="Permanent link">¶</a></h2>
 <ul>
 <li>If the agent doesn't use the Flexygo tools when it should, remind it explicitly: <code>"Use the Flexygo MCP tools for this"</code>.</li>
 <li>When the agent proposes several approaches, pick one before continuing. Sustained ambiguity uses up context without progress.</li>
 <li>If an answer was wrong, correct it in the next message before continuing with the task — don't ignore it or the agent will build on the error.</li>
-<li>When you update the server (<code>dotnet tool update -g flexygo-mcp</code>), open a <strong>new chat</strong>: a chat already under way keeps the tools it started with.</li>
+<li>When you update the server (<code>dotnet tool update -g flexygo-mcp</code>), open a <strong>new chat</strong>: a chat already under way keeps the tools it started with. The server tells you when a new version is published, and the status line says <code>server X runs, Y installed → new chat</code> while the chat is still on the previous version.</li>
 </ul>
 <hr>
 <h2 id="verify-that-the-agent-is-using-the-tools">Verify that the agent is using the tools<a class="headerlink" href="#verify-that-the-agent-is-using-the-tools" title="Permanent link">¶</a></h2>
@@ -9978,15 +9970,14 @@
 </ul>
 <p>If it happens, stop the conversation, check with <code>/mcp</code> that the <code>flexygo</code> server is connected, and explicitly ask the agent to use the Flexygo tools.</p>
 <hr>
-<h2 id="make-a-checkpoint-commit-before-iterating">Make a checkpoint commit before iterating<a class="headerlink" href="#make-a-checkpoint-commit-before-iterating" title="Permanent link">¶</a></h2>
-<p>When you close a block or a development and have reviewed and approved it, <strong>make a Git commit before continuing</strong> with requests for improvements or individual changes.</p>
-<p>This checkpoint has several advantages:</p>
+<h2 id="accept-each-blocks-commit">Accept each block's commit<a class="headerlink" href="#accept-each-blocks-commit" title="Permanent link">¶</a></h2>
+<p>When preparing the project, the agent asks you once what to do when each block and each phase that changes the configuration closes: commit only, commit and push, or nothing. With the commit you have a point to go back to for each block, without files that hold secrets; the push is made with your own git and never forced. See <a href="../6Workflow/#version-control">Version control</a>.</p>
+<p>Accept it before asking for improvements or individual changes:</p>
 <ul>
 <li>You have a clear point to return to if a later iteration breaks something</li>
 <li>The agent can see exactly what changed in each task (clean diff)</li>
 <li>You keep control of what is "approved base" and what are later changes</li>
 </ul>
-<p>It's good practice to commit often as you go — don't wait until the product is finished.</p>
 <hr>
 <h2 id="adjust-the-complexity-of-what-you-ask-for">Adjust the complexity of what you ask for<a class="headerlink" href="#adjust-the-complexity-of-what-you-ask-for" title="Permanent link">¶</a></h2>
 <p>A small change to something that already exists goes through <code>/flx-fast</code>, with no plan. Anything that creates tables or entities, touches permissions or loads data goes through <code>/flx-new-development</code> and <code>/flx-plan</code>, which splits it into blocks.</p>
@@ -10093,9 +10084,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#split-the-phases-when-the-task-is-complex" class="md-nav__link">
+  <a href="#let-the-flow-split-the-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Split the phases when the task is complex
+      Let the flow split the work
     </span>
   </a>
   
@@ -10105,15 +10096,6 @@
   <a href="#ask-for-a-review-before-running-data-changes" class="md-nav__link">
     <span class="md-ellipsis">
       Ask for a review before running data changes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#give-context-at-the-start-of-each-conversation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Give context at the start of each conversation
     </span>
   </a>
   
@@ -10143,9 +10125,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-a-checkpoint-commit-before-iterating" class="md-nav__link">
+  <a href="#accept-each-blocks-commit" class="md-nav__link">
     <span class="md-ellipsis">
-      Make a checkpoint commit before iterating
+      Accept each block's commit
     </span>
   </a>
   

@@ -6,7 +6,7 @@
       
       
       
-        <link rel="prev" href="../../8ExportProject/2Reference/">
+        <link rel="prev" href="../0Guide/">
       
       
         <link rel="next" href="../2Usage/">
@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1446,6 +1471,24 @@
   <a href="#claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       Claude Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs-and-google-chrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node.js and Google Chrome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      SqlPackage
     </span>
   </a>
   
@@ -9787,10 +9830,27 @@
 <p>Verify that it's installed:</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>--list-sdks
 </span></code></pre></div>
+<p>To see which version of the server you have installed:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flexygo-mcp<span class="w"> </span>--version
+</span></code></pre></div>
 <hr>
 <h2 id="claude-code">Claude Code<a class="headerlink" href="#claude-code" title="Permanent link">¶</a></h2>
-<p>The server is used from <strong>Claude Code</strong>, in any of its forms: the desktop app, the VS Code extension or the terminal. The <code>/flx-*</code> commands of the workflow and the <a href="../7PanelAndBoard/">Flexygo panel</a> belong to Claude Code.</p>
-<p>Other MCP clients can use the server's tools, but without the commands or the panel.</p>
+<p>The server is used from <strong>Claude Code</strong>, in any of its forms: the desktop app, the VS Code extension or the terminal. The <code>/flx-*</code> commands of the workflow, the <a href="../7PanelAndBoard/">Flexygo panel</a>, the status line and the checks that watch what the agent does belong to Claude Code.</p>
+<p>The server also copies the commands into the project's <code>.github/skills/</code>, where <strong>GitHub Copilot</strong> finds them. With Copilot, or with another MCP client, the server's tools are used, but without the panel, the status line or those checks.</p>
+<hr>
+<h2 id="nodejs-and-google-chrome">Node.js and Google Chrome<a class="headerlink" href="#nodejs-and-google-chrome" title="Permanent link">¶</a></h2>
+<p>When each block closes, the agent checks what it built in the browser. For that, the server adds a browser server (<code>playwright</code>) to the project's <code>.mcp.json</code>, which starts with <code>npx</code> and opens <strong>Google Chrome</strong>. You need on the machine:</p>
+<ul>
+<li><strong>Node.js</strong>, which ships <code>npx</code>: <a href="https://nodejs.org">https://nodejs.org</a>.</li>
+<li><strong>Google Chrome</strong>, installed in its usual place.</li>
+</ul>
+<p>If either is missing, the server says so when it starts and tells you where to get it.</p>
+<hr>
+<h2 id="sqlpackage">SqlPackage<a class="headerlink" href="#sqlpackage" title="Permanent link">¶</a></h2>
+<p>To publish the project's databases from its database projects (when setting it up with <code>/flx-setup</code> and in the final check of each development), the server uses <strong>SqlPackage</strong>. If you don't have it, install it as a global tool:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>Microsoft.SqlServer.SqlPackage
+</span></code></pre></div>
+<p>The final check publishes the product into databases of its own (<code>&lt;database&gt;_release</code>) on <strong>this machine's</strong> SQL Server. If the project's databases are on another server, it stops and asks you where it may publish them.</p>
 <hr>
 <h2 id="configured-connection-strings">Configured connection strings<a class="headerlink" href="#configured-connection-strings" title="Permanent link">¶</a></h2>
 <div class="admonition danger">
@@ -9801,14 +9861,15 @@
 <hr>
 <h2 id="troubleshooting-manual-installation">Troubleshooting: manual installation<a class="headerlink" href="#troubleshooting-manual-installation" title="Permanent link">¶</a></h2>
 <p>If the MCP server doesn't start or the <code>flexygo-mcp</code> command isn't recognized, the automatic installation may not have completed correctly. First check whether the tool is installed:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>list<span class="w"> </span>-g
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>list<span class="w"> </span>-g
 </span></code></pre></div>
 <p>Look for <code>flexygo-mcp</code> in the list. If it doesn't appear, install it manually:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp<span class="w"> </span>--add-source<span class="w"> </span>https://nuget.ahorabh.com/v3/index.json
 </span></code></pre></div>
 <p>If it's already installed but you want to update to the latest version:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>update<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>update<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp<span class="w"> </span>--add-source<span class="w"> </span>https://nuget.ahorabh.com/v3/index.json
 </span></code></pre></div>
+<p>You don't need to keep an eye on it: when a new version is published, the server says so in its first answer of the session, with the exact command to update. After updating, open a new chat: the server that was already running keeps the previous version.</p>
 
 
 
@@ -9858,6 +9919,24 @@
   <a href="#claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       Claude Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs-and-google-chrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node.js and Google Chrome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      SqlPackage
     </span>
   </a>
   

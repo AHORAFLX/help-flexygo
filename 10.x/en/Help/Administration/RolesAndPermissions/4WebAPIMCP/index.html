@@ -1340,6 +1340,8 @@
       
         
       
+        
+      
     
     
     
@@ -1372,6 +1374,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2ProductDevelopment/MCP/0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -9883,6 +9908,7 @@
 <li><strong>The API</strong>: ask for a token with the role's user (<code>POST /token</code>) and try a list, a record and a delete. The answers must match the table in section 2. The detail of each answer is in <a href="../../../Programming/WebAPISecurity/#2-refusals-one-status-per-reason-plus-the-sentence">WebAPI security</a>.</li>
 <li><strong>An assistant</strong>: connect it with the role's user and ask it for the object's list: it only brings the records the <strong>View collection</strong> condition lets through. If you ask it to delete a record or run the denied process, it must say it cannot. Every call goes to the web API log.</li>
 </ul>
+<p>If the application is built with the development MCP server, <code>/flx-security</code> tries every rule signed in as its role, <code>/flx-api</code> tries from outside what the API publishes with one user per role, and the security audit of <code>/flx-release</code> goes over all of it at the end. See <a href="../../../../2ProductDevelopment/MCP/6Workflow/#security-who-may-do-what">Security: who may do what</a>.</p>
 
 
 

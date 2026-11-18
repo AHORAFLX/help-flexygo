@@ -1340,6 +1340,8 @@
       
         
       
+        
+      
     
     
     
@@ -1372,6 +1374,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2ProductDevelopment/MCP/0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1875,6 +1900,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#el-agente-no-puede-guardar-un-modulo-un-plugin-o-un-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      El agente no puede guardar un módulo, un plugin o un proceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-desarrollo-no-se-cierra" class="md-nav__link">
+    <span class="md-ellipsis">
+      El desarrollo no se cierra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#el-panel-de-flexygo-no-aparece" class="md-nav__link">
     <span class="md-ellipsis">
       El panel de Flexygo no aparece
@@ -1887,6 +1930,24 @@
   <a href="#despues-de-actualizar-el-agente-no-ve-lo-nuevo" class="md-nav__link">
     <span class="md-ellipsis">
       Después de actualizar, el agente no ve lo nuevo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-actualizacion-de-flexygo-mcp-falla-porque-el-fichero-esta-en-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      La actualización de flexygo-mcp falla porque el fichero está en uso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-agente-no-puede-comprobar-la-aplicacion-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      El agente no puede comprobar la aplicación en el navegador
     </span>
   </a>
   
@@ -9842,7 +9903,7 @@ o en PowerShell:
 </li>
 <li>
 <p>Si no aparece, instálala manualmente:
-   </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp
+   </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dotnet<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>flexygo-mcp<span class="w"> </span>--add-source<span class="w"> </span>https://nuget.ahorabh.com/v3/index.json
 </span></code></pre></div><p></p>
 </li>
 <li>
@@ -9857,8 +9918,10 @@ o en PowerShell:
 </div>
 <h2 id="los-comandos-flx-no-aparecen">Los comandos <code>/flx-*</code> no aparecen<a class="headerlink" href="#los-comandos-flx-no-aparecen" title="Permanent link">¶</a></h2>
 <p><strong>Síntoma:</strong> El servidor está conectado, pero al escribir <code>/flx-</code> no aparece ningún comando.</p>
-<p><strong>Causa:</strong> El servidor instala los comandos en el proyecto al arrancar, y el chat se abrió antes.</p>
-<p><strong>Solución:</strong> Abre un chat nuevo en el proyecto. Si siguen sin aparecer, pide al agente que sincronice los comandos de Flexygo y vuelve a abrir un chat.</p>
+<p><strong>Causa:</strong> El servidor instala los comandos en el proyecto al arrancar, y la sesión se abrió antes.</p>
+<p><strong>Solución:</strong> Vuelve a abrir el proyecto en Claude Code (en VS Code, <em>Developer: Reload Window</em>), que recoge los comandos y las instrucciones del proyecto. Si siguen sin aparecer, instálalos desde una terminal abierta en la carpeta del proyecto y vuelve a abrirlo:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flexygo-mcp<span class="w"> </span>--sync-skills<span class="w"> </span>.
+</span></code></pre></div>
 <h2 id="las-herramientas-fallan-con-errores-de-base-de-datos">Las herramientas fallan con errores de base de datos<a class="headerlink" href="#las-herramientas-fallan-con-errores-de-base-de-datos" title="Permanent link">¶</a></h2>
 <p><strong>Síntoma:</strong> Las herramientas aparecen, pero todas devuelven errores de conexión o dicen que no hay cadenas de conexión.</p>
 <p><strong>Causa A:</strong> El <code>appsettings</code> del Backend no tiene <code>ConfConnectionString</code> y <code>DataConnectionString</code>.</p>
@@ -9869,22 +9932,42 @@ o en PowerShell:
 <p><strong>Causa:</strong> La aplicación en marcha guarda en memoria la definición de los objetos y no la vuelve a leer. Lo que el agente escribe está en la base de datos, pero la aplicación todavía no lo ve. No es un error de configuración.</p>
 <p><strong>Solución:</strong></p>
 <ol>
-<li>La primera vez, el agente te pide tu contraseña de Flexygo para recargar la caché. Se guarda solo en memoria, durante esa sesión, y desde entonces la caché se recarga sola tras cada cambio.</li>
+<li>Tras cada cambio, el servidor recarga la caché él solo. Para eso inicia sesión con un usuario que pueda hacerlo: si el proyecto guarda la contraseña de un usuario de pruebas que puede, la usa; si no, el agente te pide la tuya una vez. Se guarda solo en memoria, durante esa sesión.</li>
 <li>Si el Backend está en otro equipo, el agente te dice su nombre y te pregunta antes de enviarle tus credenciales. Consulta <a href="../../2ProductDevelopment/MCP/3Configuration/#comprobaciones-de-seguridad">Comprobaciones de seguridad</a>.</li>
 <li>Si no quieres dar la contraseña, usa el botón <strong>Reload Cache</strong> de la lista de usuarios, o reinicia el Backend.</li>
 <li>Si tenías la pantalla abierta en el navegador, vuelve a cargarla.</li>
 </ol>
+<h2 id="el-agente-no-puede-guardar-un-modulo-un-plugin-o-un-proceso">El agente no puede guardar un módulo, un plugin o un proceso<a class="headerlink" href="#el-agente-no-puede-guardar-un-modulo-un-plugin-o-un-proceso" title="Permanent link">¶</a></h2>
+<p><strong>Síntoma:</strong> El agente dice que el servidor ha rechazado un módulo HTML, un plugin, un parámetro de proceso, un procedimiento o una vista.</p>
+<p><strong>Causa:</strong> Lo que intentaba guardar es algo que el servidor no deja construir: cargar código a mano o desde una CDN, poner código en línea (<code>onclick</code> y similares) en un módulo HTML, decidir comparando con el rol <code>'admins'</code>, tomar el usuario o el rol del navegador, o construir SQL al ejecutarse sin tu permiso.</p>
+<p><strong>Solución:</strong> El rechazo dice qué usar en su lugar, y el agente lo hace así. No es un fallo: consulta <a href="../../2ProductDevelopment/MCP/6Workflow/#lo-que-el-agente-no-construye">Lo que el agente no construye</a>.</p>
+<h2 id="el-desarrollo-no-se-cierra">El desarrollo no se cierra<a class="headerlink" href="#el-desarrollo-no-se-cierra" title="Permanent link">¶</a></h2>
+<p><strong>Síntoma:</strong> Todo está construido y verificado, pero el estado sigue pidiendo <code>/flx-security</code>, <code>/flx-quality</code> o <code>/flx-release</code>.</p>
+<p><strong>Causa A:</strong> A una regla de seguridad le falta su prueba con el rol. Una regla que quita algo solo pasa si el intento se <strong>rechazó</strong>.</p>
+<p><strong>Causa B:</strong> Un cupo de calidad está por encima de su límite y no tiene apuntado su motivo.</p>
+<p><strong>Causa C:</strong> La auditoría de seguridad de <code>/flx-release</code> tiene un hallazgo alto abierto. Un arreglo construido después de la auditoría la vuelve a abrir, y <code>/flx-release</code> audita de nuevo lo que cambió.</p>
+<p><strong>Causa D:</strong> La comprobación final salió en rojo: una prueba que falla, un recorrido que no llegó a ejecutarse, o unos datos de demostración que no cargan en una base nueva. Las bases <code>&lt;base&gt;_release</code> se conservan para que se pueda mirar qué pasó.</p>
+<p><strong>Solución:</strong> Escribe <code>/flx-status</code>: dice qué regla, qué cupo, qué hallazgo o qué parte de la comprobación final falla. Arregla la regla y vuelve a probarla; baja cada cupo de su límite o di por qué se queda así; cierra cada hallazgo alto arreglándolo o aceptándolo tú; y deja que el arreglo de la comprobación final se construya como una tarea más del último bloque, con <code>/flx-execute</code>, antes de volver a <code>/flx-release</code>. La auditoría no la hace el chat que construyó la aplicación, sino un agente aparte. Consulta <a href="../../2ProductDevelopment/MCP/6Workflow/#seguridad-quien-puede-que">Seguridad: quién puede qué</a>, <a href="../../2ProductDevelopment/MCP/6Workflow/#la-auditoria-de-seguridad">La auditoría de seguridad</a>, <a href="../../2ProductDevelopment/MCP/6Workflow/#los-cupos-de-calidad">Los cupos de calidad</a> y <a href="../../2ProductDevelopment/MCP/6Workflow/#la-comprobacion-final-flx-release">La comprobación final</a>.</p>
 <h2 id="el-panel-de-flexygo-no-aparece">El panel de Flexygo no aparece<a class="headerlink" href="#el-panel-de-flexygo-no-aparece" title="Permanent link">¶</a></h2>
 <p><strong>Síntoma:</strong> No ves la banda sobre el chat ni el panel lateral.</p>
-<p><strong>Causa A:</strong> Falta el paso único <code>flexygo-mcp --enable-panel</code> en este equipo.</p>
+<p><strong>Causa A:</strong> Claude Code no sabe dónde está el panel en este equipo: falta el paso único <code>flexygo-mcp --enable-panel</code>.</p>
 <p><strong>Causa B:</strong> El chat se abrió antes de activarlo: el panel aparece al abrir un chat o una sesión nueva.</p>
 <p><strong>Causa C:</strong> El proyecto tiene el panel apagado en su <code>.claude/settings.json</code>.</p>
 <p><strong>Causa D:</strong> Usas Claude Code sin interfaz (<code>claude -p</code>), donde no hay panel.</p>
 <p><strong>Solución:</strong> Consulta <a href="../../2ProductDevelopment/MCP/7PanelAndBoard/#como-activar-el-panel-y-el-tablero">Cómo activar el panel y el tablero</a>.</p>
 <h2 id="despues-de-actualizar-el-agente-no-ve-lo-nuevo">Después de actualizar, el agente no ve lo nuevo<a class="headerlink" href="#despues-de-actualizar-el-agente-no-ve-lo-nuevo" title="Permanent link">¶</a></h2>
 <p><strong>Síntoma:</strong> Has actualizado el servidor con <code>dotnet tool update -g flexygo-mcp</code>, pero el agente no usa las herramientas o los parámetros nuevos.</p>
-<p><strong>Causa:</strong> Un chat ya empezado sigue con la lista de herramientas que recibió al arrancar.</p>
+<p><strong>Causa:</strong> Un chat ya empezado sigue con el servidor y la lista de herramientas que recibió al arrancar. La línea de estado lo dice: <code>server X runs, Y installed → new chat</code>.</p>
 <p><strong>Solución:</strong> Abre un chat nuevo.</p>
+<h2 id="la-actualizacion-de-flexygo-mcp-falla-porque-el-fichero-esta-en-uso">La actualización de <code>flexygo-mcp</code> falla porque el fichero está en uso<a class="headerlink" href="#la-actualizacion-de-flexygo-mcp-falla-porque-el-fichero-esta-en-uso" title="Permanent link">¶</a></h2>
+<p><strong>Síntoma:</strong> <code>dotnet tool update -g flexygo-mcp</code> falla con <code>Access to the path ... is denied</code> o dice que el fichero está en uso.</p>
+<p><strong>Causa:</strong> El servidor está en marcha: Claude Code, VS Code u otro cliente lo tiene abierto.</p>
+<p><strong>Solución:</strong> Cierra las sesiones de Claude Code y de los demás clientes que usan el servidor, actualiza, y vuelve a abrir el proyecto.</p>
+<h2 id="el-agente-no-puede-comprobar-la-aplicacion-en-el-navegador">El agente no puede comprobar la aplicación en el navegador<a class="headerlink" href="#el-agente-no-puede-comprobar-la-aplicacion-en-el-navegador" title="Permanent link">¶</a></h2>
+<p><strong>Síntoma:</strong> El agente dice que no puede abrir el navegador, o el servidor <code>playwright</code> no aparece conectado en <code>/mcp</code>.</p>
+<p><strong>Causa A:</strong> Falta Node.js (con <code>npx</code>) o Google Chrome en el equipo.</p>
+<p><strong>Causa B:</strong> La entrada <code>playwright</code> se acaba de añadir a <code>.mcp.json</code>, y una sesión que ya estaba en marcha sigue con los servidores con los que empezó.</p>
+<p><strong>Solución:</strong> Instala lo que falte (consulta los <a href="../../2ProductDevelopment/MCP/1Prerequisites/#nodejs-y-google-chrome">prerrequisitos</a>) y vuelve a abrir el proyecto (en VS Code, <em>Developer: Reload Window</em>). Si Claude Code te pregunta si quieres usar el servidor <code>playwright</code> del proyecto, acepta.</p>
 
 
 
@@ -9967,6 +10050,24 @@ o en PowerShell:
 </li>
       
         <li class="md-nav__item">
+  <a href="#el-agente-no-puede-guardar-un-modulo-un-plugin-o-un-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      El agente no puede guardar un módulo, un plugin o un proceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-desarrollo-no-se-cierra" class="md-nav__link">
+    <span class="md-ellipsis">
+      El desarrollo no se cierra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#el-panel-de-flexygo-no-aparece" class="md-nav__link">
     <span class="md-ellipsis">
       El panel de Flexygo no aparece
@@ -9979,6 +10080,24 @@ o en PowerShell:
   <a href="#despues-de-actualizar-el-agente-no-ve-lo-nuevo" class="md-nav__link">
     <span class="md-ellipsis">
       Después de actualizar, el agente no ve lo nuevo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-actualizacion-de-flexygo-mcp-falla-porque-el-fichero-esta-en-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      La actualización de flexygo-mcp falla porque el fichero está en uso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-agente-no-puede-comprobar-la-aplicacion-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      El agente no puede comprobar la aplicación en el navegador
     </span>
   </a>
   

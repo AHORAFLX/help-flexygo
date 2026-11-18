@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1600,9 +1625,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#live-view" class="md-nav__link">
+  <a href="#the-side-pane" class="md-nav__link">
     <span class="md-ellipsis">
-      Live view
+      The side pane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-status-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      The status line
     </span>
   </a>
   
@@ -1627,6 +1661,24 @@
   <a href="#how-to-open-it" class="md-nav__link">
     <span class="md-ellipsis">
       How to open it
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-tabs-one-by-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tabs, one by one
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-model-as-a-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      The model, as a diagram
     </span>
   </a>
   
@@ -9876,103 +9928,233 @@
 <hr>
 <h2 id="the-flexygo-panel">The Flexygo panel<a class="headerlink" href="#the-flexygo-panel" title="Permanent link">¶</a></h2>
 <h3 id="the-band-above-the-chat">The band above the chat<a class="headerlink" href="#the-band-above-the-chat" title="Permanent link">¶</a></h3>
-<p>In the Claude Code desktop app and in the VS Code extension, the panel is a <strong>band above the text box</strong> with three parts: <strong>Now</strong> (the phase and the command that comes next), <strong>Your call</strong> (what is waiting for a decision of yours) and <strong>Next</strong>.</p>
-<p>"Next" and what is left to close come from the same list, in your words; if there is more than one thing, the rest unfolds below.</p>
-<p>The band has three modes: full, lite and off.</p>
-<ul>
-<li><strong>Full</strong> also shows cards with the task ring, what is left to close, how the last block's verification went and how full the chat is.</li>
-<li><strong>Off</strong> leaves a single pill, <strong>Flexygo ▸</strong>, to open it again. Typing <code>/flexygo</code> also brings it back.</li>
-</ul>
-<p>Its buttons:</p>
+<p>In the Claude Code desktop app and in the VS Code extension, the panel is a <strong>one-line band above the text box</strong>. From left to right:</p>
 <table>
 <thead>
 <tr>
-<th>Button</th>
-<th>What it does</th>
+<th>Part</th>
+<th>What it shows</th>
+<th>When pressed</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Go</strong></td>
-<td>Writes the command that comes next in the text box, without sending it.</td>
+<td><strong>Flexygo isotype</strong></td>
+<td>Flexygo's mark, in green.</td>
+<td>Nothing: it is not a button.</td>
 </tr>
 <tr>
-<td><strong>Start apps</strong> / <strong>Stop apps</strong></td>
-<td>Starts or stops the product's Backend and Frontend, with a dot that says whether they answer. It uses the product's <code>tools/app.ps1</code> script, which the server adds if it is missing.</td>
+<td><strong>Phase</strong></td>
+<td>The phase with its number out of nine (for example, "6/9 security") and, if a task is under way, its code and title. If it does not fit, it is cut.</td>
+<td>Unfolds the nine phases below (see below); another press folds them.</td>
 </tr>
 <tr>
-<td><strong>Board</strong></td>
-<td>Opens the board on the tab that matters now: <strong>Decisions</strong> if a decision is open, <strong>Resources</strong> if there are files not yet reviewed and, otherwise, the last one you looked at.</td>
+<td><strong>● N %</strong></td>
+<td>The context the chat has used, with a coloured dot.</td>
+<td>Explains below what it measures, its value and what each colour says. See <a href="#how-full-the-chat-is">How full the chat is</a>.</td>
 </tr>
 <tr>
-<td><strong>Live view</strong></td>
-<td>Shows the screen being built (see below).</td>
+<td><strong>● N'</strong></td>
+<td>The minutes this chat's prompt cache has left.</td>
+<td>The same: what it measures, its value and what each colour says.</td>
+</tr>
+<tr>
+<td><strong>⧉</strong></td>
+<td>Opens the board.</td>
+<td>Opens it on the tab that matters now: <strong>Decisions</strong> if a point is open, <strong>Resources</strong> if there are files not yet reviewed and, otherwise, the last one you looked at.</td>
 </tr>
 </tbody>
 </table>
-<p>If the buttons do not fit in one row, <strong>Live view</strong> and the apps buttons move to a <strong>…</strong> menu. Each open decision carries one button per option, with the recommended one marked.</p>
-<p>There is no verify button: when a block closes, <code>/flx-execute</code> verifies it by itself and the band only shows how it went. The band is in Spanish.</p>
-<p>The panel also records <strong>the time and API usage price of each</strong> <code>/flx-*</code> <strong>command</strong>, subagents included. They are kept per project on this computer. The band shows no money: the price is on the <a href="#api-usage-price">board</a>.</p>
-<h3 id="how-full-the-chat-is">How full the chat is<a class="headerlink" href="#how-full-the-chat-is" title="Permanent link">¶</a></h3>
-<p>The band shows how much context the chat has used: <strong>context N %</strong>. The fuller it is, the worse the agent answers, so it warns in time:</p>
+<p>Each part explains itself when pressed, not on hover, because the VS Code extension does not show those texts.</p>
+<p><strong>The unfolded phases</strong> are numbered 1 to 9: context, plan, decisions, build, review, security, quality, help and, ninth, the API (if the application is used from outside) and the final delivery. Closed ones carry ✓, the current one ▶ and those left ○. Under the current one:</p>
 <ul>
-<li><strong>Below 70 %</strong>, there is room left in this chat.</li>
-<li><strong>From 70 %</strong>, it asks you to finish the current step and carry on in a new chat.</li>
-<li><strong>From 80 %</strong>, it warns that from there on it answers worse.</li>
+<li>In <strong>build</strong> and <strong>review</strong>, the block under way with its tasks: ✓ done, ▶ in progress, ○ pending.</li>
+<li>In the others, what is left to close it, in your words: unverified tasks, blocking points or, if none of that is left, what the phase is for.</li>
 </ul>
-<p>The warnings quote the real percentage, for example "Context at 82 %: …".</p>
-<p>From 70 % the <strong>New chat and go on</strong> button shows. It clears the chat (<code>/clear</code>) and, in the new chat, runs the command that comes next. Nothing is lost: the agent carries on from the development's <a href="../6Workflow/#resuming-without-paying-for-the-whole-conversation">checkpoint</a>, not from the conversation.</p>
-<p>If Claude Code does not let the panel clear the chat, the band asks you to send <code>/clear</code> yourself. The next command is already kept, and runs by itself when the new chat starts if you do it within 10 minutes.</p>
-<!-- SCREENSHOT PENDING: the band with "context N %" above 70 % and the "New chat and go on" button. -->
-
-<div class="admonition note">
-<p class="admonition-title">In the terminal</p>
-<p>With Claude Code in a terminal there is no band: the panel opens as a side pane with the same information. That pane also has the <strong>Project</strong> button, which opens <code>ONBOARDING.md</code>, and <strong>ES / EN</strong> to change the language.</p>
-</div>
-<h3 id="live-view">Live view<a class="headerlink" href="#live-view" title="Permanent link">¶</a></h3>
-<p><strong>Live view</strong> opens the board on the <strong>Live</strong> tab: the application beside a chat with Claude. See <a href="#live-the-application-and-the-chat-with-claude">Live: the application and the chat with Claude</a>.</p>
-<p>The button shows when the product has its Frontend; if the Frontend does not answer, the board starts it.</p>
+<p>At the end, apart and unnumbered, comes <code>/flx-video</code>, optional: a short video of the product.</p>
+<p>The band has no other buttons. Decisions and the live view are on the <a href="#the-developers-board">board</a>, and starting or stopping the applications is in the <a href="#the-side-pane">side pane</a>. There is no verify button either: when a block closes, <code>/flx-execute</code> verifies it by itself with recorded walks.</p>
+<p>The band is in Spanish. The side pane's <strong>ES / EN</strong> button switches it to English, and the language is kept per project.</p>
+<p>The panel also records <strong>the time and API usage price of each agent turn</strong>, subagents included, against the development and phase it is in, whether you typed the <code>/flx-*</code> command or the agent ran it itself. Each command you type also gets its own row. The agent's time is recorded apart from the time spent waiting for your answer. Everything is kept per project on this computer. The band shows no money: the price is on the <a href="#api-usage-price">board</a>.</p>
+<h3 id="how-full-the-chat-is">How full the chat is<a class="headerlink" href="#how-full-the-chat-is" title="Permanent link">¶</a></h3>
+<p>The band carries two meters, each with a dot that shifts gradually from green to red.</p>
+<p><strong>Context (● N %)</strong>: how much of this chat's context window is taken. The fuller it is, the more each turn costs and the worse the agent answers.</p>
+<ul>
+<li><strong>Green</strong>: plenty of room.</li>
+<li><strong>Amber</strong>: half the way to 80 %.</li>
+<li><strong>Red</strong>: 80 % or more. Time to carry on in a new chat.</li>
+</ul>
+<p><strong>Prompt cache (● N')</strong>: the minutes this chat's cache has left; it lasts an hour from the last request. While it lasts, each turn reads what was already sent at a lower price; cold (0'), the next turn pays for all of it again. It counts down while the agent works too, and each request renews it. Before the first request it reads cold.</p>
+<ul>
+<li><strong>Green</strong>: just used.</li>
+<li><strong>Amber</strong>: half the hour gone.</li>
+<li><strong>Red</strong>: about to go cold, or cold.</li>
+</ul>
+<p>Carrying on in a new chat loses nothing: the agent carries on from the development's <a href="../6Workflow/#resuming-without-paying-for-the-whole-conversation">checkpoint</a>, not from the conversation. When a chat has grown very long, the assistant itself offers, as a task or a block closes, to carry on in a new one with the command that comes next. It is an offer: if you prefer, you stay in the same chat.</p>
+<h3 id="the-side-pane">The side pane<a class="headerlink" href="#the-side-pane" title="Permanent link">¶</a></h3>
+<p>In a terminal there is no band: in a Flexygo project, the panel opens by itself as a <strong>side pane</strong>. Anywhere, <code>/flexygo</code> opens it.</p>
+<p>It shows:</p>
+<ul>
+<li>The active development and the server's version.</li>
+<li>The phase with its number and the command that comes next, with the <strong>Go</strong> button, which writes it in the text box without sending it.</li>
+<li>The closed blocks, summed up in one line, and the open ones. The block under way carries a progress bar and the mark of each task: ✓ done, ▶ in progress, ○ pending, – skipped.</li>
+<li>What is left to close (unverified tasks, blocking points) and the open decisions, with the command that settles them.</li>
+<li>The phase's time and this computer's total, in time and tokens. No money here either.</li>
+<li>The applications with their port and whether they answer (✓ or ✗), with <strong>Open</strong> for the Frontend and the <strong>Start apps</strong> and <strong>Stop apps</strong> buttons. They use the product's <code>tools/app.ps1</code> script, which the server adds if it is missing.</li>
+<li>The <strong>Project</strong> button, which shows <code>ONBOARDING.md</code> (with <strong>Back</strong> to return), and <strong>ES / EN</strong> to change the language.</li>
+</ul>
+<p>If the server has just refused something (for example, a module that loaded code by hand), the pane shows it in red as <strong>Last refusal</strong>, with the tool, what it was on and when. See <a href="../6Workflow/#what-the-agent-does-not-build">What the agent does not build</a>.</p>
+<h3 id="the-status-line">The status line<a class="headerlink" href="#the-status-line" title="Permanent link">¶</a></h3>
+<p>The server also sets, in the project's <code>.claude/settings.local.json</code>, the Flexygo <strong>status line</strong>, which Claude Code shows under the text box. It is one line, in English, with:</p>
+<ul>
+<li>the active development, the phase with its number and the command that comes next;</li>
+<li>the tasks done out of the total and what keeps it from closing (unverified, blocking points);</li>
+<li>the task in progress (▶) and the server's last refusal (⛔);</li>
+<li>a warning if the server running is not the version installed, so that you open a new chat;</li>
+<li>from 80 % of context, <code>context N% → new chat</code>.</li>
+</ul>
+<p>If your settings or the project's already have a status line of their own, it is kept and left as it is.</p>
 <hr>
 <h2 id="the-developers-board">The developer's board<a class="headerlink" href="#the-developers-board" title="Permanent link">¶</a></h2>
-<p>The board brings together on one page what is done and what is pending, what is left to verify, the API usage price and time per command, the data model, the decisions and the quality findings. It shows every Flexygo project on this computer, with its developments, except test benches: copies of another project and folders marked with a <code>.flexygo-bench</code> file. The project you open always shows.</p>
+<p>The board brings together on one page what is done and what is pending, what is left to verify, the API usage price and time, the application's model, its design, who can do what, the decisions and the quality findings. It shows the Flexygo projects on this computer the server has worked on, with their developments, except test benches: copies of another project and folders marked with a <code>.flexygo-bench</code> file. The project you open always shows.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/boardOverview.png" data-desc-position="bottom"><img alt="Developer's board, Overview tab" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/boardOverview.png"></a>
 <br>
 <figcaption>The Overview: what the application is, its context and the next step</figcaption>
 </figure>
-<p>Its tabs are <strong>Overview</strong>, <strong>Live</strong>, <strong>Kanban</strong>, <strong>Dependencies</strong>, <strong>History</strong>, <strong>Decisions</strong>, <strong>Model</strong>, <strong>Screens</strong>, <strong>Quality</strong> and <strong>Resources</strong>. The <strong>Copy next command</strong> button puts the command that comes next on the clipboard, and <strong>ES / EN</strong> changes the language.</p>
-<p>The <strong>Overview</strong> opens with what the application is, in two or three sentences: what it is for, for whom and its main flow. <code>/flx-context</code> writes it and <code>/flx-review</code> keeps it current. Below, in short lines, the business, the users and roles, the flow, your decisions, whether it is used from outside and what has been built.</p>
+<p>On the left, under <strong>Flexygo · Builder</strong>, the list of <strong>projects</strong> with their developments. A green dot marks those with a flow under way; the others show folded. Press a project's name to open it even if it has no developments yet. At the foot, when the page was drawn: open the board again, or reload the page, to bring it up to date.</p>
+<p>At the top, the development with its phase ("4/9 …") and the command that comes next. On the right:</p>
+<ul>
+<li><strong>Copy next command</strong> puts the command that comes next on the clipboard.</li>
+<li><strong>ES / EN</strong> changes the language, and <strong>◐</strong> switches between light and dark. Until you choose, it follows the system's theme.</li>
+<li>On the <strong>Live</strong> tab, <strong>Show projects</strong> or <strong>Hide projects</strong> unfolds or folds the list on the left.</li>
+</ul>
+<p>Above the tabs, except on <strong>Live</strong>, the <strong>notices</strong> that matter show: what blocks the phase, the next block or a block (with its reason and the command that solves it), and the server's <strong>last refusal</strong>.</p>
+<p>Passwords and keys are masked before they reach the page.</p>
 <h3 id="how-to-open-it">How to open it<a class="headerlink" href="#how-to-open-it" title="Permanent link">¶</a></h3>
 <ul>
-<li>From the band, with the <strong>Board</strong> button.</li>
+<li>From the band, with <strong>⧉</strong>.</li>
 <li>By hand, from the project folder:</li>
 </ul>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flexygo-mcp<span class="w"> </span>--board
 </span></code></pre></div>
-<p>With <code>--tab decisions</code> it opens straight on that tab.</p>
-<p>The board opens only when you ask for it. It is served by a small local server that only answers on this computer and stops by itself after 30 minutes without use; each chat message counts as use. If the project has no Frontend, the board is a static page.</p>
+<p>It also takes other projects' folders. With <code>--tab</code> and a tab's name (<code>overview</code>, <code>live</code>, <code>kanban</code>, <code>dependencies</code>, <code>history</code>, <code>costs</code>, <code>decisions</code>, <code>model</code>, <code>design</code>, <code>screens</code>, <code>security</code>, <code>quality</code> or <code>resources</code>) it opens straight on that tab; for example, <code>--tab decisions</code>.</p>
+<p>The board opens only when you ask for it. If the project has a Frontend, it is served by a small local server that only answers on this computer and stops by itself after 30 minutes without use; each chat message counts as use. If it has none, the board is a static page, with no live view and no resource uploads.</p>
+<h3 id="the-tabs-one-by-one">The tabs, one by one<a class="headerlink" href="#the-tabs-one-by-one" title="Permanent link">¶</a></h3>
+<p>While the project is in the context phase, <strong>Resources</strong> becomes the second tab, because it is what you are working on.</p>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>What it shows</th>
+<th>When to look at it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Overview</strong></td>
+<td><strong>What it is</strong>: the application in two or three sentences (<code>/flx-context</code> writes it and <code>/flx-review</code> keeps it current), with how the last tests went. The <strong>context</strong> in short lines: business, users and roles, main flow, requirements and resources, your decisions, access from outside and what has been built, with <strong>See the detail</strong> and how the business flows according to <code>ONBOARDING.md</code>. The <strong>next steps</strong>: what comes next and what holds it. The <strong>environment</strong> (connections, the applications' addresses and the product's and server's versions) and the <strong>style</strong> from <code>DESIGN.md</code>, with its colours and typeface.</td>
+<td>To understand the project at a glance or show it to someone.</td>
+</tr>
+<tr>
+<td><strong>Live</strong></td>
+<td>The application beside a chat with Claude. See <a href="#live-the-application-and-the-chat-with-claude">Live</a>.</td>
+<td>To see what is being built and ask for changes by pointing.</td>
+</tr>
+<tr>
+<td><strong>Kanban</strong></td>
+<td>At the top, four figures: tasks done, unverified, the development's API usage price and agent time. Below, a board per block with the columns <strong>Pending</strong>, <strong>In progress</strong>, <strong>Unverified</strong> and <strong>Done</strong>; each task says what it needs (🔒 if it waits for something not done), whether it runs in parallel and whether it has an open point. Closed blocks fold away.</td>
+<td>To follow progress task by task.</td>
+</tr>
+<tr>
+<td><strong>Dependencies</strong></td>
+<td>The same four figures and a graph of what is left: the arrow goes from what a task needs to the task.</td>
+<td>To see what holds what.</td>
+</tr>
+<tr>
+<td><strong>History</strong></td>
+<td>Everything that happened in the development, with its time: phases, blocks, tasks, verifications, tests, refusals, decisions, commands, quick changes and incidents, with a filter by kind. Each row says which command it happened under, and each command, its API usage price and its time.</td>
+<td>To know what was done and when.</td>
+</tr>
+<tr>
+<td><strong>Costs</strong></td>
+<td>See <a href="#api-usage-price">API usage price</a>.</td>
+<td>To know what each phase and each command cost.</td>
+</tr>
+<tr>
+<td><strong>Decisions</strong></td>
+<td>First the open points <strong>that block</strong>, then those that do not. Then every recorded decision, the development's and the project's (marked <strong>P</strong>), with its question, its answer and what it affects, with a filter by text or task. At the end, the plan's <strong>assumptions</strong> and the <strong>corrections</strong> you have made to the assistant.</td>
+<td>When the assistant waits for your decision, or to remember why something is the way it is.</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>The application as a diagram: its menu, pages, objects, processes and roles, read from the configuration database (read only). See <a href="#the-model-as-a-diagram">The model, as a diagram</a>.</td>
+<td>To understand or review how the application is made.</td>
+</tr>
+<tr>
+<td><strong>Design</strong></td>
+<td>The <strong>style</strong> <code>DESIGN.md</code> decided (the colours and the typography), where each design came from and the <strong>reference screens</strong> the development filed as its design, with their origin. Press one to see it whole.</td>
+<td>To compare what was built with what was wanted.</td>
+</tr>
+<tr>
+<td><strong>Screens</strong></td>
+<td>Each page with its object, the tasks that built it, its help (guided tour, help button, field help) and a link to open it while the applications are running. If there is a design, a green, amber or red light for how it matches, compared when each block closes, with what fails (a module that does not exist, boxes that overlap, a title that does not fit, a colour off the palette…). The structure and the colours stored in the configuration are compared, not the pixels; a blue bar marks the screens that changed in that block.</td>
+<td>To review the screens one by one.</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Each role with its users (with their profile, and whether they are locked) and the explicit permissions on the product's objects (view, create, edit, delete), processes, pages and menu. An administrator role gets through everything. If there is no explicit permission at all, it says so: every role that can sign in sees everything. Read only; passwords are never read.</td>
+<td>To review who can do what and which user to try each role with.</td>
+</tr>
+<tr>
+<td><strong>Quality</strong></td>
+<td>Three figures: tests green, verifications and what <code>/flx-quality</code> reviewed. <strong>Each task with its latest check</strong> and its screenshot, which enlarges when pressed. The <strong>open quality findings</strong>, the review's <strong>deviations</strong> and <strong>what the server could not do</strong> in this project.</td>
+<td>Before calling the development closed.</td>
+</tr>
+<tr>
+<td><strong>Resources</strong></td>
+<td>The project's <code>{Product}.Resources/</code> folder. See <a href="#resources">Resources</a>.</td>
+<td>To leave the material it is built from.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-model-as-a-diagram">The model, as a diagram<a class="headerlink" href="#the-model-as-a-diagram" title="Permanent link">¶</a></h3>
+<p>The <strong>Model</strong> tab draws the whole application except the fields, which show in each object's detail.</p>
+<ul>
+<li>At the top, one button per kind of piece (menu, pages, objects, processes and roles), with how many there are, to show or hide them. Roles start hidden.</li>
+<li><strong>−</strong> and <strong>+</strong> zoom out and in, <strong>Fit</strong> frames everything and <strong>Rearrange</strong> lays the pieces out again.</li>
+<li>Drag the background to move around, use the wheel to zoom and drag a piece to place it.</li>
+</ul>
+<p>Pressing a piece lights its path (its parents and its children) and its detail shows on the right:</p>
+<ul>
+<li><strong>An object</strong>: what it hangs from and what it holds, its pages, its menu entry, its processes, what runs before and after it is loaded, inserted, changed or deleted, and its fields with their label, type and whether they are required.</li>
+<li><strong>A page, a process or a menu option</strong>: what it opens and where it is reached from.</li>
+<li><strong>A role</strong>: its users and what it is granted.</li>
+</ul>
+<p>Each piece also says what each role can do with it: by an explicit rule, or by Flexygo's default rule (with no rule, any signed-in role can; someone not signed in, only what is granted to them). From the detail there are links to open the piece in the application and in its Flexygo settings. The diagram also points out the processes no object offers.</p>
 <h3 id="api-usage-price">API usage price<a class="headerlink" href="#api-usage-price" title="Permanent link">¶</a></h3>
 <p>The board shows the <strong>API usage price</strong>: what the agent's work would cost at Anthropic API prices. It is worked out the way Claude Code works out <code>/cost</code>, with its price table per model and the real tokens of each turn.</p>
 <ul>
-<li>In <strong>History</strong>, per command and per phase.</li>
+<li>In <strong>Costs</strong>: the whole project's total, this development's, the agent's time and what was spent before a development was opened (setup, context, design). Below, a chart of price and time per phase: hovering over a bar shows the agent's time and the time spent waiting for your answer, with how many questions it asked you. And, at the end, each command you typed, with when, in which development and phase, its price and its time.</li>
+<li>In <strong>History</strong>, each command's.</li>
 <li>In <strong>Kanban</strong> and <strong>Dependencies</strong>, the development's total.</li>
 </ul>
+<p>Each turn is charged to the development and phase the project is in when it ends, whether you typed the command or the agent ran it.</p>
 <p>If you use Claude Code with a subscription, that is not what you pay: the real cost is not known. It is there to compare phases and developments with each other. It only shows on the board: the band shows no money.</p>
-<!-- SCREENSHOT PENDING: the board's History with the "API usage price" column and the per-phase chart. -->
-
 <h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h3>
-<p>The <strong>Resources</strong> tab shows the project's <code>Resources/</code> folder: the material it is built from. Drop files there, or choose them, to upload them; you can also add a link with a note on what it is and why it matters.</p>
+<p>The <strong>Resources</strong> tab shows the project's <code>{Product}.Resources/</code> folder: the material it is built from. The folder travels with git. Drop files there, or choose them, to upload them; you can also add a link with a note on what it is and why it matters.</p>
 <ul>
 <li>It takes images, PDF, Office documents, CSV, text, JSON, XML and zip, up to 50 MB per file and 300 MB in all.</li>
-<li>Each file shows as <strong>new</strong> until <code>/flx-context</code> reads it, and then as <strong>reviewed</strong>.</li>
-<li>To upload files, the board has to be opened from the project and served with its Frontend.</li>
+<li>Each file shows with its size and date, as <strong>new</strong> until <code>/flx-context</code> reads it, and then as <strong>reviewed</strong>. Images show as thumbnails.</li>
+<li><strong>Delete</strong> removes a file from the folder, after you confirm; it cannot be undone.</li>
+<li>To upload or delete files, the board has to be opened from the project and served with its Frontend.</li>
 </ul>
 <h3 id="live-the-application-and-the-chat-with-claude">Live: the application and the chat with Claude<a class="headerlink" href="#live-the-application-and-the-chat-with-claude" title="Permanent link">¶</a></h3>
-<p>The <strong>Live</strong> tab shows the application beside a conversation with Claude. The board itself serves the chat by calling Claude Code on this computer, so <strong>it keeps working even if you close the editor</strong>.</p>
+<p>The <strong>Live</strong> tab shows the application beside a conversation with Claude. The board itself serves the chat by calling Claude Code on this computer, so <strong>it keeps working even if you close the editor</strong>. The conversation is the same one the editor sees: open it there and you find it as the board left it.</p>
 <ul>
-<li>At the top you choose the project's conversation, or start one with <strong>+ New</strong>. The answer arrives as it is generated, and <strong>■ Stop</strong> cuts it.</li>
+<li>At the top you choose the project's conversation, or start one with <strong>+ New</strong>. Enter sends; the answer arrives as it is generated, and <strong>■ Stop</strong> cuts it.</li>
 <li>If another window has just written in that same conversation, the board shows it as <strong>open in</strong> that window and does not let you write in it, so two do not write at once. Write there or open a new one here.</li>
-<li>From the board, Claude may only use Flexygo's tools. If it tries another one, a <strong>Permission refused</strong> card shows what it wanted to do; <strong>Allow this time and retry</strong> lets it through that once.</li>
+<li>From the board, Claude may only use Flexygo's tools. If it tries another one, a <strong>Permission refused</strong> card shows what it wanted to do; <strong>Allow this time and retry</strong> lets it through that once, and <strong>Ignore</strong> dismisses it.</li>
+<li>When the assistant asks you a question with options, it also shows here, as in the editor's dialog: one tab per question, its options and <strong>Other</strong> to write your own. <strong>Send answers</strong> is enabled once every question has an answer. Whichever answer comes first counts, this one or the editor's, and the editor's dialog closes by itself; the dialog itself mentions that you can also answer from here.</li>
 <li>It needs Claude Code installed and signed in on this computer. If either is missing, the board says so in a card.</li>
 </ul>
 <div class="admonition note">
@@ -9984,27 +10166,35 @@
 <br>
 <figcaption>The application on the Live tab, with Select, Pause and Full screen</figcaption>
 </figure>
+<p>If the application does not answer, the board starts it with the product's <code>tools/app.ps1</code> script. If it cannot, it says so and what to do: build the solution if it is not built yet, start it by hand if the project has no such script, or open the board again if it took more than 5 minutes.</p>
 <p>With <strong>Select</strong> you ask for changes on the application itself:</p>
 <ol>
 <li>Press <strong>Select</strong>.</li>
-<li>Click what you want to change: a page, a module, a field, a column, a button, a menu option…</li>
-<li>Answer <strong>What should change?</strong> and press <strong>Send</strong> (or Enter). Esc cancels.</li>
+<li>Click what you want to change: a page, a module, a field, a column, a row, a button, a menu option, a tab, a card, a kanban lane, an event…</li>
+<li>Answer <strong>What should change?</strong> and press <strong>Ask Claude</strong> (or Enter). Esc cancels.</li>
 </ol>
 <p>The message reaches the conversation saying which element it is about.</p>
+<p>The view follows by itself the screen the assistant is working on ("Following…"), and the bar says which screen you have in front of you. With <strong>Pause</strong> it stays still while you look; if another screen changes meanwhile, it tells you and <strong>See</strong> takes you there. <strong>Full screen</strong> enlarges the application.</p>
+<p>To sign in to the application, the board uses the <code>admin</code> user. If it still has the factory password, it signs in and warns you to change it; if it no longer does, it asks you for it and only keeps it while the page stays open. If the application shows its data collection notice, the board accepts it and says so in the chat.</p>
 <hr>
 <h2 id="how-to-turn-on-the-panel-and-the-board">How to turn on the panel and the board<a class="headerlink" href="#how-to-turn-on-the-panel-and-the-board" title="Permanent link">¶</a></h2>
 <h3 id="one-time-step-enable-panel">One-time step: <code>--enable-panel</code><a class="headerlink" href="#one-time-step-enable-panel" title="Permanent link">¶</a></h3>
 <p>The panel is a Claude Code add-on that ships inside the Flexygo MCP server. For Claude Code to know about it, run this <strong>once per user and computer</strong>, in a terminal:</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flexygo-mcp<span class="w"> </span>--enable-panel
 </span></code></pre></div>
-<p>This command does two things, and nothing else:</p>
+<p>This command:</p>
 <ol>
-<li>It copies the panel to the <code>~/.flexygo-mcp/mods</code> folder, which is kept when you update the server.</li>
-<li>It adds one entry to your Claude Code user settings (<code>~/.claude/settings.json</code>) that tells it where the panel is.</li>
+<li>Copies the panel to the <code>~/.flexygo-mcp/mods</code> folder, which is kept when you update the server; the server brings it up to date each time it starts.</li>
+<li>Adds <strong>one single entry</strong> to your Claude Code user settings (<code>~/.claude/settings.json</code>) that tells it where the panel is. If that file cannot be read, it changes nothing and says so.</li>
+<li>If you run it from a Flexygo project's folder, it also turns the panel on in that project.</li>
 </ol>
-<p>You do not need to remember the command: when this step is missing, <code>/flx-setup</code> asks whether you want to turn it on and only runs it with your yes. The server never runs it on its own, because it writes to your user settings.</p>
+<p>You do not need to remember the command: while this step is missing, the assistant tells you when you start and offers to do it, and <code>/flx-setup</code> proposes it too. It only runs it with your yes. The server never runs it on its own, because it writes to your user settings. If the project already declares the panel in its own <code>.claude/settings.json</code>, Claude Code finds it without this step.</p>
 <p>Each project turns the panel on in its own <code>.claude/settings.json</code>, and the server does that by itself when it starts. If someone turned it off in a project, it stays off.</p>
-<p>The panel shows when you open a <strong>new chat or session</strong> of Claude Code in the project.</p>
+<p>The panel shows when you open a <strong>new chat or session</strong> of Claude Code in the project: it does not appear in the chat that was already open.</p>
+<div class="admonition warning">
+<p class="admonition-title">disableAllHooks</p>
+<p>Neither the panel nor the status line works if <code>disableAllHooks</code> is set in any Claude Code settings.</p>
+</div>
 <h3 id="where-it-works">Where it works<a class="headerlink" href="#where-it-works" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -10016,27 +10206,27 @@
 <tbody>
 <tr>
 <td>Desktop app</td>
-<td>The band above the chat. <strong>Live view</strong> opens the board on the Live tab.</td>
+<td>The band above the chat. <code>/flexygo</code> opens the side pane.</td>
 </tr>
 <tr>
 <td>VS Code extension</td>
-<td>The band above the chat, with the mode in a drop-down. <strong>Live view</strong> opens the board on the Live tab.</td>
+<td>The band above the chat. <code>/flexygo</code> opens the side pane.</td>
 </tr>
 <tr>
 <td>Terminal</td>
-<td>A side pane instead of the band.</td>
+<td>The side pane, which opens by itself in a Flexygo project, and the status line.</td>
 </tr>
 <tr>
 <td>No interface (<code>claude -p</code>)</td>
-<td>Nothing to see, but each command's API usage price is still recorded.</td>
+<td>Nothing to see, but the API usage price is still recorded.</td>
+</tr>
+<tr>
+<td>Claude Desktop without Claude Code, claude.ai</td>
+<td>No panel.</td>
 </tr>
 </tbody>
 </table>
 <p>The <strong>board</strong> does not depend on the panel: it is a browser page and works in every case, also with <code>flexygo-mcp --board</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">Coming soon</p>
-<p>In an upcoming version the panel will install with one click, with no commands.</p>
-</div>
 
 
 
@@ -10102,9 +10292,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#live-view" class="md-nav__link">
+  <a href="#the-side-pane" class="md-nav__link">
     <span class="md-ellipsis">
-      Live view
+      The side pane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-status-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      The status line
     </span>
   </a>
   
@@ -10129,6 +10328,24 @@
   <a href="#how-to-open-it" class="md-nav__link">
     <span class="md-ellipsis">
       How to open it
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-tabs-one-by-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tabs, one by one
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-model-as-a-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      The model, as a diagram
     </span>
   </a>
   

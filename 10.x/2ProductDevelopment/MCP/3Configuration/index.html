@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1489,6 +1514,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#el-fichero-claudesettingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      El fichero .claude/settings.json
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-el-servidor-anade-al-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lo que el servidor añade al proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#las-bases-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Las bases de datos
@@ -1498,9 +1541,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#telemetria-de-errores" class="md-nav__link">
+  <a href="#opciones-de-la-linea-de-comandos" class="md-nav__link">
     <span class="md-ellipsis">
-      Telemetría de errores
+      Opciones de la línea de comandos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables de entorno
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telemetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetría
     </span>
   </a>
   
@@ -9781,7 +9842,7 @@
 <p>El proyecto generado desde la plantilla de Flexygo ya trae la configuración necesaria. No hace falta tocarla para empezar.</p>
 <hr>
 <h2 id="el-fichero-mcpjson">El fichero <code>.mcp.json</code><a class="headerlink" href="#el-fichero-mcpjson" title="Permanent link">¶</a></h2>
-<p>En la raíz del proyecto, <code>.mcp.json</code> le dice a Claude Code cómo arrancar el servidor:</p>
+<p>En la raíz del proyecto, <code>.mcp.json</code> le dice a Claude Code cómo arrancar el servidor. La plantilla lo trae así:</p>
 <div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">"flexygo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -9789,34 +9850,132 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">"ASPNETCORE_ENVIRONMENT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development"</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">"stitch"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">"timeout"</span><span class="p">:</span><span class="w"> </span><span class="mi">600000</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://stitch.googleapis.com/mcp"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">"X-Goog-Api-Key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${STITCH_API_KEY}"</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
 <li><code>command</code> es la herramienta global <code>flexygo-mcp</code>, instalada con el .NET 10 SDK (ver <a href="../1Prerequisites/">Prerrequisitos</a>).</li>
-<li><code>ASPNETCORE_ENVIRONMENT</code> decide qué <code>appsettings</code> del Backend se leen. Con <code>Development</code>, se lee <code>appsettings.Development.json</code>.</li>
+<li><code>ASPNETCORE_ENVIRONMENT</code> decide qué <code>appsettings</code> del Backend se leen. Con <code>Development</code>, se lee <code>appsettings.Development.json</code>. El servidor lo pone así si falta: sin él, funcionaría como producción y ocultaría las cadenas de conexión.</li>
+<li>La entrada <code>stitch</code> la usa <code>/flx-design</code> para dibujar las pantallas con Google Stitch. Toma la clave de la variable de entorno <code>STITCH_API_KEY</code>, así que la clave no se guarda en el fichero. Si no la usas, no estorba; y si ya tienes Stitch configurado en tu propia configuración de Claude y no defines la variable, el servidor quita la entrada del proyecto para que se use la tuya.</li>
 </ul>
-<p>El fichero <code>.claude/settings.json</code> del proyecto deja el servidor <code>flexygo</code> activado, para que Claude Code no tenga que preguntarlo cada vez.</p>
-<div class="admonition note">
-<p class="admonition-title">Diseño con Google Stitch</p>
-<p>La plantilla trae también una entrada <code>stitch</code> en <code>.mcp.json</code>, que usa <code>/flx-design</code> para dibujar las pantallas. Necesita la variable de entorno <code>STITCH_API_KEY</code>. Si no la usas, no estorba.</p>
-</div>
+<p>Al arrancar, el servidor añade una tercera entrada, <code>playwright</code>: el navegador con el que el agente comprueba la aplicación (necesita Node.js y Google Chrome). Abre Chrome con la ventana visible y guarda la sesión iniciada en <code>.playwright-mcp/</code>.</p>
+<p>Si cambias <code>.mcp.json</code> a mano, o lo cambia el servidor, una sesión que ya está en marcha sigue con los servidores con los que empezó: vuelve a abrir el proyecto (en VS Code, <em>Developer: Reload Window</em>).</p>
+<hr>
+<h2 id="el-fichero-claudesettingsjson">El fichero <code>.claude/settings.json</code><a class="headerlink" href="#el-fichero-claudesettingsjson" title="Permanent link">¶</a></h2>
+<p>El <code>.claude/settings.json</code> que trae la plantilla deja aprobado el servidor <code>flexygo</code>, para que Claude Code no lo pregunte cada vez, y declara y enciende el <a href="../7PanelAndBoard/">panel de Flexygo</a>. Si alguien apaga el panel en un proyecto, el servidor lo respeta.</p>
+<hr>
+<h2 id="lo-que-el-servidor-anade-al-proyecto">Lo que el servidor añade al proyecto<a class="headerlink" href="#lo-que-el-servidor-anade-al-proyecto" title="Permanent link">¶</a></h2>
+<p>Cada vez que arranca, el servidor deja al día en el proyecto lo que es suyo, y no toca lo demás:</p>
+<ul>
+<li><strong>Los comandos <code>/flx-*</code></strong>, en <code>.claude/skills/</code> y, para GitHub Copilot, en <code>.github/skills/</code>. Las skills propias del proyecto no se tocan.</li>
+<li><strong>Su bloque de instrucciones en <code>.claude/CLAUDE.md</code></strong>, entre marcas. Lo que el equipo escriba fuera de ese bloque es del proyecto.</li>
+<li><strong>En <code>.claude/settings.local.json</code></strong>: la línea de estado de Flexygo y las comprobaciones que vigilan lo que hace el agente (ver <a href="#comprobaciones-de-seguridad">Comprobaciones de seguridad</a>). Si el proyecto ya tiene su propia línea de estado, la conserva.</li>
+<li><strong>La entrada <code>playwright</code> de <code>.mcp.json</code></strong>, descrita arriba.</li>
+<li><strong><code>tools/app.ps1</code></strong>, el script con el que el panel arranca y para la aplicación, si el proyecto no lo tiene.</li>
+</ul>
+<p>Los comandos también se pueden instalar desde fuera de Claude Code, antes de abrir el proyecto, con <code>flexygo-mcp --sync-skills &lt;carpeta del proyecto&gt;</code>.</p>
 <hr>
 <h2 id="las-bases-de-datos">Las bases de datos<a class="headerlink" href="#las-bases-de-datos" title="Permanent link">¶</a></h2>
 <p>El servidor no tiene conexiones propias: lee <code>ConfConnectionString</code> y <code>DataConnectionString</code> del <code>appsettings</code> del Backend del proyecto. Si no están configuradas, <code>/flx-setup</code> te guía para crear o elegir las bases de datos y escribirlas.</p>
+<p>El servidor busca el proyecto en la carpeta en la que lo arranca Claude Code. Si lo arranca desde otra carpeta, la variable de entorno <code>FLEXYGO_WORKSPACE_DIR</code> le dice dónde está el proyecto.</p>
 <hr>
-<h2 id="telemetria-de-errores">Telemetría de errores<a class="headerlink" href="#telemetria-de-errores" title="Permanent link">¶</a></h2>
-<p>Los errores de las herramientas del servidor se registran en un recolector del propio equipo. La variable de entorno <code>FLEXYGO_MCP_ERROR_TELEMETRY</code> los envía a otro recolector, o los apaga con <code>off</code>. Consulta <a href="../6Workflow/#telemetria-de-errores">Telemetría de errores</a>.</p>
+<h2 id="opciones-de-la-linea-de-comandos">Opciones de la línea de comandos<a class="headerlink" href="#opciones-de-la-linea-de-comandos" title="Permanent link">¶</a></h2>
+<p>Además de arrancar como servidor, <code>flexygo-mcp</code> acepta estas opciones en una terminal:</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--version</code></td>
+<td>Dice la versión instalada.</td>
+</tr>
+<tr>
+<td><code>--enable-panel</code></td>
+<td>Activa el panel de Flexygo en este equipo. Consulta <a href="../7PanelAndBoard/#como-activar-el-panel-y-el-tablero">Cómo activar el panel y el tablero</a>.</td>
+</tr>
+<tr>
+<td><code>--board</code></td>
+<td>Abre en el navegador el tablero del desarrollador, con el proyecto de la carpeta actual y los demás proyectos de este equipo.</td>
+</tr>
+<tr>
+<td><code>--sync-skills &lt;carpeta&gt;</code></td>
+<td>Instala los comandos <code>/flx-*</code> en ese proyecto sin abrir Claude Code.</td>
+</tr>
+<tr>
+<td><code>--http</code></td>
+<td>Arranca el servidor por HTTP en lugar de por la entrada y salida estándar, para clientes MCP que lo necesiten.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="variables-de-entorno">Variables de entorno<a class="headerlink" href="#variables-de-entorno" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Para qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASPNETCORE_ENVIRONMENT</code></td>
+<td>Qué <code>appsettings</code> del Backend se leen. En <code>.mcp.json</code>, <code>Development</code>.</td>
+</tr>
+<tr>
+<td><code>FLEXYGO_WORKSPACE_DIR</code></td>
+<td>La carpeta del proyecto, cuando Claude Code arranca el servidor desde otra.</td>
+</tr>
+<tr>
+<td><code>STITCH_API_KEY</code></td>
+<td>La clave de Google Stitch, para <code>/flx-design</code>.</td>
+</tr>
+<tr>
+<td><code>FLEXYGO_MODEL_PER_PHASE</code></td>
+<td>Con <code>auto</code>, cada comando <code>/flx-*</code> lleva el modelo recomendado de su fase. Viene apagada. Consulta <a href="../6Workflow/#el-modelo-de-cada-fase">El modelo de cada fase</a>.</td>
+</tr>
+<tr>
+<td><code>FLEXYGO_MCP_ERROR_TELEMETRY</code></td>
+<td>A qué recolector van los errores de las herramientas, u <code>off</code> para apagarlo.</td>
+</tr>
+<tr>
+<td><code>FLEXYGO_MCP_TELEMETRY</code></td>
+<td><code>off</code> apaga la telemetría de producto.</td>
+</tr>
+</tbody>
+</table>
+<p>Las variables del servidor se ponen en el bloque <code>env</code> de su entrada en <code>.mcp.json</code>, o en el entorno del equipo. <code>STITCH_API_KEY</code> es una clave: va siempre en el entorno de tu equipo, nunca escrita en <code>.mcp.json</code>, que viaja con el proyecto.</p>
+<hr>
+<h2 id="telemetria">Telemetría<a class="headerlink" href="#telemetria" title="Permanent link">¶</a></h2>
+<p>El servidor envía dos cosas:</p>
+<ul>
+<li><strong>Los errores de las herramientas</strong>, con lo necesario para reproducirlos: la herramienta y sus argumentos (con lo que parece secreto y los valores de SQL tapados), el error, las versiones y la fase y la tarea en que ocurrió. Por defecto van a un recolector de este mismo equipo, así que no salen de él. La variable <code>FLEXYGO_MCP_ERROR_TELEMETRY</code> los envía a otro recolector, o los apaga con <code>off</code>. Nunca llevan la conversación ni las filas de una consulta. La primera respuesta del servidor en cada sesión lo recuerda. Consulta <a href="../6Workflow/#telemetria-de-errores">Telemetría de errores</a>.</li>
+<li><strong>La telemetría de producto</strong>, que sí sale del equipo hacia el recolector de telemetría de Flexygo: los errores inesperados del servidor (su tipo y su mensaje, nunca la sentencia SQL que los produjo) y lo que el agente apunta que el servidor todavía no sabe hacer, descrito y no copiado de lo que pediste. Va con el nombre del proyecto y la versión del servidor. Sirve para saber qué falla y qué falta en todos los proyectos. Viene encendida; <code>FLEXYGO_MCP_TELEMETRY=off</code> la apaga.</li>
+</ul>
 <hr>
 <h2 id="comprobaciones-de-seguridad">Comprobaciones de seguridad<a class="headerlink" href="#comprobaciones-de-seguridad" title="Permanent link">¶</a></h2>
-<p>El servidor toma algunas direcciones de ficheros que viajan con el proyecto, como <code>launchSettings.json</code> o <code>appsettings.json</code>. Un proyecto clonado podría traerlas cambiadas, así que el servidor las comprueba antes de usarlas:</p>
+<p>El servidor, y las comprobaciones que instala en Claude Code, ponen estos límites:</p>
 <ul>
-<li><strong>Direcciones de la aplicación.</strong> El panel, el tablero y el script <code>tools/app.ps1</code> solo usan una dirección <code>http</code> o <code>https</code> de <strong>este equipo</strong> (<code>localhost</code>, <code>127.0.0.1</code> o <code>[::1]</code>). De ella solo se toman el esquema, el equipo y el puerto. Cualquier otra cosa se ignora y no se abre ni se arranca nada con ella: un esquema como <code>file:</code>, una dirección de otro equipo o texto añadido detrás de la dirección.</li>
-<li><strong>Recarga de la caché.</strong> Para recargar la caché de la aplicación, el servidor inicia sesión con tu usuario y contraseña. Si el Backend está en este equipo, lo hace sin preguntar. Si está en <strong>otro equipo</strong>, no envía nada: el agente te dice el nombre exacto de ese equipo y te pregunta si quieres enviarle tus credenciales. Solo con tu sí, y solo a ese equipo, inicia sesión. Con el Backend en este equipo, puede usar la contraseña del usuario de pruebas guardada en <code>*.InterfaceTest/appsettings.local.json</code>, siempre que git ignore ese fichero; nunca la repite ni la escribe en ningún sitio, y si no está o no vale, te la pide.</li>
-<li><strong>Ficheros protegidos.</strong> El agente no puede leer ni imprimir el fichero con las contraseñas de los usuarios de prueba (<code>*.InterfaceTest/appsettings.local.json</code>): se le dice qué usar en su lugar. Tampoco puede escribir desde la consola dentro de <code>.flexygo/</code>, que solo escriben las herramientas del servidor.</li>
-<li><strong>Secretos en git.</strong> El estado del proyecto avisa si un <code>conf/appsettings*.json</code> que sigue git guarda secretos, sin enseñar nunca su valor.</li>
+<li><strong>Direcciones de la aplicación.</strong> El panel, el tablero y el script <code>tools/app.ps1</code> toman la dirección de la aplicación del <code>launchSettings.json</code> del proyecto, y solo abren o arrancan algo en una dirección <code>http</code> o <code>https</code> de <strong>este equipo</strong> (<code>localhost</code>, <code>127.0.0.1</code> o <code>[::1]</code>). Cualquier otra dirección se ignora.</li>
+<li><strong>Recarga de la caché.</strong> Para recargar la caché de la aplicación, el servidor inicia sesión con un usuario que pueda hacerlo. Si el Backend está en este equipo, lo hace sin preguntar, y puede usar la contraseña de un usuario de pruebas guardada en <code>*.InterfaceTest/appsettings.local.json</code>, siempre que git ignore ese fichero; nunca la repite ni la escribe en ningún sitio, y si no está o no vale, te la pide. Si el Backend está en <strong>otro equipo</strong>, no envía nada: el agente te dice el nombre exacto de ese equipo y te pregunta si quieres enviarle tus credenciales. Solo con tu sí, y solo a ese equipo, inicia sesión.</li>
+<li><strong>Contraseñas en ficheros.</strong> El agente no puede leer ni imprimir el fichero con las contraseñas de los usuarios de prueba (<code>*.InterfaceTest/appsettings.local.json</code>): se le dice qué usar en su lugar. Si lee otro fichero que tiene una contraseña escrita, como un fichero compose o una cadena de conexión, la ve tapada (<code>***</code>); y una búsqueda o un comando de consola que la sacaría por pantalla no se ejecuta.</li>
+<li><strong>Bases de datos y <code>.flexygo/</code>.</strong> El agente llega a las bases de datos solo con las herramientas del servidor, nunca con <code>sqlcmd</code>. Tampoco escribe a mano dentro de <code>.flexygo/</code>, ni desde el editor ni desde la consola, porque esa carpeta solo la escriben las herramientas del servidor; y no guarda capturas del navegador ahí ni en la raíz del proyecto.</li>
+<li><strong>Roles de administrador.</strong> Para dar a un usuario un rol de administrador o de diseñador, el agente tiene que preguntártelo antes, diciendo a quién.</li>
+<li><strong>Secretos en git.</strong> El estado del proyecto avisa si un <code>conf/appsettings*.json</code> que sigue git guarda secretos, sin enseñar nunca su valor. También avisa de un fichero compose que da una contraseña por defecto o que conecta la aplicación como <code>sa</code>, y de un producto terminado sin README propio.</li>
 </ul>
+<p>Las comprobaciones de Claude Code (la línea de estado y los límites sobre contraseñas, <code>sqlcmd</code> y <code>.flexygo/</code>) no se ejecutan si <code>disableAllHooks</code> está puesto en alguna configuración de Claude Code; el servidor avisa de ello al arrancar.</p>
 
 
 
@@ -9863,6 +10022,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#el-fichero-claudesettingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      El fichero .claude/settings.json
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-el-servidor-anade-al-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lo que el servidor añade al proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#las-bases-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Las bases de datos
@@ -9872,9 +10049,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#telemetria-de-errores" class="md-nav__link">
+  <a href="#opciones-de-la-linea-de-comandos" class="md-nav__link">
     <span class="md-ellipsis">
-      Telemetría de errores
+      Opciones de la línea de comandos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables de entorno
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telemetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetría
     </span>
   </a>
   

@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1590,9 +1615,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#separa-las-fases-cuando-la-tarea-es-compleja" class="md-nav__link">
+  <a href="#deja-que-el-flujo-parta-el-trabajo" class="md-nav__link">
     <span class="md-ellipsis">
-      Separa las fases cuando la tarea es compleja
+      Deja que el flujo parta el trabajo
     </span>
   </a>
   
@@ -1602,15 +1627,6 @@
   <a href="#pide-revision-antes-de-ejecutar-cambios-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Pide revisión antes de ejecutar cambios de datos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#da-contexto-al-inicio-de-cada-conversacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Da contexto al inicio de cada conversación
     </span>
   </a>
   
@@ -1640,9 +1656,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#haz-un-commit-de-checkpoint-antes-de-iterar" class="md-nav__link">
+  <a href="#acepta-el-commit-de-cada-bloque" class="md-nav__link">
     <span class="md-ellipsis">
-      Haz un commit de checkpoint antes de iterar
+      Acepta el commit de cada bloque
     </span>
   </a>
   
@@ -9874,17 +9890,18 @@
 
 
 <h1 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">¶</a></h1>
-<p>Estas recomendaciones asumen que el servidor <code>flexygo-mcp</code> está conectado a Claude Code. Si todavía no lo has configurado, consulta primero <a href="../2Usage/">Uso básico</a>.</p>
+<p>Estas recomendaciones asumen que el servidor <code>flexygo-mcp</code> está conectado a Claude Code. Si todavía no lo has configurado, consulta primero <a href="../2Usage/">Uso básico</a>. Para ver cómo se trabaja hablándole al asistente, consulta la <a href="../0Guide/">Guía</a>.</p>
 <hr>
 <h2 id="modelo-recomendado">Modelo recomendado<a class="headerlink" href="#modelo-recomendado" title="Permanent link">¶</a></h2>
-<p>Usa un modelo Claude actual. Para pensar y decidir (<code>/flx-context</code>, <code>/flx-plan</code>, <code>/flx-discuss</code>) conviene el modelo más capaz que tengas; para ejecutar un bloque ya decidido (<code>/flx-execute</code>, <code>/flx-verify</code>) basta con uno más rápido y barato.</p>
+<p>Usa un modelo Claude actual. Para pensar y decidir (<code>/flx-plan</code>, <code>/flx-discuss</code>, <code>/flx-review</code>, <code>/flx-quality</code> y la auditoría de seguridad de <code>/flx-release</code>) conviene el modelo más capaz que tengas; para construir y comprobar (<code>/flx-context</code>, <code>/flx-execute</code>, <code>/flx-security</code>, <code>/flx-help</code>, <code>/flx-api</code>, <code>/flx-release</code>…) basta con uno más rápido y barato. El agente te recomienda el de cada fase: consulta <a href="../6Workflow/#el-modelo-de-cada-fase">El modelo de cada fase</a>.</p>
 <hr>
 <h2 id="gestion-de-la-ventana-de-contexto">Gestión de la ventana de contexto<a class="headerlink" href="#gestion-de-la-ventana-de-contexto" title="Permanent link">¶</a></h2>
 <p>Este es el factor que más afecta a la calidad del trabajo con el agente. A medida que la conversación crece, el agente empieza a perder coherencia, olvida instrucciones anteriores y comete errores que no cometería con el contexto limpio. Además, cada mensaje en una conversación larga cuesta más.</p>
 <p><strong>Reglas prácticas:</strong></p>
 <ul>
 <li><strong>Un chat nuevo por fase o por bloque.</strong> El servidor guarda un punto de control de cada desarrollo, así que un chat nuevo retoma el trabajo sin releer la conversación anterior: escribe <code>/flx-status</code> o el siguiente comando. Consulta <a href="../6Workflow/#retomar-el-trabajo-sin-pagar-la-conversacion-entera">Retomar el trabajo</a>.</li>
-<li><strong>Haz caso al aviso de la línea de estado.</strong> Cuando el contexto se llena, la línea de estado de Flexygo lo dice con <code>context N% → new chat</code>.</li>
+<li><strong>Haz caso al aviso de la línea de estado.</strong> Cuando el contexto se llena, la línea de estado de Flexygo lo dice con <code>context N% → new chat</code>, desde el 80 %.</li>
+<li><strong>Acepta el chat nuevo que te ofrece el agente.</strong> En un chat muy largo, al cerrar una tarea o un bloque, te propone seguir en uno nuevo y te da el mensaje para empezarlo.</li>
 <li><strong>No uses la misma conversación para planificar y ejecutar.</strong> La fase de análisis o discusión consume contexto que luego hace falta para la ejecución.</li>
 <li><strong>Para <code>/flx-build-product</code>, empieza siempre con contexto limpio.</strong></li>
 </ul>
@@ -9900,7 +9917,7 @@
 </div>
 <hr>
 <h2 id="sigue-el-flujo-de-comandos">Sigue el flujo de comandos<a class="headerlink" href="#sigue-el-flujo-de-comandos" title="Permanent link">¶</a></h2>
-<p>Los comandos <code>/flx-*</code> llevan el trabajo fase a fase: contexto, plan, decisiones, ejecución por bloques, revisión, verificación, pruebas, calidad, ayuda y, si hace falta, la API. Cada fase es la puerta de la siguiente, así que no hace falta que recuerdes qué toca: el agente, el panel y <code>/flx-status</code> lo dicen. Consulta el <a href="../6Workflow/">flujo completo</a>.</p>
+<p>Los comandos <code>/flx-*</code> llevan el trabajo fase a fase: contexto, plan, decisiones, ejecución por bloques (cada bloque se comprueba en el navegador y se prueba en su propio chat), revisión, seguridad, calidad, ayuda, la API si hace falta y la comprobación final (<code>/flx-release</code>: auditoría de seguridad, documentos de entrega y el producto publicado desde cero con todas sus pruebas). Cada fase es la puerta de la siguiente, así que no hace falta que recuerdes qué toca: el agente, el panel y <code>/flx-status</code> lo dicen. Consulta el <a href="../6Workflow/">flujo completo</a>.</p>
 <hr>
 <h2 id="como-dar-ordenes-efectivas">Cómo dar órdenes efectivas<a class="headerlink" href="#como-dar-ordenes-efectivas" title="Permanent link">¶</a></h2>
 <h3 id="identifica-siempre-el-objeto-sobre-el-que-trabajas">Identifica siempre el objeto sobre el que trabajas<a class="headerlink" href="#identifica-siempre-el-objeto-sobre-el-que-trabajas" title="Permanent link">¶</a></h3>
@@ -9925,47 +9942,22 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Usa el Color Picker MCP App. No modifiques nada más del estilo.
 </span></code></pre></div>
 <hr>
-<h3 id="separa-las-fases-cuando-la-tarea-es-compleja">Separa las fases cuando la tarea es compleja<a class="headerlink" href="#separa-las-fases-cuando-la-tarea-es-compleja" title="Permanent link">¶</a></h3>
-<p>Si una tarea tiene varias partes, pídelas en pasos y espera confirmación entre ellos. No lances todo en un solo prompt.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Un prompt que puede descontrolarse</label><label for="__tabbed_2_2">Mismo trabajo, bajo control</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Crea la entidad Pedido, añade la relación con Cliente, genera el formulario
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>de alta y actualiza el menú de navegación
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<p></p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Paso 1: Crea la entidad Pedido con los campos: id, fecha, total, clienteId (FK a Cliente).
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Cuando lo tengas, confirma y espera.
-</span></code></pre></div>
-<em>(Tras confirmación)</em>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Paso 2: Genera el formulario de alta para la entidad Pedido.
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Cuando lo tengas, confirma y espera.
-</span></code></pre></div><p></p>
-</div>
-</div>
-</div>
+<h3 id="deja-que-el-flujo-parta-el-trabajo">Deja que el flujo parta el trabajo<a class="headerlink" href="#deja-que-el-flujo-parta-el-trabajo" title="Permanent link">¶</a></h3>
+<p>Si una tarea tiene varias partes (una entidad nueva, su relación, su formulario y su opción de menú), no la partas tú en mensajes: pídela con <code>/flx-new-development</code> y <code>/flx-plan</code>, que la parten en bloques a la medida de un chat y te preguntan antes lo que haya que decidir.</p>
+<p>Tampoco hace falta describirle al agente cómo está el proyecto: antes de cambiar algo, lee su configuración. Basta con nombrar el objeto sobre el que trabajas.</p>
 <hr>
 <h3 id="pide-revision-antes-de-ejecutar-cambios-de-datos">Pide revisión antes de ejecutar cambios de datos<a class="headerlink" href="#pide-revision-antes-de-ejecutar-cambios-de-datos" title="Permanent link">¶</a></h3>
 <p>Para cualquier operación que modifique la base de datos, pide al agente que describa lo que va a hacer antes de ejecutarlo:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Antes de ejecutar cualquier cambio en la base de datos, explícame exactamente
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>qué operaciones vas a realizar y espera mi confirmación.
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Antes de ejecutar cualquier cambio en la base de datos, explícame exactamente
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>qué operaciones vas a realizar y espera mi confirmación.
 </span></code></pre></div>
-<hr>
-<h3 id="da-contexto-al-inicio-de-cada-conversacion">Da contexto al inicio de cada conversación<a class="headerlink" href="#da-contexto-al-inicio-de-cada-conversacion" title="Permanent link">¶</a></h3>
-<p>Si la tarea parte de un estado específico del proyecto, orienta al agente antes de pedir nada:</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Estoy en el módulo "GestionPedidos". La entidad Pedido tiene los campos:
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>id, fecha, total, estado (enum: Pendiente/Enviado/Entregado), clienteId.
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Quiero añadir un filtro por estado en el listado principal.
-</span></code></pre></div>
-<p>El agente trabajará sobre lo que le describes — no asumas que "sabe" cómo está tu proyecto en este momento.</p>
 <hr>
 <h2 id="consejos-de-uso-con-claude-code">Consejos de uso con Claude Code<a class="headerlink" href="#consejos-de-uso-con-claude-code" title="Permanent link">¶</a></h2>
 <ul>
 <li>Si el agente no usa las herramientas de Flexygo cuando debería, recuérdaselo explícitamente: <code>"Usa las herramientas de Flexygo MCP para esto"</code>.</li>
 <li>Cuando el agente proponga varios enfoques, elige uno antes de continuar. La ambigüedad sostenida consume contexto sin avanzar.</li>
 <li>Si una respuesta fue incorrecta, corrígela en el siguiente mensaje antes de continuar con la tarea — no la ignores o el agente construirá sobre el error.</li>
-<li>Cuando actualices el servidor (<code>dotnet tool update -g flexygo-mcp</code>), abre un <strong>chat nuevo</strong>: un chat ya empezado sigue con las herramientas de antes.</li>
+<li>Cuando actualices el servidor (<code>dotnet tool update -g flexygo-mcp</code>), abre un <strong>chat nuevo</strong>: un chat ya empezado sigue con las herramientas de antes. El servidor te avisa cuando hay una versión nueva publicada, y la línea de estado dice <code>server X runs, Y installed → new chat</code> mientras el chat siga con la versión anterior.</li>
 </ul>
 <hr>
 <h2 id="verifica-que-el-agente-usa-las-herramientas">Verifica que el agente usa las herramientas<a class="headerlink" href="#verifica-que-el-agente-usa-las-herramientas" title="Permanent link">¶</a></h2>
@@ -9978,15 +9970,14 @@
 </ul>
 <p>Si ocurre, detén la conversación, comprueba con <code>/mcp</code> que el servidor <code>flexygo</code> está conectado y pide al agente explícitamente que use las herramientas de Flexygo.</p>
 <hr>
-<h2 id="haz-un-commit-de-checkpoint-antes-de-iterar">Haz un commit de checkpoint antes de iterar<a class="headerlink" href="#haz-un-commit-de-checkpoint-antes-de-iterar" title="Permanent link">¶</a></h2>
-<p>Cuando cierres un bloque o un desarrollo y lo hayas revisado y aprobado, <strong>haz un commit a Git antes de continuar</strong> con peticiones de mejoras o modificaciones individuales.</p>
-<p>Este checkpoint tiene varias ventajas:</p>
+<h2 id="acepta-el-commit-de-cada-bloque">Acepta el commit de cada bloque<a class="headerlink" href="#acepta-el-commit-de-cada-bloque" title="Permanent link">¶</a></h2>
+<p>Al preparar el proyecto, el agente te pregunta una vez qué hacer al cerrar cada bloque y cada fase que cambia la configuración: solo commit, commit y push, o nada. Con el commit tienes un punto al que volver por cada bloque, sin ficheros con secretos; el push lo hace con tu propio git y nunca lo fuerza. Consulta <a href="../6Workflow/#el-control-de-versiones">El control de versiones</a>.</p>
+<p>Acéptalo antes de pedir mejoras o cambios sueltos:</p>
 <ul>
 <li>Tienes un punto de retorno claro si una iteración posterior rompe algo</li>
 <li>El agente puede ver exactamente qué ha cambiado en cada tarea (diff limpio)</li>
 <li>Mantienes el control de qué es "base aprobada" y qué son cambios posteriores</li>
 </ul>
-<p>Es una buena práctica hacer commits frecuentes a medida que avanzas — no esperes a tener el producto terminado.</p>
 <hr>
 <h2 id="ajusta-la-complejidad-de-lo-que-pides">Ajusta la complejidad de lo que pides<a class="headerlink" href="#ajusta-la-complejidad-de-lo-que-pides" title="Permanent link">¶</a></h2>
 <p>Un cambio pequeño sobre algo que ya existe va por <code>/flx-fast</code>, sin plan. Lo que crea tablas o entidades, toca permisos o carga datos va por <code>/flx-new-development</code> y <code>/flx-plan</code>, que lo parte en bloques.</p>
@@ -10093,9 +10084,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#separa-las-fases-cuando-la-tarea-es-compleja" class="md-nav__link">
+  <a href="#deja-que-el-flujo-parta-el-trabajo" class="md-nav__link">
     <span class="md-ellipsis">
-      Separa las fases cuando la tarea es compleja
+      Deja que el flujo parta el trabajo
     </span>
   </a>
   
@@ -10105,15 +10096,6 @@
   <a href="#pide-revision-antes-de-ejecutar-cambios-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Pide revisión antes de ejecutar cambios de datos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#da-contexto-al-inicio-de-cada-conversacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Da contexto al inicio de cada conversación
     </span>
   </a>
   
@@ -10143,9 +10125,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#haz-un-commit-de-checkpoint-antes-de-iterar" class="md-nav__link">
+  <a href="#acepta-el-commit-de-cada-bloque" class="md-nav__link">
     <span class="md-ellipsis">
-      Haz un commit de checkpoint antes de iterar
+      Acepta el commit de cada bloque
     </span>
   </a>
   

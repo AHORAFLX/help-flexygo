@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1652,6 +1677,24 @@
   <a href="#lo-que-la-plataforma-ya-hace-bien-se-queda" class="md-nav__link">
     <span class="md-ellipsis">
       Lo que la plataforma ya hace bien, se queda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-pieza-de-la-plataforma-antes-que-el-codigo-a-mano" class="md-nav__link">
+    <span class="md-ellipsis">
+      La pieza de la plataforma antes que el código a mano
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-javascript-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      El JavaScript del proyecto
     </span>
   </a>
   
@@ -9833,13 +9876,15 @@
 
 <h1 id="lo-que-construye-en-flexygo-10">Lo que construye en Flexygo 10<a class="headerlink" href="#lo-que-construye-en-flexygo-10" title="Permanent link">¶</a></h1>
 <p>Con un proyecto en <strong>Flexygo 10</strong>, el servidor MCP usa lo que trae esta versión: gráficas ECharts, tarjetas de indicadores, reglas al guardar, avisos en directo, objetos REST, marca y pantallas de cuenta…</p>
+<p>El agente sabe en qué versión de la plataforma corre el proyecto (lo dice <code>/flx-status</code>). Si no puede saberlo, o la versión es anterior a la 10, construye como antes y te lo dice.</p>
 <h2 id="graficas-echarts-y-temas">Gráficas ECharts y temas<a class="headerlink" href="#graficas-echarts-y-temas" title="Permanent link">¶</a></h2>
 <p>En Flexygo 10 todas las gráficas son <strong>ECharts</strong>: diez tipos (barras, líneas, anillo, radar…). Además, puede:</p>
 <ul>
 <li>poner el total en el centro de un anillo;</li>
 <li>añadir una línea de objetivo;</li>
 <li>poner la unidad tras cada cifra;</li>
-<li>añadir una línea al pie con la variación («+12 % frente al mes anterior»).</li>
+<li>añadir una línea al pie con la variación («+12 % frente al mes anterior»), que se dibuja en la skin 2026;</li>
+<li>guardar en el navegador los datos de la gráfica durante unos segundos, para no pedirlos de nuevo en cada visita.</li>
 </ul>
 <p>Las cifras salen con el formato del idioma del usuario (<code>35.000</code> en castellano, <code>35,000</code> en inglés).</p>
 <p>Si no le pides un tema, la gráfica usa el que trae Flexygo 10 por defecto. También puede crear un <strong>tema propio del producto</strong> con sus colores y las formas de uno de los de fábrica, sin tocar los de fábrica, que comparten todas las aplicaciones.</p>
@@ -9857,7 +9902,8 @@
 <li>enlaces de acción;</li>
 <li>un conmutador de periodo (24 h, 7 días, 30 días), que recuerda la elección del usuario.</li>
 </ul>
-<p>El color sigue la piel y el modo oscuro.</p>
+<p>El color sigue la piel y el modo oscuro. La tira de cifras sobre una lista es <strong>un solo módulo</strong>, con una fila por cifra: cada fila se dibuja como su propia tarjeta.</p>
+<p>En <code>/flx-discuss</code>, el agente pregunta qué cifras abren la página de inicio: la cifra, el periodo, con qué se compara y qué color significa «mal».</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StatCard.png" data-desc-position="bottom"><img alt="Tarjeta con la cifra, el objetivo, la barra de progreso, la variación y la evolución" src="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StatCard.png"></a>
 <br>
@@ -9873,18 +9919,20 @@
 <p>Lo que hace puede ser:</p>
 <ul>
 <li>mandar un aviso a la campana de un rol o de un usuario;</li>
-<li>enviar un correo;</li>
+<li>enviar un correo, también con una plantilla de correo reutilizable;</li>
 <li>crear o modificar registros;</li>
 <li>lanzar un proceso;</li>
 <li>pedir una <strong>decisión</strong>: una tarea con opciones, plazo y escalado, que se aprueba o se rechaza desde la campana o desde la ficha.</li>
 </ul>
+<p>La regla actúa después de guardar: si su paso falla, lo guardado se queda. El agente puede enseñarte las reglas de un objeto con sus últimas ejecuciones, decirte cuáles se dispararían con un registro concreto y borrar una regla, avisando antes de lo que se va con ella.</p>
+<p>En <code>/flx-discuss</code>, el agente pregunta qué pasos necesitan la aprobación de una persona: quién decide, qué respuestas hay y cuánto tiempo pasa antes de que vaya a otra persona.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10RuleDecision.png" data-desc-position="bottom"><img alt="Una decisión pendiente en la ficha y en la campana" src="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10RuleDecision.png"></a>
 <br>
 <figcaption>Una regla pide aprobar las notas de más de 1.000 €: la decisión sale en la ficha y en la campana</figcaption>
 </figure>
 <h2 id="avisos-en-directo">Avisos en directo<a class="headerlink" href="#avisos-en-directo" title="Permanent link">¶</a></h2>
-<p>El agente puede activar en un objeto los <strong>avisos en directo</strong>, para que los usuarios conectados vean los registros que guardan otros sin recargar. Se respetan la seguridad del objeto, sus filtros por usuario y las propiedades ocultas.</p>
+<p>El agente puede activar en un objeto los <strong>avisos en directo</strong>, para que los usuarios conectados vean los registros que guardan otros sin recargar. El aviso no lleva datos del registro: cada usuario vuelve a pedirlo con su propia sesión, así que solo lo ve quien puede verlo, con la seguridad del objeto y sus filtros. Además, se puede limitar a quién concierne cada registro (por ejemplo, a cada comercial, sus pedidos).</p>
 <p>Lo que llega a cada módulo, en la skin 2026:</p>
 <table>
 <thead>
@@ -9927,14 +9975,15 @@
 </tr>
 </tbody>
 </table>
-<p>Los avisos en directo no se anotan en la campana. Para avisar en la campana, se usa una regla al guardar.</p>
+<p>Los avisos en directo no van dirigidos a nadie en concreto. Para dejar un aviso en la campana de un rol o de un usuario, se usa una regla al guardar.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10LiveNoticeList.png" data-desc-position="bottom"><img alt="Lista con la banda «1 registro nuevo · Por admin» y los botones Mostrarlos y Descartar" src="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10LiveNoticeList.png"></a>
 <br>
 <figcaption>Otro usuario ha dado de alta un parte: la lista lo avisa y lo enseña al pulsar «Mostrarlos»</figcaption>
 </figure>
 <h2 id="objetos-rest">Objetos REST<a class="headerlink" href="#objetos-rest" title="Permanent link">¶</a></h2>
-<p>Un objeto puede tener sus registros en otro sistema, detrás de una API REST. El agente da de alta el servicio, con su dirección, su autenticación y su paginación, y después crea los objetos que leen de él. La clave del servicio nunca se repite en las respuestas.</p>
+<p>Un objeto puede tener sus registros en otro sistema, detrás de una API REST. El agente da de alta el servicio, con su dirección, su autenticación y su paginación, y después crea los objetos que leen de él: las rutas para listar, leer, dar de alta, modificar (con PUT o PATCH) y borrar, y sus campos. Los filtros y el orden de una lista se pueden pasar a la propia API. La clave del servicio nunca se repite en las respuestas: te la pide a ti.</p>
+<p>En <code>/flx-discuss</code>, el agente pregunta si algún registro (un cliente, un producto, un precio) ya vive en otro sistema.</p>
 <h2 id="marca-pantallas-de-cuenta-y-mantenimiento">Marca, pantallas de cuenta y mantenimiento<a class="headerlink" href="#marca-pantallas-de-cuenta-y-mantenimiento" title="Permanent link">¶</a></h2>
 <p>El agente coloca los ficheros de la marca con el nombre que Flexygo 10 espera:</p>
 <ul>
@@ -9943,7 +9992,7 @@
 <li>el icono del navegador;</li>
 <li>la imagen de las pantallas de cuenta y la de la página de mantenimiento.</li>
 </ul>
-<p>También da estilo al acceso y a la página de mantenimiento. Nunca activa ni desactiva el modo de mantenimiento: eso lo hace un administrador.</p>
+<p>También da estilo a las pantallas de cuenta (acceso, registro, contraseña olvidada, doble factor y cambio de contraseña) y a la página de mantenimiento. Nunca activa ni desactiva el modo de mantenimiento: eso lo hace un administrador.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10Brand.png" data-desc-position="bottom"><img alt="El logo del producto en la barra lateral, en claro y en oscuro" src="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10Brand.png"></a>
 <br>
@@ -9955,30 +10004,145 @@
 <li>El agente nunca quita ni esconde por su cuenta un elemento de la plataforma que funciona. Solo lo hace si tú lo decides, y la decisión queda apuntada.</li>
 <li>Al comparar con la referencia, esa diferencia se cierra como «la referencia está mal»: se queda el elemento de la plataforma, con una nota que dice cuál.</li>
 <li>Poner la marca en el panel lateral no quita la barra superior.</li>
-<li>Tras cada bloque, la revisión de calidad comprueba que la barra superior sigue con su campana, que Ctrl+K abre la búsqueda y encuentra un registro, y que cada opción del menú tiene su texto. La verificación mira cada pantalla en claro y en oscuro, con el idioma del usuario.</li>
+<li>Las interfaces de la plataforma (origen 0) no se cambian, porque las comparten sus propios perfiles: para una cabecera o un menú propios, el agente crea una interfaz y un perfil del proyecto. Solo cambia la de la plataforma si tú lo decides, y la decisión queda apuntada.</li>
+<li>En la revisión de calidad, el recorrido de cada bloque comprueba que la barra superior sigue con su campana, que Ctrl+K abre la búsqueda y encuentra un registro, y que cada opción del menú tiene su texto. Cada pantalla se comprueba en claro y en oscuro, con el idioma del usuario.</li>
 </ul>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StitchVsBuilt.png" data-desc-position="bottom"><img alt="A la izquierda, la pantalla diseñada en Stitch; a la derecha, la construida en Flexygo 10" src="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StitchVsBuilt.png"></a>
 <br>
 <figcaption>La referencia de Stitch y la pantalla construida: sigue su diseño y conserva la barra superior con la búsqueda Ctrl+K y la campana</figcaption>
 </figure>
+<h2 id="la-pieza-de-la-plataforma-antes-que-el-codigo-a-mano">La pieza de la plataforma antes que el código a mano<a class="headerlink" href="#la-pieza-de-la-plataforma-antes-que-el-codigo-a-mano" title="Permanent link">¶</a></h2>
+<p>Con Flexygo 10, para cada cosa que necesita una pantalla el agente usa la pieza de la plataforma, que dibuja desde los datos, sigue la piel y el modo oscuro y no necesita CSS: una tarjeta para una cifra, una gráfica ECharts, una regla al guardar, un objeto REST, el diseño libre para colocar los módulos donde dice el diseño, los filtros y los presets para filtrar una lista. Al guardar un módulo HTML o una lista SQL que hace lo que ya hace un módulo estándar, el agente recibe un aviso y cambia el módulo, o deja escrito por qué no.</p>
+<h2 id="el-javascript-del-proyecto">El JavaScript del proyecto<a class="headerlink" href="#el-javascript-del-proyecto" title="Permanent link">¶</a></h2>
+<p>Todo el JavaScript que escribe el agente vive en <strong>plugins del proyecto</strong>, registrados como cualquier librería. El <code>JSAfterLoad</code> de un módulo es una llamada a ese plugin.</p>
+<p><strong>Lo que no se guarda.</strong> Al escribir un plugin o un módulo, se rechaza el código que:</p>
+<ul>
+<li>carga a mano otra librería, desde código o desde una dirección de fuera: una librería de terceros va en el proyecto, como un plugin propio;</li>
+<li>filtra las filas por el usuario conectado en el navegador: qué filas ve cada rol lo decide la seguridad del objeto, en el servidor;</li>
+<li>llama a un servicio de fuera desde el navegador: lo de fuera lo lee el servidor, con una tarea o un proceso, y lo guarda en una tabla;</li>
+<li>decide por el rol de administrador en el navegador: quién puede qué lo decide la seguridad de la plataforma.</li>
+</ul>
+<p>Además, una interfaz no lleva JavaScript propio: crear o cambiar una interfaz con un script se rechaza (solo se puede vaciar). Y un plugin lee sus datos con <code>flexygo.obj.Entity</code> o <code>getView</code>, que aplican la seguridad del objeto, nunca de una lista SQL oculta.</p>
+<p><strong>Si vas a escribir esto, la plataforma ya lo tiene.</strong> Antes de escribir una función, el agente mira esta tabla de su referencia:</p>
+<table>
+<thead>
+<tr>
+<th>Ibas a escribir</th>
+<th>Usa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Una columna de casillas y «aplicar a los marcados»</td>
+<td>La selección de la propia lista y un proceso lanzado sobre ella desde la barra</td>
+</tr>
+<tr>
+<td>Leer filas del DOM o de una lista oculta</td>
+<td><code>flexygo.obj.Entity</code> / <code>getView</code></td>
+</tr>
+<tr>
+<td>Un observador, un <code>setInterval</code> o un bucle hasta que pinte un módulo</td>
+<td>El <code>JSAfterLoad</code> del módulo, o el evento <code>loaded</code> del módulo</td>
+</tr>
+<tr>
+<td>Refrescar módulos después de una acción</td>
+<td>Los eventos de módulo con <code>refresh</code>, o <code>refresh()</code> del módulo</td>
+</tr>
+<tr>
+<td>Una tabla con campos para editar</td>
+<td>La lista editable (<code>flx-editlist</code>)</td>
+</tr>
+<tr>
+<td>«Guardar y seguir dando de alta»</td>
+<td>El botón de guardar y crear otro que ya traen las barras de edición</td>
+</tr>
+<tr>
+<td>Una tarjeta de indicador o una tira de cifras</td>
+<td><code>flx-easyinfo</code> en modo tarjeta, nunca una lista SQL</td>
+</tr>
+<tr>
+<td>Un tablero donde mover una tarjeta ejecuta un proceso</td>
+<td>El kanban con su proceso al cambiar de columna</td>
+</tr>
+<tr>
+<td>Una ayuda guiada o un panel de ayuda</td>
+<td>Los recorridos guiados y la ayuda de la aplicación</td>
+</tr>
+<tr>
+<td>Botones de filtro sobre una lista</td>
+<td>Los presets</td>
+</tr>
+<tr>
+<td>Tarjetas o tabla, a elección del usuario</td>
+<td>Dos plantillas del objeto y <code>changeTemplate()</code></td>
+</tr>
+<tr>
+<td>Formatear fechas y números a mano</td>
+<td>Los modificadores <code>date</code> y <code>decimal</code> de la plantilla, y <code>moment</code> para calcular con fechas</td>
+</tr>
+<tr>
+<td>Una función de traducción propia</td>
+<td><code>flexygo.localization.translate</code></td>
+</tr>
+<tr>
+<td>Un escape de HTML propio</td>
+<td><code>flexygo.string.escapeHTML</code>, o el modificador <code>html</code> en la plantilla</td>
+</tr>
+<tr>
+<td>Avisos, <code>alert</code> o <code>confirm</code> propios</td>
+<td><code>flexygo.msg</code></td>
+</tr>
+<tr>
+<td><code>localStorage</code> a mano</td>
+<td><code>flexygo.storage</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>La auditoría del JavaScript.</strong> La auditoría de seguridad de <code>/flx-release</code> (consulta el <a href="../6Workflow/">flujo de trabajo con comandos</a>) lee los ficheros de los plugins del proyecto, el script de las interfaces y de las páginas, y el código de los módulos, y marca:</p>
+<table>
+<thead>
+<tr>
+<th>Gravedad</th>
+<th>Qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alta</td>
+<td>Un filtro de filas montado con el usuario conectado; una decisión por el rol de administrador en el navegador; una clave, un token o una contraseña escritos en el código que descarga el navegador; un <code>{{Campo}}</code> pintado sin el modificador <code>html</code> en plantillas, módulos HTML o listas SQL; una vista cuya SQL pega un <code>{{token}}</code> sin comillas</td>
+</tr>
+<tr>
+<td>Media</td>
+<td>Un servicio de fuera llamado desde el navegador; código cargado a mano; ejecutar texto como código, pegar datos como marcado o hacer llamadas síncronas; un error inesperado que llega tal cual a la pantalla; procedimientos que montan SQL pegando valores</td>
+</tr>
+<tr>
+<td>Baja</td>
+<td>Lo que rehace una pieza de la plataforma, nombrando la que hay que usar; módulos HTML sin un hueco apuntado que los justifique</td>
+</tr>
+</tbody>
+</table>
+<p>Además, la revisión de calidad pone junto a cada pantalla cuántos de sus módulos son estándar y cuántas líneas de JavaScript y CSS propias lleva, y señala las listas disfrazadas de cabecera de página.</p>
 <h2 id="mas-cosas-de-flexygo-10">Más cosas de Flexygo 10<a class="headerlink" href="#mas-cosas-de-flexygo-10" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Seguridad de procesos con condición</strong>: un proceso permitido o denegado a un rol solo cuando se cumple una condición.</li>
+<li><strong>Seguridad de procesos con condición</strong>: un proceso permitido o denegado a un rol esté donde esté, y, si hace falta, solo mientras se cumple una condición sobre el usuario.</li>
 <li><strong>Pestañas en los formularios</strong>: un formulario largo se reparte en pestañas.</li>
 <li><strong>Botones de la barra</strong>: el agente marca el botón principal de cada módulo y decide cuáles se pliegan en el menú «…».</li>
 <li><strong>Calendario</strong>: el horario laboral, los solapes, la línea de «ahora» y el resto de opciones del calendario de la 10.</li>
-<li><strong>Ajustes nuevos</strong>, como ocultar las novedades o permitir el registro de usuarios.</li>
+<li><strong>Diseño libre de páginas</strong> en la skin 2026: cada módulo en la posición y con el tamaño que pide el diseño, y páginas en las que cada usuario puede reordenar y plegar sus módulos.</li>
+<li><strong>Visitas guiadas</strong> de una pantalla, paso a paso por sus módulos.</li>
+<li><strong>Asistentes de IA de la aplicación</strong>: el agente da de alta los asistentes que trae Flexygo 10, con su modelo, lo que pueden tocar, qué roles hablan con ellos y sus botones de atajo. La clave del proveedor la escribes tú en la aplicación, y el acceso a la base de datos o a la web, o el permiso para lanzar procesos, solo se activa con tu sí.</li>
+<li><strong>Ajustes nuevos</strong>, como ocultar las novedades del acceso, permitir el registro de usuarios, bloquear a un usuario tras varias contraseñas fallidas o el separador de las exportaciones a CSV.</li>
 </ul>
 <h2 id="la-busqueda-con-ctrlk">La búsqueda con Ctrl+K<a class="headerlink" href="#la-busqueda-con-ctrlk" title="Permanent link">¶</a></h2>
-<p>En <code>/flx-discuss</code>, cuando el modelo de datos ya está decidido, el agente hace <strong>una</strong> pregunta: qué colecciones debe encontrar la búsqueda de <strong>Ctrl+K</strong>, y por qué campos. Propone tres a cinco colecciones con dos o tres campos cada una, y tú añades, quitas o dices que ninguna. Cada usuario solo ve los grupos de los objetos que puede ver. Los nombres de los grupos y de los objetos salen en inglés aunque el usuario trabaje en otro idioma: es un límite de la plataforma.</p>
+<p>En <code>/flx-discuss</code>, cuando el modelo de datos ya está decidido, el agente hace <strong>una</strong> pregunta: qué colecciones debe encontrar la búsqueda de <strong>Ctrl+K</strong>, y por qué campos. Propone tres a cinco colecciones con dos o tres campos cada una, y tú añades, quitas o dices que ninguna. Cada usuario solo ve los grupos de los objetos que puede ver, y puede quitar un grupo en sus ajustes de búsqueda. El título de cada grupo sale en inglés aunque el usuario trabaje en otro idioma: es un límite de la plataforma.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10SearchPalette.png" data-desc-position="bottom"><img alt="La búsqueda Ctrl+K encuentra un cliente al escribir «cole»" src="../../../docs_assets/images/CoreProductDevelopment/MCP/flx10SearchPalette.png"></a>
 <br>
-<figcaption>La búsqueda encuentra un cliente por su nombre; el grupo y el objeto salen en inglés</figcaption>
+<figcaption>La búsqueda encuentra un cliente por su nombre; el título del grupo sale en inglés</figcaption>
 </figure>
 <h2 id="textos-de-pantalla-en-ingles-traducidos">Textos de pantalla en inglés, traducidos<a class="headerlink" href="#textos-de-pantalla-en-ingles-traducidos" title="Permanent link">¶</a></h2>
-<p>Las etiquetas, botones, pestañas, títulos, opciones de menú y pasos de las visitas guiadas se escriben en <strong>inglés</strong>, que es el original del que traduce la plataforma. En el mismo paso, el agente los traduce al idioma del proyecto y a los demás idiomas activos. Así un usuario que trabaja en inglés no ve textos en castellano.</p>
+<p>Las etiquetas, botones, pestañas, secciones, títulos de páginas, módulos y menús, y los pasos de las visitas guiadas se escriben en <strong>inglés</strong>, que es el original del que traduce la plataforma. Antes de cerrar cada bloque, el agente los traduce a los idiomas que elegiste para el proyecto (o a todos los activos, si no elegiste), empezando por el del proyecto. Así un usuario que trabaja en inglés no ve textos en castellano.</p>
 
 
 
@@ -10073,6 +10237,24 @@
   <a href="#lo-que-la-plataforma-ya-hace-bien-se-queda" class="md-nav__link">
     <span class="md-ellipsis">
       Lo que la plataforma ya hace bien, se queda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-pieza-de-la-plataforma-antes-que-el-codigo-a-mano" class="md-nav__link">
+    <span class="md-ellipsis">
+      La pieza de la plataforma antes que el código a mano
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-javascript-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      El JavaScript del proyecto
     </span>
   </a>
   

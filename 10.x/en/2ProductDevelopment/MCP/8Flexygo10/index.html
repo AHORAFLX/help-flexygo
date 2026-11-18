@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1652,6 +1677,24 @@
   <a href="#what-the-platform-already-does-well-stays" class="md-nav__link">
     <span class="md-ellipsis">
       What the platform already does well stays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-platforms-piece-before-hand-written-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      The platform's piece before hand-written code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-projects-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      The project's JavaScript
     </span>
   </a>
   
@@ -9833,13 +9876,15 @@
 
 <h1 id="what-it-builds-on-flexygo-10">What it builds on Flexygo 10<a class="headerlink" href="#what-it-builds-on-flexygo-10" title="Permanent link">¶</a></h1>
 <p>With a project on <strong>Flexygo 10</strong>, the MCP server uses what this version brings: ECharts charts, KPI cards, rules on save, live notices, REST objects, brand and account screens…</p>
+<p>The agent knows which platform version the project runs on (<code>/flx-status</code> says it). If it cannot tell, or the version is older than 10, it builds the way it did before and tells you so.</p>
 <h2 id="echarts-charts-and-themes">ECharts charts and themes<a class="headerlink" href="#echarts-charts-and-themes" title="Permanent link">¶</a></h2>
 <p>On Flexygo 10 every chart is <strong>ECharts</strong>: ten types (bars, lines, doughnut, radar…). It can also:</p>
 <ul>
 <li>put the total in the centre of a doughnut;</li>
 <li>add a target line;</li>
 <li>put the unit after every figure;</li>
-<li>add a footer line with the change ("+12% vs last month").</li>
+<li>add a footer line with the change ("+12% vs last month"), drawn in the 2026 skin;</li>
+<li>keep the chart's data in the browser for a number of seconds, so it is not asked for again on every visit.</li>
 </ul>
 <p>Figures follow the user's language format (<code>35,000</code> in English, <code>35.000</code> in Spanish).</p>
 <p>If you ask for no theme, the chart uses Flexygo 10's default one. It can also create a <strong>theme of the product's own</strong>, with its colours and the shapes of one of the factory themes, without touching the factory themes, which every application shares.</p>
@@ -9857,7 +9902,8 @@
 <li>action links;</li>
 <li>a period switch (24 h, 7 days, 30 days), which remembers the user's choice.</li>
 </ul>
-<p>The colour follows the skin and dark mode.</p>
+<p>The colour follows the skin and dark mode. The strip of figures above a list is <strong>one module</strong>, with a row per figure: each row is drawn as its own card.</p>
+<p>In <code>/flx-discuss</code>, the agent asks which figures open the home page: the figure, the period, what it is compared with and which colour means "bad".</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StatCard.png" data-desc-position="bottom"><img alt="Card with the figure, the target, the progress bar, the change and the evolution" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StatCard.png"></a>
 <br>
@@ -9873,18 +9919,20 @@
 <p>What it does can be:</p>
 <ul>
 <li>send a notice to the bell of a role or a user;</li>
-<li>send an email;</li>
+<li>send an email, also with a reusable mail template;</li>
 <li>create or update records;</li>
 <li>run a process;</li>
 <li>ask for a <strong>decision</strong>: a task with options, a deadline and escalation, approved or rejected from the bell or from the record.</li>
 </ul>
+<p>The rule acts after the save: if its step fails, what was saved stays. The agent can show you an object's rules with their latest runs, tell you which would fire for a given record, and delete a rule, warning first about what goes with it.</p>
+<p>In <code>/flx-discuss</code>, the agent asks which steps need a person's approval: who decides, what the answers are and how long before it goes to someone else.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10RuleDecision.png" data-desc-position="bottom"><img alt="A pending decision on the record and in the bell" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10RuleDecision.png"></a>
 <br>
 <figcaption>A rule asks to approve notes over €1,000: the decision shows on the record and in the bell</figcaption>
 </figure>
 <h2 id="live-notices">Live notices<a class="headerlink" href="#live-notices" title="Permanent link">¶</a></h2>
-<p>The agent can turn on an object's <strong>live notices</strong>, so connected users see the records others save without reloading. Object security, per-user filters and hidden properties are respected.</p>
+<p>The agent can turn on an object's <strong>live notices</strong>, so connected users see the records others save without reloading. The notice carries no data from the record: each user asks for it again with their own session, so only those who may see it do, with the object's security and its filters. It can also be narrowed to whom each record concerns (for instance, each salesperson and their own orders).</p>
 <p>What reaches each module, in the 2026 skin:</p>
 <table>
 <thead>
@@ -9927,14 +9975,15 @@
 </tr>
 </tbody>
 </table>
-<p>Live notices are not added to the bell. To notify in the bell, use a rule on save.</p>
+<p>Live notices are addressed to no one in particular. To leave a notice in the bell of a role or a user, use a rule on save.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10LiveNoticeList.png" data-desc-position="bottom"><img alt="List with the strip &quot;1 new record · By admin&quot; and the Show them and Dismiss buttons" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10LiveNoticeList.png"></a>
 <br>
 <figcaption>Another user has added a work order: the list says so and shows it on "Show them"</figcaption>
 </figure>
 <h2 id="rest-objects">REST objects<a class="headerlink" href="#rest-objects" title="Permanent link">¶</a></h2>
-<p>An object can keep its records in another system, behind a REST API. The agent registers the service, with its address, authentication and paging, and then creates the objects that read from it. The service's key is never repeated in the answers.</p>
+<p>An object can keep its records in another system, behind a REST API. The agent registers the service, with its address, authentication and paging, and then creates the objects that read from it: the paths to list, read, insert, update (with PUT or PATCH) and delete, and their fields. A list's filters and sort order can be passed to the API itself. The service's key is never repeated in the answers: the agent asks you for it.</p>
+<p>In <code>/flx-discuss</code>, the agent asks whether any record (a customer, a product, a price) already lives in another system.</p>
 <h2 id="brand-account-screens-and-maintenance">Brand, account screens and maintenance<a class="headerlink" href="#brand-account-screens-and-maintenance" title="Permanent link">¶</a></h2>
 <p>The agent places the brand files with the names Flexygo 10 expects:</p>
 <ul>
@@ -9943,7 +9992,7 @@
 <li>the browser icon;</li>
 <li>the image of the account screens and the one of the maintenance page.</li>
 </ul>
-<p>It also styles the sign-in and the maintenance page. It never turns maintenance mode on or off: an administrator does that.</p>
+<p>It also styles the account screens (sign-in, registration, forgotten password, two-factor and password change) and the maintenance page. It never turns maintenance mode on or off: an administrator does that.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10Brand.png" data-desc-position="bottom"><img alt="The product's logo in the sidebar, light and dark" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10Brand.png"></a>
 <br>
@@ -9955,30 +10004,145 @@
 <li>The agent never removes or hides a working platform element on its own. It only does so if you decide it, and the decision is recorded.</li>
 <li>When comparing with the reference, that difference closes as "the reference is wrong": the platform's element stays, with a note saying which one.</li>
 <li>Putting the brand in the side panel does not remove the top bar.</li>
-<li>After every block, the quality review checks that the top bar is still there with its bell, that Ctrl+K opens the search and finds a record, and that every menu option has its label. Verification looks at every screen in light and in dark, in the user's language.</li>
+<li>The platform's interfaces (origin 0) are not changed, because the platform's own profiles share them: for a header or a menu of its own, the agent creates a project interface and profile. It only changes the platform's one if you decide it, and the decision is recorded.</li>
+<li>In the quality review, each block's walk checks that the top bar is still there with its bell, that Ctrl+K opens the search and finds a record, and that every menu option has its label. Every screen is checked in light and in dark, in the user's language.</li>
 </ul>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StitchVsBuilt.png" data-desc-position="bottom"><img alt="On the left, the screen designed in Stitch; on the right, the one built on Flexygo 10" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10StitchVsBuilt.png"></a>
 <br>
 <figcaption>The Stitch reference and the built screen: it follows its design and keeps the top bar with the Ctrl+K search and the bell</figcaption>
 </figure>
+<h2 id="the-platforms-piece-before-hand-written-code">The platform's piece before hand-written code<a class="headerlink" href="#the-platforms-piece-before-hand-written-code" title="Permanent link">¶</a></h2>
+<p>On Flexygo 10, for everything a screen needs the agent uses the platform's piece, which draws from the data, follows the skin and dark mode and needs no CSS: a card for a figure, an ECharts chart, a rule on save, a REST object, the free layout to place the modules where the design puts them, filters and presets to filter a list. When an HTML module or a SQL list that does what a standard module does is saved, the agent gets a warning and changes the module, or writes down why not.</p>
+<h2 id="the-projects-javascript">The project's JavaScript<a class="headerlink" href="#the-projects-javascript" title="Permanent link">¶</a></h2>
+<p>All the JavaScript the agent writes lives in <strong>project plugins</strong>, registered like any library. A module's <code>JSAfterLoad</code> is a call into that plugin.</p>
+<p><strong>What is not saved.</strong> When a plugin or a module is written, code is refused that:</p>
+<ul>
+<li>loads another library by hand, from code or from an outside address: a third-party library goes in the project, as a plugin of its own;</li>
+<li>filters the rows by the signed-in user in the browser: which rows each role sees is decided by the object's security, on the server;</li>
+<li>calls an outside service from the browser: what comes from outside is read by the server, with a job or a process, and kept in a table;</li>
+<li>decides by the administrator role in the browser: who may do what is decided by the platform's security.</li>
+</ul>
+<p>Also, an interface carries no JavaScript of its own: creating or changing an interface with a script is refused (it can only be emptied). And a plugin reads its data with <code>flexygo.obj.Entity</code> or <code>getView</code>, which apply the object's security, never from a hidden SQL list.</p>
+<p><strong>If you are about to write this, the platform already has it.</strong> Before writing a function, the agent looks at this table in its reference:</p>
+<table>
+<thead>
+<tr>
+<th>You were about to write</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A checkbox column and "apply to the selected"</td>
+<td>The list's own selection and a process launched on it from the toolbar</td>
+</tr>
+<tr>
+<td>Reading rows from the DOM or from a hidden list</td>
+<td><code>flexygo.obj.Entity</code> / <code>getView</code></td>
+</tr>
+<tr>
+<td>An observer, a <code>setInterval</code> or a loop until a module paints</td>
+<td>The module's <code>JSAfterLoad</code>, or the module's <code>loaded</code> event</td>
+</tr>
+<tr>
+<td>Refreshing modules after an action</td>
+<td>Module events with <code>refresh</code>, or the module's <code>refresh()</code></td>
+</tr>
+<tr>
+<td>A table with fields to edit</td>
+<td>The editable list (<code>flx-editlist</code>)</td>
+</tr>
+<tr>
+<td>"Save and keep entering"</td>
+<td>The save-and-create-another button the edit toolbars already carry</td>
+</tr>
+<tr>
+<td>A KPI card or a strip of figures</td>
+<td><code>flx-easyinfo</code> in card mode, never a SQL list</td>
+</tr>
+<tr>
+<td>A board where moving a card runs a process</td>
+<td>The kanban with its process on changing column</td>
+</tr>
+<tr>
+<td>A guided help or a help panel</td>
+<td>Guided tours and the application's help</td>
+</tr>
+<tr>
+<td>Filter buttons over a list</td>
+<td>Presets</td>
+</tr>
+<tr>
+<td>Cards or a table, chosen by the user</td>
+<td>Two templates of the object and <code>changeTemplate()</code></td>
+</tr>
+<tr>
+<td>Formatting dates and numbers by hand</td>
+<td>The template's <code>date</code> and <code>decimal</code> modifiers, and <code>moment</code> for date arithmetic</td>
+</tr>
+<tr>
+<td>A translation function of its own</td>
+<td><code>flexygo.localization.translate</code></td>
+</tr>
+<tr>
+<td>An HTML escape of its own</td>
+<td><code>flexygo.string.escapeHTML</code>, or the <code>html</code> modifier in the template</td>
+</tr>
+<tr>
+<td>Its own toasts, <code>alert</code> or <code>confirm</code></td>
+<td><code>flexygo.msg</code></td>
+</tr>
+<tr>
+<td><code>localStorage</code> by hand</td>
+<td><code>flexygo.storage</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The JavaScript audit.</strong> The security audit of <code>/flx-release</code> (see <a href="../6Workflow/">Workflow with commands</a>) reads the files of the project's plugins, the script of interfaces and pages, and the modules' code, and flags:</p>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>A row filter built with the signed-in user; a decision by the administrator role in the browser; a key, a token or a password written into code the browser downloads; a <code>{{Field}}</code> painted without the <code>html</code> modifier in templates, HTML modules or SQL lists; a view whose SQL pastes a <code>{{token}}</code> without quotes</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>An outside service called from the browser; code loaded by hand; running text as code, pasting data as markup or making synchronous calls; an unexpected error reaching the screen as it is; procedures that build SQL by pasting values</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>What re-makes a platform piece, naming the one to use; HTML modules with no recorded gap that justifies them</td>
+</tr>
+</tbody>
+</table>
+<p>Also, the quality review puts beside each screen how many of its modules are standard and how many lines of its own JavaScript and CSS it carries, and flags lists dressed up as a page header.</p>
 <h2 id="more-of-flexygo-10">More of Flexygo 10<a class="headerlink" href="#more-of-flexygo-10" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Process security with a condition</strong>: a process allowed or denied to a role only when a condition holds.</li>
+<li><strong>Process security with a condition</strong>: a process allowed or denied to a role wherever it runs and, if needed, only while a condition on the user holds.</li>
 <li><strong>Tabs in forms</strong>: a long form is split into tabs.</li>
 <li><strong>Toolbar buttons</strong>: the agent marks each module's main button and decides which ones fold into the <strong>…</strong> menu.</li>
 <li><strong>Calendar</strong>: working hours, overlaps, the "now" line and the rest of the Flexygo 10 calendar options.</li>
-<li><strong>New settings</strong>, such as hiding the news or allowing users to sign up.</li>
+<li><strong>Free page layout</strong> in the 2026 skin: each module at the position and size the design asks for, and pages where each user can reorder and fold their modules.</li>
+<li><strong>Guided tours</strong> of a screen, step by step through its modules.</li>
+<li><strong>The application's AI assistants</strong>: the agent sets up the assistants Flexygo 10 brings, with their model, what they may touch, which roles talk to them and their shortcut buttons. You enter the provider's key in the application yourself, and access to the database or the web, or permission to run processes, is only turned on with your yes.</li>
+<li><strong>New settings</strong>, such as hiding the news on the sign-in page, allowing users to sign up, locking a user out after several wrong passwords, or the separator of CSV exports.</li>
 </ul>
 <h2 id="search-with-ctrlk">Search with Ctrl+K<a class="headerlink" href="#search-with-ctrlk" title="Permanent link">¶</a></h2>
-<p>In <code>/flx-discuss</code>, once the data model is settled, the agent asks <strong>one</strong> question: which collections the <strong>Ctrl+K</strong> search should find, and by which fields. It proposes three to five collections with two or three fields each, and you add, drop or say none. Each user only sees the groups of the objects they may see. The names of the groups and objects show in English even when the user works in another language: it is a platform limit.</p>
+<p>In <code>/flx-discuss</code>, once the data model is settled, the agent asks <strong>one</strong> question: which collections the <strong>Ctrl+K</strong> search should find, and by which fields. It proposes three to five collections with two or three fields each, and you add, drop or say none. Each user only sees the groups of the objects they may see, and can switch a group off in their search settings. Each group's title shows in English even when the user works in another language: it is a platform limit.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10SearchPalette.png" data-desc-position="bottom"><img alt="The Ctrl+K search finds a customer when typing &quot;cole&quot;" src="../../../../docs_assets/images/CoreProductDevelopment/MCP/flx10SearchPalette.png"></a>
 <br>
-<figcaption>The search finds a customer by name; the group and the object show in English</figcaption>
+<figcaption>The search finds a customer by name; the group's title shows in English</figcaption>
 </figure>
 <h2 id="screen-texts-in-english-translated">Screen texts in English, translated<a class="headerlink" href="#screen-texts-in-english-translated" title="Permanent link">¶</a></h2>
-<p>Labels, buttons, tabs, titles, menu options and guided tour steps are written in <strong>English</strong>, the original the platform translates from. In the same step, the agent translates them into the project's language and every other active language. That way a user who works in English never sees texts in Spanish.</p>
+<p>Labels, buttons, tabs, sections, page, module and menu titles, and guided tour steps are written in <strong>English</strong>, the original the platform translates from. Before each block closes, the agent translates them into the languages you chose for the project (or every active one, if you did not choose), the project's language first. That way a user who works in English never sees texts in Spanish.</p>
 
 
 
@@ -10073,6 +10237,24 @@
   <a href="#what-the-platform-already-does-well-stays" class="md-nav__link">
     <span class="md-ellipsis">
       What the platform already does well stays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-platforms-piece-before-hand-written-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      The platform's piece before hand-written code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-projects-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      The project's JavaScript
     </span>
   </a>
   

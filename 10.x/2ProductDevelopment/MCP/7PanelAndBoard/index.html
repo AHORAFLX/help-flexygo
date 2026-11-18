@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1600,9 +1625,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ver-en-directo" class="md-nav__link">
+  <a href="#el-panel-lateral" class="md-nav__link">
     <span class="md-ellipsis">
-      Ver en directo
+      El panel lateral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-linea-de-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      La línea de estado
     </span>
   </a>
   
@@ -1627,6 +1661,24 @@
   <a href="#como-se-abre" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo se abre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-pestanas-una-a-una" class="md-nav__link">
+    <span class="md-ellipsis">
+      Las pestañas, una a una
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-modelo-como-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      El modelo, como diagrama
     </span>
   </a>
   
@@ -9876,103 +9928,233 @@
 <hr>
 <h2 id="el-panel-de-flexygo">El panel de Flexygo<a class="headerlink" href="#el-panel-de-flexygo" title="Permanent link">¶</a></h2>
 <h3 id="la-banda-sobre-el-chat">La banda sobre el chat<a class="headerlink" href="#la-banda-sobre-el-chat" title="Permanent link">¶</a></h3>
-<p>En la aplicación de escritorio de Claude Code y en la extensión de VS Code, el panel es una <strong>banda encima del cuadro de texto</strong> con tres apartados: <strong>Ahora</strong> (la fase y el comando que toca), <strong>Te toca decidir</strong> (lo que espera una decisión tuya) y <strong>Siguiente</strong>.</p>
-<p>«Siguiente» y lo que falta por cerrar salen de la misma lista, en tus palabras; si hay más de una cosa, el resto se despliega debajo.</p>
-<p>La banda tiene tres modos: completa, mini y oculta.</p>
-<ul>
-<li><strong>Completa</strong> muestra además tarjetas con el anillo de tareas, lo que falta para cerrar, cómo salió la verificación del último bloque y lo lleno que está el chat.</li>
-<li><strong>Oculta</strong> deja solo una pastilla, <strong>Flexygo ▸</strong>, para volver a abrirla. También vuelve escribiendo <code>/flexygo</code>.</li>
-</ul>
-<p>Sus botones:</p>
+<p>En la aplicación de escritorio de Claude Code y en la extensión de VS Code, el panel es una <strong>banda de una sola línea encima del cuadro de texto</strong>. De izquierda a derecha:</p>
 <table>
 <thead>
 <tr>
-<th>Botón</th>
-<th>Qué hace</th>
+<th>Parte</th>
+<th>Qué enseña</th>
+<th>Al pulsarla</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Ir</strong></td>
-<td>Escribe en el cuadro de texto el comando que toca, sin enviarlo.</td>
+<td><strong>Isotipo de Flexygo</strong></td>
+<td>La marca de Flexygo, en verde.</td>
+<td>Nada: no es un botón.</td>
 </tr>
 <tr>
-<td><strong>Arrancar apps</strong> / <strong>Parar apps</strong></td>
-<td>Arranca o para el Backend y el Frontend del producto, con un punto que dice si responden. Lo hace con el script <code>tools/app.ps1</code> del producto, que el servidor añade si falta.</td>
+<td><strong>Fase</strong></td>
+<td>La fase con su número sobre nueve (por ejemplo, «6/9 seguridad») y, si hay una tarea en marcha, su código y su título. Si no cabe, se corta.</td>
+<td>Despliega debajo las nueve fases (ver abajo); otra pulsación las pliega.</td>
 </tr>
 <tr>
-<td><strong>Tablero</strong></td>
-<td>Abre el tablero en la pestaña que importa ahora: <strong>Decisiones</strong> si hay una decisión abierta, <strong>Recursos</strong> si hay ficheros sin revisar y, si no, la última que miraste.</td>
+<td><strong>● N %</strong></td>
+<td>El contexto que lleva gastado el chat, con un punto de color.</td>
+<td>Explica debajo qué mide, su valor y qué dice cada color. Consulta <a href="#lo-lleno-que-esta-el-chat">Lo lleno que está el chat</a>.</td>
 </tr>
 <tr>
-<td><strong>Ver en directo</strong></td>
-<td>Enseña la pantalla que se está construyendo (ver abajo).</td>
+<td><strong>● N'</strong></td>
+<td>Los minutos que le quedan a la caché del prompt de este chat.</td>
+<td>Igual: qué mide, su valor y qué dice cada color.</td>
+</tr>
+<tr>
+<td><strong>⧉</strong></td>
+<td>Abre el tablero.</td>
+<td>Lo abre en la pestaña que importa ahora: <strong>Decisiones</strong> si hay un punto abierto, <strong>Recursos</strong> si hay ficheros sin revisar y, si no, la última que miraste.</td>
 </tr>
 </tbody>
 </table>
-<p>Si los botones no caben en una fila, <strong>Ver en directo</strong> y los de las aplicaciones pasan a un menú <strong>…</strong>. Cada decisión abierta lleva un botón por opción, con la recomendada marcada.</p>
-<p>No hay botón de verificar: al cerrar un bloque, <code>/flx-execute</code> lo verifica él mismo y la banda enseña solo cómo ha ido. La banda sale en castellano.</p>
-<p>El panel apunta además <strong>el tiempo y el precio de uso por API de cada comando</strong> <code>/flx-*</code>, subagentes incluidos. Se guardan por proyecto en este equipo. La banda no enseña dinero: el precio se ve en el <a href="#precio-de-uso-por-api">tablero</a>.</p>
-<h3 id="lo-lleno-que-esta-el-chat">Lo lleno que está el chat<a class="headerlink" href="#lo-lleno-que-esta-el-chat" title="Permanent link">¶</a></h3>
-<p>La banda enseña cuánto contexto lleva gastado el chat: <strong>contexto N %</strong>. Cuanto más lleno, peor responde el agente, así que avisa a tiempo:</p>
+<p>Cada parte se explica al pulsarla, y no al pasar el ratón, porque la extensión de VS Code no enseña esos textos.</p>
+<p><strong>Las fases desplegadas</strong> van numeradas del 1 al 9: contexto, plan, decisiones, construcción, revisión, seguridad, calidad, ayuda y, la novena, la API (si la aplicación se usa desde fuera) y la entrega final. Las cerradas llevan ✓, la actual ▶ y las que faltan ○. Debajo de la actual:</p>
 <ul>
-<li><strong>Por debajo del 70 %</strong>, queda sitio en este chat.</li>
-<li><strong>Desde el 70 %</strong>, te pide acabar el paso en curso y seguir en un chat nuevo.</li>
-<li><strong>Desde el 80 %</strong>, avisa de que a partir de ahí responde peor.</li>
+<li>En <strong>construcción</strong> y <strong>revisión</strong>, el bloque en curso con sus tareas: ✓ hecha, ▶ en curso, ○ pendiente.</li>
+<li>En las demás, lo que falta para cerrarla, en tus palabras: tareas sin verificar, puntos que bloquean o, si no falta nada de eso, para qué sirve la fase.</li>
 </ul>
-<p>Los avisos citan el porcentaje real, por ejemplo «Contexto al 82 %: …».</p>
-<p>Desde el 70 % sale el botón <strong>Nuevo chat y seguir</strong>. Vacía el chat (<code>/clear</code>) y, en el chat nuevo, lanza el comando que toca. No se pierde nada: el agente sigue desde el <a href="../6Workflow/#retomar-el-trabajo-sin-pagar-la-conversacion-entera">punto de control</a> del desarrollo, no desde la conversación.</p>
-<p>Si Claude Code no deja al panel vaciar el chat, la banda te pide que envíes <code>/clear</code> tú. El siguiente comando ya está guardado, y se lanza solo al empezar el chat nuevo si lo haces en los 10 minutos siguientes.</p>
-<!-- CAPTURA PENDIENTE: la banda con «contexto N %» por encima del 70 % y el botón «Nuevo chat y seguir». -->
-
-<div class="admonition note">
-<p class="admonition-title">En la terminal</p>
-<p>Con Claude Code en una terminal no hay banda: el panel se abre como un panel lateral con la misma información. Ese panel tiene además el botón <strong>Proyecto</strong>, que abre <code>ONBOARDING.md</code>, y <strong>ES / EN</strong> para cambiar de idioma.</p>
-</div>
-<h3 id="ver-en-directo">Ver en directo<a class="headerlink" href="#ver-en-directo" title="Permanent link">¶</a></h3>
-<p><strong>Ver en directo</strong> abre el tablero en la pestaña <strong>En directo</strong>: la aplicación al lado de un chat con Claude. Consulta <a href="#en-directo-la-aplicacion-y-el-chat-con-claude">En directo: la aplicación y el chat con Claude</a>.</p>
-<p>El botón sale cuando el producto tiene su Frontend; si el Frontend no responde, el tablero lo arranca.</p>
+<p>Al final, aparte y sin número, sale <code>/flx-video</code>, opcional: un vídeo corto del producto.</p>
+<p>La banda no tiene más botones. Las decisiones y la vista en directo están en el <a href="#el-tablero-del-desarrollador">tablero</a>, y arrancar o parar las aplicaciones, en el <a href="#el-panel-lateral">panel lateral</a>. Tampoco hay botón de verificar: al cerrar un bloque, <code>/flx-execute</code> lo verifica él mismo con recorridos grabados.</p>
+<p>La banda sale en castellano. El botón <strong>ES / EN</strong> del panel lateral la cambia a inglés, y el idioma se recuerda por proyecto.</p>
+<p>El panel apunta además <strong>el tiempo y el precio de uso por API de cada turno del agente</strong>, subagentes incluidos, en el desarrollo y la fase en que está, tanto si escribiste el comando <code>/flx-*</code> como si lo lanzó el propio agente. Cada comando que escribes tiene además su propia fila. El tiempo del agente se apunta aparte del que pasa esperando tu respuesta. Todo se guarda por proyecto en este equipo. La banda no enseña dinero: el precio se ve en el <a href="#precio-de-uso-por-api">tablero</a>.</p>
+<h3 id="lo-lleno-que-esta-el-chat">Lo lleno que está el chat<a class="headerlink" href="#lo-lleno-que-esta-el-chat" title="Permanent link">¶</a></h3>
+<p>La banda lleva dos medidores, cada uno con un punto que pasa poco a poco del verde al rojo.</p>
+<p><strong>Contexto (● N %)</strong>: cuánto de la ventana de contexto de este chat está ocupado. Cuanto más lleno, más cuesta cada turno y peor responde el agente.</p>
+<ul>
+<li><strong>Verde</strong>: hay sitio de sobra.</li>
+<li><strong>Ámbar</strong>: a medio camino del 80 %.</li>
+<li><strong>Rojo</strong>: 80 % o más. Toca seguir en un chat nuevo.</li>
+</ul>
+<p><strong>Caché del prompt (● N')</strong>: los minutos que le quedan a la caché de este chat, que dura una hora desde la última petición. Mientras dura, cada turno lee lo ya enviado a precio reducido; fría (0'), el siguiente turno lo vuelve a pagar entero. Cuenta hacia atrás también mientras el agente trabaja, y cada petición la renueva. Antes de la primera petición sale fría.</p>
+<ul>
+<li><strong>Verde</strong>: recién usada.</li>
+<li><strong>Ámbar</strong>: ha pasado media hora.</li>
+<li><strong>Rojo</strong>: a punto de enfriarse, o fría.</li>
+</ul>
+<p>Seguir en un chat nuevo no pierde nada: el agente sigue desde el <a href="../6Workflow/#retomar-el-trabajo-sin-pagar-la-conversacion-entera">punto de control</a> del desarrollo, no desde la conversación. Cuando un chat se ha hecho muy largo, el propio asistente te ofrece, al cerrar una tarea o un bloque, seguir en uno nuevo con el comando que toca. Es una oferta: si prefieres, sigues en el mismo.</p>
+<h3 id="el-panel-lateral">El panel lateral<a class="headerlink" href="#el-panel-lateral" title="Permanent link">¶</a></h3>
+<p>En una terminal no hay banda: en un proyecto de Flexygo, el panel se abre solo como <strong>panel lateral</strong>. En cualquier sitio, <code>/flexygo</code> lo abre.</p>
+<p>Enseña:</p>
+<ul>
+<li>El desarrollo activo y la versión del servidor.</li>
+<li>La fase con su número y el comando que toca, con el botón <strong>Ir</strong>, que lo escribe en el cuadro de texto sin enviarlo.</li>
+<li>Los bloques cerrados, resumidos en una línea, y los abiertos. El bloque en curso lleva una barra de avance y la marca de cada tarea: ✓ hecha, ▶ en curso, ○ pendiente, – omitida.</li>
+<li>Lo que falta por cerrar (tareas sin verificar, puntos que bloquean) y las decisiones abiertas, con el comando que las resuelve.</li>
+<li>El tiempo de la fase y el total de este equipo, en tiempo y tokens. Aquí tampoco hay dinero.</li>
+<li>Las aplicaciones con su puerto y si responden (✓ o ✗), con <strong>Abrir</strong> para el Frontend y los botones <strong>Arrancar apps</strong> y <strong>Parar apps</strong>. Lo hacen con el script <code>tools/app.ps1</code> del producto, que el servidor añade si falta.</li>
+<li>El botón <strong>Proyecto</strong>, que enseña <code>ONBOARDING.md</code> (con <strong>Volver</strong> para regresar), y <strong>ES / EN</strong> para cambiar de idioma.</li>
+</ul>
+<p>Si el servidor acaba de rechazar algo (por ejemplo, un módulo que cargaba código a mano), el panel lo enseña en rojo como <strong>Último rechazo</strong>, con la herramienta, sobre qué y cuándo. Consulta <a href="../6Workflow/#lo-que-el-agente-no-construye">Lo que el agente no construye</a>.</p>
+<h3 id="la-linea-de-estado">La línea de estado<a class="headerlink" href="#la-linea-de-estado" title="Permanent link">¶</a></h3>
+<p>El servidor pone además, en el <code>.claude/settings.local.json</code> del proyecto, la <strong>línea de estado</strong> de Flexygo, que Claude Code enseña bajo el cuadro de texto. Es una sola línea, en inglés, con:</p>
+<ul>
+<li>el desarrollo activo, la fase con su número y el comando que toca;</li>
+<li>las tareas hechas sobre el total y lo que impide cerrar (sin verificar, puntos que bloquean);</li>
+<li>la tarea en curso (▶) y el último rechazo del servidor (⛔);</li>
+<li>un aviso si el servidor que está en marcha no es la versión instalada, para que abras un chat nuevo;</li>
+<li>desde el 80 % de contexto, <code>context N% → new chat</code>.</li>
+</ul>
+<p>Si tu configuración o la del proyecto ya tienen su propia línea de estado, se respeta y no se cambia.</p>
 <hr>
 <h2 id="el-tablero-del-desarrollador">El tablero del desarrollador<a class="headerlink" href="#el-tablero-del-desarrollador" title="Permanent link">¶</a></h2>
-<p>El tablero reúne en una página lo hecho y lo pendiente, lo que falta verificar, el precio de uso por API y el tiempo por comando, el modelo de datos, las decisiones y los hallazgos de calidad. Enseña todos los proyectos Flexygo de este equipo, con sus desarrollos, salvo los bancos de pruebas: las copias de otro proyecto y las carpetas marcadas con un fichero <code>.flexygo-bench</code>. El proyecto que abres sale siempre.</p>
+<p>El tablero reúne en una página lo hecho y lo pendiente, lo que falta verificar, el precio de uso por API y el tiempo, el modelo de la aplicación, su diseño, quién puede qué, las decisiones y los hallazgos de calidad. Enseña los proyectos Flexygo de este equipo en los que ha trabajado el servidor, con sus desarrollos, salvo los bancos de pruebas: las copias de otro proyecto y las carpetas marcadas con un fichero <code>.flexygo-bench</code>. El proyecto que abres sale siempre.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/boardOverview.png" data-desc-position="bottom"><img alt="Tablero del desarrollador, pestaña Resumen" src="../../../docs_assets/images/CoreProductDevelopment/MCP/boardOverview.png"></a>
 <br>
 <figcaption>El Resumen: qué es la aplicación, su contexto y el siguiente paso</figcaption>
 </figure>
-<p>Sus pestañas son <strong>Resumen</strong>, <strong>En directo</strong>, <strong>Tareas</strong>, <strong>Dependencias</strong>, <strong>Histórico</strong>, <strong>Decisiones</strong>, <strong>Modelo</strong>, <strong>Pantallas</strong>, <strong>Calidad</strong> y <strong>Recursos</strong>. El botón <strong>Copiar el siguiente comando</strong> deja en el portapapeles el comando que toca, y <strong>ES / EN</strong> cambia el idioma.</p>
-<p>El <strong>Resumen</strong> empieza por lo que es la aplicación, en dos o tres frases: para qué sirve, para quién y su flujo principal. La escribe <code>/flx-context</code> y la pone al día <code>/flx-review</code>. Debajo, en líneas cortas, el negocio, los usuarios y roles, el flujo, tus decisiones, si se usa desde fuera y lo construido.</p>
+<p>A la izquierda, bajo <strong>Flexygo · Builder</strong>, la lista de <strong>proyectos</strong> con sus desarrollos. Un punto verde marca los que tienen un flujo en marcha; los demás salen plegados. Pulsa el nombre de un proyecto para abrirlo aunque todavía no tenga desarrollos. Al pie, cuándo se dibujó la página: vuelve a abrir el tablero, o recarga la página, para ponerla al día.</p>
+<p>Arriba, el desarrollo con su fase («4/9 …») y el comando que toca. A la derecha:</p>
+<ul>
+<li><strong>Copiar el siguiente comando</strong> deja en el portapapeles el comando que toca.</li>
+<li><strong>ES / EN</strong> cambia el idioma, y <strong>◐</strong> cambia entre claro y oscuro. Hasta que eliges, sigue el tema del sistema.</li>
+<li>En la pestaña <strong>En directo</strong>, <strong>Mostrar proyectos</strong> u <strong>Ocultar proyectos</strong> despliega o pliega la lista de la izquierda.</li>
+</ul>
+<p>Encima de las pestañas, salvo en <strong>En directo</strong>, salen los <strong>avisos</strong> que importan: lo que bloquea la fase, el siguiente bloque o un bloque (con su porqué y el comando que lo resuelve), y el <strong>último rechazo</strong> del servidor.</p>
+<p>Las contraseñas y las claves se tapan antes de llegar a la página.</p>
 <h3 id="como-se-abre">Cómo se abre<a class="headerlink" href="#como-se-abre" title="Permanent link">¶</a></h3>
 <ul>
-<li>Desde la banda, con el botón <strong>Tablero</strong>.</li>
+<li>Desde la banda, con <strong>⧉</strong>.</li>
 <li>A mano, desde la carpeta del proyecto:</li>
 </ul>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flexygo-mcp<span class="w"> </span>--board
 </span></code></pre></div>
-<p>Con <code>--tab decisions</code> se abre directamente en esa pestaña.</p>
-<p>El tablero se abre solo cuando lo pides. Se sirve desde un pequeño servidor local que solo atiende en este equipo y se para solo tras 30 minutos sin uso; cada mensaje del chat cuenta como uso. Si el proyecto no tiene Frontend, el tablero es una página estática.</p>
+<p>También admite las carpetas de otros proyectos. Con <code>--tab</code> y el nombre en inglés de una pestaña (<code>overview</code>, <code>live</code>, <code>kanban</code>, <code>dependencies</code>, <code>history</code>, <code>costs</code>, <code>decisions</code>, <code>model</code>, <code>design</code>, <code>screens</code>, <code>security</code>, <code>quality</code> o <code>resources</code>) se abre directamente en ella; por ejemplo, <code>--tab decisions</code>.</p>
+<p>El tablero se abre solo cuando lo pides. Si el proyecto tiene Frontend, se sirve desde un pequeño servidor local que solo atiende en este equipo y se para solo tras 30 minutos sin uso; cada mensaje del chat cuenta como uso. Si no lo tiene, el tablero es una página estática, sin la vista en directo ni la subida de recursos.</p>
+<h3 id="las-pestanas-una-a-una">Las pestañas, una a una<a class="headerlink" href="#las-pestanas-una-a-una" title="Permanent link">¶</a></h3>
+<p>Mientras el proyecto está en la fase de contexto, <strong>Recursos</strong> pasa a ser la segunda pestaña, porque es lo que estás trabajando.</p>
+<table>
+<thead>
+<tr>
+<th>Pestaña</th>
+<th>Qué enseña</th>
+<th>Cuándo mirarla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resumen</strong></td>
+<td><strong>Qué es</strong> la aplicación, en dos o tres frases (la escribe <code>/flx-context</code> y la pone al día <code>/flx-review</code>), con cómo salieron las últimas pruebas. El <strong>contexto</strong> en líneas cortas: negocio, usuarios y roles, flujo principal, requisitos y recursos, tus decisiones, acceso desde fuera y lo construido, con <strong>Ver detalle</strong> y cómo funciona el negocio según <code>ONBOARDING.md</code>. Los <strong>siguientes pasos</strong>: lo que toca y lo que lo frena. El <strong>entorno</strong> (conexiones, direcciones de las aplicaciones y versiones del producto y del servidor) y el <strong>estilo</strong> de <code>DESIGN.md</code>, con sus colores y su tipografía.</td>
+<td>Para entender el proyecto de un vistazo o enseñárselo a alguien.</td>
+</tr>
+<tr>
+<td><strong>En directo</strong></td>
+<td>La aplicación al lado de un chat con Claude. Consulta <a href="#en-directo-la-aplicacion-y-el-chat-con-claude">En directo</a>.</td>
+<td>Para ver lo que se construye y pedir cambios señalando.</td>
+</tr>
+<tr>
+<td><strong>Tareas</strong></td>
+<td>Arriba, cuatro cifras: tareas hechas, sin verificar, precio de uso por API del desarrollo y tiempo de agente. Debajo, un tablero por bloques con las columnas <strong>Pendiente</strong>, <strong>En curso</strong>, <strong>Sin verificar</strong> y <strong>Hecha</strong>; cada tarea dice qué necesita (🔒 si espera algo sin hacer), si va en paralelo y si tiene un punto abierto. Los bloques cerrados se pliegan.</td>
+<td>Para seguir el avance tarea a tarea.</td>
+</tr>
+<tr>
+<td><strong>Dependencias</strong></td>
+<td>Las mismas cuatro cifras y un gráfico de lo que queda: la flecha va de lo que una tarea necesita a la tarea.</td>
+<td>Para ver qué frena a qué.</td>
+</tr>
+<tr>
+<td><strong>Histórico</strong></td>
+<td>Todo lo que ha pasado en el desarrollo, con su hora: fases, bloques, tareas, comprobaciones, pruebas, rechazos, decisiones, comandos, cambios rápidos e incidencias, con un filtro por tipo. Cada fila dice bajo qué comando pasó, y cada comando, su precio de uso por API y su tiempo.</td>
+<td>Para saber qué se hizo y cuándo.</td>
+</tr>
+<tr>
+<td><strong>Costes</strong></td>
+<td>Consulta <a href="#precio-de-uso-por-api">Precio de uso por API</a>.</td>
+<td>Para saber cuánto costó cada fase y cada comando.</td>
+</tr>
+<tr>
+<td><strong>Decisiones</strong></td>
+<td>Primero los puntos abiertos <strong>que bloquean</strong> y después los que no. Después, todas las decisiones apuntadas, las del desarrollo y las del proyecto (marcadas con <strong>P</strong>), con su pregunta, su respuesta y a qué afectan, con un filtro por texto o tarea. Al final, los <strong>supuestos</strong> del plan y las <strong>correcciones</strong> que has hecho al asistente.</td>
+<td>Cuando el asistente espera tu decisión, o para recordar por qué algo es como es.</td>
+</tr>
+<tr>
+<td><strong>Modelo</strong></td>
+<td>La aplicación como un diagrama: su menú, páginas, objetos, procesos y roles, leídos de la base de configuración (solo lectura). Consulta <a href="#el-modelo-como-diagrama">El modelo, como diagrama</a>.</td>
+<td>Para entender o revisar cómo está hecha la aplicación.</td>
+</tr>
+<tr>
+<td><strong>Diseño</strong></td>
+<td>El <strong>estilo</strong> que decidió <code>DESIGN.md</code> (los colores y la tipografía), de dónde salió cada diseño y las <strong>pantallas de referencia</strong> que el desarrollo archivó como su diseño, con su origen. Pulsa una para verla entera.</td>
+<td>Para comparar lo construido con lo que se quería.</td>
+</tr>
+<tr>
+<td><strong>Pantallas</strong></td>
+<td>Cada página con su objeto, las tareas que la construyeron, su ayuda (visita guiada, botón de ayuda, ayuda de campos) y un enlace para abrirla mientras las aplicaciones están arrancadas. Si hay diseño, un semáforo verde, ámbar o rojo de cómo se parece, comparado al cerrar cada bloque, con lo que falla (un módulo que no existe, cajas que se pisan, un título que no cabe, un color fuera de la paleta…). Se comparan la estructura y los colores guardados en la configuración, no los píxeles; una barra azul marca las pantallas que cambiaron en ese bloque.</td>
+<td>Para revisar las pantallas una a una.</td>
+</tr>
+<tr>
+<td><strong>Seguridad</strong></td>
+<td>Cada rol con sus usuarios (con su perfil, y si están bloqueados) y los permisos explícitos sobre los objetos (ver, crear, editar, borrar), procesos, páginas y menú del producto. Un rol administrador pasa por todo. Si no hay ningún permiso explícito, lo avisa: todo rol que puede entrar lo ve todo. Solo lectura; las contraseñas nunca se leen.</td>
+<td>Para revisar quién puede qué y con qué usuario probar cada rol.</td>
+</tr>
+<tr>
+<td><strong>Calidad</strong></td>
+<td>Tres cifras: pruebas en verde, comprobaciones y lo revisado por <code>/flx-quality</code>. <strong>Cada tarea con su última comprobación</strong> y su captura, que se amplía al pulsarla. Los <strong>hallazgos de calidad abiertos</strong>, las <strong>desviaciones</strong> de la revisión y <strong>lo que el servidor no supo hacer</strong> en este proyecto.</td>
+<td>Antes de dar el desarrollo por cerrado.</td>
+</tr>
+<tr>
+<td><strong>Recursos</strong></td>
+<td>La carpeta <code>{Producto}.Resources/</code> del proyecto. Consulta <a href="#recursos">Recursos</a>.</td>
+<td>Para dejar el material con el que se construye.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="el-modelo-como-diagrama">El modelo, como diagrama<a class="headerlink" href="#el-modelo-como-diagrama" title="Permanent link">¶</a></h3>
+<p>La pestaña <strong>Modelo</strong> dibuja la aplicación entera salvo los campos, que salen en el detalle de cada objeto.</p>
+<ul>
+<li>Arriba, un botón por tipo de pieza (menú, páginas, objetos, procesos y roles), con cuántas hay, para enseñarlas u ocultarlas. Los roles empiezan ocultos.</li>
+<li><strong>−</strong> y <strong>+</strong> alejan y acercan, <strong>Encajar</strong> encuadra todo y <strong>Recolocar</strong> vuelve a ordenar las piezas.</li>
+<li>Arrastra el fondo para moverte, usa la rueda para acercar y arrastra una pieza para colocarla.</li>
+</ul>
+<p>Al pulsar una pieza se ilumina su camino (sus padres y sus hijos) y a la derecha sale su detalle:</p>
+<ul>
+<li><strong>Un objeto</strong>: de qué cuelga y qué contiene, sus páginas, su entrada de menú, sus procesos, lo que se ejecuta antes y después de cargarlo, darlo de alta, cambiarlo o borrarlo, y sus campos con su etiqueta, tipo y si son obligatorios.</li>
+<li><strong>Una página, un proceso o una opción de menú</strong>: lo que abre y desde dónde se llega a él.</li>
+<li><strong>Un rol</strong>: sus usuarios y lo que tiene concedido.</li>
+</ul>
+<p>Cada pieza dice además qué puede hacer cada rol con ella: por una regla explícita o por la regla por defecto de Flexygo (sin regla, puede todo rol con sesión; quien no ha iniciado sesión, solo lo que se le concede). Desde el detalle hay enlaces para abrir la pieza en la aplicación y en su configuración de Flexygo. El diagrama avisa también de los procesos que ningún objeto ofrece.</p>
 <h3 id="precio-de-uso-por-api">Precio de uso por API<a class="headerlink" href="#precio-de-uso-por-api" title="Permanent link">¶</a></h3>
 <p>El tablero enseña el <strong>precio de uso por API</strong>: lo que costaría el trabajo del agente a precio de la API de Anthropic. Se calcula como lo calcula Claude Code en <code>/cost</code>, con su tabla de precios por modelo y los tokens reales de cada turno.</p>
 <ul>
-<li>En <strong>Histórico</strong>, por comando y por fase.</li>
+<li>En <strong>Costes</strong>: el total del proyecto, el de este desarrollo, el tiempo de agente y lo gastado antes de abrir un desarrollo (la preparación, el contexto, el diseño). Debajo, un gráfico del precio y el tiempo por fase: al pasar el ratón por una barra, el tiempo del agente y el que estuvo esperando tu respuesta, con cuántas preguntas te hizo. Y, al final, cada comando que escribiste, con cuándo, en qué desarrollo y fase, su precio y su tiempo.</li>
+<li>En <strong>Histórico</strong>, el de cada comando.</li>
 <li>En <strong>Tareas</strong> y <strong>Dependencias</strong>, el total del desarrollo.</li>
 </ul>
+<p>Cada turno se apunta al desarrollo y la fase en que está el proyecto cuando termina, tanto si escribiste el comando como si lo lanzó el agente.</p>
 <p>Si usas Claude Code con una suscripción, eso no es lo que pagas: el coste real no se conoce. Sirve para comparar fases y desarrollos entre sí. Solo se ve en el tablero: la banda no enseña dinero.</p>
-<!-- CAPTURA PENDIENTE: el Histórico del tablero con la columna «Precio de uso por API» y el gráfico por fase. -->
-
 <h3 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">¶</a></h3>
-<p>La pestaña <strong>Recursos</strong> enseña la carpeta <code>Resources/</code> del proyecto: el material con el que se construye. Arrastra ahí los ficheros, o elígelos, para subirlos; también puedes añadir un enlace con una nota de qué es y por qué importa.</p>
+<p>La pestaña <strong>Recursos</strong> enseña la carpeta <code>{Producto}.Resources/</code> del proyecto: el material con el que se construye. La carpeta viaja con git. Arrastra ahí los ficheros, o elígelos, para subirlos; también puedes añadir un enlace con una nota de qué es y por qué importa.</p>
 <ul>
 <li>Admite imágenes, PDF, documentos de Office, CSV, texto, JSON, XML y zip, hasta 50 MB por fichero y 300 MB en total.</li>
-<li>Cada fichero sale como <strong>nuevo</strong> hasta que <code>/flx-context</code> lo lee, y después como <strong>revisado</strong>.</li>
-<li>Para subir ficheros, el tablero tiene que estar abierto desde el proyecto y servido con su Frontend.</li>
+<li>Cada fichero sale con su tamaño y su fecha, como <strong>nuevo</strong> hasta que <code>/flx-context</code> lo lee, y después como <strong>revisado</strong>. Las imágenes salen en miniatura.</li>
+<li><strong>Borrar</strong> quita un fichero de la carpeta, tras confirmarlo; no se puede deshacer.</li>
+<li>Para subir o borrar ficheros, el tablero tiene que estar abierto desde el proyecto y servido con su Frontend.</li>
 </ul>
 <h3 id="en-directo-la-aplicacion-y-el-chat-con-claude">En directo: la aplicación y el chat con Claude<a class="headerlink" href="#en-directo-la-aplicacion-y-el-chat-con-claude" title="Permanent link">¶</a></h3>
-<p>La pestaña <strong>En directo</strong> enseña la aplicación al lado de una conversación con Claude. El chat lo atiende el propio tablero, que llama a Claude Code en este equipo, así que <strong>sigue funcionando aunque cierres el editor</strong>.</p>
+<p>La pestaña <strong>En directo</strong> enseña la aplicación al lado de una conversación con Claude. El chat lo atiende el propio tablero, que llama a Claude Code en este equipo, así que <strong>sigue funcionando aunque cierres el editor</strong>. La conversación es la misma que ve el editor: si la abres allí, la encuentras como la dejó el tablero.</p>
 <ul>
-<li>Arriba eliges la conversación del proyecto, o empiezas una con <strong>+ Nueva</strong>. La respuesta llega según se genera, y <strong>■ Detener</strong> la corta.</li>
+<li>Arriba eliges la conversación del proyecto, o empiezas una con <strong>+ Nueva</strong>. Intro envía; la respuesta llega según se genera, y <strong>■ Detener</strong> la corta.</li>
 <li>Si otra ventana acaba de escribir en esa misma conversación, el tablero la enseña como <strong>abierta en</strong> esa ventana y no deja escribir en ella, para que no escriban dos a la vez. Escribe allí o abre una nueva aquí.</li>
-<li>Desde el tablero, Claude solo puede usar las herramientas de Flexygo. Si intenta usar otra, sale una tarjeta <strong>Permiso rechazado</strong> con lo que quería hacer; <strong>Permitir esta vez y repetir</strong> la deja pasar solo esa vez.</li>
+<li>Desde el tablero, Claude solo puede usar las herramientas de Flexygo. Si intenta usar otra, sale una tarjeta <strong>Permiso rechazado</strong> con lo que quería hacer; <strong>Permitir esta vez y repetir</strong> la deja pasar solo esa vez, e <strong>Ignorar</strong> la descarta.</li>
+<li>Cuando el asistente te hace una pregunta con opciones, sale también aquí, como en el diálogo del editor: una pestaña por pregunta, sus opciones y <strong>Otra</strong> para escribir la tuya. <strong>Enviar respuestas</strong> se activa cuando todas tienen respuesta. Vale la que llegue primero, esta o la del editor, y el diálogo del editor se cierra solo; el propio diálogo avisa de que también puedes contestar desde aquí.</li>
 <li>Necesita Claude Code instalado y con la sesión iniciada en este equipo. Si falta una de las dos cosas, el tablero lo dice en una tarjeta.</li>
 </ul>
 <div class="admonition note">
@@ -9984,27 +10166,35 @@
 <br>
 <figcaption>La aplicación en la pestaña En directo, con Seleccionar, Pausar y Pantalla completa</figcaption>
 </figure>
+<p>Si la aplicación no responde, el tablero la arranca con el script <code>tools/app.ps1</code> del producto. Si no puede, lo dice y qué hacer: compilar la solución si aún no está compilada, arrancarla a mano si el proyecto no tiene ese script, o volver a abrir el tablero si tardó más de 5 minutos.</p>
 <p>Con <strong>Seleccionar</strong> pides cambios sobre la propia aplicación:</p>
 <ol>
 <li>Pulsa <strong>Seleccionar</strong>.</li>
-<li>Haz clic en lo que quieras cambiar: una página, un módulo, un campo, una columna, un botón, una opción de menú…</li>
-<li>Responde a <strong>¿Qué quieres cambiar?</strong> y pulsa <strong>Enviar</strong> (o Intro). Esc cancela.</li>
+<li>Haz clic en lo que quieras cambiar: una página, un módulo, un campo, una columna, una fila, un botón, una opción de menú, una pestaña, una tarjeta, una columna del kanban, un evento…</li>
+<li>Responde a <strong>¿Qué quieres cambiar?</strong> y pulsa <strong>Pedir a Claude</strong> (o Intro). Esc cancela.</li>
 </ol>
 <p>El mensaje llega a la conversación diciendo a qué elemento se refiere.</p>
+<p>La vista sigue sola la pantalla que el asistente está tocando («Siguiendo…»), y la barra dice qué pantalla tienes delante. Con <strong>Pausar</strong> se queda quieta mientras miras; si mientras tanto cambia otra pantalla, lo avisa y <strong>Ver</strong> te lleva a ella. <strong>Pantalla completa</strong> amplía la aplicación.</p>
+<p>Para entrar en la aplicación, el tablero usa el usuario <code>admin</code>. Si todavía tiene la contraseña de fábrica, entra y te avisa de que la cambies; si ya no la tiene, te la pide y solo la guarda mientras la página siga abierta. Si la aplicación enseña su aviso de recogida de datos, el tablero lo acepta y lo dice en el chat.</p>
 <hr>
 <h2 id="como-activar-el-panel-y-el-tablero">Cómo activar el panel y el tablero<a class="headerlink" href="#como-activar-el-panel-y-el-tablero" title="Permanent link">¶</a></h2>
 <h3 id="paso-unico-enable-panel">Paso único: <code>--enable-panel</code><a class="headerlink" href="#paso-unico-enable-panel" title="Permanent link">¶</a></h3>
 <p>El panel es un complemento de Claude Code que viene dentro del servidor MCP de Flexygo. Para que Claude Code lo conozca, ejecuta <strong>una vez por usuario y equipo</strong>, en una terminal:</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flexygo-mcp<span class="w"> </span>--enable-panel
 </span></code></pre></div>
-<p>Este comando hace dos cosas, y nada más:</p>
+<p>Este comando:</p>
 <ol>
-<li>Copia el panel a la carpeta <code>~/.flexygo-mcp/mods</code>, que se conserva aunque actualices el servidor.</li>
-<li>Añade una entrada a tu configuración de usuario de Claude Code (<code>~/.claude/settings.json</code>) que le dice dónde está el panel.</li>
+<li>Copia el panel a la carpeta <code>~/.flexygo-mcp/mods</code>, que se conserva aunque actualices el servidor; el servidor la pone al día cada vez que arranca.</li>
+<li>Añade <strong>una sola entrada</strong> a tu configuración de usuario de Claude Code (<code>~/.claude/settings.json</code>), que le dice dónde está el panel. Si ese fichero no se puede leer, no cambia nada y lo dice.</li>
+<li>Si lo ejecutas desde la carpeta de un proyecto de Flexygo, enciende además el panel en ese proyecto.</li>
 </ol>
-<p>No hace falta saberse el comando: cuando falta este paso, <code>/flx-setup</code> te pregunta si quieres activarlo y solo lo ejecuta con tu sí. El servidor nunca lo ejecuta por su cuenta, porque escribe en tu configuración de usuario.</p>
+<p>No hace falta saberse el comando: mientras falta este paso, el asistente te lo dice al empezar y te ofrece hacerlo, y <code>/flx-setup</code> también lo propone. Solo lo ejecuta con tu sí. El servidor nunca lo ejecuta por su cuenta, porque escribe en tu configuración de usuario. Si el proyecto ya declara el panel en su propio <code>.claude/settings.json</code>, Claude Code lo encuentra sin este paso.</p>
 <p>Cada proyecto enciende el panel en su propio <code>.claude/settings.json</code>, y eso lo hace el servidor solo al arrancar. Si alguien lo ha apagado en un proyecto, se queda apagado.</p>
-<p>El panel aparece cuando abres un <strong>chat o una sesión nueva</strong> de Claude Code en el proyecto.</p>
+<p>El panel aparece cuando abres un <strong>chat o una sesión nueva</strong> de Claude Code en el proyecto: en el chat que ya estaba abierto no sale.</p>
+<div class="admonition warning">
+<p class="admonition-title">disableAllHooks</p>
+<p>Ni el panel ni la línea de estado funcionan si <code>disableAllHooks</code> está puesto en alguna configuración de Claude Code.</p>
+</div>
 <h3 id="donde-funciona">Dónde funciona<a class="headerlink" href="#donde-funciona" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -10016,27 +10206,27 @@
 <tbody>
 <tr>
 <td>Aplicación de escritorio</td>
-<td>La banda sobre el chat. <strong>Ver en directo</strong> abre el tablero en la pestaña En directo.</td>
+<td>La banda sobre el chat. <code>/flexygo</code> abre el panel lateral.</td>
 </tr>
 <tr>
 <td>Extensión de VS Code</td>
-<td>La banda sobre el chat, con el modo en un desplegable. <strong>Ver en directo</strong> abre el tablero en la pestaña En directo.</td>
+<td>La banda sobre el chat. <code>/flexygo</code> abre el panel lateral.</td>
 </tr>
 <tr>
 <td>Terminal</td>
-<td>Un panel lateral en lugar de la banda.</td>
+<td>El panel lateral, que se abre solo en un proyecto de Flexygo, y la línea de estado.</td>
 </tr>
 <tr>
 <td>Sin interfaz (<code>claude -p</code>)</td>
-<td>Nada que ver, pero el precio de uso por API de cada comando se sigue apuntando.</td>
+<td>Nada que ver, pero el precio de uso por API se sigue apuntando.</td>
+</tr>
+<tr>
+<td>Claude Desktop sin Claude Code, claude.ai</td>
+<td>No hay panel.</td>
 </tr>
 </tbody>
 </table>
 <p>El <strong>tablero</strong> no depende del panel: es una página del navegador y funciona en todos los casos, también con <code>flexygo-mcp --board</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">Próximamente</p>
-<p>En una versión próxima el panel se instalará con un clic, sin comandos.</p>
-</div>
 
 
 
@@ -10102,9 +10292,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ver-en-directo" class="md-nav__link">
+  <a href="#el-panel-lateral" class="md-nav__link">
     <span class="md-ellipsis">
-      Ver en directo
+      El panel lateral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-linea-de-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      La línea de estado
     </span>
   </a>
   
@@ -10129,6 +10328,24 @@
   <a href="#como-se-abre" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo se abre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-pestanas-una-a-una" class="md-nav__link">
+    <span class="md-ellipsis">
+      Las pestañas, una a una
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-modelo-como-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      El modelo, como diagrama
     </span>
   </a>
   

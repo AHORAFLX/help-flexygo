@@ -1340,6 +1340,8 @@
       
         
       
+        
+      
     
     
     
@@ -1372,6 +1374,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2ProductDevelopment/MCP/0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -9883,6 +9908,7 @@
 <li><strong>La API</strong>: pide un token con el usuario del rol (<code>POST /token</code>) y prueba una lista, un registro y un borrado. Las respuestas deben coincidir con la tabla del apartado 2. El detalle de cada respuesta está en <a href="../../../Programming/WebAPISecurity/#2-las-negativas-un-estado-por-motivo-y-la-frase">Seguridad de la WebAPI</a>.</li>
 <li><strong>Un asistente</strong>: conéctalo con el usuario del rol y pídele la lista del objeto: trae solo los registros que deja pasar la condición de <strong>Ver la colección</strong>. Si le pides borrar un registro o ejecutar el proceso denegado, debe contestar que no puede. Cada llamada queda en el registro de la web API.</li>
 </ul>
+<p>Si la aplicación se construye con el servidor MCP de desarrollo, <code>/flx-security</code> prueba cada regla entrando como su rol, <code>/flx-api</code> prueba desde fuera lo que publica la API con un usuario de cada rol, y la auditoría de seguridad de <code>/flx-release</code> lo repasa todo al final. Consulta <a href="../../../../2ProductDevelopment/MCP/6Workflow/#seguridad-quien-puede-que">Seguridad: quién puede qué</a>.</p>
 
 
 

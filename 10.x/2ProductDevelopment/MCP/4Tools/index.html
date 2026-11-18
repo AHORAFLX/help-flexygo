@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía: construir hablando con el asistente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1506,6 +1531,24 @@
   <a href="#explorar-las-herramientas-disponibles" class="md-nav__link">
     <span class="md-ellipsis">
       Explorar las herramientas disponibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-configuracion-no-se-consulta-con-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      La configuración no se consulta con SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-registro-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      El registro de la aplicación
     </span>
   </a>
   
@@ -9793,28 +9836,42 @@
 
 
 <h1 id="herramientas-y-recursos-mcp">Herramientas y recursos MCP<a class="headerlink" href="#herramientas-y-recursos-mcp" title="Permanent link">¶</a></h1>
-<p>El servidor <code>flexygo-mcp</code> expone herramientas que el agente usa para trabajar sobre el proyecto Flexygo: leer y crear objetos, propiedades, páginas, módulos, procesos, seguridad, pruebas… No es necesario conocerlas: los comandos <code>/flx-*</code> y el propio agente las usan según lo que pidas.</p>
+<p>El servidor <code>flexygo-mcp</code> expone herramientas que el agente usa para trabajar sobre el proyecto Flexygo: leer y crear objetos, propiedades, vistas, páginas, módulos, menús, procesos, informes, plantillas, seguridad, la WebAPI, la aplicación sin conexión, traducciones, la ayuda, pruebas… No es necesario conocerlas: los comandos <code>/flx-*</code> y el propio agente las usan según lo que pidas.</p>
 <hr>
 <h2 id="explorar-las-herramientas-disponibles">Explorar las herramientas disponibles<a class="headerlink" href="#explorar-las-herramientas-disponibles" title="Permanent link">¶</a></h2>
 <p>En Claude Code, escribe <code>/mcp</code> y elige el servidor <code>flexygo</code> para ver si está conectado y el listado de sus herramientas.</p>
 <p>Mientras el agente trabaja, el chat enseña cada herramienta que invoca. Así ves qué está consultando o cambiando en el proyecto.</p>
+<hr>
+<h2 id="la-configuracion-no-se-consulta-con-sql">La configuración no se consulta con SQL<a class="headerlink" href="#la-configuracion-no-se-consulta-con-sql" title="Permanent link">¶</a></h2>
+<p>El agente lee la base de configuración de Flexygo con sus herramientas, nunca con SQL directo. Si lo intenta, el servidor no ejecuta la consulta: le responde con la herramienta que lee cada tabla que nombra. Una tabla que ninguna herramienta lee queda apuntada como un hueco del servidor. Las tablas de la aplicación, en la base de datos, sí se consultan con SQL, siempre con las herramientas del servidor: en Claude Code, una comprobación impide que el agente use <code>sqlcmd</code> desde la consola.</p>
+<hr>
+<h2 id="el-registro-de-la-aplicacion">El registro de la aplicación<a class="headerlink" href="#el-registro-de-la-aplicacion" title="Permanent link">¶</a></h2>
+<p>Para saber qué ha pasado al usar la aplicación, el agente lee su propio registro con <code>flexygo_get_actions_log</code>:</p>
+<ul>
+<li>cada ejecución de un proceso: quién, sobre qué registro, cuánto tardó y su mensaje;</li>
+<li>o, si se le piden, los errores: código, mensaje y parámetros.</li>
+</ul>
+<p>Del más reciente al más antiguo, con filtro por proceso, objeto, usuario y fechas, y hasta 500 filas. Solo lee, y oculta los valores que parecen contraseñas. Pídeselo con tus palabras:</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>¿Por qué falló esta mañana el proceso de aprobar turnos?
+</span></code></pre></div>
 <hr>
 <h2 id="mcp-apps">MCP Apps<a class="headerlink" href="#mcp-apps" title="Permanent link">¶</a></h2>
 <p>Además de las herramientas de datos, el servidor incluye tres <strong>MCP Apps</strong>: interfaces visuales interactivas que el agente puede abrir en respuesta a peticiones concretas. Se ven en los clientes que muestran MCP Apps.</p>
 <h3 id="flexygo-schema-diagram-ui">Flexygo Schema Diagram UI<a class="headerlink" href="#flexygo-schema-diagram-ui" title="Permanent link">¶</a></h3>
 <p>Diagrama interactivo del modelo de base de datos del proyecto, con jerarquía y relaciones entre entidades. Útil para visualizar el esquema actual antes de hacer cambios o para entender la estructura de un proyecto existente.</p>
 <p><strong>Cómo usarlo:</strong>
-</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Muéstrame el modelo de base de datos actual del proyecto
+</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Muéstrame el modelo de base de datos actual del proyecto
 </span></code></pre></div><p></p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/showDBModel.png" data-desc-position="bottom"><img alt="Diagrama interactivo del modelo de BD con tablas y relaciones" src="../../../docs_assets/images/CoreProductDevelopment/MCP/showDBModel.png"></a>
 <br>
 <figcaption>El diagrama muestra tablas, columnas, tipos y claves foráneas del proyecto</figcaption>
 </figure>
+<p>Si tu cliente no muestra MCP Apps, el agente puede darte el mismo modelo como un diagrama Mermaid en el chat, de todas las tablas o de una tabla y las que se relacionan con ella. El chat de VS Code lo dibuja.</p>
 <h3 id="color-picker-ui">Color Picker UI<a class="headerlink" href="#color-picker-ui" title="Permanent link">¶</a></h3>
-<p>Selector de color interactivo. Al confirmar un color, el agente modifica automáticamente las dos variables principales de la aplicación: el color de cabecera y el color de navegación.</p>
+<p>Selector de color interactivo. Al pulsar <strong>Aplicar color al proyecto</strong>, el color se escribe en las variables de la piel que el agente haya preparado para esa elección, por ejemplo el color de cabecera y el de navegación, y en la piel que hayáis elegido. Si no se ha elegido la piel, el botón no escribe nada y el agente te pregunta en cuál aplicarlo.</p>
 <p><strong>Cómo usarlo:</strong>
-</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Cambia el color principal de la aplicación a un azul corporativo oscuro usando el color picker
+</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Cambia el color principal de la aplicación a un azul corporativo oscuro usando el color picker
 </span></code></pre></div><p></p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/colorPicker.png" data-desc-position="bottom"><img alt="Color Picker con rueda de color, hex #3498DB y botón Aplicar color al proyecto" src="../../../docs_assets/images/CoreProductDevelopment/MCP/colorPicker.png"></a>
@@ -9824,7 +9881,7 @@
 <h3 id="flexygo-page-designer-ui">Flexygo Page Designer UI<a class="headerlink" href="#flexygo-page-designer-ui" title="Permanent link">¶</a></h3>
 <p>Previsualización del diseñador de páginas: muestra las posiciones disponibles (slots) de cada página y los módulos configurados en cada una. Útil para revisar el layout antes de realizar modificaciones.</p>
 <p><strong>Cómo usarlo:</strong>
-</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Abre el diseñador de páginas para ver qué módulos hay en cada página
+</p><div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Abre el diseñador de páginas para ver qué módulos hay en cada página
 </span></code></pre></div><p></p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/CoreProductDevelopment/MCP/pageDesigner.png" data-desc-position="bottom"><img alt="Diseñador de páginas con layout de 3 slots y panel de módulos" src="../../../docs_assets/images/CoreProductDevelopment/MCP/pageDesigner.png"></a>
@@ -9871,6 +9928,24 @@
   <a href="#explorar-las-herramientas-disponibles" class="md-nav__link">
     <span class="md-ellipsis">
       Explorar las herramientas disponibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-configuracion-no-se-consulta-con-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      La configuración no se consulta con SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-registro-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      El registro de la aplicación
     </span>
   </a>
   

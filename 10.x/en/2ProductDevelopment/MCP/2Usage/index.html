@@ -1344,6 +1344,8 @@
       
         
       
+        
+      
     
     
     
@@ -1376,6 +1378,29 @@
             MCP
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide: build by talking to the assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -9768,20 +9793,21 @@
 
 <hr>
 <h2 id="opening-the-project-in-claude-code">Opening the project in Claude Code<a class="headerlink" href="#opening-the-project-in-claude-code" title="Permanent link">¶</a></h2>
-<p>The project generated from the Flexygo template carries, at its root, the <code>.mcp.json</code> file, which tells Claude Code how to start the server, and <code>.claude/settings.json</code>, which turns it on for the project. There is nothing to start by hand: Claude Code launches the server when you open the project folder.</p>
+<p>The project generated from the Flexygo template carries, at its root, the <code>.mcp.json</code> file, which tells Claude Code how to start the server, and <code>.claude/settings.json</code>, which approves the <code>flexygo</code> server and turns on the <a href="../7PanelAndBoard/">Flexygo panel</a>. There is nothing to start by hand: Claude Code launches the server when you open the project folder.</p>
 <ol>
 <li>Open the project folder in Claude Code: in the desktop app, in the VS Code extension, or in a terminal with <code>claude</code> from that folder.</li>
-<li>If Claude Code asks whether to use the project's <code>flexygo</code> server, accept.</li>
+<li>If Claude Code asks whether to use the project's servers, accept <code>flexygo</code> and <code>playwright</code>, the browser the agent checks the application with. <code>stitch</code> is only needed to draw the screens with Google Stitch.</li>
 <li>Type <code>/mcp</code> to check that the <code>flexygo</code> server shows as connected.</li>
 </ol>
-<p>The first time it starts, the server installs the <code>/flx-*</code> commands and the Flexygo panel in the project. If the commands do not show when you type <code>/flx-</code>, open a new chat.</p>
+<p>The first time it starts, the server installs the <code>/flx-*</code> commands in the project, turns on the panel and adds the browser server to <code>.mcp.json</code>. A session that was already open may not see it: if the commands do not show when you type <code>/flx-</code>, reopen the project (in VS Code, <em>Developer: Reload Window</em>), which picks up everything. See <a href="../3Configuration/#what-the-server-adds-to-the-project">What the server adds to the project</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Before you start: spec-driven tools</p>
 <p>If you use tools such as <strong>GSD</strong>, <strong>Spec Kit</strong> or others based on <em>spec-driven development</em>, <strong>do not combine them with the Flexygo MCP server</strong>. The context they generate interferes with the real context the MCP provides and degrades the agent's quality. See <a href="../5BestPractices/#spec-driven-development-tools-gsd-spec-kit-and-similar">Best practices</a> for more detail.</p>
 </div>
 <hr>
 <h2 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Permanent link">¶</a></h2>
-<p>The work is done with commands that start with <code>/flx-</code>, one phase at a time. To begin:</p>
+<p>You don't need to type commands: just tell the assistant what you want, and it starts each step. The <a href="../0Guide/">Guide</a> describes the ways to start, with examples of what you can say.</p>
+<p>If you would rather go straight to a step, the commands start with <code>/flx-</code>. To begin:</p>
 <table>
 <thead>
 <tr>
@@ -9805,6 +9831,14 @@
 <tr>
 <td>You want to add something to a project that already has things built</td>
 <td><code>/flx-new-development</code>, then <code>/flx-plan</code>.</td>
+</tr>
+<tr>
+<td>You have screens already approved, made with Lovable or another tool</td>
+<td><code>/flx-lovable</code>, with the generated project's folder.</td>
+</tr>
+<tr>
+<td>You want to see the design of the screens before they are built</td>
+<td><code>/flx-design</code>.</td>
 </tr>
 <tr>
 <td>It is a small change to something that already exists</td>
