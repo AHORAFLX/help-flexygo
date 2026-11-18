@@ -153,6 +153,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Configuración:** La skin 2022 muestra la configuración de la aplicación y Salud y recursos en el menú del panel de control.
 - **Instalación:** El asistente de instalación comprueba la versión y el acceso a SQL Server, e identifica las versiones no compatibles y los errores de conexión.
 - **Seguridad de la WebAPI:** Puedes solicitar el token de la WebAPI usando el correo electrónico, además del nombre de usuario.
+- **Inteligencia artificial:** El asistente de IA puede consultar vistas de datos con parámetros y respetar sus filtros y ordenación.
 
 ## Correcciones
 
@@ -184,6 +185,8 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Procesos:** Los parámetros de proceso ocultos o bloqueados conservan los valores configurados.
     - **Procesos:** Los procesos pueden ejecutarse en colecciones cuyos objetos no tienen un campo identificador único.
     - **Seguridad:** Las plantillas muestran los datos guardados como texto, sin ejecutar código.
+    - **Herramientas de desarrollo:** Genera scripts desde el acceso rápido sin que falle la ejecución.
+    - **Seguridad de la WebAPI:** La WebAPI y el asistente solo ejecutan procesos en los objetos para los que están definidos.
 
 ## Obsoleto
 
