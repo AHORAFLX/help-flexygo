@@ -187,6 +187,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Security:** Templates display saved data as text, without executing code.
     - **Development Tools:** Generate scripts from Quick Access without execution failing.
     - **WebAPI Security:** The WebAPI and the assistant only run processes on the objects for which they are defined.
+    - **Configuration:** Configuration markers are once again populated with page values and retain the supported formats.
 
 ## Deprecated
 
