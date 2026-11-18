@@ -1,12 +1,12 @@
 # Buenas prácticas
 
-Estas recomendaciones asumen que el servidor `flexygo-mcp` está conectado a Claude Code. Si todavía no lo has configurado, consulta primero [Uso básico](./2Usage.md).
+Estas recomendaciones asumen que el servidor `flexygo-mcp` está conectado a Claude Code. Si todavía no lo has configurado, consulta primero [Uso básico](./2Usage.md). Para ver cómo se trabaja hablándole al asistente, consulta la [Guía](./0Guide.md).
 
 ---
 
 ## Modelo recomendado
 
-Usa un modelo Claude actual. Para pensar y decidir (`/flx-context`, `/flx-plan`, `/flx-discuss`) conviene el modelo más capaz que tengas; para ejecutar un bloque ya decidido (`/flx-execute`, `/flx-verify`) basta con uno más rápido y barato.
+Usa un modelo Claude actual. Para pensar y decidir (`/flx-plan`, `/flx-discuss`, `/flx-review`, `/flx-quality` y la auditoría de seguridad de `/flx-release`) conviene el modelo más capaz que tengas; para construir y comprobar (`/flx-context`, `/flx-execute`, `/flx-security`, `/flx-help`, `/flx-api`, `/flx-release`…) basta con uno más rápido y barato. El agente te recomienda el de cada fase: consulta [El modelo de cada fase](./6Workflow.md#el-modelo-de-cada-fase).
 
 ---
 
@@ -17,7 +17,8 @@ Este es el factor que más afecta a la calidad del trabajo con el agente. A medi
 **Reglas prácticas:**
 
 - **Un chat nuevo por fase o por bloque.** El servidor guarda un punto de control de cada desarrollo, así que un chat nuevo retoma el trabajo sin releer la conversación anterior: escribe `/flx-status` o el siguiente comando. Consulta [Retomar el trabajo](./6Workflow.md#retomar-el-trabajo-sin-pagar-la-conversacion-entera).
-- **Haz caso al aviso de la línea de estado.** Cuando el contexto se llena, la línea de estado de Flexygo lo dice con `context N% → new chat`.
+- **Haz caso al aviso de la línea de estado.** Cuando el contexto se llena, la línea de estado de Flexygo lo dice con `context N% → new chat`, desde el 80 %.
+- **Acepta el chat nuevo que te ofrece el agente.** En un chat muy largo, al cerrar una tarea o un bloque, te propone seguir en uno nuevo y te da el mensaje para empezarlo.
 - **No uses la misma conversación para planificar y ejecutar.** La fase de análisis o discusión consume contexto que luego hace falta para la ejecución.
 - **Para `/flx-build-product`, empieza siempre con contexto limpio.**
 
@@ -40,7 +41,7 @@ Este es el factor que más afecta a la calidad del trabajo con el agente. A medi
 
 ## Sigue el flujo de comandos
 
-Los comandos `/flx-*` llevan el trabajo fase a fase: contexto, plan, decisiones, ejecución por bloques, revisión, verificación, pruebas, calidad, ayuda y, si hace falta, la API. Cada fase es la puerta de la siguiente, así que no hace falta que recuerdes qué toca: el agente, el panel y `/flx-status` lo dicen. Consulta el [flujo completo](./6Workflow.md).
+Los comandos `/flx-*` llevan el trabajo fase a fase: contexto, plan, decisiones, ejecución por bloques (cada bloque se comprueba en el navegador y se prueba en su propio chat), revisión, seguridad, calidad, ayuda, la API si hace falta y la comprobación final (`/flx-release`: auditoría de seguridad, documentos de entrega y el producto publicado desde cero con todas sus pruebas). Cada fase es la puerta de la siguiente, así que no hace falta que recuerdes qué toca: el agente, el panel y `/flx-status` lo dicen. Consulta el [flujo completo](./6Workflow.md).
 
 ---
 
@@ -76,28 +77,11 @@ Usa el Color Picker MCP App. No modifiques nada más del estilo.
 
 ---
 
-### Separa las fases cuando la tarea es compleja
+### Deja que el flujo parta el trabajo
 
-Si una tarea tiene varias partes, pídelas en pasos y espera confirmación entre ellos. No lances todo en un solo prompt.
+Si una tarea tiene varias partes (una entidad nueva, su relación, su formulario y su opción de menú), no la partas tú en mensajes: pídela con `/flx-new-development` y `/flx-plan`, que la parten en bloques a la medida de un chat y te preguntan antes lo que haya que decidir.
 
-=== "Un prompt que puede descontrolarse"
-
-    ```text
-    Crea la entidad Pedido, añade la relación con Cliente, genera el formulario
-    de alta y actualiza el menú de navegación
-    ```
-
-=== "Mismo trabajo, bajo control"
-
-    ```text
-    Paso 1: Crea la entidad Pedido con los campos: id, fecha, total, clienteId (FK a Cliente).
-    Cuando lo tengas, confirma y espera.
-    ```
-    *(Tras confirmación)*
-    ```text
-    Paso 2: Genera el formulario de alta para la entidad Pedido.
-    Cuando lo tengas, confirma y espera.
-    ```
+Tampoco hace falta describirle al agente cómo está el proyecto: antes de cambiar algo, lee su configuración. Basta con nombrar el objeto sobre el que trabajas.
 
 ---
 
@@ -112,26 +96,12 @@ qué operaciones vas a realizar y espera mi confirmación.
 
 ---
 
-### Da contexto al inicio de cada conversación
-
-Si la tarea parte de un estado específico del proyecto, orienta al agente antes de pedir nada:
-
-```text
-Estoy en el módulo "GestionPedidos". La entidad Pedido tiene los campos:
-id, fecha, total, estado (enum: Pendiente/Enviado/Entregado), clienteId.
-Quiero añadir un filtro por estado en el listado principal.
-```
-
-El agente trabajará sobre lo que le describes — no asumas que "sabe" cómo está tu proyecto en este momento.
-
----
-
 ## Consejos de uso con Claude Code
 
 - Si el agente no usa las herramientas de Flexygo cuando debería, recuérdaselo explícitamente: `"Usa las herramientas de Flexygo MCP para esto"`.
 - Cuando el agente proponga varios enfoques, elige uno antes de continuar. La ambigüedad sostenida consume contexto sin avanzar.
 - Si una respuesta fue incorrecta, corrígela en el siguiente mensaje antes de continuar con la tarea — no la ignores o el agente construirá sobre el error.
-- Cuando actualices el servidor (`dotnet tool update -g flexygo-mcp`), abre un **chat nuevo**: un chat ya empezado sigue con las herramientas de antes.
+- Cuando actualices el servidor (`dotnet tool update -g flexygo-mcp`), abre un **chat nuevo**: un chat ya empezado sigue con las herramientas de antes. El servidor te avisa cuando hay una versión nueva publicada, y la línea de estado dice `server X runs, Y installed → new chat` mientras el chat siga con la versión anterior.
 
 ---
 
@@ -149,17 +119,15 @@ Si ocurre, detén la conversación, comprueba con `/mcp` que el servidor `flexyg
 
 ---
 
-## Haz un commit de checkpoint antes de iterar
+## Acepta el commit de cada bloque
 
-Cuando cierres un bloque o un desarrollo y lo hayas revisado y aprobado, **haz un commit a Git antes de continuar** con peticiones de mejoras o modificaciones individuales.
+Al preparar el proyecto, el agente te pregunta una vez qué hacer al cerrar cada bloque y cada fase que cambia la configuración: solo commit, commit y push, o nada. Con el commit tienes un punto al que volver por cada bloque, sin ficheros con secretos; el push lo hace con tu propio git y nunca lo fuerza. Consulta [El control de versiones](./6Workflow.md#el-control-de-versiones).
 
-Este checkpoint tiene varias ventajas:
+Acéptalo antes de pedir mejoras o cambios sueltos:
 
 - Tienes un punto de retorno claro si una iteración posterior rompe algo
 - El agente puede ver exactamente qué ha cambiado en cada tarea (diff limpio)
 - Mantienes el control de qué es "base aprobada" y qué son cambios posteriores
-
-Es una buena práctica hacer commits frecuentes a medida que avanzas — no esperes a tener el producto terminado.
 
 ---
 
