@@ -73,3 +73,5 @@ Con solo lectura, cualquier intento de cambiar algo se rechaza con una frase que
 
 - **La API**: pide un token con el usuario del rol (`POST /token`) y prueba una lista, un registro y un borrado. Las respuestas deben coincidir con la tabla del apartado 2. El detalle de cada respuesta está en [Seguridad de la WebAPI](../../Programming/WebAPISecurity.md#2-las-negativas-un-estado-por-motivo-y-la-frase).
 - **Un asistente**: conéctalo con el usuario del rol y pídele la lista del objeto: trae solo los registros que deja pasar la condición de **Ver la colección**. Si le pides borrar un registro o ejecutar el proceso denegado, debe contestar que no puede. Cada llamada queda en el registro de la web API.
+
+Si la aplicación se construye con el servidor MCP de desarrollo, `/flx-security` prueba cada regla entrando como su rol, `/flx-api` prueba desde fuera lo que publica la API con un usuario de cada rol, y la auditoría de seguridad de `/flx-release` lo repasa todo al final. Consulta [Seguridad: quién puede qué](../../../2ProductDevelopment/MCP/6Workflow.md#seguridad-quien-puede-que).

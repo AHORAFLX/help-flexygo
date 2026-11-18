@@ -1,12 +1,12 @@
 # Best practices
 
-These recommendations assume the `flexygo-mcp` server is connected to Claude Code. If you haven't set it up yet, see [Basic use](./2Usage.md) first.
+These recommendations assume the `flexygo-mcp` server is connected to Claude Code. If you haven't set it up yet, see [Basic use](./2Usage.md) first. To see how to work by talking to the assistant, see the [Guide](./0Guide.md).
 
 ---
 
 ## Recommended model
 
-Use a current Claude model. For thinking and deciding (`/flx-context`, `/flx-plan`, `/flx-discuss`), use the most capable model you have; for executing a block already decided (`/flx-execute`, `/flx-verify`), a faster and cheaper one is enough.
+Use a current Claude model. For thinking and deciding (`/flx-plan`, `/flx-discuss`, `/flx-review`, `/flx-quality` and the security audit of `/flx-release`), use the most capable model you have; for building and checking (`/flx-context`, `/flx-execute`, `/flx-security`, `/flx-help`, `/flx-api`, `/flx-release`…), a faster and cheaper one is enough. The agent recommends the one for each phase: see [The model for each phase](./6Workflow.md#the-model-for-each-phase).
 
 ---
 
@@ -17,7 +17,8 @@ This is the factor that most affects the quality of the work with the agent. As 
 **Practical rules:**
 
 - **A new chat for each phase or block.** The server keeps a checkpoint of each development, so a new chat resumes the work without rereading the previous conversation: type `/flx-status` or the next command. See [Resuming the work](./6Workflow.md#resuming-without-paying-for-the-whole-conversation).
-- **Heed the status line's warning.** When the context fills up, the Flexygo status line says so with `context N% → new chat`.
+- **Heed the status line's warning.** When the context fills up, the Flexygo status line says so with `context N% → new chat`, from 80 %.
+- **Accept the new chat the agent offers.** In a very long chat, when a task or a block closes, it proposes going on in a new one and gives you the message to start it.
 - **Don't use the same conversation to plan and to execute.** The analysis or discussion phase uses up context that is then needed for the execution.
 - **For `/flx-build-product`, always start with a clean context.**
 
@@ -40,7 +41,7 @@ This is the factor that most affects the quality of the work with the agent. As 
 
 ## Follow the command flow
 
-The `/flx-*` commands take the work phase by phase: context, plan, decisions, execution block by block, review, verification, tests, quality, help and, if needed, the API. Each phase is the gate to the next, so you don't need to remember what comes next: the agent, the panel and `/flx-status` tell you. See the [whole flow](./6Workflow.md).
+The `/flx-*` commands take the work phase by phase: context, plan, decisions, execution block by block (each block is checked in the browser and tested in its own chat), review, security, quality, help, the API if needed, and the final check (`/flx-release`: security audit, delivery documents and the product published from scratch with all its tests). Each phase is the gate to the next, so you don't need to remember what comes next: the agent, the panel and `/flx-status` tell you. See the [whole flow](./6Workflow.md).
 
 ---
 
@@ -76,28 +77,11 @@ Use the Color Picker MCP App. Don't modify anything else about the style.
 
 ---
 
-### Split the phases when the task is complex
+### Let the flow split the work
 
-If a task has several parts, ask for them in steps and wait for confirmation between them. Don't throw everything into a single prompt.
+If a task has several parts (a new entity, its relation, its form and its menu option), don't split it into messages yourself: ask for it with `/flx-new-development` and `/flx-plan`, which split it into blocks sized to a chat and ask you first whatever needs deciding.
 
-=== "A prompt that can spiral out of control"
-
-    ```text
-    Create the Order entity, add the relationship with Customer, generate the
-    creation form, and update the navigation menu
-    ```
-
-=== "Same work, under control"
-
-    ```text
-    Step 1: Create the Order entity with the fields: id, date, total, customerId (FK to Customer).
-    Once you have it, confirm and wait.
-    ```
-    *(After confirmation)*
-    ```text
-    Step 2: Generate the creation form for the Order entity.
-    Once you have it, confirm and wait.
-    ```
+Nor do you need to describe the state of the project to the agent: before changing something, it reads its configuration. Naming the object you work on is enough.
 
 ---
 
@@ -112,26 +96,12 @@ operations you're going to perform and wait for my confirmation.
 
 ---
 
-### Give context at the start of each conversation
-
-If the task starts from a specific state of the project, orient the agent before asking for anything:
-
-```text
-I'm in the "OrderManagement" module. The Order entity has the fields:
-id, date, total, status (enum: Pending/Shipped/Delivered), customerId.
-I want to add a status filter in the main listing.
-```
-
-The agent will work on what you describe to it — don't assume it "knows" the current state of your project.
-
----
-
 ## Tips for using Claude Code
 
 - If the agent doesn't use the Flexygo tools when it should, remind it explicitly: `"Use the Flexygo MCP tools for this"`.
 - When the agent proposes several approaches, pick one before continuing. Sustained ambiguity uses up context without progress.
 - If an answer was wrong, correct it in the next message before continuing with the task — don't ignore it or the agent will build on the error.
-- When you update the server (`dotnet tool update -g flexygo-mcp`), open a **new chat**: a chat already under way keeps the tools it started with.
+- When you update the server (`dotnet tool update -g flexygo-mcp`), open a **new chat**: a chat already under way keeps the tools it started with. The server tells you when a new version is published, and the status line says `server X runs, Y installed → new chat` while the chat is still on the previous version.
 
 ---
 
@@ -149,17 +119,15 @@ If it happens, stop the conversation, check with `/mcp` that the `flexygo` serve
 
 ---
 
-## Make a checkpoint commit before iterating
+## Accept each block's commit
 
-When you close a block or a development and have reviewed and approved it, **make a Git commit before continuing** with requests for improvements or individual changes.
+When preparing the project, the agent asks you once what to do when each block and each phase that changes the configuration closes: commit only, commit and push, or nothing. With the commit you have a point to go back to for each block, without files that hold secrets; the push is made with your own git and never forced. See [Version control](./6Workflow.md#version-control).
 
-This checkpoint has several advantages:
+Accept it before asking for improvements or individual changes:
 
 - You have a clear point to return to if a later iteration breaks something
 - The agent can see exactly what changed in each task (clean diff)
 - You keep control of what is "approved base" and what are later changes
-
-It's good practice to commit often as you go — don't wait until the product is finished.
 
 ---
 
