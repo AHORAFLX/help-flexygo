@@ -153,6 +153,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **Configuration:** The 2022 skin displays application settings and Salud y recursos in the control panel menu.
 - **Installation:** The installation wizard checks the SQL Server version and access, and identifies unsupported versions and connection errors.
 - **WebAPI Security:** You can request the WebAPI token using the email address, in addition to the username.
+- **Artificial Intelligence:** The AI assistant can query data views with parameters and respect their filters and sorting.
 
 ## Fixes
 
@@ -184,6 +185,8 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Processes:** Hidden or locked process parameters retain the configured values.
     - **Processes:** Processes can be run on collections whose objects do not have a unique identifier field.
     - **Security:** Templates display saved data as text, without executing code.
+    - **Development Tools:** Generate scripts from Quick Access without execution failing.
+    - **WebAPI Security:** The WebAPI and the assistant only run processes on the objects for which they are defined.
 
 ## Deprecated
 
