@@ -73,3 +73,5 @@ With read only, any attempt to change something is refused with a sentence that 
 
 - **The API**: ask for a token with the role's user (`POST /token`) and try a list, a record and a delete. The answers must match the table in section 2. The detail of each answer is in [WebAPI security](../../Programming/WebAPISecurity.md#2-refusals-one-status-per-reason-plus-the-sentence).
 - **An assistant**: connect it with the role's user and ask it for the object's list: it only brings the records the **View collection** condition lets through. If you ask it to delete a record or run the denied process, it must say it cannot. Every call goes to the web API log.
+
+If the application is built with the development MCP server, `/flx-security` tries every rule signed in as its role, `/flx-api` tries from outside what the API publishes with one user per role, and the security audit of `/flx-release` goes over all of it at the end. See [Security: who may do what](../../../2ProductDevelopment/MCP/6Workflow.md#security-who-may-do-what).

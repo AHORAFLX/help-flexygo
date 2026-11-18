@@ -17,13 +17,42 @@ Verifica que está instalado:
 dotnet --list-sdks
 ```
 
+Para saber qué versión del servidor tienes instalada:
+
+```bash
+flexygo-mcp --version
+```
+
 ---
 
 ## Claude Code
 
-El servidor se usa desde **Claude Code**, en cualquiera de sus formas: la aplicación de escritorio, la extensión de VS Code o la terminal. Los comandos `/flx-*` del flujo de trabajo y el [panel de Flexygo](./7PanelAndBoard.md) son de Claude Code.
+El servidor se usa desde **Claude Code**, en cualquiera de sus formas: la aplicación de escritorio, la extensión de VS Code o la terminal. Los comandos `/flx-*` del flujo de trabajo, el [panel de Flexygo](./7PanelAndBoard.md), la línea de estado y las comprobaciones que vigilan lo que hace el agente son de Claude Code.
 
-Otros clientes MCP pueden usar las herramientas del servidor, pero sin los comandos ni el panel.
+El servidor copia también los comandos en `.github/skills/` del proyecto, donde los encuentra **GitHub Copilot**. Con Copilot, o con otro cliente MCP, se usan las herramientas del servidor, pero sin el panel, sin la línea de estado y sin esas comprobaciones.
+
+---
+
+## Node.js y Google Chrome
+
+Al cerrar cada bloque, el agente comprueba en el navegador lo que ha construido. Para eso, el servidor añade al `.mcp.json` del proyecto un servidor de navegador (`playwright`), que se arranca con `npx` y abre **Google Chrome**. Necesitas en el equipo:
+
+- **Node.js**, que trae `npx`: [https://nodejs.org](https://nodejs.org).
+- **Google Chrome**, instalado en su sitio de siempre.
+
+Si falta alguno, el servidor lo dice al arrancar y te indica dónde conseguirlo.
+
+---
+
+## SqlPackage
+
+Para publicar las bases de datos del proyecto desde sus proyectos de base de datos (al prepararlo con `/flx-setup` y en la comprobación final de cada desarrollo), el servidor usa **SqlPackage**. Si no lo tienes, instálalo como herramienta global:
+
+```bash
+dotnet tool install -g Microsoft.SqlServer.SqlPackage
+```
+
+La comprobación final publica el producto en unas bases de datos propias (`<base>_release`) del SQL Server de **este equipo**. Si las bases del proyecto están en otro servidor, se para y te pregunta dónde puede publicarlas.
 
 ---
 
@@ -47,11 +76,13 @@ dotnet tool list -g
 Busca `flexygo-mcp` en la lista. Si no aparece, instálala manualmente:
 
 ```bash
-dotnet tool install -g flexygo-mcp
+dotnet tool install -g flexygo-mcp --add-source https://nuget.ahorabh.com/v3/index.json
 ```
 
 Si ya está instalada pero quieres actualizar a la última versión:
 
 ```bash
-dotnet tool update -g flexygo-mcp
+dotnet tool update -g flexygo-mcp --add-source https://nuget.ahorabh.com/v3/index.json
 ```
+
+No hace falta estar pendiente: cuando hay una versión nueva publicada, el servidor lo dice en su primera respuesta de la sesión, con el comando exacto para actualizar. Después de actualizar, abre un chat nuevo: el servidor que ya estaba en marcha sigue con la versión anterior.
