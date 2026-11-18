@@ -188,6 +188,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Herramientas de desarrollo:** Genera scripts desde el acceso rápido sin que falle la ejecución.
     - **Seguridad de la WebAPI:** La WebAPI y el asistente solo ejecutan procesos en los objetos para los que están definidos.
     - **Configuración:** Los marcadores de configuración vuelven a completarse con los valores de la página y conservan los formatos admitidos.
+    - **Procesos:** Al ejecutar un proceso sin registro, se indica qué parámetro necesita un registro.
 
 ## Obsoleto
 
