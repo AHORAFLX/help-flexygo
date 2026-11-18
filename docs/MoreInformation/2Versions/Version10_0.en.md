@@ -188,6 +188,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
     - **Development Tools:** Generate scripts from Quick Access without execution failing.
     - **WebAPI Security:** The WebAPI and the assistant only run processes on the objects for which they are defined.
     - **Configuration:** Configuration markers are once again populated with page values and retain the supported formats.
+    - **Processes:** When running a process without a record, it indicates which parameter needs a record.
 
 ## Deprecated
 
