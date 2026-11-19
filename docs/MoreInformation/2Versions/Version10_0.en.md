@@ -154,6 +154,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **Installation:** The installation wizard checks the SQL Server version and access, and identifies unsupported versions and connection errors.
 - **WebAPI Security:** You can request the WebAPI token using the email address, in addition to the username.
 - **Artificial Intelligence:** The AI assistant can query data views with parameters and respect their filters and sorting.
+- **Licenses:** Access to MCP requires a license that includes this module, and each user can have only one active session.
 
 ## Fixes
 
