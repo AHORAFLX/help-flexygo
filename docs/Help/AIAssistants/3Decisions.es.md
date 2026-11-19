@@ -17,7 +17,7 @@ Las reglas son las de la aplicación: solo salen las decisiones que esa persona 
 
 | | |
 |---|---|
-| **El MCP de la aplicación encendido** | **Enable WebAPI** y **Enable MCP** en la herramienta WebAPI, y el permiso MCP (el robot) en el rol de la persona. Los pasos, en [Pruébalo](1TryIt.md#1-enciende-la-web-api-y-el-mcp). |
+| **El MCP de la aplicación encendido** | **Enable WebAPI** y **Enable MCP** en la herramienta WebAPI, el módulo MCP en la licencia y el permiso MCP (el robot) en el rol de la persona. Los pasos, en [Pruébalo](1TryIt.md#1-enciende-la-web-api-y-el-mcp). |
 | **Decisiones abiertas** | Las que abren las reglas de decisión, los procesos o un orquestador por la API ([Decisiones y webhooks](../Programming/ApprovalsAndWebhooks.md)). No hay que exponer nada más en la web API: las herramientas de decisiones leen las tareas con la seguridad de la persona. |
 | **La aplicación alcanzable** | Para claude.ai o ChatGPT, el Frontend en internet con HTTPS ([Proxy inverso](../../1Deployment/6ReverseProxy/index.md)). |
 

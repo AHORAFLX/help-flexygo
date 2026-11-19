@@ -11,6 +11,7 @@ Esta página es el **camino corto para probarlo**. Qué hace cada pieza, todos l
 | | |
 |---|---|
 | **Una aplicación Flexygo de la versión 10** | Vale una instalación local de desarrollo. Entra con un usuario **administrador**. |
+| **El módulo MCP en la licencia** | El MCP de la aplicación se contrata aparte: la licencia tiene que incluir el módulo **MCP**. Sin él, `/mcp` no responde aunque lo enciendas en el paso 1. Si no lo tienes, pídelo a tu proveedor de Flexygo. |
 | **Un objeto con datos** | Cualquiera que ya tengas (pedidos, clientes, incidencias…). En los ejemplos de esta página es un objeto *Order* con su estado y su total. |
 | **Un asistente que hable MCP** | Lo más rápido para probar en local es **Claude Code**. Claude (web o escritorio) y ChatGPT también sirven, pero necesitan llegar a la aplicación por internet con HTTPS (paso 5). |
 
@@ -22,7 +23,7 @@ En el panel de control, área **Security → WebAPI**, enciende **Enable WebAPI*
 
 ![Enable WebAPI y Enable MCP en la herramienta WebAPI](../../docs_assets/images/AIAssistants/interruptor-mcp.png)
 
-**Comprueba**: en tu menú de perfil aparecen **Connect an assistant** y **Connected assistants**. Si no salen, sal y vuelve a entrar.
+**Comprueba**: en tu menú de perfil aparecen **Connect an assistant** y **Connected assistants**. Si no salen, sal y vuelve a entrar. Si **Connect an assistant** avisa de que los asistentes están apagados aunque hayas encendido los dos interruptores, la licencia no incluye el módulo MCP.
 
 ![El menú de perfil con las dos entradas del MCP](../../docs_assets/images/AIAssistants/menu-perfil.png){ width="320" }
 
@@ -75,6 +76,9 @@ En el navegador **entras con tu usuario de siempre** y ves la página de consent
 
 **Comprueba**: el asistente dice que está conectado (en Claude Code, `/mcp` lo muestra como *connected*).
 
+!!! note "Una sesión por usuario"
+    Cada usuario puede tener **una sola sesión MCP activa**. Si conectas otro asistente con el mismo usuario, o el mismo asistente desde otro equipo, la sesión anterior se cierra: su siguiente pregunta recibe el aviso de que el mismo usuario ha abierto otra sesión. Para seguir en ella, vuelve a conectarla, y entonces la que se cierra es la otra.
+
 ## 6. Pregúntale
 
 Algunas preguntas para ver cada cosa, con tus nombres en lugar de los del ejemplo:
@@ -112,6 +116,8 @@ Y si apagas **Enable MCP** (paso 1), `/mcp` deja de existir para todos al moment
 | Lo que ves | Por qué | Qué hacer |
 |---|---|---|
 | El asistente no conecta y la dirección da *404* | **Enable MCP** (o **Enable WebAPI**) apagado | Paso 1 |
+| La dirección da *404* con los dos interruptores encendidos, o el asistente dice que la licencia no incluye el módulo MCP | La licencia no tiene el módulo MCP | Pide a tu proveedor de Flexygo que lo añada a la licencia |
+| El asistente dice que la sesión se cerró porque el mismo usuario abrió otra | Has conectado otro asistente (u otro equipo) con tu usuario, y solo vale una sesión a la vez | Si quieres seguir en este asistente, vuelve a conectarlo: la otra sesión se cerrará |
 | La página de conectar o el consentimiento dicen que no tienes permiso | Falta el robot en tu rol o en tu usuario | Paso 2 |
 | El asistente dice que el objeto no existe | No está marcado en *Authorized Data* | Paso 3 |
 | Contesta, pero confunde campos o estados | Faltan descripciones | Paso 4 |

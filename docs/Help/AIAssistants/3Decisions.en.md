@@ -17,7 +17,7 @@ The rules are the application's: only the decisions that person can take show up
 
 | | |
 |---|---|
-| **The application's MCP switched on** | **Enable WebAPI** and **Enable MCP** in the WebAPI tool, and the MCP permission (the robot) on the person's role. The steps are in [Try it](1TryIt.md#1-turn-on-the-web-api-and-mcp). |
+| **The application's MCP switched on** | **Enable WebAPI** and **Enable MCP** in the WebAPI tool, the MCP module in the licence and the MCP permission (the robot) on the person's role. The steps are in [Try it](1TryIt.md#1-turn-on-the-web-api-and-mcp). |
 | **Open decisions** | The ones opened by decision rules, by processes or by an orchestrator through the API ([Decisions and webhooks](../Programming/ApprovalsAndWebhooks.md)). Nothing else has to be exposed in the web API: the decision tools read the tasks with the person's security. |
 | **The application reachable** | For claude.ai or ChatGPT, the Frontend on the internet with HTTPS ([Reverse proxy](../../1Deployment/6ReverseProxy/index.md)). |
 
