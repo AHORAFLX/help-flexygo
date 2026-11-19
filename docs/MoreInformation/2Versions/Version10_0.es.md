@@ -154,6 +154,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Instalación:** El asistente de instalación comprueba la versión y el acceso a SQL Server, e identifica las versiones no compatibles y los errores de conexión.
 - **Seguridad de la WebAPI:** Puedes solicitar el token de la WebAPI usando el correo electrónico, además del nombre de usuario.
 - **Inteligencia artificial:** El asistente de IA puede consultar vistas de datos con parámetros y respetar sus filtros y ordenación.
+- **Licencias:** El acceso al MCP requiere una licencia con ese módulo y cada usuario puede mantener una sola sesión activa.
 
 ## Correcciones
 
