@@ -114,6 +114,9 @@ Script rules:
 
 ## 2. Setting it up (administrator)
 
+!!! warning "The licence's MCP module is required"
+    The application's MCP is sold separately: the **licence** must include the **MCP** module. Without it, `/mcp` and its discovery documents return 404 even with `MCP_Enabled` on, no new assistant can connect, the **Connect an assistant** page warns that the assistants are switched off, and an assistant that was already connected gets the refusal *this application's licence does not include the MCP module*, which it shows the person. To add it, ask your Flexygo provider. The web API does not depend on this module.
+
 1. **Enable the web API and the MCP endpoint** in the **WebAPI** tool (*Security* area of the [control panel](../Administration/ControlPanel.md)): the **Enable WebAPI** and **Enable MCP** switches, which are the `WebAPI_Enabled` and `MCP_Enabled` settings (also in *Settings*, *WebAPI* group). Both are off by default: exposing the application to assistants is a team decision. Without `MCP_Enabled`, the `/mcp` route and its discovery documents return 404, as if they did not exist; the change takes effect immediately, without restarting. They are separate on purpose: the web API serves integrations (an ERP, an app, another system with its token) and MCP serves people's assistants, which is a different audience; you can have the first without the second, not the other way round.
 
     <figure markdown="span">
@@ -190,6 +193,8 @@ What the page says, and why:
 
 After *Allow*, the assistant is connected: the access lasts **8 hours and renews itself** while it is used; a connection unused for **30 days** expires and you have to connect again.
 
+**One session per user.** Each user can have **only one active MCP session**, with any assistant: this way one licensed user is not shared by several people or assistants. Connecting another assistant with the same user (or the same assistant from another computer) closes the previous session. Its next call gets a refusal that the assistant shows the person: *this session was closed because the same user opened another MCP session*. To go on with it, just connect it again, and then the other one is closed. The web API has no such limit.
+
 To disconnect, the person has **Connected assistants** in their profile menu: their connections (only theirs), with the assistant, when it connected, the last time it was used, when it expires and what it can do; **Revoke**, in the row menu, cuts it. The connector can also be removed in the assistant itself, and an administrator can revoke any session (§6).
 
 <figure markdown="span">
@@ -207,7 +212,9 @@ To disconnect, the person has **Connected assistants** in their profile menu: th
 | Measure | What it does |
 |---|---|
 | **OAuth 2.1 with the application as authorization server** | Its own login (SSO and 2FA included), explicit consent, mandatory PKCE, 8-hour tokens with rotating refresh. The tables store only the hash of the tokens: a copy of the database does not open any session. |
+| **Licence module** | Without the MCP module in the licence there is no `/mcp` endpoint (§2). |
 | **Its own permission** | Connecting an assistant requires the MCP permission of the user or their role, separate from the web API one (§2). Removing it, or blocking the assistant in *MCP assistants*, instantly cuts live connections. |
+| **One session per user** | Opening an MCP session closes the user's other ones, in any assistant (§3). The server enforces the rule: a row added by hand to `MCP_Sessions` does not open another session. |
 | **The user's security, always** | Every call runs as the user who consented: roles, objects, views, processes, security filters. MCP adds no permissions. |
 | **Bounded filters** | An SQL filter from the assistant can only name tables of objects the role can see; anything else is rejected in words. |
 | **Read and write scopes** | `flexygo:read` and `flexygo:write`; the person decides on the consent page. |
@@ -226,7 +233,7 @@ All in *Settings*, *WebAPI* group:
 
 | Setting | Default | What it does |
 |---|---|---|
-| `MCP_Enabled` | `false` | Opens the `/mcp` endpoint to assistants. Also requires `WebAPI_Enabled`. It is the **Enable MCP** switch of the WebAPI tool. |
+| `MCP_Enabled` | `false` | Opens the `/mcp` endpoint to assistants. Also requires `WebAPI_Enabled` and the licence's MCP module (§2). It is the **Enable MCP** switch of the WebAPI tool. |
 | `MCP_RequireApprovedClients` | `false` | With `true`, each assistant that registers starts **unapproved** and nobody can connect it until an administrator ticks *Approved* in **MCP assistants** (§6). With `false`, an assistant is approved when it registers and can be blocked afterwards. |
 | `MCP_CallsPerMinute` | `60` | Tool calls a session can make per minute; `0` = no limit. |
 | `MCP_CallsPerDay` | `0` | The same per calendar day; `0` = no limit. |
@@ -249,7 +256,7 @@ The administration screens are in the **Environment** area of the [control panel
   <figcaption>An approved assistant with one live session and another one blocked</figcaption>
 </figure>
 
-**MCP sessions**: all live connections (`MCP_Sessions` table): who, with which assistant, when they connected, the last time it was used, when it expires and what it can do. **Revoke**, in the row menu, cuts it: the assistant gets a refusal and the person has to connect again. Sessions are not created or edited manually.
+**MCP sessions**: all live connections (`MCP_Sessions` table), at most one per user (§3): who, with which assistant, when they connected, the last time it was used, when it expires and what it can do. **Revoke**, in the row menu, cuts it: the assistant gets a refusal and the person has to connect again. Sessions are not created or edited manually.
 
 <figure markdown="span">
   ![MCP sessions with the row menu open and Revoke](../../docs_assets/images/AIAssistants/sesiones.png)

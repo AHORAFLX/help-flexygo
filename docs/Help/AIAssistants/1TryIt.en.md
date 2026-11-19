@@ -11,6 +11,7 @@ This page is the **short path to try it**. What each piece does, all the setting
 | | |
 |---|---|
 | **A version 10 Flexygo application** | A local development installation is fine. Log in with an **administrator** user. |
+| **The MCP module in the licence** | The application's MCP is sold separately: the licence must include the **MCP** module. Without it, `/mcp` does not answer even if you switch it on in step 1. If you do not have it, ask your Flexygo provider for it. |
 | **An object with data** | Any one you already have (orders, customers, incidents…). In the examples on this page it is an *Order* object with its status and its total. |
 | **An assistant that speaks MCP** | The quickest way to try it locally is **Claude Code**. Claude (web or desktop) and ChatGPT also work, but they need to reach the application over the internet with HTTPS (step 5). |
 
@@ -22,7 +23,7 @@ In the control panel, **Security → WebAPI** area, turn on **Enable WebAPI** an
 
 ![Enable WebAPI and Enable MCP in the WebAPI tool](../../docs_assets/images/AIAssistants/interruptor-mcp.png)
 
-**Check**: your profile menu shows **Connect an assistant** and **Connected assistants**. If they do not appear, log out and back in.
+**Check**: your profile menu shows **Connect an assistant** and **Connected assistants**. If they do not appear, log out and back in. If **Connect an assistant** warns that the assistants are switched off although you turned on both switches, the licence does not include the MCP module.
 
 ![The profile menu with the two MCP entries](../../docs_assets/images/AIAssistants/menu-perfil.png){ width="320" }
 
@@ -75,6 +76,9 @@ In the browser **you log in with your usual user** and see the consent page: who
 
 **Check**: the assistant says it is connected (in Claude Code, `/mcp` shows it as *connected*).
 
+!!! note "One session per user"
+    Each user can have **only one active MCP session**. If you connect another assistant with the same user, or the same assistant from another computer, the previous session is closed: its next question gets the message that the same user opened another session. To go on with it, connect it again, and then the other one is closed.
+
 ## 6. Ask it
 
 Some questions to see each thing, with your names instead of the ones in the example:
@@ -112,6 +116,8 @@ And if you turn off **Enable MCP** (step 1), `/mcp` stops existing for everyone 
 | What you see | Why | What to do |
 |---|---|---|
 | The assistant does not connect and the address returns *404* | **Enable MCP** (or **Enable WebAPI**) is off | Step 1 |
+| The address returns *404* with both switches on, or the assistant says the licence does not include the MCP module | The licence does not have the MCP module | Ask your Flexygo provider to add it to the licence |
+| The assistant says the session was closed because the same user opened another one | You connected another assistant (or another computer) with your user, and only one session at a time is allowed | If you want to go on with this assistant, connect it again: the other session will be closed |
 | The connect page or the consent page says you do not have permission | The robot is missing from your role or your user | Step 2 |
 | The assistant says the object does not exist | It is not ticked in *Authorized Data* | Step 3 |
 | It answers, but mixes up fields or statuses | Descriptions are missing | Step 4 |
