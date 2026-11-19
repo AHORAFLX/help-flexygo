@@ -10076,6 +10076,10 @@
 </span></code></pre></div>
 <hr>
 <h2 id="2-ponerlo-en-marcha-administrador">2. Ponerlo en marcha (administrador)<a class="headerlink" href="#2-ponerlo-en-marcha-administrador" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Hace falta el módulo MCP de la licencia</p>
+<p>El MCP de la aplicación se contrata aparte: la <strong>licencia</strong> tiene que incluir el módulo <strong>MCP</strong>. Sin él, <code>/mcp</code> y sus documentos de descubrimiento responden 404 aunque <code>MCP_Enabled</code> esté encendido, ningún asistente nuevo puede conectarse, la página <strong>Connect an assistant</strong> avisa de que los asistentes están apagados, y un asistente que ya estaba conectado recibe la negativa <em>la licencia de esta aplicación no incluye el módulo MCP</em>, que muestra a la persona. Para añadirlo, hay que pedirlo al proveedor de Flexygo. La web API no depende de este módulo.</p>
+</div>
 <ol>
 <li>
 <p><strong>Activar la web API y el punto MCP</strong> en la herramienta <strong>WebAPI</strong> (área <em>Seguridad</em> del <a href="../../Administration/ControlPanel/">panel de control</a>): interruptores <strong>Enable WebAPI</strong> y <strong>Enable MCP</strong>, que son los ajustes <code>WebAPI_Enabled</code> y <code>MCP_Enabled</code> (también en <em>Ajustes</em>, grupo <em>WebAPI</em>). Los dos vienen apagados: exponer la aplicación a asistentes es una decisión del equipo. Sin <code>MCP_Enabled</code>, la ruta <code>/mcp</code> y sus documentos de descubrimiento responden 404, como si no existieran; el cambio vale al momento, sin reiniciar. Van separados a propósito: la web API sirve a integraciones (un ERP, una app, otro sistema con su token) y el MCP a los asistentes de las personas, que es otro público; se puede tener la primera sin el segundo, no al revés.</p>
@@ -10165,6 +10169,7 @@
 <figcaption>Si el nombre pasa por un asistente conocido y el acceso iría a otro sitio, la página lo dice y Denegar pasa a ser el botón principal</figcaption>
 </figure>
 <p>Después del <em>Permitir</em>, el asistente queda conectado: el acceso dura <strong>8 horas y se renueva solo</strong> mientras se use; una conexión sin uso durante <strong>30 días</strong> caduca y hay que volver a conectar.</p>
+<p><strong>Una sesión por usuario.</strong> Cada usuario puede tener <strong>una sola sesión MCP activa</strong>, con cualquier asistente: así un usuario de la licencia no lo comparten varias personas ni varios asistentes. Al conectar otro asistente con el mismo usuario (o el mismo asistente desde otro equipo), la sesión anterior se cierra. Su siguiente llamada recibe una negativa que el asistente muestra a la persona: <em>la sesión se ha cerrado porque el mismo usuario ha abierto otra sesión MCP</em>. Para seguir en ella basta con volver a conectarla, y entonces la que se cierra es la otra. La web API no tiene este límite.</p>
 <p>Para desconectar, la persona tiene <strong>Connected assistants</strong> en su menú de perfil: sus conexiones (solo las suyas), con el asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer; <strong>Revoke</strong>, en el menú de la fila, la corta. También se puede eliminar el conector en el propio asistente, y un administrador puede revocar cualquier sesión (§6).</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/asistentes-conectados.png" data-desc-position="bottom"><img alt="«Connected assistants»: las conexiones de la persona, con Revoke en el menú de cada fila" src="../../../docs_assets/images/AIAssistants/asistentes-conectados.png"></a>
@@ -10190,8 +10195,16 @@
 <td>Login propio (SSO y 2FA incluidos), consentimiento explícito, PKCE obligatorio, tokens de 8 horas con renovación rotatoria. Las tablas guardan solo el hash de los tokens: una copia de la base no abre ninguna sesión.</td>
 </tr>
 <tr>
+<td><strong>Módulo de la licencia</strong></td>
+<td>Sin el módulo MCP en la licencia no hay punto <code>/mcp</code> (§2).</td>
+</tr>
+<tr>
 <td><strong>Permiso propio</strong></td>
 <td>Conectar un asistente pide el permiso MCP del usuario o de su rol, aparte del de la web API (§2). Quitarlo, o bloquear el asistente en <em>Asistentes MCP</em>, corta las conexiones vivas al instante.</td>
+</tr>
+<tr>
+<td><strong>Una sesión por usuario</strong></td>
+<td>Abrir una sesión MCP cierra las demás del mismo usuario, en cualquier asistente (§3). La regla la aplica el servidor: una fila añadida a mano en <code>MCP_Sessions</code> no abre otra sesión.</td>
 </tr>
 <tr>
 <td><strong>La seguridad del usuario, siempre</strong></td>
@@ -10246,7 +10259,7 @@
 <tr>
 <td><code>MCP_Enabled</code></td>
 <td><code>false</code></td>
-<td>Abre el punto <code>/mcp</code> a los asistentes. Necesita también <code>WebAPI_Enabled</code>. Es el interruptor <strong>Enable MCP</strong> de la herramienta WebAPI.</td>
+<td>Abre el punto <code>/mcp</code> a los asistentes. Necesita también <code>WebAPI_Enabled</code> y el módulo MCP de la licencia (§2). Es el interruptor <strong>Enable MCP</strong> de la herramienta WebAPI.</td>
 </tr>
 <tr>
 <td><code>MCP_RequireApprovedClients</code></td>
@@ -10297,7 +10310,7 @@ Las pantallas de administración están en el área <strong>Entorno</strong> del
 <br>
 <figcaption>Un asistente aprobado con una sesión viva y otro bloqueado</figcaption>
 </figure>
-<p><strong>Sesiones MCP</strong>: todas las conexiones vivas (tabla <code>MCP_Sessions</code>): quién, con qué asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer. <strong>Revoke</strong>, en el menú de la fila, la corta: el asistente recibe una negativa y la persona tiene que volver a conectar. Las sesiones no se crean ni se editan a mano.</p>
+<p><strong>Sesiones MCP</strong>: todas las conexiones vivas (tabla <code>MCP_Sessions</code>), como mucho una por usuario (§3): quién, con qué asistente, cuándo se conectó, la última vez que lo usó, cuándo caduca y qué puede hacer. <strong>Revoke</strong>, en el menú de la fila, la corta: el asistente recibe una negativa y la persona tiene que volver a conectar. Las sesiones no se crean ni se editan a mano.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/sesiones.png" data-desc-position="bottom"><img alt="Sesiones MCP con el menú de la fila abierto y Revoke" src="../../../docs_assets/images/AIAssistants/sesiones.png"></a>
 <br>

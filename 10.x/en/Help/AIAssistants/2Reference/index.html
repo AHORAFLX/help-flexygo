@@ -10076,6 +10076,10 @@
 </span></code></pre></div>
 <hr>
 <h2 id="2-setting-it-up-administrator">2. Setting it up (administrator)<a class="headerlink" href="#2-setting-it-up-administrator" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">The licence's MCP module is required</p>
+<p>The application's MCP is sold separately: the <strong>licence</strong> must include the <strong>MCP</strong> module. Without it, <code>/mcp</code> and its discovery documents return 404 even with <code>MCP_Enabled</code> on, no new assistant can connect, the <strong>Connect an assistant</strong> page warns that the assistants are switched off, and an assistant that was already connected gets the refusal <em>this application's licence does not include the MCP module</em>, which it shows the person. To add it, ask your Flexygo provider. The web API does not depend on this module.</p>
+</div>
 <ol>
 <li>
 <p><strong>Enable the web API and the MCP endpoint</strong> in the <strong>WebAPI</strong> tool (<em>Security</em> area of the <a href="../../Administration/ControlPanel/">control panel</a>): the <strong>Enable WebAPI</strong> and <strong>Enable MCP</strong> switches, which are the <code>WebAPI_Enabled</code> and <code>MCP_Enabled</code> settings (also in <em>Settings</em>, <em>WebAPI</em> group). Both are off by default: exposing the application to assistants is a team decision. Without <code>MCP_Enabled</code>, the <code>/mcp</code> route and its discovery documents return 404, as if they did not exist; the change takes effect immediately, without restarting. They are separate on purpose: the web API serves integrations (an ERP, an app, another system with its token) and MCP serves people's assistants, which is a different audience; you can have the first without the second, not the other way round.</p>
@@ -10165,6 +10169,7 @@
 <figcaption>If the name passes itself off as a known assistant and the access would go elsewhere, the page says so and Deny becomes the main button</figcaption>
 </figure>
 <p>After <em>Allow</em>, the assistant is connected: the access lasts <strong>8 hours and renews itself</strong> while it is used; a connection unused for <strong>30 days</strong> expires and you have to connect again.</p>
+<p><strong>One session per user.</strong> Each user can have <strong>only one active MCP session</strong>, with any assistant: this way one licensed user is not shared by several people or assistants. Connecting another assistant with the same user (or the same assistant from another computer) closes the previous session. Its next call gets a refusal that the assistant shows the person: <em>this session was closed because the same user opened another MCP session</em>. To go on with it, just connect it again, and then the other one is closed. The web API has no such limit.</p>
 <p>To disconnect, the person has <strong>Connected assistants</strong> in their profile menu: their connections (only theirs), with the assistant, when it connected, the last time it was used, when it expires and what it can do; <strong>Revoke</strong>, in the row menu, cuts it. The connector can also be removed in the assistant itself, and an administrator can revoke any session (§6).</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/asistentes-conectados.png" data-desc-position="bottom"><img alt="&quot;Connected assistants&quot;: the person's connections, with Revoke in each row's menu" src="../../../../docs_assets/images/AIAssistants/asistentes-conectados.png"></a>
@@ -10190,8 +10195,16 @@
 <td>Its own login (SSO and 2FA included), explicit consent, mandatory PKCE, 8-hour tokens with rotating refresh. The tables store only the hash of the tokens: a copy of the database does not open any session.</td>
 </tr>
 <tr>
+<td><strong>Licence module</strong></td>
+<td>Without the MCP module in the licence there is no <code>/mcp</code> endpoint (§2).</td>
+</tr>
+<tr>
 <td><strong>Its own permission</strong></td>
 <td>Connecting an assistant requires the MCP permission of the user or their role, separate from the web API one (§2). Removing it, or blocking the assistant in <em>MCP assistants</em>, instantly cuts live connections.</td>
+</tr>
+<tr>
+<td><strong>One session per user</strong></td>
+<td>Opening an MCP session closes the user's other ones, in any assistant (§3). The server enforces the rule: a row added by hand to <code>MCP_Sessions</code> does not open another session.</td>
 </tr>
 <tr>
 <td><strong>The user's security, always</strong></td>
@@ -10246,7 +10259,7 @@
 <tr>
 <td><code>MCP_Enabled</code></td>
 <td><code>false</code></td>
-<td>Opens the <code>/mcp</code> endpoint to assistants. Also requires <code>WebAPI_Enabled</code>. It is the <strong>Enable MCP</strong> switch of the WebAPI tool.</td>
+<td>Opens the <code>/mcp</code> endpoint to assistants. Also requires <code>WebAPI_Enabled</code> and the licence's MCP module (§2). It is the <strong>Enable MCP</strong> switch of the WebAPI tool.</td>
 </tr>
 <tr>
 <td><code>MCP_RequireApprovedClients</code></td>
@@ -10297,7 +10310,7 @@ The administration screens are in the <strong>Environment</strong> area of the <
 <br>
 <figcaption>An approved assistant with one live session and another one blocked</figcaption>
 </figure>
-<p><strong>MCP sessions</strong>: all live connections (<code>MCP_Sessions</code> table): who, with which assistant, when they connected, the last time it was used, when it expires and what it can do. <strong>Revoke</strong>, in the row menu, cuts it: the assistant gets a refusal and the person has to connect again. Sessions are not created or edited manually.</p>
+<p><strong>MCP sessions</strong>: all live connections (<code>MCP_Sessions</code> table), at most one per user (§3): who, with which assistant, when they connected, the last time it was used, when it expires and what it can do. <strong>Revoke</strong>, in the row menu, cuts it: the assistant gets a refusal and the person has to connect again. Sessions are not created or edited manually.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../docs_assets/images/AIAssistants/sesiones.png" data-desc-position="bottom"><img alt="MCP sessions with the row menu open and Revoke" src="../../../../docs_assets/images/AIAssistants/sesiones.png"></a>
 <br>

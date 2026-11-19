@@ -9874,6 +9874,10 @@
 <td>Vale una instalación local de desarrollo. Entra con un usuario <strong>administrador</strong>.</td>
 </tr>
 <tr>
+<td><strong>El módulo MCP en la licencia</strong></td>
+<td>El MCP de la aplicación se contrata aparte: la licencia tiene que incluir el módulo <strong>MCP</strong>. Sin él, <code>/mcp</code> no responde aunque lo enciendas en el paso 1. Si no lo tienes, pídelo a tu proveedor de Flexygo.</td>
+</tr>
+<tr>
 <td><strong>Un objeto con datos</strong></td>
 <td>Cualquiera que ya tengas (pedidos, clientes, incidencias…). En los ejemplos de esta página es un objeto <em>Order</em> con su estado y su total.</td>
 </tr>
@@ -9887,7 +9891,7 @@
 <h2 id="1-enciende-la-web-api-y-el-mcp">1. Enciende la web API y el MCP<a class="headerlink" href="#1-enciende-la-web-api-y-el-mcp" title="Permanent link">¶</a></h2>
 <p>En el panel de control, área <strong>Security → WebAPI</strong>, enciende <strong>Enable WebAPI</strong> y <strong>Enable MCP</strong>. Vienen apagados de serie.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/interruptor-mcp.png" data-desc-position="bottom"><img alt="Enable WebAPI y Enable MCP en la herramienta WebAPI" src="../../../docs_assets/images/AIAssistants/interruptor-mcp.png"></a></p>
-<p><strong>Comprueba</strong>: en tu menú de perfil aparecen <strong>Connect an assistant</strong> y <strong>Connected assistants</strong>. Si no salen, sal y vuelve a entrar.</p>
+<p><strong>Comprueba</strong>: en tu menú de perfil aparecen <strong>Connect an assistant</strong> y <strong>Connected assistants</strong>. Si no salen, sal y vuelve a entrar. Si <strong>Connect an assistant</strong> avisa de que los asistentes están apagados aunque hayas encendido los dos interruptores, la licencia no incluye el módulo MCP.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/menu-perfil.png" data-desc-position="bottom"><img alt="El menú de perfil con las dos entradas del MCP" src="../../../docs_assets/images/AIAssistants/menu-perfil.png" width="320"></a></p>
 <h2 id="2-date-permiso-para-conectar-un-asistente">2. Date permiso para conectar un asistente<a class="headerlink" href="#2-date-permiso-para-conectar-un-asistente" title="Permanent link">¶</a></h2>
 <p>En la misma pantalla, panel <strong>Authorized People</strong>, pestaña <strong>Authorized Roles</strong>: marca la <strong>columna del robot</strong> en tu rol (por ejemplo <em>Admins</em>). Es un permiso aparte del de la web API (el ojo): para esta prueba no hace falta el ojo.</p>
@@ -9923,6 +9927,10 @@
 <p>En el navegador <strong>entras con tu usuario de siempre</strong> y ves la página de consentimiento: quién pide, con qué usuario y qué se concede. Pulsa <strong>Permitir</strong> (puedes desmarcar <em>Modificar datos</em> para que solo lea).</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../docs_assets/images/AIAssistants/consentimiento.png" data-desc-position="bottom"><img alt="La página de consentimiento" src="../../../docs_assets/images/AIAssistants/consentimiento.png"></a></p>
 <p><strong>Comprueba</strong>: el asistente dice que está conectado (en Claude Code, <code>/mcp</code> lo muestra como <em>connected</em>).</p>
+<div class="admonition note">
+<p class="admonition-title">Una sesión por usuario</p>
+<p>Cada usuario puede tener <strong>una sola sesión MCP activa</strong>. Si conectas otro asistente con el mismo usuario, o el mismo asistente desde otro equipo, la sesión anterior se cierra: su siguiente pregunta recibe el aviso de que el mismo usuario ha abierto otra sesión. Para seguir en ella, vuelve a conectarla, y entonces la que se cierra es la otra.</p>
+</div>
 <h2 id="6-preguntale">6. Pregúntale<a class="headerlink" href="#6-preguntale" title="Permanent link">¶</a></h2>
 <p>Algunas preguntas para ver cada cosa, con tus nombres en lugar de los del ejemplo:</p>
 <table>
@@ -9985,6 +9993,16 @@
 <td>El asistente no conecta y la dirección da <em>404</em></td>
 <td><strong>Enable MCP</strong> (o <strong>Enable WebAPI</strong>) apagado</td>
 <td>Paso 1</td>
+</tr>
+<tr>
+<td>La dirección da <em>404</em> con los dos interruptores encendidos, o el asistente dice que la licencia no incluye el módulo MCP</td>
+<td>La licencia no tiene el módulo MCP</td>
+<td>Pide a tu proveedor de Flexygo que lo añada a la licencia</td>
+</tr>
+<tr>
+<td>El asistente dice que la sesión se cerró porque el mismo usuario abrió otra</td>
+<td>Has conectado otro asistente (u otro equipo) con tu usuario, y solo vale una sesión a la vez</td>
+<td>Si quieres seguir en este asistente, vuelve a conectarlo: la otra sesión se cerrará</td>
 </tr>
 <tr>
 <td>La página de conectar o el consentimiento dicen que no tienes permiso</td>
