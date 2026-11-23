@@ -79,7 +79,11 @@ Mientras tanto:
 !!! note "El modo mantenimiento sigue a la actualización"
     Toda actualización o cambio de versión, programado o lanzado desde el asistente, pone la aplicación en mantenimiento mientras dura. El administrador que la lanzó desde el asistente puede seguir dentro; los demás ven la página de mantenimiento. El cambio de estado tarda unos 15 segundos en notarse al empezar y al acabar.
 
-<!-- CAPTURA PENDIENTE: diálogo «Schedule update to …» con Starts at y Prepare the version beforehand, y la banda «Update to … starts in …» con Manage. 1920×1080, skin2026 claro. -->
+<figure markdown="span">
+  ![Diálogo Programar actualización con la fecha y los minutos de preparación](../../docs_assets/images/VersionManagement/schedule-es.png){ width="520" }
+  ![Banda La actualización a la versión empieza en 13 horas, con Gestionar](../../docs_assets/images/VersionManagement/schedule-banner-es.png)
+  <figcaption>Programar la actualización y la banda que lo recuerda. Ver también <a href="../VersionManagement/">Gestión de versiones</a></figcaption>
+</figure>
 
 ## La versión siguiente, preparada cada noche <span class="fh-version-tag" title="Disponible desde la versión 10.1">10.1+</span>
 

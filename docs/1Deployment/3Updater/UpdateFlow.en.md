@@ -79,7 +79,11 @@ Meanwhile:
 !!! note "The maintenance mode follows the update"
     Every update or version switch, scheduled or launched from the wizard, puts the application in maintenance while it runs. The administrator who launched it from the wizard can stay in; everybody else sees the maintenance page. The change takes about 15 seconds to show at the start and at the end.
 
-<!-- SCREENSHOT PENDING: "Schedule update to …" dialog with Starts at and Prepare the version beforehand, and the "Update to … starts in …" banner with Manage. 1920×1080, skin2026 light. -->
+<figure markdown="span">
+  ![Schedule update dialog with the date and the preparation minutes](../../docs_assets/images/VersionManagement/schedule-en.png){ width="520" }
+  ![Band Update to the version starts in 13 hours, with Manage](../../docs_assets/images/VersionManagement/schedule-banner-en.png)
+  <figcaption>Scheduling the update and the band that recalls it. See also <a href="../VersionManagement/">Version management</a></figcaption>
+</figure>
 
 ## The next version, prepared every night <span class="fh-version-tag" title="Available since version 10.1">10.1+</span>
 
