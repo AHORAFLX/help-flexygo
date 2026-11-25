@@ -155,6 +155,7 @@ Tell an AI assistant connected to the Flexygo MCP what application you need: it 
 - **WebAPI Security:** You can request the WebAPI token using the email address, in addition to the username.
 - **Artificial Intelligence:** The AI assistant can query data views with parameters and respect their filters and sorting.
 - **Licenses:** Access to MCP requires a license that includes this module, and each user can have only one active session.
+- **Updater:** The Actualizador configuration applies different permissions to administrators and applications that exchange data.
 
 ## Fixes
 

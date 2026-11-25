@@ -155,6 +155,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
 - **Seguridad de la WebAPI:** Puedes solicitar el token de la WebAPI usando el correo electrónico, además del nombre de usuario.
 - **Inteligencia artificial:** El asistente de IA puede consultar vistas de datos con parámetros y respetar sus filtros y ordenación.
 - **Licencias:** El acceso al MCP requiere una licencia con ese módulo y cada usuario puede mantener una sola sesión activa.
+- **Actualizador:** La configuración del Actualizador aplica permisos distintos a administradores y aplicaciones que intercambian datos.
 
 ## Correcciones
 
