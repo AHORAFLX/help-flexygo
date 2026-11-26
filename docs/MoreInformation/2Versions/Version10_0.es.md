@@ -191,6 +191,7 @@ Describe a un asistente de IA conectado al MCP de Flexygo qué aplicación neces
     - **Seguridad de la WebAPI:** La WebAPI y el asistente solo ejecutan procesos en los objetos para los que están definidos.
     - **Configuración:** Los marcadores de configuración vuelven a completarse con los valores de la página y conservan los formatos admitidos.
     - **Procesos:** Al ejecutar un proceso sin registro, se indica qué parámetro necesita un registro.
+    - **Formularios:** Puedes volver a insertar y modificar registros guardados con procedimientos JSON si su clave es numérica o un GUID.
 
 ## Obsoleto
 
